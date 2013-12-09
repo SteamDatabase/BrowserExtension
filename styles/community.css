@@ -1,0 +1,20 @@
+/* Valve's silly css fix */
+.apphub_AppName {
+	paddin-right: 30px;
+	max-width: none;
+	float: none;
+}
+
+.apphub_OtherSiteInfo .btn_medium {
+	position: relative;
+	z-index: 1;
+}
+
+#oggLogo img {
+	height: 200px;
+}
+
+.steamdb_ogg_icon {
+	width: 16px;
+	height: 16px;
+}

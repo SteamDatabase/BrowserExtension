@@ -37,10 +37,24 @@
 			"js": [ "scripts/steamdb.js", "scripts/store/video.js" ],
 			"css": [ "styles/store.css" ]
 		},
-		
 		{
-			"matches": [ "*://steamcommunity.com/id/*", "*://steamcommunity.com/profiles/*" ],
+			"matches":
+			[
+				"*://steamcommunity.com/id/*",
+				"*://steamcommunity.com/profiles/*"
+			],
 			"js": [ "scripts/steamdb.js", "scripts/community/profile.js" ]
+		},
+		{
+			"matches":
+			[
+				"*://steamcommunity.com/app/*",
+				"*://steamcommunity.com/games/*",
+				"*://steamcommunity.com/sharedfiles/filedetails*",
+				"*://steamcommunity.com/workshop/browse*",
+				"*://steamcommunity.com/workshop/discussions*"
+			],
+			"js": [ "scripts/steamdb.js", "scripts/community/gamehub.js" ]
 		}
 	]
 }
