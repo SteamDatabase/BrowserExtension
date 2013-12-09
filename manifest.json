@@ -1,0 +1,42 @@
+{
+	"manifest_version": 2,
+	"version": "1.0.0",
+	"name": "SteamDB",
+	"description": "Adds Steam Database link across Steam Community and Store.",
+	"homepage_url": "http://steamdb.info/",
+	"permissions":
+	[
+		"*://store.steampowered.com/*",
+		"*://steamcommunity.com/*"
+	],
+	"icons":
+	{
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	"web_accessible_resources":
+	[
+		"images/store.png"
+	],
+	"content_scripts":
+	[
+		{
+			"run_at": "document_end",
+			"matches": [ "*://store.steampowered.com/app/*" ],
+			"js": [ "scripts/steamdb.js", "scripts/store/app.js" ],
+			"css": [ "styles/store.css" ]
+		},
+		{
+			"run_at": "document_end",
+			"matches": [ "*://store.steampowered.com/sub/*" ],
+			"js": [ "scripts/steamdb.js", "scripts/store/sub.js" ],
+			"css": [ "styles/store.css" ]
+		},
+		{
+			"run_at": "document_end",
+			"matches": [ "*://store.steampowered.com/video/*" ],
+			"js": [ "scripts/steamdb.js", "scripts/store/video.js" ],
+			"css": [ "styles/store.css" ]
+		}
+	]
+}
