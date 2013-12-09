@@ -17,24 +17,22 @@
 	"web_accessible_resources":
 	[
 		"icons/18.png",
-		"images/store.png"
+		"images/store.png",
+		"scripts/community/inventory.js"
 	],
 	"content_scripts":
 	[
 		{
-			"run_at": "document_end",
 			"matches": [ "*://store.steampowered.com/app/*" ],
 			"js": [ "scripts/steamdb.js", "scripts/store/app.js" ],
 			"css": [ "styles/store.css" ]
 		},
 		{
-			"run_at": "document_end",
 			"matches": [ "*://store.steampowered.com/sub/*" ],
 			"js": [ "scripts/steamdb.js", "scripts/store/sub.js" ],
 			"css": [ "styles/store.css" ]
 		},
 		{
-			"run_at": "document_end",
 			"matches": [ "*://store.steampowered.com/video/*" ],
 			"js": [ "scripts/steamdb.js", "scripts/store/video.js" ],
 			"css": [ "styles/store.css" ]
