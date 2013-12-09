@@ -18,7 +18,8 @@
 	[
 		"icons/18.png",
 		"images/store.png",
-		"scripts/community/inventory.js"
+		"scripts/community/inventory.js",
+		"scripts/store/subscriptions.js"
 	],
 	"content_scripts":
 	[
