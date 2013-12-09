@@ -1,3 +1,5 @@
+// TODO: Remove this wrapper, it's silly
+(function() {
 var container = document.getElementById( 'error_box' );
 
 if( container )
@@ -58,3 +60,5 @@ if( document.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
 	
 	document.head.appendChild( element );
 }
+
+}());
