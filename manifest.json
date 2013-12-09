@@ -16,6 +16,7 @@
 	},
 	"web_accessible_resources":
 	[
+		"icons/18.png",
 		"images/store.png"
 	],
 	"content_scripts":
@@ -37,6 +38,11 @@
 			"matches": [ "*://store.steampowered.com/video/*" ],
 			"js": [ "scripts/steamdb.js", "scripts/store/video.js" ],
 			"css": [ "styles/store.css" ]
+		},
+		
+		{
+			"matches": [ "*://steamcommunity.com/id/*", "*://steamcommunity.com/profiles/*" ],
+			"js": [ "scripts/steamdb.js", "scripts/community/profile.js" ]
 		}
 	]
 }

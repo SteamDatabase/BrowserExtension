@@ -5,7 +5,7 @@ if( !container )
 	return;
 }
 
-element = document.createElement( 'div' );
+var element = document.createElement( 'div' );
 element.innerHTML = '<a class="game_area_wishlist_btn steamdb_button" target="_blank" href="' + GetHomepage() + 'app/' + GetCurrentAppID() + '/">View on Steam Database</a>';
 
 container.insertBefore( element, null );
