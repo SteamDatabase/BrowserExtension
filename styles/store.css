@@ -6,6 +6,11 @@
 	color: #898A8C;
 }
 
+.steamdb_error_link {
+	display: block;
+	margin-top: 12px;
+}
+
 .steamdb_float_left {
 	float: left;
 }
