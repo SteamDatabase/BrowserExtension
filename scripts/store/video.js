@@ -2,8 +2,10 @@ var container = document.querySelector( '.game_details .block_content_inner' );
 
 if( container )
 {
-	var element = document.createElement( 'div' );
-	element.innerHTML = '<a class="game_area_wishlist_btn steamdb_button" target="_blank" href="' + GetHomepage() + 'app/' + GetCurrentAppID() + '/">View on Steam Database</a>';
+	var link = document.createElement( 'a' );
+	link.className = 'game_area_wishlist_btn steamdb_button';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
 	
-	container.insertBefore( element, null );
+	container.insertBefore( link, null );
 }

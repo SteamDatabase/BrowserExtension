@@ -86,7 +86,7 @@
 		catch( e )
 		{
 			// Don't break website functionality if something fails above
-			console.log( e );
+			console.error( e );
 		}
 		
 		originalPopulateActions( elActions, rgActions, item );
