@@ -76,7 +76,7 @@ else
 		element = document.createElement( 'script' );
 		element.id = 'steamdb_subscriptions_hook';
 		element.type = 'text/javascript';
-		element.src = chrome.extension.getURL( 'scripts/store/subscriptions.js' ); // TODO: abstract
+		element.src = GetLocalResource( 'scripts/store/subscriptions.js' );
 		element.dataset.homepage = GetHomepage();
 		
 		document.head.appendChild( element );

@@ -1,5 +1,5 @@
 .steamdb_button {
-	background-image: url('chrome-extension://__MSG_@@extension_id__/images/store.png') !important; /* TODO: Only works in Chrome */;
+	background-image: url('chrome-extension://__MSG_@@extension_id__/images/store.png') !important; /* TODO: Only works in Chrome */
 }
 
 .steamdb_link {

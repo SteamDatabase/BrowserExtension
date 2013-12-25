@@ -7,7 +7,7 @@ if( !container )
 		element = document.createElement( 'script' );
 		element.id = 'steamdb_inventory_hook';
 		element.type = 'text/javascript';
-		element.src = chrome.extension.getURL( 'scripts/community/inventory.js' ); // TODO: abstract
+		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
 		
 		document.head.appendChild( element );
@@ -19,7 +19,7 @@ else
 	var steamID = location.pathname.match( /^\/(id|profiles)\/([^\s/]+)\/?$/ );
 	
 	var image = document.createElement( 'img' );
-	image.src = chrome.extension.getURL( 'icons/18.png' ); // TODO: abstract
+	image.src = GetLocalResource( 'icons/18.png' );
 	
 	var element = document.createElement( 'a' );
 	element.href = GetHomepage() + 'calculator/?player=' + steamID[ 2 ];

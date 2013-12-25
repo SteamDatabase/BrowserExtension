@@ -45,7 +45,7 @@ else
 		// image
 		var image = document.createElement( 'img' );
 		image.className = 'steamdb_ogg_icon';
-		image.src = chrome.extension.getURL( 'icons/18.png' ); // TODO: abstract
+		image.src = GetLocalResource( 'icons/18.png' );
 		
 		// image container
 		var actionItemIcon = document.createElement( 'div' );

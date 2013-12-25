@@ -21,4 +21,16 @@ var CurrentAppID,
 	GetHomepage = function()
 	{
 		return 'http://steamdb.info/';
+	},
+	
+	GetLocalResource = function( res )
+	{
+		if( typeof chrome !== 'undefined' )
+		{
+			return chrome.extension.getURL( res );
+		}
+		
+		// TODO: Add Firefox/Safari apis here
+		
+		return res;
 	};
