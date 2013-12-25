@@ -5,16 +5,16 @@
 	"short_name": "SteamDB",
 	"description": "Adds Steam Database link across Steam Community and Store.",
 	"homepage_url": "http://steamdb.info/",
-	"permissions":
-	[
-		"*://store.steampowered.com/*",
-		"*://steamcommunity.com/*"
-	],
 	"icons":
 	{
 		"48": "icons/48.png",
 		"128": "icons/128.png"
 	},
+	"permissions":
+	[
+		"*://store.steampowered.com/*",
+		"*://steamcommunity.com/*"
+	],
 	"web_accessible_resources":
 	[
 		"icons/18.png",
@@ -25,19 +25,49 @@
 	"content_scripts":
 	[
 		{
-			"matches": [ "*://store.steampowered.com/app/*" ],
-			"js": [ "scripts/steamdb.js", "scripts/store/app.js" ],
-			"css": [ "styles/store.css" ]
+			"matches":
+			[
+				"*://store.steampowered.com/app/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/store/app.js"
+			],
+			"css":
+			[
+				"styles/store.css"
+			]
 		},
 		{
-			"matches": [ "*://store.steampowered.com/sub/*" ],
-			"js": [ "scripts/steamdb.js", "scripts/store/sub.js" ],
-			"css": [ "styles/store.css" ]
+			"matches":
+			[
+				"*://store.steampowered.com/sub/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/store/sub.js"
+			],
+			"css":
+			[
+				"styles/store.css"
+			]
 		},
 		{
-			"matches": [ "*://store.steampowered.com/video/*" ],
-			"js": [ "scripts/steamdb.js", "scripts/store/video.js" ],
-			"css": [ "styles/store.css" ]
+			"matches":
+			[
+				"*://store.steampowered.com/video/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/store/video.js"
+			],
+			"css":
+			[
+				"styles/store.css"
+			]
 		},
 		{
 			"matches":
@@ -45,7 +75,11 @@
 				"*://steamcommunity.com/id/*",
 				"*://steamcommunity.com/profiles/*"
 			],
-			"js": [ "scripts/steamdb.js", "scripts/community/profile.js" ]
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/profile.js"
+			]
 		},
 		{
 			"matches":
@@ -56,7 +90,11 @@
 				"*://steamcommunity.com/workshop/browse*",
 				"*://steamcommunity.com/workshop/discussions*"
 			],
-			"js": [ "scripts/steamdb.js", "scripts/community/gamehub.js" ]
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/gamehub.js"
+			]
 		}
 	]
 }
