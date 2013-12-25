@@ -1,0 +1,27 @@
+.steamdb_downtime {
+	color: #ecf0f1;
+	background-color: #e74c3c;
+	border-bottom: 5px solid #c0392b;
+	min-width: 960px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.steamdb_downtime a {
+	text-decoration: none;
+	color: #f1c40f;
+	border-bottom: 1px dashed #f1c40f;
+}
+
+.steamdb_downtime a:hover {
+	text-decoration: none;
+	color: #f39c12;
+	border-color: #f39c12;
+}
+
+.steamdb_downtime_container {
+	width: 940px;
+	margin: 0 auto;
+}

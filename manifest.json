@@ -27,6 +27,22 @@
 		{
 			"matches":
 			[
+				"*://store.steampowered.com/*",
+				"*://steamcommunity.com/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/error_check.js"
+			],
+			"css":
+			[
+				"styles/down.css"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://store.steampowered.com/app/*"
 			],
 			"js":
