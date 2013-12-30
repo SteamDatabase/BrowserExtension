@@ -95,16 +95,24 @@
 			[
 				"scripts/steamdb.js",
 				"scripts/community/profile.js"
-			],
-			"css":
-			[
-				"styles/community.css"
 			]
 		},
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*recommended/*",
+				"*://steamcommunity.com/id/*/inventory*",
+				"*://steamcommunity.com/profiles/*/inventory*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/profile_inventory.js"
+			]
+		},
+		{
+			"matches":
+			[
+				"*://steamcommunity.com/id/*/recommended/*",
 				"*://steamcommunity.com/profiles/*/recommended/*"
 			],
 			"js":
