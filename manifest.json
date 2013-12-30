@@ -95,6 +95,26 @@
 			[
 				"scripts/steamdb.js",
 				"scripts/community/profile.js"
+			],
+			"css":
+			[
+				"styles/community.css"
+			]
+		},
+		{
+			"matches":
+			[
+				"*://steamcommunity.com/id/*recommended/*",
+				"*://steamcommunity.com/profiles/*/recommended/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/profile_recommended.js"
+			],
+			"css":
+			[
+				"styles/community.css"
 			]
 		},
 		{
@@ -110,6 +130,10 @@
 			[
 				"scripts/steamdb.js",
 				"scripts/community/gamehub.js"
+			],
+			"css":
+			[
+				"styles/community.css"
 			]
 		}
 	]

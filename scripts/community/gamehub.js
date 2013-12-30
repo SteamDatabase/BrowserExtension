@@ -17,7 +17,7 @@ if( container )
 		text.appendChild( document.createTextNode( 'Steam Database' ) );
 		
 		element = document.createElement( 'a' );
-		element.className = 'btn_darkblue_white_innerfade btn_medium';
+		element.className = 'btn_darkblue_white_innerfade btn_medium steamdb_button';
 		element.target = '_blank';
 		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 		element.appendChild( text );

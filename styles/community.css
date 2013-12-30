@@ -1,8 +1,8 @@
 /* Valve's silly css fix */
 .apphub_AppName {
-	paddin-right: 30px;
-	max-width: none;
-	float: none;
+	padding-right: 30px;
+	max-width: none !important;
+	float: none !important;
 }
 
 .apphub_OtherSiteInfo .btn_medium {
