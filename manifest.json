@@ -112,6 +112,20 @@
 		{
 			"matches":
 			[
+				"*://steamcommunity.com/id/*/games*",
+				"*://steamcommunity.com/profiles/*/games*",
+				"*://steamcommunity.com/id/*/wishlist*",
+				"*://steamcommunity.com/profiles/*/wishlist*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/profile_games.js"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://steamcommunity.com/id/*/recommended/*",
 				"*://steamcommunity.com/profiles/*/recommended/*"
 			],
