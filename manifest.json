@@ -58,6 +58,17 @@
 		{
 			"matches":
 			[
+				"https://store.steampowered.com/account*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/store/account.js"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://store.steampowered.com/sub/*"
 			],
 			"js":
