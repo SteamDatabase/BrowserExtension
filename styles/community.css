@@ -18,3 +18,7 @@
 	width: 16px;
 	height: 16px;
 }
+
+.steamdb_button_small > span {
+	padding: 0 7px;
+}
