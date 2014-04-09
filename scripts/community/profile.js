@@ -23,19 +23,22 @@ else
 	
 	if( container )
 	{
-		// Dumb hack because some languages have very long "Edit profile" buttons
-		var length = container.querySelector( '.btn_profile_action > span' ).textContent.length;
-		
 		// Can't access g_rgProfileData inside sandbox
 		var steamID = location.pathname.match( /^\/(?:id|profiles)\/([^\s/]+)\/?/ );
 		
 		var text = document.createElement( 'span' );
-		text.appendChild( document.createTextNode( length > 15 ? 'SteamDB' : 'SteamDB Calculator' ) );
+		
+		var image = document.createElement( 'img' );
+		image.src = GetLocalResource( 'icons/18.png' );
+		image.className = 'steamdb_self_profile';
+		
+		text.appendChild( image );
 		
 		element = document.createElement( 'a' );
-		element.className = 'btn_profile_action btn_medium steamdb_button' + ( length > 20 ? ' steamdb_button_small' : '' );
+		element.className = 'btn_profile_action btn_medium steamdb_button';
 		element.target = '_blank';
 		element.href = GetHomepage() + 'calculator/?player=' + steamID[ 1 ];
+		element.title = 'SteamDB Calculator';
 		element.appendChild( text );
 		
 		container.appendChild( element );

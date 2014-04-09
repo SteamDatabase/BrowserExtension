@@ -19,6 +19,6 @@
 	height: 16px;
 }
 
-.steamdb_button_small > span {
-	padding: 0 7px;
+.steamdb_self_profile {
+	vertical-align: -4px;
 }
