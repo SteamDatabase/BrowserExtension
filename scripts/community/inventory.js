@@ -94,11 +94,14 @@
 		// We want our links to be open in new tab
 		if( foundState === 2 )
 		{
-			link = elActions.querySelector( '.item_action[href^="' + homepage + '"]' );
+			link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
 			
 			if( link )
 			{
-				link.target = '_blank';
+				for( i = 0; i < link.length; i++ )
+				{
+					link[ i ].target = '_blank';
+				}
 			}
 		}
 	};
