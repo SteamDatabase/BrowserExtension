@@ -13,7 +13,50 @@
 		{
 			if( item.appid == 753 )
 			{
-				if( rgActions )
+				if( item.type === 'Coupon' && rgActions )
+				{
+					var couponLink, pos;
+					
+					for( i = 0; i < rgActions.length; i++ )
+					{
+						link = rgActions[ i ];
+						
+						if( link.steamdb )
+						{
+							foundState = 2;
+							
+							break;
+						}
+						else if( link.link )
+						{
+							pos = link.link.indexOf( 'list_of_subs=' );
+							
+							if( pos > 0 )
+							{
+								couponLink = link.link;
+								
+								foundState = 1;
+							}
+						}
+					}
+					
+					if( foundState === 1 )
+					{
+						var subs = couponLink.substring( pos + 'list_of_subs='.length ).split( ',' );
+						
+						for( i = 0; i < subs.length; i++ )
+						{
+							rgActions.push( {
+								steamdb: true,
+								link: homepage + 'sub/' + subs[ i ] + '/',
+								name: 'View ' + subs[ i ] + ' on Steam Database'
+							} );
+						}
+						
+						foundState = 2;
+					}
+				}
+				else if( rgActions )
 				{
 					for( i = 0; i < rgActions.length; i++ )
 					{
