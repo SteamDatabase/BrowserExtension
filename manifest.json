@@ -82,6 +82,22 @@
 			]
 		},
 		{
+			"all_frames": true,
+			"matches":
+			[
+				"*://store.steampowered.com/widget/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/store/widget.js"
+			],
+			"css":
+			[
+				"styles/store.css"
+			]
+		},
+		{
 			"matches":
 			[
 				"*://store.steampowered.com/video/*"
