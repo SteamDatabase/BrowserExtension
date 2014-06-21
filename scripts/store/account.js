@@ -1,4 +1,4 @@
-var licenses = document.querySelectorAll( '.licenseRow p' ),
+var licenses = document.querySelectorAll( '.account_table tr > td:first-child' ),
     link,
     title,
     element;
@@ -16,6 +16,6 @@ if( licenses )
 		link.href = GetHomepage() + 'search/?a=sub&q=' + encodeURIComponent( title );
 		link.appendChild( document.createTextNode( title ) );
 		
-		element.parentNode.replaceChild( link, element );
+		element.replaceChild( link, element.firstChild );
 	}
 }
