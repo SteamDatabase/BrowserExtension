@@ -1,0 +1,122 @@
+/*
+ * Scaffolding and type
+ */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+@media (min-width: 40em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  color: #5a5a5a;
+}
+
+/* Override for form controls */
+label,
+input,
+select,
+button {
+  font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 .5rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #2a2a2a;
+  letter-spacing: -.05em;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { padding-top: 1rem; margin-top: 2rem; font-size: 1.75rem; }
+h4 { font-size: 1.25rem }
+
+p {
+  margin: 0 0 1rem;
+}
+.lead {
+  font-size: 1.3rem;
+}
+
+blockquote {
+  position: relative;
+  margin: 0 1rem 1rem;
+  font-style: italic;
+  color: #7a7a7a;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+
+ul li {
+  margin-bottom: .25rem;
+}
+
+/* Tighten up margin on last items */
+p:last-child,
+ul:last-child,
+blockquote:last-child{
+  margin-bottom: 0;
+}
+
+
+/*
+ * The Grid
+ */
+
+.container {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*
+ * Masthead
+ */
+
+.masthead {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+.masthead h1 {
+  margin-bottom: .25rem;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+  margin-top: 3rem;
+  padding: 3rem 1rem;
+  font-size: 90%;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.footer p {
+  margin-bottom: .5rem;
+}

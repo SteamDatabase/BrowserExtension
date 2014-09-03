@@ -5,6 +5,7 @@
 	"short_name": "SteamDB",
 	"description": "Adds Steam Database link across Steam Community and Store.",
 	"homepage_url": "http://steamdb.info/",
+	"options_page": "options/options.html",
 	"icons":
 	{
 		"48": "icons/48.png",
@@ -12,6 +13,7 @@
 	},
 	"permissions":
 	[
+		"storage",
 		"*://store.steampowered.com/*",
 		"*://steamcommunity.com/*"
 	],

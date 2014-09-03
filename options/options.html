@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	
+	<title>SteamDB Extension Options</title>
+	
+	<link rel="stylesheet" href="wtf-forms.css">
+	<link rel="stylesheet" href="options.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Mono&amp;subset=latin,cyrillic">
+</head>
+<body>
+	<header class="masthead">
+		<div class="container">
+			<h1>SteamDB Options</h1>
+			<p class="lead">Configure things that our extension affects on Steam websites.</p>
+		</div>
+	</header>
+	
+	<div class="container">
+		<form class="controls-stacked">
+			<h3>Buttons &amp; links</h3>
+			
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="button-app">
+				<span class="control-indicator"></span>
+				Display a button on app pages
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="button-sub">
+				<span class="control-indicator"></span>
+				Display a button on package pages
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="button-video">
+				<span class="control-indicator"></span>
+				Display a button on video pages
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="button-gamehub">
+				<span class="control-indicator"></span>
+				Display a button on game hubs
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="link-subid">
+				<span class="control-indicator"></span>
+				Display SubID under each purchase option
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="link-inventory">
+				<span class="control-indicator"></span>
+				Link each gift in your inventory
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="link-accountpage">
+				<span class="control-indicator"></span>
+				Link each package on your accounts page
+			</label>
+			<label class="control checkbox">
+				<input type="checkbox" class="option-check" checked data-option="profile-calculator">
+				<span class="control-indicator"></span>
+				Add a calculator link on community profiles
+			</label>
+			
+			<h3>Extra features</h3>
+			
+			<label class="control checkbox  control-x">
+				<input type="checkbox" checked>
+				<span class="control-indicator"></span>
+				Literally nothing
+			</label>
+		</form>
+	</div>
+	
+	<footer class="footer">
+		<p>&lt;3</p>
+		<p>Made by <a href="http://steamdb.info">SteamDB</a> folks. It's <a href="https://github.com/SteamDatabase/SteamDatabase">open source</a>.</p>
+		<p>Checkboxes and options theme taken from <a href="http://wtfforms.com/">WTF, forms?</a>.</p>
+		<p>Icons for checkbox and radio from <a href="http://useiconic.com/open">Open Iconic</a>.</p>
+	</footer>
+	
+	<script src="options.js"></script>
+</body>
+</html>
