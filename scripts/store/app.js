@@ -14,8 +14,6 @@ else
 {
 	GetOption( [ 'button-app', 'link-subid' ], function( items )
 	{
-		console.log( items );
-		
 		var link, element, container;
 		
 		if( items[ 'button-app' ] !== true )

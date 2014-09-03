@@ -45,6 +45,20 @@
 		{
 			"matches":
 			[
+				"*://store.steampowered.com/*"
+			],
+			"exclude_matches":
+			[
+				"*://store.steampowered.com/widget/*"
+			],
+			"js":
+			[
+				"scripts/experiments/cepheus.js"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://store.steampowered.com/app/*"
 			],
 			"js":
