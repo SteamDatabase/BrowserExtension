@@ -6,7 +6,7 @@ chrome.storage.local.get( 'button-video', function( items )
 	}
 	
 	var container = document.querySelector( '.game_details .block_content_inner' );
-
+	
 	if( container )
 	{
 		var link = document.createElement( 'a' );
@@ -17,4 +17,4 @@ chrome.storage.local.get( 'button-video', function( items )
 		
 		container.insertBefore( link, null );
 	}
-});
+} );

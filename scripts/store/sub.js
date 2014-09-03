@@ -6,7 +6,7 @@ chrome.storage.local.get( 'button-sub', function( items )
 	}
 	
 	var container = document.querySelector( '.share' );
-
+	
 	if( container )
 	{
 		var link = document.createElement( 'a' );

@@ -11,7 +11,7 @@ chrome.storage.local.get( 'link-accountpage', function( items )
 	    link,
 	    title,
 	    element;
-
+	
 	if( licenses )
 	{
 		for( var i = 0, length = licenses.length; i < length; i++ )
