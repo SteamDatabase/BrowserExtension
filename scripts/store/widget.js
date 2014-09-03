@@ -1,17 +1,25 @@
-var subid = document.querySelector( 'input[name="subid"]' );
-
-if( subid )
+chrome.storage.local.get( 'link-subid-widget', function( items )
 {
-	var subid = subid.value;
+	if( items[ 'link-subid-widget' ] === true )
+	{
+		return;
+	}
 	
-	var link = document.createElement( 'a' );
-	link.className = 'steamdb_link';
-	link.target = '_blank';
-	link.href = GetHomepage() + 'sub/' + subid + '/';
-	link.innerHTML = 'View on Steam Database <i class="steamdb_subid">(' + subid + ')</i>'; // TODO: fix
-	
-	var container = document.createElement( 'p' );
-	container.appendChild( link );
-	
-	document.querySelector( '.desc' ).appendChild( container );
-}
+	var subid = document.querySelector( 'input[name="subid"]' );
+
+	if( subid )
+	{
+		var subid = subid.value;
+		
+		var link = document.createElement( 'a' );
+		link.className = 'steamdb_link';
+		link.target = '_blank';
+		link.href = GetHomepage() + 'sub/' + subid + '/';
+		link.innerHTML = 'View on Steam Database <i class="steamdb_subid">(' + subid + ')</i>'; // TODO: fix
+		
+		var container = document.createElement( 'p' );
+		container.appendChild( link );
+		
+		document.querySelector( '.desc' ).appendChild( container );
+	}
+});
