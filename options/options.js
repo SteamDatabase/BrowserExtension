@@ -11,7 +11,7 @@
 		element.addEventListener( 'change', CheckboxChange );
 	}
 	
-	chrome.storage.local.get( Object.keys( options ), function( items )
+	GetOption( Object.keys( options ), function( items )
 	{
 		for( var item in items )
 		{
@@ -21,9 +21,12 @@
 	
 	function CheckboxChange( )
 	{
-		var option = this.dataset.option;
-		
-		if( this.checked )
+		SetOption( this.dataset.option, this.checked );
+	}
+	
+	function SetOption( option, disabled )
+	{
+		if( disabled )
 		{
 			chrome.storage.local.remove( option );
 		}

@@ -23,6 +23,11 @@ var CurrentAppID,
 		return 'http://steamdb.info/';
 	},
 	
+	GetOption = function( items, callback )
+	{
+		chrome.storage.local.get( items, callback );
+	},
+	
 	GetLocalResource = function( res )
 	{
 		if( typeof chrome !== 'undefined' )

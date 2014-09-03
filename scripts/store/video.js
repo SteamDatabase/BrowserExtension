@@ -1,4 +1,4 @@
-chrome.storage.local.get( 'button-video', function( items )
+GetOption( 'button-video', function( items )
 {
 	if( items[ 'button-video' ] === true )
 	{

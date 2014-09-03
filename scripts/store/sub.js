@@ -1,4 +1,4 @@
-chrome.storage.local.get( 'button-sub', function( items )
+GetOption( 'button-sub', function( items )
 {
 	if( items[ 'button-sub' ] === true )
 	{

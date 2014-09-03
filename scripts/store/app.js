@@ -12,7 +12,7 @@ if( container )
 }
 else
 {
-	chrome.storage.local.get( [ 'button-app', 'link-subid' ], function( items )
+	GetOption( [ 'button-app', 'link-subid' ], function( items )
 	{
 		console.log( items );
 		

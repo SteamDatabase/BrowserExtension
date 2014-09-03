@@ -1,4 +1,4 @@
-chrome.storage.local.get( 'link-subid-widget', function( items )
+GetOption( 'link-subid-widget', function( items )
 {
 	if( items[ 'link-subid-widget' ] === true )
 	{
