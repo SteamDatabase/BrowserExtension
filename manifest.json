@@ -22,7 +22,8 @@
 		"icons/18.png",
 		"images/store.png",
 		"scripts/community/inventory.js",
-		"scripts/store/subscriptions.js"
+		"scripts/store/subscriptions.js",
+		"options/options.html"
 	],
 	"content_scripts":
 	[
