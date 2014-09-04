@@ -1,38 +1,5 @@
-GetOption( [ 'experiment-cepheus', 'last-alert-version' ], function( items )
+GetOption( 'experiment-cepheus', function( items )
 {
-
-// TODO: Remove in next version (this doesn't need to be ported)
-if( items[ 'last-alert-version' ] !== '1.0.4' )
-{
-	var element = document.createElement( 'div' );
-	
-	element.id = 'steamdb-update-notice';
-	element.style.backgroundColor = '#DA4453';
-	element.style.color = '#FFF';
-	element.style.position = 'fixed';
-	element.style.bottom = '10px';
-	element.style.right = '10px';
-	element.style.padding = '10px';
-	element.style.zIndex = 1336;
-	element.style.width = '200px';
-	element.innerHTML = 'Hey, SteamDB extension now has an options page! <a class="close-steamdb-version-message" href="' + GetLocalResource( 'options/options.html' ) + '" target="_blank" style="text-decoration:underline">Check it out!</a>'
-		+ '<br><br><a class="close-steamdb-version-message" href="#" style="text-decoration:underline">Never show this mesage again</a>';
-	
-	document.body.insertBefore( element, document.body.firstChild );
-	
-	element = document.querySelectorAll( '.close-steamdb-version-message' );
-	
-	for( var i = 0; i < element.length; i++ )
-	{
-		element[ i ].addEventListener( 'click', function( )
-		{
-			var element = document.getElementById( 'steamdb-update-notice' );
-			element.parentNode.removeChild( element );
-			
-			chrome.storage.local.set( { 'last-alert-version': '1.0.4' } );
-		} );
-	}
-}
 
 if( items[ 'experiment-cepheus' ] === true )
 {
