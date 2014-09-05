@@ -25,7 +25,14 @@ var CurrentAppID,
 	
 	GetOption = function( items, callback )
 	{
-		chrome.storage.local.get( items, callback );
+		if( typeof chrome !== 'undefined' )
+		{
+			chrome.storage.local.get( items, callback );
+		} 
+		else if( typeof self.options.firefox !== 'undefined' )
+		{
+			callback(items);
+		}
 	},
 	
 	GetLocalResource = function( res )
@@ -33,9 +40,11 @@ var CurrentAppID,
 		if( typeof chrome !== 'undefined' )
 		{
 			return chrome.extension.getURL( res );
+		} 
+		else if( typeof self.options.firefox !== 'undefined' )
+		{
+			return self.options[res];
 		}
-		
-		// TODO: Add Firefox/Safari apis here
 		
 		return res;
 	};

@@ -1,14 +1,15 @@
 {
-	"name": "SteamDB",
+	"name": "steamdb",
 	"title": "Steam Database",
 	"description": "Adds Steam Database link across Steam Community and Store.",
 	"id": "firefox-extension@steamdb.info",
 	"homepage": "http://steamdb.info/",
 	"version": "1.0.4",
 	"icon": "icons/128.png",
-	"icon64": "icons/48.png",
+	"icon64": "icons/64.png",
 	"lib": "scripts",
 	"main": "firefox",
+	"data": ".",
 	"permissions":
 	{
 		"cross-domain-content":
