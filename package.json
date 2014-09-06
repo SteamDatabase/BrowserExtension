@@ -10,7 +10,7 @@
 	"icon64": "icons/64.png",
 	"lib": "scripts",
 	"main": "firefox",
-	"data": ".",
+	"data": "data",
 	"permissions":
 	{
 		"cross-domain-content":
