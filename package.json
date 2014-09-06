@@ -1,6 +1,7 @@
 {
 	"name": "steamdb",
 	"title": "Steam Database",
+	"author": "Steam Database",
 	"description": "Adds Steam Database link across Steam Community and Store.",
 	"id": "firefox-extension@steamdb.info",
 	"homepage": "http://steamdb.info/",
