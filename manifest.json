@@ -53,6 +53,7 @@
 			],
 			"js":
 			[
+				"scripts/steamdb.js",
 				"scripts/experiments/cepheus.js"
 			]
 		},
