@@ -9,9 +9,7 @@ mkdir data/icons/
 
 echo Copying files
 
-cp scripts/ data/ -r
-cp styles/ data/ -r
-cp images/ data/images/ -r
+cp -r scripts/ styles/ images/ data/
 cp icons/18.png data/icons/18.png
 cp manifest.json data/manifest.json
 
