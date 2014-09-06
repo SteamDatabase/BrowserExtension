@@ -10,6 +10,7 @@ GetOption( 'button-sub', function( items )
 	if( container )
 	{
 		var link = document.createElement( 'a' );
+		link.style.backgroundImage = 'url("' + GetLocalResource( 'images/store.png' ) + '")';
 		link.className = 'game_area_wishlist_btn steamdb_button';
 		link.target = '_blank';
 		link.href = GetHomepage() + 'sub/' + GetCurrentAppID() + '/';

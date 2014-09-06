@@ -1,40 +1,53 @@
 var pageMod = require("sdk/page-mod");
 var data = require("sdk/self").data;
 
-var scriptOptions = {
-	"icons/18.png": data.url("icons/18.png"),
-	"subscriptions": data.url("scripts/store/subscriptions.js"),
-	"inventory": data.url("scripts/community/inventory.js"),
-	"firefox": true
+var manifest = JSON.parse( data.load( 'manifest.json' ) );
+
+var scriptOptions =
+{
+	firefox: true
+};
+
+for( var i = 0; i < manifest.web_accessible_resources.length; i++ )
+{
+	var file = manifest.web_accessible_resources[ i ];
+	
+	scriptOptions[ file ] = data.url( file );
 }
 
-var manifest = JSON.parse(data.load('manifest.json'));
+var contentScripts = manifest.content_scripts;
 
-for ( page in manifest['content_scripts'] )
+for( var i = 0; i < contentScripts.length; i++ )
 {
-	var includeMatches = [];
-	for ( match in manifest['content_scripts'][page]["matches"] )
+	var contentScript = contentScripts[ i ];
+	
+	var pageMatch =
 	{
-		match = manifest['content_scripts'][page]["matches"][match].replace(/\*/g, ".*").replace(/[\/]/g, "\/");
-		includeMatches.push(new RegExp(match));
-	}
-
-	var jsFiles = [];
-	for ( js in manifest['content_scripts'][page]["js"] )
-	{
-		jsFiles.push(data.url(manifest['content_scripts'][page]["js"][js]));
-	}
-
-	var cssFiles = [];
-	for ( css in manifest['content_scripts'][page]["css"] )
-	{
-		cssFiles.push(data.url(manifest['content_scripts'][page]["css"][css]));
-	}
-
-	pageMod.PageMod({
-		include: includeMatches,
-		contentScriptFile: jsFiles,
-		contentStylefile: cssFiles,
+		include: [],
+		contentScriptFile: [],
+		contentStyleFile: [],
 		contentScriptOptions: scriptOptions
-	 });
+	};
+	
+	for( var x = 0; x < contentScript.matches.length; x++ )
+	{
+		var match = contentScript.matches[ x ].replace(/\*/g, ".*").replace(/[\/]/g, "\/");
+		
+		pageMatch.include.push( new RegExp( match ) );
+	}
+	
+	for( var x = 0; x < contentScript.js.length; x++ )
+	{
+		pageMatch.contentScriptFile.push( data.url( contentScript.js[ x ] ) );
+	}
+	
+	if( contentScript.css )
+	{
+		for( var x = 0; x < contentScript.css.length; x++ )
+		{
+			pageMatch.contentStyleFile.push( data.url( contentScript.css[ x ] ) );
+		}
+	}
+	
+	pageMod.PageMod( pageMatch );
 }
