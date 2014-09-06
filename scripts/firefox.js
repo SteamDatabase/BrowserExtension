@@ -1,11 +1,12 @@
-var pageMod = require("sdk/page-mod");
-var data = require("sdk/self").data;
+var pageMod = require( 'sdk/page-mod' );
+var data = require( 'sdk/self' ).data;
 
 var manifest = JSON.parse( data.load( 'manifest.json' ) );
 
 var scriptOptions =
 {
-	firefox: true
+	firefox: true,
+	preferences: require( 'sdk/simple-prefs' ).prefs
 };
 
 for( var i = 0; i < manifest.web_accessible_resources.length; i++ )

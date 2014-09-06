@@ -1,4 +1,4 @@
-GetOption( 'button-gamehub', function( items )
+GetOption( [ 'button-gamehub' ], function( items )
 {
 	if( items[ 'button-gamehub' ] === true )
 	{

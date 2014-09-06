@@ -31,7 +31,16 @@ var CurrentAppID,
 		} 
 		else if( typeof self.options.firefox !== 'undefined' )
 		{
-			callback(items);
+			var item, data = {};
+			
+			for( var i = 0; i < items.length; i++ )
+			{
+				item = items[ i ];
+				
+				data[ item ] = !self.options.preferences[ item ];
+			}
+			
+			callback( data );
 		}
 	},
 	
@@ -43,7 +52,7 @@ var CurrentAppID,
 		} 
 		else if( typeof self.options.firefox !== 'undefined' )
 		{
-			return self.options[res];
+			return self.options[ res ];
 		}
 		
 		return res;

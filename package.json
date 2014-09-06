@@ -20,5 +20,69 @@
 			"http://steamcommunity.com/",
 			"https://steamcommunity.com/"
 		]
-	}
+	},
+	"preferences":
+	[
+		{
+			"name": "button-app",
+			"title": "Display a button on app pages",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "button-sub",
+			"title": "Display a button on package pages",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "button-video",
+			"title": "Display a button on video pages",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "button-gamehub",
+			"title": "Display a button on game hubs",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "link-subid",
+			"title": "Display SubID under each purchase option",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "link-subid-widget",
+			"title": "Display SubID in app widgets",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "link-inventory",
+			"title": "Link each gift in your inventory",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "link-accountpage",
+			"title": "Link each package on your accounts page",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "profile-calculator",
+			"title": "Add a calculator link on community profiles",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "experiment-cepheus",
+			"title": "Cepheus",
+			"description": "Highlight owned and wished products on the Steam Store",
+			"type": "bool",
+			"value": true
+		}
+	]
 }
