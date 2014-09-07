@@ -1,9 +1,15 @@
 // There's no easier way to check if we're on error page :(
 if( document.title === 'Sorry!' && document.body.style.backgroundImage === 'url(http://cdn.store.steampowered.com/public/images/v5/content_bg.png)' )
 {
+	var link = document.createElement( 'a' );
+	link.href = 'http://steamstat.us';
+	link.target = '_blank';
+	link.appendChild( document.createTextNode( 'View network status on SteamDB' ) );
+	
 	var element = document.createElement( 'div' );
 	element.className = 'steamdb_downtime_container';
-	element.innerHTML = 'Steam appears to be experiencing some downtime. <a href="//steamstat.us" target="_blank">View network status on SteamDB</a>';
+	element.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
+	element.appendChild( link );
 	
 	var container = document.createElement( 'div' );
 	container.className = 'steamdb_downtime';

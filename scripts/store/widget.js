@@ -11,11 +11,16 @@ GetOption( [ 'link-subid-widget' ], function( items )
 	{
 		var subid = subid.value;
 		
+		var subidElement = document.createElement( 'i' );
+		subidElement.className = 'steamdb_subid';
+		subidElement.appendChild( document.createTextNode( '(' + subid + ')' ) );
+		
 		var link = document.createElement( 'a' );
 		link.className = 'steamdb_link';
 		link.target = '_blank';
 		link.href = GetHomepage() + 'sub/' + subid + '/';
-		link.innerHTML = 'View on Steam Database <i class="steamdb_subid">(' + subid + ')</i>'; // TODO: fix
+		link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
+		link.appendChild( subidElement );
 		
 		var container = document.createElement( 'p' );
 		container.appendChild( link );

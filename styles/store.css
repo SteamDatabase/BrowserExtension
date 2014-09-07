@@ -2,6 +2,10 @@
 	color: #898A8C;
 }
 
+.steamdb_link:hover {
+	text-decoration: underline;
+}
+
 .steamdb_error_link {
 	display: block;
 	margin-top: 12px;

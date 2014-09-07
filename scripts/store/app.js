@@ -42,7 +42,7 @@ else
 			// Find each "add to cart" button
 			container = document.querySelectorAll( 'input[name="subid"]' );
 			
-			var hasDropdowns = false, i = 0, subid = 0, length = container.length;
+			var hasDropdowns = false, i = 0, subid = 0, subidElement, length = container.length;
 			
 			for( i = 0; i < length; i++ )
 			{
@@ -52,6 +52,9 @@ else
 				
 				element = element.parentElement.parentElement;
 				
+				subidElement = document.createElement( 'i' );
+				subidElement.className = 'steamdb_subid';
+				
 				// Is this a subscription selector?
 				if( subid.length === 0 )
 				{
@@ -59,22 +62,28 @@ else
 					{
 						hasDropdowns = true;
 						
+						subidElement.appendChild( document.createTextNode( '(nothing selected)' ) );
+						
 						link = document.createElement( 'a' );
 						link.className = 'steamdb_link' + ( element.querySelector( '.game_area_purchase_game_dropdown_left_panel' ) ? '' : ' steamdb_float_left' );
 						link.target = '_blank';
 						link.href = GetHomepage();
-						link.innerHTML = 'View on Steam Database <i class="steamdb_subid">(nothing selected)</i>'; // TODO: fix
+						link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
+						link.appendChild( subidElement );
 						
 						element.appendChild( link );
 					}
 				}
 				else
 				{
+					subidElement.appendChild( document.createTextNode( '(' + subid + ')' ) );
+					
 					link = document.createElement( 'a' );
 					link.className = 'steamdb_link steamdb_float_left';
 					link.target = '_blank';
 					link.href = GetHomepage() + 'sub/' + subid + '/';
-					link.innerHTML = 'View on Steam Database <i class="steamdb_subid">(' + subid + ')</i>'; // TODO: fix
+					link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
+					link.appendChild( subidElement );
 					
 					element.appendChild( link );
 				}
