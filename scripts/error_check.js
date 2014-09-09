@@ -1,5 +1,5 @@
 // There's no easier way to check if we're on error page :(
-if( document.title === 'Sorry!' && document.body.style.backgroundImage === 'url(http://cdn.store.steampowered.com/public/images/v5/content_bg.png)' )
+if( document.title === 'Sorry!' || document.title === 'Error' )
 {
 	var link = document.createElement( 'a' );
 	link.href = 'http://steamstat.us';
