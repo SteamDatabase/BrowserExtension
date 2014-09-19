@@ -24,7 +24,7 @@ GetOption( [ 'button-gamehub' ], function( items )
 			text.appendChild( document.createTextNode( 'Steam Database' ) );
 			
 			element = document.createElement( 'a' );
-			element.className = 'btn_darkblue_white_innerfade btn_medium steamdb_button';
+			element.className = 'btn_darkblue_white_innerfade btn_medium';
 			element.target = '_blank';
 			element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 			element.appendChild( text );

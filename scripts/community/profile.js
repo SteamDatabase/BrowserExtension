@@ -51,7 +51,7 @@ GetOption( [ 'profile-calculator' ], function( items )
 			text.appendChild( image );
 			
 			element = document.createElement( 'a' );
-			element.className = 'btn_profile_action btn_medium steamdb_button';
+			element.className = 'btn_profile_action btn_medium';
 			element.target = '_blank';
 			element.href = GetHomepage() + 'calculator/?player=' + steamID;
 			element.title = 'SteamDB Calculator';

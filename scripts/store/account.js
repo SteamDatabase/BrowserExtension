@@ -20,7 +20,6 @@ GetOption( [ 'link-accountpage' ], function( items )
 			title = element.textContent;
 			
 			link = document.createElement( 'a' );
-			link.className = 'steamdb_button';
 			link.target = '_blank';
 			link.href = GetHomepage() + 'search/?a=sub&q=' + encodeURIComponent( title );
 			link.appendChild( document.createTextNode( title ) );

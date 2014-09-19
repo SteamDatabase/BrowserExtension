@@ -20,7 +20,7 @@ for( i = 0; i < length; i++ )
 		text.appendChild( document.createTextNode( 'View on Steam Database' ) );
 		
 		link = document.createElement( 'a' );
-		link.className = 'popup_menu_item2 tight steamdb_button';
+		link.className = 'popup_menu_item2 tight';
 		link.target = '_blank';
 		link.href = GetHomepage() + 'app/' + appID + '/';
 		link.appendChild( text );

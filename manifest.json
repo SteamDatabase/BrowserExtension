@@ -20,7 +20,6 @@
 	"web_accessible_resources":
 	[
 		"icons/18.png",
-		"images/store.png",
 		"scripts/community/inventory.js",
 		"scripts/store/subscriptions.js"
 	],
