@@ -22,3 +22,7 @@
 .steamdb_self_profile {
 	vertical-align: -4px;
 }
+
+.steamdb_totally_not_a_nbsp_spacer {
+	margin-right: 8px;
+}

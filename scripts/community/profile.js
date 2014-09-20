@@ -25,6 +25,7 @@ GetOption( [ 'profile-calculator' ], function( items )
 	if( container )
 	{
 		var image = document.createElement( 'img' );
+		image.className = 'steamdb_totally_not_a_nbsp_spacer';
 		image.src = GetLocalResource( 'icons/18.png' );
 		
 		var element = document.createElement( 'a' );
@@ -32,7 +33,7 @@ GetOption( [ 'profile-calculator' ], function( items )
 		element.target = '_blank';
 		element.className = 'popup_menu_item';
 		element.appendChild( image );
-		element.appendChild( document.createTextNode( ' SteamDB Calculator' ) );
+		element.appendChild( document.createTextNode( 'SteamDB Calculator' ) );
 		
 		container.insertBefore( element, null );
 	}
