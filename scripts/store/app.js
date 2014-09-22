@@ -18,21 +18,26 @@ else
 		
 		if( items[ 'button-app' ] !== true )
 		{
-			container = document.querySelector( '#demo_block .block_content_inner' );
+			container = document.querySelector( '#demo_block' );
 			
 			if( container )
 			{
 				link = document.createElement( 'a' );
-				link.className = 'action_btn';
+				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.target = '_blank';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
-				link.appendChild( document.createTextNode( 'View on Steam Database' ) );
 				
-				element = document.createElement( 'div' );
-				element.className = 'demo_area_button';
-				element.appendChild( link );
+				element = document.createElement( 'span' );
+				element.dataset.storeTooltip = 'View on Steam Database'; // TODO: BindStoreTooltip
+				link.appendChild( element );
 				
-				container.insertBefore( element, container.firstChild );
+				var image = document.createElement( 'img' );
+				image.className = 'ico16';
+				image.src = GetLocalResource( 'icons/18.png' );
+				
+				element.appendChild( image );
+				
+				container.insertBefore( link, container.firstChild );
 			}
 		}
 		
