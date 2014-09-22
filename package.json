@@ -76,13 +76,6 @@
 			"title": "Add a calculator link on community profiles",
 			"type": "bool",
 			"value": true
-		},
-		{
-			"name": "experiment-cepheus",
-			"title": "Cepheus",
-			"description": "Highlight owned and wished products on the Steam Store",
-			"type": "bool",
-			"value": true
 		}
 	]
 }
