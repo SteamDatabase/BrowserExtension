@@ -20,7 +20,7 @@ var CurrentAppID,
 	
 	GetHomepage = function()
 	{
-		return 'http://steamdb.info/';
+		return 'https://steamdb.info/';
 	},
 	
 	GetOption = function( items, callback )

@@ -4,7 +4,7 @@
 	"name": "Steam Database",
 	"short_name": "SteamDB",
 	"description": "Adds Steam Database link across Steam Community and Store.",
-	"homepage_url": "http://steamdb.info/",
+	"homepage_url": "https://steamdb.info/",
 	"options_page": "options/options.html",
 	"icons":
 	{
