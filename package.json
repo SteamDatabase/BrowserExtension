@@ -83,6 +83,12 @@
 			"title": "Accept Market SSA automatically",
 			"type": "bool",
 			"value": false
+		},
+		{
+			"name": "enhancement-skip-agecheck",
+			"title": "Skip age check gate",
+			"type": "bool",
+			"value": false
 		}
 	]
 }
