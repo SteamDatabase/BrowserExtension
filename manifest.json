@@ -203,6 +203,28 @@
 				"scripts/steamdb.js",
 				"scripts/community/market_ssa.js"
 			]
+		},
+		{
+			"run_at": "document_start",
+			"matches":
+			[
+				"*://store.steampowered.com/agecheck/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/store/agecheck.js"
+			]
+		},
+		{
+			"matches":
+			[
+				"*://store.steampowered.com/cart*"
+			],
+			"js":
+			[
+				"scripts/store/cart.js"
+			]
 		}
 	]
 }
