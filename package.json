@@ -76,6 +76,13 @@
 			"title": "Add a calculator link on community profiles",
 			"type": "bool",
 			"value": true
+		},
+		
+		{
+			"name": "enhancement-market-ssa",
+			"title": "Accept Market SSA automatically",
+			"type": "bool",
+			"value": false
 		}
 	]
 }

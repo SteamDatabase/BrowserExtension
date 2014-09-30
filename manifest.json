@@ -189,6 +189,20 @@
 			[
 				"styles/community.css"
 			]
+		},
+		{
+			"all_frames": true,
+			"matches":
+			[
+				"*://steamcommunity.com/market/*",
+				"*://steamcommunity.com/id/*/inventory*",
+				"*://steamcommunity.com/profiles/*/inventory*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/market_ssa.js"
+			]
 		}
 	]
 }
