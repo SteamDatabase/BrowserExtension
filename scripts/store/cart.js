@@ -26,7 +26,7 @@ if( document.querySelector( '.cart_item' ) )
 			document.cookie = 'shoppingCartGID' + '=-1; expires=' + date + '; path=/';
 			document.cookie = 'workshopShoppingCartGID' + '=-1; expires=' + date + '; path=/';
 			
-			window.location.reload();
+			window.location.href = window.location.pathname + window.location.search; // location.reload() re-submits POST data
 		}, false );
 		
 		container.appendChild( link );
