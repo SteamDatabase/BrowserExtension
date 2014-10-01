@@ -11,7 +11,7 @@ if( document.querySelector( '.cart_item' ) )
 		var link = document.createElement( 'a' );
 		link.className = 'btn_medium btnv6_blue_hoverfade';
 		link.href = '#';
-		link.style.float = 'right';
+		link.style.cssFloat = 'right';
 		link.appendChild( element );
 		
 		// NukeCartCookie from Valve's checkout.js
