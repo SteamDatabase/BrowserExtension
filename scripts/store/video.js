@@ -1,6 +1,6 @@
-GetOption( [ 'button-video' ], function( items )
+GetOption( { 'button-video': true }, function( items )
 {
-	if( items[ 'button-video' ] === true )
+	if( !items[ 'button-video' ] )
 	{
 		return;
 	}

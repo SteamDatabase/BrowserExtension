@@ -1,6 +1,6 @@
-GetOption( [ 'link-subid-widget' ], function( items )
+GetOption( { 'link-subid-widget': true }, function( items )
 {
-	if( items[ 'link-subid-widget' ] === true )
+	if( !items[ 'link-subid-widget' ] )
 	{
 		return;
 	}

@@ -31,13 +31,9 @@ var CurrentAppID,
 		} 
 		else if( typeof self.options.firefox !== 'undefined' )
 		{
-			var item, data = {};
-			
-			for( var i = 0; i < items.length; i++ )
+			for( var item in items )
 			{
-				item = items[ i ];
-				
-				data[ item ] = !self.options.preferences[ item ];
+				items[ item ] = self.options.preferences[ item ];
 			}
 			
 			callback( data );

@@ -12,11 +12,12 @@ if( container )
 }
 else
 {
-	GetOption( [ 'button-app', 'link-subid' ], function( items )
+	GetOption( { 'button-app': true, 'link-subid': true }, function( items )
 	{
+		console.log(items);
 		var link, element, container;
 		
-		if( items[ 'button-app' ] !== true )
+		if( items[ 'button-app' ] )
 		{
 			container = document.querySelector( '#demo_block' );
 			
@@ -41,7 +42,7 @@ else
 			}
 		}
 		
-		if( items[ 'link-subid' ] !== true )
+		if( items[ 'link-subid' ] )
 		{
 			// Find each "add to cart" button
 			container = document.querySelectorAll( 'input[name="subid"]' );

@@ -1,6 +1,6 @@
-GetOption( [ 'enhancement-market-ssa' ], function( items )
+GetOption( { 'enhancement-market-ssa': false }, function( items )
 {
-	if( items[ 'enhancement-market-ssa' ] === false )
+	if( items[ 'enhancement-market-ssa' ] )
 	{
 		var element = document.getElementById( 'market_buynow_dialog_accept_ssa' );
  		

@@ -1,8 +1,8 @@
 if( document.getElementById( 'inventory_link_753' ) )
 {
-	GetOption( [ 'link-inventory' ], function( items )
+	GetOption( { 'link-inventory': true }, function( items )
 	{
-		if( items[ 'link-inventory' ] === true )
+		if( !items[ 'link-inventory' ] )
 		{
 			return;
 		}

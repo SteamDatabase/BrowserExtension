@@ -8,8 +8,6 @@
 		
 		options[ element.dataset.option ] = element;
 		
-		element.dataset.default = element.checked;
-		
 		element.addEventListener( 'change', CheckboxChange );
 	}
 	
@@ -19,25 +17,18 @@
 		{
 			element = options[ item ];
 			
-			element.checked = !element.checked;
+			element.checked = items[ item ];
 		}
 	} );
 	
 	function CheckboxChange( )
 	{
-		SetOption( this.dataset.option, this.checked, this.dataset.default );
+		SetOption( this.dataset.option, this.checked );
 	}
 	
-	function SetOption( option, value, defaultValue )
+	function SetOption( option, value )
 	{
-		if( value.toString() === defaultValue )
-		{
-			chrome.storage.local.remove( option );
-		}
-		else
-		{
-			var chromepls = {}; chromepls[ option ] = defaultValue === 'true';
-			chrome.storage.local.set( chromepls );
-		}
+		var chromepls = {}; chromepls[ option ] = value;
+		chrome.storage.local.set( chromepls );
 	}
 }());

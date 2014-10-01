@@ -1,6 +1,6 @@
-GetOption( [ 'button-sub' ], function( items )
+GetOption( { 'button-sub': true }, function( items )
 {
-	if( items[ 'button-sub' ] === true )
+	if( !items[ 'button-sub' ] )
 	{
 		return;
 	}

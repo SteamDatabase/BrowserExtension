@@ -1,6 +1,6 @@
-GetOption( [ 'enhancement-skip-agecheck' ], function( items )
+GetOption( { 'enhancement-skip-agecheck': false }, function( items )
 {
-	if( items[ 'enhancement-skip-agecheck' ] === false )
+	if( items[ 'enhancement-skip-agecheck' ] )
 	{
 		var date = new Date();
 		date.setFullYear( date.getFullYear() + 1 );

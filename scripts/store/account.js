@@ -1,6 +1,6 @@
-GetOption( [ 'link-accountpage' ], function( items )
+GetOption( { 'link-accountpage': true }, function( items )
 {
-	if( items[ 'link-accountpage' ] === true )
+	if( !items[ 'link-accountpage' ] )
 	{
 		return;
 	}

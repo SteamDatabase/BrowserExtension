@@ -1,6 +1,6 @@
-GetOption( [ 'profile-calculator' ], function( items )
+GetOption( { 'profile-calculator': true }, function( items )
 {
-	if( items[ 'profile-calculator' ] === true )
+	if( !items[ 'profile-calculator' ] )
 	{
 		return;
 	}
