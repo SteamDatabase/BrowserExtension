@@ -1,19 +1,20 @@
-// Only insert button if there are items in the cart
-if( document.querySelector( '.cart_item' ) )
-{
-	var container = document.querySelector( '.page_content > .leftcol' );
+var container = document.querySelector( '.page_content > .leftcol' );
 
-	if( container )
+if( container )
+{
+	var cartItem = document.querySelector( '.cart_item' );
+	
+	var element = document.createElement( 'span' );
+	element.appendChild( document.createTextNode( 'Empty cart' ) );
+	
+	var link = document.createElement( 'a' );
+	link.className = 'btn_medium btnv6_blue_hoverfade' + ( cartItem ? '' : ' btn_disabled' );
+	link.href = '#';
+	link.style.cssFloat = 'right';
+	link.appendChild( element );
+	
+	if( cartItem )
 	{
-		var element = document.createElement( 'span' );
-		element.appendChild( document.createTextNode( 'Empty cart' ) );
-		
-		var link = document.createElement( 'a' );
-		link.className = 'btn_medium btnv6_blue_hoverfade';
-		link.href = '#';
-		link.style.cssFloat = 'right';
-		link.appendChild( element );
-		
 		// NukeCartCookie from Valve's checkout.js
 		link.addEventListener( 'click', function( ev )
 		{
@@ -28,7 +29,7 @@ if( document.querySelector( '.cart_item' ) )
 			
 			window.location.href = window.location.pathname + window.location.search; // location.reload() re-submits POST data
 		}, false );
-		
-		container.appendChild( link );
 	}
+	
+	container.appendChild( link );
 }
