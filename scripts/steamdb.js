@@ -36,7 +36,7 @@ var CurrentAppID,
 				items[ item ] = self.options.preferences[ item ];
 			}
 			
-			callback( data );
+			callback( items );
 		}
 	},
 	
