@@ -26,6 +26,7 @@
 	"content_scripts":
 	[
 		{
+			"run_at": "document_end",
 			"matches":
 			[
 				"*://store.steampowered.com/*",
@@ -34,11 +35,11 @@
 			"js":
 			[
 				"scripts/steamdb.js",
-				"scripts/error_check.js"
+				"scripts/global.js"
 			],
 			"css":
 			[
-				"styles/down.css"
+				"styles/global.css"
 			]
 		},
 		{

@@ -89,6 +89,12 @@
 			"title": "Skip age check gate",
 			"type": "bool",
 			"value": false
+		},
+		{
+			"name": "enhancement-hide-install-button",
+			"title": "Hide \"Install Steam\" button in header",
+			"type": "bool",
+			"value": false
 		}
 	]
 }

@@ -19,3 +19,18 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 	
 	document.body.style.margin = 0;
 }
+else
+{
+	GetOption( [ 'enhancement-hide-install-button' ], function( items )
+	{
+		if( items[ 'enhancement-hide-install-button' ] === false )
+		{
+			var element = document.querySelector( '.header_installsteam_btn' );
+			
+			if( element )
+			{
+				element.setAttribute( 'hidden', true );
+			}
+		}
+	} );
+}
