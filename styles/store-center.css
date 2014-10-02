@@ -1,0 +1,13 @@
+@media all and (min-width: 1385px) {
+	.home_page_gutter {
+		margin-left: -204px
+	}
+	
+	.home_page_content, .footer_content {
+		padding-left: 0;
+	}
+	
+	.home_page_body_ctn .page_background_holder {
+		right: 0;
+	}
+}

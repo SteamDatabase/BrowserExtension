@@ -61,6 +61,10 @@ p {
   font-size: 1.3rem;
 }
 
+.muted {
+  color: #999;
+}
+
 blockquote {
   position: relative;
   margin: 0 1rem 1rem;
@@ -119,4 +123,42 @@ blockquote:last-child{
 }
 .footer p {
   margin-bottom: .5rem;
+}
+
+/*
+ * Control style for built-in option
+ */
+.control-built-in {
+	cursor: default;
+}
+
+.control-built-in input:checked ~ .control-indicator,
+.control-built-in input:active ~ .control-indicator {
+	background-color: #8CC152;
+}
+
+/*
+ * Store center tweak tests
+ */
+
+.store-viewport-test-fail {
+	display: none;
+	color: #E9573F;
+}
+
+.store-viewport-test-ok {
+	display: none;
+	color: #3BAFDA;
+}
+
+@media all and (min-width: 1385px) {
+	.store-viewport-test-ok {
+		display: inline-block;
+	}
+}
+
+@media all and (max-width: 1384px) {
+	.store-viewport-test-fail {
+		display: block;
+	}
 }
