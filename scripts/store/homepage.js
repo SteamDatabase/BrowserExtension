@@ -1,4 +1,4 @@
-GetOption( [ 'enhancement-store-center' ], function( items )
+GetOption( { 'enhancement-store-center': false }, function( items )
 {
 	if( items[ 'enhancement-store-center' ] )
 	{
