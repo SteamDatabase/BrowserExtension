@@ -28,7 +28,8 @@ else
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 				
 				element = document.createElement( 'span' );
-				element.dataset.storeTooltip = 'View on Steam Database'; // TODO: BindStoreTooltip
+				element.id = 'steamdb_bind_tooltip_on_me';
+				element.dataset.storeTooltip = 'View on Steam Database';
 				link.appendChild( element );
 				
 				var image = document.createElement( 'img' );
@@ -38,6 +39,14 @@ else
 				element.appendChild( image );
 				
 				container.insertBefore( link, container.firstChild );
+				
+				// We need to bind a tooltip, and the only way to do that is to inject a script into the page
+				element = document.createElement( 'script' );
+				element.id = 'steamdb_bind_tooltip';
+				element.type = 'text/javascript';
+				element.appendChild( document.createTextNode( 'BindStoreTooltip( jQuery( "#steamdb_bind_tooltip_on_me" ) );' ) );
+				
+				document.head.appendChild( element );
 			}
 		}
 		
