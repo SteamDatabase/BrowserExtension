@@ -97,6 +97,12 @@
 			"value": false
 		},
 		{
+			"name": "enhancement-friendsthatown",
+			"title": "Add \"Friends that own\" to the \"Friends that play\" page",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "enhancement-store-center",
 			"title": "Center store homepage properly on big screens",
 			"type": "bool",
