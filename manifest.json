@@ -14,8 +14,10 @@
 	"permissions":
 	[
 		"storage",
-		"*://store.steampowered.com/*",
-		"*://steamcommunity.com/*"
+		"http://store.steampowered.com/",
+		"https://store.steampowered.com/",
+		"http://steamcommunity.com/",
+		"https://steamcommunity.com/"
 	],
 	"web_accessible_resources":
 	[
