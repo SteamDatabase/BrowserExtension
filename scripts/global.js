@@ -21,7 +21,7 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 }
 else
 {
-	GetOption( { 'enhancement-hide-install-button': false }, function( items )
+	GetOption( { 'enhancement-hide-install-button': false, 'enhancement-https-fix': false }, function( items )
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
@@ -30,6 +30,28 @@ else
 			if( element )
 			{
 				element.setAttribute( 'hidden', true );
+			}
+		}
+		
+		if( items[ 'enhancement-https-fix' ] )
+		{
+			// Find all community links starting with http:// and just change them to https://
+			// Scripts already have https:// in them whenever you visit community on https
+			var elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' ),
+			    length = elements.length;
+			
+			for( var i = 0; i < length; i++ )
+			{
+				elements[ i ].href = elements[ i ].href.replace( /^http:/, 'https:' );
+			}
+			
+			// Find all forms
+			elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"]' );
+			length = elements.length;
+			
+			for( var i = 0; i < length; i++ )
+			{
+				elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
 			}
 		}
 	} );
