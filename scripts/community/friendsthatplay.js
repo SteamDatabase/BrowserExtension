@@ -37,7 +37,7 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items ) {
 
 			var div = document.createElement( 'div' );
 			div.className = 'mainSectionHeader friendListSectionHeader';
-			div.appendChild(document.createTextNode(friendsown.length + ' Friends who own this game '));
+			div.appendChild(document.createTextNode(friendsown.length + ' friends who own this game '));
 
 			var span = document.createElement( 'span' );
 			span.className = 'underScoreColor';
@@ -52,6 +52,25 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items ) {
 
 			for(var i = 0; i < friendsown.length; ++i) {
 				var steamID = friendsown[i].steamid.slice(4) - 1197960265728;
+
+				var newText = document.createElement( 'div' );
+				newText.className = 'friendSmallText';
+
+				var hours = Math.round( friendsown[i].playtime_twoweeks / 60 * 10 ) / 10 + ' hrs';
+				hours += ' / ' + Math.round( friendsown[i].playtime_total / 60 * 10 ) / 10 + ' hrs';
+				newText.appendChild( document.createTextNode( hours ) );
+
+				newText.appendChild( document.createElement( 'br' ) );
+
+				var compareLink = document.createElement( 'a' );
+				compareLink.className = 'whiteLink friendBlockInnerLink';
+				compareLink.href = miniprofiles[steamID].querySelector( '.friendBlockLinkOverlay' ).href + '/stats/' + GetCurrentAppID() + '/compare';
+				compareLink.appendChild( document.createTextNode( 'View stats' ) );
+
+				newText.appendChild(compareLink);
+
+				var originalText = miniprofiles[steamID].querySelector( '.friendSmallText' );
+				originalText.parentNode.replaceChild( newText, originalText );
 
 				div.appendChild(miniprofiles[steamID]);
 			}
