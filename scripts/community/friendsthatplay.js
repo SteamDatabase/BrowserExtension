@@ -1,6 +1,6 @@
 "use strict";
 
-GetOption( { 'enhancement-friendsthatown': false }, function( items ) {
+GetOption( { 'enhancement-friendsthatown': true }, function( items ) {
 	if( items['enhancement-friendsthatown'] ) {
 		var xhrfriends = new XMLHttpRequest();
 		var xhr = new XMLHttpRequest();
