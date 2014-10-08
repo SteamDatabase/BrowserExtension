@@ -203,10 +203,6 @@
 			[
 				"scripts/steamdb.js",
 				"scripts/community/friendsthatplay.js"
-			],
-			"css":
-			[
-				"styles/community.css"
 			]
 		},
 		{
