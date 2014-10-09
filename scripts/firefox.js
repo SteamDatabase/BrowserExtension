@@ -26,7 +26,6 @@ for( i = 0; i < contentScripts.length; i++ )
 	
 	var pageMatch =
 	{
-		exclude: [],
 		include: [],
 		contentScriptFile: [],
 		contentStyleFile: [],
@@ -55,6 +54,8 @@ for( i = 0; i < contentScripts.length; i++ )
 	
 	if( contentScript.exclude_matches )
 	{
+		pageMatch.exclude = [];
+		
 		for( x = 0; x < contentScript.exclude_matches.length; x++ )
 		{
 			var match = contentScript.exclude_matches[ x ].replace( /\*/g, '.*' ).replace( /[\/]/g, '\/' );
