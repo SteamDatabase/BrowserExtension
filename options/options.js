@@ -1,5 +1,7 @@
 (function()
 {
+	'use strict';
+	
 	var element, checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' ), options = {};
 	
 	for( var i = 0; i < checkboxes.length; i++ )

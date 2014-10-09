@@ -1,3 +1,5 @@
+'use strict';
+
 GetOption( { 'enhancement-skip-agecheck': false }, function( items )
 {
 	if( items[ 'enhancement-skip-agecheck' ] )

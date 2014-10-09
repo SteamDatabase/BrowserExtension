@@ -1,3 +1,5 @@
+'use strict';
+
 GetOption( { 'profile-calculator': true }, function( items )
 {
 	if( !items[ 'profile-calculator' ] )

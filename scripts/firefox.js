@@ -1,3 +1,5 @@
+'use strict';
+
 var pageMod = require( 'sdk/page-mod' );
 var data = require( 'sdk/self' ).data;
 

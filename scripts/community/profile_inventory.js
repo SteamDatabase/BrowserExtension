@@ -1,3 +1,5 @@
+'use strict';
+
 if( document.getElementById( 'inventory_link_753' ) )
 {
 	GetOption( { 'link-inventory': true }, function( items )

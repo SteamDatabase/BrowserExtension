@@ -1,3 +1,5 @@
+'use strict';
+
 GetOption( { 'button-video': true }, function( items )
 {
 	if( !items[ 'button-video' ] )

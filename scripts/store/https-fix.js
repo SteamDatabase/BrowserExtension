@@ -1,3 +1,5 @@
+'use strict';
+
 (function()
 {
 	var originalGetDefaultCommunityAJAXParams = window.GetDefaultCommunityAJAXParams;

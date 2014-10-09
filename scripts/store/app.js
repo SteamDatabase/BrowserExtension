@@ -1,3 +1,5 @@
+'use strict';
+
 var container = document.getElementById( 'error_box' );
 
 if( container )

@@ -1,3 +1,5 @@
+'use strict';
+
 GetOption( { 'link-accountpage': true }, function( items )
 {
 	if( !items[ 'link-accountpage' ] )

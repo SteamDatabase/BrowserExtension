@@ -1,3 +1,5 @@
+'use strict';
+
 GetOption( { 'enhancement-market-ssa': false }, function( items )
 {
 	if( items[ 'enhancement-market-ssa' ] )

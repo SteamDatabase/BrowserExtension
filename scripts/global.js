@@ -1,3 +1,5 @@
+'use strict';
+
 // There's no easier way to check if we're on error page :(
 if( document.title === 'Sorry!' || document.title === 'Error' )
 {

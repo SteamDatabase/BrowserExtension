@@ -1,3 +1,5 @@
+'use strict';
+
 var container = document.querySelector( '.review_app_actions' );
 
 if( container )

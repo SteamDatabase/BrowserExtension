@@ -1,3 +1,5 @@
+'use strict';
+
 var container = document.querySelector( '.page_content > .leftcol' );
 
 if( container )

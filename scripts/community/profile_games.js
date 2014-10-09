@@ -1,3 +1,5 @@
+'use strict';
+
 var text,
     link,
     element,
