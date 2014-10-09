@@ -97,20 +97,20 @@
 			"value": false
 		},
 		{
-			"name": "enhancement-friendsthatown",
-			"title": "Add \"Friends that own\" to the \"Friends that play\" page",
-			"type": "bool",
-			"value": true
-		},
-		{
 			"name": "enhancement-store-center",
 			"title": "Center store homepage properly on big screens",
 			"type": "bool",
 			"value": false
 		},
 		{
+			"name": "enhancement-friendsthatown",
+			"title": "Add \"Friends that own\" to the \"Friends that play\" page",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "enhancement-https-fix",
-			"title": "Overwrite all http://steamcommunity.com links to be https. (fixes workshop subscriptions, etc.)",
+			"title": "Overwrite all http://steamcommunity.com links to be https (fixes workshop subscriptions, etc.)",
 			"type": "bool",
 			"value": false
 		}
