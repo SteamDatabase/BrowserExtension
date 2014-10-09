@@ -36,6 +36,10 @@
 				"*://store.steampowered.com/*",
 				"*://steamcommunity.com/*"
 			],
+			"exclude_matches":
+			[
+				"https://store.steampowered.com/checkout/*"
+			],
 			"js":
 			[
 				"scripts/steamdb.js",
