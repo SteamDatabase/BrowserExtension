@@ -21,7 +21,7 @@
 	],
 	"web_accessible_resources":
 	[
-		"icons/18.png",
+		"icons/white.svg",
 		"styles/store-center.css",
 		"scripts/community/inventory.js",
 		"scripts/store/subscriptions.js",

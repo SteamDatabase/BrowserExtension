@@ -14,3 +14,7 @@
 .steamdb_float_left {
 	float: left;
 }
+
+.btn_steamdb .ico16 {
+	background: none;
+}

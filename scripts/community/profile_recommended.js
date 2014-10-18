@@ -7,7 +7,7 @@ if( container )
 	// image
 	var image = document.createElement( 'img' );
 	image.className = 'toolsIcon steamdb_ogg_icon';
-	image.src = GetLocalResource( 'icons/18.png' );
+	image.src = GetLocalResource( 'icons/white.svg' );
 	
 	// link
 	var link = document.createElement( 'a' );

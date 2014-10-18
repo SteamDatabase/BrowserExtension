@@ -54,7 +54,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			// image
 			var image = document.createElement( 'img' );
 			image.className = 'steamdb_ogg_icon';
-			image.src = GetLocalResource( 'icons/18.png' );
+			image.src = GetLocalResource( 'icons/white.svg' );
 			
 			// image container
 			var actionItemIcon = document.createElement( 'div' );

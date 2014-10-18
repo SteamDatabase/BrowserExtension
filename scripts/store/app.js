@@ -36,7 +36,7 @@ else
 				
 				var image = document.createElement( 'img' );
 				image.className = 'ico16';
-				image.src = GetLocalResource( 'icons/18.png' );
+				image.src = GetLocalResource( 'icons/white.svg' );
 				
 				element.appendChild( image );
 				

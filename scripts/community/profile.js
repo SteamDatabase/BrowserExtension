@@ -28,7 +28,7 @@ GetOption( { 'profile-calculator': true }, function( items )
 	{
 		var image = document.createElement( 'img' );
 		image.className = 'steamdb_totally_not_a_nbsp_spacer';
-		image.src = GetLocalResource( 'icons/18.png' );
+		image.src = GetLocalResource( 'icons/white.svg' );
 		
 		var element = document.createElement( 'a' );
 		element.href = GetHomepage() + 'calculator/?player=' + steamID;
@@ -48,7 +48,7 @@ GetOption( { 'profile-calculator': true }, function( items )
 			var text = document.createElement( 'span' );
 			
 			var image = document.createElement( 'img' );
-			image.src = GetLocalResource( 'icons/18.png' );
+			image.src = GetLocalResource( 'icons/white.svg' );
 			image.className = 'steamdb_self_profile';
 			
 			text.appendChild( image );
