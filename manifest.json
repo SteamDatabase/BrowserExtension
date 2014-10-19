@@ -23,9 +23,9 @@
 	[
 		"icons/white.svg",
 		"styles/store-center.css",
+		"scripts/https-fix.js",
 		"scripts/community/inventory.js",
-		"scripts/store/subscriptions.js",
-		"scripts/store/https-fix.js"
+		"scripts/store/subscriptions.js"
 	],
 	"content_scripts":
 	[

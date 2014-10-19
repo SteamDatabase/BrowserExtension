@@ -10,7 +10,7 @@ mkdir data/icons/
 echo Copying files
 
 cp -r scripts/ styles/ data/
-cp icons/white.svg data/white.svg
+cp icons/white.svg data/icons/white.svg
 cp manifest.json data/manifest.json
 rm data/scripts/firefox.js
 

@@ -56,18 +56,13 @@ else
 				elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
 			}
 			
-			// Using something like HTTPS Everywhere on steamcommunity.com breaks ajax requests on store
-			// Force ajax requests to go over https
-			if( window.location.origin === 'http://store.steampowered.com' )
-			{
-				var element = document.createElement( 'script' );
-				element.id = 'steamdb_https_fix';
-				element.type = 'text/javascript';
-				element.src = GetLocalResource( 'scripts/store/https-fix.js' );
-				element.dataset.homepage = GetHomepage();
-				
-				document.head.appendChild( element );
-			}
+			var element = document.createElement( 'script' );
+			element.id = 'steamdb_https_fix';
+			element.type = 'text/javascript';
+			element.src = GetLocalResource( 'scripts/https-fix.js' );
+			element.dataset.homepage = GetHomepage();
+			
+			document.head.appendChild( element );
 		}
 	} );
 }
