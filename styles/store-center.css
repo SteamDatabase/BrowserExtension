@@ -4,10 +4,20 @@
 	}
 	
 	.home_page_content, .footer_content {
-		padding-left: 0;
+		padding-left: 16px;
 	}
 	
 	.home_page_body_ctn .page_background_holder {
-		right: 16px;
+		right: 0;
+	}
+	
+	/*
+	 * calc() is useful for once!
+	 *
+	 * this glorious hacks moves the background so the takeover banner blends in correctly
+	 * 93.5px is takeover's original offset divided by two
+	 */
+	body.steamdb_has_takeover {
+		background-position-x: calc(50% - 93.5px);
 	}
 }

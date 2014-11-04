@@ -11,5 +11,10 @@ GetOption( { 'enhancement-store-center': false }, function( items )
 		element.href = GetLocalResource( 'styles/store-center.css' );
 		
 		document.head.appendChild( element );
+		
+		if( document.querySelector( '.page_background_holder' ) )
+		{
+			document.body.classList.add( 'steamdb_has_takeover' );
+		}
 	}
 } );
