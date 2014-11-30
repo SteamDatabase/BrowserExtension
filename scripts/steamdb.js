@@ -5,7 +5,7 @@ var CurrentAppID,
 	{
 		if( !CurrentAppID )
 		{
-			CurrentAppID = location.pathname.match( /\/([0-9]{1,6})(?:\/|$)/ );
+			CurrentAppID = location.pathname.match( /\/(app|sub)\/([0-9]{1,7})/ );
 			
 			if( CurrentAppID )
 			{
