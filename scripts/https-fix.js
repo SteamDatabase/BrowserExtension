@@ -24,4 +24,29 @@
 		
 		originalShowModalContent( url, titleBarText, titleBarURL, sizeToFit );
 	};
+	
+	var originalRecordAJAXPageView = window.RecordAJAXPageView;
+	
+	window.RecordAJAXPageView = function RecordAJAXPageView( url )
+	{
+		originalRecordAJAXPageView( url );
+		
+		// Fix links in ajax loaded content
+		var elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' ),
+		    length = elements.length;
+		
+		for( var i = 0; i < length; i++ )
+		{
+			elements[ i ].href = elements[ i ].href.replace( /^http:/, 'https:' );
+		}
+		
+		// Find all forms
+		elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"]' );
+		length = elements.length;
+		
+		for( var i = 0; i < length; i++ )
+		{
+			elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
+		}
+	}
 }());
