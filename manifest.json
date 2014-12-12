@@ -183,6 +183,22 @@
 		{
 			"matches":
 			[
+				"*://steamcommunity.com/id/*/badges*",
+				"*://steamcommunity.com/profiles/*/badges*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/community/profile_badges.js"
+			],
+			"css":
+			[
+				"styles/community.css"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://steamcommunity.com/app/*",
 				"*://steamcommunity.com/games/*",
 				"*://steamcommunity.com/sharedfiles/filedetails*",
