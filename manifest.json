@@ -37,7 +37,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/highlight_on_steamdb.js"
 			]
 		},
@@ -54,7 +54,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/global.js"
 			],
 			"css":
@@ -69,7 +69,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/app.js"
 			],
 			"css":
@@ -84,7 +84,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/account.js"
 			]
 		},
@@ -95,7 +95,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/sub.js"
 			],
 			"css":
@@ -111,7 +111,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/widget.js"
 			],
 			"css":
@@ -126,7 +126,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/video.js"
 			],
 			"css":
@@ -142,7 +142,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/profile.js"
 			],
 			"css":
@@ -158,7 +158,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/profile_inventory.js"
 			]
 		},
@@ -172,7 +172,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/profile_games.js"
 			]
 		},
@@ -184,7 +184,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/profile_recommended.js"
 			],
 			"css":
@@ -200,7 +200,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/profile_badges.js"
 			],
 			"css":
@@ -219,7 +219,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/gamehub.js"
 			],
 			"css":
@@ -235,7 +235,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/friendsthatplay.js"
 			]
 		},
@@ -249,7 +249,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/community/market_ssa.js"
 			]
 		},
@@ -261,7 +261,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/agecheck.js"
 			]
 		},
@@ -283,7 +283,7 @@
 			],
 			"js":
 			[
-				"scripts/steamdb.js",
+				"scripts/common.js",
 				"scripts/store/homepage.js"
 			]
 		}
