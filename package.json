@@ -24,6 +24,12 @@
 	"preferences":
 	[
 		{
+			"name": "steamdb-highlight",
+			"title": "Highlight owned and wished products on steamdb.info",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "button-app",
 			"title": "Display a button on app pages",
 			"type": "bool",

@@ -14,6 +14,7 @@
 	"permissions":
 	[
 		"storage",
+		"https://steamdb.info/",
 		"http://store.steampowered.com/",
 		"https://store.steampowered.com/",
 		"http://steamcommunity.com/",
@@ -29,6 +30,17 @@
 	],
 	"content_scripts":
 	[
+		{
+			"matches":
+			[
+				"https://steamdb.info/*"
+			],
+			"js":
+			[
+				"scripts/steamdb.js",
+				"scripts/highlight_on_steamdb.js"
+			]
+		},
 		{
 			"run_at": "document_end",
 			"matches":
