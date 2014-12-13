@@ -9,7 +9,7 @@ var CurrentAppID,
 			
 			if( CurrentAppID )
 			{
-				CurrentAppID = parseInt( CurrentAppID[ 1 ], 10 );
+				CurrentAppID = parseInt( CurrentAppID[ 2 ], 10 );
 			}
 			else
 			{
