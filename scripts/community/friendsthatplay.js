@@ -14,7 +14,7 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items )
 	
 	var HTTPCallback = function()
 	{
-		if( this.readyState !== XMLHttpRequest.DONE || this.status !== 200 )
+		if( xhr.readyState !== 4 || xhr.status !== 200 )
 		{
 			return;
 		}

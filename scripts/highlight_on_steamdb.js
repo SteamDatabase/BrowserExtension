@@ -26,7 +26,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		
 		xhr.onreadystatechange = function()
 		{
-			if( this.readyState !== XMLHttpRequest.DONE || this.status !== 200 )
+			if( xhr.readyState !== 4 || xhr.status !== 200 )
 			{
 				return;
 			}
@@ -51,7 +51,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 			
 			packages = null;
 			
-			var data = this.response;
+			var data = xhr.response;
 			
 			if( mapAppsToElements.length > 0 )
 			{
