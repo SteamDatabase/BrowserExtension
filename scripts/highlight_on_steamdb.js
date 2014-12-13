@@ -1,5 +1,12 @@
 'use strict';
 
+var element = document.getElementById( 'steamdb-extension-protip' );
+
+if( element )
+{
+	element.setAttribute( 'hidden', true );
+}
+
 GetOption( { 'steamdb-highlight': true }, function( items )
 {
 	if( !items[ 'steamdb-highlight' ] )
@@ -24,7 +31,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 				return;
 			}
 			
-			var i, element, mapAppsToElements = [], mapPackagesToElements = [];
+			var i, mapAppsToElements = [], mapPackagesToElements = [];
 			
 			for( i = 0; i < apps.length; i++ )
 			{
