@@ -24,8 +24,6 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 				return;
 			}
 			
-			console.log( this.response );
-			
 			var i, element, mapAppsToElements = [], mapPackagesToElements = [];
 			
 			for( i = 0; i < apps.length; i++ )
