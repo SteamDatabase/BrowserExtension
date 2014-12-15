@@ -37,6 +37,12 @@ else
 		
 		if( items[ 'enhancement-https-fix' ] )
 		{
+			// Don't apply fixes if visiting steamcommunity on http (stuff like broadcasts simply wont work on https)
+			if( location.hostname === 'steamcommunity.com' && location.protocol !== 'https:' )
+			{
+				return;
+			}
+			
 			// Find all community links starting with http:// and just change them to https://
 			// Scripts already have https:// in them whenever you visit community on https
 			var elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' ),
