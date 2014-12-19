@@ -46,9 +46,9 @@ else
 			// Find all community links starting with http:// and just change them to https://
 			// Scripts already have https:// in them whenever you visit community on https
 			var elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' ),
-			    length = elements.length;
+			    length = elements.length, i;
 			
-			for( var i = 0; i < length; i++ )
+			for( i = 0; i < length; i++ )
 			{
 				elements[ i ].href = elements[ i ].href.replace( /^http:/, 'https:' );
 			}
@@ -57,7 +57,7 @@ else
 			elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"]' );
 			length = elements.length;
 			
-			for( var i = 0; i < length; i++ )
+			for( i = 0; i < length; i++ )
 			{
 				elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
 			}
@@ -69,6 +69,15 @@ else
 			element.dataset.homepage = GetHomepage();
 			
 			document.head.appendChild( element );
+			
+			// Fix super(shitty)nav links
+			elements = document.querySelectorAll( '.supernav' );
+			length = elements.length;
+			
+			for( i = 0; i < length; i++ )
+			{
+				elements[ i ].dataset.tooltipContent = elements[ i ].dataset.tooltipContent.replace( /http:\/\/steamcommunity\.com/g, 'https://steamcommunity.com' );console.log(elements[ i ].dataset.tooltipContent);
+			}
 		}
 	} );
 }
