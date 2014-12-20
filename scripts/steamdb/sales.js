@@ -59,13 +59,6 @@ checkboxControl.addEventListener( 'click', function( ev )
 	[].forEach.call( document.querySelectorAll( '.table-sales tbody' ), function( el )
 	{
 		var section = document.querySelector( '#sales-section-' + el.dataset.section );
-		if ( el.clientHeight == 0 && section.style.display != 'none' )
-		{
-			section.style.display = 'none';
-		}
-		else
-		{
-			section.style.display = '';
-		}
+		section.hidden = ( el.clientHeight == 0 && ! section.hidden );
 	} );
 }, false);
