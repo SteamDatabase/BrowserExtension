@@ -114,25 +114,38 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				}
 			}
 			
-			if( items[ 'steamdb-hide-not-interested' ] && document.querySelector( '.scope-sales' ) )
+			if( document.querySelector( '.scope-sales' ) )
 			{
-				for( i = 0; i < data.rgIgnoredApps.length; i++ )
+				if( items[ 'steamdb-hide-not-interested' ] )
 				{
-					element = mapAppsToElements[ data.rgIgnoredApps[ i ] ];
-					
-					if( element )
+					for( i = 0; i < data.rgIgnoredApps.length; i++ )
 					{
-						element.parentNode.removeChild( element );
+						element = mapAppsToElements[ data.rgIgnoredApps[ i ] ];
+						
+						if( element )
+						{
+							element.parentNode.removeChild( element );
+						}
+					}
+					
+					for( i = 0; i < data.rgIgnoredPackages.length; i++ )
+					{
+						element = mapPackagesToElements[ data.rgIgnoredPackages[ i ] ];
+						
+						if( element )
+						{
+							element.parentNode.removeChild( element );
+						}
 					}
 				}
 				
-				for( i = 0; i < data.rgIgnoredPackages.length; i++ )
+				if( document.querySelector( '#js-hide-owned-games.checked' ) )
 				{
-					element = mapPackagesToElements[ data.rgIgnoredPackages[ i ] ];
+					var elements = document.querySelectorAll( '.appimg.owned' );
 					
-					if( element )
+					for ( var i = 0; i < elements.length; i++ )
 					{
-						element.parentNode.removeChild( element );
+						elements[ i ].hidden = true;
 					}
 				}
 			}
