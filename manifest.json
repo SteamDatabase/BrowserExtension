@@ -38,7 +38,17 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/highlight_on_steamdb.js"
+				"scripts/steamdb/global.js"
+			]
+		},
+		{
+			"matches":
+			[
+				"https://steamdb.info/sales/*"
+			],
+			"js":
+			[
+				"scripts/steamdb/sales.js"
 			]
 		},
 		{
