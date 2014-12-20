@@ -48,6 +48,7 @@
 			],
 			"js":
 			[
+				"scripts/common.js",
 				"scripts/steamdb/sales.js"
 			]
 		},
