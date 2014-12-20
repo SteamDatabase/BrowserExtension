@@ -76,7 +76,7 @@ else
 			
 			for( i = 0; i < length; i++ )
 			{
-				elements[ i ].dataset.tooltipContent = elements[ i ].dataset.tooltipContent.replace( /http:\/\/steamcommunity\.com/g, 'https://steamcommunity.com' );console.log(elements[ i ].dataset.tooltipContent);
+				elements[ i ].dataset.tooltipContent = elements[ i ].dataset.tooltipContent.replace( /http:\/\/steamcommunity\.com/g, 'https://steamcommunity.com' );
 			}
 		}
 	} );

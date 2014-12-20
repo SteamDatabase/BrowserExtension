@@ -30,6 +30,12 @@
 			"value": true
 		},
 		{
+			"name": "steamdb-hide-not-interested",
+			"title": "Hide products on sales page that you are not interested in (highlighting has to be enabled)",
+			"type": "bool",
+			"value": false
+		}
+		{
 			"name": "button-app",
 			"title": "Display a button on app pages",
 			"type": "bool",

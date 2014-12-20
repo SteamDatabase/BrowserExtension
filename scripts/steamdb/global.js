@@ -7,7 +7,7 @@ if( element )
 	element.setAttribute( 'hidden', true );
 }
 
-GetOption( { 'steamdb-highlight': true }, function( items )
+GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, function( items )
 {
 	if( !items[ 'steamdb-highlight' ] )
 	{
@@ -87,8 +87,6 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 						element.classList.add( 'cart' );
 					}
 				}
-				
-				// rgIgnoredApps
 			}
 			
 			if( mapPackagesToElements.length > 0 )
@@ -114,8 +112,29 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 						element.classList.add( 'cart' );
 					}
 				}
+			}
+			
+			if( items[ 'steamdb-hide-not-interested' ] && document.querySelector( '.scope-sales' ) )
+			{
+				for( i = 0; i < data.rgIgnoredApps.length; i++ )
+				{
+					element = mapAppsToElements[ data.rgIgnoredApps[ i ] ];
+					
+					if( element )
+					{
+						element.parentNode.removeChild( element );
+					}
+				}
 				
-				// rgIgnoredPackages
+				for( i = 0; i < data.rgIgnoredPackages.length; i++ )
+				{
+					element = mapPackagesToElements[ data.rgIgnoredPackages[ i ] ];
+					
+					if( element )
+					{
+						element.parentNode.removeChild( element );
+					}
+				}
 			}
 		};
 		
