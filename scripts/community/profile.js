@@ -10,19 +10,34 @@ GetOption( { 'profile-calculator': true }, function( items )
 	// Can't access g_rgProfileData inside sandbox :(
 	
 	// If we can, use abuseID
-	var steamID = document.querySelector( '#abuseForm > input[name=abuseID]' );
+	var steamID = document.querySelector( '#abuseForm > input[name=abuseID]' ),
+	    isCommunityID = false;
 	
 	if( steamID )
 	{
 		steamID = steamID.value;
+		
+		isCommunityID = true;
 	}
 	else
 	{
 		// Fallback to url if we can't
-		var steamID = location.pathname.match( /^\/(?:id|profiles)\/([^\s/]+)\/?/ )[ 1 ];
+		steamID = location.pathname.match( /^\/(?:id|profiles)\/([^\s/]+)\/?/ )[ 1 ];
+		
+		isCommunityID = /^\/profiles/.test( location.pathname );
 	}
 	
-	var container = document.querySelector( '#profile_action_dropdown .popup_body' );
+	var container = document.querySelector( '#profile_action_dropdown .popup_body' ),
+	    url = GetHomepage() + 'calculator/';
+	
+	if( isCommunityID )
+	{
+		url += steamID + '/';
+	}
+	else
+	{
+		url += '?player=' + steamID;
+	}
 	
 	if( container )
 	{
@@ -31,7 +46,7 @@ GetOption( { 'profile-calculator': true }, function( items )
 		image.src = GetLocalResource( 'icons/white.svg' );
 		
 		var element = document.createElement( 'a' );
-		element.href = GetHomepage() + 'calculator/?player=' + steamID;
+		element.href = url;
 		element.target = '_blank';
 		element.className = 'popup_menu_item';
 		element.appendChild( image );
@@ -56,7 +71,7 @@ GetOption( { 'profile-calculator': true }, function( items )
 			element = document.createElement( 'a' );
 			element.className = 'btn_profile_action btn_medium';
 			element.target = '_blank';
-			element.href = GetHomepage() + 'calculator/?player=' + steamID;
+			element.href = url;
 			element.title = 'SteamDB Calculator';
 			element.appendChild( text );
 			
