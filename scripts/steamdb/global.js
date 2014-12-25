@@ -15,9 +15,10 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	}
 	
 	var apps     = document.querySelectorAll( 'tr.app' ),
-	    packages = document.querySelectorAll( 'tr.package' );
-
-	if( apps.length > 0 || packages.length > 0 )
+	    packages = document.querySelectorAll( 'tr.package' ),
+		packageScope = document.querySelector( '.scope-package' );
+	
+	if( apps.length > 0 || packages.length > 0 || packageScope )
 	{
 		var xhr = new XMLHttpRequest();
 		
@@ -51,7 +52,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			
 			packages = null;
 			
-			var data = xhr.response;
+			var data = xhr.response, id;
 			
 			if( mapAppsToElements.length > 0 )
 			{
@@ -89,16 +90,29 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				}
 			}
 			
-			if( mapPackagesToElements.length > 0 )
+			if( packageScope || mapPackagesToElements.length > 0 )
 			{
+				var scopeSubID = packageScope && packageScope.dataset.subid;
+				
 				// Owned packages
 				for( i = 0; i < data.rgOwnedPackages.length; i++ )
 				{
-					element = mapPackagesToElements[ data.rgOwnedPackages[ i ] ];
+					id = data.rgOwnedPackages[ i ];
+					element = mapPackagesToElements[ id ];
 					
 					if( element )
 					{
 						element.classList.add( 'owned' );
+					}
+					
+					if( packageScope && scopeSubID == id )
+					{
+						packageScope = document.querySelector( '.panel-ownership' );
+						
+						if( packageScope )
+						{
+							packageScope.hidden = false;
+						}
 					}
 				}
 				
