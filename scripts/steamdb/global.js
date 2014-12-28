@@ -16,7 +16,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	var apps     = document.querySelectorAll( 'tr.app' ),
 	    packages = document.querySelectorAll( 'tr.package' ),
-		packageScope = document.querySelector( '.scope-package' );
+	    packageScope = document.querySelector( '.scope-package' );
 	
 	if( apps.length > 0 || packages.length > 0 || packageScope )
 	{
@@ -105,7 +105,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 						element.classList.add( 'owned' );
 					}
 					
-					if( packageScope && scopeSubID == id )
+					if( scopeSubID == id )
 					{
 						packageScope = document.querySelector( '.panel-ownership' );
 						
