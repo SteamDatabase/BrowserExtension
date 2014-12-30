@@ -6,7 +6,7 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 	var link = document.createElement( 'a' );
 	link.href = 'http://steamstat.us';
 	link.target = '_blank';
-	link.appendChild( document.createTextNode( 'View network status on SteamDB' ) );
+	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
 	
 	var element = document.createElement( 'div' );
 	element.className = 'steamdb_downtime_container';
