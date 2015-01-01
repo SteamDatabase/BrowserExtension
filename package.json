@@ -42,6 +42,12 @@
 			"value": true
 		},
 		{
+			"name": "button-pcgw",
+			"title": "Display PCGamingWiki button on app pages",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "button-sub",
 			"title": "Display a button on package pages",
 			"type": "bool",
