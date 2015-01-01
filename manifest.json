@@ -63,7 +63,8 @@
 			],
 			"exclude_matches":
 			[
-				"https://store.steampowered.com/checkout/*"
+				"*://store.steampowered.com/checkout/*",
+				"*://store.steampowered.com/widget/*"
 			],
 			"js":
 			[
