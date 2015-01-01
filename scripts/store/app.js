@@ -14,13 +14,13 @@ if( container )
 }
 else
 {
-	GetOption( { 'button-app': true, 'link-subid': true }, function( items )
+	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true }, function( items )
 	{
-		var link, element, container;
+		var link, element, container, injectTooltipFix = false;
 		
 		if( items[ 'button-app' ] )
 		{
-			container = document.querySelector( '#demo_block' );
+			container = document.querySelector( '.apphub_OtherSiteInfo' );
 			
 			if( container )
 			{
@@ -30,7 +30,6 @@ else
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 				
 				element = document.createElement( 'span' );
-				element.id = 'steamdb_bind_tooltip_on_me';
 				element.dataset.storeTooltip = 'View on Steam Database';
 				link.appendChild( element );
 				
@@ -42,13 +41,37 @@ else
 				
 				container.insertBefore( link, container.firstChild );
 				
-				// We need to bind a tooltip, and the only way to do that is to inject a script into the page
-				element = document.createElement( 'script' );
-				element.id = 'steamdb_bind_tooltip';
-				element.type = 'text/javascript';
-				element.appendChild( document.createTextNode( 'BindStoreTooltip( jQuery( "#steamdb_bind_tooltip_on_me" ) );' ) );
+				injectTooltipFix = true;
+			}
+		}
+		
+		if( items[ 'button-pcgw' ] )
+		{
+			container = document.querySelector( '.apphub_OtherSiteInfo' );
+			
+			if( container )
+			{
+				link = document.createElement( 'a' );
+				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
+				link.target = '_blank';
+				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID();
 				
-				document.head.appendChild( element );
+				element = document.createElement( 'span' );
+				element.dataset.storeTooltip = 'View article on PCGamingWiki';
+				link.appendChild( element );
+				
+				var image = document.createElement( 'img' );
+				image.className = 'ico16';
+				image.src = GetLocalResource( 'icons/pcgamingwiki.png' );
+				
+				element.appendChild( image );
+				
+				container.insertBefore( link, container.firstChild );
+				
+				// Best hacks EU
+				container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
+				
+				injectTooltipFix = true;
 			}
 		}
 		
@@ -115,6 +138,17 @@ else
 				
 				document.head.appendChild( element );
 			}
+		}
+		
+		// We need to bind a tooltip, and the only way to do that is to inject a script into the page
+		if( injectTooltipFix )
+		{
+			element = document.createElement( 'script' );
+			element.id = 'steamdb_bind_tooltip';
+			element.type = 'text/javascript';
+			element.appendChild( document.createTextNode( 'BindStoreTooltip( jQuery( ".btn_steamdb > span" ) );' ) );
+			
+			document.head.appendChild( element );
 		}
 	} );
 }

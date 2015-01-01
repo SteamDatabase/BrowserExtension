@@ -18,3 +18,10 @@
 .btn_steamdb .ico16 {
 	background: none;
 }
+
+/**
+ * Fix for very long game names not overflowing correctly
+ */
+.apphub_AppName {
+	word-wrap: break-word;
+}
