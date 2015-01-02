@@ -23,7 +23,7 @@
 	"web_accessible_resources":
 	[
 		"icons/white.svg",
-		"icons/pcgamingwiki.png",
+		"icons/pcgamingwiki.svg",
 		"styles/store-center.css",
 		"scripts/https-fix.js",
 		"scripts/community/inventory.js",
