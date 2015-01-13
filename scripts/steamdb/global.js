@@ -16,9 +16,10 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	var apps     = document.querySelectorAll( 'tr.app' ),
 	    packages = document.querySelectorAll( 'tr.package' ),
-	    packageScope = document.querySelector( '.scope-package' );
+	    packageScope = document.querySelector( '.scope-package' ),
+		appScope = document.querySelector( '.scope-app' );
 	
-	if( apps.length > 0 || packages.length > 0 || packageScope )
+	if( apps.length > 0 || packages.length > 0 || appScope || packageScope )
 	{
 		var xhr = new XMLHttpRequest();
 		
@@ -54,8 +55,10 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			
 			var data = xhr.response, id;
 			
-			if( mapAppsToElements.length > 0 )
+			if( appScope || mapAppsToElements.length > 0 )
 			{
+				var scopeAppID = appScope && appScope.dataset.appid;
+				
 				// Wished apps
 				for( i = 0; i < data.rgWishlist.length; i++ )
 				{
@@ -70,11 +73,22 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				// Owned apps
 				for( i = 0; i < data.rgOwnedApps.length; i++ )
 				{
-					element = mapAppsToElements[ data.rgOwnedApps[ i ] ];
+					id = data.rgOwnedApps[ i ];
+					element = mapAppsToElements[ id ];
 					
 					if( element )
 					{
 						element.classList.add( 'owned' );
+					}
+					
+					if( scopeAppID == id )
+					{
+						appScope = document.querySelector( '.panel-ownership' );
+						
+						if( appScope )
+						{
+							appScope.hidden = false;
+						}
 					}
 				}
 				
