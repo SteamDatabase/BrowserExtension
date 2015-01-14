@@ -53,13 +53,14 @@
 				"scripts/steamdb/sales.js"
 			]
 		},
+		
+		
+		
 		{
-			"all_frames": true,
 			"run_at": "document_end",
 			"matches":
 			[
-				"*://store.steampowered.com/*",
-				"*://steamcommunity.com/*"
+				"*://store.steampowered.com/*"
 			],
 			"exclude_matches":
 			[
@@ -69,11 +70,13 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/global.js"
+				"scripts/global.js",
+				"scripts/store/global.js"
 			],
 			"css":
 			[
-				"styles/global.css"
+				"styles/global.css",
+				"styles/store.css"
 			]
 		},
 		{
@@ -146,6 +149,59 @@
 			"css":
 			[
 				"styles/store.css"
+			]
+		},
+		{
+			"run_at": "document_start",
+			"matches":
+			[
+				"*://store.steampowered.com/agecheck/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/agecheck.js"
+			]
+		},
+		{
+			"matches":
+			[
+				"*://store.steampowered.com/cart*"
+			],
+			"js":
+			[
+				"scripts/store/cart.js"
+			]
+		},
+		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"*://store.steampowered.com/"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/homepage.js"
+			]
+		},
+		
+		
+		
+		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"*://steamcommunity.com/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/global.js"
+			],
+			"css":
+			[
+				"styles/global.css"
 			]
 		},
 		{
@@ -265,40 +321,6 @@
 			[
 				"scripts/common.js",
 				"scripts/community/market_ssa.js"
-			]
-		},
-		{
-			"run_at": "document_start",
-			"matches":
-			[
-				"*://store.steampowered.com/agecheck/*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/store/agecheck.js"
-			]
-		},
-		{
-			"matches":
-			[
-				"*://store.steampowered.com/cart*"
-			],
-			"js":
-			[
-				"scripts/store/cart.js"
-			]
-		},
-		{
-			"run_at": "document_end",
-			"matches":
-			[
-				"*://store.steampowered.com/"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/store/homepage.js"
 			]
 		}
 	]
