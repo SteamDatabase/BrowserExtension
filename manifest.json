@@ -64,7 +64,9 @@
 			],
 			"exclude_matches":
 			[
-				"*://store.steampowered.com/checkout/*",
+				"*://store.steampowered.com/api/*",
+				"*://store.steampowered.com/dynamicstore/*",
+				"*://store.steampowered.com/checkout*",
 				"*://store.steampowered.com/widget/*"
 			],
 			"js":
@@ -193,6 +195,11 @@
 			"matches":
 			[
 				"*://steamcommunity.com/*"
+			],
+			"exclude_matches":
+			[
+				"*://steamcommunity.com/miniprofile/*",
+				"*://steamcommunity.com/actions/*"
 			],
 			"js":
 			[
