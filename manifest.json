@@ -288,6 +288,22 @@
 		{
 			"matches":
 			[
+				"*://steamcommunity.com/id/*/gamecards/*",
+				"*://steamcommunity.com/profiles/*/gamecards/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/community/profile_gamecards.js"
+			],
+			"css":
+			[
+				"styles/community.css"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://steamcommunity.com/app/*",
 				"*://steamcommunity.com/games/*",
 				"*://steamcommunity.com/sharedfiles/filedetails*",

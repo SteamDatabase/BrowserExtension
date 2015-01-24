@@ -66,6 +66,12 @@
 			"value": true
 		},
 		{
+			"name": "button-gamecards",
+			"title": "Display SteamDB and store page buttons on game cards page",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "link-subid",
 			"title": "Display SubID under each purchase option",
 			"type": "bool",
