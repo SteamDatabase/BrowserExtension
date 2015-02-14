@@ -4,17 +4,19 @@
 {
 	var i,
 	    link,
+	    giftCache = {},
 	    homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage,
 	    originalPopulateActions = window.PopulateActions,
 	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
 	
-	window.PopulateActions = function( elActions, rgActions, item )
+	window.PopulateActions = function( elActions, rgActions, item, owner )
 	{
 		var foundState = 0;
 		
 		try
 		{
-			if( item.appid == 753 )
+			// PopulateActions is called for both item.actions and item.owner_actions, we only want first one
+			if( item.appid == 753 && rgActions === item.actions )
 			{
 				if( item.type === 'Coupon' && rgActions )
 				{
@@ -57,6 +59,37 @@
 						}
 						
 						foundState = 2;
+					}
+				}
+				else if( item.owner_actions && item.type === 'Gift' )
+				{
+					if( giftCache[ item.classid ] )
+					{
+						console.log( 'Hit cache for', item.id );
+					}
+					else
+					{
+						console.log( 'Doing a request for', item.id );
+						
+						var xhr = new XMLHttpRequest();
+						xhr.onreadystatechange = function()
+						{
+							if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )
+							{
+								console.log( xhr.response.gift_name, xhr.response.packageid );
+								
+								giftCache[ item.classid ] = xhr.response.packageid;
+								
+								rgActions.push( {
+									steamdb: true,
+									link: homepage + 'sub/' + xhr.response.packageid + '/',
+									name: 'View on Steam Database'
+								} );
+							}
+						};
+						xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.id + '/validateunpack', true );
+						xhr.responseType = 'json';
+						xhr.send();
 					}
 				}
 				else if( rgActions )
@@ -104,7 +137,7 @@
 						}
 					}
 				}
-				else if( !item.actions && item.type === 'Gift' ) // This function gets called with owner_actions too
+				else if( item.type === 'Gift' )
 				{
 					item.actions = rgActions = [ {
 						steamdb: true,
@@ -136,7 +169,7 @@
 			console.error( e );
 		}
 		
-		originalPopulateActions( elActions, rgActions, item );
+		originalPopulateActions( elActions, rgActions, item, owner );
 		
 		// We want our links to be open in new tab
 		if( foundState === 2 )
