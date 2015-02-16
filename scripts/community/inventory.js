@@ -2,16 +2,25 @@
 
 (function()
 {
+	var FoundState =
+	{
+		None: 0,
+		Process: 1,
+		Added: 2,
+		DisableButtons: 3
+	};
+	
 	var i,
 	    link,
 	    giftCache = {},
+		lookupGiftSubids = document.body.dataset.steamdbGiftSubid === 'true',
 	    homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage,
 	    originalPopulateActions = window.PopulateActions,
 	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
 	
 	window.PopulateActions = function( elActions, rgActions, item, owner )
 	{
-		var foundState = 0;
+		var foundState = FoundState.None;
 		
 		try
 		{
@@ -28,7 +37,7 @@
 						
 						if( link.steamdb )
 						{
-							foundState = 2;
+							foundState = FoundState.Added;
 							
 							break;
 						}
@@ -40,12 +49,12 @@
 							{
 								couponLink = link.link;
 								
-								foundState = 1;
+								foundState = FoundState.Process;
 							}
 						}
 					}
 					
-					if( foundState === 1 )
+					if( foundState === FoundState.Process )
 					{
 						var subs = couponLink.substring( pos + 'list_of_subs='.length ).split( ',' );
 						
@@ -58,38 +67,67 @@
 							} );
 						}
 						
-						foundState = 2;
+						foundState = FoundState.Added;
 					}
 				}
-				else if( item.owner_actions && item.type === 'Gift' )
+				else if( lookupGiftSubids && item.owner_actions && item.type === 'Gift' )
 				{
-					if( giftCache[ item.classid ] )
+					for( i = 0; i < rgActions.length; i++ )
 					{
-						console.log( 'Hit cache for', item.id );
-					}
-					else
-					{
-						console.log( 'Doing a request for', item.id );
+						link = rgActions[ i ];
 						
-						var xhr = new XMLHttpRequest();
-						xhr.onreadystatechange = function()
+						if( link.steamdb )
 						{
-							if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )
+							if( link.link.match( /^#steamdb_/ ) !== null )
 							{
-								console.log( xhr.response.gift_name, xhr.response.packageid );
-								
-								giftCache[ item.classid ] = xhr.response.packageid;
-								
-								rgActions.push( {
-									steamdb: true,
-									link: homepage + 'sub/' + xhr.response.packageid + '/',
-									name: 'View on Steam Database'
-								} );
+								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.classid ] + '/';
 							}
+							
+							foundState = FoundState.Added;
+							
+							break;
+						}
+					}
+					
+					if( foundState !== FoundState.Added )
+					{
+						foundState = FoundState.DisableButtons;
+						
+						var action =
+						{
+							steamdb: true,
+							link: '#steamdb_' + item.id,
+							name: 'View on Steam Database'
 						};
-						xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.id + '/validateunpack', true );
-						xhr.responseType = 'json';
-						xhr.send();
+						
+						if( giftCache[ item.classid ] )
+						{
+							action.link = homepage + 'sub/' + giftCache[ item.classid ] + '/';
+						}
+						else
+						{
+							var xhr = new XMLHttpRequest();
+							xhr.onreadystatechange = function()
+							{
+								if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )
+								{
+									giftCache[ item.classid ] = xhr.response.packageid;
+									
+									link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.id + '"]' );
+									
+									if( link )
+									{
+										link.classList.remove( 'btn_disabled' );
+										link.href = homepage + 'sub/' + xhr.response.packageid + '/';
+									}
+								}
+							};
+							xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.id + '/validateunpack', true );
+							xhr.responseType = 'json';
+							xhr.send();
+						}
+						
+						rgActions.push( action );
 					}
 				}
 				else if( rgActions )
@@ -100,16 +138,17 @@
 						
 						if( link.steamdb )
 						{
-							foundState = 2;
+							foundState = FoundState.Added;
+							
 							break;
 						}
 						else if( link.link && link.link.match( /\.com\/(app|sub)\// ) )
 						{
-							foundState = 1;
+							foundState = FoundState.Process;
 						}
 					}
 					
-					if( foundState === 1 )
+					if( foundState === FoundState.Process )
 					{
 						for( i = 0; i < rgActions.length; i++ )
 						{
@@ -130,7 +169,7 @@
 									name: 'View on Steam Database'
 								} );
 								
-								foundState = 2;
+								foundState = FoundState.Added;
 								
 								break;
 							}
@@ -145,7 +184,7 @@
 						name: 'Search on Steam Database'
 					} ];
 					
-					foundState = 2;
+					foundState = FoundState.Added;
 				}
 			}
 			
@@ -171,18 +210,39 @@
 		
 		originalPopulateActions( elActions, rgActions, item, owner );
 		
-		// We want our links to be open in new tab
-		if( foundState === 2 )
+		try
 		{
-			link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
-			
-			if( link )
+			// We want our links to be open in new tab
+			if( foundState === FoundState.Added )
 			{
-				for( i = 0; i < link.length; i++ )
+				link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
+				
+				if( link )
 				{
-					link[ i ].target = '_blank';
+					for( i = 0; i < link.length; i++ )
+					{
+						link[ i ].target = '_blank';
+					}
 				}
 			}
+			else if( foundState === FoundState.DisableButtons )
+			{
+				link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
+				
+				if( link )
+				{
+					for( i = 0; i < link.length; i++ )
+					{
+						link[ i ].target = '_blank';
+						link[ i ].classList.add( 'btn_disabled' );
+					}
+				}
+			}
+		}
+		catch( e )
+		{
+			// Don't break website functionality if something fails above
+			console.error( e );
 		}
 	};
 }());

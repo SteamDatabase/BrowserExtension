@@ -2,11 +2,16 @@
 
 if( document.getElementById( 'inventory_link_753' ) )
 {
-	GetOption( { 'link-inventory': true }, function( items )
+	GetOption( { 'link-inventory': true, 'link-inventory-gift-subid': true }, function( items )
 	{
 		if( !items[ 'link-inventory' ] )
 		{
 			return;
+		}
+		
+		if( items[ 'link-inventory-gift-subid' ] )
+		{
+			document.body.dataset.steamdbGiftSubid = 'true';
 		}
 		
 		var element = document.createElement( 'script' );

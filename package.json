@@ -90,6 +90,12 @@
 			"value": true
 		},
 		{
+			"name": "link-inventory-gift-subid",
+			"title": "Correctly figure out gift SubID in your inventory (performs an extra request whenever you click on a gift, option above must be enabled for this to work)",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "link-accountpage",
 			"title": "Link each package on your accounts page",
 			"type": "bool",
