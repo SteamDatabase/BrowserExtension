@@ -72,6 +72,12 @@
 				}
 				else if( lookupGiftSubids && item.owner_actions && item.type === 'Gift' )
 				{
+					// If a gift has no actions, rgActions is undefined
+					if( !rgActions )
+					{
+						rgActions = [];
+					}
+					
 					for( i = 0; i < rgActions.length; i++ )
 					{
 						link = rgActions[ i ];
