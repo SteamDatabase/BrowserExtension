@@ -17,7 +17,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	var apps     = document.querySelectorAll( 'tr.app' ),
 	    packages = document.querySelectorAll( 'tr.package' ),
 	    packageScope = document.querySelector( '.scope-package' ),
-		appScope = document.querySelector( '.scope-app' );
+	    appScope = document.querySelector( '.scope-app' );
 	
 	if( apps.length > 0 || packages.length > 0 || appScope || packageScope )
 	{

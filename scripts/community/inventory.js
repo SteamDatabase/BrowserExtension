@@ -13,7 +13,7 @@
 	var i,
 	    link,
 	    giftCache = {},
-		lookupGiftSubids = document.body.dataset.steamdbGiftSubid === 'true',
+	    lookupGiftSubids = document.body.dataset.steamdbGiftSubid === 'true',
 	    homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage,
 	    originalPopulateActions = window.PopulateActions,
 	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
