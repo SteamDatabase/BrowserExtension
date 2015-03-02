@@ -89,6 +89,8 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 						{
 							appScope.hidden = false;
 						}
+						
+						appScope = false;
 					}
 				}
 				
@@ -139,6 +141,17 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 					{
 						element.classList.add( 'cart' );
 					}
+				}
+			}
+			
+			// Show as owned if one of the packages is owned
+			if( appScope )
+			{
+				appScope = document.querySelector( '.panel-ownership' );
+				
+				if( appScope && appScope.hidden && document.querySelector( '#subs .package.owned' ) )
+				{
+					appScope.hidden = false;
 				}
 			}
 			
