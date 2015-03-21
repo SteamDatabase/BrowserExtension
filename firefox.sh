@@ -17,4 +17,4 @@ rm data/scripts/firefox.js
 
 echo Creating a package
 
-cfx xpi
+jpm xpi
