@@ -3,7 +3,7 @@
 var pageMod = require( 'sdk/page-mod' );
 var data = require( 'sdk/self' ).data;
 
-var manifest = JSON.parse( data.load( 'manifest.json' ) );
+var manifest = JSON.parse( data.load( data.url( 'manifest.json' ) ) );
 
 var x, i, scriptOptions =
 {

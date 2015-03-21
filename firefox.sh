@@ -1,20 +1,16 @@
 #!/bin/bash
 # firefox extension development is lovely
 
-echo Creating necessary folders
+if [ -d firefox ]; then
+	rm firefox -r
+fi
 
-rm data -r
-mkdir data/
-mkdir data/icons/
+mkdir -p firefox/data/icons/
 
-echo Copying files
+cp -r icons/ scripts/ styles/ firefox/data/
+cp manifest.json firefox/data/manifest.json
+cp package.json firefox/package.json
 
-cp -r scripts/ styles/ data/
-cp icons/white.svg data/icons/white.svg
-cp icons/pcgamingwiki.svg data/icons/pcgamingwiki.svg
-cp manifest.json data/manifest.json
-rm data/scripts/firefox.js
-
-echo Creating a package
+cd firefox/
 
 jpm xpi
