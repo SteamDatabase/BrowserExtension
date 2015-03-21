@@ -7,7 +7,7 @@
 	"homepage": "https://steamdb.info/",
 	"version": "1.2.2",
 	"icon": "icons/128.png",
-	"main": "scripts/firefox.js",
+	"main": "data/scripts/firefox.js",
 	"permissions":
 	{
 		"cross-domain-content":
