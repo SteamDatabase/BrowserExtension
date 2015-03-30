@@ -38,8 +38,6 @@ GetOption( { 'link-accountpage': true }, function( items )
 				
 				removeElement = removeElement.href.match( /RemoveFreeLicense\( ?([0-9]+)/ );
 				
-				console.log( removeElement );
-				
 				link.href = GetHomepage() + 'sub/' + ( removeElement ? removeElement[ 1 ] : removeElement ) + '/';
 			}
 			// Valve somehow managed not to put package name on the page

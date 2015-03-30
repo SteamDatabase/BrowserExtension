@@ -27,7 +27,7 @@ if( length > 0 )
 	{
 		var text = document.createElement( 'span' );
 		text.className = 'steamdb_drops_remaining';
-		text.appendChild( document.createTextNode( drops + ' drops remaining across ' + apps + ' apps' ) );
+		text.appendChild( document.createTextNode( drops + ' drops remaining across ' + apps + ' apps' + ( document.querySelector( '.pageLinks' ) ? ' on this page' : '' ) ) );
 		
 		var parent = document.querySelector( '.badge_details_set_favorite' );
 		
