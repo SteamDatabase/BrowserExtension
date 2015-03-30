@@ -32,6 +32,21 @@ GetOption( { 'button-gamehub': true }, function( items )
 			element.appendChild( text );
 			
 			container.insertBefore( element, container.firstChild );
+			
+			// Make in-game number clickable
+			text = document.querySelector( '.apphub_NumInApp' );
+			
+			if( text )
+			{
+				element = document.createElement( 'a' );
+				element.className = 'apphub_NumInApp';
+				element.target = '_blank';
+				element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/';
+				element.title = 'View player graphs on SteamDB';
+				element.textContent = text.textContent;
+				
+				text.parentNode.replaceChild( element, text );
+			}
 		}
 	}
 	else

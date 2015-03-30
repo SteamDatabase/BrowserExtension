@@ -14,6 +14,18 @@
 	height: 200px;
 }
 
+/**
+ * We make it clickable
+ */
+a.apphub_NumInApp {
+	text-decoration: underline;
+}
+
+a.apphub_NumInApp:hover {
+	text-decoration: none;
+	color: #00E676;
+}
+
 .steamdb_ogg_icon {
 	width: 16px;
 	height: 16px;
