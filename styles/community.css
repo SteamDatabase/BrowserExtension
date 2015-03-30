@@ -1,15 +1,14 @@
-/* Valve's silly css fix */
-.apphub_AppName {
-	padding-right: 30px;
-	max-width: none !important;
-	float: none !important;
-}
-
+/**
+ * Valve has these styles inlined, instead of having them in their .css
+ */
 .apphub_OtherSiteInfo .btn_medium {
 	position: relative;
 	z-index: 1;
 }
 
+/**
+ * Fix game group logo overflowing on old group page
+ */
 #oggLogo img {
 	height: 200px;
 }
@@ -26,9 +25,19 @@ a.apphub_NumInApp:hover {
 	color: #00E676;
 }
 
+.btn_steamdb.btn_medium .ico16 {
+	background: none;
+	vertical-align: -10px; /* ugh */
+}
+
 .steamdb_ogg_icon {
 	width: 16px;
 	height: 16px;
+}
+
+.steamdb_popup_icon {
+	width: 18px;
+	height: 18px;
 }
 
 .steamdb_self_profile {
@@ -36,12 +45,6 @@ a.apphub_NumInApp:hover {
 	height: 16px;
 	margin: 7px 0;
 	vertical-align: top;
-}
-
-.steamdb_totally_not_a_nbsp_spacer {
-	width: 18px;
-	height: 18px;
-	margin-right: 8px;
 }
 
 .profile_small_header_additional.steamdb {

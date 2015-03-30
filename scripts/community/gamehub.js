@@ -22,31 +22,45 @@ GetOption( { 'button-gamehub': true }, function( items )
 		
 		if( GetCurrentAppID() > -1 )
 		{
-			var text = document.createElement( 'span' );
-			text.appendChild( document.createTextNode( 'Steam Database' ) );
+			var link = document.createElement( 'a' );
+			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
+			link.target = '_blank';
+			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 			
-			element = document.createElement( 'a' );
-			element.className = 'btnv6_blue_hoverfade btn_medium';
-			element.target = '_blank';
-			element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
-			element.appendChild( text );
+			element = document.createElement( 'span' );
+			element.dataset.communityTooltip = 'View on Steam Database';
+			link.appendChild( element );
 			
-			container.insertBefore( element, container.firstChild );
+			var image = document.createElement( 'img' );
+			image.className = 'ico16';
+			image.src = GetLocalResource( 'icons/white.svg' );
+			
+			element.appendChild( image );
+			
+			container.insertBefore( link, container.firstChild );
 			
 			// Make in-game number clickable
-			text = document.querySelector( '.apphub_NumInApp' );
+			element = document.querySelector( '.apphub_NumInApp' );
 			
-			if( text )
+			if( element )
 			{
-				element = document.createElement( 'a' );
-				element.className = 'apphub_NumInApp';
-				element.target = '_blank';
-				element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/';
-				element.title = 'View player graphs on SteamDB';
-				element.textContent = text.textContent;
+				link = document.createElement( 'a' );
+				link.className = 'apphub_NumInApp';
+				link.target = '_blank';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/';
+				link.title = 'View player graphs on SteamDB';
+				link.textContent = element.textContent;
 				
-				text.parentNode.replaceChild( element, text );
+				element.parentNode.replaceChild( link, element );
 			}
+			
+			// Tooltip hack
+			element = document.createElement( 'script' );
+			element.id = 'steamdb_bind_tooltip';
+			element.type = 'text/javascript';
+			element.appendChild( document.createTextNode( 'BindCommunityTooltip( $J( ".btn_steamdb > span" ) );' ) );
+			
+			document.head.appendChild( element );
 		}
 	}
 	else

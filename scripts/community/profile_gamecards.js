@@ -53,10 +53,10 @@ GetOption( { 'button-gamecards': true }, function( items )
 	profileTexture.appendChild( container );
 	
 	// Tooltip hack
-	element = document.createElement( 'script' );
+	var element = document.createElement( 'script' );
 	element.id = 'steamdb_bind_tooltip';
 	element.type = 'text/javascript';
-	element.appendChild( document.createTextNode( 'BindCommunityTooltip( jQuery( ".btn_steamdb > span" ) );' ) );
+	element.appendChild( document.createTextNode( 'BindCommunityTooltip( $J( ".btn_steamdb > span" ) );' ) );
 	
 	document.head.appendChild( element );
 } );
