@@ -1,3 +1,9 @@
+@media all and (min-width: 1208px) {
+	div#global_header .content {
+		right: 0;
+	}
+}
+
 @media all and (min-width: 1385px) {
 	.home_page_gutter {
 		margin-left: -204px
