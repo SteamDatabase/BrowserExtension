@@ -72,8 +72,7 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/global.js",
-				"scripts/store/global.js"
+				"scripts/global.js"
 			],
 			"css":
 			[

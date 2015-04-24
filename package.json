@@ -106,12 +106,6 @@
 		},
 		
 		{
-			"name": "enhancement-fakecc-warning",
-			"title": "Display a warning when your currency is set to a different one",
-			"type": "bool",
-			"value": true
-		},
-		{
 			"name": "enhancement-market-ssa",
 			"title": "Accept Market SSA automatically",
 			"type": "bool",
