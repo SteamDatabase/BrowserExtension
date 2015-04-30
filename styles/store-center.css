@@ -1,6 +1,11 @@
 @media all and (min-width: 1208px) {
-	div#global_header .content {
+	div#global_header .content,
+	div#store_header .content,
+	div#store_header_dlc .content,
+	.home_page_takeover_link img {
+		left: 0;
 		right: 0;
+		width: 940px;
 	}
 }
 
@@ -14,6 +19,7 @@
 	}
 	
 	.home_page_body_ctn .page_background_holder {
+		left: 0;
 		right: 0;
 	}
 	
