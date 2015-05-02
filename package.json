@@ -5,7 +5,7 @@
 	"description": "Adds Steam Database link across Steam Community and Store.",
 	"id": "firefox-extension@steamdb.info",
 	"homepage": "https://steamdb.info/",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"icon": "icons/128.png",
 	"main": "data/scripts/firefox.js",
 	"permissions":
