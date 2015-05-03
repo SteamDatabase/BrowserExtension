@@ -3,33 +3,23 @@
 	div#store_header .content,
 	div#store_header_dlc .content,
 	.home_page_takeover_link img {
-		left: 0;
-		right: 0;
-		width: 940px;
+		left: 0 !important;
+		right: 0 !important;
+		width: 940px !important;
 	}
 }
 
 @media all and (min-width: 1385px) {
 	.home_page_gutter {
-		margin-left: -204px
+		margin-left: -204px !important;
 	}
 	
 	.home_page_content, .footer_content {
-		padding-left: 16px;
+		padding-left: 16px !important;
 	}
 	
 	.home_page_body_ctn .page_background_holder {
-		left: 0;
-		right: 0;
-	}
-	
-	/*
-	 * calc() is useful for once!
-	 *
-	 * this glorious hacks moves the background so the takeover banner blends in correctly
-	 * 93.5px is takeover's original offset divided by two
-	 */
-	body.steamdb_has_takeover {
-		background-position-x: calc(50% - 93.5px);
+		left: 0 !important;
+		right: 0 !important;
 	}
 }

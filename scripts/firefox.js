@@ -64,5 +64,10 @@ for( i = 0; i < contentScripts.length; i++ )
 		}
 	}
 	
+	if( contentScript.run_at && contentScript.run_at === 'document_start' )
+	{
+		pageMatch.contentScriptWhen = 'start';
+	}
+	
 	pageMod.PageMod( pageMatch );
 }
