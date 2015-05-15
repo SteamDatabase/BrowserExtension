@@ -23,7 +23,7 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 }
 else
 {
-	GetOption( { 'enhancement-hide-install-button': false, 'enhancement-https-fix': false }, function( items )
+	GetOption( { 'enhancement-hide-install-button': false, 'enhancement-https-fix': false, 'enhancement-no-linkfilter': false }, function( items )
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
@@ -32,6 +32,16 @@ else
 			if( element )
 			{
 				element.setAttribute( 'hidden', true );
+			}
+		}
+		
+		if( items[ 'enhancement-no-linkfilter' ] )
+		{
+			var links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
+			
+			for( var x = 0; x < links.length; x++ )
+			{
+				links[ x ].href = links[ x ].href.replace( /^https:\/\/steamcommunity\.com\/linkfilter\/(?:\?url=)?/, '' );
 			}
 		}
 		

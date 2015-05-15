@@ -136,6 +136,12 @@
 			"value": true
 		},
 		{
+			"name": "enhancement-no-linkfilter",
+			"title": "Remove all linkfilter links (visiting linkfilter still works)",
+			"type": "bool",
+			"value": false
+		},
+		{
 			"name": "enhancement-https-fix",
 			"title": "Overwrite all http://steamcommunity.com links to be https (fixes workshop subscriptions, etc.)",
 			"type": "bool",
