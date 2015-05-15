@@ -7,35 +7,56 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items )
 		return;
 	}
 	
+	var div = document.createElement( 'div' );
+	div.className = 'mainSectionHeader friendListSectionHeader';
+	
+	var friendsOwnNumber = document.createElement( 'span' );
+	friendsOwnNumber.appendChild( document.createTextNode( 'Loading' ) );
+	div.appendChild( friendsOwnNumber );
+	div.appendChild( document.createTextNode( ' friends who own this game ' ) );
+	
+	var span = document.createElement( 'span' );
+	span.className = 'underScoreColor';
+	span.appendChild( document.createTextNode( '_' ) );
+	div.appendChild( span );
+	
+	document.getElementById( 'memberList' ).appendChild( div );
+	
 	var xhrfriends = new XMLHttpRequest();
 	var xhr = new XMLHttpRequest();
 	var appid = GetCurrentAppID();
-	var bDoneAsync = false;
 	
 	var HTTPCallback = function()
 	{
-		if( xhr.readyState !== 4 || xhr.status !== 200 )
+		if( xhr.readyState !== 4 || xhr.status !== 200 || xhrfriends.readyState !== 4 || xhrfriends.status !== 200 )
 		{
-			return;
-		}
-		
-		if( !bDoneAsync )
-		{
-			bDoneAsync = true;
+			if( xhr.readyState === 4 && xhrfriends.readyState === 4 )
+			{
+				friendsOwnNumber.style.color = 'red';
+				friendsOwnNumber.textContent = 'Failed to load';
+			}
 			
 			return;
 		}
 		
 		if( !xhr.response[ appid ].success )
 		{
+			friendsOwnNumber.style.color = 'red';
+			friendsOwnNumber.textContent = 'Failed to load';
+			
 			return;
 		}
 		
 		var friendsown = xhr.response[ appid ].data.friendsown;
-		if( !friendsown.length )
+		
+		if( !friendsown || !friendsown.length )
 		{
+			friendsOwnNumber.textContent = '0';
+			
 			return;
 		}
+		
+		friendsOwnNumber.textContent = friendsown.length;
 		
 		var friends = xhrfriends.response.querySelector( '.profile_friends' ).children;
 		var i, steamID, miniprofiles = {};
@@ -48,17 +69,6 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items )
 		}
 		
 		var fragment = document.createDocumentFragment();
-		
-		var div = document.createElement( 'div' );
-		div.className = 'mainSectionHeader friendListSectionHeader';
-		div.appendChild( document.createTextNode( friendsown.length + ' friends who own this game ' ) );
-		
-		var span = document.createElement( 'span' );
-		span.className = 'underScoreColor';
-		span.appendChild( document.createTextNode( '_' ) );
-		div.appendChild( span );
-		
-		fragment.appendChild( div );
 		
 		div = document.createElement( 'div' );
 		div.className = 'profile_friends';
