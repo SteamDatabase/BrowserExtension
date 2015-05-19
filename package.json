@@ -124,6 +124,12 @@
 			"value": false
 		},
 		{
+			"name": "enhancement-inventory-sidebar",
+			"title": "Move game selection on inventory page to the side on big screens",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "enhancement-store-center",
 			"title": "Center store homepage properly on big screens",
 			"type": "bool",
