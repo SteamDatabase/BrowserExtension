@@ -1,6 +1,6 @@
 'use strict';
 
-GetOption( { 'enhancement-store-center': false }, function( items )
+GetOption( { 'enhancement-store-center': true }, function( items )
 {
 	if( items[ 'enhancement-store-center' ] )
 	{

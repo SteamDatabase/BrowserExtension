@@ -133,7 +133,7 @@
 			"name": "enhancement-store-center",
 			"title": "Center store homepage properly on big screens",
 			"type": "bool",
-			"value": false
+			"value": true
 		},
 		{
 			"name": "enhancement-friendsthatown",
