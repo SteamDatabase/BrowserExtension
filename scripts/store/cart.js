@@ -1,6 +1,6 @@
 'use strict';
 
-var container = document.querySelector( '.page_content > .leftcol' );
+var container = document.querySelector( '.leftcol .btnv6_blue_hoverfade' );
 
 if( container )
 {
@@ -33,5 +33,5 @@ if( container )
 		}, false );
 	}
 	
-	container.appendChild( link );
+	container.parentNode.insertBefore( link, container );
 }
