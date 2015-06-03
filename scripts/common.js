@@ -5,7 +5,7 @@ var CurrentAppID,
 	{
 		if( !CurrentAppID )
 		{
-			CurrentAppID = location.pathname.match( /\/(app|sub|friendsthatplay|gamecards)\/([0-9]{1,7})/ );
+			CurrentAppID = location.pathname.match( /\/(app|sub|bundle|friendsthatplay|gamecards)\/([0-9]{1,7})/ );
 			
 			if( CurrentAppID )
 			{

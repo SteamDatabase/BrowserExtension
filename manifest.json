@@ -125,6 +125,17 @@
 			]
 		},
 		{
+			"matches":
+			[
+				"*://store.steampowered.com/bundle/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/bundle.js"
+			]
+		},
+		{
 			"all_frames": true,
 			"matches":
 			[
