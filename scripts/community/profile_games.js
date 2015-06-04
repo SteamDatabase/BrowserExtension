@@ -5,10 +5,9 @@ var text,
     element,
     i,
     appID,
-    dropdowns = document.querySelectorAll( '[id^=links_dropdown_]' ),
-    length = dropdowns.length;
+    dropdowns = document.querySelectorAll( '[id^=links_dropdown_]' );
 
-for( i = 0; i < length; i++ )
+for( i = 0; i < dropdowns.length; i++ )
 {
 	element = dropdowns[ i ];
 	

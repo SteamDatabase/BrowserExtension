@@ -1,3 +1,5 @@
+/* global require:false */
+
 'use strict';
 
 var pageMod = require( 'sdk/page-mod' );

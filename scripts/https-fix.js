@@ -1,7 +1,7 @@
-'use strict';
-
 (function()
 {
+	'use strict';
+	
 	var originalGetDefaultCommunityAJAXParams = window.GetDefaultCommunityAJAXParams;
 	
 	window.GetDefaultCommunityAJAXParams = function( path, method )
@@ -32,21 +32,19 @@
 		originalRecordAJAXPageView( url );
 		
 		// Fix links in ajax loaded content
-		var elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' ),
-		    length = elements.length;
+		var i, elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' );
 		
-		for( var i = 0; i < length; i++ )
+		for( i = 0; i < elements.length; i++ )
 		{
 			elements[ i ].href = elements[ i ].href.replace( /^http:/, 'https:' );
 		}
 		
 		// Find all forms
 		elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"]' );
-		length = elements.length;
 		
-		for( var i = 0; i < length; i++ )
+		for( i = 0; i < elements.length; i++ )
 		{
 			elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
 		}
-	}
+	};
 }());

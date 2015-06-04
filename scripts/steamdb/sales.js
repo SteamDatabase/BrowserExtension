@@ -66,7 +66,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		[].forEach.call( document.querySelectorAll( '.table-sales tbody' ), function( el )
 		{
 			var section = document.querySelector( '#sales-section-' + el.dataset.section );
-			section.hidden = ( el.clientHeight == 0 && ! section.hidden );
+			section.hidden = ( el.clientHeight === 0 && ! section.hidden );
 		} );
 	}, false);
 } );

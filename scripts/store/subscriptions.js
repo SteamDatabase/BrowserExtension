@@ -1,7 +1,7 @@
-'use strict';
-
 (function()
 {
+	'use strict';
+	
 	var link,
 	    homepage = document.getElementById( 'steamdb_subscriptions_hook' ).dataset.homepage,
 	    originalDropdownSelectOption = window.dropdownSelectOption;

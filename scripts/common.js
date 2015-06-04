@@ -1,3 +1,5 @@
+/* global chrome:false, self:false */
+
 'use strict';
 
 var CurrentAppID,

@@ -1,13 +1,12 @@
 'use strict';
 
-var progressInfo = document.querySelectorAll( '.progress_info_bold' ),
-    length = progressInfo.length;
+var progressInfo = document.querySelectorAll( '.progress_info_bold' );
 
-if( length > 0 )
+if( progressInfo.length > 0 )
 {
 	var apps = 0, drops = 0, match;
 	
-	for( var i = 0; i < length; i++ )
+	for( var i = 0; i < progressInfo.length; i++ )
 	{
 		match = progressInfo[ i ].textContent.match( /([0-9]+) card drops? remaining/ );
 		
@@ -29,11 +28,11 @@ if( length > 0 )
 		text.className = 'steamdb_drops_remaining';
 		text.appendChild( document.createTextNode( drops + ' drops remaining across ' + apps + ' apps' + ( document.querySelector( '.pageLinks' ) ? ' on this page' : '' ) ) );
 		
-		var parent = document.querySelector( '.badge_details_set_favorite' );
+		var container = document.querySelector( '.badge_details_set_favorite' );
 		
-		if( parent )
+		if( container )
 		{
-			parent.insertBefore( text, parent.firstChild );
+			container.insertBefore( text, container.firstChild );
 		}
 	}
 }

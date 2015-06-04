@@ -11,7 +11,7 @@ GetOption( { 'link-subid-widget': true }, function( items )
 
 	if( subid )
 	{
-		var subid = subid.value;
+		subid = subid.value;
 		
 		var subidElement = document.createElement( 'i' );
 		subidElement.className = 'steamdb_subid';
@@ -29,4 +29,4 @@ GetOption( { 'link-subid-widget': true }, function( items )
 		
 		document.querySelector( '.desc' ).appendChild( container );
 	}
-});
+} );

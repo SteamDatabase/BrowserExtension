@@ -1,7 +1,7 @@
-'use strict';
-
 (function()
 {
+	'use strict';
+	
 	var FoundState =
 	{
 		None: 0,
