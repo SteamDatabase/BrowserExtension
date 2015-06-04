@@ -1,4 +1,4 @@
-/* global chrome:false, self:false */
+/* global chrome:false, self:false, GetCurrentAppID:true, GetHomepage:true, GetOption:true, GetLocalResource:true */
 
 'use strict';
 
