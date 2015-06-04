@@ -15,7 +15,7 @@ GetOption( { 'link-bundle-packages': true }, function( items )
 		var elements = document.querySelectorAll( '[data-ds-packageid]' );
 		var length = elements.length;
 
-		if ( length == 0 )
+		if( length === 0 )
 		{
 			return;
 		}
@@ -53,7 +53,7 @@ GetOption( { 'link-bundle-packages': true }, function( items )
 			link.appendChild( document.createTextNode( subs[ sub ] ) );
 			subidElement.appendChild( link );
 
-			if ( sub < subs.length - 1 )
+			if( sub < subs.length - 1 )
 			{
 				subidElement.appendChild( document.createTextNode( ', ' ) );
 			}

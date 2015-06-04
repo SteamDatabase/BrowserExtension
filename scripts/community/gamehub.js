@@ -7,7 +7,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 		return;
 	}
 	
-	var element, container = document.querySelector( '.apphub_OtherSiteInfo' );
+	var element, link, image, container = document.querySelector( '.apphub_OtherSiteInfo' );
 	
 	if( container )
 	{
@@ -22,7 +22,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 		
 		if( GetCurrentAppID() > -1 )
 		{
-			var link = document.createElement( 'a' );
+			link = document.createElement( 'a' );
 			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 			link.target = '_blank';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
@@ -31,7 +31,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			element.dataset.communityTooltip = 'View on Steam Database';
 			link.appendChild( element );
 			
-			var image = document.createElement( 'img' );
+			image = document.createElement( 'img' );
 			image.className = 'ico16';
 			image.src = GetLocalResource( 'icons/white.svg' );
 			
@@ -81,7 +81,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			}
 			
 			// image
-			var image = document.createElement( 'img' );
+			image = document.createElement( 'img' );
 			image.className = 'steamdb_ogg_icon';
 			image.src = GetLocalResource( 'icons/white.svg' );
 			
@@ -91,7 +91,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			actionItemIcon.appendChild( image );
 			
 			// link
-			var link = document.createElement( 'a' );
+			link = document.createElement( 'a' );
 			link.className = 'linkActionMinor';
 			link.target = '_blank';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';

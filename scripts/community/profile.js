@@ -39,13 +39,15 @@ GetOption( { 'profile-calculator': true }, function( items )
 		url += '?player=' + steamID;
 	}
 	
+	var image, element;
+	
 	if( container )
 	{
-		var image = document.createElement( 'img' );
+		image = document.createElement( 'img' );
 		image.className = 'steamdb_popup_icon';
 		image.src = GetLocalResource( 'icons/white.svg' );
 		
-		var element = document.createElement( 'a' );
+		element = document.createElement( 'a' );
 		element.href = url;
 		element.target = '_blank';
 		element.className = 'popup_menu_item';
@@ -62,7 +64,7 @@ GetOption( { 'profile-calculator': true }, function( items )
 		{
 			var text = document.createElement( 'span' );
 			
-			var image = document.createElement( 'img' );
+			image = document.createElement( 'img' );
 			image.src = GetLocalResource( 'icons/white.svg' );
 			image.className = 'steamdb_self_profile';
 			

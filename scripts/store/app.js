@@ -16,7 +16,7 @@ else
 {
 	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true }, function( items )
 	{
-		var link, element, container, injectTooltipFix = false;
+		var link, element, image, container, injectTooltipFix = false;
 		
 		if( items[ 'button-app' ] )
 		{
@@ -33,7 +33,7 @@ else
 				element.dataset.storeTooltip = 'View on Steam Database';
 				link.appendChild( element );
 				
-				var image = document.createElement( 'img' );
+				image = document.createElement( 'img' );
 				image.className = 'ico16';
 				image.src = GetLocalResource( 'icons/white.svg' );
 				
@@ -60,7 +60,7 @@ else
 				element.dataset.storeTooltip = 'View article on PCGamingWiki';
 				link.appendChild( element );
 				
-				var image = document.createElement( 'img' );
+				image = document.createElement( 'img' );
 				image.className = 'ico16';
 				image.src = GetLocalResource( 'icons/pcgamingwiki.svg' );
 				

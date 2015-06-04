@@ -8,16 +8,16 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 	link.target = '_blank';
 	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
 	
-	var element = document.createElement( 'div' );
-	element.className = 'steamdb_downtime_container';
-	element.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
-	element.appendChild( link );
-	
 	var container = document.createElement( 'div' );
-	container.className = 'steamdb_downtime';
-	container.appendChild( element );
+	container.className = 'steamdb_downtime_container';
+	container.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
+	container.appendChild( link );
 	
-	document.body.insertBefore( container, document.body.firstChild );
+	var wrapper = document.createElement( 'div' );
+	wrapper.className = 'steamdb_downtime';
+	wrapper.appendChild( container );
+	
+	document.body.insertBefore( wrapper, document.body.firstChild );
 	
 	document.body.style.margin = 0;
 }
@@ -27,11 +27,11 @@ else
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
-			var element = document.querySelector( '.header_installsteam_btn' );
+			var button = document.querySelector( '.header_installsteam_btn' );
 			
-			if( element )
+			if( button )
 			{
-				element.setAttribute( 'hidden', true );
+				button.setAttribute( 'hidden', true );
 			}
 		}
 		
