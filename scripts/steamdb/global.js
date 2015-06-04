@@ -184,7 +184,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				{
 					var elements = document.querySelectorAll( '.appimg.owned' );
 					
-					for ( var i = 0; i < elements.length; i++ )
+					for( i = 0; i < elements.length; i++ )
 					{
 						elements[ i ].hidden = true;
 					}
