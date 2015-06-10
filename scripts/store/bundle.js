@@ -11,18 +11,16 @@ GetOption( { 'link-bundle-packages': true }, function( items )
 	
 	if( container )
 	{
-
 		var elements = document.querySelectorAll( '[data-ds-packageid]' );
-		var length = elements.length;
 
-		if( length === 0 )
+		if( elements.length === 0 )
 		{
 			return;
 		}
 
-		var subs = [ ];
+		var i, subs = [ ];
 
-		for( var i = 0; i < length; i++ )
+		for( i = 0; i < elements.length; i++ )
 		{
 			if ( subs.indexOf( elements[ i ] ) == -1 )
 			{
@@ -36,8 +34,6 @@ GetOption( { 'link-bundle-packages': true }, function( items )
 		} );
 
 		var element = document.createElement( 'div' );
-		element.className = 'steamdb_link';
-
 		element.appendChild( document.createTextNode( 'View on Steam Database ' ) );
 
 		var subidElement = document.createElement( 'i' );
@@ -45,15 +41,16 @@ GetOption( { 'link-bundle-packages': true }, function( items )
 
 		subidElement.appendChild( document.createTextNode( '(' ) );
 
-		for( var sub in subs )
+		for( i = 0; i < subs.length; i++ )
 		{
 			var link = document.createElement( 'a' );
+			link.className = 'steamdb_link';
 			link.target = '_blank';
-			link.href = GetHomepage() + 'sub/' + subs[ sub ] + '/';
-			link.appendChild( document.createTextNode( subs[ sub ] ) );
+			link.href = GetHomepage() + 'sub/' + subs[ i ] + '/';
+			link.appendChild( document.createTextNode( subs[ i ] ) );
 			subidElement.appendChild( link );
 
-			if( sub < subs.length - 1 )
+			if( i < subs.length - 1 )
 			{
 				subidElement.appendChild( document.createTextNode( ', ' ) );
 			}
