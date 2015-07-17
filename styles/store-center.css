@@ -14,7 +14,9 @@
 		margin-left: -204px !important;
 	}
 	
-	.home_page_content, .footer_content {
+	.home_page_content,
+	.footer_content,
+	.hardware_ctn {
 		padding-left: 16px !important;
 	}
 	
