@@ -9,7 +9,7 @@ GetOption( { 'link-accountpage': true }, function( items )
 	
 	// TODO: Look for RemoveFreePackage subids
 	
-	var licenses = document.querySelectorAll( '.account_table tr > td:first-child' ),
+	var licenses = document.querySelectorAll( '.account_table tr > td:nth-child(2)' ),
 	    link,
 	    title,
 	    element,
@@ -25,7 +25,7 @@ GetOption( { 'link-accountpage': true }, function( items )
 			link = document.createElement( 'a' );
 			
 			// nextSibling won't work due to whitespace
-			removeElement = element.parentNode.querySelector( 'td:nth-child(2) > a' );
+			removeElement = element.parentNode.querySelector( 'td:nth-child(3) > a' );
 			
 			if( removeElement )
 			{
