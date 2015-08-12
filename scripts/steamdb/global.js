@@ -33,7 +33,24 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				return;
 			}
 			
-			var i, mapAppsToElements = [], mapPackagesToElements = [];
+			var data = xhr.response, id, i, mapAppsToElements = [], mapPackagesToElements = [];
+			
+			if( !data.rgOwnedPackages.length )
+			{
+				id = document.createElement( 'a' );
+				id.className = 'extension-warning';
+				id.href = 'https://store.steampowered.com/login/';
+				
+				var icon = document.createElement( 'span' );
+				icon.className = 'mega-octicon octicon-hubot';
+				
+				id.appendChild( icon );
+				id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, highlighting will not work.' ) );
+				
+				document.body.appendChild( id );
+				
+				return;
+			}
 			
 			for( i = 0; i < apps.length; i++ )
 			{
@@ -52,8 +69,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			}
 			
 			packages = null;
-			
-			var data = xhr.response, id;
 			
 			if( appScope || mapAppsToElements.length > 0 )
 			{
