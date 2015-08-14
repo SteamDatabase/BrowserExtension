@@ -25,12 +25,6 @@ a.games_list_tab:hover {
 	max-width: 121px;
 }
 
-.games_list_tab:after {
-	clear: both;
-	display: block;
-	content: " ";
-}
-
 @media all and (min-width: 1450px) {
 	.games_list_tabs {
 		float: left;
@@ -39,7 +33,6 @@ a.games_list_tab:hover {
 		margin-left: -259px;
 		border-radius: 3px;
 		border-bottom-color: #535353;
-		
 	}
 	
 	#tabcontent_inventory {
@@ -61,5 +54,12 @@ a.games_list_tab:hover {
 	.games_list_tab_separator,
 	.games_list_tab_row_separator {
 		display: none;
+	}
+	
+	.games_list_tab:after,
+	#mainContents:after {
+		content: "";
+		display: table;
+		clear: both;
 	}
 }
