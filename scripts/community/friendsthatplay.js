@@ -26,6 +26,12 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items )
 	var xhr = new XMLHttpRequest();
 	var appid = GetCurrentAppID();
 	
+	var ErrorCallback = function()
+	{
+		friendsOwnNumber.style.color = 'red';
+		friendsOwnNumber.textContent = 'Failed to load due to a network error';
+	};
+	
 	var HTTPCallback = function()
 	{
 		if( xhr.readyState !== 4 || xhr.status !== 200 || xhrfriends.readyState !== 4 || xhrfriends.status !== 200 )
@@ -116,11 +122,13 @@ GetOption( { 'enhancement-friendsthatown': true }, function( items )
 		document.head.appendChild( script );
 	};
 	
+	xhrfriends.onerror = ErrorCallback;
 	xhrfriends.onreadystatechange = HTTPCallback;
 	xhrfriends.open( 'GET', '//steamcommunity.com/my/friends/', true );
 	xhrfriends.responseType = 'document';
 	xhrfriends.send();
 	
+	xhr.onerror = ErrorCallback;
 	xhr.onreadystatechange = HTTPCallback;
 	xhr.open( 'GET', '//store.steampowered.com/api/appuserdetails/?appids=' + appid, true );
 	xhr.responseType = 'json';

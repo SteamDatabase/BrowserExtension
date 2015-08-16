@@ -26,6 +26,20 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/', true );
 		xhr.responseType = 'json';
 		
+		xhr.onerror = function()
+		{
+			var id = document.createElement( 'div' );
+			id.className = 'extension-warning';
+			
+			var icon = document.createElement( 'span' );
+			icon.className = 'mega-octicon octicon-squirrel';
+			
+			id.appendChild( icon );
+			id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
+			
+			document.body.appendChild( id );
+		};
+		
 		xhr.onreadystatechange = function()
 		{
 			if( xhr.readyState !== 4 || xhr.status !== 200 )
