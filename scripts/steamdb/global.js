@@ -23,11 +23,15 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	{
 		var xhr = new XMLHttpRequest();
 		
-		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/', true );
+		var cache = localStorage.getItem( 'userdata.cached' );
+		
+		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
 		xhr.responseType = 'json';
 		
 		xhr.onerror = function()
 		{
+			localStorage.setItem( 'userdata.cached', Date.now() );
+			
 			var id = document.createElement( 'div' );
 			id.className = 'extension-warning';
 			
@@ -51,6 +55,8 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			
 			if( !data.rgOwnedPackages.length )
 			{
+				localStorage.setItem( 'userdata.cached', Date.now() );
+				
 				id = document.createElement( 'a' );
 				id.className = 'extension-warning';
 				id.href = 'https://store.steampowered.com/login/';
