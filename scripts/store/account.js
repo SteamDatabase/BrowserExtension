@@ -11,7 +11,7 @@ GetOption( { 'link-accountpage': true }, function( items )
 	
 	var licenses = document.querySelectorAll( '.account_table tr > td:nth-child(2)' ),
 	    link,
-	    title,
+	    subid,
 	    element,
 	    removeElement;
 	
@@ -20,40 +20,34 @@ GetOption( { 'link-accountpage': true }, function( items )
 		for( var i = 0, length = licenses.length; i < length; i++ )
 		{
 			element = licenses[ i ];
-			title = element.textContent;
 			
 			link = document.createElement( 'a' );
+			link.target = '_blank';
 			
-			// nextSibling won't work due to whitespace
-			removeElement = element.parentNode.querySelector( 'td:nth-child(3) > a' );
+			removeElement = element.querySelector( '.free_license_remove_link a' );
 			
 			if( removeElement )
 			{
-				if( !title.length )
+				subid = removeElement.href.match( /RemoveFreeLicense\( ?([0-9]+)/ );
+				
+				if( !subid )
 				{
-					title = '?? no package name ??';
-					
-					element.appendChild( document.createTextNode( title ) );
+					continue;
 				}
 				
-				removeElement = removeElement.href.match( /RemoveFreeLicense\( ?([0-9]+)/ );
+				link.href = GetHomepage() + 'sub/' + subid[ 1 ] + '/';
+				link.appendChild( document.createTextNode( ' [' + subid[ 1 ] + ']' ) );
 				
-				link.href = GetHomepage() + 'sub/' + ( removeElement ? removeElement[ 1 ] : removeElement ) + '/';
-			}
-			// Valve somehow managed not to put package name on the page
-			else if( !title.length )
-			{
-				continue;
+				removeElement.parentNode.appendChild( link );
 			}
 			else
 			{
-				link.href = GetHomepage() + 'search/?a=sub&q=' + encodeURIComponent( title );
+				link.className = 'free_license_remove_link';
+				link.href = GetHomepage() + 'search/?a=sub&q=' + encodeURIComponent( element.textContent.trim() );
+				link.appendChild( document.createTextNode( '[SteamDB]' ) );
+				
+				element.appendChild( link );
 			}
-			
-			link.target = '_blank';
-			link.appendChild( document.createTextNode( title ) );
-			
-			element.replaceChild( link, element.firstChild );
 		}
 	}
 } );
