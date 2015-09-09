@@ -7,16 +7,87 @@ if( container )
 	var link = document.createElement( 'a' );
 	link.className = 'steamdb_error_link';
 	link.target = '_blank';
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
 	
 	container.appendChild( link );
 }
 else
 {
-	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true }, function( items )
+	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true, 'online-stats': true }, function( items )
 	{
 		var link, element, image, container, injectTooltipFix = false;
+		
+		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
+		{
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function()
+			{
+				if( xhr.readyState !== 4 || xhr.status !== 200 || !xhr.response.success )
+				{
+					return false;
+				}
+				
+				var FormatNumber = function( num )
+				{
+					return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, ',' );
+				}
+				
+				var blockInner = document.createElement( 'div' );
+				blockInner.className = 'block_content_inner';
+				
+				var block = document.createElement( 'div' );
+				block.className = 'block responsive_apppage_details_right steamdb_stats';
+				block.appendChild( blockInner );
+				
+				link = document.createElement( 'a' );
+				link.target = '_blank';
+				link.title = 'View more information and graphs on SteamDB';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				
+				image = document.createElement( 'img' );
+				image.className = 'steamdb_stats_logo';
+				image.src = GetLocalResource( 'icons/white.svg' );
+				link.appendChild( image );
+				
+				blockInner.appendChild( link );
+				
+				image = document.createElement( 'b' );
+				image.textContent = FormatNumber( xhr.response.data.CurrentPlayers );
+				link = document.createElement( 'p' );
+				link.appendChild( image );
+				link.appendChild( document.createTextNode( ' online now' ) );
+				blockInner.appendChild( link );
+				
+				image = document.createElement( 'b' );
+				image.textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
+				link = document.createElement( 'p' );
+				link.appendChild( image );
+				link.appendChild( document.createTextNode( ' peak today' ) );
+				blockInner.appendChild( link );
+				
+				image = document.createElement( 'b' );
+				image.textContent = FormatNumber( xhr.response.data.MaxPlayers );
+				link = document.createElement( 'p' );
+				link.appendChild( image );
+				link.appendChild( document.createTextNode( ' all-time peak' ) );
+				blockInner.appendChild( link );
+				
+				var clear = document.createElement( 'div' );
+				clear.style.clear = 'left';
+				blockInner.appendChild( clear );
+				
+				container = document.querySelector( '.game_meta_data' );
+				
+				if( container )
+				{
+					container.insertBefore( block, container.firstChild );
+				}
+			};
+			xhr.open( 'GET', GetHomepage() + 'api/GetCurrentPlayers/?appid=' + GetCurrentAppID() + '&source=extension_steam_store', true );
+			xhr.responseType = 'json';
+			xhr.send();
+		}
 		
 		if( items[ 'button-app' ] )
 		{
@@ -27,7 +98,7 @@ else
 				link = document.createElement( 'a' );
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.target = '_blank';
-				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
 				element.dataset.storeTooltip = 'View on Steam Database';
@@ -54,7 +125,7 @@ else
 				link = document.createElement( 'a' );
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.target = '_blank';
-				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID();
+				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
 				element.dataset.storeTooltip = 'View article on PCGamingWiki';
@@ -119,7 +190,7 @@ else
 					link = document.createElement( 'a' );
 					link.className = 'steamdb_link steamdb_float_left';
 					link.target = '_blank';
-					link.href = GetHomepage() + 'sub/' + subid + '/';
+					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 					link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
 					link.appendChild( subidElement );
 					

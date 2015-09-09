@@ -19,6 +19,31 @@
 	background: none;
 }
 
+.steamdb_stats_logo {
+	width: 54px;
+	height: 54px;
+	float: left;
+	margin-right: 10px;
+	opacity: 0.5;
+	transition: opacity .1s ease-in-out;
+}
+
+.steamdb_stats:hover .steamdb_stats_logo {
+	opacity: 1;
+}
+
+.steamdb_stats b {
+	color: #67c1f5;
+	min-width: 60px;
+	margin-right: 5px;
+	display: inline-block;
+	text-align: right;
+}
+
+.steamdb_stats p:last-child {
+	margin-bottom: 0;
+}
+
 /**
  * Fix for very long game names not overflowing correctly
  */
