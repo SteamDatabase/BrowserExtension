@@ -99,7 +99,7 @@ else
 				
 				if( xhr.status !== 200 )
 				{
-					StatsErrorCallback( { error: 'Something went from on SteamDB: HTTP ' + xhr.status } );
+					StatsErrorCallback( { error: 'Something went wrong on SteamDB: HTTP ' + xhr.status } );
 					
 					return;
 				}
