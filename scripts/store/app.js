@@ -20,12 +20,95 @@ else
 		
 		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
 		{
+			var blockInner = document.createElement( 'div' );
+			blockInner.className = 'block_content_inner';
+			
+			var block = document.createElement( 'div' );
+			block.className = 'block responsive_apppage_details_right steamdb_stats';
+			block.appendChild( blockInner );
+			
+			link = document.createElement( 'a' );
+			link.target = '_blank';
+			link.title = 'View more information and graphs on SteamDB';
+			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			
+			image = document.createElement( 'img' );
+			image.className = 'steamdb_stats_logo';
+			image.src = GetLocalResource( 'icons/white.svg' );
+			link.appendChild( image );
+			
+			blockInner.appendChild( link );
+			
+			image = document.createElement( 'b' );
+			image.id = 'steamdb_stats_online_now';
+			image.textContent = '…';
+			link = document.createElement( 'p' );
+			link.appendChild( image );
+			link.appendChild( document.createTextNode( ' online now' ) );
+			blockInner.appendChild( link );
+			
+			image = document.createElement( 'b' );
+			image.id = 'steamdb_stats_peak_today';
+			image.textContent = '…';
+			link = document.createElement( 'p' );
+			link.appendChild( image );
+			link.appendChild( document.createTextNode( ' peak today' ) );
+			blockInner.appendChild( link );
+			
+			image = document.createElement( 'b' );
+			image.id = 'steamdb_stats_peak_all';
+			image.textContent = '…';
+			link = document.createElement( 'p' );
+			link.appendChild( image );
+			link.appendChild( document.createTextNode( ' all-time peak' ) );
+			blockInner.appendChild( link );
+			
+			var clear = document.createElement( 'div' );
+			clear.style.clear = 'left';
+			blockInner.appendChild( clear );
+			
+			container = document.querySelector( '.game_meta_data' );
+			
+			if( container )
+			{
+				container.insertBefore( block, container.firstChild );
+			}
+			
+			var StatsErrorCallback = function( err )
+			{
+				var SetError = function( element )
+				{
+					element = document.getElementById( element );
+					element.textContent = 'FAIL';
+					element.title = err.error;
+				}
+				
+				SetError( 'steamdb_stats_online_now' );
+				SetError( 'steamdb_stats_peak_today' );
+				SetError( 'steamdb_stats_peak_all' );
+			};
+			
 			var xhr = new XMLHttpRequest();
+			xhr.onerror = StatsErrorCallback;
 			xhr.onreadystatechange = function()
 			{
-				if( xhr.readyState !== 4 || xhr.status !== 200 || !xhr.response.success )
+				if( xhr.readyState !== 4 )
 				{
-					return false;
+					return;
+				}
+				
+				if( xhr.status !== 200 )
+				{
+					StatsErrorCallback( { error: 'Something went from on SteamDB: HTTP ' + xhr.status } );
+					
+					return;
+				}
+				
+				if( !xhr.response.success )
+				{
+					StatsErrorCallback( { error: 'SteamDB has no data for this app.' } );
+					
+					return;
 				}
 				
 				var FormatNumber = function( num )
@@ -33,56 +116,9 @@ else
 					return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, ',' );
 				}
 				
-				var blockInner = document.createElement( 'div' );
-				blockInner.className = 'block_content_inner';
-				
-				var block = document.createElement( 'div' );
-				block.className = 'block responsive_apppage_details_right steamdb_stats';
-				block.appendChild( blockInner );
-				
-				link = document.createElement( 'a' );
-				link.target = '_blank';
-				link.title = 'View more information and graphs on SteamDB';
-				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-				
-				image = document.createElement( 'img' );
-				image.className = 'steamdb_stats_logo';
-				image.src = GetLocalResource( 'icons/white.svg' );
-				link.appendChild( image );
-				
-				blockInner.appendChild( link );
-				
-				image = document.createElement( 'b' );
-				image.textContent = FormatNumber( xhr.response.data.CurrentPlayers );
-				link = document.createElement( 'p' );
-				link.appendChild( image );
-				link.appendChild( document.createTextNode( ' online now' ) );
-				blockInner.appendChild( link );
-				
-				image = document.createElement( 'b' );
-				image.textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
-				link = document.createElement( 'p' );
-				link.appendChild( image );
-				link.appendChild( document.createTextNode( ' peak today' ) );
-				blockInner.appendChild( link );
-				
-				image = document.createElement( 'b' );
-				image.textContent = FormatNumber( xhr.response.data.MaxPlayers );
-				link = document.createElement( 'p' );
-				link.appendChild( image );
-				link.appendChild( document.createTextNode( ' all-time peak' ) );
-				blockInner.appendChild( link );
-				
-				var clear = document.createElement( 'div' );
-				clear.style.clear = 'left';
-				blockInner.appendChild( clear );
-				
-				container = document.querySelector( '.game_meta_data' );
-				
-				if( container )
-				{
-					container.insertBefore( block, container.firstChild );
-				}
+				document.getElementById( 'steamdb_stats_online_now' ).textContent = FormatNumber( xhr.response.data.CurrentPlayers );
+				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
+				document.getElementById( 'steamdb_stats_peak_all' ).textContent = FormatNumber( xhr.response.data.MaxPlayers );
 			};
 			xhr.open( 'GET', GetHomepage() + 'api/GetCurrentPlayers/?appid=' + GetCurrentAppID() + '&source=extension_steam_store', true );
 			xhr.responseType = 'json';
