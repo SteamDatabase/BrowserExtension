@@ -13,7 +13,7 @@
 			link = document.getElementById( 'add_to_cart_' + dropdownName + '_description_text' );
 			link = link.parentNode.querySelector( '.steamdb_link' );
 			
-			link.href = homepage + 'sub/' + subId + '/';
+			link.href = homepage + 'sub/' + subId + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			link.querySelector( '.steamdb_subid' ).textContent = '(' + subId + ')';
 		}
 		catch( e )

@@ -212,7 +212,7 @@ else
 						link = document.createElement( 'a' );
 						link.className = 'steamdb_link' + ( element.querySelector( '.game_area_purchase_game_dropdown_left_panel' ) ? '' : ' steamdb_float_left' );
 						link.target = '_blank';
-						link.href = GetHomepage();
+						link.href = '#';
 						link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
 						link.appendChild( subidElement );
 						

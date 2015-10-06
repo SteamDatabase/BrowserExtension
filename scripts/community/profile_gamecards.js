@@ -24,7 +24,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	
 	var link = document.createElement( 'a' );
 	link.className = 'btnv6_blue_hoverfade btn_medium';
-	link.href = '//store.steampowered.com/app/' + GetCurrentAppID() + '/';
+	link.href = '//store.steampowered.com/app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( span );
 	
 	container.insertBefore( link, container.firstChild );
@@ -41,7 +41,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	link = document.createElement( 'a' );
 	link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 	link.target = '_blank';
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( span );
 	
 	container.insertBefore( link, container.firstChild );

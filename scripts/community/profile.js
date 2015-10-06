@@ -32,12 +32,14 @@ GetOption( { 'profile-calculator': true }, function( items )
 	
 	if( isCommunityID )
 	{
-		url += steamID + '/';
+		url += steamID + '/?';
 	}
 	else
 	{
-		url += '?player=' + steamID;
+		url += '?player=' + steamID + '&';
 	}
+	
+	url += 'utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	
 	var image, element;
 	

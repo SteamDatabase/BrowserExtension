@@ -46,7 +46,7 @@ GetOption( { 'link-bundle-packages': true }, function( items )
 			var link = document.createElement( 'a' );
 			link.className = 'steamdb_link';
 			link.target = '_blank';
-			link.href = GetHomepage() + 'sub/' + subs[ i ] + '/';
+			link.href = GetHomepage() + 'sub/' + subs[ i ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			link.appendChild( document.createTextNode( subs[ i ] ) );
 			subidElement.appendChild( link );
 

@@ -62,7 +62,7 @@
 						{
 							rgActions.push( {
 								steamdb: true,
-								link: homepage + 'sub/' + subs[ i ] + '/',
+								link: homepage + 'sub/' + subs[ i ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
 								name: 'View ' + subs[ i ] + ' on Steam Database'
 							} );
 						}
@@ -108,7 +108,7 @@
 						
 						if( giftCache[ item.classid ] )
 						{
-							action.link = homepage + 'sub/' + giftCache[ item.classid ] + '/';
+							action.link = homepage + 'sub/' + giftCache[ item.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 						}
 						else
 						{
@@ -124,7 +124,7 @@
 									if( link )
 									{
 										link.classList.remove( 'btn_disabled' );
-										link.href = homepage + 'sub/' + xhr.response.packageid + '/';
+										link.href = homepage + 'sub/' + xhr.response.packageid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 									}
 								}
 							};

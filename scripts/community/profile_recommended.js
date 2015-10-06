@@ -13,7 +13,7 @@ if( container )
 	var link = document.createElement( 'a' );
 	link.className = 'general_btn panel_btn';
 	link.target = '_blank';
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( image );
 	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
 	

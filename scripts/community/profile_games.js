@@ -23,7 +23,7 @@ for( i = 0; i < dropdowns.length; i++ )
 		link = document.createElement( 'a' );
 		link.className = 'popup_menu_item2 tight';
 		link.target = '_blank';
-		link.href = GetHomepage() + 'app/' + appID + '/';
+		link.href = GetHomepage() + 'app/' + appID + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		link.appendChild( text );
 		
 		element.appendChild( link );
