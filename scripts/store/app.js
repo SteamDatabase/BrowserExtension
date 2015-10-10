@@ -81,7 +81,7 @@ else
 					element = document.getElementById( element );
 					element.textContent = 'FAIL';
 					element.title = err.error;
-				}
+				};
 				
 				SetError( 'steamdb_stats_online_now' );
 				SetError( 'steamdb_stats_peak_today' );
@@ -114,7 +114,7 @@ else
 				var FormatNumber = function( num )
 				{
 					return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, ',' );
-				}
+				};
 				
 				document.getElementById( 'steamdb_stats_online_now' ).textContent = FormatNumber( xhr.response.data.CurrentPlayers );
 				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
