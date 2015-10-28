@@ -32,6 +32,7 @@ else
 			if( button )
 			{
 				button.setAttribute( 'hidden', true );
+				button.style.display = 'none';
 			}
 		}
 		
