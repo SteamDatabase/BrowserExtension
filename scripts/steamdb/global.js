@@ -23,6 +23,30 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	{
 		var xhr = new XMLHttpRequest();
 		
+		function AddCloseButton( element )
+		{
+			var x = document.createElement( 'span' );
+			x.className = 'octicon octicon-x';
+			
+			var link = document.createElement( 'a' );
+			link.className = 'pull-right tooltipped tooltipped-nw';
+			link.href = '#';
+			link.style.color = '#FFF';
+			link.setAttribute( 'aria-label', 'Do not show this message again' );
+			link.appendChild( x );
+			
+			link.addEventListener( 'click', function( e )
+			{
+				e.preventDefault();
+				
+				this.parentNode.parentNode.removeChild( this.parentNode );
+				
+				localStorage.setItem( 'userdata.warning.hidden', 'true' );
+			} );
+			
+			element.appendChild( link );
+		};
+		
 		var cache = localStorage.getItem( 'userdata.cached' );
 		
 		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
@@ -30,10 +54,19 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		
 		xhr.onerror = function()
 		{
+			TryToUseCachedData( );
+			
 			localStorage.setItem( 'userdata.cached', Date.now() );
+			
+			if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
+			{
+				return;
+			}
 			
 			var id = document.createElement( 'div' );
 			id.className = 'extension-warning';
+			
+			AddCloseButton( id );
 			
 			var icon = document.createElement( 'span' );
 			icon.className = 'mega-octicon octicon-squirrel';
@@ -51,26 +84,57 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				return;
 			}
 			
-			var data = xhr.response, id, i, mapAppsToElements = [], mapPackagesToElements = [];
-			
-			if( !data.rgOwnedPackages.length )
+			if( !xhr.response.rgOwnedPackages.length )
 			{
+				TryToUseCachedData( );
+				
 				localStorage.setItem( 'userdata.cached', Date.now() );
 				
-				id = document.createElement( 'a' );
+				if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
+				{
+					return;
+				}
+				
+				var id = document.createElement( 'a' );
 				id.className = 'extension-warning';
 				id.href = 'https://store.steampowered.com/login/';
+				
+				AddCloseButton( id );
 				
 				var icon = document.createElement( 'span' );
 				icon.className = 'mega-octicon octicon-hubot';
 				
 				id.appendChild( icon );
-				id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, highlighting will not work.' ) );
+				id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, owned game highlighting will not work.' ) );
 				
 				document.body.appendChild( id );
 				
 				return;
 			}
+			
+			OnDataLoaded( xhr.response );
+			
+			// TODO: This shouldn't be executed if browser cache was hit
+			if( typeof chrome !== 'undefined' )
+			{
+				chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
+			}
+		};
+		
+		function TryToUseCachedData( )
+		{
+			chrome.storage.local.get( 'userdata.stored', function( data )
+			{
+				if( data[ 'userdata.stored' ] )
+				{
+					OnDataLoaded( JSON.parse( data[ 'userdata.stored' ] ) );
+				}
+			} );
+		}
+		
+		function OnDataLoaded( data )
+		{
+			var id, i, mapAppsToElements = [], mapPackagesToElements = [];
 			
 			for( i = 0; i < apps.length; i++ )
 			{
