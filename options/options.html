@@ -8,172 +8,149 @@
 	
 	<link rel="stylesheet" href="wtf-forms.css">
 	<link rel="stylesheet" href="options.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Mono&amp;subset=latin,cyrillic">
 </head>
 <body>
-	<header class="masthead">
-		<div class="container">
-			<h1>SteamDB Options</h1>
-			<p class="lead">Configure things that our extension affects on Steam websites.</p>
-		</div>
-	</header>
-	
-	<div class="container">
-		<form class="controls-stacked">
-			<h3>SteamDB Website</h3>
-			
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
-				<span class="control-indicator"></span>
-				Highlight owned and wished products on steamdb.info
-				<p class="muted">If this does not work, whitelist <code>store.steampowered.com</code> in your third-party cookie policy</p>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="steamdb-hide-not-interested">
-				<span class="control-indicator"></span>
-				Hide products on sales page that you are not interested in <i class="muted">(highlighting has to be enabled)</i>
-			</label>
-			
-			<h3>Buttons &amp; links</h3>
-			
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="button-app">
-				<span class="control-indicator"></span>
-				Display a button on app pages
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="button-pcgw">
-				<span class="control-indicator"></span>
-				Display <a href="http://pcgamingwiki.com/" target="_blank">PCGamingWiki</a> button on app pages
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="button-sub">
-				<span class="control-indicator"></span>
-				Display a button on package pages
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="button-video">
-				<span class="control-indicator"></span>
-				Display a button on video pages
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="button-gamehub">
-				<span class="control-indicator"></span>
-				Display a button on game hubs
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="button-gamecards">
-				<span class="control-indicator"></span>
-				Display SteamDB and store page buttons on game cards page
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="link-subid">
-				<span class="control-indicator"></span>
-				Display SubID under each purchase option
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="link-bundle-packages">
-				<span class="control-indicator"></span>
-				Display package IDs in bundles
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="link-subid-widget">
-				<span class="control-indicator"></span>
-				Display SubID in app widgets
-				<i class="muted">(might hurt performance)</i>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="link-inventory">
-				<span class="control-indicator"></span>
-				Link each gift and coupon in your inventory
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="link-inventory-gift-subid">
-				<span class="control-indicator"></span>
-				Correctly figure out gift SubID in your inventory
-				<p class="muted">Performs an extra request whenever you click on a gift,<br>option above must be enabled for this to work</p>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="link-accountpage">
-				<span class="control-indicator"></span>
-				Link each package on your accounts page
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" checked data-option="profile-calculator">
-				<span class="control-indicator"></span>
-				Add a calculator link on community profiles
-			</label>
-			
-			<h3>Enhancements</h3>
-			
-			<label class="control checkbox control-dash control-built-in">
-				<input type="checkbox" class="option-check" checked disabled>
-				<span class="control-indicator"></span>
-				Add a button to empty cart
-				<i class="muted">(this option cannot be disabled)</i>
-			</label>
-			
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-market-ssa">
-				<span class="control-indicator"></span>
-				Accept Market SSA automatically
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-skip-agecheck">
-				<span class="control-indicator"></span>
-				Skip age check gate
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-hide-install-button">
-				<span class="control-indicator"></span>
-				Hide "Install Steam" button in header
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-inventory-sidebar" checked>
-				<span class="control-indicator"></span>
-				Move game selection on inventory page to the side
-				<span class="store-viewport-test-ok">(like yours!)</span>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-store-center" checked>
-				<span class="control-indicator"></span>
-				Center store homepage properly on big screens
-				<span class="store-viewport-test-ok">(like yours!)</span>
-				<span class="store-viewport-test-fail">(your viewport is too small)</span>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="online-stats" checked>
-				<span class="control-indicator"></span>
-				Add a block on Steam Store displaying online stats
-				<div class="muted">(extra http request to steamdb.info)</div>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-friendsthatown" checked>
-				<span class="control-indicator"></span>
-				Add "Friends that own" to the "Friends that play" page
-				<div class="muted">(adds extra 2 http requests)</div>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-no-linkfilter">
-				<span class="control-indicator"></span>
-				Remove all linkfilter links
-				<div class="muted">(visiting linkfilter still works)</div>
-			</label>
-			<label class="control checkbox">
-				<input type="checkbox" class="option-check" data-option="enhancement-https-fix">
-				<span class="control-indicator"></span>
-				Overwrite all http://steamcommunity.com links to be https
-				<div class="muted">(fixes workshop subscriptions, etc.)</div>
-			</label>
-		</form>
-	</div>
+	<form class="container">
+		<h3>Buttons &amp; links</h3>
+		
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="button-app">
+			<span class="control-indicator"></span>
+			Display a button on app pages
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="button-pcgw">
+			<span class="control-indicator"></span>
+			Display <a href="http://pcgamingwiki.com/" target="_blank">PCGamingWiki</a> button on app pages
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="button-sub">
+			<span class="control-indicator"></span>
+			Display a button on package pages
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="button-video">
+			<span class="control-indicator"></span>
+			Display a button on video pages
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="button-gamehub">
+			<span class="control-indicator"></span>
+			Display a button on game hubs
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="button-gamecards">
+			<span class="control-indicator"></span>
+			Display SteamDB and store page buttons on game cards page
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-subid">
+			<span class="control-indicator"></span>
+			Display SubID under each purchase option
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-bundle-packages">
+			<span class="control-indicator"></span>
+			Display package IDs in bundles
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-subid-widget">
+			<span class="control-indicator"></span>
+			Display SubID in app widgets
+			<i class="muted">(might hurt performance)</i>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-inventory">
+			<span class="control-indicator"></span>
+			Link each gift and coupon in your inventory
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-inventory-gift-subid">
+			<span class="control-indicator"></span>
+			Correctly figure out gift SubID in your inventory
+			<p class="muted">Performs an extra request whenever you click on a gift,<br>option above must be enabled for this to work</p>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-accountpage">
+			<span class="control-indicator"></span>
+			Link each package on your accounts page
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="profile-calculator">
+			<span class="control-indicator"></span>
+			Add a calculator link on community profiles
+		</label>
+		
+		<h3>Enhancements</h3>
+		
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-market-ssa">
+			<span class="control-indicator"></span>
+			Accept Market SSA automatically
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-skip-agecheck">
+			<span class="control-indicator"></span>
+			Skip age check gate
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-hide-install-button">
+			<span class="control-indicator"></span>
+			Hide "Install Steam" button in header
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-inventory-sidebar" checked>
+			<span class="control-indicator"></span>
+			Move game selection on inventory page to the side
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-store-center" checked>
+			<span class="control-indicator"></span>
+			Center store homepage properly on big screen
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="online-stats" checked>
+			<span class="control-indicator"></span>
+			Add a block on Steam Store displaying online stats
+			<div class="muted">(extra http request to steamdb.info)</div>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-friendsthatown" checked>
+			<span class="control-indicator"></span>
+			Add "Friends that own" to the "Friends that play" page
+			<div class="muted">(adds extra 2 http requests)</div>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-no-linkfilter">
+			<span class="control-indicator"></span>
+			Remove all linkfilter links
+			<div class="muted">(visiting linkfilter still works)</div>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="enhancement-https-fix">
+			<span class="control-indicator"></span>
+			Overwrite all http://steamcommunity.com links to be https
+			<div class="muted">(fixes workshop subscriptions, etc.)</div>
+		</label>
+		
+		<h3>SteamDB Website</h3>
+		
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
+			<span class="control-indicator"></span>
+			Highlight owned and wished products on steamdb.info
+			<p class="muted">If this does not work, whitelist <code>store.steampowered.com</code> in your third-party cookie policy</p>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-hide-not-interested">
+			<span class="control-indicator"></span>
+			Hide products on sales page that you are not interested in <i class="muted">(highlighting has to be enabled)</i>
+		</label>
+	</form>
 	
 	<footer class="footer">
-		<p>&lt;3</p>
 		<p>Made by <a href="http://steamdb.info">SteamDB</a> folks. It's <a href="https://github.com/SteamDatabase/SteamDatabase">open source</a>.</p>
 		<p>Thanks to <a href="https://github.com/michaeltricht" target="_blank">michaeltricht</a>, <a href="https://twitter.com/RileyLabrecque" target="_blank">rlabrecque</a> and <a href="https://twitter.com/tomasduda" target="_blank">Tomáš Duda</a> for their contributions.</p>
-		<p>Checkboxes and options theme taken from <a href="http://wtfforms.com/">WTF, forms?</a>.</p>
-		<p>Icons for checkbox and radio from <a href="http://useiconic.com/open">Open Iconic</a>.</p>
 	</footer>
 	
 	<script src="../scripts/common.js"></script>

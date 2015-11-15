@@ -1,164 +1,82 @@
-/*
- * Scaffolding and type
- */
-
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
-}
-@media (min-width: 40em) {
-  html {
-    font-size: 20px;
-  }
+	font-size: 16px;
 }
 
 body {
-  margin: 0;
-  padding: 2rem 1.5rem;
-  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
-  color: #5a5a5a;
-}
-
-/* Override for form controls */
-label,
-input,
-select,
-button {
-  font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
+	margin: 0;
+	padding: 0 1.5rem;
+	font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
+	color: #5a5a5a;
 }
 
 a {
-  color: #0074d9;
-  text-decoration: none;
+	color: #0074d9;
+	text-decoration: none;
 }
+
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 h1, h2, h3, h4 {
-  margin: 0 0 .5rem;
-  font-weight: normal;
-  line-height: 1;
-  color: #2a2a2a;
-  letter-spacing: -.05em;
+	margin: 0 0 .5rem;
+	font-weight: normal;
+	line-height: 1;
+	color: #2a2a2a;
+	letter-spacing: -.05em;
 }
-h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
-h3 { padding-top: 1rem; margin-top: 2rem; font-size: 1.75rem; }
-h4 { font-size: 1.25rem }
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	padding-top: 1rem;
+	margin-top: 2rem;
+	font-size: 1.75rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h3:first-child {
+	margin-top: 0;
+}
 
 p {
-  margin: 0 0 1rem;
-}
-.lead {
-  font-size: 1.3rem;
+	margin: 0 0 1rem;
 }
 
 .muted {
-  color: #999;
+	font-size: 80%;
+	color: #999;
 }
-
-blockquote {
-  position: relative;
-  margin: 0 1rem 1rem;
-  font-style: italic;
-  color: #7a7a7a;
-}
-blockquote p {
-  margin-bottom: 0;
-}
-
-ul li {
-  margin-bottom: .25rem;
-}
-
-/* Tighten up margin on last items */
-p:last-child,
-ul:last-child,
-blockquote:last-child{
-  margin-bottom: 0;
-}
-
-
-/*
- * The Grid
- */
 
 .container {
-  max-width: 35rem;
-  margin-left: auto;
-  margin-right: auto;
+	max-width: 35rem;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-
-/*
- * Masthead
- */
-
-.masthead {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #eee;
-}
-.masthead h1 {
-  margin-bottom: .25rem;
-}
-
-/*
- * Footer
- */
 
 .footer {
-  margin-top: 3rem;
-  padding: 3rem 1rem;
-  font-size: 90%;
-  text-align: center;
-  border-top: 1px solid #eee;
+	margin-top: 3rem;
+	padding: 3rem 1rem;
+	font-size: 90%;
+	text-align: center;
+	border-top: 1px solid #eee;
 }
+
 .footer p {
-  margin-bottom: .5rem;
-}
-
-/*
- * Control style for built-in option
- */
-.control-built-in {
-	cursor: default;
-}
-
-.control-built-in input:checked ~ .control-indicator,
-.control-built-in input:active ~ .control-indicator {
-	background-color: #8CC152;
-}
-
-/*
- * Store center tweak tests
- */
-
-.store-viewport-test-fail {
-	display: none;
-	color: #E9573F;
-}
-
-.store-viewport-test-ok {
-	display: none;
-	color: #3BAFDA;
-}
-
-@media all and (min-width: 1385px) {
-	.store-viewport-test-ok {
-		display: inline-block;
-	}
-}
-
-@media all and (max-width: 1384px) {
-	.store-viewport-test-fail {
-		display: block;
-	}
+	margin-bottom: .5rem;
 }
