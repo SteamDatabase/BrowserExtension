@@ -47,6 +47,11 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		
 		var TryToUseCachedData = function( )
 		{
+			if( typeof chrome === 'undefined' )
+			{
+				return;
+			}
+			
 			chrome.storage.local.get( 'userdata.stored', function( data )
 			{
 				if( data[ 'userdata.stored' ] )
