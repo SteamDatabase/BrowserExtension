@@ -21,9 +21,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	if( apps.length > 0 || packages.length > 0 || appScope || packageScope )
 	{
-		var xhr = new XMLHttpRequest();
-		
-		function AddCloseButton( element )
+		var AddCloseButton = function( element )
 		{
 			var x = document.createElement( 'span' );
 			x.className = 'octicon octicon-x';
@@ -47,81 +45,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			element.appendChild( link );
 		};
 		
-		var cache = localStorage.getItem( 'userdata.cached' );
-		
-		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
-		xhr.responseType = 'json';
-		
-		xhr.onerror = function()
-		{
-			TryToUseCachedData( );
-			
-			localStorage.setItem( 'userdata.cached', Date.now() );
-			
-			if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
-			{
-				return;
-			}
-			
-			var id = document.createElement( 'div' );
-			id.className = 'extension-warning';
-			
-			AddCloseButton( id );
-			
-			var icon = document.createElement( 'span' );
-			icon.className = 'mega-octicon octicon-squirrel';
-			
-			id.appendChild( icon );
-			id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
-			
-			document.body.appendChild( id );
-		};
-		
-		xhr.onreadystatechange = function()
-		{
-			if( xhr.readyState !== 4 || xhr.status !== 200 )
-			{
-				return;
-			}
-			
-			if( !xhr.response.rgOwnedPackages.length )
-			{
-				TryToUseCachedData( );
-				
-				localStorage.setItem( 'userdata.cached', Date.now() );
-				
-				if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
-				{
-					return;
-				}
-				
-				var id = document.createElement( 'a' );
-				id.className = 'extension-warning';
-				id.href = 'https://store.steampowered.com/login/';
-				
-				AddCloseButton( id );
-				
-				var icon = document.createElement( 'span' );
-				icon.className = 'mega-octicon octicon-hubot';
-				
-				id.appendChild( icon );
-				id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, owned game highlighting will not work.' ) );
-				
-				document.body.appendChild( id );
-				
-				return;
-			}
-			
-			OnDataLoaded( xhr.response );
-			
-			// TODO: This shouldn't be executed if browser cache was hit
-			if( typeof chrome !== 'undefined' )
-			{
-				chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
-			}
-		};
-		
-		function TryToUseCachedData( )
+		var TryToUseCachedData = function( )
 		{
 			chrome.storage.local.get( 'userdata.stored', function( data )
 			{
@@ -130,9 +54,9 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 					OnDataLoaded( JSON.parse( data[ 'userdata.stored' ] ) );
 				}
 			} );
-		}
+		};
 		
-		function OnDataLoaded( data )
+		var OnDataLoaded = function( data )
 		{
 			var id, i, mapAppsToElements = [], mapPackagesToElements = [];
 			
@@ -288,6 +212,81 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 						elements[ i ].hidden = true;
 					}
 				}
+			}
+		};
+		
+		var cache = localStorage.getItem( 'userdata.cached' );
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
+		xhr.responseType = 'json';
+		
+		xhr.onerror = function()
+		{
+			TryToUseCachedData( );
+			
+			localStorage.setItem( 'userdata.cached', Date.now() );
+			
+			if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
+			{
+				return;
+			}
+			
+			var id = document.createElement( 'div' );
+			id.className = 'extension-warning';
+			
+			AddCloseButton( id );
+			
+			var icon = document.createElement( 'span' );
+			icon.className = 'mega-octicon octicon-squirrel';
+			
+			id.appendChild( icon );
+			id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
+			
+			document.body.appendChild( id );
+		};
+		
+		xhr.onreadystatechange = function()
+		{
+			if( xhr.readyState !== 4 || xhr.status !== 200 )
+			{
+				return;
+			}
+			
+			if( !xhr.response.rgOwnedPackages.length )
+			{
+				TryToUseCachedData( );
+				
+				localStorage.setItem( 'userdata.cached', Date.now() );
+				
+				if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
+				{
+					return;
+				}
+				
+				var id = document.createElement( 'a' );
+				id.className = 'extension-warning';
+				id.href = 'https://store.steampowered.com/login/';
+				
+				AddCloseButton( id );
+				
+				var icon = document.createElement( 'span' );
+				icon.className = 'mega-octicon octicon-hubot';
+				
+				id.appendChild( icon );
+				id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, owned game highlighting will not work.' ) );
+				
+				document.body.appendChild( id );
+				
+				return;
+			}
+			
+			OnDataLoaded( xhr.response );
+			
+			// TODO: This shouldn't be executed if browser cache was hit
+			if( typeof chrome !== 'undefined' )
+			{
+				chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
 			}
 		};
 		
