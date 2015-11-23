@@ -6,6 +6,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 		'link-inventory': true,
 		'link-inventory-gift-subid': true,
 		'enhancement-inventory-sidebar': true,
+		'enhancement-inventory-update-urls': true,
 		'enhancement-inventory-quick-sell': true,
 		'enhancement-inventory-quick-sell-auto': false,
 		'enhancement-inventory-no-sell-reload': true
@@ -45,6 +46,11 @@ if( document.getElementById( 'inventory_link_753' ) )
 		if( items[ 'enhancement-inventory-no-sell-reload' ] )
 		{
 			document.body.dataset.steamdbNoSellReload = 'true';
+		}
+		
+		if( items[ 'enhancement-inventory-update-urls' ] )
+		{
+			document.body.dataset.steamdbUpdateUrls = 'true';
 		}
 		
 		var element = document.createElement( 'script' );

@@ -93,6 +93,30 @@
 			"value": true
 		},
 		{
+			"name": "enhancement-inventory-no-sell-reload",
+			"title": "Do not refresh the inventory when selling an item",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "enhancement-inventory-quick-sell",
+			"title": "Add quick sell buttons",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "enhancement-inventory-quick-sell-auto",
+			"title": "Automatically accept quick sell",
+			"type": "bool",
+			"value": false
+		},
+		{
+			"name": "enhancement-inventory-update-urls",
+			"title": "Update url in your browser when clicking on items",
+			"type": "bool",
+			"value": true
+		},
+		{
 			"name": "link-accountpage",
 			"title": "Link each package on your accounts page",
 			"type": "bool",
