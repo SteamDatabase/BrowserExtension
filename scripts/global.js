@@ -23,7 +23,7 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 }
 else
 {
-	GetOption( { 'enhancement-hide-install-button': false, 'enhancement-https-fix': false, 'enhancement-no-linkfilter': false }, function( items )
+	GetOption( { 'enhancement-hide-install-button': true, 'enhancement-https-fix': false, 'enhancement-no-linkfilter': false }, function( items )
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{

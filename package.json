@@ -133,13 +133,13 @@
 			"name": "enhancement-skip-agecheck",
 			"title": "Skip age check gate",
 			"type": "bool",
-			"value": false
+			"value": true
 		},
 		{
 			"name": "enhancement-hide-install-button",
 			"title": "Hide \"Install Steam\" button in header",
 			"type": "bool",
-			"value": false
+			"value": true
 		},
 		{
 			"name": "enhancement-inventory-sidebar",
