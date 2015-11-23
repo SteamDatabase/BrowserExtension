@@ -60,17 +60,6 @@
 			<i class="muted">(might hurt performance)</i>
 		</label>
 		<label class="control checkbox">
-			<input type="checkbox" class="option-check" checked data-option="link-inventory">
-			<span class="control-indicator"></span>
-			Link each gift and coupon in your inventory
-		</label>
-		<label class="control checkbox">
-			<input type="checkbox" class="option-check" checked data-option="link-inventory-gift-subid">
-			<span class="control-indicator"></span>
-			Correctly figure out gift SubID in your inventory
-			<p class="muted">Performs an extra request whenever you click on a gift,<br>option above must be enabled for this to work</p>
-		</label>
-		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="link-accountpage">
 			<span class="control-indicator"></span>
 			Link each package on your accounts page
@@ -79,6 +68,34 @@
 			<input type="checkbox" class="option-check" checked data-option="profile-calculator">
 			<span class="control-indicator"></span>
 			Add a calculator link on community profiles
+		</label>
+		
+		<h3>Inventory</h3>
+		
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-inventory">
+			<span class="control-indicator"></span>
+			Link each gift and coupon in your inventory to SteamDB
+		</label>
+		<label class="control checkbox checkbox-sub">
+			<input type="checkbox" class="option-check" checked data-option="link-inventory-gift-subid">
+			<span class="control-indicator"></span>
+			Correctly figure out gift SubID in your inventory
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-no-sell-reload">
+			<span class="control-indicator"></span>
+			Do not refresh the inventory when selling an item <i class="muted">(item will fade out)</i>
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-quick-sell">
+			<span class="control-indicator"></span>
+			Add quick sell buttons
+		</label>
+		<label class="control checkbox checkbox-sub">
+			<input type="checkbox" class="option-check" data-option="enhancement-inventory-quick-sell-auto">
+			<span class="control-indicator"></span>
+			Automatically accept quick sell
 		</label>
 		
 		<h3>Enhancements</h3>
@@ -141,10 +158,10 @@
 			Highlight owned and wished products on steamdb.info
 			<p class="muted">If this does not work, whitelist <code>store.steampowered.com</code> in your third-party cookie policy</p>
 		</label>
-		<label class="control checkbox">
+		<label class="control checkbox checkbox-sub">
 			<input type="checkbox" class="option-check" data-option="steamdb-hide-not-interested">
 			<span class="control-indicator"></span>
-			Hide products on sales page that you are not interested in <i class="muted">(highlighting has to be enabled)</i>
+			Hide products on sales page that you are not interested in
 		</label>
 	</form>
 	

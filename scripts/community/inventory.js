@@ -18,6 +18,218 @@
 	    originalPopulateActions = window.PopulateActions,
 	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
 	
+	var hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true';
+	var originalPopulateMarketActions = window.PopulateMarketActions;
+	
+	var dummySellEvent =
+	{
+		stop: function()
+		{
+			
+		}
+	}
+	
+	var quickSellButton = function( )
+	{
+		SellCurrentSelection();
+		
+		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price;
+		document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
+		
+		SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
+		SellItemDialog.OnAccept( dummySellEvent );
+		
+		if( document.body.dataset.steamdbQuickSellAuto )
+		{
+			SellItemDialog.OnConfirmationAccept( dummySellEvent );
+		}
+	};
+	
+	if( document.body.dataset.steamdbNoSellReload )
+	{
+		var nextRefreshCausedBySell = false;
+		var originalOnConfirmationAccept = window.SellItemDialog.OnConfirmationAccept;
+		var originalReloadInventory = window.CUserYou.prototype.ReloadInventory;
+		
+		window.SellItemDialog.OnConfirmationAccept = function( event )
+		{
+			nextRefreshCausedBySell = true;
+			
+			originalOnConfirmationAccept.apply( this, arguments );
+		};
+		
+		window.CUserYou.prototype.ReloadInventory = function( appid, contextid )
+		{
+			if( nextRefreshCausedBySell )
+			{
+				nextRefreshCausedBySell = false;
+				
+				window.g_ActiveInventory.selectedItem.element.style.opacity = 0.2;
+			}
+			else
+			{
+				originalReloadInventory.apply( this, arguments );
+			}
+		};
+	}
+	
+	window.PopulateMarketActions = function( elActions, item )
+	{
+		var realIsTrading       = window.g_bIsTrading;
+		var realIsMarketAllowed = window.g_bMarketAllowed;
+		
+		if( !window.g_bViewingOwnProfile )
+		{
+			window.g_bIsTrading     = true; // Hides sell button
+			window.g_bMarketAllowed = true; // Has to be set so Valve's code doesn't try to bind a tooltip on non existing sell button
+		}
+		
+		originalPopulateMarketActions.apply( this, arguments );
+		
+		window.g_bIsTrading     = realIsTrading;
+		window.g_bMarketAllowed = realIsMarketAllowed;
+		
+		try
+		{
+			if( hasQuickSellEnabled && item.marketable && !item.is_currency && elActions.style.display !== 'none' )
+			{
+				var buttons = document.createElement( 'span' );
+				buttons.style.float = 'right';
+				
+				var sellNowText;
+				var listNowText = document.createElement( 'span' );
+				listNowText.textContent = 'List now (…)';
+				
+				var sellNow = null;
+				var listNow = document.createElement( 'a' );
+				listNow.href = 'javascript:void(0)';
+				listNow.className = 'btn_small btn_blue_white_innerfade';
+				listNow.style.opacity = 0.5;
+				listNow.appendChild( listNowText );
+				
+				buttons.appendChild( listNow );
+				
+				if( item.commodity )
+				{
+					sellNowText = document.createElement( 'span' );
+					sellNowText.textContent = 'Sell now (…)';
+					
+					sellNow = document.createElement( 'a' );
+					sellNow.href = 'javascript:void(0)';
+					sellNow.className = 'btn_small btn_blue_white_innerfade';
+					sellNow.style.opacity = 0.5;
+					sellNow.appendChild( sellNowText );
+					
+					buttons.appendChild( document.createTextNode( ' ' ) );
+					buttons.appendChild( sellNow );
+				}
+				
+				elActions.appendChild( buttons );
+				
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function()
+				{
+					if( xhr.readyState === 4 && xhr.status === 200 )
+					{
+						var data = xhr.response;
+						
+						if( item.commodity )
+						{
+							var commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
+							
+							if( !commodityID )
+							{
+								sellNowText.textContent = 'Sell now (error)';
+								listNowText.textContent = 'List now (error)';
+								
+								return;
+							}
+							
+							xhr = new XMLHttpRequest();
+							xhr.onreadystatechange = function()
+							{
+								if( xhr.readyState === 4 && xhr.status === 200 )
+								{
+									data = xhr.response;
+									
+									if( !data.success )
+									{
+										sellNowText.textContent = 'Sell now (error)';
+										listNowText.textContent = 'List now (error)';
+										
+										return;
+									}
+									
+									var publisherFee = typeof item.market_fee != 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
+									var listNowFee = CalculateFeeAmount( data.lowest_sell_order, publisherFee );
+									var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
+									var sellNowPrice = 0.0;
+									
+									listNow.style.removeProperty( 'opacity' );
+									listNow.dataset.price = listNowPrice;
+									listNow.addEventListener( 'click', quickSellButton );
+									listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
+									
+									if( data.highest_buy_order )
+									{
+										var sellNowFee = CalculateFeeAmount( data.highest_buy_order, publisherFee );
+										sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
+										
+										sellNow.style.removeProperty( 'opacity' );
+										sellNow.dataset.price = sellNowPrice;
+										sellNow.addEventListener( 'click', quickSellButton );
+										sellNowText.textContent = 'Sell now (' + data.price_prefix + sellNowPrice + data.price_suffix + ')';
+									}
+									else
+									{
+										sellNowText.style.display = 'none';
+									}
+								}
+							};
+							xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
+								+ '&two_factor=1'
+								+ '&country=' + window.g_rgWalletInfo.wallet_country
+								+ '&currency=' + window.g_rgWalletInfo.wallet_currency
+								+ '&item_nameid=' + commodityID[ 1 ], true );
+							xhr.responseType = 'json';
+							xhr.send();
+						}
+						else
+						{
+							var parsed = new DOMParser().parseFromString( xhr.response, 'text/html' );
+							
+							var items = parsed.querySelectorAll( '.market_listing_row' );
+							parsed = null;
+							
+							for( var i = 0; i < items.length; i++ )
+							{
+								var price = items[ i ].querySelector( '.market_listing_price_without_fee' ).textContent;
+								
+								if( price.indexOf( 'Sold!' ) !== -1 )
+								{
+									continue;
+								}
+								
+								listNow.style.removeProperty( 'opacity' );
+								listNow.dataset.price = price.replace( /[^0-9.,]/g, '' );
+								listNow.addEventListener( 'click', quickSellButton );
+								listNowText.textContent = 'List now (' + price.trim() + ')';
+								
+								break;
+							}
+						}
+					}
+				};
+				xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( window.GetMarketHashName( item ) ), true );
+				xhr.send();
+			}
+		}
+		catch( e )
+		{
+			console.error( e );
+		}
+	};
+	
 	window.PopulateActions = function( elActions, rgActions, item, owner )
 	{
 		var foundState = FoundState.None;
@@ -214,7 +426,7 @@
 			console.error( e );
 		}
 		
-		originalPopulateActions( elActions, rgActions, item, owner );
+		originalPopulateActions.apply( this, arguments );
 		
 		try
 		{
