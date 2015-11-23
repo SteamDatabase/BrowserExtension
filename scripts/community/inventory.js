@@ -18,7 +18,7 @@
 	    originalPopulateActions = window.PopulateActions,
 	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
 	
-	var hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true';
+	var hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
 	var originalPopulateMarketActions = window.PopulateMarketActions;
 	
 	var dummySellEvent =
