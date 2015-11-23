@@ -27,21 +27,21 @@
 		{
 			
 		}
-	}
+	};
 	
 	var quickSellButton = function( )
 	{
-		SellCurrentSelection();
+		window.SellCurrentSelection();
 		
 		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price;
 		document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
 		
-		SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
-		SellItemDialog.OnAccept( dummySellEvent );
+		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
+		window.SellItemDialog.OnAccept( dummySellEvent );
 		
 		if( document.body.dataset.steamdbQuickSellAuto )
 		{
-			SellItemDialog.OnConfirmationAccept( dummySellEvent );
+			window.SellItemDialog.OnConfirmationAccept( dummySellEvent );
 		}
 	};
 	
@@ -85,7 +85,7 @@
 			}
 			
 			originalSelectItem.apply( this, arguments );
-		}
+		};
 	}
 	
 	window.PopulateMarketActions = function( elActions, item )
@@ -176,7 +176,7 @@
 									}
 									
 									var publisherFee = typeof item.market_fee != 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
-									var listNowFee = CalculateFeeAmount( data.lowest_sell_order, publisherFee );
+									var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
 									var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
 									var sellNowPrice = 0.0;
 									
@@ -187,7 +187,7 @@
 									
 									if( data.highest_buy_order )
 									{
-										var sellNowFee = CalculateFeeAmount( data.highest_buy_order, publisherFee );
+										var sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
 										sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
 										
 										sellNow.style.removeProperty( 'opacity' );
