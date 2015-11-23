@@ -6,7 +6,6 @@ if( document.getElementById( 'inventory_link_753' ) )
 		'link-inventory': true,
 		'link-inventory-gift-subid': true,
 		'enhancement-inventory-sidebar': true,
-		'enhancement-inventory-update-urls': true,
 		'enhancement-inventory-quick-sell': true,
 		'enhancement-inventory-quick-sell-auto': false,
 		'enhancement-inventory-no-sell-reload': true
