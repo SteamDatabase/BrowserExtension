@@ -102,6 +102,7 @@
 				
 				var sellNow = null;
 				var listNow = document.createElement( 'a' );
+				listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
 				listNow.href = 'javascript:void(0)';
 				listNow.className = 'btn_small btn_blue_white_innerfade';
 				listNow.style.opacity = 0.5;
@@ -115,6 +116,7 @@
 					sellNowText.textContent = 'Sell now (…)';
 					
 					sellNow = document.createElement( 'a' );
+					sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
 					sellNow.href = 'javascript:void(0)';
 					sellNow.className = 'btn_small btn_blue_white_innerfade';
 					sellNow.style.opacity = 0.5;
