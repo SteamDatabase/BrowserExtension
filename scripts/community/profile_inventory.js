@@ -48,11 +48,6 @@ if( document.getElementById( 'inventory_link_753' ) )
 			document.body.dataset.steamdbNoSellReload = 'true';
 		}
 		
-		if( items[ 'enhancement-inventory-update-urls' ] )
-		{
-			document.body.dataset.steamdbUpdateUrls = 'true';
-		}
-		
 		var element = document.createElement( 'script' );
 		element.id = 'steamdb_inventory_hook';
 		element.type = 'text/javascript';

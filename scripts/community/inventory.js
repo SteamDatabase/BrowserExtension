@@ -73,21 +73,6 @@
 		};
 	}
 	
-	if( document.body.dataset.steamdbUpdateUrls )
-	{
-		var originalSelectItem = window.CInventory.prototype.SelectItem;
-		
-		window.CInventory.prototype.SelectItem = function( event )
-		{
-			if( event && event.target )
-			{
-				arguments[ 0 ] = null;
-			}
-			
-			originalSelectItem.apply( this, arguments );
-		};
-	}
-	
 	window.PopulateMarketActions = function( elActions, item )
 	{
 		var realIsTrading       = window.g_bIsTrading;
