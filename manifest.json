@@ -263,6 +263,17 @@
 		{
 			"matches":
 			[
+				"*://steamcommunity.com/tradeoffer/new*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/community/tradeoffer_new.js"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://steamcommunity.com/id/*/games*",
 				"*://steamcommunity.com/profiles/*/games*",
 				"*://steamcommunity.com/id/*/wishlist*",
