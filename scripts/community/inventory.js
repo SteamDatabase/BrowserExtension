@@ -187,7 +187,6 @@
 								}
 							};
 							xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
-								+ '&two_factor=1'
 								+ '&country=' + window.g_rgWalletInfo.wallet_country
 								+ '&currency=' + window.g_rgWalletInfo.wallet_currency
 								+ '&item_nameid=' + commodityID[ 1 ], true );
