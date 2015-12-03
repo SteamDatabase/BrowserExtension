@@ -13,7 +13,8 @@
 	var i,
 	    link,
 	    giftCache = {},
-	    lookupGiftSubids = document.body.dataset.steamdbGiftSubid === 'true',
+	    hasLinksEnabled = document.body.dataset.steamdbLinks === 'true',
+	    hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true',
 	    homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage,
 	    originalPopulateActions = window.PopulateActions,
 	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
@@ -238,7 +239,7 @@
 		try
 		{
 			// PopulateActions is called for both item.actions and item.owner_actions, we only want first one
-			if( item.appid == 753 && rgActions === item.actions )
+			if( hasLinksEnabled && item.appid == 753 && rgActions === item.actions )
 			{
 				if( item.type === 'Coupon' && rgActions )
 				{
@@ -283,7 +284,7 @@
 						foundState = FoundState.Added;
 					}
 				}
-				else if( lookupGiftSubids && item.owner_actions && item.type === 'Gift' )
+				else if( hasPreciseSubIDsEnabled && item.owner_actions && item.type === 'Gift' )
 				{
 					// If a gift has no actions, rgActions is undefined
 					if( !rgActions )
