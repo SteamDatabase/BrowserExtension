@@ -19,8 +19,8 @@ if( item !== null )
 			    "assets": [
 			        {
 			            "appid": appid,
-			            "contextid": contextid,
-			            "assetid": assetid,
+			            "contextid": contextid.toString(),
+			            "assetid": assetid.toString(),
 			            "amount": 1
 			        }
 			    ],
