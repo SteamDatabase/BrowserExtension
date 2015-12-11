@@ -79,7 +79,7 @@ else
 				var SetError = function( element )
 				{
 					element = document.getElementById( element );
-					element.textContent = 'FAIL';
+					element.textContent = 'N/A';
 					element.title = err.error;
 				};
 				
