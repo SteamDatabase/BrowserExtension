@@ -32,31 +32,36 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		var hideOwned = document.querySelector( '#js-hide-owned-games.checked' );
 		
 		var elems = document.querySelectorAll( '.appimg' );
-		for ( var i = 0; i < elems.length; i++ )
+		var element;
+		
+		for( var i = 0; i < elems.length; i++ )
 		{
-			if ( showWishlistedOnly )
+			element = elems[ i ];
+			
+			if( showWishlistedOnly )
 			{
-				if ( elems[ i ].classList.contains( 'wished' ) )
+				if( element.classList.contains( 'wished' ) )
 				{
-					elems[ i ].hidden = false;
+					element.hidden = false;
+					element.classList.remove( 'hidden' );
 				}
 				else
 				{
-					elems[ i ].hidden = true;
+					element.hidden = true;
 				}
 			}
 			else
 			{
-				if ( hideOwned )
+				if( hideOwned )
 				{
-					if ( ! elems[ i ].classList.contains( 'owned' ) )
+					if( !element.classList.contains( 'owned' ) )
 					{
-						elems[ i ].hidden = false;
+						element.hidden = false;
 					}
 				}
 				else
 				{
-					elems[ i ].hidden = false;
+					element.hidden = false;
 				}
 			}
 		}
