@@ -6,7 +6,7 @@
 	"id": "firefox-extension@steamdb.info",
 	"homepage": "https://steamdb.info/",
 	"version": "1.5.2",
-	"icon": "resource://firefox-extension-at-steamdb-dot-info/icons/128.png",
+	"icon": "resource://firefox-extension-at-steamdb-dot-info/data/icons/128.png",
 	"main": "data/scripts/firefox.js",
 	"permissions":
 	{
