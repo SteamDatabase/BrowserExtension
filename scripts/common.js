@@ -3,20 +3,18 @@
 'use strict';
 
 var CurrentAppID,
+	GetAppIDFromUrl = function( url )
+	{
+		var appid = url.match( /\/(app|sub|bundle|friendsthatplay|gamecards)\/([0-9]{1,7})/ );
+		
+		return appid ? parseInt( appid[ 2 ], 10 ) : -1;
+	},
+	
 	GetCurrentAppID = function()
 	{
 		if( !CurrentAppID )
 		{
-			CurrentAppID = location.pathname.match( /\/(app|sub|bundle|friendsthatplay|gamecards)\/([0-9]{1,7})/ );
-			
-			if( CurrentAppID )
-			{
-				CurrentAppID = parseInt( CurrentAppID[ 2 ], 10 );
-			}
-			else
-			{
-				CurrentAppID = -1;
-			}
+			CurrentAppID = GetAppIDFromUrl( location.pathname );
 		}
 		
 		return CurrentAppID;
