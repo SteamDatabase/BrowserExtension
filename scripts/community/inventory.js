@@ -300,7 +300,7 @@
 						{
 							if( link.link.match( /^#steamdb_/ ) !== null )
 							{
-								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.classid ] + '/';
+								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 							}
 							
 							foundState = FoundState.Added;
@@ -385,7 +385,7 @@
 							{
 								rgActions.push( {
 									steamdb: true,
-									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/',
+									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
 									name: 'View on Steam Database'
 								} );
 								
@@ -428,7 +428,7 @@
 			console.error( e );
 		}
 		
-		originalPopulateActions.apply( this, arguments );
+		originalPopulateActions( elActions, rgActions, item, owner );
 		
 		try
 		{
