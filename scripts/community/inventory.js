@@ -398,11 +398,25 @@
 				}
 				else if( item.type === 'Gift' )
 				{
-					item.actions = rgActions = [ {
-						steamdb: true,
-						link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.name ),
-						name: 'Search on Steam Database'
-					} ];
+					link = item.name.match( /^Unknown package ([0-9]+)$/ );
+					
+					if( link )
+					{
+						item.actions = rgActions = [ {
+							steamdb: true,
+							link: homepage + 'sub/' + link[ 1 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
+							name: 'View on Steam Database'
+						} ];
+					}
+					else
+					{
+						item.actions = rgActions = [ {
+							steamdb: true,
+							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.name ),
+							name: 'Search on Steam Database'
+						} ];
+					}
+					
 					
 					foundState = FoundState.Added;
 				}
