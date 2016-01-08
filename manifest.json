@@ -364,18 +364,6 @@
 			]
 		},
 		{
-			"matches":
-			[
-				"*://steamcommunity.com/id/*/friendsthatplay/*",
-				"*://steamcommunity.com/profiles/*/friendsthatplay/*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/community/friendsthatplay.js"
-			]
-		},
-		{
 			"all_frames": true,
 			"matches":
 			[

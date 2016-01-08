@@ -160,12 +160,6 @@
 			"value": true
 		},
 		{
-			"name": "enhancement-friendsthatown",
-			"title": "Add \"Friends that own\" to the \"Friends that play\" page",
-			"type": "bool",
-			"value": true
-		},
-		{
 			"name": "enhancement-no-linkfilter",
 			"title": "Remove all linkfilter links (visiting linkfilter still works)",
 			"type": "bool",
