@@ -111,6 +111,12 @@
 			"value": false
 		},
 		{
+			"name": "enhancement-tradeoffer-no-gift-confirm",
+			"title": "Suppress \"This trade appears suspicious\" warnings in trade offers",
+			"type": "bool",
+			"value": false
+		},
+		{
 			"name": "link-accountpage",
 			"title": "Link each package on your accounts page",
 			"type": "bool",
