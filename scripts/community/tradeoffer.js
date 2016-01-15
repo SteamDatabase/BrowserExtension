@@ -19,12 +19,12 @@ var FixTradeOffer = function ()
 	var originalSetAssetOrCurrencyInTrade = window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade;
 	window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade = function ( item, xferAmount, isCurrency )
 	{
-		// Make sure this item can actually be traded
-		var appName = g_rgPartnerAppContextData[ item.appid ].name;
-		var errorTitle = "Cannot Add \"" + item.name + "\" to Trade";
-		
 		try
 		{
+			// Make sure this item can actually be traded
+			var appName = g_rgPartnerAppContextData[ item.appid ].name;
+			var errorTitle = "Cannot Add \"" + item.name + "\" to Trade";
+			
 			switch ( g_rgPartnerAppContextData[ item.appid ].trade_permissions )
 			{
 				case 'NONE':
