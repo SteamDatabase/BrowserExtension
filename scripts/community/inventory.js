@@ -205,7 +205,14 @@
 							
 							for( var i = 0; i < items.length; i++ )
 							{
-								var price = items[ i ].querySelector( '.market_listing_price_without_fee' ).textContent;
+								var price = items[ i ].querySelector( '.market_listing_price_without_fee' );
+								
+								if( !price )
+								{
+									continue;
+								}
+								
+								price = price.textContent;
 								
 								if( price.indexOf( 'Sold!' ) !== -1 )
 								{
