@@ -97,11 +97,9 @@
 				var buttons = document.createElement( 'span' );
 				buttons.style.float = 'right';
 				
-				var sellNowText;
 				var listNowText = document.createElement( 'span' );
 				listNowText.textContent = 'List now (…)';
 				
-				var sellNow = null;
 				var listNow = document.createElement( 'a' );
 				listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
 				listNow.href = 'javascript:void(0)';
@@ -109,24 +107,20 @@
 				listNow.style.opacity = 0.5;
 				listNow.appendChild( listNowText );
 				
+				var sellNowText = document.createElement( 'span' );
+				sellNowText.textContent = 'Sell now (…)';
+				
+				var sellNow = document.createElement( 'a' );
+				sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
+				sellNow.href = 'javascript:void(0)';
+				sellNow.className = 'btn_small btn_blue_white_innerfade';
+				sellNow.style.opacity = 0.5;
+				sellNow.appendChild( sellNowText );
+				
 				buttons.appendChild( listNow );
-				
-				if( item.commodity )
-				{
-					sellNowText = document.createElement( 'span' );
-					sellNowText.textContent = 'Sell now (…)';
+				buttons.appendChild( document.createTextNode( ' ' ) );
+				buttons.appendChild( sellNow );
 					
-					sellNow = document.createElement( 'a' );
-					sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
-					sellNow.href = 'javascript:void(0)';
-					sellNow.className = 'btn_small btn_blue_white_innerfade';
-					sellNow.style.opacity = 0.5;
-					sellNow.appendChild( sellNowText );
-					
-					buttons.appendChild( document.createTextNode( ' ' ) );
-					buttons.appendChild( sellNow );
-				}
-				
 				elActions.appendChild( buttons );
 				
 				var xhr = new XMLHttpRequest();
@@ -136,97 +130,63 @@
 					{
 						var data = xhr.response;
 						
-						if( item.commodity )
+						var commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
+						
+						if( !commodityID )
 						{
-							var commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
+							sellNowText.textContent = 'Sell now (error)';
+							listNowText.textContent = 'List now (error)';
 							
-							if( !commodityID )
-							{
-								sellNowText.textContent = 'Sell now (error)';
-								listNowText.textContent = 'List now (error)';
-								
-								return;
-							}
-							
-							xhr = new XMLHttpRequest();
-							xhr.onreadystatechange = function()
-							{
-								if( xhr.readyState === 4 && xhr.status === 200 )
-								{
-									data = xhr.response;
-									
-									if( !data.success )
-									{
-										sellNowText.textContent = 'Sell now (error)';
-										listNowText.textContent = 'List now (error)';
-										
-										return;
-									}
-									
-									var publisherFee = typeof item.market_fee != 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
-									var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
-									var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
-									var sellNowPrice = 0.0;
-									
-									listNow.style.removeProperty( 'opacity' );
-									listNow.dataset.price = listNowPrice;
-									listNow.addEventListener( 'click', quickSellButton );
-									listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
-									
-									if( data.highest_buy_order )
-									{
-										var sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
-										sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
-										
-										sellNow.style.removeProperty( 'opacity' );
-										sellNow.dataset.price = sellNowPrice;
-										sellNow.addEventListener( 'click', quickSellButton );
-										sellNowText.textContent = 'Sell now (' + data.price_prefix + sellNowPrice + data.price_suffix + ')';
-									}
-									else
-									{
-										sellNowText.style.display = 'none';
-									}
-								}
-							};
-							xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
-								+ '&country=' + window.g_rgWalletInfo.wallet_country
-								+ '&currency=' + window.g_rgWalletInfo.wallet_currency
-								+ '&item_nameid=' + commodityID[ 1 ], true );
-							xhr.responseType = 'json';
-							xhr.send();
+							return;
 						}
-						else
+						
+						xhr = new XMLHttpRequest();
+						xhr.onreadystatechange = function()
 						{
-							var parsed = new DOMParser().parseFromString( xhr.response, 'text/html' );
-							
-							var items = parsed.querySelectorAll( '.market_listing_row' );
-							parsed = null;
-							
-							for( var i = 0; i < items.length; i++ )
+							if( xhr.readyState === 4 && xhr.status === 200 )
 							{
-								var price = items[ i ].querySelector( '.market_listing_price_without_fee' );
+								data = xhr.response;
 								
-								if( !price )
+								if( !data.success )
 								{
-									continue;
+									sellNowText.textContent = 'Sell now (error)';
+									listNowText.textContent = 'List now (error)';
+									
+									return;
 								}
 								
-								price = price.textContent;
-								
-								if( price.indexOf( 'Sold!' ) !== -1 )
-								{
-									continue;
-								}
+								var publisherFee = typeof item.market_fee != 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
+								var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
+								var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
+								var sellNowPrice = 0.0;
 								
 								listNow.style.removeProperty( 'opacity' );
-								listNow.dataset.price = price.replace( /[^0-9.,]/g, '' );
+								listNow.dataset.price = listNowPrice;
 								listNow.addEventListener( 'click', quickSellButton );
-								listNowText.textContent = 'List now (' + price.trim() + ')';
+								listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
 								
-								break;
+								if( data.highest_buy_order )
+								{
+									var sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
+									sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
+									
+									sellNow.style.removeProperty( 'opacity' );
+									sellNow.dataset.price = sellNowPrice;
+									sellNow.addEventListener( 'click', quickSellButton );
+									sellNowText.textContent = 'Sell now (' + data.price_prefix + sellNowPrice + data.price_suffix + ')';
+								}
+								else
+								{
+									sellNowText.style.display = 'none';
+								}
 							}
-						}
+						};
+						xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
+							+ '&country=' + window.g_rgWalletInfo.wallet_country
+							+ '&currency=' + window.g_rgWalletInfo.wallet_currency
+							+ '&item_nameid=' + commodityID[ 1 ], true );
+						xhr.responseType = 'json';
+						xhr.send();
 					}
 				};
 				xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( window.GetMarketHashName( item ) ), true );
