@@ -49,7 +49,7 @@ else
 		if( items[ 'enhancement-https-fix' ] )
 		{
 			// Don't apply fixes if visiting steamcommunity on http (stuff like broadcasts simply wont work on https)
-			if( location.hostname === 'steamcommunity.com' && location.protocol !== 'https:' )
+			if( location.hostname !== 'steamcommunity.com' && location.protocol !== 'https:' )
 			{
 				return;
 			}
