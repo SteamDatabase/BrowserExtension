@@ -176,6 +176,12 @@
 			"title": "Overwrite all http://steamcommunity.com links to be https (fixes workshop subscriptions, etc.)",
 			"type": "bool",
 			"value": false
+		},
+		{
+			"name": "partially-show-market-sell-listings",
+			"title": "Partially hide all your market listing and buy order lists on market home page",
+			"type": "bool",
+			"value": false
 		}
 	]
 }

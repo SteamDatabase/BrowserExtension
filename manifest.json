@@ -387,6 +387,21 @@
 				"scripts/common.js",
 				"scripts/community/market_ssa.js"
 			]
+		},
+		{
+			"matches":
+			[
+				"*://steamcommunity.com/market/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/community/market_sell_listings.js"
+			],
+			"css":
+			[
+				"styles/community.css"
+			]
 		}
 	]
 }
