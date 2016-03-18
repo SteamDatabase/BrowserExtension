@@ -31,6 +31,14 @@
 	function SetOption( option, value )
 	{
 		var chromepls = {}; chromepls[ option ] = value;
-		chrome.storage.local.set( chromepls );
+		
+		if( typeof chrome !== 'undefined' )
+		{
+			chrome.storage.local.set( chromepls );
+		}
+		else if( typeof browser !== 'undefined' )
+		{
+			browser.storage.local.set( chromepls );
+		}
 	}
 }());
