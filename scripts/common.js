@@ -30,7 +30,11 @@ var CurrentAppID,
 		if( typeof chrome !== 'undefined' )
 		{
 			chrome.storage.local.get( items, callback );
-		} 
+		}
+		else if( typeof browser !== 'undefined' )
+		{
+			browser.storage.local.get( items, callback );
+		}
 		else if( typeof self.options.firefox !== 'undefined' )
 		{
 			for( var item in items )
@@ -47,7 +51,11 @@ var CurrentAppID,
 		if( typeof chrome !== 'undefined' )
 		{
 			return chrome.extension.getURL( res );
-		} 
+		}
+		else if( typeof browser !== 'undefined' )
+		{
+			return browser.extension.getURL( res );
+		}
 		else if( typeof self.options.firefox !== 'undefined' )
 		{
 			return self.options[ res ];
