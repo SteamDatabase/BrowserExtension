@@ -181,7 +181,7 @@
 			"name": "partially-show-market-sell-listings",
 			"title": "Partially hide all your market listing and buy order lists on market home page",
 			"type": "bool",
-			"value": false
+			"value": true
 		}
 	]
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-GetOption( { 'partially-show-market-sell-listings': false }, function( items )
+GetOption( { 'partially-show-market-sell-listings': true }, function( items )
 {
 	if( items[ 'partially-show-market-sell-listings' ] )
 	{
