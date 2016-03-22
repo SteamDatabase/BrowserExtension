@@ -26,7 +26,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 	form.classList.add( 'with-wishlist' );
 	form.appendChild( checkboxControl );
 
-	checkboxControl.addEventListener( 'click', function( ev )
+	checkboxControl.addEventListener( 'click', function( )
 	{
 		var showWishlistedOnly = checkboxControl.classList.toggle( 'checked' );
 		var hideOwned = document.querySelector( '#js-hide-owned-games.checked' );
@@ -50,19 +50,16 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 					element.hidden = true;
 				}
 			}
-			else
+			else if( hideOwned )
 			{
-				if( hideOwned )
-				{
-					if( !element.classList.contains( 'owned' ) )
-					{
-						element.hidden = false;
-					}
-				}
-				else
+				if( !element.classList.contains( 'owned' ) )
 				{
 					element.hidden = false;
 				}
+			}
+			else
+			{
+				element.hidden = false;
 			}
 		}
 		
@@ -71,7 +68,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		[].forEach.call( document.querySelectorAll( '.table-sales tbody' ), function( el )
 		{
 			var section = document.querySelector( '#sales-section-' + el.dataset.section );
-			section.hidden = ( el.clientHeight === 0 && ! section.hidden );
+			section.hidden = el.clientHeight === 0 && !section.hidden;
 		} );
-	}, false);
+	}, false );
 } );

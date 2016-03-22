@@ -1,4 +1,4 @@
-(function()
+( function()
 {
 	'use strict';
 	
@@ -52,14 +52,14 @@
 		var originalOnConfirmationAccept = window.SellItemDialog.OnConfirmationAccept;
 		var originalReloadInventory = window.CUserYou.prototype.ReloadInventory;
 		
-		window.SellItemDialog.OnConfirmationAccept = function( event )
+		window.SellItemDialog.OnConfirmationAccept = function( )
 		{
 			nextRefreshCausedBySell = true;
 			
 			originalOnConfirmationAccept.apply( this, arguments );
 		};
 		
-		window.CUserYou.prototype.ReloadInventory = function( appid, contextid )
+		window.CUserYou.prototype.ReloadInventory = function( )
 		{
 			if( nextRefreshCausedBySell )
 			{
@@ -90,112 +90,105 @@
 		window.g_bIsTrading     = realIsTrading;
 		window.g_bMarketAllowed = realIsMarketAllowed;
 		
-		try
+		if( hasQuickSellEnabled && item.marketable && !item.is_currency && elActions.style.display !== 'none' )
 		{
-			if( hasQuickSellEnabled && item.marketable && !item.is_currency && elActions.style.display !== 'none' )
+			var buttons = document.createElement( 'span' );
+			buttons.style.float = 'right';
+			
+			var listNowText = document.createElement( 'span' );
+			listNowText.textContent = 'List now (…)';
+			
+			var listNow = document.createElement( 'a' );
+			listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
+			listNow.href = 'javascript:void(0)';
+			listNow.className = 'btn_small btn_blue_white_innerfade';
+			listNow.style.opacity = 0.5;
+			listNow.appendChild( listNowText );
+			
+			var sellNowText = document.createElement( 'span' );
+			sellNowText.textContent = 'Sell now (…)';
+			
+			var sellNow = document.createElement( 'a' );
+			sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
+			sellNow.href = 'javascript:void(0)';
+			sellNow.className = 'btn_small btn_blue_white_innerfade';
+			sellNow.style.opacity = 0.5;
+			sellNow.appendChild( sellNowText );
+			
+			buttons.appendChild( listNow );
+			buttons.appendChild( document.createTextNode( ' ' ) );
+			buttons.appendChild( sellNow );
+				
+			elActions.appendChild( buttons );
+			
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function()
 			{
-				var buttons = document.createElement( 'span' );
-				buttons.style.float = 'right';
-				
-				var listNowText = document.createElement( 'span' );
-				listNowText.textContent = 'List now (…)';
-				
-				var listNow = document.createElement( 'a' );
-				listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
-				listNow.href = 'javascript:void(0)';
-				listNow.className = 'btn_small btn_blue_white_innerfade';
-				listNow.style.opacity = 0.5;
-				listNow.appendChild( listNowText );
-				
-				var sellNowText = document.createElement( 'span' );
-				sellNowText.textContent = 'Sell now (…)';
-				
-				var sellNow = document.createElement( 'a' );
-				sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
-				sellNow.href = 'javascript:void(0)';
-				sellNow.className = 'btn_small btn_blue_white_innerfade';
-				sellNow.style.opacity = 0.5;
-				sellNow.appendChild( sellNowText );
-				
-				buttons.appendChild( listNow );
-				buttons.appendChild( document.createTextNode( ' ' ) );
-				buttons.appendChild( sellNow );
-					
-				elActions.appendChild( buttons );
-				
-				var xhr = new XMLHttpRequest();
-				xhr.onreadystatechange = function()
+				if( xhr.readyState === 4 && xhr.status === 200 )
 				{
-					if( xhr.readyState === 4 && xhr.status === 200 )
+					var data = xhr.response;
+					
+					var commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
+					
+					if( !commodityID )
 					{
-						var data = xhr.response;
+						sellNowText.textContent = 'Sell now (error)';
+						listNowText.textContent = 'List now (error)';
 						
-						var commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
-						
-						if( !commodityID )
-						{
-							sellNowText.textContent = 'Sell now (error)';
-							listNowText.textContent = 'List now (error)';
-							
-							return;
-						}
-						
-						xhr = new XMLHttpRequest();
-						xhr.onreadystatechange = function()
-						{
-							if( xhr.readyState === 4 && xhr.status === 200 )
-							{
-								data = xhr.response;
-								
-								if( !data.success )
-								{
-									sellNowText.textContent = 'Sell now (error)';
-									listNowText.textContent = 'List now (error)';
-									
-									return;
-								}
-								
-								var publisherFee = typeof item.market_fee != 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
-								var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
-								var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
-								var sellNowPrice = 0.0;
-								
-								listNow.style.removeProperty( 'opacity' );
-								listNow.dataset.price = listNowPrice;
-								listNow.addEventListener( 'click', quickSellButton );
-								listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
-								
-								if( data.highest_buy_order )
-								{
-									var sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
-									sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
-									
-									sellNow.style.removeProperty( 'opacity' );
-									sellNow.dataset.price = sellNowPrice;
-									sellNow.addEventListener( 'click', quickSellButton );
-									sellNowText.textContent = 'Sell now (' + data.price_prefix + sellNowPrice + data.price_suffix + ')';
-								}
-								else
-								{
-									sellNowText.style.display = 'none';
-								}
-							}
-						};
-						xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
-							+ '&country=' + window.g_rgWalletInfo.wallet_country
-							+ '&currency=' + window.g_rgWalletInfo.wallet_currency
-							+ '&item_nameid=' + commodityID[ 1 ], true );
-						xhr.responseType = 'json';
-						xhr.send();
+						return;
 					}
-				};
-				xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( window.GetMarketHashName( item ) ), true );
-				xhr.send();
-			}
-		}
-		catch( e )
-		{
-			console.error( e );
+					
+					xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = function()
+					{
+						if( xhr.readyState === 4 && xhr.status === 200 )
+						{
+							data = xhr.response;
+							
+							if( !data.success )
+							{
+								sellNowText.textContent = 'Sell now (error)';
+								listNowText.textContent = 'List now (error)';
+								
+								return;
+							}
+							
+							var publisherFee = typeof item.market_fee !== 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
+							var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
+							var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
+							var sellNowPrice = 0.0;
+							
+							listNow.style.removeProperty( 'opacity' );
+							listNow.dataset.price = listNowPrice;
+							listNow.addEventListener( 'click', quickSellButton );
+							listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
+							
+							if( data.highest_buy_order )
+							{
+								var sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
+								sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
+								
+								sellNow.style.removeProperty( 'opacity' );
+								sellNow.dataset.price = sellNowPrice;
+								sellNow.addEventListener( 'click', quickSellButton );
+								sellNowText.textContent = 'Sell now (' + data.price_prefix + sellNowPrice + data.price_suffix + ')';
+							}
+							else
+							{
+								sellNowText.style.display = 'none';
+							}
+						}
+					};
+					xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
+						+ '&country=' + window.g_rgWalletInfo.wallet_country
+						+ '&currency=' + window.g_rgWalletInfo.wallet_currency
+						+ '&item_nameid=' + commodityID[ 1 ], true );
+					xhr.responseType = 'json';
+					xhr.send();
+				}
+			};
+			xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( window.GetMarketHashName( item ) ), true );
+			xhr.send();
 		}
 	};
 	
@@ -406,44 +399,35 @@
 		catch( e )
 		{
 			// Don't break website functionality if something fails above
-			console.error( e );
 		}
 		
 		originalPopulateActions( elActions, rgActions, item, owner );
 		
-		try
+		// We want our links to be open in new tab
+		if( foundState === FoundState.Added )
 		{
-			// We want our links to be open in new tab
-			if( foundState === FoundState.Added )
+			link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
+			
+			if( link )
 			{
-				link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
-				
-				if( link )
+				for( i = 0; i < link.length; i++ )
 				{
-					for( i = 0; i < link.length; i++ )
-					{
-						link[ i ].target = '_blank';
-					}
-				}
-			}
-			else if( foundState === FoundState.DisableButtons )
-			{
-				link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
-				
-				if( link )
-				{
-					for( i = 0; i < link.length; i++ )
-					{
-						link[ i ].target = '_blank';
-						link[ i ].classList.add( 'btn_disabled' );
-					}
+					link[ i ].target = '_blank';
 				}
 			}
 		}
-		catch( e )
+		else if( foundState === FoundState.DisableButtons )
 		{
-			// Don't break website functionality if something fails above
-			console.error( e );
+			link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
+			
+			if( link )
+			{
+				for( i = 0; i < link.length; i++ )
+				{
+					link[ i ].target = '_blank';
+					link[ i ].classList.add( 'btn_disabled' );
+				}
+			}
 		}
 	};
-}());
+}() );

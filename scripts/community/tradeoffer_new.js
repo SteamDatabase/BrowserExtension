@@ -8,24 +8,24 @@ if( item !== null )
 	{
 		window.g_rgCurrentTradeStatus =
 		{
-			"newversion": true,
-			"version": 1,
-			"me": {
-			    "assets": [],
-			    "currency": [],
-			    "ready": false
+			'newversion': true,
+			'version': 1,
+			'me': {
+			    'assets': [],
+			    'currency': [],
+			    'ready': false
 			},
-			"them": {
-			    "assets": [
+			'them': {
+			    'assets': [
 			        {
-			            "appid": appid,
-			            "contextid": contextid.toString(),
-			            "assetid": assetid.toString(),
-			            "amount": 1
+			            'appid': appid,
+			            'contextid': contextid.toString(),
+			            'assetid': assetid.toString(),
+			            'amount': 1
 			        }
 			    ],
-			    "currency": [],
-			    "ready": false
+			    'currency': [],
+			    'ready': false
 			}
 		};
 		
@@ -35,7 +35,7 @@ if( item !== null )
 	var element = document.createElement( 'script' );
 	element.id = 'steamdb_for_item';
 	element.type = 'text/javascript';
-	element.appendChild( document.createTextNode( '(' + InjectScript.toString() + '(' + item[ 1 ] + ',' + item[ 2 ] + ',' + item[ 3 ] + '))') );
+	element.appendChild( document.createTextNode( '(' + InjectScript.toString() + '(' + item[ 1 ] + ',' + item[ 2 ] + ',' + item[ 3 ] + '))' ) );
 	
 	document.head.appendChild( element );
 }

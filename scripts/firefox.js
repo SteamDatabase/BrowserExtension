@@ -25,7 +25,7 @@ var contentScripts = manifest.content_scripts;
 for( i = 0; i < contentScripts.length; i++ )
 {
 	var contentScript = contentScripts[ i ];
-	
+	var match;
 	var pageMatch =
 	{
 		include: [],
@@ -36,7 +36,7 @@ for( i = 0; i < contentScripts.length; i++ )
 	
 	for( x = 0; x < contentScript.matches.length; x++ )
 	{
-		var match = contentScript.matches[ x ].replace( /\*/g, '.*' ).replace( /[\/]/g, '\/' );
+		match = contentScript.matches[ x ].replace( /\*/g, '.*' ).replace( /[\/]/g, '\/' );
 		
 		pageMatch.include.push( new RegExp( match ) );
 	}
@@ -60,7 +60,7 @@ for( i = 0; i < contentScripts.length; i++ )
 		
 		for( x = 0; x < contentScript.exclude_matches.length; x++ )
 		{
-			var match = contentScript.exclude_matches[ x ].replace( /\*/g, '.*' ).replace( /[\/]/g, '\/' );
+			match = contentScript.exclude_matches[ x ].replace( /\*/g, '.*' ).replace( /[\/]/g, '\/' );
 			
 			pageMatch.exclude.push( new RegExp( match ) );
 		}

@@ -8,6 +8,17 @@
 	"version": "1.5.5",
 	"icon": "resource://firefox-extension-at-steamdb-dot-info/data/icons/128.png",
 	"main": "data/scripts/firefox.js",
+	"license": "MIT",
+	"scripts":
+	{
+		"test": "eslint .",
+		"fix": "eslint . --fix"
+	},
+	"devDependencies":
+	{
+		"eslint": "^2.4.0",
+		"jpm": "^1.0.6"
+	},
 	"permissions":
 	{
 		"cross-domain-content":

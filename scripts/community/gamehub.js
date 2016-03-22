@@ -1,3 +1,4 @@
+/* global CurrentAppID: true */
 'use strict';
 
 GetOption( { 'button-gamehub': true }, function( items )

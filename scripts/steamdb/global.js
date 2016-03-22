@@ -1,3 +1,5 @@
+/* global chrome:false */
+/* TODO: Remove this global later for multi browser support */
 'use strict';
 
 var element = document.getElementById( 'steamdb-extension-protip' );

@@ -1,4 +1,4 @@
-(function()
+( function()
 {
 	'use strict';
 	
@@ -23,4 +23,4 @@
 		
 		originalDropdownSelectOption( dropdownName, subId, inCart );
 	};
-}());
+}() );

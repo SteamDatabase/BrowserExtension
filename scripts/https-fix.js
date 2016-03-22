@@ -1,4 +1,4 @@
-(function()
+( function()
 {
 	'use strict';
 	
@@ -47,4 +47,4 @@
 			elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
 		}
 	};
-}());
+}() );

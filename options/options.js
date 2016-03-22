@@ -1,8 +1,28 @@
-(function()
+/* global chrome:false, browser:false */
+( function()
 {
 	'use strict';
 	
 	var element, checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' ), options = {};
+	
+	var CheckboxChange = function( )
+	{
+		SetOption( this.dataset.option, this.checked );
+	};
+	
+	var SetOption = function( option, value )
+	{
+		var chromepls = {}; chromepls[ option ] = value;
+		
+		if( typeof chrome !== 'undefined' )
+		{
+			chrome.storage.local.set( chromepls );
+		}
+		else if( typeof browser !== 'undefined' )
+		{
+			browser.storage.local.set( chromepls );
+		}
+	};
 	
 	for( var i = 0; i < checkboxes.length; i++ )
 	{
@@ -22,23 +42,4 @@
 			element.checked = items[ item ];
 		}
 	} );
-	
-	function CheckboxChange( )
-	{
-		SetOption( this.dataset.option, this.checked );
-	}
-	
-	function SetOption( option, value )
-	{
-		var chromepls = {}; chromepls[ option ] = value;
-		
-		if( typeof chrome !== 'undefined' )
-		{
-			chrome.storage.local.set( chromepls );
-		}
-		else if( typeof browser !== 'undefined' )
-		{
-			browser.storage.local.set( chromepls );
-		}
-	}
-}());
+}() );
