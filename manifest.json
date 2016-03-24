@@ -258,6 +258,10 @@
 			[
 				"scripts/common.js",
 				"scripts/community/profile_inventory.js"
+			],
+			"css":
+			[
+				"styles/inventory.css"
 			]
 		},
 		{

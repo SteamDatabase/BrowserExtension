@@ -1,0 +1,23 @@
+.steamdb_sold > img {
+	opacity: 0.2;
+}
+
+.steamdb_confirm_mobile:before,
+.steamdb_confirm_email:before {
+	display: block;
+	position: absolute;
+	content: "CONFIRM ON MOBILE";
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
+	padding-top: 30px;
+}
+
+.steamdb_confirm_email:before {
+	content: "CONFIRM BY EMAIL";
+}
+
+.steamdb_confirm_listed:before {
+	content: "LISTED ON MARKET";
+}

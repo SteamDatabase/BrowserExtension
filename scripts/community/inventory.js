@@ -49,14 +49,25 @@
 	if( document.body.dataset.steamdbNoSellReload )
 	{
 		var nextRefreshCausedBySell = false;
-		var originalOnConfirmationAccept = window.SellItemDialog.OnConfirmationAccept;
+		var originalOnSuccess = window.SellItemDialog.OnSuccess;
 		var originalReloadInventory = window.CUserYou.prototype.ReloadInventory;
 		
-		window.SellItemDialog.OnConfirmationAccept = function( )
+		window.SellItemDialog.OnSuccess = function( transport )
 		{
 			nextRefreshCausedBySell = true;
 			
-			originalOnConfirmationAccept.apply( this, arguments );
+			var className = 'listed';
+			
+			if( transport.responseJSON.requires_confirmation )
+			{
+				className = transport.responseJSON.needs_mobile_confirmation ? 'mobile' : 'email';
+				
+				transport.responseJSON.requires_confirmation = false;
+			}
+			
+			window.g_ActiveInventory.selectedItem.element.classList.add( 'steamdb_confirm_' + className );
+			
+			originalOnSuccess.apply( this, arguments );
 		};
 		
 		window.CUserYou.prototype.ReloadInventory = function( )
@@ -65,7 +76,7 @@
 			{
 				nextRefreshCausedBySell = false;
 				
-				window.g_ActiveInventory.selectedItem.element.style.opacity = 0.2;
+				window.g_ActiveInventory.selectedItem.element.classList.add( 'steamdb_sold' );
 			}
 			else
 			{
