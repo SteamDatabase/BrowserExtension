@@ -47,7 +47,7 @@ GetOption( { 'partially-show-market-sell-listings': true }, function( items )
 						if( el.classList.contains( 'steamdb_listing_partial' ) )
 						{
 							el.classList.remove( 'steamdb_listing_partial' );
-							this.querySelector( 'span > span' ).textContent = 'Hide all';
+							this.querySelector( 'span > span' ).textContent = 'Show less';
 						}
 						else
 						{
