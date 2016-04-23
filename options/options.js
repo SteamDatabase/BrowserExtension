@@ -14,7 +14,7 @@
 	{
 		var chromepls = {}; chromepls[ option ] = value;
 		
-		if( typeof chrome !== 'undefined' )
+		if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 		{
 			chrome.storage.local.set( chromepls );
 		}

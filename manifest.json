@@ -6,7 +6,7 @@
 	"short_name": "SteamDB",
 	"description": "Adds Steam Database links and new features across Steam Community and Store.",
 	"homepage_url": "https://steamdb.info/",
-	"minimum_chrome_version": "40.0",
+	"options_page": "options/options.html",
 	"options_ui":
 	{
 		"page": "options/options.html",
