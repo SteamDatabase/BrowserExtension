@@ -1,6 +1,7 @@
 {
 	"manifest_version": 2,
 	"version": "1.5.7",
+	"author": "Steam Database",
 	"name": "Steam Database",
 	"short_name": "SteamDB",
 	"description": "Adds Steam Database links and new features across Steam Community and Store.",
