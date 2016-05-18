@@ -1,0 +1,3 @@
+language: node_js
+notifications:
+  email: false
