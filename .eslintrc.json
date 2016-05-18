@@ -97,11 +97,6 @@
 				}
 			}
 		],
-		"linebreak-style":
-		[
-			"error",
-			"windows"
-		],
 		"lines-around-comment": "error",
 		"max-depth": "off",
 		"max-len": "off",

@@ -1,5 +1,6 @@
 # Steam Database Extension
 
+[![Build Status (Travis)](https://img.shields.io/travis/SteamDatabase/BrowserExtension/master.svg?style=flat-square)](https://travis-ci.org/SteamDatabase/BrowserExtension)
 [![Code Climate](https://codeclimate.com/github/SteamDatabase/BrowserExtension/badges/gpa.svg)](https://codeclimate.com/github/SteamDatabase/BrowserExtension)
 
 Adds Steam Database links on various pages in the Steam Community and Store.
