@@ -51,7 +51,6 @@ GetOption( { 'profile-calculator': true }, function( items )
 		
 		element = document.createElement( 'a' );
 		element.href = url;
-		element.target = '_blank';
 		element.className = 'popup_menu_item';
 		element.appendChild( image );
 		element.appendChild( document.createTextNode( '\u00a0 SteamDB Calculator' ) );
@@ -74,7 +73,6 @@ GetOption( { 'profile-calculator': true }, function( items )
 			
 			element = document.createElement( 'a' );
 			element.className = 'btn_profile_action btn_medium';
-			element.target = '_blank';
 			element.href = url;
 			element.title = 'SteamDB Calculator';
 			element.appendChild( text );

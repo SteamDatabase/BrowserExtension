@@ -40,7 +40,6 @@ GetOption( { 'button-gamecards': true }, function( items )
 	
 	link = document.createElement( 'a' );
 	link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-	link.target = '_blank';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( span );
 	

@@ -6,7 +6,6 @@ if( container )
 {
 	var link = document.createElement( 'a' );
 	link.className = 'steamdb_error_link';
-	link.target = '_blank';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
 	
@@ -28,7 +27,6 @@ else
 			block.appendChild( blockInner );
 			
 			link = document.createElement( 'a' );
-			link.target = '_blank';
 			link.title = 'View more information and graphs on SteamDB';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			
@@ -133,7 +131,6 @@ else
 			{
 				link = document.createElement( 'a' );
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-				link.target = '_blank';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
@@ -160,7 +157,6 @@ else
 			{
 				link = document.createElement( 'a' );
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-				link.target = '_blank';
 				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
@@ -211,7 +207,6 @@ else
 						
 						link = document.createElement( 'a' );
 						link.className = 'steamdb_link' + ( element.querySelector( '.game_area_purchase_game_dropdown_left_panel' ) ? '' : ' steamdb_float_left' );
-						link.target = '_blank';
 						link.href = '#';
 						link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
 						link.appendChild( subidElement );
@@ -225,7 +220,6 @@ else
 					
 					link = document.createElement( 'a' );
 					link.className = 'steamdb_link steamdb_float_left';
-					link.target = '_blank';
 					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 					link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
 					link.appendChild( subidElement );

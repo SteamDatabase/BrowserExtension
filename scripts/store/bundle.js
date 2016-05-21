@@ -16,7 +16,6 @@ GetOption( { 'button-sub': true }, function( items )
 		
 		var link = document.createElement( 'a' );
 		link.className = 'action_btn';
-		link.target = '_blank';
 		link.href = GetHomepage() + 'bundle/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		link.appendChild( element );
 		
