@@ -8,6 +8,7 @@ GetOption( { 'enhancement-skip-agecheck': true }, function( items )
 		date.setFullYear( date.getFullYear() + 1 );
 		date = date.toGMTString();
 		
+		document.cookie = 'mature_content=1; expires=' + date + '; path=/;';
 		document.cookie = 'lastagecheckage=1-January-1900; expires=' + date + '; path=/;';
 		document.cookie = 'birthtime=-' + Math.pow( 30, 6 ) + '; expires=' + date + '; path=/;';
 		
