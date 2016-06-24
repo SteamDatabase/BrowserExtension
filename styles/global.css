@@ -26,3 +26,19 @@
 	width: 940px;
 	margin: 0 auto;
 }
+
+.steamdb_trade_error {
+	margin-top: 3em;
+	margin-bottom: 1em;
+	color: #FFEE58;
+}
+
+.steamdb_trade_error_explained {
+	font-style: italic;
+	font-size: 90%;
+	color: #CCC;
+}
+
+.steamdb_trade_error_explained:hover {
+	text-decoration: underline;
+}
