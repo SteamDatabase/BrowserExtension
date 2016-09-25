@@ -5,7 +5,7 @@
 	"description": "Adds Steam Database links and new features across Steam Community and Store.",
 	"id": "firefox-extension@steamdb.info",
 	"homepage": "https://steamdb.info/",
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"icon": "resource://firefox-extension-at-steamdb-dot-info/data/icons/128.png",
 	"main": "data/scripts/firefox.js",
 	"license": "MIT",
@@ -166,12 +166,6 @@
 		{
 			"name": "enhancement-inventory-sidebar",
 			"title": "Move game selection on inventory page to the side on big screens",
-			"type": "bool",
-			"value": true
-		},
-		{
-			"name": "enhancement-store-center",
-			"title": "Center store homepage properly on big screens",
 			"type": "bool",
 			"value": true
 		},

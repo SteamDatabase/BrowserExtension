@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"author": "Steam Database",
 	"name": "Steam Database",
 	"short_name": "SteamDB",
@@ -194,18 +194,6 @@
 			"js":
 			[
 				"scripts/store/cart.js"
-			]
-		},
-		{
-			"run_at": "document_start",
-			"matches":
-			[
-				"*://store.steampowered.com/"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/store/homepage.js"
 			]
 		},
 		
