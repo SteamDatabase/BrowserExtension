@@ -175,9 +175,10 @@
 			]
 		},
 		{
-			"run_at": "document_start",
+			"run_at": "document_end",
 			"matches":
 			[
+				"*://store.steampowered.com/app/*/agecheck",
 				"*://store.steampowered.com/agecheck/*"
 			],
 			"js":

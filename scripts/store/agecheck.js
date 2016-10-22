@@ -12,6 +12,11 @@ GetOption( { 'enhancement-skip-agecheck': true }, function( items )
 		document.cookie = 'lastagecheckage=1-January-1900; expires=' + date + '; path=/;';
 		document.cookie = 'birthtime=-' + Math.pow( 30, 6 ) + '; expires=' + date + '; path=/;';
 		
-		document.location.href = document.location.href.replace( /\.com\/agecheck/, '.com' );
+		// Make sure we know how to bypass this agegate before redirecting
+		// App 526520 causes inifite redirects due to an error message on agecheck url
+		if( document.querySelector( '#agecheck_form, #app_agegate' ) )
+		{
+			document.location.href = document.location.href.replace( /\/agecheck/, '' );
+		}
 	}
 } );
