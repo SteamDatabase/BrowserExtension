@@ -101,7 +101,7 @@
 		window.g_bIsTrading     = realIsTrading;
 		window.g_bMarketAllowed = realIsMarketAllowed;
 		
-		if( hasQuickSellEnabled && item.marketable && !item.is_currency && elActions.style.display !== 'none' )
+		if( hasQuickSellEnabled && item.description.marketable && !item.description.is_currency && elActions.style.display !== 'none' )
 		{
 			var buttons = document.createElement( 'span' );
 			buttons.style.float = 'right';
@@ -164,7 +164,7 @@
 								return;
 							}
 							
-							var publisherFee = typeof item.market_fee !== 'undefined' ? item.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
+							var publisherFee = typeof item.description.market_fee !== 'undefined' ? item.description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
 							var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
 							var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
 							var sellNowPrice = 0.0;
@@ -198,7 +198,7 @@
 					xhr.send();
 				}
 			};
-			xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( window.GetMarketHashName( item ) ), true );
+			xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.description.appid + '/' + encodeURIComponent( window.GetMarketHashName( item.description ) ), true );
 			xhr.send();
 		}
 	};
@@ -209,10 +209,10 @@
 		
 		try
 		{
-			// PopulateActions is called for both item.actions and item.owner_actions, we only want first one
-			if( hasLinksEnabled && item.appid == 753 && rgActions === item.actions )
+			// PopulateActions is called for both item.description.actions and item.description.owner_actions, we only want first one
+			if( hasLinksEnabled && item.description.appid == 753 && rgActions === item.description.actions )
 			{
-				if( item.type === 'Coupon' && rgActions )
+				if( item.description.type === 'Coupon' && rgActions )
 				{
 					var couponLink, pos;
 					
@@ -255,7 +255,7 @@
 						foundState = FoundState.Added;
 					}
 				}
-				else if( hasPreciseSubIDsEnabled && item.owner_actions && item.type === 'Gift' )
+				else if( hasPreciseSubIDsEnabled && item.description.owner_actions && item.description.type === 'Gift' )
 				{
 					// If a gift has no actions, rgActions is undefined
 					if( !rgActions )
@@ -271,7 +271,7 @@
 						{
 							if( link.link.match( /^#steamdb_/ ) !== null )
 							{
-								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 							}
 							
 							foundState = FoundState.Added;
@@ -287,13 +287,13 @@
 						var action =
 						{
 							steamdb: true,
-							link: '#steamdb_' + item.id,
+							link: '#steamdb_' + item.description.id,
 							name: 'View on Steam Database'
 						};
 						
-						if( giftCache[ item.classid ] )
+						if( giftCache[ item.description.classid ] )
 						{
-							action.link = homepage + 'sub/' + giftCache[ item.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+							action.link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 						}
 						else
 						{
@@ -302,9 +302,9 @@
 							{
 								if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )
 								{
-									giftCache[ item.classid ] = xhr.response.packageid;
+									giftCache[ item.description.classid ] = xhr.response.packageid;
 									
-									link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.id + '"]' );
+									link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.description.id + '"]' );
 									
 									if( link )
 									{
@@ -313,7 +313,7 @@
 									}
 								}
 							};
-							xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.id + '/validateunpack', true );
+							xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.description.id + '/validateunpack', true );
 							xhr.responseType = 'json';
 							xhr.send();
 						}
@@ -367,13 +367,13 @@
 						}
 					}
 				}
-				else if( item.type === 'Gift' )
+				else if( item.description.type === 'Gift' )
 				{
-					link = item.name.match( /^Unknown package ([0-9]+)$/ );
+					link = item.description.name.match( /^Unknown package ([0-9]+)$/ );
 					
 					if( link )
 					{
-						item.actions = rgActions = [ {
+						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'sub/' + link[ 1 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
 							name: 'View on Steam Database'
@@ -381,9 +381,9 @@
 					}
 					else
 					{
-						item.actions = rgActions = [ {
+						item.description.actions = rgActions = [ {
 							steamdb: true,
-							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.name ),
+							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.description.name ),
 							name: 'Search on Steam Database'
 						} ];
 					}
