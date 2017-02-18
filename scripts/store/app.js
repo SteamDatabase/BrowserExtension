@@ -117,6 +117,33 @@ else
 				document.getElementById( 'steamdb_stats_online_now' ).textContent = FormatNumber( xhr.response.data.CurrentPlayers );
 				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
 				document.getElementById( 'steamdb_stats_peak_all' ).textContent = FormatNumber( xhr.response.data.MaxPlayers );
+				
+				if( xhr.response.data.LastDepotUpdate )
+				{
+					container = document.createElement( 'div' );
+					container.className = 'steamdb_last_update';
+					container.title = 'As seen by Steam Database';
+					
+					link = document.createElement( 'a' );
+					
+					if( xhr.response.data.WarnOldUpdate )
+					{
+						link.className = 'steamdb_last_update_old';
+					}
+					
+					link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/history/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+					link.textContent = xhr.response.data.LastDepotUpdate;
+					
+					container.appendChild( document.createTextNode( 'Last Depots Update: ' ) );
+					container.appendChild( link );
+					
+					element = document.querySelector( '.release_date' );
+					
+					if( element )
+					{
+						element.appendChild( container );
+					}
+				}
 			};
 			xhr.open( 'GET', GetHomepage() + 'api/GetCurrentPlayers/?appid=' + GetCurrentAppID() + '&source=extension_steam_store', true );
 			xhr.responseType = 'json';

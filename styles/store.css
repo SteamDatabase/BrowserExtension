@@ -19,6 +19,15 @@
 	background: none;
 }
 
+.steamdb_last_update_old {
+	color: #f44336 !important;
+}
+
+.steamdb_last_update_old:after {
+	display: inline-block;
+	content: " ⚠️️";
+}
+
 .steamdb_stats_logo {
 	width: 54px;
 	height: 54px;
