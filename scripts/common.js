@@ -34,16 +34,7 @@ var CurrentAppID,
 		}
 		else if( typeof browser !== 'undefined' )
 		{
-			browser.storage.local.get( items, callback );
-		}
-		else if( typeof self.options.firefox !== 'undefined' )
-		{
-			for( var item in items )
-			{
-				items[ item ] = self.options.preferences[ item ];
-			}
-			
-			callback( items );
+			browser.storage.local.get( items ).then( callback );
 		}
 	},
 	
@@ -56,10 +47,6 @@ var CurrentAppID,
 		else if( typeof browser !== 'undefined' )
 		{
 			return browser.extension.getURL( res );
-		}
-		else if( typeof self.options.firefox !== 'undefined' )
-		{
-			return self.options[ res ];
 		}
 		
 		return res;
