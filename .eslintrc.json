@@ -67,11 +67,6 @@
 		"eol-last": "error",
 		"eqeqeq": "off",
 		"func-names": "off",
-		"func-style":
-		[
-			"error",
-			"expression"
-		],
 		"generator-star-spacing": "error",
 		"global-require": "off",
 		"guard-for-in": "off",
