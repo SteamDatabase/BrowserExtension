@@ -50,15 +50,3 @@ a.apphub_NumInApp:hover {
 .profile_small_header_additional.steamdb {
 	margin-top: 40px;
 }
-
-.my_listing_section.market_content_block.market_home_listing_table.steamdb_listing_partial {
-	max-height: 340px;
-	overflow: hidden;
-	-webkit-mask-image: -webkit-gradient(linear, left 60%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-}
-
-@media screen and (max-width: 910px) {
-	.steamdb_listings_showmore {
-		margin-bottom: 10px;
-	}
-}
