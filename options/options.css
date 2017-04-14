@@ -9,10 +9,10 @@ html {
 }
 
 body {
-	margin: 0;
-	padding: 0 1.5rem;
+	margin: 2rem;
 	font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
 	color: #5a5a5a;
+	min-width: 35rem;
 }
 
 a {
@@ -52,6 +52,7 @@ h4 {
 
 h3:first-child {
 	margin-top: 0;
+	padding-top: 0;
 }
 
 p {
@@ -71,14 +72,18 @@ p {
 
 .footer {
 	margin-top: 3rem;
-	padding: 3rem 1rem;
-	font-size: 90%;
+	padding-bottom: 1rem;
+	padding-top: 3rem;
 	text-align: center;
 	border-top: 1px solid #eee;
 }
 
 .footer p {
 	margin-bottom: .5rem;
+}
+
+.checkbox {
+	display: block;
 }
 
 .checkbox-sub {
