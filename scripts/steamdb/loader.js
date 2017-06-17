@@ -1,4 +1,4 @@
-(function(callbacks)
+( function( callbacks )
 {
 	'use strict';
 	
@@ -14,4 +14,4 @@
 			hideNotInterested: hideNotInterested
 		} );
 	}
-}(SteamDB.ExtensionUserdataLoaded));
+}( window.SteamDB.ExtensionUserdataLoaded ) );
