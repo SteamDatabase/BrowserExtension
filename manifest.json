@@ -34,6 +34,7 @@
 		"styles/store-center.css",
 		"styles/inventory-sidebar.css",
 		
+		"scripts/steamdb/loader.js",
 		"scripts/https-fix.js",
 		"scripts/community/inventory.js",
 		"scripts/store/subscriptions.js"
@@ -49,17 +50,6 @@
 			[
 				"scripts/common.js",
 				"scripts/steamdb/global.js"
-			]
-		},
-		{
-			"matches":
-			[
-				"https://steamdb.info/sales/*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/steamdb/sales.js"
 			]
 		},
 		

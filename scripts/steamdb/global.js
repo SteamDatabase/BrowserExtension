@@ -16,219 +16,97 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		return;
 	}
 	
-	var apps     = document.querySelectorAll( 'tr.app' ),
-	    packages = document.querySelectorAll( 'tr.package' ),
-	    packageScope = document.querySelector( '.scope-package' ),
-	    appScope = document.querySelector( '.scope-app' );
-	
-	if( apps.length > 0 || packages.length > 0 || appScope || packageScope )
+	var AddCloseButton = function( element )
 	{
-		var AddCloseButton = function( element )
+		var x = document.createElement( 'span' );
+		x.className = 'octicon octicon-x';
+		
+		var link = document.createElement( 'a' );
+		link.className = 'pull-right tooltipped tooltipped-nw';
+		link.href = '#';
+		link.style.color = '#FFF';
+		link.setAttribute( 'aria-label', 'Do not show this message again' );
+		link.appendChild( x );
+		
+		link.addEventListener( 'click', function( e )
 		{
-			var x = document.createElement( 'span' );
-			x.className = 'octicon octicon-x';
+			e.preventDefault();
 			
-			var link = document.createElement( 'a' );
-			link.className = 'pull-right tooltipped tooltipped-nw';
-			link.href = '#';
-			link.style.color = '#FFF';
-			link.setAttribute( 'aria-label', 'Do not show this message again' );
-			link.appendChild( x );
+			this.parentNode.parentNode.removeChild( this.parentNode );
 			
-			link.addEventListener( 'click', function( e )
-			{
-				e.preventDefault();
-				
-				this.parentNode.parentNode.removeChild( this.parentNode );
-				
-				localStorage.setItem( 'userdata.warning.hidden', 'true' );
-			} );
-			
-			element.appendChild( link );
-		};
+			localStorage.setItem( 'userdata.warning.hidden', 'true' );
+		} );
 		
-		var TryToUseCachedData = function( )
+		element.appendChild( link );
+	};
+	
+	var TryToUseCachedData = function( )
+	{
+		if( typeof chrome === 'undefined' )
 		{
-			if( typeof chrome === 'undefined' )
-			{
-				return;
-			}
-			
-			chrome.storage.local.get( 'userdata.stored', function( data )
-			{
-				if( data[ 'userdata.stored' ] )
-				{
-					OnDataLoaded( JSON.parse( data[ 'userdata.stored' ] ) );
-				}
-			} );
-		};
+			return;
+		}
 		
-		var OnDataLoaded = function( data )
+		chrome.storage.local.get( 'userdata.stored', function( data )
 		{
-			var id, i, mapAppsToElements = [], mapPackagesToElements = [];
-			
-			for( i = 0; i < apps.length; i++ )
+			if( data[ 'userdata.stored' ] )
 			{
-				element = apps[ i ];
-				
-				mapAppsToElements[ element.dataset.appid ] = element;
+				OnDataLoaded( JSON.parse( data[ 'userdata.stored' ] ) );
 			}
-			
-			apps = null;
-			
-			for( i = 0; i < packages.length; i++ )
-			{
-				element = packages[ i ];
-				
-				mapPackagesToElements[ element.dataset.subid ] = element;
-			}
-			
-			packages = null;
-			
-			if( appScope || mapAppsToElements.length > 0 )
-			{
-				var scopeAppID = appScope && appScope.dataset.appid;
-				
-				// Wished apps
-				for( i = 0; i < data.rgWishlist.length; i++ )
-				{
-					element = mapAppsToElements[ data.rgWishlist[ i ] ];
-					
-					if( element )
-					{
-						element.classList.add( 'wished' );
-					}
-				}
-				
-				// Owned apps
-				for( i = 0; i < data.rgOwnedApps.length; i++ )
-				{
-					id = data.rgOwnedApps[ i ];
-					element = mapAppsToElements[ id ];
-					
-					if( element )
-					{
-						element.classList.add( 'owned' );
-					}
-					
-					if( scopeAppID == id )
-					{
-						appScope = document.querySelector( '.panel-ownership' );
-						
-						if( appScope )
-						{
-							appScope.hidden = false;
-						}
-						
-						appScope = false;
-					}
-				}
-				
-				// Apps in cart
-				for( i = 0; i < data.rgAppsInCart.length; i++ )
-				{
-					element = mapAppsToElements[ data.rgAppsInCart[ i ] ];
-					
-					if( element )
-					{
-						element.classList.add( 'cart' );
-					}
-				}
-			}
-			
-			if( packageScope || mapPackagesToElements.length > 0 )
-			{
-				var scopeSubID = packageScope && packageScope.dataset.subid;
-				
-				// Owned packages
-				for( i = 0; i < data.rgOwnedPackages.length; i++ )
-				{
-					id = data.rgOwnedPackages[ i ];
-					element = mapPackagesToElements[ id ];
-					
-					if( element )
-					{
-						element.classList.add( 'owned' );
-					}
-					
-					if( scopeSubID == id )
-					{
-						packageScope = document.querySelector( '.panel-ownership' );
-						
-						if( packageScope )
-						{
-							packageScope.hidden = false;
-						}
-					}
-				}
-				
-				// Packages in cart
-				for( i = 0; i < data.rgPackagesInCart.length; i++ )
-				{
-					element = mapPackagesToElements[ data.rgPackagesInCart[ i ] ];
-					
-					if( element )
-					{
-						element.classList.add( 'cart' );
-					}
-				}
-			}
-			
-			// Show as owned if one of the packages is owned
-			if( appScope )
-			{
-				appScope = document.querySelector( '.panel-ownership' );
-				
-				if( appScope && appScope.hidden && document.querySelector( '#subs .package.owned' ) )
-				{
-					appScope.hidden = false;
-				}
-			}
-			
-			if( document.querySelector( '.scope-sales' ) )
-			{
-				if( items[ 'steamdb-hide-not-interested' ] )
-				{
-					for( i = 0; i < data.rgIgnoredApps.length; i++ )
-					{
-						element = mapAppsToElements[ data.rgIgnoredApps[ i ] ];
-						
-						if( element )
-						{
-							element.parentNode.removeChild( element );
-						}
-					}
-					
-					for( i = 0; i < data.rgIgnoredPackages.length; i++ )
-					{
-						element = mapPackagesToElements[ data.rgIgnoredPackages[ i ] ];
-						
-						if( element )
-						{
-							element.parentNode.removeChild( element );
-						}
-					}
-				}
-				
-				if( document.querySelector( '#js-hide-owned-games.checked' ) )
-				{
-					var elements = document.querySelectorAll( '.appimg.owned' );
-					
-					for( i = 0; i < elements.length; i++ )
-					{
-						elements[ i ].hidden = true;
-					}
-				}
-			}
-		};
+		} );
+	};
+	
+	var OnDataLoaded = function( data )
+	{
+		element = document.createElement( 'script' );
+		element.id = 'steamdb_userdata_loaded';
+		element.type = 'text/javascript';
+		element.src = GetLocalResource( 'scripts/steamdb/loader.js' );
+		element.dataset.data = JSON.stringify( data );
+		element.dataset.hideNotInterested = !!items[ 'steamdb-hide-not-interested' ];
 		
-		var cache = localStorage.getItem( 'userdata.cached' );
+		document.head.appendChild( element );
+	};
+	
+	var cache = localStorage.getItem( 'userdata.cached' );
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
+	xhr.responseType = 'json';
+	
+	xhr.onerror = function()
+	{
+		TryToUseCachedData( );
 		
-		var xhr = new XMLHttpRequest();
-		xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
-		xhr.responseType = 'json';
+		localStorage.setItem( 'userdata.cached', Date.now() );
 		
-		xhr.onerror = function()
+		if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
+		{
+			return;
+		}
+		
+		var id = document.createElement( 'div' );
+		id.className = 'extension-warning';
+		
+		AddCloseButton( id );
+		
+		var icon = document.createElement( 'span' );
+		icon.className = 'mega-octicon octicon-squirrel';
+		
+		id.appendChild( icon );
+		id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
+		
+		document.body.appendChild( id );
+	};
+	
+	xhr.onreadystatechange = function()
+	{
+		if( xhr.readyState !== 4 || xhr.status !== 200 )
+		{
+			return;
+		}
+		
+		if( !xhr.response.rgOwnedPackages.length )
 		{
 			TryToUseCachedData( );
 			
@@ -239,64 +117,31 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 				return;
 			}
 			
-			var id = document.createElement( 'div' );
+			var id = document.createElement( 'a' );
 			id.className = 'extension-warning';
+			id.href = 'https://store.steampowered.com/login/';
 			
 			AddCloseButton( id );
 			
 			var icon = document.createElement( 'span' );
-			icon.className = 'mega-octicon octicon-squirrel';
+			icon.className = 'mega-octicon octicon-hubot';
 			
 			id.appendChild( icon );
-			id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
+			id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, owned game highlighting will not work.' ) );
 			
 			document.body.appendChild( id );
-		};
+			
+			return;
+		}
 		
-		xhr.onreadystatechange = function()
+		OnDataLoaded( xhr.response );
+		
+		// TODO: This shouldn't be executed if browser cache was hit
+		if( typeof chrome !== 'undefined' )
 		{
-			if( xhr.readyState !== 4 || xhr.status !== 200 )
-			{
-				return;
-			}
-			
-			if( !xhr.response.rgOwnedPackages.length )
-			{
-				TryToUseCachedData( );
-				
-				localStorage.setItem( 'userdata.cached', Date.now() );
-				
-				if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
-				{
-					return;
-				}
-				
-				var id = document.createElement( 'a' );
-				id.className = 'extension-warning';
-				id.href = 'https://store.steampowered.com/login/';
-				
-				AddCloseButton( id );
-				
-				var icon = document.createElement( 'span' );
-				icon.className = 'mega-octicon octicon-hubot';
-				
-				id.appendChild( icon );
-				id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, owned game highlighting will not work.' ) );
-				
-				document.body.appendChild( id );
-				
-				return;
-			}
-			
-			OnDataLoaded( xhr.response );
-			
-			// TODO: This shouldn't be executed if browser cache was hit
-			if( typeof chrome !== 'undefined' )
-			{
-				chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
-			}
-		};
-		
-		xhr.send();
-	}
+			chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
+		}
+	};
+	
+	xhr.send();
 } );
