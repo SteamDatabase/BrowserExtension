@@ -177,16 +177,6 @@
 				"scripts/store/agecheck.js"
 			]
 		},
-		{
-			"matches":
-			[
-				"*://store.steampowered.com/cart*"
-			],
-			"js":
-			[
-				"scripts/store/cart.js"
-			]
-		},
 		
 		
 		
