@@ -110,6 +110,17 @@
 		{
 			"matches":
 			[
+				"https://store.steampowered.com/account/registerkey*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/registerkey.js"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://store.steampowered.com/sub/*"
 			],
 			"js":
