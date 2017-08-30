@@ -99,7 +99,7 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/account*"
+				"https://store.steampowered.com/account/licenses*"
 			],
 			"js":
 			[
