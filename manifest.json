@@ -46,6 +46,12 @@
 			[
 				"https://steamdb.info/*"
 			],
+			"exclude_matches":
+			[
+				"https://steamdb.info/api/*",
+				"https://steamdb.info/static/*",
+				"https://steamdb.info/embed/*"
+			],
 			"js":
 			[
 				"scripts/common.js",

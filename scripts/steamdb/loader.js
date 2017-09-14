@@ -1,6 +1,11 @@
-( function( callbacks )
+( function( SteamDB )
 {
 	'use strict';
+	
+	if( !SteamDB || !'ExtensionUserdataLoaded' in SteamDB )
+	{
+		return;
+	}
 	
 	var element = document.getElementById( 'steamdb_userdata_loaded' );
 	var data = JSON.parse( element.dataset.data );
@@ -8,10 +13,10 @@
 	
 	document.head.removeChild( element );
 	
-	for( var i = 0; i < callbacks.length; i++ )
+	for( var i = 0; i < SteamDB.ExtensionUserdataLoaded.length; i++ )
 	{
-		callbacks[ i ]( data, {
+		SteamDB.ExtensionUserdataLoaded[ i ]( data, {
 			hideNotInterested: hideNotInterested
 		} );
 	}
-}( window.SteamDB.ExtensionUserdataLoaded ) );
+}( window.SteamDB ) );
