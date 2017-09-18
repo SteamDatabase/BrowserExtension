@@ -2,7 +2,7 @@
 {
 	'use strict';
 	
-	if( !SteamDB || !'ExtensionUserdataLoaded' in SteamDB )
+	if( !SteamDB || !( 'ExtensionUserdataLoaded' in SteamDB ) )
 	{
 		return;
 	}
