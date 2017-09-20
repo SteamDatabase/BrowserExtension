@@ -53,6 +53,15 @@
 	margin-bottom: 0;
 }
 
+.glance_ctn .release_date + .steamdb_last_update {
+	margin-top: -13px;
+	padding-bottom: 13px;
+}
+
+.steamdb_last_update a {
+	display: block;
+}
+
 /**
  * Fix for very long game names not overflowing correctly
  */

@@ -121,10 +121,11 @@ else
 				if( xhr.response.data.LastDepotUpdate )
 				{
 					container = document.createElement( 'div' );
-					container.className = 'steamdb_last_update';
+					container.className = 'dev_row steamdb_last_update';
 					container.title = 'As seen by Steam Database';
 					
 					link = document.createElement( 'a' );
+					link.className = 'date';
 					
 					if( xhr.response.data.WarnOldUpdate )
 					{
@@ -134,14 +135,18 @@ else
 					link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/history/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 					link.textContent = xhr.response.data.LastDepotUpdate;
 					
-					container.appendChild( document.createTextNode( 'Last Depots Update: ' ) );
+					var subtitle = document.createElement( 'div' );
+					subtitle.className = 'subtitle column';
+					subtitle.textContent = 'Depots Update:';
+					
+					container.appendChild( subtitle );
 					container.appendChild( link );
 					
 					element = document.querySelector( '.release_date' );
 					
 					if( element )
 					{
-						element.appendChild( container );
+						element.parentNode.insertBefore( container, element.nextSibling );
 					}
 				}
 			};
