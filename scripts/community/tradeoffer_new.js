@@ -1,6 +1,6 @@
 'use strict';
 
-var item = window.location.search.match( /[\?&]for_item=([0-9]+)_([0-9]+)_([0-9]+)/ );
+var item = window.location.search.match( /[?&]for_item=([0-9]+)_([0-9]+)_([0-9]+)/ );
 
 if( item !== null )
 {
