@@ -303,8 +303,18 @@ else
 		subtitle.textContent = 'SteamDB Rating:';
 		
 		const summary = document.createElement( 'div' );
-		summary.className = 'summary column game_review_summary' + ( score > 0.74 ? ' positive' : ( score > 0.49 ? ' mixed' : '' ) );
-		summary.textContent = ( score * 100 ).toFixed( 2 ) + '%'; 
+		summary.className = 'summary column game_review_summary';
+		
+		if( score > 0.74 )
+		{
+			summary.className += ' positive';
+		}
+		else if( score > 0.49 )
+		{
+			summary.className += ' mixed';
+		}
+		
+		summary.textContent = ( score * 100 ).toFixed( 2 ) + '%';
 		
 		container.appendChild( subtitle );
 		container.appendChild( summary );
