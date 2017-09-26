@@ -303,19 +303,22 @@ else
 		subtitle.textContent = 'SteamDB Rating:';
 		
 		const summary = document.createElement( 'div' );
-		summary.className = 'summary column game_review_summary';
+		const link = document.createElement( 'a' );
+		link.className = 'summary column game_review_summary';
+		link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		
 		if( score > 0.74 )
 		{
-			summary.className += ' positive';
+			link.className += ' positive';
 		}
 		else if( score > 0.49 )
 		{
-			summary.className += ' mixed';
+			link.className += ' mixed';
 		}
 		
-		summary.textContent = ( score * 100 ).toFixed( 2 ) + '%';
+		link.textContent = ( score * 100 ).toFixed( 2 ) + '%';
 		
+		summary.appendChild( link );
 		container.appendChild( subtitle );
 		container.appendChild( summary );
 		
