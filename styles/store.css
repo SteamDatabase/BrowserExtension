@@ -68,3 +68,10 @@
 .apphub_AppName {
 	word-wrap: break-word;
 }
+
+/**
+ * Fix date not fitting after we insert subid links
+ */
+.account_table th {
+	min-width: 100px;
+}
