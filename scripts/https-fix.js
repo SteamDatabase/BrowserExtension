@@ -6,7 +6,7 @@
 	
 	window.GetDefaultCommunityAJAXParams = function( path, method )
 	{
-		var rgParams = originalGetDefaultCommunityAJAXParams( path, method );
+		var rgParams = originalGetDefaultCommunityAJAXParams.apply( this, arguments );
 		
 		// Force https
 		rgParams.url = rgParams.url.replace( /^http:/, 'https:' );
@@ -29,7 +29,7 @@
 	
 	window.RecordAJAXPageView = function RecordAJAXPageView( url )
 	{
-		originalRecordAJAXPageView( url );
+		originalRecordAJAXPageView.apply( this, arguments );
 		
 		// Fix links in ajax loaded content
 		var i, elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' );

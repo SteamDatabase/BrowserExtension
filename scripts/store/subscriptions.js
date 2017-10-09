@@ -21,6 +21,6 @@
 			// Don't break website functionality if something fails above
 		}
 		
-		originalDropdownSelectOption( dropdownName, subId, inCart );
+		originalDropdownSelectOption.apply( this, arguments );
 	};
 }() );
