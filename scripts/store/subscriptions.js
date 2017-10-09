@@ -6,7 +6,7 @@
 	    homepage = document.getElementById( 'steamdb_subscriptions_hook' ).dataset.homepage,
 	    originalDropdownSelectOption = window.dropdownSelectOption;
 	
-	window.dropdownSelectOption = function( dropdownName, subId, inCart )
+	window.dropdownSelectOption = function( dropdownName, subId )
 	{
 		try
 		{

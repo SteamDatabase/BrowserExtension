@@ -4,7 +4,7 @@
 	
 	var originalGetDefaultCommunityAJAXParams = window.GetDefaultCommunityAJAXParams;
 	
-	window.GetDefaultCommunityAJAXParams = function( path, method )
+	window.GetDefaultCommunityAJAXParams = function( )
 	{
 		var rgParams = originalGetDefaultCommunityAJAXParams.apply( this, arguments );
 		
@@ -27,7 +27,7 @@
 	
 	var originalRecordAJAXPageView = window.RecordAJAXPageView;
 	
-	window.RecordAJAXPageView = function RecordAJAXPageView( url )
+	window.RecordAJAXPageView = function RecordAJAXPageView( )
 	{
 		originalRecordAJAXPageView.apply( this, arguments );
 		
