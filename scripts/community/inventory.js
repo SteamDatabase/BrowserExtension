@@ -203,7 +203,7 @@
 		}
 	};
 	
-	window.PopulateActions = function( elActions, rgActions, item, owner )
+	window.PopulateActions = function( prefix, elActions, rgActions, item, owner )
 	{
 		var foundState = FoundState.None;
 		
@@ -412,7 +412,7 @@
 			// Don't break website functionality if something fails above
 		}
 		
-		originalPopulateActions( elActions, rgActions, item, owner );
+		originalPopulateActions( prefix, elActions, rgActions, item, owner );
 		
 		// We want our links to be open in new tab
 		if( foundState === FoundState.Added )
