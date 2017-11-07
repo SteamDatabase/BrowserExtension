@@ -1,8 +1,8 @@
-.steamdb_link {
+a.steamdb_link {
 	color: #898A8C;
 }
 
-.steamdb_link:hover {
+a.steamdb_link:hover {
 	text-decoration: underline;
 }
 
