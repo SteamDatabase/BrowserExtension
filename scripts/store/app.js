@@ -13,7 +13,7 @@ if( container )
 }
 else
 {
-	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true, 'online-stats': true }, function( items )
+	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true, 'online-stats': true, 'steamdb-rating': true }, function( items )
 	{
 		var link, element, image, container, injectTooltipFix = false;
 		
@@ -283,51 +283,55 @@ else
 			
 			document.head.appendChild( element );
 		}
+		
+		if( items[ 'steamdb-rating' ] )
+		{
+			const positiveVoteText = document.querySelector( 'label[for="review_type_positive"] .user_reviews_count' );
+			const negativeVoteText = document.querySelector( 'label[for="review_type_negative"] .user_reviews_count' );
+			
+			if( positiveVoteText && negativeVoteText )
+			{
+				const positiveVotes = parseInt( positiveVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
+				const totalVotes = positiveVotes + parseInt( negativeVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
+				const average = positiveVotes / totalVotes;
+				const score = average - ( average - 0.5 ) * Math.pow( 2, -Math.log10( totalVotes + 1 ) );
+				
+				const container = document.createElement( 'div' );
+				container.className = 'user_reviews_summary_row';
+				
+				const subtitle = document.createElement( 'div' );
+				subtitle.className = 'subtitle column';
+				subtitle.textContent = 'SteamDB Rating:';
+				
+				const summary = document.createElement( 'div' );
+				const link = document.createElement( 'a' );
+				link.className = 'summary column game_review_summary';
+				link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				
+				if( score > 0.74 )
+				{
+					link.className += ' positive';
+				}
+				else if( score > 0.49 )
+				{
+					link.className += ' mixed';
+				}
+				
+				link.textContent = ( score * 100 ).toFixed( 2 ) + '%';
+				
+				summary.appendChild( link );
+				container.appendChild( subtitle );
+				container.appendChild( summary );
+				
+				let element = document.querySelectorAll( '.user_reviews_summary_row' );
+				element = element[ element.length - 1 ];
+				
+				if( element )
+				{
+					element.parentNode.insertBefore( container, element.nextSibling );
+				}
+			}
+		}
+		
 	} );
-	
-	const positiveVoteText = document.querySelector( 'label[for="review_type_positive"] .user_reviews_count' );
-	const negativeVoteText = document.querySelector( 'label[for="review_type_negative"] .user_reviews_count' );
-	
-	if( positiveVoteText && negativeVoteText )
-	{
-		const positiveVotes = parseInt( positiveVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
-		const totalVotes = positiveVotes + parseInt( negativeVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
-		const average = positiveVotes / totalVotes;
-		const score = average - ( average - 0.5 ) * Math.pow( 2, -Math.log10( totalVotes + 1 ) );
-		
-		const container = document.createElement( 'div' );
-		container.className = 'user_reviews_summary_row';
-		
-		const subtitle = document.createElement( 'div' );
-		subtitle.className = 'subtitle column';
-		subtitle.textContent = 'SteamDB Rating:';
-		
-		const summary = document.createElement( 'div' );
-		const link = document.createElement( 'a' );
-		link.className = 'summary column game_review_summary';
-		link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-		
-		if( score > 0.74 )
-		{
-			link.className += ' positive';
-		}
-		else if( score > 0.49 )
-		{
-			link.className += ' mixed';
-		}
-		
-		link.textContent = ( score * 100 ).toFixed( 2 ) + '%';
-		
-		summary.appendChild( link );
-		container.appendChild( subtitle );
-		container.appendChild( summary );
-		
-		let element = document.querySelectorAll( '.user_reviews_summary_row' );
-		element = element[ element.length - 1 ];
-		
-		if( element )
-		{
-			element.parentNode.insertBefore( container, element.nextSibling );
-		}
-	}
 }
