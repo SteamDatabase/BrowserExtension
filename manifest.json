@@ -206,8 +206,7 @@
 			"exclude_matches":
 			[
 				"*://steamcommunity.com/login/*",
-				"*://steamcommunity.com/miniprofile/*",
-				"*://steamcommunity.com/actions/*"
+				"*://steamcommunity.com/miniprofile/*"
 			],
 			"js":
 			[
