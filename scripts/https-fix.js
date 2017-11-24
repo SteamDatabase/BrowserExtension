@@ -51,9 +51,12 @@
 	// Hook all XHR requests and fix https
 	const originalXhrOpen = XMLHttpRequest.prototype.open;
 	
-	XMLHttpRequest.prototype.open = function( method, url )
+	XMLHttpRequest.prototype.open = function( )
 	{
-		arguments[ 1 ] = arguments[ 1 ].replace( /^http:/, 'https:' );
+		if( arguments.length > 1 )
+		{
+			arguments[ 1 ] = arguments[ 1 ].replace( /^http:/, 'https:' );
+		}
 		
 		return originalXhrOpen.apply( this, arguments );
 	};
