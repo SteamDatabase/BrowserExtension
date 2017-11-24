@@ -13,7 +13,14 @@ if( container )
 }
 else
 {
-	GetOption( { 'button-app': true, 'button-pcgw': true, 'link-subid': true, 'online-stats': true, 'steamdb-rating': true }, function( items )
+	GetOption( {
+		'button-app': true,
+		'button-pcgw': true,
+		'link-subid': true,
+		'online-stats': true,
+		'steamdb-rating': true,
+		'steamdb-last-update': true,
+	}, function( items )
 	{
 		var link, element, image, container, injectTooltipFix = false;
 		
@@ -118,7 +125,7 @@ else
 				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
 				document.getElementById( 'steamdb_stats_peak_all' ).textContent = FormatNumber( xhr.response.data.MaxPlayers );
 				
-				if( xhr.response.data.LastDepotUpdate )
+				if( items[ 'steamdb-last-update' ] && xhr.response.data.LastDepotUpdate )
 				{
 					container = document.createElement( 'div' );
 					container.className = 'dev_row steamdb_last_update';
