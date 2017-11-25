@@ -253,6 +253,18 @@
 		{
 			"matches":
 			[
+				"*://steamcommunity.com/id/*/stats*",
+				"*://steamcommunity.com/profiles/*/stats*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/community/profile_achievements.js"
+			]
+		},
+		{
+			"matches":
+			[
 				"*://steamcommunity.com/tradeoffer/new*"
 			],
 			"js":
