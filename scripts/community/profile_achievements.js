@@ -12,10 +12,7 @@ if( achievementsContainer )
 	fetch( window.location.href, {
 		headers: headers
 	} )
-	.then( ( response ) =>
-	{
-		return response.text();
-	} )
+	.then( ( response ) => response.text() )
 	.then( ( response ) =>
 	{
 		response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
@@ -34,8 +31,8 @@ if( achievementsContainer )
 		
 		for( const key in response.open )
 		{
-			const achievement = response.open[key];
-			console.log(achievement);
+			const achievement = response.open[ key ];
+			
 			if( !achievement.hidden || achievement.closed )
 			{
 				continue;
