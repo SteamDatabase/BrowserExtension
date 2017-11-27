@@ -70,12 +70,11 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	var cache = localStorage.getItem( 'userdata.cached' );
 	
-	const xhr = fetch( 'https://store.steampowered.com/dynamicstore/userdata/?_=a' + cache, {
-		credentials: 'include',
-		referrer: 'https://store.steampowered.com/',
-	} );
+	var xhr = new XMLHttpRequest();
+	xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
+	xhr.responseType = 'json';
 	
-	xhr.catch( () =>
+	xhr.onerror = function()
 	{
 		TryToUseCachedData( );
 		
@@ -98,19 +97,16 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
 		
 		document.body.appendChild( id );
-	} );
+	};
 	
-	xhr.then( ( response ) =>
+	xhr.onreadystatechange = function()
 	{
-		if( response.status !== 200 )
+		if( xhr.readyState !== 4 || xhr.status !== 200 )
 		{
-			return {};
+			return;
 		}
 		
-		return response.json();
-	} ).then( ( response ) =>
-	{
-		if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
+		if( !xhr.response.rgOwnedPackages.length )
 		{
 			TryToUseCachedData( );
 			
@@ -138,12 +134,14 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			return;
 		}
 		
-		OnDataLoaded( response );
+		OnDataLoaded( xhr.response );
 		
 		// TODO: This shouldn't be executed if browser cache was hit
 		if( typeof chrome !== 'undefined' )
 		{
-			chrome.storage.local.set( { 'userdata.stored': JSON.stringify( response ) } );
+			chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
 		}
-	} );
+	};
+	
+	xhr.send();
 } );
