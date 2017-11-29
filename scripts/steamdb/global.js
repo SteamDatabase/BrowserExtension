@@ -127,7 +127,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			icon.className = 'mega-octicon octicon-hubot';
 			
 			id.appendChild( icon );
-			id.appendChild( document.createTextNode( 'You are not logged in on Steam Store, owned game highlighting will not work.' ) );
+			id.appendChild( document.createTextNode( 'You are not logged in on Steam Store. Make sure third-party cookies for "store.steampowered.com" are enabled.' ) );
 			
 			document.body.appendChild( id );
 			
