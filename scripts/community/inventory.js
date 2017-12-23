@@ -287,7 +287,7 @@
 						var action =
 						{
 							steamdb: true,
-							link: '#steamdb_' + item.description.id,
+							link: '#steamdb_' + item.assetid,
 							name: 'View on Steam Database'
 						};
 						
@@ -304,7 +304,7 @@
 								{
 									giftCache[ item.description.classid ] = xhr.response.packageid;
 									
-									link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.description.id + '"]' );
+									link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.assetid + '"]' );
 									
 									if( link )
 									{
@@ -313,7 +313,7 @@
 									}
 								}
 							};
-							xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.description.id + '/validateunpack', true );
+							xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.assetid + '/validateunpack', true );
 							xhr.responseType = 'json';
 							xhr.send();
 						}
