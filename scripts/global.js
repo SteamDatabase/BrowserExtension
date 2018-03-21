@@ -85,14 +85,6 @@ else
 			element.dataset.homepage = GetHomepage();
 			
 			document.head.appendChild( element );
-			
-			// Fix super(shitty)nav links
-			elements = document.querySelectorAll( '.supernav' );
-			
-			for( i = 0; i < elements.length; i++ )
-			{
-				elements[ i ].dataset.tooltipContent = elements[ i ].dataset.tooltipContent.replace( /http:\/\/steamcommunity\.com/g, 'https://steamcommunity.com' );
-			}
 		}
 	} );
 }

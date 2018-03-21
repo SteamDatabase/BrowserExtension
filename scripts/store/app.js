@@ -22,7 +22,7 @@ else
 		'steamdb-last-update': true,
 	}, function( items )
 	{
-		var link, element, image, container, injectTooltipFix = false;
+		var link, element, image, container;
 		
 		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
 		{
@@ -173,7 +173,7 @@ else
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
-				element.dataset.storeTooltip = 'View on Steam Database';
+				element.dataset.tooltipText = 'View on Steam Database';
 				link.appendChild( element );
 				
 				image = document.createElement( 'img' );
@@ -183,8 +183,6 @@ else
 				element.appendChild( image );
 				
 				container.insertBefore( link, container.firstChild );
-				
-				injectTooltipFix = true;
 			}
 		}
 		
@@ -199,7 +197,7 @@ else
 				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
-				element.dataset.storeTooltip = 'View article on PCGamingWiki';
+				element.dataset.tooltipText = 'View article on PCGamingWiki';
 				link.appendChild( element );
 				
 				image = document.createElement( 'img' );
@@ -212,8 +210,6 @@ else
 				
 				// Best hacks EU
 				container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
-				
-				injectTooltipFix = true;
 			}
 		}
 		
@@ -278,17 +274,6 @@ else
 				
 				document.head.appendChild( element );
 			}
-		}
-		
-		// We need to bind a tooltip, and the only way to do that is to inject a script into the page
-		if( injectTooltipFix )
-		{
-			element = document.createElement( 'script' );
-			element.id = 'steamdb_bind_tooltip';
-			element.type = 'text/javascript';
-			element.appendChild( document.createTextNode( 'BindStoreTooltip( jQuery( ".btn_steamdb > span" ) );' ) );
-			
-			document.head.appendChild( element );
 		}
 		
 		if( items[ 'steamdb-rating' ] )

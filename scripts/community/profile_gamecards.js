@@ -35,7 +35,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	image.src = GetLocalResource( 'icons/white.svg' );
 	
 	span = document.createElement( 'span' );
-	span.dataset.communityTooltip = 'View on Steam Database';
+	span.dataset.tooltipText = 'View on Steam Database';
 	span.appendChild( image );
 	
 	link = document.createElement( 'a' );
@@ -50,12 +50,4 @@ GetOption( { 'button-gamecards': true }, function( items )
 	
 	// Add to the page
 	profileTexture.appendChild( container );
-	
-	// Tooltip hack
-	var element = document.createElement( 'script' );
-	element.id = 'steamdb_bind_tooltip';
-	element.type = 'text/javascript';
-	element.appendChild( document.createTextNode( 'BindCommunityTooltip( $J( ".btn_steamdb > span" ) );' ) );
-	
-	document.head.appendChild( element );
 } );

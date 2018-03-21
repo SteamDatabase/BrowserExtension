@@ -28,7 +28,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			
 			element = document.createElement( 'span' );
-			element.dataset.communityTooltip = 'View on Steam Database';
+			element.dataset.tooltipText = 'View on Steam Database';
 			link.appendChild( element );
 			
 			image = document.createElement( 'img' );
@@ -52,14 +52,6 @@ GetOption( { 'button-gamehub': true }, function( items )
 				
 				element.parentNode.replaceChild( link, element );
 			}
-			
-			// Tooltip hack
-			element = document.createElement( 'script' );
-			element.id = 'steamdb_bind_tooltip';
-			element.type = 'text/javascript';
-			element.appendChild( document.createTextNode( 'BindCommunityTooltip( $J( ".btn_steamdb > span" ) );' ) );
-			
-			document.head.appendChild( element );
 		}
 	}
 	else
