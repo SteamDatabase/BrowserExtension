@@ -48,32 +48,32 @@ else
 		if( items[ 'enhancement-https-fix' ] )
 		{
 			// Don't apply fixes if visiting steamcommunity on http (stuff like broadcasts simply wont work on https)
-			if( location.hostname !== 'steamcommunity.com' || location.protocol !== 'https:' )
+			if( location.protocol !== 'https:' )
 			{
 				return;
 			}
 			
 			// Find all community links starting with http:// and just change them to https://
 			// Scripts already have https:// in them whenever you visit community on https
-			var elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"]' ), i;
+			let elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"], a[href^="http://store.steampowered.com"], link[rel="canonical"]' );
 			
-			for( i = 0; i < elements.length; i++ )
+			for( let i = 0; i < elements.length; i++ )
 			{
 				elements[ i ].href = elements[ i ].href.replace( /^http:/, 'https:' );
 			}
 			
 			// Find all forms
-			elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"]' );
+			elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"], form[action^="http://store.steampowered.com"]' );
 			
-			for( i = 0; i < elements.length; i++ )
+			for( let i = 0; i < elements.length; i++ )
 			{
-				elements[ i ].action = elements[ i ].action.replace( /^http:/, 'https:' );
+				elements[ i ].setAttribute( 'action', elements[ i ].getAttribute( 'action' ).replace( /^http:/, 'https:' ) );
 			}
 			
 			// Iframes
 			elements = document.querySelectorAll( 'iframe[src^="http://steamcommunity.com"]' );
 			
-			for( i = 0; i < elements.length; i++ )
+			for( let i = 0; i < elements.length; i++ )
 			{
 				elements[ i ].src = elements[ i ].src.replace( /^http:/, 'https:' );
 			}
