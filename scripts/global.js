@@ -22,7 +22,7 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 }
 else
 {
-	GetOption( { 'enhancement-hide-install-button': true, 'enhancement-https-fix': false, 'enhancement-no-linkfilter': false }, function( items )
+	GetOption( { 'enhancement-hide-install-button': true, 'enhancement-no-linkfilter': false }, function( items )
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
@@ -43,48 +43,6 @@ else
 			{
 				links[ x ].href = links[ x ].href.replace( /^https:\/\/steamcommunity\.com\/linkfilter\/(?:\?url=)?/, '' );
 			}
-		}
-		
-		if( items[ 'enhancement-https-fix' ] )
-		{
-			// Don't apply fixes if visiting steamcommunity on http (stuff like broadcasts simply wont work on https)
-			if( location.protocol !== 'https:' )
-			{
-				return;
-			}
-			
-			// Find all community links starting with http:// and just change them to https://
-			// Scripts already have https:// in them whenever you visit community on https
-			let elements = document.querySelectorAll( 'a[href^="http://steamcommunity.com"], a[href^="http://store.steampowered.com"], link[rel="canonical"]' );
-			
-			for( let i = 0; i < elements.length; i++ )
-			{
-				elements[ i ].href = elements[ i ].href.replace( /^http:/, 'https:' );
-			}
-			
-			// Find all forms
-			elements = document.querySelectorAll( 'form[action^="http://steamcommunity.com"], form[action^="http://store.steampowered.com"]' );
-			
-			for( let i = 0; i < elements.length; i++ )
-			{
-				elements[ i ].setAttribute( 'action', elements[ i ].getAttribute( 'action' ).replace( /^http:/, 'https:' ) );
-			}
-			
-			// Iframes
-			elements = document.querySelectorAll( 'iframe[src^="http://steamcommunity.com"]' );
-			
-			for( let i = 0; i < elements.length; i++ )
-			{
-				elements[ i ].src = elements[ i ].src.replace( /^http:/, 'https:' );
-			}
-			
-			var element = document.createElement( 'script' );
-			element.id = 'steamdb_https_fix';
-			element.type = 'text/javascript';
-			element.src = GetLocalResource( 'scripts/https-fix.js' );
-			element.dataset.homepage = GetHomepage();
-			
-			document.head.appendChild( element );
 		}
 	} );
 }

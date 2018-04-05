@@ -16,8 +16,7 @@
 	    hasLinksEnabled = document.body.dataset.steamdbLinks === 'true',
 	    hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true',
 	    homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage,
-	    originalPopulateActions = window.PopulateActions,
-	    fixCommunityUrls = !!document.getElementById( 'steamdb_https_fix' );
+	    originalPopulateActions = window.PopulateActions;
 	
 	var hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
 	var originalPopulateMarketActions = window.PopulateMarketActions;
@@ -390,20 +389,6 @@
 					
 					
 					foundState = FoundState.Added;
-				}
-			}
-			
-			// https fix
-			if( fixCommunityUrls && rgActions )
-			{
-				for( i = 0; i < rgActions.length; i++ )
-				{
-					link = rgActions[ i ].link;
-					
-					if( link )
-					{
-						rgActions[ i ].link = link.replace( /^http:\/\/steamcommunity\.com/, 'https://steamcommunity.com' );
-					}
 				}
 			}
 		}
