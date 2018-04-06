@@ -42,4 +42,10 @@
 			element.checked = items[ item ];
 		}
 	} );
+
+	chrome.windows.getCurrent( function( chromeWindow )
+	{
+		var viewportHeight = chromeWindow.height;
+		document.getElementsByTagName( 'body' )[ 0 ].style = 'max-height: ' + viewportHeight * 0.8 + 'px;';
+	} );
 }() );
