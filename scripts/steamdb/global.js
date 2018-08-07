@@ -16,30 +16,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		return;
 	}
 	
-	var AddCloseButton = function( element )
-	{
-		var x = document.createElement( 'span' );
-		x.className = 'octicon octicon-x';
-		
-		var link = document.createElement( 'a' );
-		link.className = 'pull-right tooltipped tooltipped-nw';
-		link.href = '#';
-		link.style.color = '#FFF';
-		link.setAttribute( 'aria-label', 'Do not show this message again' );
-		link.appendChild( x );
-		
-		link.addEventListener( 'click', function( e )
-		{
-			e.preventDefault();
-			
-			this.parentNode.parentNode.removeChild( this.parentNode );
-			
-			localStorage.setItem( 'userdata.warning.hidden', 'true' );
-		} );
-		
-		element.appendChild( link );
-	};
-	
 	var TryToUseCachedData = function( )
 	{
 		if( typeof chrome === 'undefined' )
@@ -80,15 +56,8 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		
 		localStorage.setItem( 'userdata.cached', Date.now() );
 		
-		if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
-		{
-			return;
-		}
-		
 		var id = document.createElement( 'div' );
 		id.className = 'extension-warning';
-		
-		AddCloseButton( id );
 		
 		var icon = document.createElement( 'span' );
 		icon.className = 'mega-octicon octicon-squirrel';
@@ -101,9 +70,14 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	xhr.onreadystatechange = function()
 	{
-		if( xhr.readyState !== 4 || xhr.status !== 200 )
+		if( xhr.readyState !== 4 )
 		{
 			return;
+		}
+		
+		if( xhr.status !== 200 || !xhr.response.rgOwnedPackages )
+		{
+			return xhr.onerror();
 		}
 		
 		if( !xhr.response.rgOwnedPackages.length )
@@ -112,16 +86,9 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			
 			localStorage.setItem( 'userdata.cached', Date.now() );
 			
-			if( localStorage.getItem( 'userdata.warning.hidden' ) === 'true' )
-			{
-				return;
-			}
-			
 			var id = document.createElement( 'a' );
 			id.className = 'extension-warning';
 			id.href = 'https://store.steampowered.com/login/';
-			
-			AddCloseButton( id );
 			
 			var icon = document.createElement( 'span' );
 			icon.className = 'mega-octicon octicon-hubot';
