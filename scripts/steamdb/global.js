@@ -77,7 +77,8 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		
 		if( xhr.status !== 200 || !xhr.response.rgOwnedPackages )
 		{
-			return xhr.onerror();
+			xhr.onerror();
+			return;
 		}
 		
 		if( !xhr.response.rgOwnedPackages.length )
