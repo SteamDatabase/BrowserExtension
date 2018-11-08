@@ -36,6 +36,7 @@
 		
 		"scripts/steamdb/loader.js",
 		"scripts/community/inventory.js",
+		"scripts/store/registerkey_injected.js",
 		"scripts/store/subscriptions.js"
 	],
 	"content_scripts":
@@ -113,6 +114,7 @@
 			]
 		},
 		{
+			"run_at": "document_end",
 			"matches":
 			[
 				"https://store.steampowered.com/account/registerkey*"
