@@ -1,23 +1,31 @@
 .steamdb_sold > img {
-	opacity: 0.2;
+	filter: grayscale(1) opacity(0.5);
 }
 
+.steamdb_confirm_listed:before,
 .steamdb_confirm_mobile:before,
 .steamdb_confirm_email:before {
 	display: block;
+	padding: 4px 0;
+	background: #000;
+	bottom: calc(50% - 18px);
 	position: absolute;
-	content: "CONFIRM ON MOBILE";
+	content: "CONFIRM\aON MOBILE";
 	color: #FFF;
 	text-align: center;
-	font-size: 16px;
-	font-family: Motiva Sans Light, Arial, Helvetica, sans-serif;
-	padding-top: 30px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+	font-family: "Motiva Sans", sans-serif;
+	z-index: 1;
+	white-space: pre;
+	width: 100%;
 }
 
 .steamdb_confirm_email:before {
-	content: "CONFIRM BY EMAIL";
+	content: "CONFIRM\aBY EMAIL";
 }
 
 .steamdb_confirm_listed:before {
-	content: "LISTED ON MARKET";
+	content: "LISTED\aON MARKET";
 }
