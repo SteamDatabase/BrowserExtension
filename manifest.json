@@ -66,16 +66,16 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"*://store.steampowered.com/*"
+				"https://store.steampowered.com/*"
 			],
 			"exclude_matches":
 			[
-				"*://store.steampowered.com/login/*",
-				"*://store.steampowered.com/join/*",
-				"*://store.steampowered.com/api/*",
-				"*://store.steampowered.com/dynamicstore/*",
-				"*://store.steampowered.com/checkout*",
-				"*://store.steampowered.com/widget/*"
+				"https://store.steampowered.com/login/*",
+				"https://store.steampowered.com/join/*",
+				"https://store.steampowered.com/api/*",
+				"https://store.steampowered.com/dynamicstore/*",
+				"https://store.steampowered.com/checkout*",
+				"https://store.steampowered.com/widget/*"
 			],
 			"js":
 			[
@@ -91,7 +91,7 @@
 		{
 			"matches":
 			[
-				"*://store.steampowered.com/app/*"
+				"https://store.steampowered.com/app/*"
 			],
 			"js":
 			[
@@ -133,7 +133,7 @@
 		{
 			"matches":
 			[
-				"*://store.steampowered.com/sub/*"
+				"https://store.steampowered.com/sub/*"
 			],
 			"js":
 			[
@@ -148,7 +148,7 @@
 		{
 			"matches":
 			[
-				"*://store.steampowered.com/bundle/*"
+				"https://store.steampowered.com/bundle/*"
 			],
 			"js":
 			[
@@ -160,7 +160,7 @@
 			"all_frames": true,
 			"matches":
 			[
-				"*://store.steampowered.com/widget/*"
+				"https://store.steampowered.com/widget/*"
 			],
 			"js":
 			[
@@ -175,7 +175,7 @@
 		{
 			"matches":
 			[
-				"*://store.steampowered.com/video/*"
+				"https://store.steampowered.com/video/*"
 			],
 			"js":
 			[
@@ -191,8 +191,8 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"*://store.steampowered.com/app/*/agecheck",
-				"*://store.steampowered.com/agecheck/*"
+				"https://store.steampowered.com/app/*/agecheck",
+				"https://store.steampowered.com/agecheck/*"
 			],
 			"js":
 			[
@@ -203,7 +203,7 @@
 		{
 			"matches":
 			[
-				"*://store.steampowered.com/explore*"
+				"https://store.steampowered.com/explore*"
 			],
 			"js":
 			[
@@ -218,12 +218,12 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"*://steamcommunity.com/*"
+				"https://steamcommunity.com/*"
 			],
 			"exclude_matches":
 			[
-				"*://steamcommunity.com/login/*",
-				"*://steamcommunity.com/miniprofile/*"
+				"https://steamcommunity.com/login/*",
+				"https://steamcommunity.com/miniprofile/*"
 			],
 			"js":
 			[
@@ -238,8 +238,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*",
-				"*://steamcommunity.com/profiles/*"
+				"https://steamcommunity.com/id/*",
+				"https://steamcommunity.com/profiles/*"
 			],
 			"js":
 			[
@@ -254,8 +254,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/inventory*",
-				"*://steamcommunity.com/profiles/*/inventory*"
+				"https://steamcommunity.com/id/*/inventory*",
+				"https://steamcommunity.com/profiles/*/inventory*"
 			],
 			"js":
 			[
@@ -270,8 +270,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/stats*",
-				"*://steamcommunity.com/profiles/*/stats*"
+				"https://steamcommunity.com/id/*/stats*",
+				"https://steamcommunity.com/profiles/*/stats*"
 			],
 			"js":
 			[
@@ -282,7 +282,7 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/tradeoffer/new*"
+				"https://steamcommunity.com/tradeoffer/new*"
 			],
 			"js":
 			[
@@ -293,7 +293,7 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/tradeoffer/*"
+				"https://steamcommunity.com/tradeoffer/*"
 			],
 			"js":
 			[
@@ -304,8 +304,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/games*",
-				"*://steamcommunity.com/profiles/*/games*"
+				"https://steamcommunity.com/id/*/games*",
+				"https://steamcommunity.com/profiles/*/games*"
 			],
 			"js":
 			[
@@ -316,8 +316,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/recommended/*",
-				"*://steamcommunity.com/profiles/*/recommended/*"
+				"https://steamcommunity.com/id/*/recommended/*",
+				"https://steamcommunity.com/profiles/*/recommended/*"
 			],
 			"js":
 			[
@@ -332,8 +332,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/badges*",
-				"*://steamcommunity.com/profiles/*/badges*"
+				"https://steamcommunity.com/id/*/badges*",
+				"https://steamcommunity.com/profiles/*/badges*"
 			],
 			"js":
 			[
@@ -348,8 +348,8 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/gamecards/*",
-				"*://steamcommunity.com/profiles/*/gamecards/*"
+				"https://steamcommunity.com/id/*/gamecards/*",
+				"https://steamcommunity.com/profiles/*/gamecards/*"
 			],
 			"js":
 			[
@@ -364,11 +364,11 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/app/*",
-				"*://steamcommunity.com/games/*",
-				"*://steamcommunity.com/sharedfiles/filedetails*",
-				"*://steamcommunity.com/workshop/browse*",
-				"*://steamcommunity.com/workshop/discussions*"
+				"https://steamcommunity.com/app/*",
+				"https://steamcommunity.com/games/*",
+				"https://steamcommunity.com/sharedfiles/filedetails*",
+				"https://steamcommunity.com/workshop/browse*",
+				"https://steamcommunity.com/workshop/discussions*"
 			],
 			"js":
 			[
@@ -384,9 +384,9 @@
 			"all_frames": true,
 			"matches":
 			[
-				"*://steamcommunity.com/market/*",
-				"*://steamcommunity.com/id/*/inventory*",
-				"*://steamcommunity.com/profiles/*/inventory*"
+				"https://steamcommunity.com/market/*",
+				"https://steamcommunity.com/id/*/inventory*",
+				"https://steamcommunity.com/profiles/*/inventory*"
 			],
 			"js":
 			[
