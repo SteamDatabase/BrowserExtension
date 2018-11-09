@@ -304,19 +304,6 @@
 		{
 			"matches":
 			[
-				"*://steamcommunity.com/id/*/wishlist*",
-				"*://steamcommunity.com/profiles/*/wishlist*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/community/profile_games.js",
-				"scripts/community/profile_wishlist.js"
-			]
-		},
-		{
-			"matches":
-			[
 				"*://steamcommunity.com/id/*/recommended/*",
 				"*://steamcommunity.com/profiles/*/recommended/*"
 			],
