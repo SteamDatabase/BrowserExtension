@@ -5,6 +5,7 @@ var container = document.getElementById( 'error_box' );
 if( container )
 {
 	var link = document.createElement( 'a' );
+	link.rel = 'noopener';
 	link.className = 'steamdb_error_link';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
@@ -34,6 +35,7 @@ else
 			block.appendChild( blockInner );
 			
 			link = document.createElement( 'a' );
+			link.rel = 'noopener';
 			link.title = 'View more information and graphs on SteamDB';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			
@@ -132,6 +134,7 @@ else
 					container.title = 'As seen by Steam Database';
 					
 					link = document.createElement( 'a' );
+					link.rel = 'noopener';
 					link.className = 'date';
 					
 					if( xhr.response.data.WarnOldUpdate )
@@ -169,6 +172,7 @@ else
 			if( container )
 			{
 				link = document.createElement( 'a' );
+				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
@@ -193,6 +197,7 @@ else
 			if( container )
 			{
 				link = document.createElement( 'a' );
+				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
@@ -241,6 +246,7 @@ else
 						subidElement.appendChild( document.createTextNode( '(nothing selected)' ) );
 						
 						link = document.createElement( 'a' );
+						link.rel = 'noopener';
 						link.className = 'steamdb_link' + ( element.querySelector( '.game_area_purchase_game_dropdown_left_panel' ) ? '' : ' steamdb_float_left' );
 						link.href = '#';
 						link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
@@ -254,6 +260,7 @@ else
 					subidElement.appendChild( document.createTextNode( '(' + subid + ')' ) );
 					
 					link = document.createElement( 'a' );
+					link.rel = 'noopener';
 					link.className = 'steamdb_link steamdb_float_left';
 					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 					link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
@@ -297,6 +304,7 @@ else
 				
 				const summary = document.createElement( 'div' );
 				const link = document.createElement( 'a' );
+				link.rel = 'noopener';
 				link.className = 'summary column game_review_summary';
 				link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				

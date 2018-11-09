@@ -4,6 +4,7 @@
 if( document.title === 'Sorry!' || document.title === 'Error' )
 {
 	var link = document.createElement( 'a' );
+	link.rel = 'noopener';
 	link.href = 'https://steamstat.us';
 	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
 	

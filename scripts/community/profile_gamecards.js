@@ -23,6 +23,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	span.appendChild( document.createTextNode( 'Store Page' ) );
 	
 	var link = document.createElement( 'a' );
+	link.rel = 'noopener';
 	link.className = 'btnv6_blue_hoverfade btn_medium';
 	link.href = '//store.steampowered.com/app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( span );
@@ -39,6 +40,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	span.appendChild( image );
 	
 	link = document.createElement( 'a' );
+	link.rel = 'noopener';
 	link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( span );

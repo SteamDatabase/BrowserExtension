@@ -88,6 +88,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			localStorage.setItem( 'userdata.cached', Date.now() );
 			
 			var id = document.createElement( 'a' );
+			id.rel = 'noopener';
 			id.className = 'extension-warning';
 			id.href = 'https://store.steampowered.com/login/';
 			

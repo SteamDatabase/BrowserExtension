@@ -11,6 +11,7 @@ if( container )
 	
 	// link
 	var link = document.createElement( 'a' );
+	link.rel = 'noopener';
 	link.className = 'general_btn panel_btn';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( image );

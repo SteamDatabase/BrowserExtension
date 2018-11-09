@@ -22,6 +22,7 @@ GetOption( { 'link-accountpage': true }, function( items )
 			element = licenses[ i ];
 			
 			link = document.createElement( 'a' );
+			link.rel = 'noopener';
 			
 			removeElement = element.querySelector( '.free_license_remove_link a' );
 			

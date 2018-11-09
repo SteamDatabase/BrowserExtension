@@ -24,6 +24,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 		if( GetCurrentAppID() > -1 )
 		{
 			link = document.createElement( 'a' );
+			link.rel = 'noopener';
 			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			
@@ -45,6 +46,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			if( element )
 			{
 				link = document.createElement( 'a' );
+				link.rel = 'noopener';
 				link.className = 'apphub_NumInApp';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.title = 'View player graphs on SteamDB';
@@ -83,6 +85,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			
 			// link
 			link = document.createElement( 'a' );
+			link.rel = 'noopener';
 			link.className = 'linkActionMinor';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			link.appendChild( document.createTextNode( 'View on Steam Database' ) );

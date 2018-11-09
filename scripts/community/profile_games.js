@@ -21,6 +21,7 @@ for( i = 0; i < dropdowns.length; i++ )
 		text.appendChild( document.createTextNode( 'View on Steam Database' ) );
 		
 		link = document.createElement( 'a' );
+		link.rel = 'noopener';
 		link.className = 'popup_menu_item2 tight';
 		link.href = GetHomepage() + 'app/' + appID + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		link.appendChild( text );

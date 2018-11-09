@@ -15,6 +15,7 @@ GetOption( { 'button-sub': true }, function( items )
 		element.appendChild( document.createTextNode( 'View on Steam Database' ) );
 		
 		var link = document.createElement( 'a' );
+		link.rel = 'noopener';
 		link.className = 'action_btn';
 		link.href = GetHomepage() + 'sub/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		link.appendChild( element );
