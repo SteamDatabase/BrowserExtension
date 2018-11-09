@@ -9,7 +9,7 @@
 	{
 		originalOnRegisterProductKeyFailure.apply( this, arguments );
 
-		if( receipt && receipt.line_items )
+		if( receipt && receipt.line_items && receipt.line_items.length > 0 )
 		{
 			document.getElementById( 'error_display' ).innerHTML += '<br><br>' + FormatLineItems( receipt.line_items );
 		}
