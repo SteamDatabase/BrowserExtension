@@ -62,6 +62,17 @@ a.steamdb_link:hover {
 	display: block;
 }
 
+.steamdb_registerkey_lineitem {
+	margin-top: 20px;
+}
+
+.steamdb_registerkey_lineitem img {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: text-top;
+}
+
 /**
  * Fix for very long game names not overflowing correctly
  */

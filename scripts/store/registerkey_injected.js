@@ -11,30 +11,55 @@
 
 		if( receipt && receipt.line_items && receipt.line_items.length > 0 )
 		{
-			document.getElementById( 'error_display' ).innerHTML += '<br><br>' + FormatLineItems( receipt.line_items );
+			document.getElementById( 'error_display' ).appendChild( FormatLineItems( receipt.line_items ) );
 		}
 	};
 
 	window.UpdateReceiptForm = function SteamDB_UpdateReceiptForm( result )
 	{
-		document.getElementById( 'registerkey_productlist' ).innerHTML = FormatLineItems( result.purchase_receipt_info.line_items );
+		const list = document.getElementById( 'registerkey_productlist' );
+
+		while( list.firstChild )
+		{
+			list.firstChild.remove();
+		}
+
+		list.appendChild( FormatLineItems( result.purchase_receipt_info.line_items ) );
 	};
 
 	function FormatLineItems( line_items )
 	{
-		let strLines = '';
+		const fragment = document.createElement( 'div' );
+		fragment.className = 'steamdb_registerkey_lineitem';
+
+		const image = document.createElement( 'img' );
+		image.src = script.dataset.icon;
 
 		for( const item of line_items )
 		{
-			strLines +=
-				'<div class="registerkey_lineitem">' +
-				'<img src="' + script.dataset.icon + '" alt="SteamDB" title="View on SteamDB" width="16" height="16" style="vertical-align:middle">' +
-				'<a href="' + script.dataset.homepage + 'sub/' + item.packageid + '/?utm_source=Steam&amp;utm_medium=Steam&amp;utm_campaign=SteamDB%20Extension" target="_blank">' +
-				'SteamDB</a> - <a href="steam://subscriptioninstall/' + item.packageid + '">Install</a> - ' +
-				item.line_item_description.replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ) +
-				'</div>';
+			const lineitem = document.createElement( 'div' );
+			lineitem.className = 'registerkey_lineitem';
+			lineitem.append( image );
+
+			let link = document.createElement( 'a' );
+			link.href = script.dataset.homepage + 'sub/' + item.packageid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			link.rel = 'noopener';
+			link.target = '_blank';
+			link.appendChild( document.createTextNode( 'SteamDB' ) );
+
+			lineitem.append( link );
+			lineitem.appendChild( document.createTextNode( ' - ' ) );
+
+			link = document.createElement( 'a' );
+			link.href = 'steam://subscriptioninstall/' + item.packageid;
+			link.appendChild( document.createTextNode( 'Install' ) );
+
+			lineitem.append( link );
+			lineitem.appendChild( document.createTextNode( ' - ' + item.line_item_description ) );
+
+			fragment.appendChild( lineitem );
 		}
 
-		return strLines;
+		return fragment;
 	}
 }() );

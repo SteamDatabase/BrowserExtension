@@ -123,6 +123,10 @@
 			[
 				"scripts/common.js",
 				"scripts/store/registerkey.js"
+			],
+			"css":
+			[
+				"styles/store.css"
 			]
 		},
 		{
