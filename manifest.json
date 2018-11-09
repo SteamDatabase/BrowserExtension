@@ -36,6 +36,7 @@
 		
 		"scripts/steamdb/loader.js",
 		"scripts/community/inventory.js",
+		"scripts/store/explore_injected.js",
 		"scripts/store/registerkey_injected.js",
 		"scripts/store/subscriptions.js"
 	],
@@ -197,6 +198,17 @@
 			[
 				"scripts/common.js",
 				"scripts/store/agecheck.js"
+			]
+		},
+		{
+			"matches":
+			[
+				"*://store.steampowered.com/explore*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/explore.js"
 			]
 		},
 		
