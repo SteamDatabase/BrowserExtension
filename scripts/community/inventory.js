@@ -189,7 +189,7 @@
 							}
 						}
 					};
-					xhr.open( 'GET', '//steamcommunity.com/market/itemordershistogram?language=english'
+					xhr.open( 'GET', 'https://steamcommunity.com/market/itemordershistogram?language=english'
 						+ '&country=' + window.g_rgWalletInfo.wallet_country
 						+ '&currency=' + window.g_rgWalletInfo.wallet_currency
 						+ '&item_nameid=' + commodityID[ 1 ], true );
@@ -197,7 +197,7 @@
 					xhr.send();
 				}
 			};
-			xhr.open( 'GET', '//steamcommunity.com/market/listings/' + item.description.appid + '/' + encodeURIComponent( window.GetMarketHashName( item.description ) ), true );
+			xhr.open( 'GET', 'https://steamcommunity.com/market/listings/' + item.description.appid + '/' + encodeURIComponent( window.GetMarketHashName( item.description ) ), true );
 			xhr.send();
 		}
 	};
@@ -312,7 +312,7 @@
 									}
 								}
 							};
-							xhr.open( 'GET', '//steamcommunity.com/gifts/' + item.assetid + '/validateunpack', true );
+							xhr.open( 'GET', 'https://steamcommunity.com/gifts/' + item.assetid + '/validateunpack', true );
 							xhr.responseType = 'json';
 							xhr.send();
 						}

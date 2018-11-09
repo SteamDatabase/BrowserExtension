@@ -199,7 +199,7 @@ else
 				link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-				link.href = 'http://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				
 				element = document.createElement( 'span' );
 				element.dataset.tooltipText = 'View article on PCGamingWiki';

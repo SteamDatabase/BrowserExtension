@@ -67,7 +67,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			if( GetCurrentAppID() === -1 )
 			{
 				// Try to find game hub link, what possibly could go wrong?
-				element = document.querySelector( 'a[href*="http://steamcommunity.com/app/"]' );
+				element = document.querySelector( 'a[href*="http://steamcommunity.com/app/"], a[href*="https://steamcommunity.com/app/"]' );
 				
 				// Let's just hope this doesn't break
 				CurrentAppID = element.href.match( /\/([0-9]{1,6})\/?/ )[ 1 ];
