@@ -62,7 +62,7 @@ a.steamdb_link:hover {
 	display: block;
 }
 
-.steamdb_registerkey_lineitem {
+#error_display .steamdb_registerkey_lineitem {
 	margin-top: 20px;
 }
 
