@@ -19,6 +19,7 @@ else
 		'button-pcgw': true,
 		'link-subid': true,
 		'online-stats': true,
+		'steamdb-lowest-price': true,
 		'steamdb-rating': true,
 		'steamdb-last-update': true,
 	}, function( items )
@@ -165,6 +166,72 @@ else
 			xhr.send();
 		}
 		
+		if( items[ 'steamdb-lowest-price' ] )
+		{
+			let country = document.cookie.match( /steamCountry=([a-z]{2})/i );
+			country = country === null ? 'us' : country[ 1 ].toLowerCase();
+
+			let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
+			currency = currency ? currency.content : 'USD';
+
+			// If the currency is EUR, we don't need to know which exact country the user is in
+			if( currency === 'EUR' )
+			{
+				country = 'eu';
+			}
+
+			const xhr = new XMLHttpRequest();
+			xhr.onerror = StatsErrorCallback;
+			xhr.onreadystatechange = function()
+			{
+				if( xhr.readyState !== 4 || xhr.status !== 200 || !xhr.response.success )
+				{
+					return;
+				}
+				
+				const data = xhr.response.data;
+
+				if( !data.lowest )
+				{
+					return;
+				}
+
+				link = document.createElement( 'a' );
+				link.rel = 'noopener';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
+				link.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
+
+				element = document.createElement( 'b' );
+				element.textContent = data.lowest.price;
+				link.appendChild( element );
+
+				if( data.lowest.discount > 0 )
+				{
+					link.appendChild( document.createTextNode( ' at ' ) );
+
+					element = document.createElement( 'b' );
+					element.textContent = `-${data.lowest.discount}%`;
+					link.appendChild( element );
+				}
+
+				link.appendChild( document.createTextNode( ` on ${data.lowest.date}` ) );
+
+				element = document.createElement( 'div' );
+				element.className = 'steamdb_prices';
+
+				image = document.createElement( 'img' );
+				image.src = GetLocalResource( 'icons/white.svg' );
+				element.appendChild( image );
+				element.appendChild( link );
+
+				container = document.getElementById( 'game_area_purchase' );
+				container.insertAdjacentElement( 'beforeBegin', element );
+			};
+			xhr.open( 'GET', `${GetHomepage()}api/ExtensionGetPrice/?appid=${GetCurrentAppID()}&country=${country}&currency=${currency}`, true );
+			xhr.responseType = 'json';
+			xhr.send();
+		}
+
 		if( items[ 'button-app' ] )
 		{
 			container = document.querySelector( '.apphub_OtherSiteInfo' );

@@ -62,6 +62,31 @@ a.steamdb_link:hover {
 	display: block;
 }
 
+.steamdb_prices {
+	background-color: rgba( 0, 0, 0, 0.2 );
+    margin-bottom: 20px;
+	line-height: 3;
+	font-family: "Motiva Sans", sans-serif;
+	display: block;
+}
+
+.steamdb_prices img {
+	width: 16px;
+	height: 16px;
+	padding-left: 17px;
+    padding-right: 13px;
+	vertical-align: middle;
+}
+
+.steamdb_prices a {
+	color: #c6d4df;
+}
+
+.steamdb_prices b {
+	font-weight: bold;
+	color: #a3cf06;
+}
+
 #error_display .steamdb_registerkey_lineitem {
 	margin-top: 20px;
 }
