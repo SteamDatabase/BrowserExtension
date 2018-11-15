@@ -46,4 +46,17 @@ else
 			}
 		}
 	} );
+
+	const popup = document.querySelector( '#account_dropdown .popup_body' );
+
+	if( popup )
+	{
+		const optionsLink = document.createElement( 'a' );
+		optionsLink.target = '_blank';
+		optionsLink.className = 'popup_menu_item';
+		optionsLink.textContent = 'SteamDB Options';
+		optionsLink.href = GetLocalResource( 'options/options.html' );
+
+		popup.appendChild( optionsLink );
+	}
 }

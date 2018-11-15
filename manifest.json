@@ -24,13 +24,13 @@
 	[
 		"storage",
 		"https://steamdb.info/",
-		"http://store.steampowered.com/",
 		"https://store.steampowered.com/",
-		"http://steamcommunity.com/",
 		"https://steamcommunity.com/"
 	],
 	"web_accessible_resources":
 	[
+		"options/options.html",
+
 		"icons/white.svg",
 		"icons/pcgamingwiki.svg",
 		
