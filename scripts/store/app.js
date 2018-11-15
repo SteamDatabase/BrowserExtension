@@ -168,34 +168,54 @@ else
 		
 		if( items[ 'steamdb-lowest-price' ] )
 		{
-			const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
 			let country = null;
-
-			if( script )
+			let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
+			currency = currency ? currency.content : null;
+			
+			if( !currency )
 			{
-				const result = script.textContent.match( /EnableSearchSuggestions\(.+?'([A-Z]{2})',/ );
+				currency = 'USD';
 
-				if( result )
+				WriteLog( 'Missing priceCurrency, forced to USD' );
+			}
+			else if( currency === 'USD' )
+			{
+				// We only need to know the country if currency is USD
+				// as all other currencies are uniquely mapped already
+				const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+				
+				if( script )
 				{
-					country = result[ 1 ].toLowerCase();
+					const result = script.textContent.match( /EnableSearchSuggestions\(.+?'([A-Z]{2})',/ );
+
+					if( result )
+					{
+						country = result[ 1 ].toLowerCase();
+					}
+				}
+				
+				if( !country )
+				{
+					country = document.cookie.match( /steamCountry=([a-z]{2})/i );
+					country = country === null ? 'us' : country[ 1 ].toLowerCase();
+
+					WriteLog( `Matched country as "${country}" from cookie and currency as "${currency}"` );
+				}
+				else
+				{
+					WriteLog( `Matched country as "${country}" from search script and currency as "${currency}"` );
 				}
 			}
-			
-			if( !country )
+			else
 			{
-				country = document.cookie.match( /steamCountry=([a-z]{2})/i );
-				country = country === null ? 'us' : country[ 1 ].toLowerCase();
+				WriteLog( `Matched currency as "${currency}"` );
 			}
 
-			let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
-			currency = currency ? currency.content : 'USD';
+			let url = `${GetHomepage()}api/ExtensionGetPrice/?appid=${GetCurrentAppID()}&currency=${currency}`;
 
-			WriteLog( `Matched country as "${country}" and currency as "${currency}"` );
-
-			// If the currency is EUR, we don't need to know which exact country the user is in
-			if( currency === 'EUR' )
+			if( country )
 			{
-				country = 'eu';
+				url += '&country=' + country;
 			}
 
 			const xhr = new XMLHttpRequest();
@@ -245,7 +265,7 @@ else
 				container = document.getElementById( 'game_area_purchase' );
 				container.insertAdjacentElement( 'beforeBegin', element );
 			};
-			xhr.open( 'GET', `${GetHomepage()}api/ExtensionGetPrice/?appid=${GetCurrentAppID()}&country=${country}&currency=${currency}`, true );
+			xhr.open( 'GET', url, true );
 			xhr.responseType = 'json';
 			xhr.send();
 		}
