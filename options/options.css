@@ -6,30 +6,28 @@
 
 html {
 	font-size: 16px;
+	background: #000;
 }
 
 body {
-	margin: 2rem;
-	font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
-	color: #5a5a5a;
-	min-width: 34rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+	font: 1rem/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	color: #c6d4df;
+	background: #1b2838;
+	width: 34rem;
 }
 
-a {
-	color: #0074d9;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
+@media (min-width: 800px) {
+	body {
+		margin: 2rem auto;
+	}
 }
 
 h1, h2, h3, h4 {
 	margin: 0 0 .5rem;
 	font-weight: normal;
 	line-height: 1;
-	color: #2a2a2a;
-	letter-spacing: -.05em;
 }
 
 h1 {
@@ -41,9 +39,16 @@ h2 {
 }
 
 h3 {
-	padding-top: 1rem;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	font-size: 1.75rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	padding: .5rem 1rem;
+	color: #fff;
+	background-color: #0197cf;
+	text-shadow: 1px 2px 0 #1b2838;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -52,7 +57,6 @@ h4 {
 
 h3:first-child {
 	margin-top: 0;
-	padding-top: 0;
 }
 
 p {
@@ -71,11 +75,22 @@ p {
 }
 
 .footer {
+	background: #121212;
 	margin-top: 3rem;
-	padding-bottom: 1rem;
-	padding-top: 3rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	padding: 2rem 0;
 	text-align: center;
-	border-top: 1px solid #eee;
+	border-top: 1px solid #0197cf;
+	color: #34c8fe;
+}
+
+.footer a {
+	color: inherit;
+}
+
+.footer a:hover {
+	color: #fff;
 }
 
 .footer p {
