@@ -13,7 +13,8 @@
 		"GetAppIDFromUrl": false,
 		"GetCurrentAppID": false,
 		"GetHomepage": false,
-		"GetLocalResource": false
+		"GetLocalResource": false,
+		"WriteLog": false
 	},
 	"rules":
 	{

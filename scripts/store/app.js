@@ -168,11 +168,29 @@ else
 		
 		if( items[ 'steamdb-lowest-price' ] )
 		{
-			let country = document.cookie.match( /steamCountry=([a-z]{2})/i );
-			country = country === null ? 'us' : country[ 1 ].toLowerCase();
+			const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+			let country = null;
+
+			if( script )
+			{
+				const result = script.textContent.match( /EnableSearchSuggestions\(.+?'([A-Z]{2})',/ );
+
+				if( result )
+				{
+					country = result[ 1 ].toLowerCase();
+				}
+			}
+			
+			if( !country )
+			{
+				country = document.cookie.match( /steamCountry=([a-z]{2})/i );
+				country = country === null ? 'us' : country[ 1 ].toLowerCase();
+			}
 
 			let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
 			currency = currency ? currency.content : 'USD';
+
+			WriteLog( `Matched country as "${country}" and currency as "${currency}"` );
 
 			// If the currency is EUR, we don't need to know which exact country the user is in
 			if( currency === 'EUR' )
@@ -184,7 +202,7 @@ else
 			xhr.onerror = StatsErrorCallback;
 			xhr.onreadystatechange = function()
 			{
-				if( xhr.readyState !== 4 || xhr.status !== 200 || !xhr.response.success )
+				if( xhr.readyState !== 4 || xhr.status !== 200 || !xhr.response || !xhr.response.success )
 				{
 					return;
 				}

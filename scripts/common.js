@@ -1,5 +1,5 @@
 /* global chrome:false, self:false, browser:false, GetCurrentAppID:true, GetHomepage:true, GetOption:true, GetLocalResource:true */
-/* exported GetCurrentAppID, GetHomepage, GetOption, GetLocalResource */
+/* exported GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, WriteLog */
 
 'use strict';
 
@@ -56,4 +56,10 @@ function GetLocalResource( res )
 	}
 	
 	return res;
+}
+
+function WriteLog( )
+{
+	// eslint-disable-next-line no-console
+	console.log( '%c[SteamDB]%c', 'color:#2196F3; font-weight:bold;', '', ...arguments );
 }
