@@ -209,7 +209,7 @@
 		try
 		{
 			// PopulateActions is called for both item.description.actions and item.description.owner_actions, we only want first one
-			if( hasLinksEnabled && item.description.appid == 753 && rgActions === item.description.actions )
+			if( hasLinksEnabled && item.description.appid === 753 && rgActions === item.description.actions )
 			{
 				if( item.description.type === 'Coupon' && rgActions )
 				{
