@@ -14,7 +14,6 @@ Also highlights owned and wished products on steamdb.info.
 * Features: https://steamdb.info/extension/
 * Chrome Web Store: https://chrome.google.com/webstore/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon
 * Mozilla Addons: https://addons.mozilla.org/en-US/firefox/addon/steam-database/
-* Microsoft Edge (manual): https://steamdb.info/forum/974/trying-out-steamdb-extension-in-microsoft-edge/
 
 ### License
 Code in this repository is governed by a BSD-style license that can be found in the [LICENSE](LICENSE) file.
