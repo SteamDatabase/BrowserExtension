@@ -400,6 +400,21 @@ else
 				const average = positiveVotes / totalVotes;
 				const score = average - ( average - 0.5 ) * Math.pow( 2, -Math.log10( totalVotes + 1 ) );
 				
+				let ratingClass = 'poor';
+				
+				if( totalVotes < 500 )
+				{
+					ratingClass = 'white';
+				}
+				else if( score > 0.74 )
+				{
+					ratingClass = 'good';
+				}
+				else if( score > 0.49 )
+				{
+					ratingClass = 'average';
+				}
+
 				const container = document.createElement( 'div' );
 				container.className = 'user_reviews_summary_row';
 				
@@ -408,21 +423,13 @@ else
 				subtitle.textContent = 'SteamDB Rating:';
 				
 				const summary = document.createElement( 'div' );
+				summary.className = `summary column steamdb_rating steamdb_rating_${ratingClass}`;
+				summary.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
+
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
-				link.className = 'summary column game_review_summary';
 				link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-				
-				if( score > 0.74 )
-				{
-					link.className += ' positive';
-				}
-				else if( score > 0.49 )
-				{
-					link.className += ' mixed';
-				}
-				
-				link.textContent = ( score * 100 ).toFixed( 2 ) + '%';
+				link.textContent = '(?)';
 				
 				summary.appendChild( link );
 				container.appendChild( subtitle );

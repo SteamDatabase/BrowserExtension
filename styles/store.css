@@ -98,6 +98,30 @@ a.steamdb_link:hover {
 	vertical-align: text-top;
 }
 
+.steamdb_rating.steamdb_rating_good {
+	color: #6c3;
+}
+
+.steamdb_rating.steamdb_rating_average {
+	color: #fc3;
+}
+
+.steamdb_rating.steamdb_rating_poor {
+	color: #e60;
+}
+
+.steamdb_rating.steamdb_rating_white {
+	color: #aaa;
+}
+
+.steamdb_rating a {
+	color: #556772 !important;
+}
+
+.steamdb_rating a:hover {
+	color: #fff !important;
+}
+
 /**
  * Fix for very long game names not overflowing correctly
  */
