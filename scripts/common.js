@@ -3,7 +3,6 @@
 
 'use strict';
 
-var IsEdgeBrowser = GetLocalResource( 'manifest.json' ).indexOf( 'ms-browser-extension://' ) === 0;
 var CurrentAppID;
 
 function GetAppIDFromUrl( url )
@@ -34,10 +33,6 @@ function GetOption( items, callback )
 	{
 		chrome.storage.local.get( items, callback );
 	}
-	else if( IsEdgeBrowser )
-	{
-		browser.storage.local.get( items, callback );
-	}
 	else if( typeof browser !== 'undefined' )
 	{
 		browser.storage.local.get( items ).then( callback );
@@ -46,13 +41,13 @@ function GetOption( items, callback )
 
 function GetLocalResource( res )
 {
-	if( typeof chrome !== 'undefined' && typeof chrome.extension !== 'undefined' )
+	if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 	{
-		return chrome.extension.getURL( res );
+		return chrome.runtime.getURL( res );
 	}
 	else if( typeof browser !== 'undefined' )
 	{
-		return browser.extension.getURL( res );
+		return browser.runtime.getURL( res );
 	}
 	
 	return res;
