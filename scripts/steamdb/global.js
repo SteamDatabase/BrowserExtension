@@ -44,45 +44,15 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		document.head.appendChild( element );
 	};
 	
-	var cache = localStorage.getItem( 'userdata.cached' );
-	
-	var xhr = new XMLHttpRequest();
-	xhr.open( 'GET', 'https://store.steampowered.com/dynamicstore/userdata/?_=' + cache, true );
-	xhr.responseType = 'json';
-	
-	xhr.onerror = function()
+	SendMessageToBackgroundScript( {
+		contentScriptQuery: 'FetchSteamUserData',
+		cacheBust: localStorage.getItem( 'userdata.cached' ),
+	}, ( response ) =>
 	{
-		TryToUseCachedData( );
-		
-		localStorage.setItem( 'userdata.cached', Date.now() );
-		
-		var id = document.createElement( 'div' );
-		id.className = 'extension-warning';
-		
-		var icon = document.createElement( 'span' );
-		icon.className = 'mega-octicon octicon-squirrel';
-		
-		id.appendChild( icon );
-		id.appendChild( document.createTextNode( 'Failed to load game data from Steam store due to a network failure.' ) );
-		
-		document.body.appendChild( id );
-	};
-	
-	xhr.onreadystatechange = function()
-	{
-		if( xhr.readyState !== 4 )
+		if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
 		{
-			return;
-		}
-		
-		if( xhr.status !== 200 || !xhr.response.rgOwnedPackages )
-		{
-			xhr.onerror();
-			return;
-		}
-		
-		if( !xhr.response.rgOwnedPackages.length )
-		{
+			WriteLog( 'Failed to load userdata', response.error );
+
 			TryToUseCachedData( );
 			
 			localStorage.setItem( 'userdata.cached', Date.now() );
@@ -96,21 +66,24 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			icon.className = 'mega-octicon octicon-hubot';
 			
 			id.appendChild( icon );
-			id.appendChild( document.createTextNode( 'You are not logged in on Steam Store. Make sure third-party cookies for "store.steampowered.com" are enabled.' ) );
+			id.appendChild( document.createTextNode( response.error ?
+				'Failed to load game data from Steam store due to a network failure.' :
+				'You are not logged in on Steam Store.'
+			) );
 			
 			document.body.appendChild( id );
 			
 			return;
 		}
 		
-		OnDataLoaded( xhr.response );
+		OnDataLoaded( response );
+
+		WriteLog( 'Userdata loaded', `Packages: ${response.rgOwnedPackages.length}` );
 		
 		// TODO: This shouldn't be executed if browser cache was hit
 		if( typeof chrome !== 'undefined' )
 		{
-			chrome.storage.local.set( { 'userdata.stored': JSON.stringify( xhr.response ) } );
+			chrome.storage.local.set( { 'userdata.stored': JSON.stringify( response ) } );
 		}
-	};
-	
-	xhr.send();
+	} );
 } );

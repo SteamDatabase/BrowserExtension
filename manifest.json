@@ -27,6 +27,14 @@
 		"https://store.steampowered.com/",
 		"https://steamcommunity.com/"
 	],
+	"background":
+	{
+		"scripts":
+		[
+			"scripts/background.js"
+		],
+		"persistent": false
+	},
 	"web_accessible_resources":
 	[
 		"options/options.html",

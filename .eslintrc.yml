@@ -17,6 +17,7 @@ globals:
   GetCurrentAppID: false
   GetHomepage: false
   GetLocalResource: false
+  SendMessageToBackgroundScript: false
   WriteLog: false
 
 rules:

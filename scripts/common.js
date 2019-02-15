@@ -1,5 +1,5 @@
 /* global chrome:false, self:false, browser:false, GetCurrentAppID:true, GetHomepage:true, GetOption:true, GetLocalResource:true */
-/* exported GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, WriteLog */
+/* exported GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, WriteLog */
 
 'use strict';
 
@@ -56,6 +56,18 @@ function GetLocalResource( res )
 	}
 	
 	return res;
+}
+
+function SendMessageToBackgroundScript( message, callback )
+{
+	if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+	{
+		return chrome.runtime.sendMessage( message, callback );
+	}
+	else if( typeof browser !== 'undefined' )
+	{
+		return browser.runtime.sendMessage( message, callback );
+	}
 }
 
 function WriteLog( )

@@ -96,39 +96,32 @@ else
 				SetError( 'steamdb_stats_peak_all' );
 			};
 			
-			var xhr = new XMLHttpRequest();
-			xhr.onerror = StatsErrorCallback;
-			xhr.onreadystatechange = function()
+			SendMessageToBackgroundScript( {
+				contentScriptQuery: 'GetCurrentPlayers',
+				appid: GetCurrentAppID(),
+			}, ( response ) =>
 			{
-				if( xhr.readyState !== 4 )
+				if( !response || !response.success )
 				{
-					return;
-				}
-				
-				if( xhr.status !== 200 )
-				{
-					StatsErrorCallback( { error: 'Something went wrong on SteamDB: HTTP ' + xhr.status } );
-					
-					return;
-				}
-				
-				if( !xhr.response.success )
-				{
+					WriteLog( 'GetCurrentPlayers failed to load' );
+
 					StatsErrorCallback( { error: 'SteamDB has no data for this app.' } );
 					
 					return;
 				}
 				
+				WriteLog( 'GetCurrentPlayers loaded' );
+
 				var FormatNumber = function( num )
 				{
 					return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, ',' );
 				};
 				
-				document.getElementById( 'steamdb_stats_online_now' ).textContent = FormatNumber( xhr.response.data.CurrentPlayers );
-				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( xhr.response.data.MaxDailyPlayers );
-				document.getElementById( 'steamdb_stats_peak_all' ).textContent = FormatNumber( xhr.response.data.MaxPlayers );
+				document.getElementById( 'steamdb_stats_online_now' ).textContent = FormatNumber( response.data.CurrentPlayers );
+				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( response.data.MaxDailyPlayers );
+				document.getElementById( 'steamdb_stats_peak_all' ).textContent = FormatNumber( response.data.MaxPlayers );
 				
-				if( items[ 'steamdb-last-update' ] && xhr.response.data.LastDepotUpdate )
+				if( items[ 'steamdb-last-update' ] && response.data.LastDepotUpdate )
 				{
 					container = document.createElement( 'div' );
 					container.className = 'dev_row steamdb_last_update';
@@ -138,13 +131,13 @@ else
 					link.rel = 'noopener';
 					link.className = 'date';
 					
-					if( xhr.response.data.WarnOldUpdate )
+					if( response.data.WarnOldUpdate )
 					{
 						link.className = 'steamdb_last_update_old';
 					}
 					
 					link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/history/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-					link.textContent = xhr.response.data.LastDepotUpdate;
+					link.textContent = response.data.LastDepotUpdate;
 					
 					var subtitle = document.createElement( 'div' );
 					subtitle.className = 'subtitle column';
@@ -160,10 +153,7 @@ else
 						element.parentNode.insertBefore( container, element.nextSibling );
 					}
 				}
-			};
-			xhr.open( 'GET', GetHomepage() + 'api/GetCurrentPlayers/?appid=' + GetCurrentAppID() + '&source=extension_steam_store', true );
-			xhr.responseType = 'json';
-			xhr.send();
+			} );
 		}
 		
 		if( items[ 'steamdb-lowest-price' ] )
@@ -211,28 +201,30 @@ else
 				WriteLog( `Matched currency as "${currency}"` );
 			}
 
-			let url = `${GetHomepage()}api/ExtensionGetPrice/?appid=${GetCurrentAppID()}&currency=${currency}`;
-
-			if( country )
+			SendMessageToBackgroundScript( {
+				contentScriptQuery: 'GetPrice',
+				appid: GetCurrentAppID(),
+				currency: currency,
+				country: country,
+			}, ( response ) =>
 			{
-				url += '&country=' + country;
-			}
-
-			const xhr = new XMLHttpRequest();
-			xhr.onerror = StatsErrorCallback;
-			xhr.onreadystatechange = function()
-			{
-				if( xhr.readyState !== 4 || xhr.status !== 200 || !xhr.response || !xhr.response.success )
+				if( !response || !response.success )
 				{
+					WriteLog( 'GetPrice failed to load' );
+
 					return;
 				}
 				
-				const data = xhr.response.data;
+				const data = response.data;
 
 				if( !data.lowest )
 				{
+					WriteLog( 'GetPrice has no lowest' );
+
 					return;
 				}
+
+				WriteLog( 'GetPrice loaded' );
 
 				link = document.createElement( 'a' );
 				link.rel = 'noopener';
@@ -264,10 +256,7 @@ else
 
 				container = document.getElementById( 'game_area_purchase' );
 				container.insertAdjacentElement( 'beforeBegin', element );
-			};
-			xhr.open( 'GET', url, true );
-			xhr.responseType = 'json';
-			xhr.send();
+			} );
 		}
 
 		if( items[ 'button-app' ] )
