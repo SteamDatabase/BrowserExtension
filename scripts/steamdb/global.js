@@ -16,22 +16,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		return;
 	}
 	
-	var TryToUseCachedData = function( )
-	{
-		if( typeof chrome === 'undefined' )
-		{
-			return;
-		}
-		
-		chrome.storage.local.get( 'userdata.stored', function( data )
-		{
-			if( data[ 'userdata.stored' ] )
-			{
-				OnDataLoaded( JSON.parse( data[ 'userdata.stored' ] ) );
-			}
-		} );
-	};
-	
 	var OnDataLoaded = function( data )
 	{
 		element = document.createElement( 'script' );
@@ -46,16 +30,11 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'FetchSteamUserData',
-		cacheBust: localStorage.getItem( 'userdata.cached' ),
 	}, ( response ) =>
 	{
-		if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
+		if( response.error )
 		{
 			WriteLog( 'Failed to load userdata', response.error );
-
-			TryToUseCachedData( );
-			
-			localStorage.setItem( 'userdata.cached', Date.now() );
 			
 			var id = document.createElement( 'a' );
 			id.rel = 'noopener';
@@ -66,24 +45,18 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			icon.className = 'mega-octicon octicon-hubot';
 			
 			id.appendChild( icon );
-			id.appendChild( document.createTextNode( response.error ?
-				'Failed to load game data from Steam store due to a network failure.' :
-				'You are not logged in on Steam Store.'
+			id.appendChild( document.createTextNode(
+				`Failed to load game data from Steam store. (${response.error.message})`
 			) );
 			
 			document.body.appendChild( id );
-			
-			return;
 		}
 		
-		OnDataLoaded( response );
-
-		WriteLog( 'Userdata loaded', `Packages: ${response.rgOwnedPackages.length}` );
-		
-		// TODO: This shouldn't be executed if browser cache was hit
-		if( typeof chrome !== 'undefined' )
+		if( response.data )
 		{
-			chrome.storage.local.set( { 'userdata.stored': JSON.stringify( response ) } );
+			OnDataLoaded( response.data );
+
+			WriteLog( 'Userdata loaded', `Packages: ${response.data.rgOwnedPackages.length}` );
 		}
 	} );
 } );
