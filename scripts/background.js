@@ -9,6 +9,14 @@ else
 	runtimeObj = browser.runtime;
 }
 
+runtimeObj.onInstalled.addListener( ( event ) =>
+{
+	if( event.reason === 'install' && runtimeObj.openOptionsPage )
+	{
+		runtimeObj.openOptionsPage();
+	}
+} );
+
 runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 {
 	switch( request.contentScriptQuery )
