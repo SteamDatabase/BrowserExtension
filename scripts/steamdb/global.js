@@ -44,7 +44,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			
 			id.appendChild( icon );
 			id.appendChild( document.createTextNode(
-				`Failed to load game data from Steam store. (${response.error.message})`
+				`Failed to load game data from Steam store. (${response.error})`
 			) );
 			
 			document.body.appendChild( id );

@@ -53,7 +53,7 @@ function FetchSteamUserData( callback )
 			{
 				if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
 				{
-					throw new Error( 'Empty user data' );
+					throw new Error( 'Are you logged on the Steam Store?' );
 				}
 
 				// null out some data we don't care about
@@ -75,10 +75,17 @@ function FetchSteamUserData( callback )
 
 				chrome.storage.local.get( 'userdata.stored', function( data )
 				{
-					callback( {
-						error: error,
-						data: data[ 'userdata.stored' ] ? JSON.parse( data[ 'userdata.stored' ] ) : {}
-					} );
+					const response =
+					{
+						error: error.message,
+					};
+
+					if( data[ 'userdata.stored' ] )
+					{
+						response.data = JSON.parse( data[ 'userdata.stored' ] );
+					}
+
+					callback( response );
 				} );
 			} );
 	} );
