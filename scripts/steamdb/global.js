@@ -34,20 +34,22 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		{
 			WriteLog( 'Failed to load userdata', response.error );
 			
-			var id = document.createElement( 'a' );
-			id.rel = 'noopener';
-			id.className = 'extension-warning';
-			id.href = 'https://store.steampowered.com/login/';
-			
-			var icon = document.createElement( 'span' );
-			icon.className = 'mega-octicon octicon-hubot';
-			
-			id.appendChild( icon );
-			id.appendChild( document.createTextNode(
-				`Failed to load game data from Steam store. (${response.error})`
-			) );
-			
-			document.body.appendChild( id );
+			const warning = document.createElement( 'div' );
+			warning.className = 'extension-warning';
+
+			warning.appendChild( document.createTextNode( 'Failed to load game data from Steam.' ) );
+			warning.appendChild( document.createElement( 'br' ) );
+			warning.appendChild( document.createTextNode( response.error ) );
+
+			const btn = document.createElement( 'a' );
+			btn.className = 'btn btn-sm btn-primary';
+			btn.href = 'https://store.steampowered.com/login/';
+			btn.textContent = 'Sign in on the Steam Store';
+
+			const btnDiv = document.createElement( 'div' );
+			btnDiv.appendChild( btn );
+			warning.appendChild( btnDiv );
+			document.body.appendChild( warning );
 		}
 		
 		if( response.data )
