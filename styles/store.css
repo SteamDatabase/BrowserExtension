@@ -11,8 +11,9 @@ a.steamdb_link:hover {
 	margin-top: 12px;
 }
 
-.steamdb_float_left {
+.game_purchase_action .steamdb_link {
 	float: left;
+    margin-top: 8px;
 }
 
 .btn_steamdb .ico16 {

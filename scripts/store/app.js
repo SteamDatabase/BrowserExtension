@@ -327,38 +327,30 @@ else
 				
 				element = element.parentElement.parentElement;
 				
-				subidElement = document.createElement( 'i' );
+				subidElement = document.createElement( 'span' );
 				subidElement.className = 'steamdb_subid';
+				subidElement.dataset.tooltipText = 'View on Steam Database';
+				
+				link = document.createElement( 'a' );
+				link.rel = 'noopener';
+				link.className = 'btn_black btn_small steamdb_link';
+				link.appendChild( subidElement );
 				
 				// Is this a subscription selector?
-				if( subid.length === 0 )
+				if( subid.length > 0 )
 				{
-					if( element.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
-					{
-						hasDropdowns = true;
-						
-						subidElement.appendChild( document.createTextNode( '(nothing selected)' ) );
-						
-						link = document.createElement( 'a' );
-						link.rel = 'noopener';
-						link.className = 'steamdb_link' + ( element.querySelector( '.game_area_purchase_game_dropdown_left_panel' ) ? '' : ' steamdb_float_left' );
-						link.href = '#';
-						link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
-						link.appendChild( subidElement );
-						
-						element.appendChild( link );
-					}
-				}
-				else
-				{
-					subidElement.appendChild( document.createTextNode( '(' + subid + ')' ) );
-					
-					link = document.createElement( 'a' );
-					link.rel = 'noopener';
-					link.className = 'steamdb_link steamdb_float_left';
+					subidElement.textContent = 'Sub ' + subid;
 					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-					link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
 					link.appendChild( subidElement );
+					
+					element.querySelector( '.game_purchase_action' ).appendChild( link );
+				}
+				else if( element.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
+				{
+					hasDropdowns = true;
+					
+					subidElement.textContent = 'nothing selected';
+					link.href = '#';
 					
 					element.appendChild( link );
 				}
