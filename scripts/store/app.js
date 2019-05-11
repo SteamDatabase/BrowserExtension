@@ -356,6 +356,28 @@ else
 				}
 			}
 			
+			container = document.querySelectorAll( 'input[name="bundleid"]' );
+
+			for( i = 0; i < container.length; i++ )
+			{
+				element = container[ i ];
+				element = element.parentElement.parentElement;
+				
+				subidElement = document.createElement( 'span' );
+				subidElement.dataset.tooltipText = 'View on Steam Database';
+				
+				link = document.createElement( 'a' );
+				link.rel = 'noopener';
+				link.className = 'btn_black btn_small steamdb_link';
+				link.appendChild( subidElement );
+
+				subidElement.textContent = 'Bundle ' + element.value;
+				link.href = GetHomepage() + 'bundle/' + element.value + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.appendChild( subidElement );
+				
+				element.querySelector( '.game_purchase_action' ).appendChild( link );
+			}
+
 			// We have to inject our JS directly into the page to hook Steam's functionatily
 			if( hasDropdowns )
 			{
