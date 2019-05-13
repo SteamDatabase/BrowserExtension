@@ -41,6 +41,7 @@
 
 		"icons/white.svg",
 		"icons/pcgamingwiki.svg",
+		"icons/image.svg",
 		
 		"styles/store-center.css",
 		"styles/inventory-sidebar.css",
@@ -114,6 +115,18 @@
 			"css":
 			[
 				"styles/store.css"
+			]
+		},
+		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"https://store.steampowered.com/app/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/app_images.js"
 			]
 		},
 		{
