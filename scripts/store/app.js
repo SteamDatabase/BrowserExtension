@@ -361,6 +361,9 @@ else
 			for( i = 0; i < container.length; i++ )
 			{
 				element = container[ i ];
+
+				subid = element.value;
+
 				element = element.parentElement.parentElement;
 				
 				subidElement = document.createElement( 'span' );
@@ -371,8 +374,8 @@ else
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
-				subidElement.textContent = 'Bundle ' + element.value;
-				link.href = GetHomepage() + 'bundle/' + element.value + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				subidElement.textContent = 'Bundle ' + subid;
+				link.href = GetHomepage() + 'bundle/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 				
 				element.querySelector( '.game_purchase_action' ).appendChild( link );
