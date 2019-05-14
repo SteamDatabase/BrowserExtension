@@ -27,13 +27,14 @@ GetOption( {
 		image.style.height = ( image.height || 100 ) + 'px';
 		image.dataset.src = image.src;
 		image.src = GetLocalResource( 'icons/image.svg' );
-		image.addEventListener( 'click', ImageClick );
+		image.addEventListener( 'click', ImageClick, { once: true } );
 	}
 
-	function ImageClick()
+	function ImageClick( e )
 	{
-		this.addEventListener( 'load', ImageLoad );
+		this.addEventListener( 'load', ImageLoad, { once: true } );
 		this.src = this.dataset.src;
+		e.preventDefault();
 	}
 
 	function ImageLoad()
