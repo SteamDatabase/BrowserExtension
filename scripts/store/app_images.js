@@ -16,38 +16,19 @@ GetOption( {
 		return;
 	}
 
-	const start = Date.now();
-	const polling = setInterval( () =>
+	for( const image of images )
 	{
-		const timeDiff = Date.now() - start;
-
-		for( let i = images.length - 1; i >= 0; i-- )
+		if( image.complete )
 		{
-			const image = images[ i ];
-
-			if( image.complete )
-			{
-				images.splice( i, 1 );
-				continue;
-			}
-
-			if( image.naturalWidth > 0 || timeDiff > 1000 )
-			{
-				image.style.width = ( image.width || 100 ) + 'px';
-				image.style.height = ( image.height || 100 ) + 'px';
-				image.dataset.src = image.src;
-				image.src = GetLocalResource( 'icons/image.svg' );
-				image.addEventListener( 'click', ImageClick );
-
-				images.splice( i, 1 );
-			}
+			continue;
 		}
 
-		if( !images.length )
-		{
-			clearInterval( polling );
-		}
-	}, 50 );
+		image.style.width = ( image.width || 100 ) + 'px';
+		image.style.height = ( image.height || 100 ) + 'px';
+		image.dataset.src = image.src;
+		image.src = GetLocalResource( 'icons/image.svg' );
+		image.addEventListener( 'click', ImageClick );
+	}
 
 	function ImageClick()
 	{
