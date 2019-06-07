@@ -9,7 +9,7 @@ if( achievementsContainer )
 	const headers = new Headers();
 	headers.append( 'X-ValveUserAgent', 'panorama' );
 
-	fetch( window.location.href, {
+	fetch( window.location.origin + window.location.pathname + '?tab=achievements&panorama=please', {
 		headers: headers
 	} )
 	.then( ( response ) => response.text() )
