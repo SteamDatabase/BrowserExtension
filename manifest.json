@@ -308,6 +308,21 @@
 		{
 			"matches":
 			[
+				"https://steamcommunity.com/stats/*/achievements*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/community/global_achievements.js"
+			],
+			"css":
+			[
+				"styles/community.css"
+			]
+		},
+		{
+			"matches":
+			[
 				"https://steamcommunity.com/tradeoffer/new*"
 			],
 			"js":

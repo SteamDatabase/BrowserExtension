@@ -50,3 +50,15 @@ a.apphub_NumInApp:hover {
 .profile_small_header_additional.steamdb {
 	margin-top: 40px;
 }
+
+.tab.steamdb_stats_tab {
+	float: right;
+}
+
+.steamdb_stats_tab .tabOn {
+	background: hsl(202, 41%, 25%);
+}
+
+.steamdb_stats_tab .tabOn:hover {
+	background: hsl(202, 41%, 43%);
+}
