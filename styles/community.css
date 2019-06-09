@@ -51,6 +51,22 @@ a.apphub_NumInApp:hover {
 	margin-top: 40px;
 }
 
+.achieveRow .compareImg {
+	position: relative;
+}
+
+.achieveRow:not(.unlocked) .compareImg:before {
+	content: "";
+	background: url(chrome-extension://__MSG_@@extension_id__/icons/locked.svg);
+	background-size: 24px 24px;
+	width: 24px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	top: 22px;
+}
+
 .tab.steamdb_stats_tab {
 	float: right;
 }
