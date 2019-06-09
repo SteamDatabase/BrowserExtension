@@ -15,4 +15,48 @@ if( compareAvatar && path )
 
 	tab.appendChild( link );
 	document.querySelector( '#tabs' ).appendChild( tab );
+
+	const headers = new Headers();
+	headers.append( 'X-ValveUserAgent', 'panorama' );
+
+	fetch( compareAvatar.href + path + '?tab=achievements&panorama=please', {
+		headers: headers
+	} )
+	.then( ( response ) => response.text() )
+	.then( ( response ) =>
+	{
+		response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
+		
+		if( !response )
+		{
+			return;
+		}
+		
+		response = JSON.parse( response[ 1 ] );
+		
+		if( !response.open )
+		{
+			return;
+		}
+
+		const elements = document.querySelectorAll( '.achieveTxt > h3' );
+
+		for( const key in response.open )
+		{
+			const achievement = response.open[ key ];
+
+			if( !achievement.hidden || achievement.closed )
+			{
+				continue;
+			}
+			for( let i = 0; i < elements.length; i++ )
+			{
+				if( elements[ i ].textContent === achievement.name )
+				{
+					elements[ i ].parentNode.querySelector( 'h5' ).textContent = `[HIDDEN] ${achievement.desc}`;
+					break;
+				}
+			}
+		}
+	} );
 }
