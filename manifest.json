@@ -43,7 +43,6 @@
 		"icons/pcgamingwiki.svg",
 		"icons/image.svg",
 		
-		"styles/store-center.css",
 		"styles/inventory-sidebar.css",
 		
 		"scripts/steamdb/loader.js",
