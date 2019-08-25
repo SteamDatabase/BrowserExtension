@@ -343,7 +343,19 @@ else
 					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 					link.appendChild( subidElement );
 					
-					element.querySelector( '.game_purchase_action' ).appendChild( link );
+					if( element.className === 'game_purchase_action_bg' ) // series episode
+					{
+						element = element.parentElement;
+					}
+					else
+					{
+						element = element.querySelector( '.game_purchase_action' );
+					}
+					
+					if( element )
+					{
+						element.appendChild( link );
+					}
 				}
 				else if( element.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
 				{
