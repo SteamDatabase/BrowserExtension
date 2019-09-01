@@ -158,6 +158,21 @@
 		{
 			"matches":
 			[
+				"https://store.steampowered.com/search/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/search.js"
+			],
+			"css":
+			[
+				"styles/store.css"
+			]
+		},
+		{
+			"matches":
+			[
 				"https://store.steampowered.com/sub/*"
 			],
 			"js":
