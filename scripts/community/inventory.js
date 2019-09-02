@@ -7,17 +7,16 @@
 		None: 0,
 		Process: 1,
 		Added: 2,
-		DisableButtons: 3
+		DisableButtons: 3,
 	};
 	
-	var i,
-	    link,
-	    giftCache = {},
-	    hasLinksEnabled = document.body.dataset.steamdbLinks === 'true',
-	    hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true',
-	    homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage,
-	    originalPopulateActions = window.PopulateActions;
-	
+	var i;
+	var link;
+	var giftCache = {};
+	var hasLinksEnabled = document.body.dataset.steamdbLinks === 'true';
+	var hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
+	var homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage;
+	var originalPopulateActions = window.PopulateActions;
 	var hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
 	var originalPopulateMarketActions = window.PopulateMarketActions;
 	
@@ -26,7 +25,7 @@
 		stop: function()
 		{
 			
-		}
+		},
 	};
 	
 	var quickSellButton = function( )
@@ -86,18 +85,18 @@
 	
 	window.PopulateMarketActions = function( elActions, item )
 	{
-		var realIsTrading       = window.g_bIsTrading;
+		var realIsTrading = window.g_bIsTrading;
 		var realIsMarketAllowed = window.g_bMarketAllowed;
 		
 		if( !window.g_bViewingOwnProfile )
 		{
-			window.g_bIsTrading     = true; // Hides sell button
+			window.g_bIsTrading = true; // Hides sell button
 			window.g_bMarketAllowed = true; // Has to be set so Valve's code doesn't try to bind a tooltip on non existing sell button
 		}
 		
 		originalPopulateMarketActions.apply( this, arguments );
 		
-		window.g_bIsTrading     = realIsTrading;
+		window.g_bIsTrading = realIsTrading;
 		window.g_bMarketAllowed = realIsMarketAllowed;
 		
 		if( hasQuickSellEnabled && item.description.marketable && !item.description.is_currency && elActions.style.display !== 'none' )
@@ -189,10 +188,10 @@
 							}
 						}
 					};
-					xhr.open( 'GET', 'https://steamcommunity.com/market/itemordershistogram?language=english'
-						+ '&country=' + window.g_rgWalletInfo.wallet_country
-						+ '&currency=' + window.g_rgWalletInfo.wallet_currency
-						+ '&item_nameid=' + commodityID[ 1 ], true );
+					xhr.open( 'GET', 'https://steamcommunity.com/market/itemordershistogram?language=english' +
+						'&country=' + window.g_rgWalletInfo.wallet_country +
+						'&currency=' + window.g_rgWalletInfo.wallet_currency +
+						'&item_nameid=' + commodityID[ 1 ], true );
 					xhr.responseType = 'json';
 					xhr.send();
 				}
@@ -247,7 +246,7 @@
 							rgActions.push( {
 								steamdb: true,
 								link: homepage + 'sub/' + subs[ i ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
-								name: 'View ' + subs[ i ] + ' on Steam Database'
+								name: 'View ' + subs[ i ] + ' on Steam Database',
 							} );
 						}
 						
@@ -287,7 +286,7 @@
 						{
 							steamdb: true,
 							link: '#steamdb_' + item.assetid,
-							name: 'View on Steam Database'
+							name: 'View on Steam Database',
 						};
 						
 						if( giftCache[ item.description.classid ] )
@@ -356,7 +355,7 @@
 								rgActions.push( {
 									steamdb: true,
 									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
-									name: 'View on Steam Database'
+									name: 'View on Steam Database',
 								} );
 								
 								foundState = FoundState.Added;
@@ -375,7 +374,7 @@
 						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'sub/' + link[ 1 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
-							name: 'View on Steam Database'
+							name: 'View on Steam Database',
 						} ];
 					}
 					else
@@ -383,10 +382,9 @@
 						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.description.name ),
-							name: 'Search on Steam Database'
+							name: 'Search on Steam Database',
 						} ];
 					}
-					
 					
 					foundState = FoundState.Added;
 				}

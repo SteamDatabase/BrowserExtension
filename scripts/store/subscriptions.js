@@ -2,9 +2,9 @@
 {
 	'use strict';
 	
-	var link,
-	    homepage = document.getElementById( 'steamdb_subscriptions_hook' ).dataset.homepage,
-	    originalDropdownSelectOption = window.dropdownSelectOption;
+	var link;
+	var homepage = document.getElementById( 'steamdb_subscriptions_hook' ).dataset.homepage;
+	var originalDropdownSelectOption = window.dropdownSelectOption;
 	
 	window.dropdownSelectOption = function( dropdownName, subId )
 	{

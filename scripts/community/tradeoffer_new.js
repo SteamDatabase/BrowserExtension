@@ -8,25 +8,25 @@ if( item !== null )
 	{
 		window.g_rgCurrentTradeStatus =
 		{
-			'newversion': true,
-			'version': 1,
-			'me': {
-			    'assets': [],
-			    'currency': [],
-			    'ready': false
+			newversion: true,
+			version: 1,
+			me: {
+				assets: [],
+				currency: [],
+				ready: false,
 			},
-			'them': {
-			    'assets': [
-			        {
-			            'appid': appid,
-			            'contextid': contextid.toString(),
-			            'assetid': assetid.toString(),
-			            'amount': 1
-			        }
-			    ],
-			    'currency': [],
-			    'ready': false
-			}
+			them: {
+				assets: [
+					{
+						appid: appid,
+						contextid: contextid.toString(),
+						assetid: assetid.toString(),
+						amount: 1,
+					},
+				],
+				currency: [],
+				ready: false,
+			},
 		};
 		
 		window.RedrawCurrentTradeStatus();

@@ -4,7 +4,9 @@ var progressInfo = document.querySelectorAll( '.progress_info_bold' );
 
 if( progressInfo.length > 0 )
 {
-	var apps = 0, drops = 0, match;
+	var apps = 0;
+	var drops = 0;
+	var match;
 	
 	for( var i = 0; i < progressInfo.length; i++ )
 	{

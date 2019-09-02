@@ -10,64 +10,64 @@ if( achievementsContainer )
 	headers.append( 'X-ValveUserAgent', 'panorama' );
 
 	fetch( window.location.origin + window.location.pathname + '?tab=achievements&panorama=please', {
-		headers: headers
+		headers: headers,
 	} )
-	.then( ( response ) => response.text() )
-	.then( ( response ) =>
-	{
-		response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
-		
-		if( !response )
+		.then( ( response ) => response.text() )
+		.then( ( response ) =>
 		{
-			return;
-		}
+			response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
 		
-		response = JSON.parse( response[ 1 ] );
-		
-		if( !response.open )
-		{
-			return;
-		}
-		
-		for( const key in response.open )
-		{
-			const achievement = response.open[ key ];
-			
-			if( !achievement.hidden || achievement.closed )
+			if( !response )
 			{
-				continue;
+				return;
 			}
+		
+			response = JSON.parse( response[ 1 ] );
+		
+			if( !response.open )
+			{
+				return;
+			}
+		
+			for( const key in response.open )
+			{
+				const achievement = response.open[ key ];
 			
-			const image = document.createElement( 'img' );
-			image.src = achievement.icon_open;
+				if( !achievement.hidden || achievement.closed )
+				{
+					continue;
+				}
 			
-			const achieveImgHolder = document.createElement( 'div' );
-			achieveImgHolder.className = 'achieveImgHolder';
-			achieveImgHolder.appendChild( image );
+				const image = document.createElement( 'img' );
+				image.src = achievement.icon_open;
 			
-			const h3 = document.createElement( 'h3' );
-			h3.className = 'ellipsis';
-			h3.appendChild( document.createTextNode( achievement.name ) );
+				const achieveImgHolder = document.createElement( 'div' );
+				achieveImgHolder.className = 'achieveImgHolder';
+				achieveImgHolder.appendChild( image );
 			
-			const h5 = document.createElement( 'h5' );
-			h5.className = 'ellipsis';
-			h5.appendChild( document.createTextNode( `[HIDDEN] ${achievement.desc}` ) );
+				const h3 = document.createElement( 'h3' );
+				h3.className = 'ellipsis';
+				h3.appendChild( document.createTextNode( achievement.name ) );
 			
-			const achieveTxt = document.createElement( 'div' );
-			achieveTxt.className = 'achieveTxt';
-			achieveTxt.appendChild( h3 );
-			achieveTxt.appendChild( h5 );
+				const h5 = document.createElement( 'h5' );
+				h5.className = 'ellipsis';
+				h5.appendChild( document.createTextNode( `[HIDDEN] ${achievement.desc}` ) );
 			
-			const achieveTxtHolder = document.createElement( 'div' );
-			achieveTxtHolder.className = 'achieveTxtHolder';
-			achieveTxtHolder.appendChild( achieveTxt );
+				const achieveTxt = document.createElement( 'div' );
+				achieveTxt.className = 'achieveTxt';
+				achieveTxt.appendChild( h3 );
+				achieveTxt.appendChild( h5 );
 			
-			const achieveRow = document.createElement( 'div' );
-			achieveRow.className = 'achieveRow';
-			achieveRow.appendChild( achieveImgHolder );
-			achieveRow.appendChild( achieveTxtHolder );
+				const achieveTxtHolder = document.createElement( 'div' );
+				achieveTxtHolder.className = 'achieveTxtHolder';
+				achieveTxtHolder.appendChild( achieveTxt );
 			
-			achievementsContainer.appendChild( achieveRow );
-		}
-	} );
+				const achieveRow = document.createElement( 'div' );
+				achieveRow.className = 'achieveRow';
+				achieveRow.appendChild( achieveImgHolder );
+				achieveRow.appendChild( achieveTxtHolder );
+			
+				achievementsContainer.appendChild( achieveRow );
+			}
+		} );
 }

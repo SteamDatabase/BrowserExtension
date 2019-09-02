@@ -10,8 +10,8 @@ GetOption( { 'profile-calculator': true }, function( items )
 	// Can't access g_rgProfileData inside sandbox :(
 	
 	// If we can, use abuseID
-	var steamID = document.querySelector( '#abuseForm > input[name=abuseID]' ),
-	    isCommunityID = false;
+	var steamID = document.querySelector( '#abuseForm > input[name=abuseID]' );
+	var isCommunityID = false;
 	
 	if( steamID )
 	{
@@ -27,8 +27,8 @@ GetOption( { 'profile-calculator': true }, function( items )
 		isCommunityID = /^\/profiles/.test( location.pathname );
 	}
 	
-	var container = document.querySelector( '#profile_action_dropdown .popup_body' ),
-	    url = GetHomepage() + 'calculator/';
+	var container = document.querySelector( '#profile_action_dropdown .popup_body' );
+	var url = GetHomepage() + 'calculator/';
 	
 	if( isCommunityID )
 	{

@@ -9,11 +9,11 @@ GetOption( { 'link-accountpage': true }, function( items )
 	
 	// TODO: Look for RemoveFreePackage subids
 	
-	var licenses = document.querySelectorAll( '.account_table tr > td:nth-child(2)' ),
-	    link,
-	    subid,
-	    element,
-	    removeElement;
+	var licenses = document.querySelectorAll( '.account_table tr > td:nth-child(2)' );
+	var link;
+	var subid;
+	var element;
+	var removeElement;
 	
 	if( licenses )
 	{

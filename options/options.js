@@ -3,7 +3,9 @@
 {
 	'use strict';
 	
-	var element, checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' ), options = {};
+	var element;
+	var checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
+	var options = {};
 	
 	var CheckboxChange = function( )
 	{

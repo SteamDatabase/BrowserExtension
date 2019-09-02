@@ -39,7 +39,9 @@
 		
 		window.jQuery.post( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
 		{
-			var requests = [], done = 0, errorShown;
+			var requests = [];
+			var done = 0;
+			var errorShown;
 			
 			var requestDone = function( )
 			{
@@ -95,12 +97,12 @@
 			
 			window.jQuery.when( ...requests ).then( callback, callback );
 		} )
-		.fail( function()
-		{
-			setTimeout( () => GenerateQueue( queueNumber - 1 ), 1000 );
+			.fail( function()
+			{
+				setTimeout( () => GenerateQueue( queueNumber - 1 ), 1000 );
 			
-			DiscoveryQueueModal.Dismiss();
-			DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue #' + queueNumber + '. Trying again in a second.' );
-		} );
+				DiscoveryQueueModal.Dismiss();
+				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue #' + queueNumber + '. Trying again in a second.' );
+			} );
 	}
 }() );

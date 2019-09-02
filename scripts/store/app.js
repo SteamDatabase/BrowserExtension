@@ -317,9 +317,12 @@ else
 			// Find each "add to cart" button
 			container = document.querySelectorAll( 'input[name="subid"]' );
 			
-			var hasDropdowns = false, i = 0, subid = 0, subidElement, length = container.length;
+			var hasDropdowns = false;
+			var i = 0;
+			var subid = 0;
+			var subidElement;
 			
-			for( i = 0; i < length; i++ )
+			for( i = 0; i < container.length; i++ )
 			{
 				element = container[ i ];
 				
@@ -462,6 +465,5 @@ else
 				}
 			}
 		}
-		
 	} );
 }

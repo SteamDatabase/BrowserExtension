@@ -20,43 +20,43 @@ if( compareAvatar && path )
 	headers.append( 'X-ValveUserAgent', 'panorama' );
 
 	fetch( compareAvatar.href + path + '?tab=achievements&panorama=please', {
-		headers: headers
+		headers: headers,
 	} )
-	.then( ( response ) => response.text() )
-	.then( ( response ) =>
-	{
-		response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
-		
-		if( !response )
+		.then( ( response ) => response.text() )
+		.then( ( response ) =>
 		{
-			return;
-		}
+			response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
 		
-		response = JSON.parse( response[ 1 ] );
-		
-		if( !response.open )
-		{
-			return;
-		}
-
-		const elements = document.querySelectorAll( '.achieveTxt > h3' );
-
-		for( const key in response.open )
-		{
-			const achievement = response.open[ key ];
-
-			if( !achievement.hidden || achievement.closed )
+			if( !response )
 			{
-				continue;
+				return;
 			}
-			for( let i = 0; i < elements.length; i++ )
+		
+			response = JSON.parse( response[ 1 ] );
+		
+			if( !response.open )
 			{
-				if( elements[ i ].textContent === achievement.name )
+				return;
+			}
+
+			const elements = document.querySelectorAll( '.achieveTxt > h3' );
+
+			for( const key in response.open )
+			{
+				const achievement = response.open[ key ];
+
+				if( !achievement.hidden || achievement.closed )
 				{
-					elements[ i ].parentNode.querySelector( 'h5' ).textContent = `[HIDDEN] ${achievement.desc}`;
-					break;
+					continue;
+				}
+				for( let i = 0; i < elements.length; i++ )
+				{
+					if( elements[ i ].textContent === achievement.name )
+					{
+						elements[ i ].parentNode.querySelector( 'h5' ).textContent = `[HIDDEN] ${achievement.desc}`;
+						break;
+					}
 				}
 			}
-		}
-	} );
+		} );
 }

@@ -8,7 +8,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 		'enhancement-inventory-sidebar': true,
 		'enhancement-inventory-quick-sell': true,
 		'enhancement-inventory-quick-sell-auto': false,
-		'enhancement-inventory-no-sell-reload': true
+		'enhancement-inventory-no-sell-reload': true,
 	}, function( items )
 	{
 		if( items[ 'enhancement-inventory-sidebar' ] )

@@ -1,5 +1,5 @@
-/* global chrome:false, browser:false, GetCurrentAppID:true, GetHomepage:true, GetOption:true, GetLocalResource:true */
 /* exported GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, WriteLog */
+/* eslint-disable no-unused-vars */
 
 'use strict';
 
@@ -24,7 +24,7 @@ function GetCurrentAppID()
 
 function GetHomepage()
 {
-	return 'https://steamdb.info/';
+	return'https://steamdb.info/';
 }
 
 function GetOption( items, callback )

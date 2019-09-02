@@ -16,7 +16,7 @@
 	for( var i = 0; i < SteamDB.ExtensionUserdataLoaded.length; i++ )
 	{
 		SteamDB.ExtensionUserdataLoaded[ i ]( data, {
-			hideNotInterested: hideNotInterested
+			hideNotInterested: hideNotInterested,
 		} );
 	}
 }( window.SteamDB ) );

@@ -8,7 +8,10 @@ GetOption( { 'button-gamehub': true }, function( items )
 		return;
 	}
 	
-	var element, link, image, container = document.querySelector( '.apphub_OtherSiteInfo' );
+	var element;
+	var link;
+	var image;
+	var container = document.querySelector( '.apphub_OtherSiteInfo' );
 	
 	if( container )
 	{

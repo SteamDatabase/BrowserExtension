@@ -45,7 +45,7 @@ function FetchSteamUserData( callback )
 		fetch(
 			`https://store.steampowered.com/dynamicstore/userdata/?_=${encodeURIComponent( cache )}`,
 			{
-				cache: 'force-cache'
+				cache: 'force-cache',
 			}
 		)
 			.then( ( response ) => response.json() )
