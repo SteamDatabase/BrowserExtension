@@ -164,10 +164,6 @@
 			[
 				"scripts/common.js",
 				"scripts/store/search.js"
-			],
-			"css":
-			[
-				"styles/store.css"
 			]
 		},
 		{
