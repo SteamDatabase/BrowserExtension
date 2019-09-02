@@ -20,7 +20,7 @@ GetOption( { 'button-search': true }, function( items )
         var params = decodeURIComponent( window.location.search );
         var types = { 999: 8, 998: 1, 997: 1, 994: 2, 10: 3, 21: 4, 992: 13, 993: 16 };
         var HasParam = ( param ) => params.includes( param + '=' );
-        var GetParam = ( param ) => HasParam( param ) && params.split( param + '=' )[ 1 ].split( /&|#/ )[ 0 ].split( ',' )[ 0 ];
+        var GetParam = ( param ) => HasParam( param ) && encodeURIComponent( params.split( param + '=' )[ 1 ].split( /&|#/ )[ 0 ].split( ',' )[ 0 ] );
         var typeparam = HasParam( 'category1' ) && types[ GetParam( 'category1' ) ] ? '&type=' + types[ GetParam( 'category1' ) ] : '';
 
         switch( true )
