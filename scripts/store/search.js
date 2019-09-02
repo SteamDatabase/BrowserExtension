@@ -22,7 +22,7 @@ GetOption( { 'button-search': true }, function( items )
         var HasParam = ( param ) => params.includes( param + '=' );
         var GetParam = ( param ) => HasParam( param ) && encodeURIComponent( params.split( param + '=' )[ 1 ].split( /&|#/ )[ 0 ].split( ',' )[ 0 ] );
 
-        var types = { 999: 8, 998: 1, 997: 1, 994: 2, 10: 3, 21: 4, 992: 13, 993: 16 };
+        var types = { '10': 3, '21': 4, '992': 13, '993': 16, '994': 2, '997': 1, '998': 1, '999': 8 };
         var typeparam = HasParam( 'category1' ) && types[ GetParam( 'category1' ) ] ? '&type=' + types[ GetParam( 'category1' ) ] : '';
 
         switch( true )
