@@ -61,10 +61,11 @@ GetOption( { 'button-search': true }, function( items )
     };
 
     var span = document.createElement( 'span' );
-    span.appendChild( document.createTextNode( 'View on Steam Database' ) );
+    span.appendChild( document.createTextNode( 'VIEW ON STEAM DATABASE' ) );
     
     var button = document.createElement( 'button' );
-    button.className = 'btnv6_blue_hoverfade btn_small';
+    button.className = 'btnv6_blue_hoverfade btn_small block';
+    button.style.width = '100%';
     button.addEventListener( 'click', () => window.open( GetSteamDBLink(), '_blank' ) );
     button.appendChild( span );
     
