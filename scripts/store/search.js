@@ -16,7 +16,7 @@ GetOption( { 'button-search': true }, function( items )
 
     var GetSteamDBLink = function()
     {
-        var link = 'https://steamdb.info/search/?';
+        var link = GetHomepage() + 'search/?';
         var params = decodeURIComponent( window.location.search );
 
         var HasParam = ( param ) => params.includes( param + '=' );
@@ -28,7 +28,7 @@ GetOption( { 'button-search': true }, function( items )
         switch( true )
         {
             case HasParam( 'filter' ) && GetParam( 'filter' ) === 'comingsoon':
-                link = 'https://steamdb.info/upcoming/';
+                link = GetHomepage() + 'upcoming/';
                 break;
 
             case HasParam( 'category2' ):
