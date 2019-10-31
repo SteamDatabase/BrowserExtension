@@ -112,6 +112,11 @@
 			listNow.href = 'javascript:void(0)';
 			listNow.className = 'btn_small btn_blue_white_innerfade';
 			listNow.style.opacity = 0.5;
+			listNow.style.padding = '0 8px';
+			listNow.style.overflow = 'hidden';
+			listNow.style.textOverflow = 'ellipsis';
+			listNow.style.whiteSpace = 'nowrap';
+			listNow.style.maxWidth = '100px';
 			listNow.appendChild( listNowText );
 			
 			var sellNowText = document.createElement( 'span' );
@@ -122,6 +127,11 @@
 			sellNow.href = 'javascript:void(0)';
 			sellNow.className = 'btn_small btn_blue_white_innerfade';
 			sellNow.style.opacity = 0.5;
+			sellNow.style.padding = '0 8px';
+			sellNow.style.overflow = 'hidden';
+			sellNow.style.textOverflow = 'ellipsis';
+			sellNow.style.whiteSpace = 'nowrap';
+			sellNow.style.maxWidth = '100px';
 			sellNow.appendChild( sellNowText );
 			
 			buttons.appendChild( listNow );
