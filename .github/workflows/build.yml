@@ -1,0 +1,21 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: CI
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+
+      - name: Install
+        run: yarn --frozen-lockfile --non-interactive
+
+      - name: Test
+        run: yarn test

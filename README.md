@@ -1,4 +1,4 @@
-# Steam Database Extension [![Build Status (Travis)](https://img.shields.io/travis/SteamDatabase/BrowserExtension/master.svg?style=flat-square)](https://travis-ci.com/SteamDatabase/BrowserExtension)
+# Steam Database Extension
 
 Adds Steam Database links on various pages in the Steam Community and Store.
 Also highlights owned and wished products on steamdb.info.
