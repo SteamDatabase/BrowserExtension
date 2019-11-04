@@ -102,10 +102,10 @@
 		if( hasQuickSellEnabled && item.description.marketable && !item.description.is_currency && elActions.style.display !== 'none' )
 		{
 			var buttons = document.createElement( 'span' );
-			buttons.style.float = 'right';
+			buttons.className = 'steamdb_quick_sell';
 			
 			var listNowText = document.createElement( 'span' );
-			listNowText.textContent = 'List now (…)';
+			listNowText.textContent = 'List at …';
 			
 			var listNow = document.createElement( 'a' );
 			listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
@@ -115,7 +115,7 @@
 			listNow.appendChild( listNowText );
 			
 			var sellNowText = document.createElement( 'span' );
-			sellNowText.textContent = 'Sell now (…)';
+			sellNowText.textContent = 'Sell at …';
 			
 			var sellNow = document.createElement( 'a' );
 			sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
@@ -141,9 +141,9 @@
 					
 					if( !commodityID )
 					{
-						sellNowText.textContent = 'Sell now (error)';
-						listNowText.textContent = 'List now (error)';
-						
+						sellNow.style.display = 'none';
+						listNow.style.display = 'none';
+
 						return;
 					}
 					
@@ -156,8 +156,8 @@
 							
 							if( !data.success )
 							{
-								sellNowText.textContent = 'Sell now (error)';
-								listNowText.textContent = 'List now (error)';
+								sellNow.style.display = 'none';
+								sellNow.style.display = 'none';
 								
 								return;
 							}
@@ -170,13 +170,14 @@
 								const listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
 								
 								listNow.style.removeProperty( 'opacity' );
+								listNow.style.removeProperty( 'display' );
 								listNow.dataset.price = listNowPrice;
 								listNow.addEventListener( 'click', quickSellButton );
-								listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
+								listNowText.textContent = 'List at ' + data.price_prefix + listNowPrice + data.price_suffix;
 							}
 							else
 							{
-								listNowText.style.display = 'none';
+								listNow.style.display = 'none';
 							}
 
 							if( data.highest_buy_order )
@@ -185,13 +186,14 @@
 								const sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
 								
 								sellNow.style.removeProperty( 'opacity' );
+								sellNow.style.removeProperty( 'display' );
 								sellNow.dataset.price = sellNowPrice;
 								sellNow.addEventListener( 'click', quickSellButton );
-								sellNowText.textContent = 'Sell now (' + data.price_prefix + sellNowPrice + data.price_suffix + ')';
+								sellNowText.textContent = 'Sell at ' + data.price_prefix + sellNowPrice + data.price_suffix;
 							}
 							else
 							{
-								sellNowText.style.display = 'none';
+								sellNow.style.display = 'none';
 							}
 						}
 					};
