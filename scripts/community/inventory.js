@@ -162,20 +162,27 @@
 								return;
 							}
 							
-							var publisherFee = typeof item.description.market_fee !== 'undefined' ? item.description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
-							var listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
-							var listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
-							var sellNowPrice = 0.0;
+							const publisherFee = typeof item.description.market_fee !== 'undefined' ? item.description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
 							
-							listNow.style.removeProperty( 'opacity' );
-							listNow.dataset.price = listNowPrice;
-							listNow.addEventListener( 'click', quickSellButton );
-							listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
-							
+							if( data.lowest_sell_order )
+							{
+								const listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
+								const listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
+								
+								listNow.style.removeProperty( 'opacity' );
+								listNow.dataset.price = listNowPrice;
+								listNow.addEventListener( 'click', quickSellButton );
+								listNowText.textContent = 'List now (' + data.price_prefix + listNowPrice + data.price_suffix + ')';
+							}
+							else
+							{
+								listNowText.style.display = 'none';
+							}
+
 							if( data.highest_buy_order )
 							{
-								var sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
-								sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
+								const sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
+								const sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
 								
 								sellNow.style.removeProperty( 'opacity' );
 								sellNow.dataset.price = sellNowPrice;
