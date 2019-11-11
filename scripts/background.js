@@ -360,7 +360,7 @@ function GetOption( items, callback )
 {
 	if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.local.get( items, callback );
+		chrome.storage.local.get( items ).then( callback );
 	}
 	else if( typeof browser !== 'undefined' )
 	{

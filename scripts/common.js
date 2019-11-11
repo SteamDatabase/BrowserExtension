@@ -33,7 +33,7 @@ function GetOption( items, callback )
 {
 	if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.local.get( items, callback );
+		chrome.storage.local.get( items ).then( callback );
 	}
 	else if( typeof browser !== 'undefined' )
 	{
@@ -61,11 +61,11 @@ function SendMessageToBackgroundScript( message, callback )
 	{
 		if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 		{
-			return chrome.runtime.sendMessage( message, callback );
+			chrome.runtime.sendMessage( message, callback );
 		}
 		else if( typeof browser !== 'undefined' )
 		{
-			return browser.runtime.sendMessage( message, callback );
+			browser.runtime.sendMessage( message, callback );
 		}
 	}
 	catch( error )
