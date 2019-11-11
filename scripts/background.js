@@ -71,7 +71,7 @@ function FetchSteamUserData( callback )
 			{
 				SetOption( 'userdata.cached', Date.now() );
 
-				chrome.storage.local.get( 'userdata.stored', function( data )
+				GetOption( { 'userdata.stored': false }, function( data )
 				{
 					const response =
 					{
