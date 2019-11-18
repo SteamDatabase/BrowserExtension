@@ -36,12 +36,12 @@ else
 			block.appendChild( blockInner );
 			
 			link = document.createElement( 'a' );
+			link.className = 'steamdb_stats_logo';
 			link.rel = 'noopener';
 			link.title = 'View more information and graphs on SteamDB';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			
 			image = document.createElement( 'img' );
-			image.className = 'steamdb_stats_logo';
 			image.src = GetLocalResource( 'icons/white.svg' );
 			link.appendChild( image );
 			
@@ -71,6 +71,14 @@ else
 			link.appendChild( document.createTextNode( ' all-time peak' ) );
 			blockInner.appendChild( link );
 			
+			image = document.createElement( 'b' );
+			image.id = 'steamdb_stats_followers';
+			image.textContent = '…';
+			link = document.createElement( 'p' );
+			link.appendChild( image );
+			link.appendChild( document.createTextNode( ' followers' ) );
+			blockInner.appendChild( link );
+
 			var clear = document.createElement( 'div' );
 			clear.style.clear = 'left';
 			blockInner.appendChild( clear );
@@ -94,6 +102,7 @@ else
 				SetError( 'steamdb_stats_online_now' );
 				SetError( 'steamdb_stats_peak_today' );
 				SetError( 'steamdb_stats_peak_all' );
+				SetError( 'steamdb_stats_followers' );
 			};
 			
 			SendMessageToBackgroundScript( {
@@ -120,6 +129,17 @@ else
 				document.getElementById( 'steamdb_stats_online_now' ).textContent = FormatNumber( response.data.CurrentPlayers );
 				document.getElementById( 'steamdb_stats_peak_today' ).textContent = FormatNumber( response.data.MaxDailyPlayers );
 				document.getElementById( 'steamdb_stats_peak_all' ).textContent = FormatNumber( response.data.MaxPlayers );
+
+				const followers = document.getElementById( 'steamdb_stats_followers' );
+
+				if( followers > 0 )
+				{
+					followers.textContent = FormatNumber( response.data.Followers );
+				}
+				else
+				{
+					followers.parentNode.remove();
+				}
 				
 				if( items[ 'steamdb-last-update' ] && response.data.LastDepotUpdate )
 				{
