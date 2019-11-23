@@ -3,7 +3,9 @@
 
 'use strict';
 
-let CurrentAppID;
+// exported variable needs to be `var`
+// eslint-disable-next-line no-var
+var CurrentAppID;
 
 function GetAppIDFromUrl( url )
 {
