@@ -41,12 +41,14 @@ a.steamdb_link:hover {
 	opacity: 1;
 }
 
-.steamdb_stats b {
-	color: #67c1f5;
-	min-width: 60px;
+.steamdb_stats span {
+	min-width: 90px;
 	margin-right: 5px;
 	display: inline-block;
-	text-align: right;
+}
+
+.steamdb_stats b {
+	color: #67c1f5;
 }
 
 .steamdb_stats p:last-child {
