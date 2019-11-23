@@ -7,13 +7,13 @@
 		return;
 	}
 	
-	var element = document.getElementById( 'steamdb_userdata_loaded' );
-	var data = JSON.parse( element.dataset.data );
-	var hideNotInterested = element.dataset.hideNotInterested;
+	const element = document.getElementById( 'steamdb_userdata_loaded' );
+	const data = JSON.parse( element.dataset.data );
+	const hideNotInterested = element.dataset.hideNotInterested;
 	
 	document.head.removeChild( element );
 	
-	for( var i = 0; i < SteamDB.ExtensionUserdataLoaded.length; i++ )
+	for( let i = 0; i < SteamDB.ExtensionUserdataLoaded.length; i++ )
 	{
 		SteamDB.ExtensionUserdataLoaded[ i ]( data, {
 			hideNotInterested: hideNotInterested,

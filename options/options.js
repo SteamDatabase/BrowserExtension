@@ -3,18 +3,13 @@
 {
 	'use strict';
 	
-	var element;
-	var checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
-	var options = {};
+	let element;
+	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
+	const options = {};
 	
-	var CheckboxChange = function( )
+	const SetOption = ( option, value ) =>
 	{
-		SetOption( this.dataset.option, this.checked );
-	};
-	
-	var SetOption = function( option, value )
-	{
-		var chromepls = {}; chromepls[ option ] = value;
+		const chromepls = {}; chromepls[ option ] = value;
 		
 		if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 		{
@@ -26,7 +21,12 @@
 		}
 	};
 	
-	for( var i = 0; i < checkboxes.length; i++ )
+	const CheckboxChange = function( )
+	{
+		SetOption( this.dataset.option, this.checked );
+	};
+
+	for( let i = 0; i < checkboxes.length; i++ )
 	{
 		element = checkboxes[ i ];
 		
@@ -37,7 +37,7 @@
 	
 	GetOption( Object.keys( options ), function( items )
 	{
-		for( var item in items )
+		for( const item in items )
 		{
 			element = options[ item ];
 			

@@ -2,9 +2,9 @@
 {
 	'use strict';
 
-	var element;
-	var i;
-	var blocks = document.querySelectorAll( '.friend_block' );
+	let element;
+	let i;
+	const blocks = document.querySelectorAll( '.friend_block' );
 
 	for( i = 0; i < blocks.length; i++ )
 	{

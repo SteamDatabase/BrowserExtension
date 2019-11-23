@@ -1,6 +1,6 @@
 'use strict';
 
-var achievementsContainer = document.querySelector( '.achieveHiddenBox' );
+let achievementsContainer = document.querySelector( '.achieveHiddenBox' );
 
 if( achievementsContainer )
 {

@@ -4,7 +4,7 @@ GetOption( { 'enhancement-skip-agecheck': false }, function( items )
 {
 	if( items[ 'enhancement-skip-agecheck' ] )
 	{
-		var date = new Date();
+		let date = new Date();
 		date.setFullYear( date.getFullYear() + 1 );
 		date = date.toGMTString();
 		

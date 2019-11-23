@@ -28,9 +28,10 @@ rules:
   keyword-spacing: [error, {before: false, after: false, overrides: {case: {after: true}}}]
   no-tabs: off
   no-trailing-spaces: off
+  no-var: [error]
   object-curly-spacing: [error, always]
+  prefer-const: [error]
   semi: [error, always]
   space-before-function-paren: [error, never]
   space-in-parens: [error, always]
-  prefer-const: [error]
   standard/no-callback-literal: off

@@ -2,7 +2,7 @@
 {
 	'use strict';
 	
-	var FoundState =
+	const FoundState =
 	{
 		None: 0,
 		Process: 1,
@@ -10,17 +10,17 @@
 		DisableButtons: 3,
 	};
 	
-	var i;
-	var link;
-	var giftCache = {};
-	var hasLinksEnabled = document.body.dataset.steamdbLinks === 'true';
-	var hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
-	var homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage;
-	var originalPopulateActions = window.PopulateActions;
-	var hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
-	var originalPopulateMarketActions = window.PopulateMarketActions;
+	let i;
+	let link;
+	const giftCache = {};
+	const hasLinksEnabled = document.body.dataset.steamdbLinks === 'true';
+	const hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
+	const homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage;
+	const originalPopulateActions = window.PopulateActions;
+	const hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
+	const originalPopulateMarketActions = window.PopulateMarketActions;
 	
-	var dummySellEvent =
+	const dummySellEvent =
 	{
 		stop: function()
 		{
@@ -28,7 +28,7 @@
 		},
 	};
 	
-	var quickSellButton = function( )
+	const quickSellButton = function( )
 	{
 		window.SellCurrentSelection();
 		
@@ -46,15 +46,15 @@
 	
 	if( document.body.dataset.steamdbNoSellReload )
 	{
-		var nextRefreshCausedBySell = false;
-		var originalOnSuccess = window.SellItemDialog.OnSuccess;
-		var originalReloadInventory = window.CUserYou.prototype.ReloadInventory;
+		let nextRefreshCausedBySell = false;
+		const originalOnSuccess = window.SellItemDialog.OnSuccess;
+		const originalReloadInventory = window.CUserYou.prototype.ReloadInventory;
 		
 		window.SellItemDialog.OnSuccess = function( transport )
 		{
 			nextRefreshCausedBySell = true;
 			
-			var className = 'listed';
+			let className = 'listed';
 			
 			if( transport.responseJSON.requires_confirmation )
 			{
@@ -85,8 +85,8 @@
 	
 	window.PopulateMarketActions = function( elActions, item )
 	{
-		var realIsTrading = window.g_bIsTrading;
-		var realIsMarketAllowed = window.g_bMarketAllowed;
+		const realIsTrading = window.g_bIsTrading;
+		const realIsMarketAllowed = window.g_bMarketAllowed;
 		
 		if( !window.g_bViewingOwnProfile )
 		{
@@ -101,23 +101,23 @@
 		
 		if( hasQuickSellEnabled && item.description.marketable && !item.description.is_currency && elActions.style.display !== 'none' )
 		{
-			var buttons = document.createElement( 'span' );
+			const buttons = document.createElement( 'span' );
 			buttons.className = 'steamdb_quick_sell';
 			
-			var listNowText = document.createElement( 'span' );
+			const listNowText = document.createElement( 'span' );
 			listNowText.textContent = 'List at …';
 			
-			var listNow = document.createElement( 'a' );
+			const listNow = document.createElement( 'a' );
 			listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
 			listNow.href = 'javascript:void(0)';
 			listNow.className = 'btn_small btn_blue_white_innerfade';
 			listNow.style.opacity = 0.5;
 			listNow.appendChild( listNowText );
 			
-			var sellNowText = document.createElement( 'span' );
+			const sellNowText = document.createElement( 'span' );
 			sellNowText.textContent = 'Sell at …';
 			
-			var sellNow = document.createElement( 'a' );
+			const sellNow = document.createElement( 'a' );
 			sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
 			sellNow.href = 'javascript:void(0)';
 			sellNow.className = 'btn_small btn_blue_white_innerfade';
@@ -130,14 +130,14 @@
 				
 			elActions.appendChild( buttons );
 			
-			var xhr = new XMLHttpRequest();
+			let xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function()
 			{
 				if( xhr.readyState === 4 && xhr.status === 200 )
 				{
-					var data = xhr.response;
+					let data = xhr.response;
 					
-					var commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
+					const commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
 					
 					if( !commodityID )
 					{
@@ -212,7 +212,7 @@
 	
 	window.PopulateActions = function( prefix, elActions, rgActions, item, owner )
 	{
-		var foundState = FoundState.None;
+		let foundState = FoundState.None;
 		
 		try
 		{
@@ -221,7 +221,7 @@
 			{
 				if( item.description.type === 'Coupon' && rgActions )
 				{
-					var couponLink, pos;
+					let couponLink, pos;
 					
 					for( i = 0; i < rgActions.length; i++ )
 					{
@@ -248,7 +248,7 @@
 					
 					if( foundState === FoundState.Process )
 					{
-						var subs = couponLink.substring( pos + 'list_of_subs='.length ).split( ',' );
+						const subs = couponLink.substring( pos + 'list_of_subs='.length ).split( ',' );
 						
 						for( i = 0; i < subs.length; i++ )
 						{
@@ -291,7 +291,7 @@
 					{
 						foundState = FoundState.DisableButtons;
 						
-						var action =
+						const action =
 						{
 							steamdb: true,
 							link: '#steamdb_' + item.assetid,
@@ -304,7 +304,7 @@
 						}
 						else
 						{
-							var xhr = new XMLHttpRequest();
+							const xhr = new XMLHttpRequest();
 							xhr.onreadystatechange = function()
 							{
 								if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )

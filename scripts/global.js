@@ -3,17 +3,17 @@
 // There's no easier way to check if we're on error page :(
 if( document.title === 'Sorry!' || document.title === 'Error' )
 {
-	var link = document.createElement( 'a' );
+	const link = document.createElement( 'a' );
 	link.rel = 'noopener';
 	link.href = 'https://steamstat.us';
 	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
 	
-	var container = document.createElement( 'div' );
+	const container = document.createElement( 'div' );
 	container.className = 'steamdb_downtime_container';
 	container.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
 	container.appendChild( link );
 	
-	var wrapper = document.createElement( 'div' );
+	const wrapper = document.createElement( 'div' );
 	wrapper.className = 'steamdb_downtime';
 	wrapper.appendChild( container );
 	
@@ -27,7 +27,7 @@ else
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
-			var button = document.querySelector( '.header_installsteam_btn' );
+			const button = document.querySelector( '.header_installsteam_btn' );
 			
 			if( button )
 			{
@@ -38,9 +38,9 @@ else
 		
 		if( items[ 'enhancement-no-linkfilter' ] )
 		{
-			var links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
+			const links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
 			
-			for( var x = 0; x < links.length; x++ )
+			for( let x = 0; x < links.length; x++ )
 			{
 				links[ x ].href = links[ x ].href.replace( /^https:\/\/steamcommunity\.com\/linkfilter\/(?:\?url=)?/, '' );
 			}

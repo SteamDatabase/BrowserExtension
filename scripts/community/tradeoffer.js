@@ -1,8 +1,8 @@
 'use strict';
 
-var FixTradeOffer = function()
+const FixTradeOffer = function()
 {
-	var originalToggleReady = window.ToggleReady;
+	const originalToggleReady = window.ToggleReady;
 	window.ToggleReady = function( ready )
 	{
 		window.g_rgCurrentTradeStatus.me.ready = ready;
@@ -16,15 +16,15 @@ var FixTradeOffer = function()
 		originalToggleReady.apply( this, arguments );
 	};
 	
-	var originalShowAlertDialog = window.ShowAlertDialog;
-	var originalSetAssetOrCurrencyInTrade = window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade;
+	const originalShowAlertDialog = window.ShowAlertDialog;
+	const originalSetAssetOrCurrencyInTrade = window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade;
 	window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade = function( item )
 	{
 		try
 		{
 			// Make sure this item can actually be traded
-			var appName = window.g_rgPartnerAppContextData[ item.appid ].name;
-			var errorTitle = 'Cannot Add "' + item.name + '" to Trade';
+			const appName = window.g_rgPartnerAppContextData[ item.appid ].name;
+			const errorTitle = 'Cannot Add "' + item.name + '" to Trade';
 			
 			switch( window.g_rgPartnerAppContextData[ item.appid ].trade_permissions )
 			{
@@ -62,10 +62,10 @@ var FixTradeOffer = function()
 	
 	window.ShowAlertDialog = function( strTitle, strDescription )
 	{
-		var eresult = strDescription.match( /\(([0-9]+)\)$/ );
+		const eresult = strDescription.match( /\(([0-9]+)\)$/ );
 		if( eresult !== null )
 		{
-			var explanation;
+			let explanation;
 			
 			switch( +eresult[ 1 ] )
 			{
@@ -95,7 +95,7 @@ GetOption( { 'enhancement-tradeoffer-no-gift-confirm': null }, function( items )
 	{
 		document.body.dataset.steamdbNoGiftConfirm = 'true';
 	}
-	var element = document.createElement( 'script' );
+	const element = document.createElement( 'script' );
 	
 	element.id = 'steamdb_fix_tradeoffers';
 	element.type = 'text/javascript';

@@ -1,6 +1,6 @@
 'use strict';
 
-var element = document.getElementById( 'steamdb-extension-protip' );
+let element = document.getElementById( 'steamdb-extension-protip' );
 
 if( element )
 {
@@ -14,7 +14,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		return;
 	}
 	
-	var OnDataLoaded = function( data )
+	const OnDataLoaded = function( data )
 	{
 		element = document.createElement( 'script' );
 		element.id = 'steamdb_userdata_loaded';

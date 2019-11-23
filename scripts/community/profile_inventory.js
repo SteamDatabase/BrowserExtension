@@ -13,7 +13,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 	{
 		if( items[ 'enhancement-inventory-sidebar' ] )
 		{
-			var style = document.createElement( 'link' );
+			const style = document.createElement( 'link' );
 			style.id = 'steamdb_inventory_sidebar';
 			style.type = 'text/css';
 			style.rel = 'stylesheet';
@@ -47,7 +47,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 			document.body.dataset.steamdbNoSellReload = 'true';
 		}
 		
-		var element = document.createElement( 'script' );
+		const element = document.createElement( 'script' );
 		element.id = 'steamdb_inventory_hook';
 		element.type = 'text/javascript';
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );

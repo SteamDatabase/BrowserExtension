@@ -3,11 +3,11 @@
 
 'use strict';
 
-var CurrentAppID;
+let CurrentAppID;
 
 function GetAppIDFromUrl( url )
 {
-	var appid = url.match( /\/(app|sub|bundle|friendsthatplay|gamecards|recommended)\/([0-9]{1,7})/ );
+	const appid = url.match( /\/(app|sub|bundle|friendsthatplay|gamecards|recommended)\/([0-9]{1,7})/ );
 	
 	return appid ? parseInt( appid[ 2 ], 10 ) : -1;
 }

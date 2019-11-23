@@ -4,7 +4,7 @@ GetOption( { 'enhancement-market-ssa': true }, function( items )
 {
 	if( items[ 'enhancement-market-ssa' ] )
 	{
-		var element = document.getElementById( 'market_buynow_dialog_accept_ssa' );
+		let element = document.getElementById( 'market_buynow_dialog_accept_ssa' );
 		
 		if( element )
 		{

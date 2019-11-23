@@ -126,7 +126,7 @@ function GetOption( items, callback )
 
 function SetOption( option, value )
 {
-	var chromepls = {}; chromepls[ option ] = value;
+	const chromepls = {}; chromepls[ option ] = value;
 
 	if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{

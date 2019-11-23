@@ -39,11 +39,11 @@
 		
 		window.jQuery.post( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
 		{
-			var requests = [];
-			var done = 0;
-			var errorShown;
+			const requests = [];
+			let done = 0;
+			let errorShown;
 			
-			var requestDone = function( )
+			const requestDone = function( )
 			{
 				if( errorShown )
 				{
@@ -54,7 +54,7 @@
 				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Exploring the queue...', 'Request ' + ++done + ' of ' + data.queue.length );
 			};
 
-			var requestFail = function( )
+			const requestFail = function( )
 			{
 				if( errorShown )
 				{
@@ -67,9 +67,9 @@
 				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to clear queue item #' + ++done + '. Will try again soon.' );
 			};
 
-			for( var i = 0; i < data.queue.length; i++ )
+			for( let i = 0; i < data.queue.length; i++ )
 			{
-				var request = window.jQuery.post( 'https://store.steampowered.com/app/10', { appid_to_clear_from_queue: data.queue[ i ], sessionid: window.g_sessionID } );
+				const request = window.jQuery.post( 'https://store.steampowered.com/app/10', { appid_to_clear_from_queue: data.queue[ i ], sessionid: window.g_sessionID } );
 				
 				request.done( requestDone );
 				request.fail( requestFail );
@@ -77,7 +77,7 @@
 				requests.push( request );
 			}
 			
-			var callback = function()
+			const callback = function()
 			{
 				DiscoveryQueueModal.Dismiss();
 				

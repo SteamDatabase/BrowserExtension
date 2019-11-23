@@ -1,14 +1,14 @@
 'use strict';
 
-var progressInfo = document.querySelectorAll( '.progress_info_bold' );
+const progressInfo = document.querySelectorAll( '.progress_info_bold' );
 
 if( progressInfo.length > 0 )
 {
-	var apps = 0;
-	var drops = 0;
-	var match;
+	let apps = 0;
+	let drops = 0;
+	let match;
 	
-	for( var i = 0; i < progressInfo.length; i++ )
+	for( let i = 0; i < progressInfo.length; i++ )
 	{
 		match = progressInfo[ i ].textContent.match( /([0-9]+) card drops? remaining/ );
 		
@@ -26,11 +26,11 @@ if( progressInfo.length > 0 )
 	
 	if( apps > 0 )
 	{
-		var text = document.createElement( 'span' );
+		const text = document.createElement( 'span' );
 		text.className = 'steamdb_drops_remaining';
 		text.appendChild( document.createTextNode( drops + ' drops remaining across ' + apps + ' apps' + ( document.querySelector( '.pageLinks' ) ? ' on this page' : '' ) ) );
 		
-		var container = document.querySelector( '.badge_details_set_favorite' );
+		const container = document.querySelector( '.badge_details_set_favorite' );
 		
 		if( container )
 		{

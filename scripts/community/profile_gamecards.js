@@ -7,7 +7,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 		return;
 	}
 	
-	var profileTexture = document.querySelector( '.profile_small_header_texture' );
+	const profileTexture = document.querySelector( '.profile_small_header_texture' );
 	
 	if( !profileTexture )
 	{
@@ -15,14 +15,14 @@ GetOption( { 'button-gamecards': true }, function( items )
 	}
 	
 	// Container
-	var container = document.createElement( 'div' );
+	const container = document.createElement( 'div' );
 	container.className = 'profile_small_header_additional steamdb';
 	
 	// Store button
-	var span = document.createElement( 'span' );
+	let span = document.createElement( 'span' );
 	span.appendChild( document.createTextNode( 'Store Page' ) );
 	
-	var link = document.createElement( 'a' );
+	let link = document.createElement( 'a' );
 	link.rel = 'noopener';
 	link.className = 'btnv6_blue_hoverfade btn_medium';
 	link.href = 'https://store.steampowered.com/app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
@@ -31,7 +31,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	container.insertBefore( link, container.firstChild );
 	
 	// SteamDB button
-	var image = document.createElement( 'img' );
+	const image = document.createElement( 'img' );
 	image.className = 'ico16';
 	image.src = GetLocalResource( 'icons/white.svg' );
 	

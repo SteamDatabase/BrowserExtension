@@ -7,14 +7,14 @@ GetOption( { 'button-sub': true }, function( items )
 		return;
 	}
 	
-	var container = document.querySelector( '.game_meta_data' );
+	const container = document.querySelector( '.game_meta_data' );
 	
 	if( container )
 	{
-		var element = document.createElement( 'span' );
+		let element = document.createElement( 'span' );
 		element.appendChild( document.createTextNode( 'View on Steam Database' ) );
 		
-		var link = document.createElement( 'a' );
+		const link = document.createElement( 'a' );
 		link.rel = 'noopener';
 		link.className = 'action_btn';
 		link.href = GetHomepage() + 'sub/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';

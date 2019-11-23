@@ -1,10 +1,10 @@
 'use strict';
 
-var item = window.location.search.match( /[?&]for_item=([0-9]+)_([0-9]+)_([0-9]+)/ );
+const item = window.location.search.match( /[?&]for_item=([0-9]+)_([0-9]+)_([0-9]+)/ );
 
 if( item !== null )
 {
-	var InjectScript = function( appid, contextid, assetid )
+	const InjectScript = function( appid, contextid, assetid )
 	{
 		window.g_rgCurrentTradeStatus =
 		{
@@ -32,7 +32,7 @@ if( item !== null )
 		window.RedrawCurrentTradeStatus();
 	};
 	
-	var element = document.createElement( 'script' );
+	const element = document.createElement( 'script' );
 	element.id = 'steamdb_for_item';
 	element.type = 'text/javascript';
 	element.appendChild( document.createTextNode( '(' + InjectScript.toString() + '(' + item[ 1 ] + ',' + item[ 2 ] + ',' + item[ 3 ] + '))' ) );

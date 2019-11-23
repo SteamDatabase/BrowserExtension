@@ -1,10 +1,10 @@
 'use strict';
 
-var container = document.getElementById( 'error_box' );
+const container = document.getElementById( 'error_box' );
 
 if( container )
 {
-	var link = document.createElement( 'a' );
+	const link = document.createElement( 'a' );
 	link.rel = 'noopener';
 	link.className = 'steamdb_error_link';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
@@ -24,7 +24,7 @@ else
 		'steamdb-last-update': true,
 	}, function( items )
 	{
-		var link, element, image, container;
+		let link, element, image, container;
 
 		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
 		{
@@ -192,10 +192,10 @@ else
 			// Find each "add to cart" button
 			container = document.querySelectorAll( 'input[name="subid"]' );
 
-			var hasDropdowns = false;
-			var i = 0;
-			var subid = 0;
-			var subidElement;
+			let hasDropdowns = false;
+			let i = 0;
+			let subid = 0;
+			let subidElement;
 
 			for( i = 0; i < container.length; i++ )
 			{

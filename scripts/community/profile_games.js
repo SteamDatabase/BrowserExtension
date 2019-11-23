@@ -1,11 +1,11 @@
 'use strict';
 
-var text;
-var link;
-var element;
-var i;
-var appID;
-var dropdowns = document.querySelectorAll( '[id^=links_dropdown_]' );
+let text;
+let link;
+let element;
+let i;
+let appID;
+const dropdowns = document.querySelectorAll( '[id^=links_dropdown_]' );
 
 for( i = 0; i < dropdowns.length; i++ )
 {

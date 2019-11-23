@@ -8,10 +8,10 @@ GetOption( { 'button-gamehub': true }, function( items )
 		return;
 	}
 	
-	var element;
-	var link;
-	var image;
-	var container = document.querySelector( '.apphub_OtherSiteInfo' );
+	let element;
+	let link;
+	let image;
+	let container = document.querySelector( '.apphub_OtherSiteInfo' );
 	
 	if( container )
 	{
@@ -82,7 +82,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 			image.src = GetLocalResource( 'icons/white.svg' );
 			
 			// image container
-			var actionItemIcon = document.createElement( 'div' );
+			const actionItemIcon = document.createElement( 'div' );
 			actionItemIcon.className = 'actionItemIcon';
 			actionItemIcon.appendChild( image );
 			
