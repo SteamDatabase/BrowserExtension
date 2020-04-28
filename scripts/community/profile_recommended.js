@@ -1,9 +1,19 @@
 'use strict';
 
-const container = document.querySelector( '.review_app_actions' );
-
-if( container )
+GetOption( { 'button-gamehub': true }, function( items )
 {
+	if( !items[ 'button-gamehub' ] )
+	{
+		return;
+	}
+	
+	const container = document.querySelector( '.review_app_actions' );
+
+	if( !container )
+	{
+		return;
+	}
+	
 	// image
 	const image = document.createElement( 'img' );
 	image.className = 'toolsIcon steamdb_ogg_icon';
@@ -18,4 +28,4 @@ if( container )
 	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
 	
 	container.insertBefore( link, null );
-}
+} );
