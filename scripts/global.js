@@ -9,15 +9,11 @@ if( document.title === 'Sorry!' || document.title === 'Error' )
 	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
 	
 	const container = document.createElement( 'div' );
-	container.className = 'steamdb_downtime_container';
+	container.className = 'steamdb_downtime';
 	container.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
 	container.appendChild( link );
 	
-	const wrapper = document.createElement( 'div' );
-	wrapper.className = 'steamdb_downtime';
-	wrapper.appendChild( container );
-	
-	document.body.insertBefore( wrapper, document.body.firstChild );
+	document.body.insertBefore( container, document.body.firstChild );
 	
 	document.body.style.margin = 0;
 }
