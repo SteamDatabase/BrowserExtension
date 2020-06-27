@@ -11,12 +11,19 @@
 	button.className = 'btnv6_blue_hoverfade btn_medium';
 
 	let span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Cheat the queue' ) );
+	span.appendChild( document.createTextNode( 'Cheat 3x' ) );
 	button.appendChild( span );
 	buttonContainer.appendChild( button );
 
+	const button1x = document.createElement( 'div' );
+	button1x.className = 'btnv6_blue_hoverfade btn_medium';
 	span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Discover the queue three times to get the sale cards' ) );
+	span.appendChild( document.createTextNode( 'Cheat 1x' ) );
+	button1x.appendChild( span );
+	buttonContainer.appendChild( button1x );
+
+	span = document.createElement( 'span' );
+	span.appendChild( document.createTextNode( 'Discover the queue to get the sale cards' ) );
 	buttonContainer.appendChild( span );
 
 	const container = document.querySelector( '.discovery_queue_customize_ctn' );
@@ -24,11 +31,17 @@
 
 	button.addEventListener( 'click', function( )
 	{
-		GenerateQueue( 0 );
+		GenerateQueue( 0, 3 );
 		buttonContainer.remove( );
 	}, false );
 
-	function GenerateQueue( queueNumber )
+	button1x.addEventListener( 'click', function( )
+	{
+		GenerateQueue( 0, 1 );
+		buttonContainer.remove( );
+	}, false );
+
+	function GenerateQueue( queueNumber, limit )
 	{
 		if( DiscoveryQueueModal )
 		{
@@ -81,9 +94,9 @@
 			{
 				DiscoveryQueueModal.Dismiss();
 				
-				if( queueNumber < 3 )
+				if( queueNumber < limit )
 				{
-					GenerateQueue( queueNumber );
+					GenerateQueue( queueNumber, limit );
 				}
 				else
 				{
@@ -99,7 +112,7 @@
 		} )
 			.fail( function()
 			{
-				setTimeout( () => GenerateQueue( queueNumber - 1 ), 1000 );
+				setTimeout( () => GenerateQueue( queueNumber - 1, limit ), 1000 );
 			
 				DiscoveryQueueModal.Dismiss();
 				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue #' + queueNumber + '. Trying again in a second.' );
