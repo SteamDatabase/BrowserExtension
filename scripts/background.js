@@ -54,18 +54,25 @@ function FetchSteamUserData( callback )
 					throw new Error( 'Are you logged on the Steam Store?' );
 				}
 
-				// null out some data we don't care about
-				response.preferences = null;
-				response.rgAutoGrantApps = null;
-				response.rgCreatorsFollowed = null;
-				response.rgCreatorsIgnored = null;
-				response.rgCurations = null;
-				response.rgCurators = null;
-				response.rgRecommendedTags = null;
+				// Only keep the data we actually need
+				const data =
+				{
+					rgOwnedPackages: response.rgOwnedPackages,
+					rgOwnedApps: response.rgOwnedApps,
 
-				callback( { data: response } );
+					rgPackagesInCart: response.rgPackagesInCart,
+					rgAppsInCart: response.rgAppsInCart,
 
-				SetOption( 'userdata.stored', JSON.stringify( response ) );
+					rgIgnoredApps: response.rgIgnoredApps,
+					rgIgnoredPackages: response.rgIgnoredPackages,
+
+					rgFollowedApps: response.rgFollowedApps,
+					rgWishlist: response.rgWishlist,
+				};
+
+				callback( { data: data } );
+
+				SetOption( 'userdata.stored', JSON.stringify( data ) );
 			} )
 			.catch( ( error ) =>
 			{
