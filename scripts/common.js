@@ -57,13 +57,20 @@ function GetLocalResource( res )
 
 function SendMessageToBackgroundScript( message, callback )
 {
-	if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+	try
 	{
-		return chrome.runtime.sendMessage( message, callback );
+		if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+		{
+			return chrome.runtime.sendMessage( message, callback );
+		}
+		else if( typeof browser !== 'undefined' )
+		{
+			return browser.runtime.sendMessage( message, callback );
+		}
 	}
-	else if( typeof browser !== 'undefined' )
+	catch( error )
 	{
-		return browser.runtime.sendMessage( message, callback );
+		callback( { success: false, error: error.message } );
 	}
 }
 
