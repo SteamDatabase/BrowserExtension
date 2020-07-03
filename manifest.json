@@ -85,6 +85,7 @@
 				"https://store.steampowered.com/login/*",
 				"https://store.steampowered.com/join/*",
 				"https://store.steampowered.com/api/*",
+				"https://store.steampowered.com/actions/*",
 				"https://store.steampowered.com/dynamicstore/*",
 				"https://store.steampowered.com/checkout*",
 				"https://store.steampowered.com/widget/*",
