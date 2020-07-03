@@ -16,6 +16,7 @@
 	for( let i = 0; i < SteamDB.ExtensionUserdataLoaded.length; i++ )
 	{
 		SteamDB.ExtensionUserdataLoaded[ i ]( data, {
+			canHandleStoreButtons: true,
 			hideNotInterested: hideNotInterested,
 		} );
 	}
