@@ -116,7 +116,7 @@ function FetchSteamUserData( callback )
 
 function GetCurrentPlayers( appid, callback )
 {
-	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${encodeURIComponent( appid )}&source=extension_steam_store` )
+	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}&source=extension_steam_store` )
 		.then( ( response ) => response.json() )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
@@ -124,7 +124,7 @@ function GetCurrentPlayers( appid, callback )
 
 function GetPrice( request, callback )
 {
-	let url = `https://steamdb.info/api/ExtensionGetPrice/?appid=${encodeURIComponent( request.appid )}&currency=${encodeURIComponent( request.currency )}`;
+	let url = `https://steamdb.info/api/ExtensionGetPrice/?appid=${parseInt( request.appid, 10 )}&currency=${encodeURIComponent( request.currency )}`;
 
 	if( request.country )
 	{
@@ -140,28 +140,28 @@ function GetPrice( request, callback )
 function StoreWishlistAdd( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', appid );
+	formData.set( 'appid', parseInt( appid, 10 ) );
 	ExecuteStoreApiCall( 'api/addtowishlist', formData, callback );
 }
 
 function StoreWishlistRemove( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', appid );
+	formData.set( 'appid', parseInt( appid, 10 ) );
 	ExecuteStoreApiCall( 'api/removefromwishlist', formData, callback );
 }
 
 function StoreFollow( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', appid );
+	formData.set( 'appid', parseInt( appid, 10 ) );
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
 
 function StoreUnfollow( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', appid );
+	formData.set( 'appid', parseInt( appid, 10 ) );
 	formData.set( 'unfollow', 1 );
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
@@ -169,7 +169,7 @@ function StoreUnfollow( appid, callback )
 function StoreIgnore( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', appid );
+	formData.set( 'appid', parseInt( appid, 10 ) );
 	formData.set( 'ignore_reason', 0 );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
@@ -177,7 +177,7 @@ function StoreIgnore( appid, callback )
 function StoreUnignore( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', appid );
+	formData.set( 'appid', parseInt( appid, 10 ) );
 	formData.set( 'remove', 1 );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
