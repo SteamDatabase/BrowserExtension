@@ -1,4 +1,5 @@
 let runtimeObj;
+let storeSessionId;
 
 if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 {
@@ -30,6 +31,12 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
 		case 'GetCurrentPlayers': GetCurrentPlayers( request.appid, callback ); return true;
 		case 'GetPrice': GetPrice( request, callback ); return true;
+		case 'StoreWishlistAdd': StoreWishlistAdd( request.appid, callback ); return true;
+		case 'StoreWishlistRemove': StoreWishlistRemove( request.appid, callback ); return true;
+		case 'StoreFollow': StoreFollow( request.appid, callback ); return true;
+		case 'StoreUnfollow': StoreUnfollow( request.appid, callback ); return true;
+		case 'StoreIgnore': StoreIgnore( request.appid, callback ); return true;
+		case 'StoreUnignore': StoreUnignore( request.appid, callback ); return true;
 	}
 
 	return false;
@@ -127,6 +134,121 @@ function GetPrice( request, callback )
 	fetch( url )
 		.then( ( response ) => response.json() )
 		.then( callback )
+		.catch( ( error ) => callback( { success: false, error: error.message } ) );
+}
+
+function StoreWishlistAdd( appid, callback )
+{
+	const formData = new FormData();
+	formData.set( 'appid', appid );
+	ExecuteStoreApiCall( 'api/addtowishlist', formData, callback );
+}
+
+function StoreWishlistRemove( appid, callback )
+{
+	const formData = new FormData();
+	formData.set( 'appid', appid );
+	ExecuteStoreApiCall( 'api/removefromwishlist', formData, callback );
+}
+
+function StoreFollow( appid, callback )
+{
+	const formData = new FormData();
+	formData.set( 'appid', appid );
+	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
+}
+
+function StoreUnfollow( appid, callback )
+{
+	const formData = new FormData();
+	formData.set( 'appid', appid );
+	formData.set( 'unfollow', 1 );
+	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
+}
+
+function StoreIgnore( appid, callback )
+{
+	const formData = new FormData();
+	formData.set( 'appid', appid );
+	formData.set( 'ignore_reason', 0 );
+	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
+}
+
+function StoreUnignore( appid, callback )
+{
+	const formData = new FormData();
+	formData.set( 'appid', appid );
+	formData.set( 'remove', 1 );
+	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
+}
+
+function ExecuteStoreApiCall( path, formData, callback )
+{
+	GetStoreSessionID( ( session ) =>
+	{
+		if( !session.success )
+		{
+			callback( session );
+			return;
+		}
+
+		formData.set( 'sessionid', session.sessionID );
+
+		fetch( `https://store.steampowered.com/${path}`, {
+			method: 'POST',
+			body: formData,
+		} )
+			.then( ( response ) => response.json() )
+			.then( ( response ) =>
+			{
+				if( path === 'explore/followgame/' )
+				{
+					// This API returns just true/false instead of an object
+					response = {
+						success: response === true,
+					};
+				}
+
+				if( response && response.success )
+				{
+					callback( { success: true } );
+
+					InvalidateCache();
+				}
+				else
+				{
+					callback( { success: false, error: 'Failed to add to do action. Are you logged in on the Steam store?' } );
+				}
+			} )
+			.catch( ( error ) => callback( { success: false, error: error.message } ) );
+	} );
+}
+
+function GetStoreSessionID( callback )
+{
+	if( storeSessionId )
+	{
+		callback( { success: true, sessionID: storeSessionId } );
+		return;
+	}
+
+	fetch( 'https://store.steampowered.com/account/preferences' )
+		.then( ( response ) => response.text() )
+		.then( ( response ) =>
+		{
+			const session = response.match( /g_sessionID = "(\w+)";/ );
+
+			if( session && session[ 1 ] )
+			{
+				storeSessionId = session[ 1 ];
+
+				callback( { success: true, sessionID: storeSessionId } );
+			}
+			else
+			{
+				callback( { success: false, error: 'Failed to failed sessionid' } );
+			}
+		} )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
