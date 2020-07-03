@@ -7,6 +7,21 @@ if( element )
 	element.setAttribute( 'hidden', true );
 }
 
+window.addEventListener( 'message', ( request ) =>
+{
+	if( request && request.data && request.data.type === 'steamdb:extension-query' && request.data.contentScriptQuery )
+	{
+		SendMessageToBackgroundScript( request.data, ( response ) =>
+		{
+			window.postMessage( {
+				type: 'steamdb:extension-response',
+				request: request.data,
+				response: response,
+			} );
+		} );
+	}
+} );
+
 GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, function( items )
 {
 	if( !items[ 'steamdb-highlight' ] )
