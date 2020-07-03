@@ -63,8 +63,8 @@ function FetchSteamUserData( callback )
 					rgPackagesInCart: response.rgPackagesInCart || [],
 					rgAppsInCart: response.rgAppsInCart || [],
 
-					rgIgnoredApps: response.rgIgnoredApps || [],
-					rgIgnoredPackages: response.rgIgnoredPackages || [],
+					rgIgnoredApps: response.rgIgnoredApps || {},
+					rgIgnoredPackages: response.rgIgnoredPackages || {},
 
 					rgFollowedApps: response.rgFollowedApps || [],
 					rgWishlist: response.rgWishlist || [],
