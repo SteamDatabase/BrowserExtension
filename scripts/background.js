@@ -57,17 +57,17 @@ function FetchSteamUserData( callback )
 				// Only keep the data we actually need
 				const data =
 				{
-					rgOwnedPackages: response.rgOwnedPackages,
-					rgOwnedApps: response.rgOwnedApps,
+					rgOwnedPackages: response.rgOwnedPackages || [],
+					rgOwnedApps: response.rgOwnedApps || [],
 
-					rgPackagesInCart: response.rgPackagesInCart,
-					rgAppsInCart: response.rgAppsInCart,
+					rgPackagesInCart: response.rgPackagesInCart || [],
+					rgAppsInCart: response.rgAppsInCart || [],
 
-					rgIgnoredApps: response.rgIgnoredApps,
-					rgIgnoredPackages: response.rgIgnoredPackages,
+					rgIgnoredApps: response.rgIgnoredApps || [],
+					rgIgnoredPackages: response.rgIgnoredPackages || [],
 
-					rgFollowedApps: response.rgFollowedApps,
-					rgWishlist: response.rgWishlist,
+					rgFollowedApps: response.rgFollowedApps || [],
+					rgWishlist: response.rgWishlist || [],
 				};
 
 				callback( { data: data } );
