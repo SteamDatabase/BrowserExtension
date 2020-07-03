@@ -21,6 +21,7 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 {
 	switch( request.contentScriptQuery )
 	{
+		case 'InvalidateCache': InvalidateCache(); callback(); return true;
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
 		case 'GetCurrentPlayers': GetCurrentPlayers( request.appid, callback ); return true;
 		case 'GetPrice': GetPrice( request, callback ); return true;
@@ -28,6 +29,11 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 
 	return false;
 } );
+
+function InvalidateCache()
+{
+	SetOption( 'userdata.cached', Date.now() );
+}
 
 function FetchSteamUserData( callback )
 {
@@ -76,7 +82,7 @@ function FetchSteamUserData( callback )
 			} )
 			.catch( ( error ) =>
 			{
-				SetOption( 'userdata.cached', Date.now() );
+				InvalidateCache();
 
 				GetOption( { 'userdata.stored': false }, function( data )
 				{
@@ -101,7 +107,7 @@ function GetCurrentPlayers( appid, callback )
 	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${encodeURIComponent( appid )}&source=extension_steam_store` )
 		.then( ( response ) => response.json() )
 		.then( callback )
-		.catch( ( error ) => callback( { success: false, error: error } ) );
+		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
 function GetPrice( request, callback )
@@ -116,7 +122,7 @@ function GetPrice( request, callback )
 	fetch( url )
 		.then( ( response ) => response.json() )
 		.then( callback )
-		.catch( ( error ) => callback( { success: false, error: error } ) );
+		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
 function GetOption( items, callback )
