@@ -48,6 +48,7 @@
 		"scripts/steamdb/loader.js",
 		"scripts/community/inventory.js",
 		"scripts/community/agecheck_injected.js",
+		"scripts/store/invalidate_cache_injected.js",
 		"scripts/store/explore_injected.js",
 		"scripts/store/registerkey_injected.js",
 		"scripts/store/subscriptions.js"
@@ -95,7 +96,8 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/global.js"
+				"scripts/global.js",
+				"scripts/store/invalidate_cache.js"
 			],
 			"css":
 			[

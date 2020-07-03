@@ -19,6 +19,11 @@ runtimeObj.onInstalled.addListener( ( event ) =>
 
 runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 {
+	if( !Object.hasOwnProperty.call( request, 'contentScriptQuery' ) )
+	{
+		return false;
+	}
+
 	switch( request.contentScriptQuery )
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
