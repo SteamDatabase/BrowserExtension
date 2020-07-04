@@ -4,10 +4,12 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
+		"build": "node build.js",
 		"test": "eslint .",
 		"fix": "eslint . --fix"
 	},
 	"devDependencies": {
+		"archiver": "^4.0.1",
 		"eslint": "^7.3.1",
 		"eslint-config-standard": "^14.1.0",
 		"eslint-plugin-import": "^2.22.0",
