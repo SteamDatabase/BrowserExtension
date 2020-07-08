@@ -341,6 +341,9 @@ else
 			}
 		}
 	} );
+
+	// Valve does not invalidate cache for follow button, so we catch it here
+	FollowInvalidateCache();
 }
 
 function DrawOnlineStatsWidget( items )
@@ -486,4 +489,30 @@ function DrawOnlineStatsWidget( items )
 			}
 		}
 	} );
+}
+
+function FollowInvalidateCache()
+{
+	BindFollowClick( document.querySelector( '.queue_control_button.queue_btn_follow .queue_btn_inactive' ) );
+	BindFollowClick( document.querySelector( '.queue_control_button.queue_btn_follow .queue_btn_active' ) );
+
+	function BindFollowClick( el )
+	{
+		if( !el )
+		{
+			return;
+		}
+
+		el.addEventListener( 'click', () =>
+		{
+			WriteLog( 'Invalidating userdata cache (follow button clicked)' );
+
+			SendMessageToBackgroundScript( {
+				contentScriptQuery: 'InvalidateCache',
+			}, () => 
+			{
+				// noop
+			} );
+		} );
+	}
 }
