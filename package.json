@@ -10,7 +10,7 @@
 	},
 	"devDependencies": {
 		"archiver": "^4.0.1",
-		"eslint": "^7.3.1",
+		"eslint": "^7.4.0",
 		"eslint-config-standard": "^14.1.0",
 		"eslint-plugin-import": "^2.22.0",
 		"eslint-plugin-node": "^11.0.0",
