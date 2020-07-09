@@ -2,6 +2,11 @@
 
 const FixTradeOffer = function()
 {
+	if( !window.CTradeOfferStateManager ) 
+	{
+		return;
+	}
+
 	const originalToggleReady = window.ToggleReady;
 	window.ToggleReady = function( ready )
 	{
