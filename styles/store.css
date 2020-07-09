@@ -13,7 +13,7 @@ a.steamdb_link:hover {
 
 .game_purchase_action .steamdb_link {
 	float: left;
-    margin-top: 8px;
+	margin-top: 8px;
 }
 
 .btn_steamdb .ico16 {
@@ -66,18 +66,18 @@ a.steamdb_link:hover {
 
 .steamdb_prices {
 	background-color: rgba( 0, 0, 0, 0.2 );
-    margin-bottom: 20px;
-	line-height: 3;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 10px 16px;
 	font-family: "Motiva Sans", sans-serif;
-	display: block;
+	display: flex;
 }
 
 .steamdb_prices img {
+	align-self: center;
 	width: 16px;
 	height: 16px;
-	padding-left: 17px;
-    padding-right: 13px;
-	vertical-align: middle;
+	padding-right: 10px;
 }
 
 .steamdb_prices a {
