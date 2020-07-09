@@ -67,7 +67,6 @@ p {
 	margin-left: -1rem;
 	margin-right: -1rem;
 	padding-top: 2rem;
-	text-align: center;
 	border-top: 1px solid #0197cf;
 	color: #34c8fe;
 }
@@ -81,6 +80,7 @@ p {
 }
 
 .footer p {
+	text-align: center;
 	margin-bottom: .5rem;
 }
 
