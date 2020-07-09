@@ -1,6 +1,6 @@
 'use strict';
 
-let element = document.getElementById( 'steamdb-extension-protip' );
+const element = document.getElementById( 'steamdb-extension-protip' );
 
 if( element )
 {
@@ -31,14 +31,13 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	
 	const OnDataLoaded = function( data )
 	{
-		element = document.createElement( 'script' );
-		element.id = 'steamdb_userdata_loaded';
-		element.type = 'text/javascript';
-		element.src = GetLocalResource( 'scripts/steamdb/loader.js' );
-		element.dataset.data = JSON.stringify( data );
-		element.dataset.hideNotInterested = !!items[ 'steamdb-hide-not-interested' ];
-		
-		document.head.appendChild( element );
+		window.postMessage( {
+			type: 'steamdb:extension-loaded',
+			data: data,
+			options: {
+				hideNotInterested: !!items[ 'steamdb-hide-not-interested' ],
+			},
+		} );
 	};
 	
 	SendMessageToBackgroundScript( {

@@ -45,7 +45,6 @@
 		
 		"styles/inventory-sidebar.css",
 		
-		"scripts/steamdb/loader.js",
 		"scripts/community/inventory.js",
 		"scripts/community/agecheck_injected.js",
 		"scripts/store/invalidate_cache_injected.js",
