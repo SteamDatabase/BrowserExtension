@@ -47,6 +47,7 @@
 		
 		"scripts/community/inventory.js",
 		"scripts/community/agecheck_injected.js",
+		"scripts/community/tradeoffer_injected.js",
 		"scripts/store/invalidate_cache_injected.js",
 		"scripts/store/explore_injected.js",
 		"scripts/store/registerkey_injected.js",
