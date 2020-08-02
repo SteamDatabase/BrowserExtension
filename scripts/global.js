@@ -1,7 +1,7 @@
 'use strict';
 
 // There's no easier way to check if we're on error page :(
-if( document.title === 'Sorry!' || document.title === 'Error' )
+if( document.title === 'Sorry!' || document.title === 'Error' || document.title === '502 Bad Gateway' )
 {
 	const link = document.createElement( 'a' );
 	link.rel = 'noopener';
