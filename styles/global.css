@@ -13,6 +13,11 @@
 	color: #FFEE58;
 }
 
+.steamdb_downtime a:focus,
+.steamdb_downtime a:hover {
+	color: #99fff5;
+}
+
 .steamdb_trade_error {
 	margin-top: 3em;
 	margin-bottom: 1em;
