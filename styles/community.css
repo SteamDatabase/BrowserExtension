@@ -67,6 +67,15 @@ a.apphub_NumInApp:hover {
 	top: 22px;
 }
 
+.steamdb_achievement_spoiler {
+	color: #e1e1e1;
+	filter: brightness(3) blur(6px);
+}
+
+.achieveRow:hover .steamdb_achievement_spoiler {
+	filter: unset;
+}
+
 .tab.steamdb_stats_tab {
 	float: right;
 }
