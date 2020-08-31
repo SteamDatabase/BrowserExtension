@@ -17,7 +17,7 @@ a.steamdb_link:hover {
 }
 
 @media (min-width: 600px) {
-	.game_area_purchase_game_dropdown .steamdb_link {
+	.game_purchase_sub_dropdown .steamdb_link {
 		position: absolute;
 		bottom: -11px;
 		left: 16px;
