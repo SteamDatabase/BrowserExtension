@@ -1,5 +1,5 @@
 # Steam Database Extension
-
+It's the best idea and useful for the users for extensions
 Adds Steam Database links on various pages in the Steam Community and Store.
 Also highlights owned and wished products on steamdb.info.
 
