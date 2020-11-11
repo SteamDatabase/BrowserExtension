@@ -42,7 +42,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	link = document.createElement( 'a' );
 	link.rel = 'noopener';
 	link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/communityitems/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( span );
 	
 	container.insertBefore( link, container.firstChild );
