@@ -35,3 +35,4 @@ rules:
   space-before-function-paren: [error, never]
   space-in-parens: [error, always]
   standard/no-callback-literal: off
+  node/no-callback-literal: off
