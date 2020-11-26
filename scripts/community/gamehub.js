@@ -18,7 +18,7 @@ GetOption( {
 		{
 			element = document.querySelector( '.apphub_sectionTab' );
 			
-			CurrentAppID = element.href.match( /\/([0-9]{1,6})\/?/ );
+			CurrentAppID = element.href.match( /\/([0-9]+)\/?/ );
 			CurrentAppID = CurrentAppID ? CurrentAppID[ 1 ] : -1;
 		}
 		
@@ -103,7 +103,7 @@ GetOption( {
 				element = document.querySelector( 'a[href*="http://steamcommunity.com/app/"], a[href*="https://steamcommunity.com/app/"]' );
 				
 				// Let's just hope this doesn't break
-				CurrentAppID = element.href.match( /\/([0-9]{1,6})\/?/ )[ 1 ];
+				CurrentAppID = element.href.match( /\/([0-9]+)\/?/ )[ 1 ];
 			}
 			
 			// image

@@ -9,7 +9,7 @@ var CurrentAppID;
 
 function GetAppIDFromUrl( url )
 {
-	const appid = url.match( /\/(app|sub|bundle|friendsthatplay|gamecards|recommended)\/([0-9]{1,7})/ );
+	const appid = url.match( /\/(app|sub|bundle|friendsthatplay|gamecards|recommended)\/([0-9]+)/ );
 	
 	return appid ? parseInt( appid[ 2 ], 10 ) : -1;
 }
