@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"version": "2.8.2",
+	"version": "2.8.3",
 	"author": "Steam Database",
 	"name": "Steam Database",
 	"short_name": "SteamDB",
@@ -42,9 +42,9 @@
 		"icons/white.svg",
 		"icons/pcgamingwiki.svg",
 		"icons/image.svg",
-		
+
 		"styles/inventory-sidebar.css",
-		
+
 		"scripts/community/inventory.js",
 		"scripts/community/agecheck_injected.js",
 		"scripts/community/tradeoffer_injected.js",
@@ -72,9 +72,9 @@
 				"scripts/steamdb/global.js"
 			]
 		},
-		
-		
-		
+
+
+
 		{
 			"run_at": "document_end",
 			"matches":
@@ -250,9 +250,9 @@
 				"scripts/store/gifting.js"
 			]
 		},
-		
-		
-		
+
+
+
 		{
 			"run_at": "document_end",
 			"matches":
