@@ -3,6 +3,8 @@
 Adds Steam Database links on various pages in the Steam Community and Store.
 Also highlights owned and wished products on steamdb.info.
 
+![](https://steamdb.info/static/img/extension.png)
+
 ### Major features
 * Add SteamDB links across most Steam store and community pages
 * Highlight owned/wished/in cart games and packages on steamdb.info *(by fetching info from Steam store)*
@@ -14,6 +16,16 @@ Also highlights owned and wished products on steamdb.info.
 * Features: https://steamdb.info/extension/
 * Chrome Web Store: https://chrome.google.com/webstore/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon
 * Mozilla Addons: https://addons.mozilla.org/en-US/firefox/addon/steam-database/
+* Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/steam-database/hjknpdomhlodgaebegjopkmfafjpbblg
+
+### Contributing
+
+This extension does not have any build steps, and you can simply load the folder on the extensions page of your browser.
+
+When writing code, make sure to run our linter:
+1. Run `yarn` to install eslint
+2. Run `yarn test` which should report warnings
+3. Run `yarn fix` which should automatically fix most of the reported warnings
 
 ### License
 Code in this repository is governed by a BSD-style license that can be found in the [LICENSE](LICENSE) file.
