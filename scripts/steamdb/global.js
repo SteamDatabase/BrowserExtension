@@ -9,16 +9,39 @@ if( element )
 
 window.addEventListener( 'message', ( request ) =>
 {
-	if( request && request.data && request.data.type === 'steamdb:extension-query' && request.data.contentScriptQuery )
+	if( !request || !request.data )
 	{
-		SendMessageToBackgroundScript( request.data, ( response ) =>
+		return;
+	}
+
+	switch( request.data.type )
+	{
+		case 'steamdb:extension-query':
 		{
-			window.postMessage( {
-				type: 'steamdb:extension-response',
-				request: request.data,
-				response: response,
+			if( request.data.contentScriptQuery )
+			{
+				SendMessageToBackgroundScript( request.data, ( response ) =>
+				{
+					window.postMessage( {
+						type: 'steamdb:extension-response',
+						request: request.data,
+						response: response,
+					} );
+				} );
+			}
+			break;
+		}
+		case 'steamdb:extension-invalidate-cache':
+		{
+			WriteLog( 'Invalidating userdata cache' );
+			SendMessageToBackgroundScript( {
+				contentScriptQuery: 'InvalidateCache',
+			}, () => 
+			{
+				// noop
 			} );
-		} );
+			break;
+		}
 	}
 } );
 
