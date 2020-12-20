@@ -10,14 +10,14 @@ document.title === 'We Broke It' )
 	link.rel = 'noopener';
 	link.href = 'https://steamstat.us';
 	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
-	
+
 	const container = document.createElement( 'div' );
 	container.className = 'steamdb_downtime';
 	container.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
 	container.appendChild( link );
-	
+
 	document.body.insertBefore( container, document.body.firstChild );
-	
+
 	document.body.style.margin = 0;
 }
 else
@@ -27,18 +27,18 @@ else
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
 			const button = document.querySelector( '.header_installsteam_btn' );
-			
+
 			if( button )
 			{
 				button.setAttribute( 'hidden', true );
 				button.style.display = 'none';
 			}
 		}
-		
+
 		if( items[ 'enhancement-no-linkfilter' ] )
 		{
 			const links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
-			
+
 			for( let x = 0; x < links.length; x++ )
 			{
 				links[ x ].href = links[ x ].href.replace( /^https:\/\/steamcommunity\.com\/linkfilter\/(?:\?url=)?/, '' );

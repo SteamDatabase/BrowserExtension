@@ -36,7 +36,7 @@ window.addEventListener( 'message', ( request ) =>
 			WriteLog( 'Invalidating userdata cache' );
 			SendMessageToBackgroundScript( {
 				contentScriptQuery: 'InvalidateCache',
-			}, () => 
+			}, () =>
 			{
 				// noop
 			} );
@@ -51,7 +51,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 	{
 		return;
 	}
-	
+
 	const OnDataLoaded = function( data )
 	{
 		window.postMessage( {
@@ -62,7 +62,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			},
 		} );
 	};
-	
+
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'FetchSteamUserData',
 	}, ( response ) =>
@@ -70,7 +70,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		if( response.error )
 		{
 			WriteLog( 'Failed to load userdata', response.error );
-			
+
 			const warning = document.createElement( 'div' );
 			warning.className = 'extension-warning';
 
@@ -88,7 +88,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			warning.appendChild( btnDiv );
 			document.body.appendChild( warning );
 		}
-		
+
 		if( response.data )
 		{
 			OnDataLoaded( response.data );

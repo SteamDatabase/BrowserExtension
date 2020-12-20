@@ -47,22 +47,22 @@
 		{
 			DiscoveryQueueModal.Dismiss();
 		}
-		
+
 		DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Generating the queue...', 'Generating new discovery queue #' + ++queueNumber + '. This can fail if Steam is under high load.' );
-		
+
 		window.jQuery.post( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
 		{
 			const requests = [];
 			let done = 0;
 			let errorShown;
-			
+
 			const requestDone = function( )
 			{
 				if( errorShown )
 				{
 					return;
 				}
-				
+
 				DiscoveryQueueModal.Dismiss();
 				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Exploring the queue...', 'Request ' + ++done + ' of ' + data.queue.length );
 			};
@@ -73,9 +73,9 @@
 				{
 					return;
 				}
-				
+
 				errorShown = true;
-				
+
 				DiscoveryQueueModal.Dismiss();
 				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to clear queue item #' + ++done + '. Will try again soon.' );
 			};
@@ -83,17 +83,17 @@
 			for( let i = 0; i < data.queue.length; i++ )
 			{
 				const request = window.jQuery.post( 'https://store.steampowered.com/app/10', { appid_to_clear_from_queue: data.queue[ i ], sessionid: window.g_sessionID } );
-				
+
 				request.done( requestDone );
 				request.fail( requestFail );
-				
+
 				requests.push( request );
 			}
-			
+
 			const callback = function()
 			{
 				DiscoveryQueueModal.Dismiss();
-				
+
 				if( queueNumber < limit )
 				{
 					GenerateQueue( queueNumber, limit );
@@ -107,13 +107,13 @@
 					} );
 				}
 			};
-			
+
 			window.jQuery.when( ...requests ).then( callback, callback );
 		} )
 			.fail( function()
 			{
 				setTimeout( () => GenerateQueue( queueNumber - 1, limit ), 1000 );
-			
+
 				DiscoveryQueueModal.Dismiss();
 				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue #' + queueNumber + '. Trying again in a second.' );
 			} );

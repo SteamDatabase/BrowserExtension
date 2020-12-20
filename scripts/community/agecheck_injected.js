@@ -16,11 +16,11 @@
 		};
 
 		Object.defineProperty( window, 'g_CommunityPreferences', {
-			get() 
+			get()
 			{
 				return communityPreferences;
 			},
-			set( newVal ) 
+			set( newVal )
 			{
 				newVal.hide_adult_content_sex = 0;
 				newVal.hide_adult_content_violence = 0;
@@ -29,9 +29,9 @@
 		} );
 	}
 
-	const observer = new MutationObserver( function( mutations ) 
+	const observer = new MutationObserver( function( mutations )
 	{
-		mutations.forEach( function( mutation ) 
+		mutations.forEach( function( mutation )
 		{
 			if( !mutation.addedNodes )
 			{

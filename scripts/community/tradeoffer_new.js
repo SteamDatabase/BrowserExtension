@@ -28,14 +28,14 @@ if( item !== null )
 				ready: false,
 			},
 		};
-		
+
 		window.RedrawCurrentTradeStatus();
 	};
-	
+
 	const element = document.createElement( 'script' );
 	element.id = 'steamdb_for_item';
 	element.type = 'text/javascript';
 	element.appendChild( document.createTextNode( '(' + InjectScript.toString() + '(' + item[ 1 ] + ',' + item[ 2 ] + ',' + item[ 3 ] + '))' ) );
-	
+
 	document.head.appendChild( element );
 }

@@ -62,7 +62,7 @@ else
 		}
 
 		const badgeid = parseInt( badgeUrl[ 1 ], 10 );
-	
+
 		const container = document.createElement( 'div' );
 		container.className = 'profile_small_header_additional steamdb';
 

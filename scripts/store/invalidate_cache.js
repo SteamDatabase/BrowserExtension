@@ -21,7 +21,7 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 			WriteLog( 'Invalidating userdata cache' );
 			SendMessageToBackgroundScript( {
 				contentScriptQuery: 'InvalidateCache',
-			}, () => 
+			}, () =>
 			{
 				// noop
 			} );

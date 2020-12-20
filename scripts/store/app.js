@@ -248,7 +248,7 @@ else
 
 			// Link appid in demo download banner
 			element = document.querySelector( '.demo_above_purchase' );
-			
+
 			if( element )
 			{
 				subid = document.querySelector( '.game_purchase_action a' ).href.match( /\/install\/([0-9]+)/ )[ 1 ];
@@ -531,7 +531,7 @@ function FollowInvalidateCache()
 
 			SendMessageToBackgroundScript( {
 				contentScriptQuery: 'InvalidateCache',
-			}, () => 
+			}, () =>
 			{
 				// noop
 			} );

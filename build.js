@@ -15,9 +15,9 @@ output.on( 'close', () =>
 	console.log( archive.pointer() + ' total bytes' );
 } );
 
-archive.on( 'warning', err => 
+archive.on( 'warning', err =>
 {
-	throw err; 
+	throw err;
 } );
 
 archive.on( 'error', err =>

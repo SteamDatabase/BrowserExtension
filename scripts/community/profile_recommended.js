@@ -6,19 +6,19 @@ GetOption( { 'button-gamehub': true }, function( items )
 	{
 		return;
 	}
-	
+
 	const container = document.querySelector( '.review_app_actions' );
 
 	if( !container )
 	{
 		return;
 	}
-	
+
 	// image
 	const image = document.createElement( 'img' );
 	image.className = 'toolsIcon steamdb_ogg_icon';
 	image.src = GetLocalResource( 'icons/white.svg' );
-	
+
 	// link
 	const link = document.createElement( 'a' );
 	link.rel = 'noopener';
@@ -26,6 +26,6 @@ GetOption( { 'button-gamehub': true }, function( items )
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( image );
 	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
-	
+
 	container.insertBefore( link, null );
 } );

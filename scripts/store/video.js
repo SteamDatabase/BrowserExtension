@@ -6,9 +6,9 @@ GetOption( { 'button-video': true }, function( items )
 	{
 		return;
 	}
-	
+
 	const container = document.querySelector( '.game_details .block_content_inner' );
-	
+
 	if( container )
 	{
 		const link = document.createElement( 'a' );
@@ -16,7 +16,7 @@ GetOption( { 'button-video': true }, function( items )
 		link.className = 'action_btn';
 		link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		link.appendChild( document.createTextNode( 'View on Steam Database' ) );
-		
+
 		container.insertBefore( link, null );
 	}
 } );
