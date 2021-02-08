@@ -50,7 +50,7 @@
 
 		DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Generating the queue...', 'Generating new discovery queue #' + ++queueNumber + '. This can fail if Steam is under high load.' );
 
-		window.jQuery.post( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
+		window.jQuery.post( '/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
 		{
 			const requests = [];
 			let done = 0;
@@ -82,7 +82,7 @@
 
 			for( let i = 0; i < data.queue.length; i++ )
 			{
-				const request = window.jQuery.post( 'https://store.steampowered.com/app/10', { appid_to_clear_from_queue: data.queue[ i ], sessionid: window.g_sessionID } );
+				const request = window.jQuery.post( '/app/10', { appid_to_clear_from_queue: data.queue[ i ], sessionid: window.g_sessionID } );
 
 				request.done( requestDone );
 				request.fail( requestFail );
