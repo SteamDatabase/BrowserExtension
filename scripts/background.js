@@ -217,7 +217,7 @@ function ExecuteStoreApiCall( path, formData, callback )
 				}
 				else
 				{
-					callback( { success: false, error: 'Failed to do the action. Are you logged in on the Steam store?' } );
+					callback( { success: false, error: 'Failed to do the action. Are you logged in on the Steam store?\nThis item may not be available in your country.' } );
 				}
 			} )
 			.catch( ( error ) => callback( { success: false, error: error.message } ) );
