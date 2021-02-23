@@ -37,6 +37,7 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 		case 'StoreUnfollow': StoreUnfollow( request.appid, callback ); return true;
 		case 'StoreIgnore': StoreIgnore( request.appid, callback ); return true;
 		case 'StoreUnignore': StoreUnignore( request.appid, callback ); return true;
+		case 'StoreAddToCart': StoreAddToCart( request, callback ); return true;
 	}
 
 	return false;
@@ -180,6 +181,27 @@ function StoreUnignore( appid, callback )
 	formData.set( 'appid', parseInt( appid, 10 ) );
 	formData.set( 'remove', 1 );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
+}
+
+function StoreAddToCart( request, callback )
+{
+	const formData = new FormData();
+	formData.set( 'action', 'add_to_cart' );
+
+	if( request.subid )
+	{
+		formData.set( 'subid', parseInt( request.subid, 10 ) );
+	}
+	else if( request.bundleid )
+	{
+		formData.set( 'bundleid', parseInt( request.bundleid, 10 ) );
+	}
+	else
+	{
+		return;
+	}
+
+	ExecuteStoreApiCall( 'cart/addtocart', formData, callback );
 }
 
 function ExecuteStoreApiCall( path, formData, callback )
