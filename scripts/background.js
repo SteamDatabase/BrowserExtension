@@ -45,21 +45,36 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 	return false;
 } );
 
+function IsIncognito()
+{
+	if( typeof chrome !== 'undefined' && typeof chrome.extension !== 'undefined' )
+	{
+		return chrome.extension.inIncognitoContext;
+	}
+
+	return browser.extension.inIncognitoContext;
+}
+
 function InvalidateCache()
 {
-	SetOption( 'userdata.cached', Date.now() );
+	const keyCache = IsIncognito() ? 'incognito.userdata.cached' : 'userdata.cached';
+	SetOption( keyCache, Date.now() );
 }
 
 function FetchSteamUserData( callback )
 {
-	GetOption( { 'userdata.cached': Date.now() }, ( data ) =>
+	const incognito = IsIncognito();
+	const keyCache = incognito ? 'incognito.userdata.cached' : 'userdata.cached';
+	const keyStore = incognito ? 'incognito.userdata.stored' : 'userdata.stored';
+
+	GetOption( { keyCache: Date.now() }, ( data ) =>
 	{
 		const now = Date.now();
-		let cache = data[ 'userdata.cached' ];
+		let cache = data[ keyCache ];
 
 		if( now > cache + 3600000 )
 		{
-			SetOption( 'userdata.cached', now );
+			SetOption( keyCache, now );
 			cache = now;
 		}
 
@@ -94,22 +109,22 @@ function FetchSteamUserData( callback )
 
 				callback( { data: data } );
 
-				SetOption( 'userdata.stored', JSON.stringify( data ) );
+				SetOption( keyStore, JSON.stringify( data ) );
 			} )
 			.catch( ( error ) =>
 			{
 				InvalidateCache();
 
-				GetOption( { 'userdata.stored': false }, function( data )
+				GetOption( { keyStore: false }, function( data )
 				{
 					const response =
 					{
 						error: error.message,
 					};
 
-					if( data[ 'userdata.stored' ] )
+					if( data[ keyStore ] )
 					{
-						response.data = JSON.parse( data[ 'userdata.stored' ] );
+						response.data = JSON.parse( data[ keyStore ] );
 					}
 
 					callback( response );
