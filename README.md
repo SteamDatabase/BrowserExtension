@@ -14,6 +14,7 @@ Also highlights owned and wished products on steamdb.info.
 
 ### Links
 * Features: https://steamdb.info/extension/
+* Privacy Policy: https://steamdb.info/extension/#privacy
 * Chrome Web Store: https://chrome.google.com/webstore/detail/kdbmhfkmnlmbkgbabkdealhhbfhlmmon
 * Mozilla Addons: https://addons.mozilla.org/en-US/firefox/addon/steam-database/
 * Microsoft Edge: https://microsoftedge.microsoft.com/addons/detail/steam-database/hjknpdomhlodgaebegjopkmfafjpbblg
