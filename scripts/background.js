@@ -63,6 +63,7 @@ function FetchSteamUserData( callback )
 
 		fetch( `https://store.steampowered.com/dynamicstore/userdata/?_=${encodeURIComponent( cache )}`,
 			{
+				credentials: 'include',
 				cache: 'force-cache',
 			} )
 			.then( ( response ) => response.json() )
@@ -221,6 +222,7 @@ function ExecuteStoreApiCall( path, formData, callback )
 		formData.set( 'sessionid', session.sessionID );
 
 		fetch( `https://store.steampowered.com/${path}`, {
+			credentials: 'include',
 			method: 'POST',
 			body: formData,
 		} )
@@ -258,7 +260,9 @@ function GetStoreSessionID( callback )
 		return;
 	}
 
-	fetch( 'https://store.steampowered.com/account/preferences' )
+	fetch( 'https://store.steampowered.com/account/preferences', {
+		credentials: 'include',
+	} )
 		.then( ( response ) => response.text() )
 		.then( ( response ) =>
 		{
