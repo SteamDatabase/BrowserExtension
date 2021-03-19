@@ -3,16 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<title>SteamDB Extension Options</title>
-	
+
 	<link rel="stylesheet" href="wtf-forms.css">
 	<link rel="stylesheet" href="options.css">
 </head>
 <body>
 	<form class="container">
 		<h3>Buttons &amp; links</h3>
-		
+
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-app">
 			<span class="control-indicator"></span>
@@ -64,9 +64,9 @@
 			<span class="control-indicator"></span>
 			Add a calculator link on community profiles
 		</label>
-		
+
 		<h3>Inventory</h3>
-		
+
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-sidebar">
 			<span class="control-indicator"></span>
@@ -97,16 +97,16 @@
 			<span class="control-indicator"></span>
 			Automatically accept quick sell
 		</label>
-		
+
 		<h3>Trade Offers</h3>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-tradeoffer-no-gift-confirm">
 			<span class="control-indicator"></span>
 			Suppress "this trade appears suspicious" and "are you sure this is a gift?" trade offer alerts
 		</label>
-		
+
 		<h3>Enhancements</h3>
-		
+
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-market-ssa" checked>
 			<span class="control-indicator"></span>
@@ -116,6 +116,7 @@
 			<input type="checkbox" class="option-check" data-option="enhancement-skip-agecheck">
 			<span class="control-indicator"></span>
 			Skip age check gate
+			<span class="muted">(sets age and birthday cookies to always pass)</span>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-hide-install-button" checked>
@@ -161,9 +162,9 @@
 			<span class="control-indicator"></span>
 			Hide hidden achievements behind a spoiler element
 		</label>
-		
+
 		<h3>SteamDB Website</h3>
-		
+
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
 			<span class="control-indicator"></span>
@@ -176,12 +177,12 @@
 			Hide products on sales page that you are not interested in
 		</label>
 	</form>
-	
+
 	<footer class="footer">
 		<p>Made with 💙 by <a href="https://steamdb.info" target="_blank" rel="noopener">SteamDB</a> folks. It's <a href="https://github.com/SteamDatabase/BrowserExtension" target="_blank" rel="noopener">open source</a>.</p>
 		<p>Thanks to all the <a href="https://github.com/SteamDatabase/BrowserExtension/graphs/contributors" target="_blank" rel="noopener">contributors</a>!</p>
 	</footer>
-	
+
 	<script src="../scripts/common.js"></script>
 	<script src="options.js"></script>
 </body>
