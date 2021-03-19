@@ -117,7 +117,7 @@ function FetchSteamUserData( callback )
 
 function GetCurrentPlayers( appid, callback )
 {
-	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}&source=extension_steam_store`, {
+	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}`, {
 		credentials: 'omit',
 	} )
 		.then( ( response ) => response.json() )
