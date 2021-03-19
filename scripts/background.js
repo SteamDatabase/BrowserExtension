@@ -117,7 +117,9 @@ function FetchSteamUserData( callback )
 
 function GetCurrentPlayers( appid, callback )
 {
-	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}&source=extension_steam_store` )
+	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}&source=extension_steam_store`, {
+		credentials: 'omit',
+	} )
 		.then( ( response ) => response.json() )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
@@ -132,7 +134,9 @@ function GetPrice( request, callback )
 		url += `&country=${encodeURIComponent( request.country )}`;
 	}
 
-	fetch( url )
+	fetch( url, {
+		credentials: 'omit',
+	} )
 		.then( ( response ) => response.json() )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
