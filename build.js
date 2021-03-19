@@ -27,6 +27,7 @@ archive.on( 'error', err =>
 
 archive.pipe( output );
 
+archive.file( path.join( __dirname, 'LICENSE' ), { name: 'LICENSE' } );
 archive.file( path.join( __dirname, 'manifest.json' ), { name: 'manifest.json' } );
 archive.directory( path.join( __dirname, 'icons/' ), 'icons' );
 archive.directory( path.join( __dirname, 'options/' ), 'options' );
