@@ -276,7 +276,12 @@ function GetStoreSessionID( callback )
 			}
 			else
 			{
-				callback( { success: false, error: 'Failed to failed sessionid' } );
+				callback( {
+					success: false,
+					error: response.includes( 'login' )
+						? 'Failed to failed sessionid. It does not look like you are logged in to the Steam store.'
+						: 'Failed to failed sessionid. Something went horribly wrong, you should report this issue.',
+				} );
 			}
 		} )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
