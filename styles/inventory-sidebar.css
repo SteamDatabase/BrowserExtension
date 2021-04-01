@@ -1,61 +1,37 @@
-/*
- * Add hover state
- */
-a.games_list_tab:hover {
-	background: #333;
-}
-
-/*
- * Hide icon imperfections in corners
- */
-.games_list_tab_icon img {
-	border-radius: 3px;
-}
-
-/*
- * Make item number float on the right
- * also increase number width to fit numbers above 10k
- */
-.games_list_tab_number {
-	max-width: 40px;
-	float: right;
-}
-
-.games_list_tab_name {
-	max-width: 121px;
-}
-
 @media all and (min-width: 1450px) {
-	.games_list_tabs {
+	.games_list_tabs_ctn {
 		float: left;
 		width: 229px;
-		padding-top: 0;
 		margin-left: -259px;
 		border-radius: 3px;
-		border-bottom-color: #535353;
 	}
-	
+
+	.games_list_tabs {
+		border-radius: 3px;
+	}
+
 	#tabcontent_inventory {
 		float: right;
 		width: 924px;
+		margin-top: 0;
 	}
-	
-	.games_list_tab {
-		float: none !important;
+
+	.games_list_tab,
+	a.games_list_tab {
+		width: 100%;
+		float: none;
 		border-radius: 0 !important;
 	}
-	
+
 	.games_list_tab:first-child {
 		border-top: 0;
-		border-top-left-radius: 3px !important;
-		border-top-right-radius: 3px !important;
 	}
-	
+
 	.games_list_tab_separator,
 	.games_list_tab_row_separator {
 		display: none;
 	}
-	
+
 	.games_list_tab:after,
 	#mainContents:after {
 		content: "";
