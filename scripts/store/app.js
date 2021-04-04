@@ -268,6 +268,28 @@ else
 				element.querySelector( '.game_purchase_action' ).appendChild( link );
 			}
 
+			// Link appid in playtest banner
+			element = document.querySelector( '.game_area_purchase_game.pt_active' );
+
+			if( element )
+			{
+				subid = document.querySelector( '.game_purchase_action a' ).href.match( /\/run\/([0-9]+)/ )[ 1 ];
+
+				subidElement = document.createElement( 'span' );
+				subidElement.dataset.tooltipText = 'View on Steam Database';
+
+				link = document.createElement( 'a' );
+				link.rel = 'noopener';
+				link.className = 'btn_black btn_small steamdb_link';
+				link.appendChild( subidElement );
+
+				subidElement.textContent = 'App ' + subid;
+				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.appendChild( subidElement );
+
+				element.querySelector( '.game_purchase_action' ).appendChild( link );
+			}
+
 			container = document.querySelectorAll( 'input[name="bundleid"]' );
 
 			for( i = 0; i < container.length; i++ )
