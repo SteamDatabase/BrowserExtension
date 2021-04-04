@@ -38,6 +38,7 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 		case 'StoreIgnore': StoreIgnore( request.appid, callback ); return true;
 		case 'StoreUnignore': StoreUnignore( request.appid, callback ); return true;
 		case 'StoreAddToCart': StoreAddToCart( request, callback ); return true;
+		case 'StoreAddFreeLicense': StoreAddFreeLicense( request, callback ); return true;
 	}
 
 	return false;
@@ -209,7 +210,57 @@ function StoreAddToCart( request, callback )
 	ExecuteStoreApiCall( 'cart/addtocart', formData, callback );
 }
 
-function ExecuteStoreApiCall( path, formData, callback )
+function StoreAddFreeLicense( request, callback )
+{
+	const freeLicenseResponse = ( response ) =>
+	{
+		if( Array.isArray( response ) )
+		{
+			// This api returns [] on success
+			callback( { success: true } );
+
+			InvalidateCache();
+
+			return;
+		}
+
+		const resultCode = response?.purchaseresultdetail ?? null;
+		let message;
+
+		switch( resultCode )
+		{
+			case 9: message = 'This product is already available in your Steam library.'; break;
+			case 53: message = 'You got rate limited, try again in an hour.'; break;
+			default: message = resultCode === null
+				? 'There was a problem adding this product to your account.'
+				: `There was a problem adding this product to your account. PurchaseResultDetail=${resultCode}`;
+		}
+
+		callback( {
+			success: false,
+			error: message,
+		} );
+	};
+
+	if( request.subid )
+	{
+		const subid = parseInt( request.subid, 10 );
+		const formData = new FormData();
+		formData.set( 'ajax', 'true' );
+
+		ExecuteStoreApiCall( `checkout/addfreelicense/${subid}`, formData, freeLicenseResponse, true );
+	}
+	else if( request.bundleid )
+	{
+		const bundleid = parseInt( request.bundleid, 10 );
+		const formData = new FormData();
+		formData.set( 'ajax', 'true' );
+
+		ExecuteStoreApiCall( `checkout/addfreebundle/${bundleid}`, formData, freeLicenseResponse, true );
+	}
+}
+
+function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 {
 	GetStoreSessionID( ( session ) =>
 	{
@@ -229,6 +280,12 @@ function ExecuteStoreApiCall( path, formData, callback )
 			.then( ( response ) => response.json() )
 			.then( ( response ) =>
 			{
+				if( rawCallback )
+				{
+					callback( response );
+					return;
+				}
+
 				if( path === 'explore/followgame/' )
 				{
 					// This API returns just true/false instead of an object
