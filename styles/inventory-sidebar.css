@@ -1,9 +1,14 @@
 @media all and (min-width: 1450px) {
-	.games_list_tabs_ctn {
+	.tabitems_ctn {
 		float: left;
-		width: 229px;
+		width: 242px;
 		margin-left: -259px;
 		border-radius: 3px;
+	}
+
+	.games_list_separator {
+		margin-top: 0;
+		padding-bottom: 0;
 	}
 
 	.games_list_tabs {
