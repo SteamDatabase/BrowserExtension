@@ -24,9 +24,14 @@ Also highlights owned and wished products on steamdb.info.
 This extension does not have any build steps, and you can simply load the folder on the extensions page of your browser.
 
 When writing code, make sure to run our linter:
-1. Run `yarn` to install eslint
-2. Run `yarn test` which should report warnings
-3. Run `yarn fix` which should automatically fix most of the reported warnings
+1. Run `npm install` to install eslint
+2. Run `npm test` which should report warnings
+3. Run `npm run fix` which should automatically fix most of the reported warnings
+
+#### Making a release
+
+Run `npm run version 3.0.0` which updates `manifest.json`, creates a commit, creates a tag,
+and runs `npm run build` which creates a zip file with the release.
 
 ### License
 Code in this repository is governed by a BSD-style license that can be found in the [LICENSE](LICENSE) file.

@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "node build.js",
+		"version": "node version.js",
 		"test": "eslint .",
 		"fix": "eslint . --fix"
 	},
