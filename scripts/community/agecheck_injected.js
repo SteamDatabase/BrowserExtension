@@ -6,6 +6,12 @@
 	{
 		window.g_CommunityPreferences.hide_adult_content_sex = 0;
 		window.g_CommunityPreferences.hide_adult_content_violence = 0;
+
+		// The data may already exist, but before this function is called
+		window.CheckAppAgeGateBypass = function SteamDB_CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, callbackFunc )
+		{
+			callbackFunc( false );
+		};
 	}
 	else
 	{
@@ -25,6 +31,11 @@
 				newVal.hide_adult_content_sex = 0;
 				newVal.hide_adult_content_violence = 0;
 				communityPreferences = newVal;
+
+				window.CheckAppAgeGateBypass = function SteamDB_CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, callbackFunc )
+				{
+					callbackFunc( false );
+				};
 			},
 		} );
 	}
