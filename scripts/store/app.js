@@ -85,7 +85,14 @@ else
 			{
 				if( !response || !response.success )
 				{
-					WriteLog( 'GetPrice failed to load' );
+					if( response && response.error )
+					{
+						WriteLog( `GetPrice failed to load: ${response.error}` );
+					}
+					else
+					{
+						WriteLog( 'GetPrice failed to load' );
+					}
 
 					return;
 				}
@@ -476,7 +483,14 @@ function DrawOnlineStatsWidget( items )
 	{
 		if( !response || !response.success )
 		{
-			WriteLog( 'GetCurrentPlayers failed to load' );
+			if( response && response.error )
+			{
+				WriteLog( `GetCurrentPlayers failed to load: ${response.error}` );
+			}
+			else
+			{
+				WriteLog( 'GetCurrentPlayers failed to load' );
+			}
 
 			block.remove();
 
