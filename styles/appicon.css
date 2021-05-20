@@ -2,11 +2,12 @@
 .apphub_AppIcon {
 	display: block;
 	position: relative;
-	margin-right: 10px;
 	height: 32px;
 	width: 32px;
 	float: left;
+	margin-top: 4px;
 	margin-left: 12px;
+	margin-right: 10px;
 }
 
 .apphub_AppIcon > img {
