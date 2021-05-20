@@ -1,0 +1,20 @@
+.apphub_HomeHeaderContent .apphub_AppIcon,
+.apphub_AppIcon {
+	display: block;
+	position: relative;
+	margin-right: 10px;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin-left: 12px;
+}
+
+.apphub_AppIcon > img {
+	height: 32px;
+	width: 32px;
+	border-radius: 3px; /* hide the terrible jpeg rounded corner */
+}
+
+.game_page_background .apphub_AppIcon {
+	margin-left: 0;
+}

@@ -43,6 +43,7 @@
 		"icons/pcgamingwiki.svg",
 		"icons/image.svg",
 
+		"styles/appicon.css",
 		"styles/inventory-sidebar.css",
 
 		"scripts/community/inventory.js",
@@ -251,6 +252,24 @@
 			]
 		},
 
+
+		{
+			"run_at": "document_start",
+			"matches":
+			[
+				"https://store.steampowered.com/app/*",
+				"https://steamcommunity.com/app/*",
+				"https://steamcommunity.com/games/*",
+				"https://steamcommunity.com/sharedfiles/filedetails*",
+				"https://steamcommunity.com/workshop/browse*",
+				"https://steamcommunity.com/workshop/discussions*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/appicon.js"
+			]
+		},
 
 
 		{
