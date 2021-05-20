@@ -1,6 +1,5 @@
-.apphub_HomeHeaderContent .apphub_AppIcon,
 .apphub_AppIcon {
-	display: block;
+	display: block !important;
 	position: relative;
 	height: 32px;
 	width: 32px;
