@@ -15,6 +15,6 @@
 
 		window.postMessage( {
 			type: 'steamdb:extension-invalidate-cache',
-		} );
+		}, window.location.origin );
 	};
 }() );

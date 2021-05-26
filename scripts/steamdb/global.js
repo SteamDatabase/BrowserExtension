@@ -9,7 +9,7 @@ if( element )
 
 window.addEventListener( 'message', ( request ) =>
 {
-	if( !request || !request.data )
+	if( !request || !request.data || request.origin !== window.location.origin )
 	{
 		return;
 	}
@@ -26,7 +26,7 @@ window.addEventListener( 'message', ( request ) =>
 						type: 'steamdb:extension-response',
 						request: request.data,
 						response: response,
-					} );
+					}, GetHomepage() );
 				} );
 			}
 			break;
@@ -60,7 +60,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 			options: {
 				hideNotInterested: !!items[ 'steamdb-hide-not-interested' ],
 			},
-		} );
+		}, GetHomepage() );
 	};
 
 	SendMessageToBackgroundScript( {
