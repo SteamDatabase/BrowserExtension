@@ -24,8 +24,6 @@ else
 		'steamdb-last-update': true,
 	}, function( items )
 	{
-		let link, element, image, container;
-
 		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
 		{
 			DrawOnlineStatsWidget( items );
@@ -108,12 +106,12 @@ else
 
 				WriteLog( 'GetPrice loaded' );
 
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
 				link.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
 
-				element = document.createElement( 'b' );
+				let element = document.createElement( 'b' );
 				element.textContent = data.lowest.price;
 				link.appendChild( element );
 
@@ -131,32 +129,32 @@ else
 				element = document.createElement( 'div' );
 				element.className = 'steamdb_prices';
 
-				image = document.createElement( 'img' );
+				const image = document.createElement( 'img' );
 				image.src = GetLocalResource( 'icons/white.svg' );
 				element.appendChild( image );
 				element.appendChild( link );
 
-				container = document.getElementById( 'game_area_purchase' );
+				const container = document.getElementById( 'game_area_purchase' );
 				container.insertAdjacentElement( 'beforeBegin', element );
 			} );
 		}
 
 		if( items[ 'button-app' ] )
 		{
-			container = document.querySelector( '.apphub_OtherSiteInfo' );
+			const container = document.querySelector( '.apphub_OtherSiteInfo' );
 
 			if( container )
 			{
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
-				element = document.createElement( 'span' );
+				const element = document.createElement( 'span' );
 				element.dataset.tooltipText = 'View on Steam Database';
 				link.appendChild( element );
 
-				image = document.createElement( 'img' );
+				const image = document.createElement( 'img' );
 				image.className = 'ico16';
 				image.src = GetLocalResource( 'icons/white.svg' );
 
@@ -168,20 +166,20 @@ else
 
 		if( items[ 'button-pcgw' ] )
 		{
-			container = document.querySelector( '.apphub_OtherSiteInfo' );
+			const container = document.querySelector( '.apphub_OtherSiteInfo' );
 
 			if( container )
 			{
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
-				element = document.createElement( 'span' );
+				const element = document.createElement( 'span' );
 				element.dataset.tooltipText = 'View article on PCGamingWiki';
 				link.appendChild( element );
 
-				image = document.createElement( 'img' );
+				const image = document.createElement( 'img' );
 				image.className = 'ico16';
 				image.src = GetLocalResource( 'icons/pcgamingwiki.svg' );
 
@@ -197,7 +195,7 @@ else
 		if( items[ 'link-subid' ] )
 		{
 			// Find each "add to cart" button
-			container = document.querySelectorAll( 'input[name="subid"]' );
+			let container = document.querySelectorAll( 'input[name="subid"]' );
 
 			let hasDropdowns = false;
 			let i = 0;
@@ -206,7 +204,7 @@ else
 
 			for( i = 0; i < container.length; i++ )
 			{
-				element = container[ i ];
+				let element = container[ i ];
 
 				subid = element.value;
 
@@ -216,7 +214,7 @@ else
 				subidElement.className = 'steamdb_subid';
 				subidElement.dataset.tooltipText = 'View on Steam Database';
 
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
@@ -254,7 +252,7 @@ else
 			}
 
 			// Link appid in demo download banner
-			element = document.querySelector( '.demo_above_purchase' );
+			let element = document.querySelector( '.demo_above_purchase' );
 
 			if( element )
 			{
@@ -263,7 +261,7 @@ else
 				subidElement = document.createElement( 'span' );
 				subidElement.dataset.tooltipText = 'View on Steam Database';
 
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
@@ -285,7 +283,7 @@ else
 				subidElement = document.createElement( 'span' );
 				subidElement.dataset.tooltipText = 'View on Steam Database';
 
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
@@ -310,7 +308,7 @@ else
 				subidElement = document.createElement( 'span' );
 				subidElement.dataset.tooltipText = 'View on Steam Database';
 
-				link = document.createElement( 'a' );
+				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
