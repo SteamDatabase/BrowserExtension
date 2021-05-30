@@ -106,33 +106,40 @@ else
 
 				WriteLog( 'GetPrice loaded' );
 
-				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
-				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
-				link.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
+				const top = document.createElement( 'div' );
+				top.className = 'steamdb_prices_top';
+				top.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
 
 				let element = document.createElement( 'b' );
 				element.textContent = data.lowest.price;
-				link.appendChild( element );
+				top.appendChild( element );
 
 				if( data.lowest.discount > 0 )
 				{
-					link.appendChild( document.createTextNode( ' at ' ) );
+					top.appendChild( document.createTextNode( ' at ' ) );
 
 					element = document.createElement( 'b' );
 					element.textContent = `-${data.lowest.discount}%`;
-					link.appendChild( element );
+					top.appendChild( element );
 				}
 
-				link.appendChild( document.createTextNode( ` on ${data.lowest.date}` ) );
+				const bottom = document.createElement( 'div' );
+				bottom.className = 'steamdb_prices_bottom';
+				bottom.appendChild( document.createTextNode( `Last on ${data.lowest.date}` ) );
 
-				element = document.createElement( 'div' );
+				element = document.createElement( 'a' );
 				element.className = 'steamdb_prices';
+				element.rel = 'noopener';
+				element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
 
 				const image = document.createElement( 'img' );
 				image.src = GetLocalResource( 'icons/white.svg' );
 				element.appendChild( image );
-				element.appendChild( link );
+
+				const textContainer = document.createElement( 'div' );
+				textContainer.appendChild( top );
+				textContainer.appendChild( bottom );
+				element.appendChild( textContainer );
 
 				const container = document.getElementById( 'game_area_purchase' );
 				container.insertAdjacentElement( 'beforeBegin', element );
