@@ -31,14 +31,14 @@ GetOption( {
 				return;
 			}
 
-			const metaImage = document.querySelector( 'meta[itemprop="image"]' );
+			const metaImage = document.querySelector( 'link[rel="image_src"]' );
 
 			if( !metaImage )
 			{
 				return;
 			}
 
-			const url = new URL( document.querySelector( 'link[rel="image_src"]' ).href );
+			const url = new URL( metaImage.href );
 
 			icon.src = src.replace( '%CDN_HOST_MEDIA_SSL%', url.host );
 		} );
