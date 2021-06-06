@@ -24,7 +24,9 @@ GetOption( {
 				return;
 			}
 
-			if( !icon.src.includes( '%CDN_HOST_MEDIA_SSL%' ) )
+			const src = icon.getAttribute( 'src' );
+
+			if( !src.includes( '%CDN_HOST_MEDIA_SSL%' ) )
 			{
 				return;
 			}
@@ -38,7 +40,7 @@ GetOption( {
 
 			const url = new URL( document.querySelector( 'link[rel="image_src"]' ).href );
 
-			icon.src = icon.src.replace( '%CDN_HOST_MEDIA_SSL%', url.host );
+			icon.src = src.replace( '%CDN_HOST_MEDIA_SSL%', url.host );
 		} );
 	}
 } );
