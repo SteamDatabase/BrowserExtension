@@ -6,17 +6,26 @@ GetOption( {
 {
 	if( items[ 'enhancement-appicon' ] )
 	{
+		let styleAdded = false;
 		const style = document.createElement( 'link' );
 		style.id = 'steamdb_appicon';
 		style.type = 'text/css';
 		style.rel = 'stylesheet';
 		style.href = GetLocalResource( 'styles/appicon.css' );
 
-		document.head.appendChild( style );
+		if( document.head )
+		{
+			styleAdded = true;
+			document.head.appendChild( style );
+		}
 
-		// Fix cdn url
 		window.addEventListener( 'DOMContentLoaded', () =>
 		{
+			if( !styleAdded )
+			{
+				document.head.appendChild( style );
+			}
+
 			const icon = document.querySelector( '.apphub_AppIcon > img' );
 
 			if( !icon )
