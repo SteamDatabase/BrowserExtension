@@ -45,7 +45,7 @@ window.addEventListener( 'message', ( request ) =>
 	}
 } );
 
-GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, function( items )
+GetOption( { 'steamdb-highlight': true }, function( items )
 {
 	if( !items[ 'steamdb-highlight' ] )
 	{
@@ -57,9 +57,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-hide-not-interested': false }, 
 		window.postMessage( {
 			type: 'steamdb:extension-loaded',
 			data: data,
-			options: {
-				hideNotInterested: !!items[ 'steamdb-hide-not-interested' ],
-			},
 		}, GetHomepage() );
 	};
 
