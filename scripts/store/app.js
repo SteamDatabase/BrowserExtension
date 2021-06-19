@@ -263,7 +263,7 @@ else
 
 			if( element )
 			{
-				subid = document.querySelector( '.game_purchase_action a' ).href.match( /\/install\/([0-9]+)/ )[ 1 ];
+				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/install\/([0-9]+)/ )[ 1 ];
 
 				subidElement = document.createElement( 'span' );
 				subidElement.dataset.tooltipText = 'View on Steam Database';
@@ -285,7 +285,7 @@ else
 
 			if( element )
 			{
-				subid = document.querySelector( '.game_purchase_action a' ).href.match( /\/run\/([0-9]+)/ )[ 1 ];
+				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/run\/([0-9]+)/ )[ 1 ];
 
 				subidElement = document.createElement( 'span' );
 				subidElement.dataset.tooltipText = 'View on Steam Database';
