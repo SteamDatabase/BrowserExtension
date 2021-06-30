@@ -9,46 +9,40 @@
 
 	const button = document.createElement( 'div' );
 	button.className = 'btnv6_blue_hoverfade btn_medium';
-
 	let span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Cheat 3x' ) );
+	span.appendChild( document.createTextNode( 'Auto-discover' ) );
 	button.appendChild( span );
 	buttonContainer.appendChild( button );
 
-	const button1x = document.createElement( 'div' );
-	button1x.className = 'btnv6_blue_hoverfade btn_medium';
 	span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Cheat 1x' ) );
-	button1x.appendChild( span );
-	buttonContainer.appendChild( button1x );
-
-	span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Discover the queue to get the sale cards' ) );
+	span.appendChild( document.createTextNode( 'Automatically discover the queue to get an event card.' ) );
 	buttonContainer.appendChild( span );
+
+	const script = document.getElementById( 'steamdb_explore_queue' );
+	const image = document.createElement( 'img' );
+	image.src = script.dataset.icon;
+	image.width = 32;
+	image.height = 32;
+	image.style.float = 'right';
+	buttonContainer.appendChild( image );
 
 	const container = document.querySelector( '.discovery_queue_customize_ctn' );
 	container.parentNode.insertBefore( buttonContainer, container );
 
 	button.addEventListener( 'click', function( )
 	{
-		GenerateQueue( 0, 3 );
+		GenerateQueue();
 		buttonContainer.remove( );
 	}, false );
 
-	button1x.addEventListener( 'click', function( )
-	{
-		GenerateQueue( 0, 1 );
-		buttonContainer.remove( );
-	}, false );
-
-	function GenerateQueue( queueNumber, limit )
+	function GenerateQueue()
 	{
 		if( DiscoveryQueueModal )
 		{
 			DiscoveryQueueModal.Dismiss();
 		}
 
-		DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Generating the queue...', 'Generating new discovery queue #' + ++queueNumber + '. This can fail if Steam is under high load.' );
+		DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Generating the queue…', 'Generating new discovery queue, this can fail if Steam is under high load.' );
 
 		window.jQuery.post( '/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
 		{
@@ -64,7 +58,7 @@
 				}
 
 				DiscoveryQueueModal.Dismiss();
-				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Exploring the queue...', 'Request ' + ++done + ' of ' + data.queue.length );
+				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Exploring the queue…', 'Request ' + ++done + ' of ' + data.queue.length );
 			};
 
 			const requestFail = function( )
@@ -93,29 +87,21 @@
 			const callback = function()
 			{
 				DiscoveryQueueModal.Dismiss();
-
-				if( queueNumber < limit )
+				DiscoveryQueueModal = window.ShowConfirmDialog( 'Done', 'Queue has been explored', 'Reload the page' ).done( function( )
 				{
-					GenerateQueue( queueNumber, limit );
-				}
-				else
-				{
-					DiscoveryQueueModal = window.ShowConfirmDialog( 'Done', 'Queue has been explored ' + queueNumber + ' times', 'Reload the page' ).done( function( )
-					{
-						window.ShowBlockingWaitDialog( 'Reloading the page' );
-						window.location.reload();
-					} );
-				}
+					window.ShowBlockingWaitDialog( 'Reloading the page' );
+					window.location.reload();
+				} );
 			};
 
 			window.jQuery.when( ...requests ).then( callback, callback );
 		} )
 			.fail( function()
 			{
-				setTimeout( () => GenerateQueue( queueNumber - 1, limit ), 1000 );
+				setTimeout( GenerateQueue, 5000 );
 
 				DiscoveryQueueModal.Dismiss();
-				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue #' + queueNumber + '. Trying again in a second.' );
+				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue, trying again in five seconds…' );
 			} );
 	}
 }() );
