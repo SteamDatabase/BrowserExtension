@@ -379,11 +379,17 @@ else
 				summary.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
 
 				const link = document.createElement( 'a' );
+				link.className = 'responsive_hidden';
 				link.rel = 'noopener';
 				link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.textContent = '(?)';
-
 				summary.appendChild( link );
+
+				const responsiveText = document.createElement( 'span' );
+				responsiveText.className = 'responsive_reviewdesc_short';
+				responsiveText.textContent = ' STEAMDB RATING';
+				summary.appendChild( responsiveText );
+
 				container.appendChild( subtitle );
 				container.appendChild( summary );
 
