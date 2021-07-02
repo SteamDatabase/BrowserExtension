@@ -424,8 +424,6 @@ function DrawOnlineStatsWidget( items )
 	block.className = 'block responsive_apppage_details_right steamdb_stats';
 	block.appendChild( blockInner );
 
-	container.insertBefore( block, container.firstChild );
-
 	// Logo and link
 	const link = document.createElement( 'a' );
 	link.className = 'steamdb_stats_logo';
@@ -486,6 +484,15 @@ function DrawOnlineStatsWidget( items )
 	line.appendChild( followers );
 
 	blockInner.appendChild( line );
+
+	// Add to container
+	container.insertBefore( block, container.firstChild );
+
+	// Add responsive text heading
+	const responsiveHeader = document.createElement( 'div' );
+	responsiveHeader.className = 'responsive_block_header responsive_apppage_details_left';
+	responsiveHeader.textContent = 'Online Stats';
+	container.insertBefore( responsiveHeader, container.firstChild );
 
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'GetCurrentPlayers',

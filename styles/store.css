@@ -163,3 +163,9 @@ a.steamdb_link:hover {
 .account_table th {
 	min-width: 100px;
 }
+
+@media screen and (max-width: 500px) {
+	html.responsive .steamdb_stats .block_content_inner {
+		margin-top: 0;
+	}
+}
