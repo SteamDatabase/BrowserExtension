@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v1
 
       - name: Install
-        run: yarn --frozen-lockfile --non-interactive
+        run: npm ci
 
       - name: Test
-        run: yarn test
+        run: npm test
