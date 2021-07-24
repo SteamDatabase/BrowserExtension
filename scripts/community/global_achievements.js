@@ -50,14 +50,24 @@ GetOption( {
 				{
 					const achievement = response.open[ key ];
 
-					if( !achievement.hidden || achievement.closed )
-					{
-						continue;
-					}
-
 					for( const element of elements )
 					{
 						if( element.textContent !== achievement.name )
+						{
+							continue;
+						}
+
+						if( achievement.progress )
+						{
+							const progress = document.createElement( 'span' );
+							progress.className = 'achievePercent wt steamdb_achievement_progress';
+							progress.textContent = `(Progress: ${achievement.progress.currentVal} / ${achievement.progress.max_val})`;
+
+							const achievePercent = element.closest( '.achieveRow' ).querySelector( '.achievePercent' );
+							achievePercent.insertAdjacentElement( 'afterend', progress );
+						}
+
+						if( !achievement.hidden || achievement.closed )
 						{
 							continue;
 						}
