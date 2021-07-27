@@ -244,7 +244,7 @@ else
 
 					if( element )
 					{
-						element.appendChild( link );
+						element.prepend( link );
 					}
 				}
 				else if( element.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
@@ -254,7 +254,7 @@ else
 					subidElement.textContent = 'nothing selected';
 					link.href = '#';
 
-					element.appendChild( link );
+					element.prepend( link );
 				}
 			}
 
@@ -277,7 +277,7 @@ else
 				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 
-				element.querySelector( '.game_purchase_action' ).appendChild( link );
+				element.querySelector( '.game_purchase_action' ).prepend( link );
 			}
 
 			// Link appid in playtest banner
@@ -299,7 +299,7 @@ else
 				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 
-				element.querySelector( '.game_purchase_action' ).appendChild( link );
+				element.querySelector( '.game_purchase_action' ).prepend( link );
 			}
 
 			container = document.querySelectorAll( 'input[name="bundleid"]' );
@@ -324,7 +324,7 @@ else
 				link.href = GetHomepage() + 'bundle/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 
-				element.querySelector( '.game_purchase_action' ).appendChild( link );
+				element.querySelector( '.game_purchase_action' ).prepend( link );
 			}
 
 			// We have to inject our JS directly into the page to hook Steam's functionatily
@@ -393,12 +393,16 @@ else
 				container.appendChild( subtitle );
 				container.appendChild( summary );
 
-				let element = document.querySelectorAll( '.user_reviews_summary_row' );
-				element = element[ element.length - 1 ];
-
+				let element = document.querySelector( '#userReviews' );
 				if( element )
 				{
-					element.parentNode.insertBefore( container, element.nextSibling );
+					element.appendChild( container );
+				}
+
+				element = document.querySelector( '#userReviews_responsive' );
+				if( element )
+				{
+					element.appendChild( container.cloneNode( true ) );
 				}
 			}
 		}
