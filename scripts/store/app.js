@@ -567,6 +567,15 @@ function DrawOnlineStatsWidget( items )
 			{
 				releaseDate.parentNode.insertBefore( depotsUpdate, releaseDate.nextSibling );
 			}
+			else
+			{
+				const firstDevRow = document.querySelector( '.glance_ctn_responsive_left .dev_row' );
+
+				if( firstDevRow )
+				{
+					firstDevRow.parentNode.insertBefore( depotsUpdate, firstDevRow );
+				}
+			}
 		}
 	} );
 }
