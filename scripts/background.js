@@ -72,7 +72,7 @@ function FetchSteamUserData( callback )
 			{
 				if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
 				{
-					throw new Error( 'Are you logged on the Steam Store?' );
+					throw new Error( 'Are you logged on the Steam Store in this browser?' );
 				}
 
 				// Only keep the data we actually need

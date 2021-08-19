@@ -52,14 +52,6 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		return;
 	}
 
-	const OnDataLoaded = function( data )
-	{
-		window.postMessage( {
-			type: 'steamdb:extension-loaded',
-			data: data,
-		}, GetHomepage() );
-	};
-
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'FetchSteamUserData',
 	}, ( response ) =>
@@ -68,27 +60,18 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		{
 			WriteLog( 'Failed to load userdata', response.error );
 
-			const warning = document.createElement( 'div' );
-			warning.className = 'extension-warning';
-
-			warning.appendChild( document.createTextNode( 'Failed to load game data from Steam.' ) );
-			warning.appendChild( document.createElement( 'br' ) );
-			warning.appendChild( document.createTextNode( response.error ) );
-
-			const btn = document.createElement( 'a' );
-			btn.className = 'btn btn-sm btn-primary';
-			btn.href = 'https://store.steampowered.com/login/';
-			btn.textContent = 'Sign in on the Steam Store';
-
-			const btnDiv = document.createElement( 'div' );
-			btnDiv.appendChild( btn );
-			warning.appendChild( btnDiv );
-			document.body.appendChild( warning );
+			window.postMessage( {
+				type: 'steamdb:extension-error',
+				error: `Failed to load your games. ${response.error}`,
+			}, GetHomepage() );
 		}
 
 		if( response.data )
 		{
-			OnDataLoaded( response.data );
+			window.postMessage( {
+				type: 'steamdb:extension-loaded',
+				data: response.data,
+			}, GetHomepage() );
 
 			WriteLog( 'Userdata loaded', `Packages: ${response.data.rgOwnedPackages.length}` );
 		}
