@@ -16,5 +16,5 @@ fs.writeFileSync(
 );
 
 child_process.execSync( `git add manifest.json && git commit -m "Increase version to ${version}"`, { stdio: 'inherit' } );
-child_process.execSync( `git tag "v${version}"`, { stdio: 'inherit' } );
+child_process.execSync( `git tag "v${version}" -m "v${version}"`, { stdio: 'inherit' } );
 child_process.execSync( 'npm run build', { stdio: 'inherit' } );
