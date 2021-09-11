@@ -8,7 +8,7 @@ if( container )
 	link.rel = 'noopener';
 	link.className = 'steamdb_error_link';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
+	link.appendChild( document.createTextNode( 'View on SteamDB' ) );
 
 	container.appendChild( link );
 }
@@ -158,7 +158,7 @@ else
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 				const element = document.createElement( 'span' );
-				element.dataset.tooltipText = 'View on Steam Database';
+				element.dataset.tooltipText = 'View on SteamDB';
 				link.appendChild( element );
 
 				const image = document.createElement( 'img' );
@@ -219,7 +219,7 @@ else
 
 				subidElement = document.createElement( 'span' );
 				subidElement.className = 'steamdb_subid';
-				subidElement.dataset.tooltipText = 'View on Steam Database';
+				subidElement.dataset.tooltipText = 'View on SteamDB';
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
@@ -266,7 +266,7 @@ else
 				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/install\/([0-9]+)/ )[ 1 ];
 
 				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = 'View on Steam Database';
+				subidElement.dataset.tooltipText = 'View on SteamDB';
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
@@ -288,7 +288,7 @@ else
 				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/run\/([0-9]+)/ )[ 1 ];
 
 				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = 'View on Steam Database';
+				subidElement.dataset.tooltipText = 'View on SteamDB';
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
@@ -313,7 +313,7 @@ else
 				element = element.parentElement.parentElement;
 
 				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = 'View on Steam Database';
+				subidElement.dataset.tooltipText = 'View on SteamDB';
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
@@ -540,7 +540,7 @@ function DrawOnlineStatsWidget( items )
 		{
 			const depotsUpdate = document.createElement( 'div' );
 			depotsUpdate.className = 'dev_row steamdb_last_update';
-			depotsUpdate.title = 'As seen by Steam Database';
+			depotsUpdate.title = 'As seen by SteamDB';
 
 			const historyLink = document.createElement( 'a' );
 			historyLink.rel = 'noopener';

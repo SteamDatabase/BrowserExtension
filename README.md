@@ -1,6 +1,6 @@
-# Steam Database Extension
+# SteamDB Extension
 
-Adds Steam Database links on various pages in the Steam Community and Store.
+Adds SteamDB links on various pages in the Steam Community and Store.
 Also highlights owned and wished products on steamdb.info.
 
 ![](https://steamdb.info/static/img/extension.png)

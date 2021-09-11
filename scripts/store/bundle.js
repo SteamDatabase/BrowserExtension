@@ -12,7 +12,7 @@ GetOption( { 'button-sub': true }, function( items )
 	if( container )
 	{
 		let element = document.createElement( 'span' );
-		element.appendChild( document.createTextNode( 'View on Steam Database' ) );
+		element.appendChild( document.createTextNode( 'View on SteamDB' ) );
 
 		const link = document.createElement( 'a' );
 		link.rel = 'noopener';

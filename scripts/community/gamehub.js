@@ -50,7 +50,7 @@ GetOption( {
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 			element = document.createElement( 'span' );
-			element.dataset.tooltipText = 'View on Steam Database';
+			element.dataset.tooltipText = 'View on SteamDB';
 			link.appendChild( element );
 
 			image = document.createElement( 'img' );
@@ -121,7 +121,7 @@ GetOption( {
 			link.rel = 'noopener';
 			link.className = 'linkActionMinor';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-			link.appendChild( document.createTextNode( 'View on Steam Database' ) );
+			link.appendChild( document.createTextNode( 'View on SteamDB' ) );
 
 			element = document.createElement( 'div' );
 			element.className = 'actionItem';

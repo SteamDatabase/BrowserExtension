@@ -18,7 +18,7 @@ for( i = 0; i < dropdowns.length; i++ )
 	if( element )
 	{
 		text = document.createElement( 'h5' );
-		text.appendChild( document.createTextNode( 'View on Steam Database' ) );
+		text.appendChild( document.createTextNode( 'View on SteamDB' ) );
 
 		link = document.createElement( 'a' );
 		link.rel = 'noopener';

@@ -255,7 +255,7 @@
 							rgActions.push( {
 								steamdb: true,
 								link: homepage + 'sub/' + subs[ i ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
-								name: 'View ' + subs[ i ] + ' on Steam Database',
+								name: 'View ' + subs[ i ] + ' on SteamDB',
 							} );
 						}
 
@@ -295,7 +295,7 @@
 						{
 							steamdb: true,
 							link: '#steamdb_' + item.assetid,
-							name: 'View on Steam Database',
+							name: 'View on SteamDB',
 						};
 
 						if( giftCache[ item.description.classid ] )
@@ -364,7 +364,7 @@
 								rgActions.push( {
 									steamdb: true,
 									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
-									name: 'View on Steam Database',
+									name: 'View on SteamDB',
 								} );
 
 								foundState = FoundState.Added;
@@ -383,7 +383,7 @@
 						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'sub/' + link[ 1 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
-							name: 'View on Steam Database',
+							name: 'View on SteamDB',
 						} ];
 					}
 					else
@@ -391,7 +391,7 @@
 						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.description.name ),
-							name: 'Search on Steam Database',
+							name: 'Search on SteamDB',
 						} ];
 					}
 

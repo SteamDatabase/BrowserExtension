@@ -22,7 +22,7 @@ GetOption( { 'link-subid-widget': true }, function( items )
 		link.target = '_blank';
 		link.className = 'steamdb_link';
 		link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-		link.appendChild( document.createTextNode( 'View on Steam Database ' ) );
+		link.appendChild( document.createTextNode( 'View on SteamDB ' ) );
 		link.appendChild( subidElement );
 
 		const container = document.createElement( 'p' );

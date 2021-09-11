@@ -1,10 +1,10 @@
 {
 	"manifest_version": 2,
 	"version": "2.9.7",
-	"author": "Steam Database",
-	"name": "Steam Database",
+	"author": "SteamDB",
+	"name": "SteamDB",
 	"short_name": "SteamDB",
-	"description": "Adds Steam Database links and new features across Steam Community and Store.",
+	"description": "Adds SteamDB links and new features across Steam Community and Store.",
 	"homepage_url": "https://steamdb.info/",
 	"options_page": "options/options.html",
 	"options_ui":

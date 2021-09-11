@@ -25,7 +25,7 @@ GetOption( { 'button-gamehub': true }, function( items )
 	link.className = 'general_btn panel_btn';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 	link.appendChild( image );
-	link.appendChild( document.createTextNode( 'View on Steam Database' ) );
+	link.appendChild( document.createTextNode( 'View on SteamDB' ) );
 
 	container.insertBefore( link, null );
 } );
