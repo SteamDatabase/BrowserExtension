@@ -1,5 +1,9 @@
 # SteamDB Extension
 
+[![chrome users](https://img.shields.io/chrome-web-store/users/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?label=chrome%20users&style=for-the-badge&logo=googlechrome)](https://chrome.google.com/webstore/detail/steam-database/kdbmhfkmnlmbkgbabkdealhhbfhlmmon)
+[![firefox users](https://img.shields.io/amo/users/steam-database?label=firefox%20users&color=4c1&style=for-the-badge&logo=firefoxbrowser)](https://addons.mozilla.org/firefox/addon/steam-database/)
+[![edge users](https://img.shields.io/badge/dynamic/json?label=edge%20users&query=%24.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/hjknpdomhlodgaebegjopkmfafjpbblg&style=for-the-badge&logo=microsoftedge)](https://microsoftedge.microsoft.com/addons/detail/steam-database/hjknpdomhlodgaebegjopkmfafjpbblg)  
+
 Adds SteamDB links on various pages in the Steam Community and Store.
 Also highlights owned and wished products on steamdb.info.
 
