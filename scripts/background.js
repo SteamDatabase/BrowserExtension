@@ -39,6 +39,7 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 		case 'StoreUnignore': StoreUnignore( request.appid, callback ); return true;
 		case 'StoreAddToCart': StoreAddToCart( request, callback ); return true;
 		case 'StoreAddFreeLicense': StoreAddFreeLicense( request, callback ); return true;
+		case 'StoreRemoveFreeLicense': StoreRemoveFreeLicense( request, callback ); return true;
 	}
 
 	return false;
@@ -257,6 +258,17 @@ function StoreAddFreeLicense( request, callback )
 		formData.set( 'ajax', 'true' );
 
 		ExecuteStoreApiCall( `checkout/addfreebundle/${bundleid}`, formData, freeLicenseResponse, true );
+	}
+}
+
+function StoreRemoveFreeLicense( request, callback )
+{
+	if( request.subid )
+	{
+		const subid = parseInt( request.subid, 10 );
+		const formData = new FormData();
+		formData.set( 'packageid', subid );
+		ExecuteStoreApiCall( 'account/removelicense', formData, callback );
 	}
 }
 
