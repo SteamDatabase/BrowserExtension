@@ -84,9 +84,9 @@
 
 			if( explanation )
 			{
-				strTitle += ' Failed';
-				strDescription += '<p class="steamdb_trade_error">' + explanation + '</p>';
-				strDescription += '<a href="https://steamdb.info/extension/" target="_blank" class="steamdb_trade_error_explained">(explained by SteamDB)</a>';
+				arguments[ 0 ] += ' Failed';
+				arguments[ 1 ] += '<p class="steamdb_trade_error">' + explanation + '</p>';
+				arguments[ 1 ] += '<a href="https://steamdb.info/extension/" target="_blank" class="steamdb_trade_error_explained">(explained by SteamDB)</a>';
 			}
 		}
 
