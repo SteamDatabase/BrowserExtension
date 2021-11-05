@@ -3,6 +3,11 @@
 {
 	'use strict';
 
+	if( location.search.includes( 'welcome=1' ) )
+	{
+		document.getElementById( 'welcome' ).hidden = false;
+	}
+
 	let element;
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
 	const options = {};

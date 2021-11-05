@@ -17,13 +17,13 @@ runtimeObj.onInstalled.addListener( ( event ) =>
 		if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 		{
 			chrome.tabs.create( {
-				url: chrome.runtime.getURL( 'options/options.html' ),
+				url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
 			} );
 		}
 		else if( typeof browser !== 'undefined' )
 		{
 			browser.tabs.create( {
-				url: browser.runtime.getURL( 'options/options.html' ),
+				url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
 			} );
 		}
 	}

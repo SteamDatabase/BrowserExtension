@@ -100,3 +100,17 @@ summary:hover {
 .checkbox-sub {
 	margin-left: 1.5rem;
 }
+
+#welcome {
+	font-size: 16px;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #0197cf;
+	color: #34c8fe;
+}
+
+#welcome h2 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
