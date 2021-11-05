@@ -2,16 +2,16 @@
 	filter: grayscale(1) opacity(0.5);
 }
 
-.steamdb_confirm_listed:before,
-.steamdb_confirm_mobile:before,
-.steamdb_confirm_email:before {
+.steamdb_confirm_listed::before,
+.steamdb_confirm_mobile::before,
+.steamdb_confirm_email::before {
 	display: block;
 	padding: 4px 0;
 	background: #000;
 	bottom: calc(50% - 18px);
 	position: absolute;
 	content: "CONFIRM\aON MOBILE";
-	color: #FFF;
+	color: #fff;
 	text-align: center;
 	font-weight: 400;
 	font-size: 14px;
@@ -22,11 +22,11 @@
 	width: 100%;
 }
 
-.steamdb_confirm_email:before {
+.steamdb_confirm_email::before {
 	content: "CONFIRM\aBY EMAIL";
 }
 
-.steamdb_confirm_listed:before {
+.steamdb_confirm_listed::before {
 	content: "LISTED\aON MARKET";
 }
 

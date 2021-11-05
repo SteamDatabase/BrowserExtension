@@ -36,8 +36,8 @@
 		display: none;
 	}
 
-	.games_list_tab:after,
-	#mainContents:after {
+	.games_list_tab::after,
+	#mainContents::after {
 		content: "";
 		display: table;
 		clear: both;

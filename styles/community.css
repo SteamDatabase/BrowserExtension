@@ -22,7 +22,7 @@ a.apphub_NumInApp {
 
 a.apphub_NumInApp:hover {
 	text-decoration: none;
-	color: #00E676;
+	color: #00e676;
 }
 
 .btn_steamdb.btn_medium .ico16 {
@@ -55,7 +55,7 @@ a.apphub_NumInApp:hover {
 	position: relative;
 }
 
-.achieveRow:not(.unlocked) .compareImg:before {
+.achieveRow:not(.unlocked) .compareImg::before {
 	content: "";
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath fill='%2366C0F4' fill-rule='evenodd' d='M27 26v-2h-1.75l-1.5 2H27zm0 1a3.002 3.002 0 0 1-3.009 3H9.01A3.008 3.008 0 0 1 6 27h21zM6 26v-2h3.25l-1.5 2H6zm2.75 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zM27 23v-5.99c0-1.66-1.34-3.005-3-3.01v-3.5a7.5 7.5 0 1 0-15 0V14c-1.658.005-3 1.34-3 3.01V23h21zm-15-9v-3.5C12 8.01 14.015 6 16.5 6c2.48 0 4.5 2.015 4.5 4.5V14h-9z'/%3E%3C/svg%3E%0A");
 	background-size: 24px 24px;
@@ -81,9 +81,9 @@ a.apphub_NumInApp:hover {
 }
 
 .steamdb_stats_tab .tabOn {
-	background: hsl(202, 41%, 25%);
+	background: hsl(202deg 41% 25%);
 }
 
 .steamdb_stats_tab .tabOn:hover {
-	background: hsl(202, 41%, 43%);
+	background: hsl(202deg 41% 43%);
 }

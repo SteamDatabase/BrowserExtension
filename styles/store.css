@@ -1,5 +1,5 @@
 a.steamdb_link {
-	color: #898A8C;
+	color: #898a8c;
 }
 
 a.steamdb_link:hover {
@@ -32,7 +32,7 @@ a.steamdb_link:hover {
 	color: #f44336 !important;
 }
 
-.steamdb_last_update_old:after {
+.steamdb_last_update_old::after {
 	display: inline-block;
 	content: " ⚠️️";
 }
@@ -41,12 +41,12 @@ a.steamdb_link:hover {
 	width: 54px;
 	height: 54px;
 	float: right;
-	opacity: 0.5;
-	transition: opacity .1s ease-in-out;
+	opacity: 50%;
+	transition: opacity 0.1s ease-in-out;
 }
 
 .steamdb_stats:hover .steamdb_stats_logo {
-	opacity: 1;
+	opacity: 100%;
 }
 
 .steamdb_stats span {
@@ -75,8 +75,19 @@ a.steamdb_link:hover {
 	display: block;
 }
 
+#error_display .steamdb_registerkey_lineitem {
+	margin-top: 20px;
+}
+
+.steamdb_registerkey_lineitem img {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: text-top;
+}
+
 .steamdb_prices {
-	background-color: rgba( 0, 0, 0, 0.2 );
+	background-color: rgb(0 0 0 / 20%);
 	border-radius: 4px;
 	margin-bottom: 10px;
 	padding: 8px 16px;
@@ -96,18 +107,17 @@ a.steamdb_link:hover {
 	width: 32px;
 	height: 32px;
 	padding-right: 10px;
-	opacity: 0.5;
-	transition: opacity .1s ease-in-out;
+	opacity: 50%;
+	transition: opacity 0.1s ease-in-out;
 }
 
 .steamdb_prices:hover img {
-	opacity: 1;
+	opacity: 100%;
 }
 
 .steamdb_prices:hover .steamdb_prices_top {
 	text-decoration: underline;
 }
-
 
 .steamdb_prices:hover .steamdb_prices_bottom {
 	color: #c6d4df;
@@ -116,17 +126,6 @@ a.steamdb_link:hover {
 .steamdb_prices b {
 	font-weight: bold;
 	color: #a3cf06;
-}
-
-#error_display .steamdb_registerkey_lineitem {
-	margin-top: 20px;
-}
-
-.steamdb_registerkey_lineitem img {
-	width: 16px;
-	height: 16px;
-	margin-right: 5px;
-	vertical-align: text-top;
 }
 
 .steamdb_rating.steamdb_rating_good {

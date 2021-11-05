@@ -8,186 +8,69 @@
  * http://useiconic.com/open
  */
 
-
-
 /*
  * Checkboxes
  */
 
 .control {
-  position: relative;
-  display: inline-block;
-  padding-left: 1.5rem;
-  cursor: pointer;
+	position: relative;
+	display: inline-block;
+	padding-left: 1.5rem;
+	cursor: pointer;
 }
+
 .control input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+	position: absolute;
+	opacity: 0%;
+	z-index: -1; /* Put the input behind the label so it doesn't overlay text */
 }
+
 .control-indicator {
-  position: absolute;
-  top: .25rem;
-  left: 0;
-  display: block;
-  width:  1rem;
-  height: 1rem;
-  line-height: 1rem;
-  font-size: 65%;
-  color: #eee;
-  text-align: center;
-  background-color: #eee;
-  background-size: 50% 50%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/* Hover state */
-.control:hover .control-indicator {
-  color: #fff;
-  background-color: #ccc;
-}
-
-
-/* Focus */
-.control input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
-}
-
-/* Checked state */
-.control input:checked ~ .control-indicator {
-  color: #fff;
-  background-color: #0074d9;
-}
-
-/* Active */
-.control input:active ~ .control-indicator {
-  color: #fff;
-  background-color: #84c6ff;
+	position: absolute;
+	top: 0.25rem;
+	left: 0;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 65%;
+	color: #eee;
+	text-align: center;
+	background-color: #eee;
+	background-size: 50% 50%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	user-select: none;
 }
 
 /* Checkbox modifiers */
 .checkbox .control-indicator {
-  border-radius: .25rem;
-}
-.checkbox input:checked ~ .control-indicator {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik02LjQgMWwtLjcuNy0yLjggMi44LS44LS44LS43LS43TDAgNC40bC43LjcgMS41IDEuNS43LjcuNy0uNyAzLjUtMy41LjctLjdMNi40IDF6Ii8+PC9zdmc+);
-}
-
-
-/*
- * Select
- */
-
-.select {
-  position: relative;
-  display: inline-block;
-  color: #555;
-}
-.select select {
-  display: inline-block;
-  width: 100%;
-  margin: 0;
-  padding: .5rem 2.25rem .5rem 1rem;
-  line-height: 1.5;
-  color: #555;
-  background-color: #eee;
-  border: 0;
-  border-radius: .25rem;
-  cursor: pointer;
-  outline: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-/* Undo the Firefox inner focus ring */
-.select select:focus:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-/* Dropdown arrow */
-.select:after {
-  position: absolute;
-  top: 50%;
-  right: 1.25rem;
-  display: inline-block;
-  content: "";
-  width: 0;
-  height: 0;
-  margin-top: -.15rem;
-  pointer-events: none;
-  border-top: .35rem solid;
-  border-right: .35rem solid transparent;
-  border-bottom: .35rem solid transparent;
-  border-left: .35rem solid transparent;
+	border-radius: 0.25rem;
 }
 
 /* Hover state */
-/* Uncomment if you need it, but be aware of the sticky iOS states.
-.select select:hover {
-  background-color: #ddd;
+.control:hover .control-indicator {
+	color: #fff;
+	background-color: #ccc;
 }
-*/
 
 /* Focus */
-.select select:focus {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+.control input:focus ~ .control-indicator {
+	box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #0074d9;
 }
 
-/* Active/open */
-.select select:active {
-  color: #fff;
-  background-color: #0074d9;
+/* Checked state */
+.control input:checked ~ .control-indicator {
+	color: #fff;
+	background-color: #0074d9;
 }
 
-/* Hide the arrow in IE10 and up */
-.select select::-ms-expand {
-  display: none;
+.checkbox input:checked ~ .control-indicator {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik02LjQgMWwtLjcuNy0yLjggMi44LS44LS44LS43LS43TDAgNC40bC43LjcgMS41IDEuNS43LjcuNy0uNyAzLjUtMy41LjctLjdMNi40IDF6Ii8+PC9zdmc+");
 }
 
-/* Media query to target Firefox only */
-@-moz-document url-prefix() {
-  /* Firefox hack to hide the arrow */
-  .select select {
-    text-indent: 0.01px;
-    text-overflow: '';
-    padding-right: 1rem;
-  }
-
-  /* <option> elements inherit styles from <select>, so reset them. */
-  .select option {
-    background-color: #fff;
-  }
-}
-
-/* IE9 hack to hide the arrow */
-@media screen and (min-width:0\0) {
-  .select select {
-    z-index: 1;
-    padding: .5rem 1.5rem .5rem 1rem;
-  }
-  .select:after {
-    z-index: 5;
-  }
-  .select:before {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    bottom: 0;
-    z-index: 2;
-    content: "";
-    display: block;
-    width: 1.5rem;
-    background-color: #eee;
-  }
-  .select select:hover,
-  .select select:focus,
-  .select select:active {
-    color: #555;
-    background-color: #eee;
-  }
+/* Active */
+.control input:active ~ .control-indicator {
+	color: #fff;
+	background-color: #84c6ff;
 }
