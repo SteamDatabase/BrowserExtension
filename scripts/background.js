@@ -12,9 +12,20 @@ else
 
 runtimeObj.onInstalled.addListener( ( event ) =>
 {
-	if( event.reason === 'install' && runtimeObj.openOptionsPage )
+	if( event.reason === runtimeObj.OnInstalledReason.INSTALL )
 	{
-		runtimeObj.openOptionsPage();
+		if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+		{
+			chrome.tabs.create( {
+				url: chrome.runtime.getURL( 'options/options.html' ),
+			} );
+		}
+		else if( typeof browser !== 'undefined' )
+		{
+			browser.tabs.create( {
+				url: browser.runtime.getURL( 'options/options.html' ),
+			} );
+		}
 	}
 } );
 
