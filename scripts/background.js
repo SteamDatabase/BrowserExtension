@@ -40,6 +40,7 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 		case 'StoreAddToCart': StoreAddToCart( request, callback ); return true;
 		case 'StoreAddFreeLicense': StoreAddFreeLicense( request, callback ); return true;
 		case 'StoreRemoveFreeLicense': StoreRemoveFreeLicense( request, callback ); return true;
+		case 'StoreRequestPlaytestAccess': StoreRequestPlaytestAccess( request, callback ); return true;
 	}
 
 	return false;
@@ -269,6 +270,15 @@ function StoreRemoveFreeLicense( request, callback )
 		const formData = new FormData();
 		formData.set( 'packageid', subid );
 		ExecuteStoreApiCall( 'account/removelicense', formData, callback );
+	}
+}
+
+function StoreRequestPlaytestAccess( request, callback )
+{
+	if( request.appid )
+	{
+		const formData = new FormData();
+		ExecuteStoreApiCall( `ajaxrequestplaytestaccess/${parseInt( request.appid, 10 )}`, formData, callback );
 	}
 }
 
