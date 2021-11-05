@@ -17,6 +17,14 @@ body {
 	max-width: 34rem;
 }
 
+a {
+	color: inherit;
+}
+
+a:hover {
+	color: #fff;
+}
+
 h1, h2, h3, h4 {
 	margin: 0 0 .5rem;
 	font-weight: normal;
@@ -52,6 +60,15 @@ p {
 	margin: 0 0 1rem;
 }
 
+summary {
+	cursor: pointer;
+}
+
+summary:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
 .muted {
 	font-size: 80%;
 	color: #999;
@@ -69,14 +86,6 @@ p {
 	padding-top: 2rem;
 	border-top: 1px solid #0197cf;
 	color: #34c8fe;
-}
-
-.footer a {
-	color: inherit;
-}
-
-.footer a:hover {
-	color: #fff;
 }
 
 .footer p {

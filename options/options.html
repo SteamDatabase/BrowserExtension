@@ -11,6 +11,51 @@
 </head>
 <body>
 	<form class="container">
+		<h3>SteamDB Website</h3>
+
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
+			<span class="control-indicator"></span>
+			Highlight owned and wished products on steamdb.info
+		</label>
+		<details style="padding-left:1.5rem">
+			<summary>Explanation</summary>
+			<p>When this option is enabled, the extension will request some user data
+			(wishlisted, owned, followed, ignored products, and products in cart) from the
+			<a href="https://store.steampowered.com/dynamicstore/userdata/" target="_blank" rel="noopener">Steam store</a>
+			and will use these to apply highlights on the site. You have to be logged in on the store for this to work.</p>
+			<p>This is contained entirely within your browser and is never sent even to SteamDB backend.</p>
+			<p>To prevent excessive requests to the Steam Store, your user data is cached in your browser's local storage.</p>
+		</details>
+
+		<h3>Extra data</h3>
+
+		<details>
+			<summary>Extra data fetched from steamdb.info</summary>
+			<p>When the "Add a block on Steam Store displaying online stats" option is enabled, the extension will do a secure
+			request to steamdb.info to get the current amount of players and last depot update
+			(the latter only if "Display last depot update on app pages" option is enabled).</p>
+			<p>When "Display lowest recorded price on app pages" option is enabled, the extension will do a secure request
+			to steamdb.info with your currency (with what Steam thinks it is) to get the lowest recorded price for a specific game.</p>
+		</details>
+
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="steamdb-lowest-price" checked>
+			<span class="control-indicator"></span>
+			Display lowest recorded price on app pages
+		</label>
+		<label class="control checkbox">
+			<input type="checkbox" class="option-check" data-option="online-stats" checked>
+			<span class="control-indicator"></span>
+			Display current concurrent players and max peaks on app pages
+		</label>
+		<label class="control checkbox checkbox-sub">
+			<input type="checkbox" class="option-check" checked data-option="steamdb-last-update">
+			<span class="control-indicator"></span>
+			Display last depot update on app pages
+		</label>
+
+
 		<h3>Buttons &amp; links</h3>
 
 		<label class="control checkbox">
@@ -52,7 +97,6 @@
 			<input type="checkbox" class="option-check" checked data-option="link-subid-widget">
 			<span class="control-indicator"></span>
 			Display SubID in app widgets
-			<i class="muted">(might hurt performance)</i>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="link-accountpage">
@@ -129,23 +173,6 @@
 			Display SteamDB rating on app pages
 		</label>
 		<label class="control checkbox">
-			<input type="checkbox" class="option-check" data-option="steamdb-lowest-price" checked>
-			<span class="control-indicator"></span>
-			Display lowest recorded price on app pages
-			<span class="muted">(extra http request to steamdb.info)</span>
-		</label>
-		<label class="control checkbox">
-			<input type="checkbox" class="option-check" data-option="online-stats" checked>
-			<span class="control-indicator"></span>
-			Display current concurrent players and max peaks on app pages
-			<span class="muted">(extra http request to steamdb.info)</span>
-		</label>
-		<label class="control checkbox checkbox-sub">
-			<input type="checkbox" class="option-check" checked data-option="steamdb-last-update">
-			<span class="control-indicator"></span>
-			Display last depot update on app pages
-		</label>
-		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-no-linkfilter">
 			<span class="control-indicator"></span>
 			Remove all linkfilter links
@@ -157,24 +184,15 @@
 			Display app icons on store and community pages
 		</label>
 		<label class="control checkbox">
-			<input type="checkbox" class="option-check" data-option="prevent-store-images">
-			<span class="control-indicator"></span>
-			Stop images from loading on app store pages
-			<p class="muted">Many developers put multiple megabytes of images in game descriptions which usually takes a while to load. Click on an image to load.</p>
-		</label>
-		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="spoiler-achievements" checked>
 			<span class="control-indicator"></span>
 			Hide hidden achievements behind a spoiler element
 		</label>
-
-		<h3>SteamDB Website</h3>
-
 		<label class="control checkbox">
-			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
+			<input type="checkbox" class="option-check" data-option="prevent-store-images">
 			<span class="control-indicator"></span>
-			Highlight owned and wished products on steamdb.info
-			<p class="muted">If this does not work, whitelist <code>store.steampowered.com</code> in your third-party cookie policy</p>
+			Stop images from loading on app store pages
+			<p class="muted">Some developers put multiple megabytes of images in game descriptions which can take a while to load. Click on an image to load.</p>
 		</label>
 	</form>
 
