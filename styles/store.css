@@ -37,6 +37,10 @@ a.steamdb_link:hover {
 	content: " ⚠️️";
 }
 
+.steamdb_stats {
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
 .steamdb_stats_logo {
 	width: 54px;
 	height: 54px;
@@ -49,13 +53,14 @@ a.steamdb_link:hover {
 	opacity: 100%;
 }
 
-.steamdb_stats span {
+.steamdb_stats_name {
 	min-width: 90px;
 	margin-right: 5px;
 	display: inline-block;
 }
 
-.steamdb_stats b {
+.steamdb_stats_number {
+	font-weight: bold;
 	color: #67c1f5;
 }
 
@@ -91,7 +96,7 @@ a.steamdb_link:hover {
 	border-radius: 4px;
 	margin-bottom: 10px;
 	padding: 8px 16px;
-	font-family: "Motiva Sans", sans-serif;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	color: #c6d4df;
 	display: flex;
 }

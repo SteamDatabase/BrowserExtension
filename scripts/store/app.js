@@ -442,11 +442,13 @@ function DrawOnlineStatsWidget( items )
 	blockInner.appendChild( link );
 
 	// Online now
-	const onlineNow = document.createElement( 'b' );
+	const onlineNow = document.createElement( 'span' );
+	onlineNow.className = 'steamdb_stats_number';
 	onlineNow.textContent = '…';
 
 	let line = document.createElement( 'p' );
 	let lineText = document.createElement( 'span' );
+	lineText.className = 'steamdb_stats_name';
 	lineText.textContent = 'Online now:';
 	line.appendChild( lineText );
 	line.appendChild( onlineNow );
@@ -454,11 +456,13 @@ function DrawOnlineStatsWidget( items )
 	blockInner.appendChild( line );
 
 	// Peak today
-	const peakToday = document.createElement( 'b' );
+	const peakToday = document.createElement( 'span' );
+	peakToday.className = 'steamdb_stats_number';
 	peakToday.textContent = '…';
 
 	line = document.createElement( 'p' );
 	lineText = document.createElement( 'span' );
+	lineText.className = 'steamdb_stats_name';
 	lineText.textContent = 'Peak today:';
 	line.appendChild( lineText );
 	line.appendChild( peakToday );
@@ -466,11 +470,13 @@ function DrawOnlineStatsWidget( items )
 	blockInner.appendChild( line );
 
 	// Peak all
-	const peakAll = document.createElement( 'b' );
+	const peakAll = document.createElement( 'span' );
+	peakAll.className = 'steamdb_stats_number';
 	peakAll.textContent = '…';
 
 	line = document.createElement( 'p' );
 	lineText = document.createElement( 'span' );
+	lineText.className = 'steamdb_stats_name';
 	lineText.textContent = 'All-time peak:';
 	line.appendChild( lineText );
 	line.appendChild( peakAll );
@@ -478,11 +484,13 @@ function DrawOnlineStatsWidget( items )
 	blockInner.appendChild( line );
 
 	// Followers
-	const followers = document.createElement( 'b' );
+	const followers = document.createElement( 'span' );
+	followers.className = 'steamdb_stats_number';
 	followers.textContent = '…';
 
 	line = document.createElement( 'p' );
 	lineText = document.createElement( 'span' );
+	lineText.className = 'steamdb_stats_name';
 	lineText.textContent = 'Followers:';
 	line.appendChild( lineText );
 	line.appendChild( followers );
