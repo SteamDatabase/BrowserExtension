@@ -61,7 +61,13 @@ GetOption( {
 						{
 							const progress = document.createElement( 'span' );
 							progress.className = 'achievePercent wt steamdb_achievement_progress';
-							progress.textContent = `(Progress: ${achievement.progress.currentVal} / ${achievement.progress.max_val})`;
+							progress.textContent = `Your progress: ${achievement.progress.currentVal} / ${achievement.progress.max_val}`;
+
+							const meter = document.createElement( 'meter' );
+							meter.min = achievement.progress.min_val;
+							meter.max = achievement.progress.max_val;
+							meter.value = achievement.progress.currentVal;
+							progress.appendChild( meter );
 
 							const achievePercent = element.closest( '.achieveRow' ).querySelector( '.achievePercent' );
 							achievePercent.insertAdjacentElement( 'afterend', progress );
