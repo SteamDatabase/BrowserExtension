@@ -104,7 +104,7 @@ function FetchSteamUserData( callback )
 					rgWishlist: response.rgWishlist || [],
 				};
 
-				callback( { data: data } );
+				callback( { data } );
 
 				SetOption( 'userdata.stored', JSON.stringify( data ) );
 			} )

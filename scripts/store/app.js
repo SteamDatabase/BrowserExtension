@@ -77,8 +77,8 @@ else
 			SendMessageToBackgroundScript( {
 				contentScriptQuery: 'GetPrice',
 				appid: GetCurrentAppID(),
-				currency: currency,
-				country: country,
+				currency,
+				country,
 			}, ( response ) =>
 			{
 				if( !response || !response.success )

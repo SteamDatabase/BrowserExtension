@@ -25,7 +25,7 @@ GetOption( {
 		headers.append( 'X-ValveUserAgent', 'panorama' );
 
 		fetch( compareAvatar.href + path + '?tab=achievements&panorama=please', {
-			headers: headers,
+			headers,
 		} )
 			.then( ( response ) => response.text() )
 			.then( ( response ) =>

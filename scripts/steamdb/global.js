@@ -25,7 +25,7 @@ window.addEventListener( 'message', ( request ) =>
 					window.postMessage( {
 						type: 'steamdb:extension-response',
 						request: request.data,
-						response: response,
+						response,
 					}, GetHomepage() );
 				} );
 			}

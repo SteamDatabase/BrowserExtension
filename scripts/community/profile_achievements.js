@@ -15,7 +15,7 @@ GetOption( {
 		headers.append( 'X-ValveUserAgent', 'panorama' );
 
 		fetch( window.location.origin + window.location.pathname + '?tab=achievements&panorama=please', {
-			headers: headers,
+			headers,
 		} )
 			.then( ( response ) => response.text() )
 			.then( ( response ) =>

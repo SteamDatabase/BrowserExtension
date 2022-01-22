@@ -18,7 +18,7 @@ if( item !== null )
 			them: {
 				assets: [
 					{
-						appid: appid,
+						appid,
 						contextid: contextid.toString(),
 						assetid: assetid.toString(),
 						amount: 1,
