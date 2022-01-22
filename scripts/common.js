@@ -9,9 +9,9 @@ var CurrentAppID;
 
 function GetAppIDFromUrl( url )
 {
-	const appid = url.match( /\/(app|sub|bundle|friendsthatplay|gamecards|recommended)\/([0-9]+)/ );
+	const appid = url.match( /\/(?:app|sub|bundle|friendsthatplay|gamecards|recommended|widget)\/(?<id>[0-9]+)/ );
 
-	return appid ? parseInt( appid[ 2 ], 10 ) : -1;
+	return appid ? parseInt( appid.groups.id, 10 ) : -1;
 }
 
 function GetCurrentAppID()

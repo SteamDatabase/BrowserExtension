@@ -7,27 +7,28 @@ GetOption( { 'link-subid-widget': true }, function( items )
 		return;
 	}
 
-	let subid = document.querySelector( 'input[name="subid"]' );
+	const link = document.createElement( 'a' );
+	link.rel = 'noopener';
+	link.target = '_blank';
+	link.className = 'steamdb_link';
+
+	const subid = document.querySelector( 'input[name="subid"]' );
 
 	if( subid )
 	{
-		subid = subid.value;
-
-		const subidElement = document.createElement( 'i' );
-		subidElement.className = 'steamdb_subid';
-		subidElement.appendChild( document.createTextNode( '(' + subid + ')' ) );
-
-		const link = document.createElement( 'a' );
-		link.rel = 'noopener';
-		link.target = '_blank';
-		link.className = 'steamdb_link';
-		link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-		link.appendChild( document.createTextNode( 'View on SteamDB ' ) );
-		link.appendChild( subidElement );
-
-		const container = document.createElement( 'p' );
-		container.appendChild( link );
-
-		document.querySelector( '.desc' ).appendChild( container );
+		link.href = GetHomepage() + 'sub/' + subid.value + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+		link.textContent = `View sub ${subid.value} on SteamDB`;
 	}
+	else
+	{
+		const appid = GetCurrentAppID();
+
+		link.href = GetHomepage() + 'app/' + appid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+		link.textContent = `View app ${appid} on SteamDB`;
+	}
+
+	const container = document.createElement( 'p' );
+	container.appendChild( link );
+
+	document.querySelector( '.desc' ).appendChild( container );
 } );
