@@ -5,17 +5,18 @@ GetOption( {
 }, function( items )
 {
 	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
-	const compareAvatar = document.querySelector( '#compareAvatar a' );
+	const ownsGame = !!document.querySelector( '#compareAvatar a' );
+	const currentUser = document.querySelector( '#global_actions .user_avatar' );
 	const path = window.location.pathname.match( /^\/stats\/\w+/ );
 
-	if( compareAvatar && path )
+	if( currentUser && path )
 	{
 		const tab = document.createElement( 'div' );
 		tab.className = 'tab steamdb_stats_tab';
 
 		const link = document.createElement( 'a' );
 		link.className = 'tabOn';
-		link.href = `${compareAvatar.href}${path}?tab=achievements`;
+		link.href = `${currentUser.href}${path}?tab=achievements`;
 		link.textContent = 'View your achievements';
 
 		tab.appendChild( link );
@@ -24,7 +25,7 @@ GetOption( {
 		const headers = new Headers();
 		headers.append( 'X-ValveUserAgent', 'panorama' );
 
-		fetch( compareAvatar.href + path + '?tab=achievements&panorama=please', {
+		fetch( `${currentUser.href}${path}?tab=achievements&panorama=please`, {
 			headers,
 		} )
 			.then( ( response ) => response.text() )
@@ -39,17 +40,31 @@ GetOption( {
 
 				response = JSON.parse( response[ 1 ] );
 
-				if( !response.open )
+				if( !response )
 				{
 					return;
 				}
 
 				const elements = document.querySelectorAll( '.achieveTxt > h3' );
+				const achievements = Object.values( { ...response.closed, ...response.open } );
 
-				for( const key in response.open )
+				if( achievements.length === 0 )
 				{
-					const achievement = response.open[ key ];
+					return;
+				}
 
+				if( !ownsGame )
+				{
+					const headerContentLeft = document.getElementById( 'headerContentLeft' );
+
+					if( headerContentLeft )
+					{
+						headerContentLeft.appendChild( document.createTextNode( ' (but SteamDB extension was able to load your achievements)' ) );
+					}
+				}
+
+				for( const achievement of achievements )
+				{
 					for( const element of elements )
 					{
 						if( element.textContent !== achievement.name )
@@ -73,7 +88,33 @@ GetOption( {
 							achievePercent.insertAdjacentElement( 'afterend', progress );
 						}
 
-						if( !achievement.hidden || achievement.closed )
+						if( ownsGame )
+						{
+							if( achievement.closed )
+							{
+								continue;
+							}
+						}
+						else
+						{
+							const img = document.createElement( 'img' );
+							img.width = 64;
+							img.height = 64;
+							img.src = achievement.closed ? achievement.icon_closed : achievement.icon_open;
+							const compareImg = document.createElement( 'div' );
+							compareImg.className = 'compareImg compare_rightcol_element';
+							compareImg.appendChild( img );
+
+							const achieveRow = element.closest( '.achieveRow' );
+							achieveRow.insertBefore( compareImg, element.parentNode.parentNode );
+
+							if( achievement.closed )
+							{
+								achieveRow.classList.add( 'unlocked' );
+							}
+						}
+
+						if( !achievement.hidden )
 						{
 							continue;
 						}

@@ -53,6 +53,7 @@ a.apphub_NumInApp:hover {
 
 .achieveRow .compareImg {
 	position: relative;
+	font-size: 0; /* fix incorrect extra padding */
 }
 
 .achieveRow:not(.unlocked) .compareImg::before {
