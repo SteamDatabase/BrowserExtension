@@ -259,7 +259,6 @@
 			[
 				"https://store.steampowered.com/app/*",
 				"https://steamcommunity.com/app/*",
-				"https://steamcommunity.com/games/*",
 				"https://steamcommunity.com/sharedfiles/filedetails*",
 				"https://steamcommunity.com/workshop/browse*",
 				"https://steamcommunity.com/workshop/discussions*"
@@ -442,7 +441,6 @@
 			"matches":
 			[
 				"https://steamcommunity.com/app/*",
-				"https://steamcommunity.com/games/*",
 				"https://steamcommunity.com/sharedfiles/filedetails*",
 				"https://steamcommunity.com/workshop/browse*",
 				"https://steamcommunity.com/workshop/discussions*"
@@ -462,7 +460,6 @@
 			"matches":
 			[
 				"https://steamcommunity.com/app/*",
-				"https://steamcommunity.com/games/*",
 				"https://steamcommunity.com/sharedfiles/*",
 				"https://steamcommunity.com/workshop/*"
 			],

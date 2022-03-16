@@ -89,46 +89,4 @@ GetOption( {
 			}
 		}
 	}
-	else if( items[ 'button-gamehub' ] )
-	{
-		container = document.getElementById( 'rightActionBlock' );
-
-		// Are we in an official game group?
-		if( container )
-		{
-			// Are we in a hacky game group with a custom url?
-			if( GetCurrentAppID() === -1 )
-			{
-				// Try to find game hub link, what possibly could go wrong?
-				element = document.querySelector( 'a[href*="http://steamcommunity.com/app/"], a[href*="https://steamcommunity.com/app/"]' );
-
-				// Let's just hope this doesn't break
-				CurrentAppID = element.href.match( /\/([0-9]+)\/?/ )[ 1 ];
-			}
-
-			// image
-			image = document.createElement( 'img' );
-			image.className = 'steamdb_ogg_icon';
-			image.src = GetLocalResource( 'icons/white.svg' );
-
-			// image container
-			const actionItemIcon = document.createElement( 'div' );
-			actionItemIcon.className = 'actionItemIcon';
-			actionItemIcon.appendChild( image );
-
-			// link
-			link = document.createElement( 'a' );
-			link.rel = 'noopener';
-			link.className = 'linkActionMinor';
-			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-			link.appendChild( document.createTextNode( 'View on SteamDB' ) );
-
-			element = document.createElement( 'div' );
-			element.className = 'actionItem';
-			element.appendChild( actionItemIcon );
-			element.appendChild( link );
-
-			container.insertBefore( element, null );
-		}
-	}
 } );
