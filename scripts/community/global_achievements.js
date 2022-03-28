@@ -121,7 +121,7 @@ GetOption( {
 
 						const parent = element.parentNode.querySelector( 'h5' );
 
-						if( spoilerAchievements )
+						if( spoilerAchievements && !achievement.closed )
 						{
 							const span = document.createElement( 'span' );
 							span.className = 'steamdb_achievement_spoiler';
