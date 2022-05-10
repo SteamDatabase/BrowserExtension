@@ -7,8 +7,10 @@
 		return;
 	}
 
+	const script = document.getElementById( 'steamdb_tradeoffer' );
+
 	// for_item support
-	if( window.g_rgCurrentTradeStatus && window.location.pathname.startsWith( '/tradeoffer/new' ) )
+	if( script.dataset.urlItemSupport === 'true' && window.g_rgCurrentTradeStatus && window.location.pathname.startsWith( '/tradeoffer/new' ) )
 	{
 		const params = new URLSearchParams( window.location.search );
 		const theirItems = params.getAll( 'for_item' );
@@ -72,9 +74,7 @@
 	}
 
 	// no gift confirmation
-	const script = document.getElementById( 'steamdb_tradeoffer' );
-
-	if( script.dataset.steamdbNoGiftConfirm === 'true' )
+	if( script.dataset.noGiftConfirm === 'true' )
 	{
 		const originalToggleReady = window.ToggleReady;
 		window.ToggleReady = function( ready )
