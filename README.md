@@ -39,7 +39,12 @@ and runs `npm run build` which creates a zip file with the release.
 
 ### Trade offers support for `for_item` and `my_item`
 
-This extension adds support for `for_item` and `my_item` parameters in `/tradeoffer/new` urls.
+This extension adds support for `for_item` and `my_item` parameters in `/tradeoffer/new` urls,
+these parameters will automatically add items to trade window upon page load.
+
+* `for_item` specifies an item in partner's inventory.
+* `my_item` specifies an item in your inventory.
+
 Multiple parameters can be specified, a single parameter takes format of `appid_contextid_assetid`.
 
 For example:
