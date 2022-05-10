@@ -37,5 +37,19 @@ When writing code, make sure to run our linter:
 Run `npm run version 3.0.0` which updates `manifest.json`, creates a commit, creates a tag,
 and runs `npm run build` which creates a zip file with the release.
 
+### Trade offers support for `for_item` and `my_item`
+
+This extension adds support for `for_item` and `my_item` parameters in `/tradeoffer/new` urls.
+Multiple parameters can be specified, a single parameter takes format of `appid_contextid_assetid`.
+
+For example:
+```
+https://steamcommunity.com/tradeoffer/new?partner=[steamid]&for_item=753_6_1234
+https://steamcommunity.com/tradeoffer/new?partner=[steamid]&for_item=753_6_1234&for_item=753_6_5678
+https://steamcommunity.com/tradeoffer/new?partner=[steamid]&my_item=753_6_1234
+https://steamcommunity.com/tradeoffer/new?partner=[steamid]&my_item=753_6_1234&my_item=753_6_5678
+https://steamcommunity.com/tradeoffer/new?partner=[steamid]&for_item=753_6_1234&my_item=753_6_5678
+```
+
 ### License
 Code in this repository is governed by a BSD-style license that can be found in the [LICENSE](LICENSE) file.

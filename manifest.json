@@ -354,17 +354,6 @@
 		{
 			"matches":
 			[
-				"https://steamcommunity.com/tradeoffer/new*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/community/tradeoffer_new.js"
-			]
-		},
-		{
-			"matches":
-			[
 				"https://steamcommunity.com/tradeoffer/*"
 			],
 			"exclude_matches":
