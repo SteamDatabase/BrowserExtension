@@ -1,10 +1,12 @@
 'use strict';
 
-const item = window.location.search.match( /[?&]for_item=([0-9]+)_([0-9]+)_([0-9]+)/ );
+const params = new URLSearchParams( window.location.search );
 
-if( item !== null )
+const items = params.getAll( 'for_item' );
+
+if( items.length > 0 )
 {
-	const InjectScript = function( appid, contextid, assetid )
+	const InjectScript = function( them_assets )
 	{
 		window.g_rgCurrentTradeStatus =
 		{
@@ -16,14 +18,17 @@ if( item !== null )
 				ready: false,
 			},
 			them: {
-				assets: [
-					{
-						appid,
-						contextid: contextid.toString(),
-						assetid: assetid.toString(),
+				assets: them_assets.split( ';' ).map( function( asset )
+				{
+					const search = asset.match( /([0-9]+)_([0-9]+)_([0-9]+)/ );
+					if( search === null )return null;
+					return{
+						appid: search[ 1 ],
+						contextid: search[ 2 ],
+						assetid: search[ 3 ],
 						amount: 1,
-					},
-				],
+					};
+				} ).filter( asset => asset ),
 				currency: [],
 				ready: false,
 			},
@@ -35,7 +40,7 @@ if( item !== null )
 	const element = document.createElement( 'script' );
 	element.id = 'steamdb_for_item';
 	element.type = 'text/javascript';
-	element.appendChild( document.createTextNode( '(' + InjectScript.toString() + '(' + item[ 1 ] + ',' + item[ 2 ] + ',' + item[ 3 ] + '))' ) );
+	element.appendChild( document.createTextNode( '(' + InjectScript.toString() + '("' + items.join( ';' ) + '"))' ) );
 
 	document.head.appendChild( element );
 }
