@@ -540,7 +540,7 @@ function GetLocalOption( items, callback )
 	}
 	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.local.get( items, callback );
+		chrome.storage.local.get( items ).then( callback );
 	}
 	else
 	{
@@ -626,7 +626,7 @@ function MigrateOptionsToSync()
 	}
 	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.local.get( null, callback );
+		chrome.storage.local.get( null ).then( callback );
 	}
 	else
 	{

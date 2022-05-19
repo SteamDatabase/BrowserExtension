@@ -53,7 +53,7 @@ function GetOption( items, callback )
 	}
 	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.sync.get( items, callback );
+		chrome.storage.sync.get( items ).then( callback );
 	}
 	else
 	{
@@ -85,7 +85,7 @@ function SendMessageToBackgroundScript( message, callback )
 		}
 		else if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 		{
-			chrome.runtime.sendMessage( message, callback );
+			chrome.runtime.sendMessage( message ).then( callback );
 		}
 		else
 		{
