@@ -35,6 +35,11 @@ runtimeObj.onInstalled.addListener( ( event ) =>
 
 runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 {
+	if( !sender || !sender.tab )
+	{
+		return false;
+	}
+
 	if( !Object.hasOwnProperty.call( request, 'contentScriptQuery' ) )
 	{
 		return false;
