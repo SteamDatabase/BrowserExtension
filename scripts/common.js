@@ -53,7 +53,7 @@ function GetOption( items, callback )
 	}
 	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.local.get( items, callback );
+		chrome.storage.local.get( items ).then( callback );
 	}
 	else
 	{
