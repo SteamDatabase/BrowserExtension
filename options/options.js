@@ -16,13 +16,17 @@
 	{
 		const chromepls = {}; chromepls[ option ] = value;
 
-		if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+		if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+		{
+			browser.storage.local.set( chromepls );
+		}
+		else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 		{
 			chrome.storage.local.set( chromepls );
 		}
-		else if( typeof browser !== 'undefined' )
+		else
 		{
-			browser.storage.local.set( chromepls );
+			throw new Error( 'Did not find an API for storage.local.set' );
 		}
 	};
 

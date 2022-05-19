@@ -31,41 +31,49 @@ function GetHomepage()
 
 function GetOption( items, callback )
 {
-	if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+	{
+		browser.storage.local.get( items ).then( callback );
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
 		chrome.storage.local.get( items, callback );
 	}
-	else if( typeof browser !== 'undefined' )
+	else
 	{
-		browser.storage.local.get( items ).then( callback );
+		throw new Error( 'Did not find an API for storage.local.get' );
 	}
 }
 
 function GetLocalResource( res )
 {
-	if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
-	{
-		return chrome.runtime.getURL( res );
-	}
-	else if( typeof browser !== 'undefined' )
+	if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
 	{
 		return browser.runtime.getURL( res );
 	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+	{
+		return chrome.runtime.getURL( res );
+	}
 
-	return res;
+	throw new Error( 'Did not find an API for getURL' );
 }
 
 function SendMessageToBackgroundScript( message, callback )
 {
 	try
 	{
-		if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+		if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
+		{
+			browser.runtime.sendMessage( message ).then( callback );
+		}
+		else if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 		{
 			chrome.runtime.sendMessage( message, callback );
 		}
-		else if( typeof browser !== 'undefined' )
+		else
 		{
-			browser.runtime.sendMessage( message, callback );
+			throw new Error( 'Did not find an API for sendMessage' );
 		}
 	}
 	catch( error )

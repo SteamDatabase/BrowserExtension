@@ -14,17 +14,21 @@ runtimeObj.onInstalled.addListener( ( event ) =>
 {
 	if( event.reason === runtimeObj.OnInstalledReason.INSTALL )
 	{
-		if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+		if( typeof browser !== 'undefined' && typeof browser.tabs !== 'undefined' )
+		{
+			browser.tabs.create( {
+				url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
+			} );
+		}
+		else if( typeof chrome !== 'undefined' && typeof chrome.tabs !== 'undefined' )
 		{
 			chrome.tabs.create( {
 				url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
 			} );
 		}
-		else if( typeof browser !== 'undefined' )
+		else
 		{
-			browser.tabs.create( {
-				url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
-			} );
+			throw new Error( 'Did not find an API for tabs.create' );
 		}
 	}
 } );
@@ -379,13 +383,17 @@ function GetStoreSessionID( callback )
 
 function GetOption( items, callback )
 {
-	if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+	{
+		browser.storage.local.get( items ).then( callback );
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
 		chrome.storage.local.get( items, callback );
 	}
-	else if( typeof browser !== 'undefined' )
+	else
 	{
-		browser.storage.local.get( items ).then( callback );
+		throw new Error( 'Did not find an API for storage.local.get' );
 	}
 }
 
@@ -393,12 +401,16 @@ function SetOption( option, value )
 {
 	const chromepls = {}; chromepls[ option ] = value;
 
-	if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+	{
+		browser.storage.local.set( chromepls );
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
 		chrome.storage.local.set( chromepls );
 	}
-	else if( typeof browser !== 'undefined' )
+	else
 	{
-		browser.storage.local.set( chromepls );
+		throw new Error( 'Did not find an API for storage.local.set' );
 	}
 }
