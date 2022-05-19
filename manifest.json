@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"version": "3.6.11",
 	"author": "SteamDB",
 	"name": "SteamDB",
@@ -7,11 +7,9 @@
 	"description": "__MSG_extension_description__",
 	"default_locale": "en",
 	"homepage_url": "https://steamdb.info/",
-	"options_page": "options/options.html",
 	"options_ui":
 	{
-		"page": "options/options.html",
-		"chrome_style": false
+		"page": "options/options.html"
 	},
 	"icons":
 	{
@@ -23,38 +21,47 @@
 	},
 	"permissions":
 	[
-		"storage",
+		"storage"
+	],
+	"host_permissions":
+	[
 		"https://steamdb.info/",
 		"https://steamcommunity.com/",
 		"https://*.steampowered.com/"
 	],
 	"background":
 	{
-		"scripts":
-		[
-			"scripts/background.js"
-		],
-		"persistent": false
+		"service_worker": "scripts/background.js"
 	},
 	"web_accessible_resources":
 	[
-		"options/options.html",
+		{
+			"resources":
+			[
+				"options/options.html",
 
-		"icons/white.svg",
-		"icons/pcgamingwiki.svg",
-		"icons/image.svg",
+				"icons/white.svg",
+				"icons/pcgamingwiki.svg",
+				"icons/image.svg",
 
-		"styles/appicon.css",
-		"styles/inventory-sidebar.css",
+				"styles/appicon.css",
+				"styles/inventory-sidebar.css",
 
-		"scripts/community/inventory.js",
-		"scripts/community/agecheck_injected.js",
-		"scripts/community/filedetails_award_injected.js",
-		"scripts/community/profile_award_injected.js",
-		"scripts/community/tradeoffer_injected.js",
-		"scripts/store/invalidate_cache_injected.js",
-		"scripts/store/registerkey_injected.js",
-		"scripts/store/subscriptions.js"
+				"scripts/community/inventory.js",
+				"scripts/community/agecheck_injected.js",
+				"scripts/community/filedetails_award_injected.js",
+				"scripts/community/profile_award_injected.js",
+				"scripts/community/tradeoffer_injected.js",
+				"scripts/store/invalidate_cache_injected.js",
+				"scripts/store/registerkey_injected.js",
+				"scripts/store/subscriptions.js"
+			],
+			"matches":
+			[
+				"https://store.steampowered.com/*",
+				"https://steamcommunity.com/*"
+			]
+		}
 	],
 	"content_scripts":
 	[
