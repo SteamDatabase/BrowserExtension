@@ -31,119 +31,7 @@ else
 
 		if( items[ 'steamdb-lowest-price' ] )
 		{
-			let country = null;
-			let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
-			currency = currency ? currency.content : null;
-
-			if( !currency )
-			{
-				currency = 'USD';
-
-				WriteLog( 'Missing priceCurrency, forced to USD' );
-			}
-			else if( currency === 'USD' )
-			{
-				// We only need to know the country if currency is USD
-				// as all other currencies are uniquely mapped already
-				const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
-
-				if( script )
-				{
-					const result = script.textContent.match( /EnableSearchSuggestions\(.+?'([A-Z]{2})',/ );
-
-					if( result )
-					{
-						country = result[ 1 ].toLowerCase();
-					}
-				}
-
-				if( !country )
-				{
-					country = document.cookie.match( /steamCountry=([a-z]{2})/i );
-					country = country === null ? 'us' : country[ 1 ].toLowerCase();
-
-					WriteLog( `Matched country as "${country}" from cookie and currency as "${currency}"` );
-				}
-				else
-				{
-					WriteLog( `Matched country as "${country}" from search script and currency as "${currency}"` );
-				}
-			}
-			else
-			{
-				WriteLog( `Matched currency as "${currency}"` );
-			}
-
-			SendMessageToBackgroundScript( {
-				contentScriptQuery: 'GetPrice',
-				appid: GetCurrentAppID(),
-				currency,
-				country,
-			}, ( response ) =>
-			{
-				if( !response || !response.success )
-				{
-					if( response && response.error )
-					{
-						WriteLog( `GetPrice failed to load: ${response.error}` );
-					}
-					else
-					{
-						WriteLog( 'GetPrice failed to load' );
-					}
-
-					return;
-				}
-
-				const data = response.data;
-
-				if( !data.lowest )
-				{
-					WriteLog( 'GetPrice has no lowest' );
-
-					return;
-				}
-
-				WriteLog( 'GetPrice loaded' );
-
-				const top = document.createElement( 'div' );
-				top.className = 'steamdb_prices_top';
-				top.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
-
-				let element = document.createElement( 'b' );
-				element.textContent = data.lowest.price;
-				top.appendChild( element );
-
-				if( data.lowest.discount > 0 )
-				{
-					top.appendChild( document.createTextNode( ' at ' ) );
-
-					element = document.createElement( 'b' );
-					element.textContent = `-${data.lowest.discount}%`;
-					top.appendChild( element );
-				}
-
-				const bottom = document.createElement( 'div' );
-				bottom.className = 'steamdb_prices_bottom';
-				bottom.appendChild( document.createTextNode( `Last on ${data.lowest.date}` ) );
-
-				element = document.createElement( 'a' );
-				element.className = 'steamdb_prices';
-				element.rel = 'noopener';
-				element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
-
-				const image = document.createElement( 'img' );
-				image.src = GetLocalResource( 'icons/white.svg' );
-				element.appendChild( image );
-
-				const textContainer = document.createElement( 'div' );
-				textContainer.appendChild( top );
-				textContainer.appendChild( bottom );
-				element.appendChild( textContainer );
-
-				const container = document.getElementById( 'game_area_purchase' );
-				container.insertAdjacentElement( 'beforeBegin', element );
-			} );
+			DrawLowestPrice();
 		}
 
 		if( items[ 'button-app' ] )
@@ -410,6 +298,138 @@ else
 
 	// Valve does not invalidate cache for follow button, so we catch it here
 	FollowInvalidateCache();
+}
+
+function DrawLowestPrice()
+{
+	let country = null;
+	let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
+	currency = currency ? currency.content : null;
+
+	const price = document.querySelector( 'meta[itemprop="price"]' );
+
+	if( price && price.content !== '' )
+	{
+		const parsedPrice = parseFloat( price.content.replace( ',', '.' ), 10 );
+
+		WriteLog( 'Parsed current price as', parsedPrice );
+
+		// Do not request lowest prices if this app is free
+		if( parsedPrice < 0.01 )
+		{
+			return;
+		}
+	}
+
+	if( !currency )
+	{
+		currency = 'USD';
+
+		WriteLog( 'Missing priceCurrency, forced to USD' );
+	}
+	else if( currency === 'USD' )
+	{
+		// We only need to know the country if currency is USD
+		// as all other currencies are uniquely mapped already
+		const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+
+		if( script )
+		{
+			const result = script.textContent.match( /EnableSearchSuggestions\(.+?'([A-Z]{2})',/ );
+
+			if( result )
+			{
+				country = result[ 1 ].toLowerCase();
+			}
+		}
+
+		if( !country )
+		{
+			country = document.cookie.match( /steamCountry=([a-z]{2})/i );
+			country = country === null ? 'us' : country[ 1 ].toLowerCase();
+
+			WriteLog( `Matched country as "${country}" from cookie and currency as "${currency}"` );
+		}
+		else
+		{
+			WriteLog( `Matched country as "${country}" from search script and currency as "${currency}"` );
+		}
+	}
+	else
+	{
+		WriteLog( `Matched currency as "${currency}"` );
+	}
+
+	SendMessageToBackgroundScript( {
+		contentScriptQuery: 'GetPrice',
+		appid: GetCurrentAppID(),
+		currency,
+		country,
+	}, ( response ) =>
+	{
+		if( !response || !response.success )
+		{
+			if( response && response.error )
+			{
+				WriteLog( `GetPrice failed to load: ${response.error}` );
+			}
+			else
+			{
+				WriteLog( 'GetPrice failed to load' );
+			}
+
+			return;
+		}
+
+		const data = response.data;
+
+		if( !data.lowest )
+		{
+			WriteLog( 'GetPrice has no lowest' );
+
+			return;
+		}
+
+		WriteLog( 'GetPrice loaded' );
+
+		const top = document.createElement( 'div' );
+		top.className = 'steamdb_prices_top';
+		top.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
+
+		let element = document.createElement( 'b' );
+		element.textContent = data.lowest.price;
+		top.appendChild( element );
+
+		if( data.lowest.discount > 0 )
+		{
+			top.appendChild( document.createTextNode( ' at ' ) );
+
+			element = document.createElement( 'b' );
+			element.textContent = `-${data.lowest.discount}%`;
+			top.appendChild( element );
+		}
+
+		const bottom = document.createElement( 'div' );
+		bottom.className = 'steamdb_prices_bottom';
+		bottom.appendChild( document.createTextNode( `Last on ${data.lowest.date}` ) );
+
+		element = document.createElement( 'a' );
+		element.className = 'steamdb_prices';
+		element.rel = 'noopener';
+		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
+
+		const image = document.createElement( 'img' );
+		image.src = GetLocalResource( 'icons/white.svg' );
+		element.appendChild( image );
+
+		const textContainer = document.createElement( 'div' );
+		textContainer.appendChild( top );
+		textContainer.appendChild( bottom );
+		element.appendChild( textContainer );
+
+		const container = document.getElementById( 'game_area_purchase' );
+		container.insertAdjacentElement( 'beforeBegin', element );
+	} );
 }
 
 function DrawOnlineStatsWidget( items )
