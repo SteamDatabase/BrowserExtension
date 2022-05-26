@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "steamdb-browser-extension",
-	"version": "3.3.0",
+	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
 		"build": "node build.js",
