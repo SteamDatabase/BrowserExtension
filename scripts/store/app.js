@@ -302,10 +302,6 @@ else
 
 function DrawLowestPrice()
 {
-	let country = null;
-	let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
-	currency = currency ? currency.content : null;
-
 	const price = document.querySelector( 'meta[itemprop="price"]' );
 
 	if( price && price.content !== '' )
@@ -321,50 +317,72 @@ function DrawLowestPrice()
 		}
 	}
 
+	let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
+	currency = currency ? currency.content : null;
+
 	if( !currency )
 	{
 		currency = 'USD';
 
 		WriteLog( 'Missing priceCurrency, forced to USD' );
 	}
-	else if( currency === 'USD' )
+
+	if( currency === 'USD' )
 	{
 		// We only need to know the country if currency is USD
 		// as all other currencies are uniquely mapped already
 		const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+		let country = null;
 
 		if( script )
 		{
-			const result = script.textContent.match( /EnableSearchSuggestions\(.+?'([A-Z]{2})',/ );
+			const result = script.textContent.match( /EnableSearchSuggestions\(.+?'(?<cc>[A-Z]{2})',/ );
 
 			if( result )
 			{
-				country = result[ 1 ].toLowerCase();
+				country = result.groups.cc;
+
+				WriteLog( `Matched country as "${country}" from search script` );
+			}
+			else
+			{
+				WriteLog( 'Failed to find country in search script' );
 			}
 		}
 
-		if( !country )
+		// Map countries that use USD but different pricing region to their own unique currency name
+		// This is done here to not send user's country to the server and to increase cache hits
+		// See https://partner.steamgames.com/doc/store/pricing/currencies
+		switch( country )
 		{
-			country = document.cookie.match( /steamCountry=([a-z]{2})/i );
-			country = country === null ? 'us' : country[ 1 ].toLowerCase();
+			case 'AZ': // Azerbaijan
+			case 'AM': // Armenia
+			case 'BY': // Belarus
+			case 'GE': // Georgia
+			case 'KG': // Kyrgyzstan
+			case 'MD': // Moldova
+			case 'TJ': // Tajikistan
+			case 'TM': // Turkmenistan
+			case 'UZ': // Uzbekistan
+				currency = 'USD-CIS';
+				break;
 
-			WriteLog( `Matched country as "${country}" from cookie and currency as "${currency}"` );
-		}
-		else
-		{
-			WriteLog( `Matched country as "${country}" from search script and currency as "${currency}"` );
+			case 'BD': // Bangladesh
+			case 'BT': // Bhutan
+			case 'NP': // Nepal
+			case 'PK': // Pakistan
+			case 'LK': // Sri Lanka
+				currency = 'USD-SASIA';
+				break;
 		}
 	}
-	else
-	{
-		WriteLog( `Matched currency as "${currency}"` );
-	}
+
+	WriteLog( `Currency is "${currency}"` );
 
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'GetPrice',
 		appid: GetCurrentAppID(),
 		currency,
-		country,
 	}, ( response ) =>
 	{
 		if( !response || !response.success )

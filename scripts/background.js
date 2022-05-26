@@ -151,14 +151,7 @@ function GetCurrentPlayers( appid, callback )
 
 function GetPrice( request, callback )
 {
-	let url = `https://steamdb.info/api/ExtensionGetPrice/?appid=${parseInt( request.appid, 10 )}&currency=${encodeURIComponent( request.currency )}`;
-
-	if( request.country )
-	{
-		url += `&country=${encodeURIComponent( request.country )}`;
-	}
-
-	fetch( url, {
+	fetch( `https://steamdb.info/api/ExtensionGetPrice/?appid=${parseInt( request.appid, 10 )}&currency=${encodeURIComponent( request.currency )}`, {
 		credentials: 'omit',
 	} )
 		.then( ( response ) => response.json() )
