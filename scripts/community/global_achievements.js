@@ -72,7 +72,7 @@ GetOption( {
 							continue;
 						}
 
-						if( achievement.progress )
+						if( !achievement.closed && achievement.progress )
 						{
 							const progress = document.createElement( 'span' );
 							progress.className = 'achievePercent wt steamdb_achievement_progress';
