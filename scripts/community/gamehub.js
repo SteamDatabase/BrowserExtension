@@ -50,7 +50,7 @@ GetOption( {
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 			element = document.createElement( 'span' );
-			element.dataset.tooltipText = 'View on SteamDB';
+			element.dataset.tooltipText = _t( 'view_on_steamdb' );
 			link.appendChild( element );
 
 			image = document.createElement( 'img' );
@@ -74,7 +74,7 @@ GetOption( {
 				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 				element = document.createElement( 'span' );
-				element.dataset.tooltipText = 'View article on PCGamingWiki';
+				element.dataset.tooltipText = _t( 'view_on_pcgamingwiki' );
 				link.appendChild( element );
 
 				image = document.createElement( 'img' );

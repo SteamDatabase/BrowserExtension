@@ -8,7 +8,7 @@ if( container )
 	link.rel = 'noopener';
 	link.className = 'steamdb_error_link';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-	link.appendChild( document.createTextNode( 'View on SteamDB' ) );
+	link.appendChild( document.createTextNode( _t( 'view_on_steamdb' ) ) );
 
 	container.appendChild( link );
 }
@@ -46,7 +46,7 @@ else
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 				const element = document.createElement( 'span' );
-				element.dataset.tooltipText = 'View on SteamDB';
+				element.dataset.tooltipText = _t( 'view_on_steamdb' );
 				link.appendChild( element );
 
 				const image = document.createElement( 'img' );
@@ -71,7 +71,7 @@ else
 				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 				const element = document.createElement( 'span' );
-				element.dataset.tooltipText = 'View article on PCGamingWiki';
+				element.dataset.tooltipText = _t( 'view_on_pcgamingwiki' );
 				link.appendChild( element );
 
 				const image = document.createElement( 'img' );
@@ -107,7 +107,7 @@ else
 
 				subidElement = document.createElement( 'span' );
 				subidElement.className = 'steamdb_subid';
-				subidElement.dataset.tooltipText = 'View on SteamDB';
+				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
@@ -117,7 +117,7 @@ else
 				// Is this a subscription selector?
 				if( subid.length > 0 )
 				{
-					subidElement.textContent = 'Sub ' + subid;
+					subidElement.textContent = _t( 'id_sub', [ subid ] );
 					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 					link.appendChild( subidElement );
 
@@ -139,7 +139,7 @@ else
 				{
 					hasDropdowns = true;
 
-					subidElement.textContent = 'nothing selected';
+					subidElement.textContent = _t( 'app_nothing_selected' );
 					link.href = '#';
 
 					element.prepend( link );
@@ -154,14 +154,14 @@ else
 				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/install\/([0-9]+)/ )[ 1 ];
 
 				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = 'View on SteamDB';
+				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
-				subidElement.textContent = 'App ' + subid;
+				subidElement.textContent = _t( 'id_app', [ subid ] );
 				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 
@@ -176,14 +176,14 @@ else
 				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/run\/([0-9]+)/ )[ 1 ];
 
 				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = 'View on SteamDB';
+				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
-				subidElement.textContent = 'App ' + subid;
+				subidElement.textContent = _t( 'id_app', [ subid ] );
 				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 
@@ -201,14 +201,14 @@ else
 				element = element.parentElement.parentElement;
 
 				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = 'View on SteamDB';
+				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
 				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
-				subidElement.textContent = 'Bundle ' + subid;
+				subidElement.textContent = _t( 'id_bundle', [ subid ] );
 				link.href = GetHomepage() + 'bundle/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.appendChild( subidElement );
 
@@ -260,7 +260,7 @@ else
 
 				const subtitle = document.createElement( 'div' );
 				subtitle.className = 'subtitle column';
-				subtitle.textContent = 'SteamDB Rating:';
+				subtitle.textContent = _t( 'app_steamdb_rating' );
 
 				const summary = document.createElement( 'div' );
 				summary.className = `summary column steamdb_rating steamdb_rating_${ratingClass}`;
@@ -470,7 +470,7 @@ function DrawOnlineStatsWidget( items )
 	const link = document.createElement( 'a' );
 	link.className = 'steamdb_stats_logo';
 	link.rel = 'noopener';
-	link.title = 'View more information and charts on SteamDB';
+	link.title = _t( 'view_on_steamdb' );
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 	const image = document.createElement( 'img' );
@@ -487,7 +487,7 @@ function DrawOnlineStatsWidget( items )
 	let line = document.createElement( 'p' );
 	let lineText = document.createElement( 'span' );
 	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = 'Online now:';
+	lineText.textContent = _t( 'app_stats_online_now' );
 	line.appendChild( lineText );
 	line.appendChild( onlineNow );
 
@@ -501,7 +501,7 @@ function DrawOnlineStatsWidget( items )
 	line = document.createElement( 'p' );
 	lineText = document.createElement( 'span' );
 	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = 'Peak today:';
+	lineText.textContent = _t( 'app_stats_peak_today' );
 	line.appendChild( lineText );
 	line.appendChild( peakToday );
 
@@ -515,7 +515,7 @@ function DrawOnlineStatsWidget( items )
 	line = document.createElement( 'p' );
 	lineText = document.createElement( 'span' );
 	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = 'All-time peak:';
+	lineText.textContent = _t( 'app_stats_alL_time_peak' );
 	line.appendChild( lineText );
 	line.appendChild( peakAll );
 
@@ -529,7 +529,7 @@ function DrawOnlineStatsWidget( items )
 	line = document.createElement( 'p' );
 	lineText = document.createElement( 'span' );
 	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = 'Followers:';
+	lineText.textContent = _t( 'app_stats_followers' );
 	line.appendChild( lineText );
 	line.appendChild( followers );
 
@@ -541,7 +541,7 @@ function DrawOnlineStatsWidget( items )
 	// Add responsive text heading
 	const responsiveHeader = document.createElement( 'div' );
 	responsiveHeader.className = 'responsive_block_header responsive_apppage_details_left';
-	responsiveHeader.textContent = 'Online Stats';
+	responsiveHeader.textContent = _t( 'app_stats_online' );
 	container.insertBefore( responsiveHeader, container.firstChild );
 
 	SendMessageToBackgroundScript( {
@@ -586,7 +586,6 @@ function DrawOnlineStatsWidget( items )
 		{
 			const depotsUpdate = document.createElement( 'div' );
 			depotsUpdate.className = 'dev_row steamdb_last_update';
-			depotsUpdate.title = 'As seen by SteamDB';
 
 			const historyLink = document.createElement( 'a' );
 			historyLink.rel = 'noopener';
@@ -602,7 +601,7 @@ function DrawOnlineStatsWidget( items )
 
 			const subtitle = document.createElement( 'div' );
 			subtitle.className = 'subtitle column';
-			subtitle.textContent = 'Depots Update:';
+			subtitle.textContent = _t( 'app_depots_update' );
 
 			depotsUpdate.appendChild( subtitle );
 			depotsUpdate.appendChild( historyLink );

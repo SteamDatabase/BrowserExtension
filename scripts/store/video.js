@@ -15,7 +15,7 @@ GetOption( { 'button-video': true }, function( items )
 		link.rel = 'noopener';
 		link.className = 'action_btn';
 		link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-		link.appendChild( document.createTextNode( 'View on SteamDB' ) );
+		link.appendChild( document.createTextNode( _t( 'view_on_steamdb' ) ) );
 
 		container.insertBefore( link, null );
 	}

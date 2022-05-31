@@ -10,6 +10,7 @@ env:
 extends: standard
 
 globals:
+  _t: false
   GetOption: false
   GetAppIDFromUrl: false
   GetCurrentAppID: false

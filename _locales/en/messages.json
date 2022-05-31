@@ -1,0 +1,50 @@
+{
+	"extension_description": {
+		"message": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats."
+	},
+
+	"view_on_steamdb": {
+		"message": "View on SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "View on PCGamingWiki"
+	},
+
+	"id_app": {
+		"message": "App $1"
+	},
+	"id_sub": {
+		"message": "Sub $1"
+	},
+	"id_bundle": {
+		"message": "Bundle $1"
+	},
+
+	"app_steamdb_rating": {
+		"message": "SteamDB Rating:"
+	},
+	"app_depots_update": {
+		"message": "Depots Update:"
+	},
+	"app_stats_online": {
+		"message": "Online Stats"
+	},
+	"app_stats_online_now": {
+		"message": "Online now:"
+	},
+	"app_stats_peak_today": {
+		"message": "Peak today:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "All-time peak:"
+	},
+	"app_stats_followers": {
+		"message": "Followers:"
+	},
+	"app_lowest_price_": {
+		"message": ""
+	},
+	"app_nothing_selected": {
+		"message": "nothing selected"
+	}
+}

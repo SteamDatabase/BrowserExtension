@@ -1,4 +1,4 @@
-/* exported GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, WriteLog */
+/* exported _t, GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, WriteLog */
 /* eslint-disable no-unused-vars */
 
 'use strict';
@@ -27,6 +27,22 @@ function GetCurrentAppID()
 function GetHomepage()
 {
 	return'https://steamdb.info/';
+}
+
+function _t( message, substitutions = [] )
+{
+	if( typeof browser !== 'undefined' && typeof browser.i18n !== 'undefined' )
+	{
+		return browser.i18n.getMessage( message, substitutions );
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.i18n !== 'undefined' )
+	{
+		return chrome.i18n.getMessage( message, substitutions );
+	}
+	else
+	{
+		throw new Error( 'Did not find an API for i18n' );
+	}
 }
 
 function GetOption( items, callback )

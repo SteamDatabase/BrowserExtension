@@ -36,7 +36,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 	image.src = GetLocalResource( 'icons/white.svg' );
 
 	span = document.createElement( 'span' );
-	span.dataset.tooltipText = 'View on SteamDB';
+	span.dataset.tooltipText = _t( 'view_on_steamdb' );
 	span.appendChild( image );
 
 	link = document.createElement( 'a' );
