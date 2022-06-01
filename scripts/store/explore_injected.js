@@ -10,12 +10,12 @@
 	const button = document.createElement( 'div' );
 	button.className = 'btnv6_blue_hoverfade btn_medium';
 	let span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Auto-discover' ) );
+	span.appendChild( document.createTextNode( _t( 'explore_auto_discover' ) ) );
 	button.appendChild( span );
 	buttonContainer.appendChild( button );
 
 	span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Automatically discover the queue to get an event card.' ) );
+	span.appendChild( document.createTextNode( _t( 'explore_auto_discover_description' ) ) );
 	buttonContainer.appendChild( span );
 
 	const script = document.getElementById( 'steamdb_explore_queue' );
@@ -42,7 +42,7 @@
 			DiscoveryQueueModal.Dismiss();
 		}
 
-		DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Generating the queue…', 'Generating new discovery queue, this can fail if Steam is under high load.' );
+		DiscoveryQueueModal = window.ShowBlockingWaitDialog( _t( 'explore_generating' ), _t( 'explore_generating_description' ) );
 
 		window.jQuery.post( '/explore/generatenewdiscoveryqueue', { sessionid: window.g_sessionID, queuetype: 0 } ).done( function( data )
 		{
@@ -58,7 +58,7 @@
 				}
 
 				DiscoveryQueueModal.Dismiss();
-				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Exploring the queue…', 'Request ' + ++done + ' of ' + data.queue.length );
+				DiscoveryQueueModal = window.ShowBlockingWaitDialog( _t( 'explore_exploring' ), _t( 'explore_exploring_description', [ ++done, data.queue.length ] ) );
 			};
 
 			const requestFail = function( )
@@ -71,7 +71,7 @@
 				errorShown = true;
 
 				DiscoveryQueueModal.Dismiss();
-				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to clear queue item #' + ++done + '. Will try again soon.' );
+				DiscoveryQueueModal = window.ShowBlockingWaitDialog( _t( 'error' ), _t( 'explore_failed_to_clear', [ ++done ] ) );
 			};
 
 			for( let i = 0; i < data.queue.length; i++ )
@@ -87,9 +87,9 @@
 			const callback = function()
 			{
 				DiscoveryQueueModal.Dismiss();
-				DiscoveryQueueModal = window.ShowConfirmDialog( 'Done', 'Queue has been explored', 'Reload the page' ).done( function( )
+				DiscoveryQueueModal = window.ShowConfirmDialog( _t( 'explore_finished' ), _t( 'explore_finished_description' ), _t( 'explore_finished_reload' ) ).done( function( )
 				{
-					window.ShowBlockingWaitDialog( 'Reloading the page' );
+					window.ShowBlockingWaitDialog( _t( 'explore_finished_reloading' ) );
 					window.location.reload();
 				} );
 			};
@@ -101,7 +101,12 @@
 				setTimeout( GenerateQueue, 5000 );
 
 				DiscoveryQueueModal.Dismiss();
-				DiscoveryQueueModal = window.ShowBlockingWaitDialog( 'Error', 'Failed to generate new queue, trying again in five seconds…' );
+				DiscoveryQueueModal = window.ShowBlockingWaitDialog( _t( 'error' ), _t( 'explore_failed_to_generate' ) );
 			} );
+	}
+
+	function _t( str )
+	{
+		return str; // TODO
 	}
 }() );

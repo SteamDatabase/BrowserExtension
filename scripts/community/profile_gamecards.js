@@ -20,7 +20,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 
 	// Store button
 	let span = document.createElement( 'span' );
-	span.appendChild( document.createTextNode( 'Store Page' ) );
+	span.appendChild( document.createTextNode( _t( 'store_page' ) ) );
 
 	let link = document.createElement( 'a' );
 	link.rel = 'noopener';

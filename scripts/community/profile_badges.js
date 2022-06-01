@@ -71,7 +71,7 @@ else
 		image.src = GetLocalResource( 'icons/white.svg' );
 
 		const span = document.createElement( 'span' );
-		span.dataset.tooltipText = 'View badge on SteamDB';
+		span.dataset.tooltipText = _t( 'view_on_steamdb' );
 		span.appendChild( image );
 
 		const link = document.createElement( 'a' );

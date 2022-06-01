@@ -17,7 +17,7 @@ GetOption( {
 		const link = document.createElement( 'a' );
 		link.className = 'tabOn';
 		link.href = `${currentUser.href}${path}?tab=achievements`;
-		link.textContent = 'View your achievements';
+		link.textContent = _t( 'view_your_achievements' );
 
 		tab.appendChild( link );
 		document.querySelector( '#tabs' ).appendChild( tab );
@@ -59,7 +59,7 @@ GetOption( {
 
 					if( headerContentLeft )
 					{
-						headerContentLeft.appendChild( document.createTextNode( ' (but SteamDB extension was able to load your achievements)' ) );
+						headerContentLeft.appendChild( document.createTextNode( _t( 'hidden_achievement_but_loaded' ) ) );
 					}
 				}
 
@@ -76,7 +76,7 @@ GetOption( {
 						{
 							const progress = document.createElement( 'span' );
 							progress.className = 'achievePercent wt steamdb_achievement_progress';
-							progress.textContent = `Your progress: ${achievement.progress.currentVal} / ${achievement.progress.max_val}`;
+							progress.textContent = _t( 'achievement_your_progress', [ achievement.progress.currentVal, achievement.progress.max_val ] );
 
 							const meter = document.createElement( 'meter' );
 							meter.min = achievement.progress.min_val;
@@ -128,7 +128,7 @@ GetOption( {
 							span.appendChild( document.createTextNode( achievement.desc ) );
 
 							const hiddenAchiev = document.createElement( 'i' );
-							hiddenAchiev.textContent = 'Hidden achievement, mouse over to reveal: ';
+							hiddenAchiev.textContent = _t( 'hidden_achievement_hover' );
 
 							parent.appendChild( hiddenAchiev );
 							parent.appendChild( span );
@@ -136,7 +136,7 @@ GetOption( {
 						else
 						{
 							const hiddenAchiev = document.createElement( 'i' );
-							hiddenAchiev.textContent = 'Hidden achievement: ';
+							hiddenAchiev.textContent = _t( 'hidden_achievement' );
 
 							parent.appendChild( hiddenAchiev );
 							parent.appendChild( document.createTextNode( achievement.desc ) );

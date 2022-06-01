@@ -64,7 +64,7 @@ GetOption( {
 						span.appendChild( document.createTextNode( achievement.desc ) );
 
 						const hiddenAchiev = document.createElement( 'i' );
-						hiddenAchiev.textContent = 'Hidden achievement, mouse over to reveal: ';
+						hiddenAchiev.textContent = _t( 'hidden_achievement_hover' );
 
 						h5.appendChild( hiddenAchiev );
 						h5.appendChild( span );
@@ -72,7 +72,7 @@ GetOption( {
 					else
 					{
 						const hiddenAchiev = document.createElement( 'i' );
-						hiddenAchiev.textContent = 'Hidden achievement: ';
+						hiddenAchiev.textContent = _t( 'hidden_achievement' );
 
 						h5.appendChild( hiddenAchiev );
 						h5.appendChild( document.createTextNode( achievement.desc ) );

@@ -9,11 +9,11 @@ document.title === 'We Broke It' )
 	const link = document.createElement( 'a' );
 	link.rel = 'noopener';
 	link.href = 'https://steamstat.us';
-	link.appendChild( document.createTextNode( 'Check steamstat.us' ) );
+	link.appendChild( document.createTextNode( _t( 'steamstatus' ) ) );
 
 	const container = document.createElement( 'div' );
 	container.className = 'steamdb_downtime';
-	container.appendChild( document.createTextNode( 'Steam appears to be experiencing some downtime. ' ) );
+	container.appendChild( document.createTextNode( _t( 'steamstatus_downtime' ) ) );
 	container.appendChild( link );
 
 	document.body.insertBefore( container, document.body.firstChild );
@@ -53,7 +53,7 @@ else
 		const optionsLink = document.createElement( 'a' );
 		optionsLink.target = '_blank';
 		optionsLink.className = 'popup_menu_item';
-		optionsLink.textContent = 'SteamDB Options';
+		optionsLink.textContent = _t( 'steamdb_options' );
 		optionsLink.href = GetLocalResource( 'options/options.html' );
 
 		popup.appendChild( optionsLink );

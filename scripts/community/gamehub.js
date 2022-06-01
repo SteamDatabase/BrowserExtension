@@ -36,7 +36,7 @@ GetOption( {
 			link.rel = 'noopener';
 			link.className = 'apphub_NumInApp';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-			link.title = 'View player graphs on SteamDB';
+			link.title = _t( 'view_on_steamdb' );
 			link.textContent = element.textContent;
 
 			element.parentNode.replaceChild( link, element );

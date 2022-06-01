@@ -3,11 +3,30 @@
 		"message": "Adds SteamDB links and new features on the Steam store and community. View lowest game prices and stats."
 	},
 
+	"steamdb_options": {
+		"message": "SteamDB Options"
+	},
+	"steamstatus": {
+		"message": "Check steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam appears to be experiencing some downtime. "
+	},
+
 	"view_on_steamdb": {
 		"message": "View on SteamDB"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "View on PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "View your achievements"
+	},
+	"store_page": {
+		"message": "Store Page"
+	},
+	"error": {
+		"message": "Error"
 	},
 
 	"id_app": {
@@ -46,5 +65,55 @@
 	},
 	"app_nothing_selected": {
 		"message": "nothing selected"
+	},
+
+	"explore_auto_discover": {
+		"message": "Auto-discover"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automatically discover the queue to get an event card."
+	},
+	"explore_generating": {
+		"message": "Generating the queue…"
+	},
+	"explore_generating_description": {
+		"message": "Generating new discovery queue, this can fail if Steam is under high load."
+	},
+	"explore_exploring": {
+		"message": "Exploring the queue…"
+	},
+	"explore_exploring_description": {
+		"message": "Request $1 of $2"
+	},
+	"explore_failed_to_clear": {
+		"message": "Failed to clear queue item #$1. Will try again soon."
+	},
+	"explore_failed_to_generate": {
+		"message": "Failed to generate new queue, trying again in five seconds…"
+	},
+	"explore_finished": {
+		"message": "Finished"
+	},
+	"explore_finished_description": {
+		"message": "Queue has been explored"
+	},
+	"explore_finished_reload": {
+		"message": "Reload the page"
+	},
+	"explore_finished_reloading": {
+		"message": "Reloading the page"
+	},
+
+	"achievement_your_progress": {
+		"message": "Your progress: $1 / $2"
+	},
+	"hidden_achievement": {
+		"message": "Hidden achievement: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Hidden achievement, mouse over to reveal: "
+	},
+	"hidden_achievement_but_loaded": {
+		"message": " (but SteamDB extension was able to load your achievements)"
 	}
 }
