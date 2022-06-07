@@ -32,6 +32,8 @@ When writing code, make sure to run our linter:
 2. Run `npm test` which should report warnings
 3. Run `npm run fix` which should automatically fix most of the reported warnings
 
+**Please do not make pull requests adding translations or languages at this time.**
+
 #### Making a release
 
 Run `npm run version 3.0.0` which updates `manifest.json`, creates a commit, creates a tag,
