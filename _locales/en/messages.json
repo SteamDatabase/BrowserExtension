@@ -115,5 +115,12 @@
 	},
 	"hidden_achievement_but_loaded": {
 		"message": " (but SteamDB extension was able to load your achievements)"
+	},
+
+	"widget_view_app": {
+		"message": "View app $1 on SteamDB"
+	},
+	"widget_view_sub": {
+		"message": "View sub $1 on SteamDB"
 	}
 }
