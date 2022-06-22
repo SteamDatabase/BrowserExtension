@@ -74,16 +74,10 @@
 		"message": "Automatically discover the queue to get an event card."
 	},
 	"explore_generating": {
-		"message": "Generating the queue…"
-	},
-	"explore_generating_description": {
-		"message": "Generating new discovery queue, this can fail if Steam is under high load."
+		"message": "Generating new discovery queue, this can fail if Steam is under high load…"
 	},
 	"explore_exploring": {
-		"message": "Exploring the queue…"
-	},
-	"explore_exploring_description": {
-		"message": "Request $1 of $2"
+		"message": "Exploring the queue… Request $1 of $2"
 	},
 	"explore_failed_to_clear": {
 		"message": "Failed to clear queue item #$1. Will try again soon."
@@ -92,16 +86,7 @@
 		"message": "Failed to generate new queue, trying again in five seconds…"
 	},
 	"explore_finished": {
-		"message": "Finished"
-	},
-	"explore_finished_description": {
-		"message": "Queue has been explored"
-	},
-	"explore_finished_reload": {
-		"message": "Reload the page"
-	},
-	"explore_finished_reloading": {
-		"message": "Reloading the page"
+		"message": "Queue has been explored."
 	},
 
 	"achievement_your_progress": {
