@@ -11,6 +11,14 @@ if( container )
 	link.appendChild( document.createTextNode( _t( 'view_on_steamdb' ) ) );
 
 	container.appendChild( link );
+
+	const link2 = document.createElement( 'a' );
+	link2.rel = 'noopener';
+	link2.className = 'pcgamingwiki_error_link';
+	link2.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+	link2.appendChild( document.createTextNode( _t( 'view_on_pcgamingwiki' ) ) );
+
+	container.appendChild( link2 );
 }
 else
 {
