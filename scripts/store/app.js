@@ -101,14 +101,11 @@ else
 			let container = document.querySelectorAll( 'input[name="subid"]' );
 
 			let hasDropdowns = false;
-			let i = 0;
 			let subid = 0;
 			let subidElement;
 
-			for( i = 0; i < container.length; i++ )
+			for( let element of container )
 			{
-				let element = container[ i ];
-
 				subid = element.value;
 
 				element = element.parentElement.parentElement;
@@ -152,6 +149,36 @@ else
 
 					element.prepend( link );
 				}
+			}
+
+			// Add license for free apps
+			container = document.querySelectorAll( '.btn_addtocart > span[onclick]' );
+
+			for( const element of container )
+			{
+				subid = element.getAttribute( 'onclick' ).match( /AddFreeLicense\(\s*([0-9]+)/ );
+
+				if( !subid )
+				{
+					continue;
+				}
+
+				subid = subid[ 1 ];
+
+				subidElement = document.createElement( 'span' );
+				subidElement.className = 'steamdb_subid';
+				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
+
+				const link = document.createElement( 'a' );
+				link.rel = 'noopener';
+				link.className = 'btn_black btn_small steamdb_link';
+				link.appendChild( subidElement );
+
+				subidElement.textContent = _t( 'id_sub', [ subid ] );
+				link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.appendChild( subidElement );
+
+				element.closest( '.game_purchase_action' ).prepend( link );
 			}
 
 			// Link appid in demo download banner
@@ -198,12 +225,11 @@ else
 				element.querySelector( '.game_purchase_action' ).prepend( link );
 			}
 
+			// Bundles
 			container = document.querySelectorAll( 'input[name="bundleid"]' );
 
-			for( i = 0; i < container.length; i++ )
+			for( let element of container )
 			{
-				element = container[ i ];
-
 				subid = element.value;
 
 				element = element.parentElement.parentElement;
