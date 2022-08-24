@@ -33,4 +33,5 @@ archive.directory( path.join( __dirname, 'icons/' ), 'icons' );
 archive.directory( path.join( __dirname, 'options/' ), 'options' );
 archive.directory( path.join( __dirname, 'scripts/' ), 'scripts' );
 archive.directory( path.join( __dirname, 'styles/' ), 'styles' );
+archive.directory( path.join( __dirname, '_locales/' ), '_locales' );
 archive.finalize();
