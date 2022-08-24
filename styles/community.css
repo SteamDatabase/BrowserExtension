@@ -47,6 +47,15 @@ a.apphub_NumInApp:hover {
 	vertical-align: top;
 }
 
+.steamdb_drops_remaining {
+	border-radius: 2px;
+	display: inline-block;
+	background: rgb(0 0 0 / 30%);
+	padding: 0 5px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
 .profile_small_header_additional.steamdb {
 	margin-top: 40px;
 }
