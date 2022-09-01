@@ -324,7 +324,19 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 			method: 'POST',
 			body: formData,
 		} )
-			.then( ( response ) => response.json() )
+			.then( ( response ) =>
+			{
+				// If we get 401 Unauthorized, it's likely that the login cookie has expired,
+				// if that's the case, requesting page to get sessionid again should go through
+				// login redirect and set a fresh login cookie.
+				// Or the sessionid simply changed.
+				if( response.status === 401 )
+				{
+					storeSessionId = null;
+				}
+
+				return response.json();
+			} )
 			.then( ( response ) =>
 			{
 				if( rawCallback )
