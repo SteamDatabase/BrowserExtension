@@ -25,8 +25,8 @@
 	[
 		"storage",
 		"https://steamdb.info/",
-		"https://store.steampowered.com/",
-		"https://steamcommunity.com/"
+		"https://steamcommunity.com/",
+		"https://*.steampowered.com/"
 	],
 	"background":
 	{
