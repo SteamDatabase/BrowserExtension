@@ -1,13 +1,17 @@
 let runtimeObj;
 let storeSessionId;
 
-if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
+if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
+{
+	runtimeObj = browser.runtime;
+}
+else if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 {
 	runtimeObj = chrome.runtime;
 }
 else
 {
-	runtimeObj = browser.runtime;
+	throw new Error( 'Did not find an API for runtime' );
 }
 
 runtimeObj.onInstalled.addListener( ( event ) =>
