@@ -1,5 +1,6 @@
 let runtimeObj;
 let storeSessionId;
+let userDataCache = null;
 
 if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
 {
@@ -72,11 +73,19 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 
 function InvalidateCache()
 {
+	userDataCache = null;
+
 	SetOption( 'userdata.cached', Date.now() );
 }
 
 function FetchSteamUserData( callback )
 {
+	if( userDataCache !== null )
+	{
+		callback( { data: userDataCache } );
+		return;
+	}
+
 	GetOption( { 'userdata.cached': Date.now() }, ( data ) =>
 	{
 		const now = Date.now();
@@ -101,7 +110,7 @@ function FetchSteamUserData( callback )
 				}
 
 				// Only keep the data we actually need
-				const data =
+				userDataCache =
 				{
 					rgOwnedPackages: response.rgOwnedPackages || [],
 					rgOwnedApps: response.rgOwnedApps || [],
@@ -116,9 +125,9 @@ function FetchSteamUserData( callback )
 					rgWishlist: response.rgWishlist || [],
 				};
 
-				callback( { data } );
+				callback( { data: userDataCache } );
 
-				SetOption( 'userdata.stored', JSON.stringify( data ) );
+				SetOption( 'userdata.stored', JSON.stringify( userDataCache ) );
 			} )
 			.catch( ( error ) =>
 			{
