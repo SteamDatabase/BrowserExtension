@@ -12,6 +12,7 @@ GetOption( {
 		achievementsContainer = achievementsContainer.parentNode.parentNode;
 
 		const headers = new Headers();
+		headers.append( 'Accept', 'text/html' );
 		headers.append( 'X-ValveUserAgent', 'panorama' );
 
 		fetch( window.location.origin + window.location.pathname + '?tab=achievements&panorama=please', {

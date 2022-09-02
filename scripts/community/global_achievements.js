@@ -23,6 +23,7 @@ GetOption( {
 		document.querySelector( '#tabs' ).appendChild( tab );
 
 		const headers = new Headers();
+		headers.append( 'Accept', 'text/html' );
 		headers.append( 'X-ValveUserAgent', 'panorama' );
 
 		fetch( `${currentUser.href}${path}?tab=achievements&panorama=please`, {
