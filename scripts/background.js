@@ -100,6 +100,11 @@ function FetchSteamUserData( callback )
 		fetch( `https://store.steampowered.com/dynamicstore/userdata/?_=${encodeURIComponent( cache )}`,
 			{
 				credentials: 'include',
+				headers: {
+					// Pretend we're doing a normal navigation request.
+					// This will trigger login.steampowered.com redirect flow if user has expired cookies.
+					Accept: 'text/html',
+				},
 			} )
 			.then( ( response ) => response.json() )
 			.then( ( response ) =>
@@ -155,6 +160,9 @@ function GetCurrentPlayers( appid, callback )
 {
 	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}`, {
 		credentials: 'omit',
+		headers: {
+			'X-Requested-With': 'SteamDB',
+		},
 	} )
 		.then( ( response ) => response.json() )
 		.then( callback )
@@ -165,6 +173,9 @@ function GetPrice( request, callback )
 {
 	fetch( `https://steamdb.info/api/ExtensionGetPrice/?appid=${parseInt( request.appid, 10 )}&currency=${encodeURIComponent( request.currency )}`, {
 		credentials: 'omit',
+		headers: {
+			'X-Requested-With': 'SteamDB',
+		},
 	} )
 		.then( ( response ) => response.json() )
 		.then( callback )
@@ -323,6 +334,11 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 			credentials: 'include',
 			method: 'POST',
 			body: formData,
+			headers: {
+				// Specify that we're doing an AJAX request, which will prevent Steam from
+				// nuking users' cookies (even though it won't do that for POST requests either way)
+				'X-Requested-With': 'SteamDB',
+			},
 		} )
 			.then( ( response ) =>
 			{
@@ -378,6 +394,11 @@ function GetStoreSessionID( callback )
 
 	fetch( 'https://store.steampowered.com/account/preferences', {
 		credentials: 'include',
+		headers: {
+			// We have to specify that we're doing a normal request (as if the user was navigating).
+			// This will trigger login.steampowered.com redirect flow if user has expired cookies.
+			Accept: 'text/html',
+		},
 	} )
 		.then( ( response ) => response.text() )
 		.then( ( response ) =>
