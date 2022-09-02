@@ -84,15 +84,22 @@
 			],
 			"exclude_matches":
 			[
-				"https://store.steampowered.com/login/*",
-				"https://store.steampowered.com/join/*",
-				"https://store.steampowered.com/api/*",
+				"https://store.steampowered.com/account/ackgift/*",
+				"https://store.steampowered.com/account/redeemwalletcode/*",
 				"https://store.steampowered.com/actions/*",
+				"https://store.steampowered.com/api/*",
+				"https://store.steampowered.com/broadcast/*",
+				"https://store.steampowered.com/buyitem/*",
+				"https://store.steampowered.com/checkout/*",
 				"https://store.steampowered.com/dynamicstore/*",
-				"https://store.steampowered.com/checkout*",
-				"https://store.steampowered.com/widget/*",
-				"https://store.steampowered.com/account/ackgift*",
-				"https://store.steampowered.com/account/redeemwalletcode*"
+				"https://store.steampowered.com/join/*",
+				"https://store.steampowered.com/login/*",
+				"https://store.steampowered.com/public/*",
+				"https://store.steampowered.com/saleaction/*",
+				"https://store.steampowered.com/supportmessages/*",
+				"https://store.steampowered.com/videos/*",
+				"https://store.steampowered.com/vtt/*",
+				"https://store.steampowered.com/widget/*"
 			],
 			"js":
 			[
@@ -279,8 +286,12 @@
 			],
 			"exclude_matches":
 			[
+				"https://steamcommunity.com/actions/*",
+				"https://steamcommunity.com/chat/*",
 				"https://steamcommunity.com/login/*",
-				"https://steamcommunity.com/miniprofile/*"
+				"https://steamcommunity.com/miniprofile/*",
+				"https://steamcommunity.com/public/*",
+				"https://steamcommunity.com/openid/*"
 			],
 			"js":
 			[
