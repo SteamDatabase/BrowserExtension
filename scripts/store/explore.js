@@ -56,67 +56,60 @@ function GenerateQueue()
 	formData.append( 'queuetype', 0 );
 
 	fetch( '/explore/generatenewdiscoveryqueue', {
+		credentials: 'include',
+		method: 'POST',
 		body: formData,
-		method: 'post',
+		headers: {
+			'X-Requested-With': 'SteamDB',
+		},
 	} )
 		.then( ( response ) => response.json() )
 		.then( ( data ) =>
 		{
-			const requests = [];
 			let done = 0;
-			let errorShown;
 
 			const requestDone = () =>
 			{
-				if( errorShown )
+				if( ++done === data.queue.length )
 				{
-					return;
+					span.textContent = _t( 'explore_finished' );
 				}
+				else
+				{
+					span.textContent = _t( 'explore_exploring', [ done, data.queue.length ] );
 
-				span.textContent = _t( 'explore_exploring', [ ++done, data.queue.length ] );
+					requestNextInQueue( done );
+				}
 			};
 
 			const requestFail = ( error ) =>
 			{
 				WriteLog( 'Failed to clear queue', error );
 
-				if( errorShown )
-				{
-					return;
-				}
+				span.textContent = _t( 'explore_failed_to_clear', [ done ] );
 
-				errorShown = true;
-
-				span.textContent = _t( 'explore_failed_to_clear', [ ++done ] );
+				setTimeout( GenerateQueue, 5000 );
 			};
 
-			for( const queuedItem of data.queue )
+			const requestNextInQueue = ( index ) =>
 			{
 				formData = new FormData();
 				formData.append( 'sessionid', session.groups.sessionid );
-				formData.append( 'appid_to_clear_from_queue', queuedItem );
+				formData.append( 'appid_to_clear_from_queue', data.queue[ index ] );
 
-				const request = fetch( '/app/10', {
+				fetch( '/app/10', {
+					credentials: 'include',
+					method: 'POST',
 					body: formData,
-					method: 'post',
+					headers: {
+						'X-Requested-With': 'SteamDB',
+					},
 				} )
 					.then( requestDone )
 					.catch( requestFail );
+			};
 
-				requests.push( request );
-			}
-
-			Promise.allSettled( requests ).then( () =>
-			{
-				if( errorShown )
-				{
-					setTimeout( GenerateQueue, 5000 );
-
-					span.textContent = _t( 'explore_failed_to_generate' );
-				}
-
-				span.textContent = _t( 'explore_finished' );
-			} );
+			requestNextInQueue( 0 );
 		} )
 		.catch( ( error ) =>
 		{

@@ -80,7 +80,7 @@
 		"message": "Exploring the queue… Request $1 of $2"
 	},
 	"explore_failed_to_clear": {
-		"message": "Failed to clear queue item #$1. Will try again soon."
+		"message": "Failed to clear queue item #$1, trying again in five seconds…"
 	},
 	"explore_failed_to_generate": {
 		"message": "Failed to generate new queue, trying again in five seconds…"
