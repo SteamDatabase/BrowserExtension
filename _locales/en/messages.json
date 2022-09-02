@@ -82,6 +82,9 @@
 	"explore_failed_to_clear": {
 		"message": "Failed to clear queue item #$1, trying again in five seconds…"
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Failed to clear queue item #$1 too many times. You can try again later."
+	},
 	"explore_failed_to_generate": {
 		"message": "Failed to generate new queue, trying again in five seconds…"
 	},

@@ -67,6 +67,7 @@ function GenerateQueue()
 		.then( ( data ) =>
 		{
 			let done = 0;
+			let fails = 0;
 
 			const requestDone = () =>
 			{
@@ -86,9 +87,19 @@ function GenerateQueue()
 			{
 				WriteLog( 'Failed to clear queue', error );
 
+				if( ++fails >= 10 )
+				{
+					span.textContent = _t( 'explore_failed_to_clear_too_many', [ done ] );
+
+					return;
+				}
+
 				span.textContent = _t( 'explore_failed_to_clear', [ done ] );
 
-				setTimeout( GenerateQueue, 5000 );
+				setTimeout( () =>
+				{
+					requestNextInQueue( done );
+				}, 5000 );
 			};
 
 			const requestNextInQueue = ( index ) =>
