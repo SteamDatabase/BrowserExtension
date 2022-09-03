@@ -121,7 +121,24 @@
 			"js":
 			[
 				"scripts/common.js",
+				"scripts/store/app_error.js",
 				"scripts/store/app.js"
+			],
+			"css":
+			[
+				"styles/store.css"
+			]
+		},
+		{
+			"matches":
+			[
+				"https://store.steampowered.com/news/app/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/app_error.js",
+				"scripts/store/app_news.js"
 			],
 			"css":
 			[

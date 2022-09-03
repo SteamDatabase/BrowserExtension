@@ -7,8 +7,7 @@ a.steamdb_link:hover {
 }
 
 .steamdb_error_link {
-	display: block;
-	margin-top: 12px;
+	margin-top: 25px;
 }
 
 .game_purchase_action .steamdb_link {
