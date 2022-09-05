@@ -11,11 +11,9 @@ html {
 }
 
 body {
-	margin: 2rem auto;
-	padding: 0 1rem;
+	margin: 0;
 	font: 1rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	color: #c6d4df;
-	max-width: 34rem;
 }
 
 a {
@@ -79,15 +77,15 @@ summary:hover {
 }
 
 .container {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
+	padding: 0 2rem;
+	width: 100%;
+	max-width: 34rem;
 }
 
 .footer {
-	margin-top: 3rem;
-	margin-left: -1rem;
-	margin-right: -1rem;
-	padding-top: 2rem;
+	margin: 3rem 0;
+	padding-top: 3rem;
 	border-top: 1px solid #0197cf;
 	color: #34c8fe;
 }
