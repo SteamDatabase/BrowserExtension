@@ -114,6 +114,18 @@
 			]
 		},
 		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"https://store.steampowered.com/checkout/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/invalidate_cache.js"
+			]
+		},
+		{
 			"matches":
 			[
 				"https://store.steampowered.com/app/*"
