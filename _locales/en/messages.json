@@ -92,6 +92,19 @@
 		"message": "Queue has been explored."
 	},
 
+	"badges_idle_apps": {
+		"message": "Apps to idle: $1"
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Apps to idle on this page: $1"
+	},
+	"badges_idle_drops": {
+		"message": "Drops remaining: $1"
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Drops remaining on this page: $1"
+	},
+
 	"achievement_your_progress": {
 		"message": "Your progress: $1 / $2"
 	},
