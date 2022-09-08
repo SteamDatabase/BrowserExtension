@@ -126,6 +126,18 @@
 			]
 		},
 		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"https://store.steampowered.com/cart/*"
+			],
+			"js":
+			[
+				"scripts/common.js",
+				"scripts/store/cart.js"
+			]
+		},
+		{
 			"matches":
 			[
 				"https://store.steampowered.com/app/*"
