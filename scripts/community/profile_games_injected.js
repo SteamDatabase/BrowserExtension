@@ -8,25 +8,17 @@
 	}
 	else
 	{
-		const observer = new MutationObserver( function( mutations )
+		// If the script was injected too early, wait for <body> element to be created
+		const observer = new MutationObserver( () =>
 		{
-			mutations.forEach( function( mutation )
+			// Simply check whether body exists yet,
+			// not using mutation.addedNodes to prevent any possible race conditions
+			if( document.body )
 			{
-				if( !mutation.addedNodes )
-				{
-					return;
-				}
+				PerformHook();
 
-				for( const node of mutation.addedNodes )
-				{
-					if( node.tagName === 'BODY' )
-					{
-						observer.disconnect();
-
-						PerformHook();
-					}
-				}
-			} );
+				observer.disconnect();
+			}
 		} );
 
 		observer.observe( document, {
@@ -40,11 +32,13 @@
 		// Set row logo exact image size so it does not reflow
 		const style = document.createElement( 'style' );
 		style.id = 'steamdb_fix_game_logo';
-		style.appendChild( document.createTextNode( '@media screen and (min-width: 501px) { .gameListRowLogo img { width: 184px; height: 69px; } }' ) );
+		style.appendChild( document.createTextNode(
+			'.steamdb_optimizing { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; background: #417B9C; color: #fff; padding: 8px 16px; border-radius: 20px; }' +
+			'@media screen and (min-width: 501px) { .gameListRowLogo img { width: 184px; height: 69px; } }',
+		) );
 		document.head.appendChild( style );
 
 		const script = document.getElementById( 'steamdb_profile_games' );
-		const originalShowMenuCumulative = window.ShowMenuCumulative;
 		const originalBuildGameRow = window.BuildGameRow;
 		const popupsFragment = document.createDocumentFragment();
 		const gameRowsFragment = document.createDocumentFragment();
@@ -65,61 +59,81 @@
 			return original$.apply( this, arguments );
 		};
 
-		window.ShowMenuCumulative = function SteamDB_DynamicShowMenuCumulative( elemLink, elemPopup )
+		const optimizingElement = document.createElement( 'div' );
+		optimizingElement.className = 'steamdb_optimizing';
+		optimizingElement.appendChild( document.createTextNode( script.dataset.steamdb_is_optimizing ) );
+		document.body.append( optimizingElement );
+
+		const FirstBuildCallback = () =>
 		{
-			if( !document.getElementById( elemPopup ) )
+			const originalShowMenuCumulative = window.ShowMenuCumulative;
+			window.ShowMenuCumulative = function SteamDB_DynamicShowMenuCumulative( elemLink, elemPopup )
 			{
-				const popup = popupsFragment.getElementById( elemPopup );
-				document.body.append( popup );
-
-				if( elemPopup.startsWith( 'links_dropdown_' ) )
+				if( !document.getElementById( elemPopup ) )
 				{
-					const appID = elemPopup.replace( 'links_dropdown_', '' );
-					const element = popup.querySelector( '.popup_body2' );
+					const popup = popupsFragment.getElementById( elemPopup );
+					document.body.append( popup );
 
-					if( element )
+					if( elemPopup.startsWith( 'links_dropdown_' ) )
 					{
-						const text = document.createElement( 'h5' );
-						text.appendChild( document.createTextNode( script.dataset.view_on_steamdb ) );
+						const appID = elemPopup.replace( 'links_dropdown_', '' );
+						const element = popup.querySelector( '.popup_body2' );
 
-						const link = document.createElement( 'a' );
-						link.rel = 'noopener';
-						link.className = 'popup_menu_item2 tight';
-						link.href = script.dataset.homepage + 'app/' + appID + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-						link.appendChild( text );
+						if( element )
+						{
+							const text = document.createElement( 'h5' );
+							text.appendChild( document.createTextNode( script.dataset.view_on_steamdb ) );
 
-						element.appendChild( link );
+							const link = document.createElement( 'a' );
+							link.className = 'popup_menu_item2 tight';
+							link.href = script.dataset.homepage + 'app/' + appID + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+							link.appendChild( text );
+
+							element.appendChild( link );
+						}
 					}
 				}
-			}
 
-			originalShowMenuCumulative.apply( this, arguments );
+				originalShowMenuCumulative.apply( this, arguments );
+			};
+
+			// Override $ (prototype.js) to catch when Valve appends popups and game rows to DOM
+			window.$ = overridenPrototype;
+
+			// Using $J here to get a callback after Steam's own callback finishes,
+			// the one that calls BuildGameRow in a loop
+			window.$J( () =>
+			{
+				window.$ = original$;
+
+				// Do not append popups to DOM, because there's simply too many elements
+				// Instead we will append to DOM on demand
+				// document.body.append( popupsFragment );
+
+				document.getElementById( 'games_list_rows' ).append( gameRowsFragment );
+
+				for( const gameInfo of window.rgGames )
+				{
+					// Game logos are lazy loaded, and the call in BuildGameRow will not find the element in DOM,
+					// so we have to call it ourselves after appending to DOM
+					window.LoadImageGroupOnScroll( `game_${gameInfo.appid}`, `game_logo_${gameInfo.appid}` );
+				}
+
+				optimizingElement.remove();
+			} );
 		};
 
 		window.BuildGameRow = function SteamDB_FixedBuildGameRow()
 		{
+			// To prevent any timing issues, simply wait for the first call to BuildGameRow to perform setup
 			if( !boundReady )
 			{
 				boundReady = true;
 
-				window.$J( function()
-				{
-					// Do not append popups to DOM, because there's simply too many elements
-					// Instead we will append to DOM on demand
-					// document.body.append( popupsFragment );
-
-					document.getElementById( 'games_list_rows' ).append( gameRowsFragment );
-
-					for( const gameInfo of window.rgGames )
-					{
-						window.LoadImageGroupOnScroll( 'game_' + gameInfo.appid, 'game_logo_' + gameInfo.appid );
-					}
-				} );
+				FirstBuildCallback();
 			}
 
-			window.$ = overridenPrototype;
 			originalBuildGameRow.apply( this, arguments );
-			window.$ = original$;
 		};
 	}
 }() );

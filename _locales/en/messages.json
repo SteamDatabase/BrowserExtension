@@ -13,6 +13,10 @@
 		"message": "Steam appears to be experiencing some downtime. "
 	},
 
+	"steamdb_is_optimizing": {
+		"message": "SteamDB extension is optimizing this page…"
+	},
+
 	"view_on_steamdb": {
 		"message": "View on SteamDB"
 	},
