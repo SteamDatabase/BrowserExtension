@@ -29,6 +29,12 @@
 
 	function PerformHook()
 	{
+		// If the page errored out, don't do anything
+		if( !( 'BuildGameRow' in window ) )
+		{
+			return;
+		}
+
 		// Set row logo exact image size so it does not reflow
 		const style = document.createElement( 'style' );
 		style.id = 'steamdb_fix_game_logo';
