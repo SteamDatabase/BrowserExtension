@@ -161,6 +161,7 @@ function GetCurrentPlayers( appid, callback )
 	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}`, {
 		credentials: 'omit',
 		headers: {
+			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
 		},
 	} )
@@ -174,6 +175,7 @@ function GetPrice( request, callback )
 	fetch( `https://steamdb.info/api/ExtensionGetPrice/?appid=${parseInt( request.appid, 10 )}&currency=${encodeURIComponent( request.currency )}`, {
 		credentials: 'omit',
 		headers: {
+			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
 		},
 	} )
