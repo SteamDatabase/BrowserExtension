@@ -42,6 +42,7 @@
 		const originalBuildGameRow = window.BuildGameRow;
 		const popupsFragment = document.createDocumentFragment();
 		const gameRowsFragment = document.createDocumentFragment();
+		const hookedLazyLoadCalls = [];
 		let boundReady = false;
 
 		const original$ = window.$;
@@ -97,6 +98,12 @@
 				originalShowMenuCumulative.apply( this, arguments );
 			};
 
+			const originalLoadImageGroupOnScroll = window.LoadImageGroupOnScroll;
+			window.LoadImageGroupOnScroll = function SteamDB_LoadImageGroupOnScroll()
+			{
+				hookedLazyLoadCalls.push( arguments );
+			};
+
 			// Override $ (prototype.js) to catch when Valve appends popups and game rows to DOM
 			window.$ = overridenPrototype;
 
@@ -112,11 +119,11 @@
 
 				document.getElementById( 'games_list_rows' ).append( gameRowsFragment );
 
-				for( const gameInfo of window.rgGames )
+				window.LoadImageGroupOnScroll = originalLoadImageGroupOnScroll;
+
+				for( const hooked of hookedLazyLoadCalls )
 				{
-					// Game logos are lazy loaded, and the call in BuildGameRow will not find the element in DOM,
-					// so we have to call it ourselves after appending to DOM
-					window.LoadImageGroupOnScroll( `game_${gameInfo.appid}`, `game_logo_${gameInfo.appid}` );
+					originalLoadImageGroupOnScroll( ...hooked );
 				}
 
 				optimizingElement.remove();
