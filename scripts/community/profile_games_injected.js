@@ -97,7 +97,7 @@
 							link.appendChild( text );
 
 							element.appendChild( link );
-							
+
 							const text2 = document.createElement( 'h5' );
 							text2.appendChild( document.createTextNode( script.dataset.view_on_pcgamingwiki ) );
 
