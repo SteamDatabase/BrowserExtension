@@ -97,6 +97,16 @@
 							link.appendChild( text );
 
 							element.appendChild( link );
+							
+							const text2 = document.createElement( 'h5' );
+							text2.appendChild( document.createTextNode( script.dataset.view_on_pcgamingwiki ) );
+
+							const link2 = document.createElement( 'a' );
+							link2.className = 'popup_menu_item2 tight';
+							link2.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + appID + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+							link2.appendChild( text2 );
+
+							element.appendChild( link2 );
 						}
 					}
 				}
