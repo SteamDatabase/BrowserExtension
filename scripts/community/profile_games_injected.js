@@ -118,14 +118,14 @@
 			window.$J( () =>
 			{
 				window.$ = original$;
+				window.BuildGameRow = originalBuildGameRow;
+				window.LoadImageGroupOnScroll = originalLoadImageGroupOnScroll;
 
 				// Do not append popups to DOM, because there's simply too many elements
 				// Instead we will append to DOM on demand
 				// document.body.append( popupsFragment );
 
 				document.getElementById( 'games_list_rows' ).append( gameRowsFragment );
-
-				window.LoadImageGroupOnScroll = originalLoadImageGroupOnScroll;
 
 				for( const hooked of hookedLazyLoadCalls )
 				{
@@ -147,6 +147,21 @@
 			}
 
 			originalBuildGameRow.apply( this, arguments );
+		};
+
+		// Fix valve's bug with updating game rows not loading app logo
+		const originalUpdateGameRow = window.UpdateGameRow;
+
+		window.UpdateGameRow = function SteamDB_UpdateGameRow( gameInfo )
+		{
+			originalUpdateGameRow.apply( this, arguments );
+
+			const logo = document.getElementById( `delayedimage_game_logo_${gameInfo.appid}_0` );
+
+			if( logo )
+			{
+				logo.src = gameInfo.logo;
+			}
 		};
 	}
 }() );
