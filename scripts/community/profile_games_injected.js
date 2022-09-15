@@ -71,6 +71,14 @@
 		optimizingElement.appendChild( document.createTextNode( script.dataset.steamdb_is_optimizing ) );
 		document.body.append( optimizingElement );
 
+		window.$J( () =>
+		{
+			if( !boundReady && !document.getElementById( 'footer' ) )
+			{
+				optimizingElement.textContent = 'This page did not finish loading. This is a bug on Valve\'s server side.';
+			}
+		} );
+
 		const FirstBuildCallback = () =>
 		{
 			const originalShowMenuCumulative = window.ShowMenuCumulative;
