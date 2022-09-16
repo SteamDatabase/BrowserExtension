@@ -2,6 +2,8 @@
 {
 	'use strict';
 
+	// g_CommunityPreferences gets defined twice,
+	// once in global.js, and then it gets overriden in the page with actual settings
 	if( window.g_CommunityPreferences )
 	{
 		window.g_CommunityPreferences.hide_adult_content_sex = 0;
@@ -12,6 +14,19 @@
 		{
 			callbackFunc( false );
 		};
+
+		if( window.ApplyAdultContentPreferences )
+		{
+			const originalApplyAdultContentPreferences = window.ApplyAdultContentPreferences;
+
+			window.ApplyAdultContentPreferences = function SteamDB_ApplyAdultContentPreferences()
+			{
+				window.g_CommunityPreferences.hide_adult_content_sex = 0;
+				window.g_CommunityPreferences.hide_adult_content_violence = 0;
+
+				originalApplyAdultContentPreferences.apply( this, arguments );
+			};
+		}
 	}
 	else
 	{
@@ -40,6 +55,7 @@
 		} );
 	}
 
+	// application_config is used by React pages (such as when viewing news)
 	const observer = new MutationObserver( function( mutations )
 	{
 		mutations.forEach( function( mutation )

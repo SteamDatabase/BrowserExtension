@@ -503,6 +503,7 @@
 			"matches":
 			[
 				"https://steamcommunity.com/app/*",
+				"https://steamcommunity.com/games/*",
 				"https://steamcommunity.com/sharedfiles/*",
 				"https://steamcommunity.com/workshop/*"
 			],
