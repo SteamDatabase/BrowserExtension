@@ -49,6 +49,9 @@
 	"app_depots_update": {
 		"message": "Depots Update:"
 	},
+	"app_depots_updated_short": {
+		"message": "Updated"
+	},
 	"app_stats_online": {
 		"message": "Online Stats"
 	},

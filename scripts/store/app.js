@@ -643,6 +643,28 @@ function DrawOnlineStatsWidget( items )
 					firstDevRow.parentNode.insertBefore( depotsUpdate, firstDevRow );
 				}
 			}
+
+			// Responsive
+			const responsiveGrid = document.getElementById( 'appHeaderGridContainer' );
+
+			if( responsiveGrid )
+			{
+				const label = document.createElement( 'div' );
+				label.className = 'grid_label grid_date';
+				label.textContent = _t( 'app_depots_updated_short' );
+
+				const content = document.createElement( 'div' );
+				content.className = 'grid_content grid_date';
+				content.textContent = response.data.LastDepotUpdate;
+
+				if( response.data.WarnOldUpdate )
+				{
+					content.classList.add( 'steamdb_last_update_old' );
+				}
+
+				responsiveGrid.append( label );
+				responsiveGrid.append( content );
+			}
 		}
 	} );
 }
