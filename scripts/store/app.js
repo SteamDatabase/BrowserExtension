@@ -37,7 +37,6 @@ else
 			if( container )
 			{
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
@@ -53,6 +52,18 @@ else
 
 				container.insertBefore( link, container.firstChild );
 			}
+
+			const lastLinkBar = document.querySelector( '#appDetailsUnderlinedLinks .linkbar:last-child' );
+
+			if( lastLinkBar )
+			{
+				const link = document.createElement( 'a' );
+				link.className = 'linkbar responsive_chevron_right';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.textContent = _t( 'view_on_steamdb' );
+
+				lastLinkBar.insertAdjacentElement( 'afterend', link );
+			}
 		}
 
 		if( items[ 'button-pcgw' ] )
@@ -62,7 +73,6 @@ else
 			if( container )
 			{
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
@@ -80,6 +90,18 @@ else
 
 				// Best hacks EU
 				container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
+			}
+
+			const lastLinkBar = document.querySelector( '#appDetailsUnderlinedLinks .linkbar:last-child' );
+
+			if( lastLinkBar )
+			{
+				const link = document.createElement( 'a' );
+				link.className = 'linkbar responsive_chevron_right';
+				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.textContent = _t( 'view_on_pcgamingwiki' );
+
+				lastLinkBar.insertAdjacentElement( 'afterend', link );
 			}
 		}
 
@@ -103,7 +125,6 @@ else
 				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
@@ -158,7 +179,6 @@ else
 				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
@@ -180,7 +200,6 @@ else
 				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
@@ -202,7 +221,6 @@ else
 				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
@@ -226,7 +244,6 @@ else
 				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
 				const link = document.createElement( 'a' );
-				link.rel = 'noopener';
 				link.className = 'btn_black btn_small steamdb_link';
 				link.appendChild( subidElement );
 
@@ -290,7 +307,6 @@ else
 
 				const link = document.createElement( 'a' );
 				link.className = 'responsive_hidden';
-				link.rel = 'noopener';
 				link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 				link.textContent = '(?)';
 				summary.appendChild( link );
@@ -455,7 +471,6 @@ function DrawLowestPrice()
 
 		element = document.createElement( 'a' );
 		element.className = 'steamdb_prices';
-		element.rel = 'noopener';
 		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
 
 		const image = document.createElement( 'img' );
@@ -491,7 +506,6 @@ function DrawOnlineStatsWidget( items )
 	// Logo and link
 	const link = document.createElement( 'a' );
 	link.className = 'steamdb_stats_logo';
-	link.rel = 'noopener';
 	link.title = _t( 'view_on_steamdb' );
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
@@ -610,7 +624,6 @@ function DrawOnlineStatsWidget( items )
 			depotsUpdate.className = 'dev_row steamdb_last_update';
 
 			const historyLink = document.createElement( 'a' );
-			historyLink.rel = 'noopener';
 			historyLink.className = 'date';
 
 			if( response.data.WarnOldUpdate )
