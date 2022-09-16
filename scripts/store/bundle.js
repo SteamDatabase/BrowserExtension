@@ -15,7 +15,6 @@ GetOption( { 'button-sub': true }, function( items )
 		element.appendChild( document.createTextNode( _t( 'view_on_steamdb' ) ) );
 
 		const link = document.createElement( 'a' );
-		link.rel = 'noopener';
 		link.className = 'action_btn';
 		link.href = GetHomepage() + 'bundle/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 		link.appendChild( element );

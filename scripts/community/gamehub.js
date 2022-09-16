@@ -33,7 +33,6 @@ GetOption( {
 		if( element )
 		{
 			link = document.createElement( 'a' );
-			link.rel = 'noopener';
 			link.className = 'apphub_NumInApp';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			link.title = _t( 'view_on_steamdb' );

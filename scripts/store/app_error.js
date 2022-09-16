@@ -10,7 +10,6 @@ function AddLinksInErrorBox( container )
 
 	// SteamDB
 	let link = document.createElement( 'a' );
-	link.rel = 'noopener';
 	link.className = 'btnv6_blue_hoverfade btn_medium';
 	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
@@ -24,7 +23,6 @@ function AddLinksInErrorBox( container )
 
 	// PCGW
 	link = document.createElement( 'a' );
-	link.rel = 'noopener';
 	link.className = 'btnv6_blue_hoverfade btn_medium';
 	link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 

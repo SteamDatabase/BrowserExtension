@@ -7,7 +7,6 @@ document.title === '502 Bad Gateway' ||
 document.title === 'We Broke It' )
 {
 	const link = document.createElement( 'a' );
-	link.rel = 'noopener';
 	link.href = 'https://steamstat.us';
 	link.appendChild( document.createTextNode( _t( 'steamstatus' ) ) );
 
@@ -51,6 +50,7 @@ else
 	if( popup )
 	{
 		const optionsLink = document.createElement( 'a' );
+		optionsLink.rel = 'noopener';
 		optionsLink.target = '_blank';
 		optionsLink.className = 'popup_menu_item';
 		optionsLink.textContent = _t( 'steamdb_options' );

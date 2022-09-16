@@ -50,7 +50,6 @@ GetOption( { 'profile-calculator': true }, function( items )
 		image.src = GetLocalResource( 'icons/white.svg' );
 
 		element = document.createElement( 'a' );
-		element.rel = 'noopener';
 		element.href = url;
 		element.className = 'popup_menu_item';
 		element.appendChild( image );
@@ -73,7 +72,6 @@ GetOption( { 'profile-calculator': true }, function( items )
 			text.appendChild( image );
 
 			element = document.createElement( 'a' );
-			element.rel = 'noopener';
 			element.className = 'btn_profile_action btn_medium';
 			element.href = url;
 			element.title = 'SteamDB Calculator';
