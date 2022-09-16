@@ -6,6 +6,14 @@
 	// once in global.js, and then it gets overriden in the page with actual settings
 	if( window.g_CommunityPreferences )
 	{
+		const continueButton = document.getElementById( 'age_gate_btn_continue' );
+
+		if( continueButton )
+		{
+			// If the script was injected after the age check was already shown, just click continue
+			continueButton.click();
+		}
+
 		window.g_CommunityPreferences.hide_adult_content_sex = 0;
 		window.g_CommunityPreferences.hide_adult_content_violence = 0;
 
