@@ -9,7 +9,7 @@ GetOption( {
 	let element;
 	let link;
 	let image;
-	let container = document.querySelector( '.apphub_OtherSiteInfo' );
+	const container = document.querySelector( '.apphub_OtherSiteInfo' );
 
 	if( container )
 	{
@@ -45,7 +45,6 @@ GetOption( {
 		if( items[ 'button-gamehub' ] )
 		{
 			link = document.createElement( 'a' );
-			link.rel = 'noopener';
 			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
 			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
@@ -60,32 +59,41 @@ GetOption( {
 			element.appendChild( image );
 
 			container.insertBefore( link, container.firstChild );
+
+			const responsiveMenu = document.querySelector( '.apphub_ResponsiveMenuCtn' );
+
+			if( responsiveMenu )
+			{
+				responsiveMenu.append( link.cloneNode( true ) );
+			}
 		}
 
 		if( items[ 'button-pcgw' ] )
 		{
-			container = document.querySelector( '.apphub_OtherSiteInfo' );
+			link = document.createElement( 'a' );
+			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
+			link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
-			if( container )
+			element = document.createElement( 'span' );
+			element.dataset.tooltipText = _t( 'view_on_pcgamingwiki' );
+			link.appendChild( element );
+
+			image = document.createElement( 'img' );
+			image.className = 'ico16';
+			image.src = GetLocalResource( 'icons/pcgamingwiki.svg' );
+
+			element.appendChild( image );
+
+			container.insertBefore( link, container.firstChild );
+
+			container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
+
+			const responsiveMenu = document.querySelector( '.apphub_ResponsiveMenuCtn' );
+
+			if( responsiveMenu )
 			{
-				link = document.createElement( 'a' );
-				link.rel = 'noopener';
-				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-
-				element = document.createElement( 'span' );
-				element.dataset.tooltipText = _t( 'view_on_pcgamingwiki' );
-				link.appendChild( element );
-
-				image = document.createElement( 'img' );
-				image.className = 'ico16';
-				image.src = GetLocalResource( 'icons/pcgamingwiki.svg' );
-
-				element.appendChild( image );
-
-				container.insertBefore( link, container.firstChild );
-
-				container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
+				responsiveMenu.append( document.createTextNode( ' ' ) );
+				responsiveMenu.append( link.cloneNode( true ) );
 			}
 		}
 	}
