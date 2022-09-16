@@ -468,7 +468,7 @@ function DrawLowestPrice()
 		element.appendChild( textContainer );
 
 		const container = document.getElementById( 'game_area_purchase' );
-		container.insertAdjacentElement( 'beforeBegin', element );
+		container.insertAdjacentElement( 'afterbegin', element );
 	} );
 }
 
