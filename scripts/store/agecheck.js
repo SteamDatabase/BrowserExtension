@@ -2,11 +2,25 @@
 
 'use strict';
 
-const container = document.getElementById( 'error_box' );
-
-if( container && GetCurrentAppID() > 0 )
+if( GetCurrentAppID() > 0 )
 {
-	AddLinksInErrorBox( container );
+	const elementIdsToTry =
+	[
+		'error_box',
+		'app_agegate',
+		'agegate_box',
+	];
+
+	for( const id of elementIdsToTry )
+	{
+		const container = document.getElementById( id );
+
+		if( container )
+		{
+			AddLinksInErrorBox( container );
+			break;
+		}
+	}
 }
 
 GetOption( { 'enhancement-skip-agecheck': false }, function( items )

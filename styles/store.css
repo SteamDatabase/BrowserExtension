@@ -8,6 +8,7 @@ a.steamdb_link:hover {
 
 .steamdb_error_link {
 	margin-top: 25px;
+	text-align: center;
 }
 
 .game_purchase_action .steamdb_link {
