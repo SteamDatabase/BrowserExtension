@@ -276,6 +276,7 @@
 			"js":
 			[
 				"scripts/common.js",
+				"scripts/store/app_error.js",
 				"scripts/store/agecheck.js"
 			]
 		},
