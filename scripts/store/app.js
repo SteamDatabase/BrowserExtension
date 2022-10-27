@@ -631,7 +631,7 @@ function DrawOnlineStatsWidget( items )
 				historyLink.className = 'steamdb_last_update_old';
 			}
 
-			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/history/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 			historyLink.textContent = response.data.LastDepotUpdate;
 
 			const subtitle = document.createElement( 'div' );
