@@ -1,0 +1,134 @@
+{
+	"extension_description": {
+		"message": "在 Steam 商店和社區中增加 SteamDB 連結和新功能。查看最低的遊戲價格和統計數據。"
+	},
+
+	"steamdb_options": {
+		"message": "SteamDB 選項"
+	},
+	"steamstatus": {
+		"message": "查看 steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam 似乎正處於停機時間。"
+	},
+
+	"steamdb_is_optimizing": {
+		"message": "SteamDB 擴充功能正在優化此頁面……"
+	},
+
+	"view_on_steamdb": {
+		"message": "在 SteamDB 上查看"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "在 PCGamingWiki 上查看"
+	},
+	"view_your_achievements": {
+		"message": "查看您的成就"
+	},
+	"store_page": {
+		"message": "商店頁面"
+	},
+	"error": {
+		"message": "錯誤"
+	},
+
+	"id_app": {
+		"message": "應用程式 $1"
+	},
+	"id_sub": {
+		"message": "套件 $1"
+	},
+	"id_bundle": {
+		"message": "組合包 $1"
+	},
+
+	"app_steamdb_rating": {
+		"message": "SteamDB 評分:"
+	},
+	"app_depots_update": {
+		"message": "上次更新:"
+	},
+	"app_depots_updated_short": {
+		"message": "上次更新"
+	},
+	"app_stats_online": {
+		"message": "在線統計數據"
+	},
+	"app_stats_online_now": {
+		"message": "目前玩家數量:"
+	},
+	"app_stats_peak_today": {
+		"message": "今日高峰:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "歷史高峰:"
+	},
+	"app_stats_followers": {
+		"message": "關注者:"
+	},
+	"app_lowest_price_": {
+		"message": ""
+	},
+	"app_nothing_selected": {
+		"message": "未選擇任何內容"
+	},
+
+	"explore_auto_discover": {
+		"message": "自動探索"
+	},
+	"explore_auto_discover_description": {
+		"message": "自動探索佇列以取得交換卡片。"
+	},
+	"explore_generating": {
+		"message": "正在生成新的探索佇列，如果 Steam 處於高負載狀態，這可能會失敗……"
+	},
+	"explore_exploring": {
+		"message": "正在探索佇列…… 請求 $1 / $2"
+	},
+	"explore_failed_to_clear": {
+		"message": "清除佇列項目 $1 失敗，五秒後重試……"
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "多次清除佇列項目 #$1 失敗。您可以稍後再試。"
+	},
+	"explore_failed_to_generate": {
+		"message": "生成新探索佇列失敗，五秒後重試……"
+	},
+	"explore_finished": {
+		"message": "已完成探索佇列。"
+	},
+
+	"badges_idle_apps": {
+		"message": "可掛機的應用程式: $1"
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "此頁面上可掛機的應用程式: $1"
+	},
+	"badges_idle_drops": {
+		"message": "剩餘掉落: $1"
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "此頁面上剩餘掉落: $1"
+	},
+
+	"achievement_your_progress": {
+		"message": "您的進度: $1 / $2"
+	},
+	"hidden_achievement": {
+		"message": "隱藏成就: "
+	},
+	"hidden_achievement_hover": {
+		"message": "隱藏成就，懸停鼠標以顯示："
+	},
+	"hidden_achievement_but_loaded": {
+		"message": " (但 SteamDB 擴充功能成功加載到您的成就)"
+	},
+
+	"widget_view_app": {
+		"message": "在 SteamDB 上查看應用程式 $1"
+	},
+	"widget_view_sub": {
+		"message": "在 SteamDB 上查看套件 $1"
+	}
+}
