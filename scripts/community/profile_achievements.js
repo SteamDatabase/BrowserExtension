@@ -14,8 +14,13 @@ GetOption( {
 		const headers = new Headers();
 		headers.append( 'Accept', 'text/html' );
 		headers.append( 'X-ValveUserAgent', 'panorama' );
+		headers.append( 'X-Requested-With', 'SteamDB' );
 
-		fetch( window.location.origin + window.location.pathname + '?tab=achievements&panorama=please', {
+		const params = new URLSearchParams();
+		params.set( 'tab', 'achievements' );
+		params.set( 'panorama', 'please' );
+
+		fetch( window.location.origin + window.location.pathname + '?' + params.toString(), {
 			headers,
 		} )
 			.then( ( response ) => response.text() )

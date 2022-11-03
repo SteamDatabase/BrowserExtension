@@ -11,12 +11,15 @@ GetOption( {
 
 	if( currentUser && path )
 	{
+		const currentUserUrl = currentUser.href.replace( /\/$/, '' );
+		console.log( currentUserUrl, path );
+
 		const tab = document.createElement( 'div' );
 		tab.className = 'tab steamdb_stats_tab';
 
 		const link = document.createElement( 'a' );
 		link.className = 'tabOn';
-		link.href = `${currentUser.href}${path}?tab=achievements`;
+		link.href = `${currentUserUrl}${path}?tab=achievements`;
 		link.textContent = _t( 'view_your_achievements' );
 
 		tab.appendChild( link );
@@ -25,8 +28,13 @@ GetOption( {
 		const headers = new Headers();
 		headers.append( 'Accept', 'text/html' );
 		headers.append( 'X-ValveUserAgent', 'panorama' );
+		headers.append( 'X-Requested-With', 'SteamDB' );
 
-		fetch( `${currentUser.href}${path}?tab=achievements&panorama=please`, {
+		const params = new URLSearchParams();
+		params.set( 'tab', 'achievements' );
+		params.set( 'panorama', 'please' );
+
+		fetch( `${currentUserUrl}${path}?${params.toString()}`, {
 			headers,
 		} )
 			.then( ( response ) => response.text() )
