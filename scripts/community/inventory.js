@@ -130,7 +130,7 @@
 
 			elActions.appendChild( buttons );
 
-			let xhr = new XMLHttpRequest();
+			const xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function()
 			{
 				if( xhr.readyState === 4 && xhr.status === 200 )
@@ -147,12 +147,19 @@
 						return;
 					}
 
-					xhr = new XMLHttpRequest();
-					xhr.onreadystatechange = function()
+					const histogramParams = new URLSearchParams();
+					histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
+					histogramParams.set( 'language', 'english' );
+					histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
+					histogramParams.set( 'item_nameid', commodityID[ 1 ] );
+					histogramParams.set( 'two_factor', '0' );
+
+					const xhrHistogram = new XMLHttpRequest();
+					xhrHistogram.onreadystatechange = function()
 					{
-						if( xhr.readyState === 4 && xhr.status === 200 )
+						if( xhrHistogram.readyState === 4 && xhrHistogram.status === 200 )
 						{
-							data = xhr.response;
+							data = xhrHistogram.response;
 
 							if( !data.success )
 							{
@@ -197,15 +204,14 @@
 							}
 						}
 					};
-					xhr.open( 'GET', '/market/itemordershistogram?language=english' +
-						'&country=' + window.g_rgWalletInfo.wallet_country +
-						'&currency=' + window.g_rgWalletInfo.wallet_currency +
-						'&item_nameid=' + commodityID[ 1 ], true );
-					xhr.responseType = 'json';
-					xhr.send();
+					xhrHistogram.open( 'GET', '/market/itemordershistogram?' + histogramParams.toString(), true );
+					xhrHistogram.setRequestHeader( 'X-Requested-With', 'SteamDB' );
+					xhrHistogram.responseType = 'json';
+					xhrHistogram.send();
 				}
 			};
 			xhr.open( 'GET', '/market/listings/' + item.description.appid + '/' + encodeURIComponent( window.GetMarketHashName( item.description ) ), true );
+			xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
 			xhr.send();
 		}
 	};
@@ -321,6 +327,7 @@
 								}
 							};
 							xhr.open( 'GET', '/gifts/' + item.assetid + '/validateunpack', true );
+							xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
 							xhr.responseType = 'json';
 							xhr.send();
 						}
