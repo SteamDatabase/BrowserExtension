@@ -97,7 +97,10 @@ function FetchSteamUserData( callback )
 			cache = now;
 		}
 
-		fetch( `https://store.steampowered.com/dynamicstore/userdata/?_=${encodeURIComponent( cache )}`,
+		const params = new URLSearchParams();
+		params.set( '_', cache );
+
+		fetch( `https://store.steampowered.com/dynamicstore/userdata/?${params.toString()}`,
 			{
 				credentials: 'include',
 				headers: {
@@ -158,7 +161,10 @@ function FetchSteamUserData( callback )
 
 function GetCurrentPlayers( appid, callback )
 {
-	fetch( `https://steamdb.info/api/GetCurrentPlayers/?appid=${parseInt( appid, 10 )}`, {
+	const params = new URLSearchParams();
+	params.set( 'appid', parseInt( appid, 10 ) );
+
+	fetch( `https://steamdb.info/api/GetCurrentPlayers/?${params.toString()}`, {
 		credentials: 'omit',
 		headers: {
 			Accept: 'application/json',
@@ -170,9 +176,13 @@ function GetCurrentPlayers( appid, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
-function GetPrice( request, callback )
+function GetPrice( { appid, currency }, callback )
 {
-	fetch( `https://steamdb.info/api/ExtensionGetPrice/?appid=${parseInt( request.appid, 10 )}&currency=${encodeURIComponent( request.currency )}`, {
+	const params = new URLSearchParams();
+	params.set( 'appid', parseInt( appid, 10 ) );
+	params.set( 'currency', currency );
+
+	fetch( `https://steamdb.info/api/ExtensionGetPrice/?${params.toString()}`, {
 		credentials: 'omit',
 		headers: {
 			Accept: 'application/json',
