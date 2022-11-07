@@ -17,7 +17,7 @@
 	const hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
 	const homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage;
 	const originalPopulateActions = window.PopulateActions;
-	const hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
+	let hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
 	const originalPopulateMarketActions = window.PopulateMarketActions;
 
 	const dummySellEvent =
@@ -133,82 +133,114 @@
 			const xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function()
 			{
-				if( xhr.readyState === 4 && xhr.status === 200 )
+				if( xhr.readyState !== 4 )
 				{
-					let data = xhr.response;
+					return;
+				}
 
-					const commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
-
-					if( !commodityID )
+				if( xhr.status !== 200 )
+				{
+					if( xhr.status === 429 )
 					{
-						sellNow.style.display = 'none';
+						// If user is currently rate limited by Steam market, just disable the buttons
+						hasQuickSellEnabled = false;
+					}
+
+					sellNow.style.display = 'none';
+					listNow.style.display = 'none';
+
+					return;
+				}
+
+				let data = xhr.response;
+
+				const commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
+
+				if( !commodityID )
+				{
+					sellNow.style.display = 'none';
+					listNow.style.display = 'none';
+
+					return;
+				}
+
+				const histogramParams = new URLSearchParams();
+				histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
+				histogramParams.set( 'language', 'english' );
+				histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
+				histogramParams.set( 'item_nameid', commodityID[ 1 ] );
+				histogramParams.set( 'two_factor', '0' );
+
+				const xhrHistogram = new XMLHttpRequest();
+				xhrHistogram.onreadystatechange = function()
+				{
+					if( xhrHistogram.readyState !== 4 )
+					{
+						return;
+					}
+
+					if( xhrHistogram.status !== 200 )
+					{
+						if( xhrHistogram.status === 429 )
+						{
+							// If user is currently rate limited by Steam market, just disable the buttons
+							hasQuickSellEnabled = false;
+						}
+
 						listNow.style.display = 'none';
+						sellNow.style.display = 'none';
 
 						return;
 					}
 
-					const histogramParams = new URLSearchParams();
-					histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
-					histogramParams.set( 'language', 'english' );
-					histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
-					histogramParams.set( 'item_nameid', commodityID[ 1 ] );
-					histogramParams.set( 'two_factor', '0' );
+					data = xhrHistogram.response;
 
-					const xhrHistogram = new XMLHttpRequest();
-					xhrHistogram.onreadystatechange = function()
+					if( !data.success )
 					{
-						if( xhrHistogram.readyState === 4 && xhrHistogram.status === 200 )
-						{
-							data = xhrHistogram.response;
+						listNow.style.display = 'none';
+						sellNow.style.display = 'none';
 
-							if( !data.success )
-							{
-								sellNow.style.display = 'none';
-								sellNow.style.display = 'none';
+						return;
+					}
 
-								return;
-							}
+					const publisherFee = typeof item.description.market_fee !== 'undefined' ? item.description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
 
-							const publisherFee = typeof item.description.market_fee !== 'undefined' ? item.description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
+					if( data.lowest_sell_order )
+					{
+						const listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
+						const listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
 
-							if( data.lowest_sell_order )
-							{
-								const listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
-								const listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
+						listNow.style.removeProperty( 'opacity' );
+						listNow.style.removeProperty( 'display' );
+						listNow.dataset.price = listNowPrice;
+						listNow.addEventListener( 'click', quickSellButton );
+						listNowText.textContent = 'List at ' + data.price_prefix + listNowPrice + data.price_suffix;
+					}
+					else
+					{
+						listNow.style.display = 'none';
+					}
 
-								listNow.style.removeProperty( 'opacity' );
-								listNow.style.removeProperty( 'display' );
-								listNow.dataset.price = listNowPrice;
-								listNow.addEventListener( 'click', quickSellButton );
-								listNowText.textContent = 'List at ' + data.price_prefix + listNowPrice + data.price_suffix;
-							}
-							else
-							{
-								listNow.style.display = 'none';
-							}
+					if( data.highest_buy_order )
+					{
+						const sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
+						const sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
 
-							if( data.highest_buy_order )
-							{
-								const sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
-								const sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
-
-								sellNow.style.removeProperty( 'opacity' );
-								sellNow.style.removeProperty( 'display' );
-								sellNow.dataset.price = sellNowPrice;
-								sellNow.addEventListener( 'click', quickSellButton );
-								sellNowText.textContent = 'Sell at ' + data.price_prefix + sellNowPrice + data.price_suffix;
-							}
-							else
-							{
-								sellNow.style.display = 'none';
-							}
-						}
-					};
-					xhrHistogram.open( 'GET', '/market/itemordershistogram?' + histogramParams.toString(), true );
-					xhrHistogram.setRequestHeader( 'X-Requested-With', 'SteamDB' );
-					xhrHistogram.responseType = 'json';
-					xhrHistogram.send();
-				}
+						sellNow.style.removeProperty( 'opacity' );
+						sellNow.style.removeProperty( 'display' );
+						sellNow.dataset.price = sellNowPrice;
+						sellNow.addEventListener( 'click', quickSellButton );
+						sellNowText.textContent = 'Sell at ' + data.price_prefix + sellNowPrice + data.price_suffix;
+					}
+					else
+					{
+						sellNow.style.display = 'none';
+					}
+				};
+				xhrHistogram.open( 'GET', '/market/itemordershistogram?' + histogramParams.toString(), true );
+				xhrHistogram.setRequestHeader( 'X-Requested-With', 'SteamDB' );
+				xhrHistogram.responseType = 'json';
+				xhrHistogram.send();
 			};
 			xhr.open( 'GET', '/market/listings/' + item.description.appid + '/' + encodeURIComponent( window.GetMarketHashName( item.description ) ), true );
 			xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
