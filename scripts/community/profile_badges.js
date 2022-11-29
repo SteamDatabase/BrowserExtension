@@ -1,6 +1,6 @@
 'use strict';
 
-const progressInfo = document.querySelectorAll( '.progress_info_bold' );
+const progressInfo = document.querySelectorAll( '.badge_title_stats_drops .progress_info_bold' );
 
 if( progressInfo.length > 0 )
 {
