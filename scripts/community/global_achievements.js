@@ -1,9 +1,15 @@
 'use strict';
 
 GetOption( {
+	'hidden-achievements': true,
 	'spoiler-achievements': true,
 }, function( items )
 {
+	if( !items[ 'hidden-achievements' ] )
+	{
+		return;
+	}
+
 	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
 	const ownsGame = !!document.querySelector( '#compareAvatar a' );
 	const currentUser = document.querySelector( '#global_actions .user_avatar' );

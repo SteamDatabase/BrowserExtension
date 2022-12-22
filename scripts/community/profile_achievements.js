@@ -1,9 +1,15 @@
 'use strict';
 
 GetOption( {
+	'hidden-achievements': true,
 	'spoiler-achievements': true,
 }, function( items )
 {
+	if( !items[ 'hidden-achievements' ] )
+	{
+		return;
+	}
+
 	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
 	let achievementsContainer = document.querySelector( '.achieveHiddenBox' );
 
