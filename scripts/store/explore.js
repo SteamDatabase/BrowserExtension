@@ -55,7 +55,7 @@ function GenerateQueue()
 	formData.append( 'sessionid', session.groups.sessionid );
 	formData.append( 'queuetype', 0 );
 
-	fetch( '/explore/generatenewdiscoveryqueue', {
+	fetch( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', {
 		credentials: 'include',
 		method: 'POST',
 		body: formData,
@@ -108,7 +108,7 @@ function GenerateQueue()
 				formData.append( 'sessionid', session.groups.sessionid );
 				formData.append( 'appid_to_clear_from_queue', data.queue[ index ] );
 
-				fetch( '/app/10', {
+				fetch( 'https://store.steampowered.com/app/10', {
 					credentials: 'include',
 					method: 'POST',
 					body: formData,
