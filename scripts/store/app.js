@@ -165,14 +165,14 @@ else
 
 			for( const element of container )
 			{
-				subid = element.getAttribute( 'onclick' ).match( /AddFreeLicense\(\s*([0-9]+)/ );
+				subid = element.getAttribute( 'onclick' ).match( /AddFreeLicense\(\s*(?<id>[0-9]+)/ );
 
 				if( !subid )
 				{
 					continue;
 				}
 
-				subid = subid[ 1 ];
+				subid = subid.groups.id;
 
 				subidElement = document.createElement( 'span' );
 				subidElement.className = 'steamdb_subid';
@@ -194,20 +194,30 @@ else
 
 			if( element )
 			{
-				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/install\/([0-9]+)/ )[ 1 ];
+				subid = element.querySelector( '#demoGameBtn a' );
 
-				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
+				if( subid )
+				{
+					subid = subid.href.match( /\/install\/(?<id>[0-9]+)/ );
 
-				const link = document.createElement( 'a' );
-				link.className = 'btn_black btn_small steamdb_link';
-				link.appendChild( subidElement );
+					if( subid )
+					{
+						subid = subid.groups.id;
 
-				subidElement.textContent = _t( 'id_app', [ subid ] );
-				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-				link.appendChild( subidElement );
+						subidElement = document.createElement( 'span' );
+						subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
-				element.querySelector( '.game_purchase_action' ).prepend( link );
+						const link = document.createElement( 'a' );
+						link.className = 'btn_black btn_small steamdb_link';
+						link.appendChild( subidElement );
+
+						subidElement.textContent = _t( 'id_app', [ subid ] );
+						link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+						link.appendChild( subidElement );
+
+						element.querySelector( '.game_purchase_action' ).prepend( link );
+					}
+				}
 			}
 
 			// Link appid in playtest banner
@@ -215,20 +225,30 @@ else
 
 			if( element )
 			{
-				subid = element.querySelector( '.game_purchase_action a' ).href.match( /\/run\/([0-9]+)/ )[ 1 ];
+				subid = element.querySelector( '.game_purchase_action a' );
 
-				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
+				if( subid )
+				{
+					subid = subid.href.match( /\/run\/(?<id>[0-9]+)/ );
 
-				const link = document.createElement( 'a' );
-				link.className = 'btn_black btn_small steamdb_link';
-				link.appendChild( subidElement );
+					if( subid )
+					{
+						subid = subid.groups.id;
 
-				subidElement.textContent = _t( 'id_app', [ subid ] );
-				link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
-				link.appendChild( subidElement );
+						subidElement = document.createElement( 'span' );
+						subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
 
-				element.querySelector( '.game_purchase_action' ).prepend( link );
+						const link = document.createElement( 'a' );
+						link.className = 'btn_black btn_small steamdb_link';
+						link.appendChild( subidElement );
+
+						subidElement.textContent = _t( 'id_app', [ subid ] );
+						link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+						link.appendChild( subidElement );
+
+						element.querySelector( '.game_purchase_action' ).prepend( link );
+					}
+				}
 			}
 
 			// Bundles
