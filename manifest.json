@@ -50,7 +50,6 @@
 		"scripts/community/inventory.js",
 		"scripts/community/agecheck_injected.js",
 		"scripts/community/tradeoffer_injected.js",
-		"scripts/community/profile_games_injected.js",
 		"scripts/store/invalidate_cache_injected.js",
 		"scripts/store/registerkey_injected.js",
 		"scripts/store/subscriptions.js"
@@ -418,19 +417,6 @@
 			[
 				"scripts/common.js",
 				"scripts/community/tradeoffer.js"
-			]
-		},
-		{
-			"run_at": "document_start",
-			"matches":
-			[
-				"https://steamcommunity.com/id/*/games*",
-				"https://steamcommunity.com/profiles/*/games*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/community/profile_games.js"
 			]
 		},
 		{
