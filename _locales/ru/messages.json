@@ -1,0 +1,134 @@
+{
+	"extension_description": {
+		"message": "Добавляет ссылки на SteamDB и новые возможности магазина Steam и сообщества. Просмотр самых низких цен на игры и статистики."
+	},
+
+	"steamdb_options": {
+		"message": "Настройки SteamDB Options"
+	},
+	"steamstatus": {
+		"message": "Проверить steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Похоже, что Steam испытывает некоторые перебои в работе. "
+	},
+
+	"steamdb_is_optimizing": {
+		"message": "Расширение SteamDB оптимизирует страницу…"
+	},
+
+	"view_on_steamdb": {
+		"message": "Посмотреть на SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Посмотреть на PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Просмотреть свои достижения"
+	},
+	"store_page": {
+		"message": "Страница в магазине"
+	},
+	"error": {
+		"message": "Ошибка"
+	},
+
+	"id_app": {
+		"message": "AppID $1"
+	},
+	"id_sub": {
+		"message": "SubID $1"
+	},
+	"id_bundle": {
+		"message": "BundleID $1"
+	},
+
+	"app_steamdb_rating": {
+		"message": "Рейтинг на SteamDB:"
+	},
+	"app_depots_update": {
+		"message": "Обновление хранилища:"
+	},
+	"app_depots_updated_short": {
+		"message": "Обновлено"
+	},
+	"app_stats_online": {
+		"message": "Статистика игроков"
+	},
+	"app_stats_online_now": {
+		"message": "Сейчас играют:"
+	},
+	"app_stats_peak_today": {
+		"message": "Сегодняшний пик:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Пик за всё время:"
+	},
+	"app_stats_followers": {
+		"message": "Подписчиков:"
+	},
+	"app_lowest_price_": {
+		"message": ""
+	},
+	"app_nothing_selected": {
+		"message": "ничего не выбрано"
+	},
+
+	"explore_auto_discover": {
+		"message": "Авторекомендации"
+	},
+	"explore_auto_discover_description": {
+		"message": "Автоматическое создание списка рекомендации на получение карточки события."
+	},
+	"explore_generating": {
+		"message": "Создание нового списка рекомендации, это может не сработать, если Steam перегружен…"
+	},
+	"explore_exploring": {
+		"message": "Изучение списка… Запрос $1 из $2"
+	},
+	"explore_failed_to_clear": {
+		"message": "Не удалось очистить элемент очереди № $1, повтор через пять секунд…"
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Не удалось очистить элемент очереди № $1 слишком много раз. Вы можете повторить попытку позже."
+	},
+	"explore_failed_to_generate": {
+		"message": "Не удалось создать новую очередь, повтор через пять секунд…"
+	},
+	"explore_finished": {
+		"message": "Очередь была изучена."
+	},
+
+	"badges_idle_apps": {
+		"message": "Фарма приложений осталось: $1"
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Фарма приложений осталось на странице: $1"
+	},
+	"badges_idle_drops": {
+		"message": "Выпадений осталось: $1"
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Выпадений осталось на странице: $1"
+	},
+
+	"achievement_your_progress": {
+		"message": "Ваш прогресс: $1 / $2"
+	},
+	"hidden_achievement": {
+		"message": "Скрытое достижения: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Скрытое достижение, наведите курсор, чтобы раскрыть: "
+	},
+	"hidden_achievement_but_loaded": {
+		"message": " (но расширение SteamDB смогло загрузить ваши достижения)"
+	},
+
+	"widget_view_app": {
+		"message": "Посмотреть AppID $1 на SteamDB"
+	},
+	"widget_view_sub": {
+		"message": "Посмотреть SubID $1 на SteamDB"
+	}
+}
