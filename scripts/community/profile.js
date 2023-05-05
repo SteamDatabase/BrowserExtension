@@ -1,7 +1,19 @@
 'use strict';
 
-GetOption( { 'profile-calculator': true }, function( items )
+GetOption( {
+	'profile-calculator': true,
+	'enhancement-award-popup-url': true,
+}, function( items )
 {
+	if( items[ 'enhancement-award-popup-url' ] && window.location.search.includes( 'award' ) )
+	{
+		const script = document.createElement( 'script' );
+		script.id = 'steamdb_profile_award';
+		script.type = 'text/javascript';
+		script.src = GetLocalResource( 'scripts/community/profile_award_injected.js' );
+		document.head.appendChild( script );
+	}
+
 	if( !items[ 'profile-calculator' ] )
 	{
 		return;
@@ -81,13 +93,3 @@ GetOption( { 'profile-calculator': true }, function( items )
 		}
 	}
 } );
-
-// Awards
-if( window.location.search.includes( 'award' ) )
-{
-	const script = document.createElement( 'script' );
-	script.id = 'steamdb_profile_award';
-	script.type = 'text/javascript';
-	script.src = GetLocalResource( 'scripts/community/profile_award_injected.js' );
-	document.head.appendChild( script );
-}
