@@ -309,6 +309,7 @@
 				"https://store.steampowered.com/app/*",
 				"https://steamcommunity.com/app/*",
 				"https://steamcommunity.com/sharedfiles/filedetails*",
+				"https://steamcommunity.com/workshop/filedetails*",
 				"https://steamcommunity.com/workshop/browse*",
 				"https://steamcommunity.com/workshop/discussions*"
 			],
@@ -472,6 +473,7 @@
 			[
 				"https://steamcommunity.com/app/*",
 				"https://steamcommunity.com/sharedfiles/filedetails*",
+				"https://steamcommunity.com/workshop/filedetails*",
 				"https://steamcommunity.com/workshop/browse*",
 				"https://steamcommunity.com/workshop/discussions*"
 			],
