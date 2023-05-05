@@ -81,3 +81,13 @@ GetOption( { 'profile-calculator': true }, function( items )
 		}
 	}
 } );
+
+// Awards
+if( window.location.search.includes( 'award' ) )
+{
+	const script = document.createElement( 'script' );
+	script.id = 'steamdb_profile_award';
+	script.type = 'text/javascript';
+	script.src = GetLocalResource( 'scripts/community/profile_award_injected.js' );
+	document.head.appendChild( script );
+}

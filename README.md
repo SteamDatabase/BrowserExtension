@@ -60,5 +60,16 @@ https://steamcommunity.com/tradeoffer/new?partner=[steamid]&my_item=753_6_1234&m
 https://steamcommunity.com/tradeoffer/new?partner=[steamid]&for_item=753_6_1234&my_item=753_6_5678
 ```
 
+### Automatically open "grant an award" popup from a link using `award`
+
+This extension adds support for `award` parameter in profile, workshop, and other published files such as screenshots.
+
+Open the "grant an award" popup upon page load: `https://steamcommunity.com/id/xpaw?award`
+
+Open popup and pre-select a specific award: `https://steamcommunity.com/id/xpaw?award=17`  
+In this case id 17 is "Take my points".
+
+It works the same way for shared files: `https://steamcommunity.com/sharedfiles/filedetails/?id=2935326022&award=17`
+
 ### License
 Code in this repository is governed by a BSD-style license that can be found in the [LICENSE](LICENSE) file.
