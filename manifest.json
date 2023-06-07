@@ -501,7 +501,7 @@
 			]
 		},
 		{
-			"run_at": "document_start",
+			"run_at": "document_end",
 			"matches":
 			[
 				"https://steamcommunity.com/app/*",
