@@ -342,7 +342,18 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 
 		formData.set( 'sessionid', session.sessionID );
 
-		fetch( `https://store.steampowered.com/${path}`, {
+		let url;
+
+		if( path.startsWith( 'checkout/' ) )
+		{
+			url = `https://checkout.steampowered.com/${path}`;
+		}
+		else
+		{
+			url = `https://store.steampowered.com/${path}`;
+		}
+
+		fetch( url, {
 			credentials: 'include',
 			method: 'POST',
 			body: formData,
