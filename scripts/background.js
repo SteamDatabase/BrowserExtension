@@ -1,5 +1,6 @@
 let runtimeObj;
 let storeSessionId;
+let checkoutSessionId;
 let userDataCache = null;
 
 if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
@@ -332,7 +333,9 @@ function StoreRequestPlaytestAccess( request, callback )
 
 function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 {
-	GetStoreSessionID( ( session ) =>
+	const isCheckout = path.startsWith( 'checkout/' );
+
+	GetStoreSessionID( isCheckout, ( session ) =>
 	{
 		if( !session.success )
 		{
@@ -344,7 +347,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 
 		let url;
 
-		if( path.startsWith( 'checkout/' ) )
+		if( isCheckout )
 		{
 			url = `https://checkout.steampowered.com/${path}`;
 		}
@@ -407,15 +410,32 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 	} );
 }
 
-function GetStoreSessionID( callback )
+function GetStoreSessionID( isCheckout, callback )
 {
-	if( storeSessionId )
+	let url;
+
+	if( isCheckout )
 	{
-		callback( { success: true, sessionID: storeSessionId } );
-		return;
+		if( checkoutSessionId )
+		{
+			callback( { success: true, sessionID: checkoutSessionId } );
+			return;
+		}
+
+		url = 'https://checkout.steampowered.com/checkout/addfreelicense';
+	}
+	else
+	{
+		if( storeSessionId )
+		{
+			callback( { success: true, sessionID: storeSessionId } );
+			return;
+		}
+
+		url = 'https://store.steampowered.com/account/preferences';
 	}
 
-	fetch( 'https://store.steampowered.com/account/preferences', {
+	fetch( url, {
 		credentials: 'include',
 		headers: {
 			// We have to specify that we're doing a normal request (as if the user was navigating).
@@ -430,9 +450,16 @@ function GetStoreSessionID( callback )
 
 			if( session && session[ 1 ] )
 			{
-				storeSessionId = session[ 1 ];
+				if( isCheckout )
+				{
+					checkoutSessionId = session[ 1 ];
+				}
+				else
+				{
+					storeSessionId = session[ 1 ];
+				}
 
-				callback( { success: true, sessionID: storeSessionId } );
+				callback( { success: true, sessionID: session[ 1 ] } );
 			}
 			else
 			{
