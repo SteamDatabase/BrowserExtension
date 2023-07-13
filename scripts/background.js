@@ -367,7 +367,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 				'X-Requested-With': 'SteamDB',
 			},
 		} )
-			.then( ( response ) =>
+			.then( async( response ) =>
 			{
 				// If we get 401 Unauthorized, it's likely that the login cookie has expired,
 				// if that's the case, requesting page to get sessionid again should go through
@@ -376,6 +376,18 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 				if( response.status === 401 )
 				{
 					storeSessionId = null;
+					checkoutSessionId = null;
+				}
+
+				// Handle possible family view requirement
+				if( response.status === 403 )
+				{
+					const text = await response.text();
+
+					if( text.includes( 'steam_parental_password_box' ) )
+					{
+						throw new Error( 'Your account is currently under Family View restrictions. You need to exit Family View by entering your PIN on the Steam store and then retry this action.' );
+					}
 				}
 
 				return response.json();
