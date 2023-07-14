@@ -382,7 +382,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 				// Handle possible family view requirement
 				if( response.status === 403 )
 				{
-					const text = await response.text();
+					const text = await response.clone().text();
 
 					if( text.includes( 'steam_parental_password_box' ) )
 					{
