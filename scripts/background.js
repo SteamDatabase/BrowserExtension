@@ -326,10 +326,29 @@ function StoreRemoveFreeLicense( request, callback )
 
 function StoreRequestPlaytestAccess( request, callback )
 {
+	const playtestResponse = ( response ) =>
+	{
+		if( response && response.success )
+		{
+			const granted = !!response.granted;
+
+			callback( { success: true, granted } );
+
+			if( granted )
+			{
+				InvalidateCache();
+			}
+		}
+		else
+		{
+			callback( { success: false, granted: false } );
+		}
+	};
+
 	if( request.appid )
 	{
 		const formData = new FormData();
-		ExecuteStoreApiCall( `ajaxrequestplaytestaccess/${parseInt( request.appid, 10 )}`, formData, callback );
+		ExecuteStoreApiCall( `ajaxrequestplaytestaccess/${parseInt( request.appid, 10 )}`, formData, playtestResponse, true );
 	}
 }
 
