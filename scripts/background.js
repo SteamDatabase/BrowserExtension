@@ -374,7 +374,8 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 				// if that's the case, requesting page to get sessionid again should go through
 				// login redirect and set a fresh login cookie.
 				// Or the sessionid simply changed.
-				if( response.status === 401 )
+				// Except for ajaxrequestplaytestaccess which actually can return 401 as part of the api
+				if( response.status === 401 && !path.startsWith( 'ajaxrequestplaytestaccess/' ) )
 				{
 					storeSessionId = null;
 					checkoutSessionId = null;
