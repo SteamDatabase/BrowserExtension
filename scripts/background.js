@@ -280,6 +280,7 @@ function StoreAddFreeLicense( request, callback )
 
 		switch( resultCode )
 		{
+			case 5: message = 'Steam says this is an invalid package.'; break;
 			case 9: message = 'This product is already available in your Steam library.'; break;
 			case 24: message = 'You do not own the required app.'; break;
 			case 53: message = 'You got rate limited, try again in an hour.'; break;
