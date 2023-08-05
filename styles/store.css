@@ -24,7 +24,7 @@ a.steamdb_link:hover {
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
 	html.responsive .game_purchase_action .steamdb_link {
 		float: none;
 		margin-top: 0;
@@ -180,7 +180,7 @@ a.steamdb_link:hover {
 	min-width: 100px;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
 	html.responsive .steamdb_stats .block_content_inner {
 		margin-top: 0;
 	}

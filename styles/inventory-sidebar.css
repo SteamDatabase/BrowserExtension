@@ -1,4 +1,4 @@
-@media all and (min-width: 1450px) {
+@media (min-width: 1450px) {
 	.tabitems_ctn {
 		float: left;
 		width: 242px;
