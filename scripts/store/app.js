@@ -356,6 +356,9 @@ else
 
 	// Valve does not invalidate cache for follow button, so we catch it here
 	FollowInvalidateCache();
+
+	// Hide steamdb curator for steamdb extension users
+	HideCurator();
 }
 
 function DrawLowestPrice()
@@ -725,5 +728,25 @@ function FollowInvalidateCache()
 				// noop
 			} );
 		} );
+	}
+}
+
+function HideCurator()
+{
+	const container = document.querySelector( '.referring_curator_ctn' );
+
+	if( container )
+	{
+		const referring = container.querySelector( '.referringSteamCurator a' );
+
+		if( referring )
+		{
+			const url = new URL( referring.href );
+
+			if( url.pathname.startsWith( '/curator/4777282' ) )
+			{
+				container.hidden = true;
+			}
+		}
 	}
 }
