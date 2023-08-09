@@ -301,7 +301,7 @@ function StoreAddFreeLicense( request, callback )
 		const formData = new FormData();
 		formData.set( 'ajax', 'true' );
 
-		ExecuteStoreApiCall( `checkout/addfreelicense/${subid}`, formData, freeLicenseResponse, true );
+		ExecuteStoreApiCall( `freelicense/addfreelicense/${subid}`, formData, freeLicenseResponse, true );
 	}
 	else if( request.bundleid )
 	{
@@ -309,7 +309,7 @@ function StoreAddFreeLicense( request, callback )
 		const formData = new FormData();
 		formData.set( 'ajax', 'true' );
 
-		ExecuteStoreApiCall( `checkout/addfreebundle/${bundleid}`, formData, freeLicenseResponse, true );
+		ExecuteStoreApiCall( `freelicense/addfreebundle/${bundleid}`, formData, freeLicenseResponse, true );
 	}
 }
 
