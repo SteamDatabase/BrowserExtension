@@ -37,7 +37,7 @@ function ArchiveFirefox()
 		gecko:
 		{
 			id: 'firefox-extension@steamdb.info',
-			strict_min_version: '105.0',
+			strict_min_version: '109.0',
 		},
 	};
 
