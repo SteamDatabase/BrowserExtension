@@ -18,15 +18,15 @@
 
 		if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
 		{
-			browser.storage.local.set( chromepls );
+			browser.storage.sync.set( chromepls );
 		}
 		else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 		{
-			chrome.storage.local.set( chromepls );
+			chrome.storage.sync.set( chromepls );
 		}
 		else
 		{
-			throw new Error( 'Did not find an API for storage.local.set' );
+			throw new Error( 'Did not find an API for storage' );
 		}
 	};
 

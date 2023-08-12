@@ -49,15 +49,15 @@ function GetOption( items, callback )
 {
 	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
 	{
-		browser.storage.local.get( items ).then( callback );
+		browser.storage.sync.get( items ).then( callback );
 	}
 	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
 	{
-		chrome.storage.local.get( items, callback );
+		chrome.storage.sync.get( items, callback );
 	}
 	else
 	{
-		throw new Error( 'Did not find an API for storage.local.get' );
+		throw new Error( 'Did not find an API for storage' );
 	}
 }
 

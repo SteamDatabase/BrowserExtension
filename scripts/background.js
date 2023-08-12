@@ -2,6 +2,7 @@ let runtimeObj;
 let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
+let migrated = false;
 
 if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
 {
@@ -16,26 +17,49 @@ else
 	throw new Error( 'Did not find an API for runtime' );
 }
 
+runtimeObj.onStartup.addListener( MigrateOptionsToSync );
+
 runtimeObj.onInstalled.addListener( ( event ) =>
 {
 	if( event.reason === runtimeObj.OnInstalledReason.INSTALL )
 	{
 		if( typeof browser !== 'undefined' && typeof browser.tabs !== 'undefined' )
 		{
-			browser.tabs.create( {
-				url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
+			browser.storage.sync.getBytesInUse( null ).then( ( bytesUsed ) =>
+			{
+				// If there is any data in synced storage, that means user has used this extension before, do not open settings
+				if( bytesUsed > 0 )
+				{
+					return;
+				}
+
+				browser.tabs.create( {
+					url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
+				} );
 			} );
 		}
 		else if( typeof chrome !== 'undefined' && typeof chrome.tabs !== 'undefined' )
 		{
-			chrome.tabs.create( {
-				url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
+			chrome.storage.sync.getBytesInUse( null, ( bytesUsed ) =>
+			{
+				if( bytesUsed > 0 )
+				{
+					return;
+				}
+
+				chrome.tabs.create( {
+					url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
+				} );
 			} );
 		}
 		else
 		{
-			throw new Error( 'Did not find an API for tabs.create' );
+			throw new Error( 'Did not find an API for tabs' );
 		}
+	}
+	else
+	{
+		MigrateOptionsToSync();
 	}
 } );
 
@@ -76,7 +100,7 @@ function InvalidateCache()
 {
 	userDataCache = null;
 
-	SetOption( 'userdata.cached', Date.now() );
+	SetLocalOption( 'userdata.cached', Date.now() );
 }
 
 function FetchSteamUserData( callback )
@@ -87,14 +111,14 @@ function FetchSteamUserData( callback )
 		return;
 	}
 
-	GetOption( { 'userdata.cached': Date.now() }, ( data ) =>
+	GetLocalOption( { 'userdata.cached': Date.now() }, ( data ) =>
 	{
 		const now = Date.now();
 		let cache = data[ 'userdata.cached' ];
 
 		if( now > cache + 3600000 )
 		{
-			SetOption( 'userdata.cached', now );
+			SetLocalOption( 'userdata.cached', now );
 			cache = now;
 		}
 
@@ -136,13 +160,13 @@ function FetchSteamUserData( callback )
 
 				callback( { data: userDataCache } );
 
-				SetOption( 'userdata.stored', JSON.stringify( userDataCache ) );
+				SetLocalOption( 'userdata.stored', JSON.stringify( userDataCache ) );
 			} )
 			.catch( ( error ) =>
 			{
 				InvalidateCache();
 
-				GetOption( { 'userdata.stored': false }, function( data )
+				GetLocalOption( { 'userdata.stored': false }, function( data )
 				{
 					const response =
 					{
@@ -508,7 +532,7 @@ function GetStoreSessionID( isCheckout, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
-function GetOption( items, callback )
+function GetLocalOption( items, callback )
 {
 	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
 	{
@@ -520,11 +544,11 @@ function GetOption( items, callback )
 	}
 	else
 	{
-		throw new Error( 'Did not find an API for storage.local.get' );
+		throw new Error( 'Did not find an API for storage' );
 	}
 }
 
-function SetOption( option, value )
+function SetLocalOption( option, value )
 {
 	const chromepls = {}; chromepls[ option ] = value;
 
@@ -538,6 +562,74 @@ function SetOption( option, value )
 	}
 	else
 	{
-		throw new Error( 'Did not find an API for storage.local.set' );
+		throw new Error( 'Did not find an API for storage' );
+	}
+}
+
+function MigrateOptionsToSync()
+{
+	if( migrated )
+	{
+		return;
+	}
+
+	migrated = true;
+
+	const callback = ( items ) =>
+	{
+		if( items[ 'migrated-to-sync' ] )
+		{
+			return;
+		}
+
+		delete items[ 'userdata.cached' ];
+		delete items[ 'userdata.stored' ];
+
+		const count = Object.keys( items ).length;
+
+		if( count === 0 )
+		{
+			return;
+		}
+
+		console.log( 'Migrating', count, 'settings to sync', items );
+
+		if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+		{
+			browser.storage.sync.set( items ).then( () =>
+			{
+				browser.storage.local.clear().then( () =>
+				{
+					SetLocalOption( 'migrated-to-sync', true );
+				} );
+			} );
+		}
+		else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+		{
+			chrome.storage.sync.set( items, () =>
+			{
+				chrome.storage.local.clear( () =>
+				{
+					SetLocalOption( 'migrated-to-sync', true );
+				} );
+			} );
+		}
+		else
+		{
+			throw new Error( 'Did not find an API for storage' );
+		}
+	};
+
+	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+	{
+		browser.storage.local.get( null ).then( callback );
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+	{
+		chrome.storage.local.get( null, callback );
+	}
+	else
+	{
+		throw new Error( 'Did not find an API for storage' );
 	}
 }
