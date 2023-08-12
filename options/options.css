@@ -106,7 +106,7 @@ summary:hover {
 #welcome {
 	font-size: 16px;
 	padding-bottom: 1rem;
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 	border-bottom: 1px solid #0197cf;
 	color: #34c8fe;
 }
