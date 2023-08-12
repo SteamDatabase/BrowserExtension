@@ -4,19 +4,23 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
+		"start:chrome": "web-ext run --target chromium --source-dir ./",
+		"start:firefox": "web-ext run --firefox --source-dir ./",
+		"start:firefoxdev": "web-ext run --firefox=firefoxdeveloperedition --source-dir ./",
 		"build": "node build.js",
 		"version": "node version.js",
-		"test": "eslint . && stylelint \"**/*.css\"",
+		"test": "eslint . && stylelint \"**/*.css\" && web-ext lint",
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.243",
 		"@types/firefox-webext-browser": "^111.0.1",
 		"archiver": "^5.3.0",
-		"eslint": "^8.19.0",
+		"eslint": "^8.47.0",
 		"eslint-config-standard": "^17.0.0",
 		"stylelint": "^15.10.2",
-		"stylelint-config-standard": "^34.0.0"
+		"stylelint-config-standard": "^34.0.0",
+		"web-ext": "^7.6.2"
 	},
 	"repository": {
 		"type": "git",
