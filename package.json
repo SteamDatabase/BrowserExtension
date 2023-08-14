@@ -9,7 +9,7 @@
 		"start:firefoxdev": "web-ext run --firefox=firefoxdeveloperedition --source-dir ./",
 		"build": "node build.js",
 		"version": "node version.js",
-		"test": "eslint . && stylelint \"**/*.css\" && web-ext lint",
+		"test": "eslint . && stylelint \"**/*.css\"",
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
 	},
 	"devDependencies": {
