@@ -107,6 +107,11 @@ summary:hover {
 	margin-left: 1.5rem;
 }
 
+.checkbox input[type="checkbox"] {
+	width: 1rem;
+	height: 1rem;
+}
+
 #welcome {
 	padding-bottom: 1rem;
 	margin-top: 1rem;
