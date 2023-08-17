@@ -34,8 +34,15 @@
 		browserObject.storage.sync.set( chromepls );
 	};
 
-	const CheckboxChange = function( )
+	const CheckboxChange = function( e )
 	{
+		if( !e.isTrusted )
+		{
+			return;
+		}
+
+		this.disabled = true;
+
 		SetOption( this.dataset.option, this.checked );
 	};
 
@@ -55,6 +62,20 @@
 			element = options[ item ];
 
 			element.checked = items[ item ];
+		}
+	} );
+
+	browserObject.storage.sync.onChanged.addListener( ( changes ) =>
+	{
+		const changedItems = Object.keys( changes );
+
+		for( const item of changedItems )
+		{
+			if( options[ item ] )
+			{
+				options[ item ].checked = !!changes[ item ].newValue;
+				options[ item ].disabled = false;
+			}
 		}
 	} );
 
