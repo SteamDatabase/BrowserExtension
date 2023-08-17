@@ -10,11 +10,22 @@
 	<link rel="stylesheet" href="options.css">
 </head>
 <body>
+	<script src="../scripts/common.js" defer></script>
+	<script src="options.js" defer></script>
+
 	<form class="container">
 		<div id="welcome" hidden>
 			<h2>👋 Thanks for installing SteamDB extension!</h2>
 			<p>Review the options below and disable or enable the ones you prefer.</p>
 			<p>You can get back to options from your browser addons page, or from the account dropdown menu on Steam pages.</p>
+		</div>
+
+		<div id="permissions">
+			<p>
+				Click the button below to make the extension work correctly.<br>
+				This is required due to host permission changes in Manifest V3.
+			</p>
+			<button id="js-get-permissions">⚠️ Click here to grant browser permissions</button>
 		</div>
 
 		<h3>SteamDB Website</h3>
@@ -223,8 +234,5 @@
 		<p>Made with 💙 by <a href="https://steamdb.info" target="_blank" rel="noopener">SteamDB</a> folks. It's <a href="https://github.com/SteamDatabase/BrowserExtension" target="_blank" rel="noopener">open source</a>.</p>
 		<p>Thanks to all the <a href="https://github.com/SteamDatabase/BrowserExtension/graphs/contributors" target="_blank" rel="noopener">contributors</a>!</p>
 	</footer>
-
-	<script src="../scripts/common.js"></script>
-	<script src="options.js"></script>
 </body>
 </html>

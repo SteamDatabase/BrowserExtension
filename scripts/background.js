@@ -25,31 +25,14 @@ runtimeObj.onInstalled.addListener( ( event ) =>
 	{
 		if( typeof browser !== 'undefined' && typeof browser.tabs !== 'undefined' )
 		{
-			browser.storage.sync.getBytesInUse( null ).then( ( bytesUsed ) =>
-			{
-				// If there is any data in synced storage, that means user has used this extension before, do not open settings
-				if( bytesUsed > 0 )
-				{
-					return;
-				}
-
-				browser.tabs.create( {
-					url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
-				} );
+			browser.tabs.create( {
+				url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
 			} );
 		}
 		else if( typeof chrome !== 'undefined' && typeof chrome.tabs !== 'undefined' )
 		{
-			chrome.storage.sync.getBytesInUse( null, ( bytesUsed ) =>
-			{
-				if( bytesUsed > 0 )
-				{
-					return;
-				}
-
-				chrome.tabs.create( {
-					url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
-				} );
+			chrome.tabs.create( {
+				url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
 			} );
 		}
 		else

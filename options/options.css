@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+[hidden] {
+	display: none !important;
+}
+
 html {
 	color-scheme: dark;
 	font-size: 16px;
@@ -78,7 +82,7 @@ summary:hover {
 
 .container {
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 	width: 100%;
 	max-width: 34rem;
 }
@@ -104,15 +108,41 @@ summary:hover {
 }
 
 #welcome {
-	font-size: 16px;
 	padding-bottom: 1rem;
-	margin: 2rem 0;
-	border-bottom: 1px solid #0197cf;
+	margin-top: 1rem;
 	color: #34c8fe;
 }
 
 #welcome h2 {
-	font-size: 20px;
+	font-size: 1.3rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
+}
+
+#permissions {
+	background: #000;
+	border-bottom: .4rem solid red;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+#js-get-permissions {
+	appearance: none;
+	border: 0;
+	border-radius: 0.5rem;
+	background: #0064ff;
+	color: #fff;
+	font: inherit;
+	font-weight: bold;
+	line-height: 1;
+	padding: 0.8rem 1rem;
+	width: 100%;
+}
+
+#js-get-permissions:focus,
+#js-get-permissions:hover {
+	background: #00f;
+	color: #fff;
 }
