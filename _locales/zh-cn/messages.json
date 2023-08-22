@@ -1,0 +1,134 @@
+{
+	"extension_description": {
+		"message": "在Steam商店页面添加SteamDB相关功能。查看游戏历史最低价格和统计信息。"
+	},
+
+	"steamdb_options": {
+		"message": "SteamDB选项"
+	},
+	"steamstatus": {
+		"message": "检查 steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam似乎暂时无法访问。"
+	},
+
+	"steamdb_is_optimizing": {
+		"message": "SteamDB扩展正在优化此页面…"
+	},
+
+	"view_on_steamdb": {
+		"message": "在SteamDB上查看"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "在PCGamingWiki上查看"
+	},
+	"view_your_achievements": {
+		"message": "查看你的成就"
+	},
+	"store_page": {
+		"message": "商店页面"
+	},
+	"error": {
+		"message": "错误"
+	},
+
+	"id_app": {
+		"message": "应用 $1"
+	},
+	"id_sub": {
+		"message": "订阅 $1"
+	},
+	"id_bundle": {
+		"message": "捆绑 $1"
+	},
+
+	"app_steamdb_rating": {
+		"message": "SteamDB 评分："
+	},
+	"app_depots_update": {
+		"message": "最近更新："
+	},
+	"app_depots_updated_short": {
+		"message": "已更新"
+	},
+	"app_stats_online": {
+		"message": "在线统计"
+	},
+	"app_stats_online_now": {
+		"message": "当前在线："
+	},
+	"app_stats_peak_today": {
+		"message": "今日在线："
+	},
+	"app_stats_alL_time_peak": {
+		"message": "历史峰值："
+	},
+	"app_stats_followers": {
+		"message": "关注用户："
+	},
+	"app_lowest_price_": {
+		"message": ""
+	},
+	"app_nothing_selected": {
+		"message": "未选择任何内容"
+	},
+
+	"explore_auto_discover": {
+		"message": "自动发现"
+	},
+	"explore_auto_discover_description": {
+		"message": "自动发现队列以获取事件卡片。"
+	},
+	"explore_generating": {
+		"message": "正在生成新的发现队列，如果Steam负载较高可能会失败…"
+	},
+	"explore_exploring": {
+		"message": "正在浏览队列… $1/$2"
+	},
+	"explore_failed_to_clear": {
+		"message": "无法清除队列项目 #$1，将在五秒后重试…"
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "尝试多次清除队列项目 #$1 失败。请稍后再试。"
+	},
+	"explore_failed_to_generate": {
+		"message": "无法生成新队列，将在五秒后重试…"
+	},
+	"explore_finished": {
+		"message": "队列已浏览完毕。"
+	},
+
+	"badges_idle_apps": {
+		"message": "需要挂机的应用：$1"
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "需要在此页面挂机的应用：$1"
+	},
+	"badges_idle_drops": {
+		"message": "剩余掉落次数：$1"
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "此页面剩余掉落次数：$1"
+	},
+
+	"achievement_your_progress": {
+		"message": "你的进度：$1 / $2"
+	},
+	"hidden_achievement": {
+		"message": "隐藏成就："
+	},
+	"hidden_achievement_hover": {
+		"message": "隐藏成就，鼠标悬停以显示："
+	},
+	"hidden_achievement_but_loaded": {
+		"message": "（SteamDB扩展已加载您的成就）"
+	},
+
+	"widget_view_app": {
+		"message": "在SteamDB查看应用 $1"
+	},
+	"widget_view_sub": {
+		"message": "在SteamDB查看订阅 $1"
+	}
+}
