@@ -292,7 +292,7 @@ function StoreAddFreeLicense( request, callback )
 			case 24: message = 'You do not own the required app.'; break;
 			case 53: message = 'You got rate limited, try again in an hour.'; break;
 			default: message = resultCode === null
-				? `There was a problem adding this product to your account. ${response.error ?? ''}`
+				? `There was a problem adding this product to your account. ${response?.error ?? ''}`
 				: `There was a problem adding this product to your account. PurchaseResultDetail=${resultCode}`;
 		}
 
