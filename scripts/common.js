@@ -77,15 +77,17 @@ function GetLocalResource( res )
 
 function SendMessageToBackgroundScript( message, callback )
 {
+	const errorCallback = ( error ) => callback( { success: false, error: error.message } );
+
 	try
 	{
 		if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
 		{
-			browser.runtime.sendMessage( message ).then( callback );
+			browser.runtime.sendMessage( message ).then( callback ).catch( errorCallback );
 		}
 		else if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
 		{
-			chrome.runtime.sendMessage( message ).then( callback );
+			chrome.runtime.sendMessage( message ).then( callback ).catch( errorCallback );
 		}
 		else
 		{
@@ -94,7 +96,7 @@ function SendMessageToBackgroundScript( message, callback )
 	}
 	catch( error )
 	{
-		callback( { success: false, error: error.message } );
+		errorCallback( error );
 	}
 }
 
