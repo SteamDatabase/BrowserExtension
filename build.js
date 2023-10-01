@@ -39,6 +39,10 @@ function ArchiveFirefox()
 			id: 'firefox-extension@steamdb.info',
 			strict_min_version: '109.0',
 		},
+		gecko_android:
+		{
+			strict_min_version: '119.0',
+		},
 	};
 
 	delete ffManifest.web_accessible_resources[ 0 ].use_dynamic_url; // Unsupported
