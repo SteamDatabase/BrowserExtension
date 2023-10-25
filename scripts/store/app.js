@@ -435,6 +435,39 @@ function DrawLowestPrice()
 			case 'LK': // Sri Lanka
 				currency = 'USD-SASIA';
 				break;
+
+			case 'AR': // Argentina
+			case 'BO': // Bolivia
+			case 'BZ': // Belize
+			case 'EC': // Ecuador
+			case 'GT': // Guatemala
+			case 'GY': // Guyana
+			case 'HN': // Honduras
+			case 'NI': // Nicaragua
+			case 'PA': // Panama
+			case 'PY': // Paraguay
+			case 'SR': // Suriname
+			case 'SV': // El Salvador
+			case 'VE': // Venezuela
+				currency = 'USD-LATAM';
+				break;
+
+			case 'BH': // Bahrain
+			case 'DZ': // Algeria
+			case 'EG': // Egypt
+			case 'IQ': // Iraq
+			case 'JO': // Jordan
+			case 'LB': // Lebanon
+			case 'LY': // Libya
+			case 'MA': // Morocco
+			case 'OM': // Oman
+			case 'PS': // Palestine
+			case 'SD': // Sudan
+			case 'TN': // Tunisia
+			case 'TR': // Turkey
+			case 'YE': // Yemen
+				currency = 'USD-MENA';
+				break;
 		}
 	}
 
