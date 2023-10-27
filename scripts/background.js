@@ -3,6 +3,7 @@ let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
 let migrated = false;
+let nextAllowedRequest = 0;
 
 if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
 {
@@ -167,37 +168,73 @@ function FetchSteamUserData( callback )
 	} );
 }
 
+function GetJsonWithStatusCheck( response )
+{
+	if( !response.ok )
+	{
+		if( response.status === 429 )
+		{
+			let retryAfter = parseInt( response.headers.get( 'Retry-After' ), 10 );
+
+			if( isNaN( retryAfter ) || retryAfter < 1 )
+			{
+				retryAfter = 60;
+			}
+
+			nextAllowedRequest = Date.now() + ( retryAfter * 1000 ) + ( Math.random() * 10000 );
+
+			console.log( 'Rate limite for', retryAfter, 'seconds, retry after', new Date( nextAllowedRequest ) );
+		}
+
+		const e = new Error( `HTTP ${response.status}` );
+		e.name = 'ServerError';
+		throw e;
+	}
+
+	return response.json();
+}
+
 function GetCurrentPlayers( appid, callback )
 {
+	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
+	{
+		callback( { success: false, error: 'Rate limited' } );
+		return;
+	}
+
 	const params = new URLSearchParams();
 	params.set( 'appid', parseInt( appid, 10 ) );
 
 	fetch( `https://steamdb.info/api/GetCurrentPlayers/?${params.toString()}`, {
-		credentials: 'omit',
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
 		},
 	} )
-		.then( ( response ) => response.json() )
+		.then( GetJsonWithStatusCheck )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
 function GetPrice( { appid, currency }, callback )
 {
+	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
+	{
+		callback( { success: false, error: 'Rate limited' } );
+		return;
+	}
+
 	const params = new URLSearchParams();
 	params.set( 'appid', parseInt( appid, 10 ) );
 	params.set( 'currency', currency );
 
 	fetch( `https://steamdb.info/api/ExtensionGetPrice/?${params.toString()}`, {
-		credentials: 'omit',
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
 		},
 	} )
-		.then( ( response ) => response.json() )
+		.then( GetJsonWithStatusCheck )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
