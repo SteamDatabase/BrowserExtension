@@ -544,8 +544,8 @@ function GetStoreSessionID( isCheckout, callback )
 				callback( {
 					success: false,
 					error: response.includes( 'login' )
-						? 'Failed to failed sessionid. It does not look like you are logged in to the Steam store.'
-						: 'Failed to failed sessionid. Something went horribly wrong, you should report this issue.',
+						? 'Failed to fetch sessionid. It does not look like you are logged in to the Steam store.'
+						: 'Failed to fetch sessionid. Something went horribly wrong, you should report this issue.',
 				} );
 			}
 		} )
