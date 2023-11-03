@@ -41,7 +41,7 @@ function ArchiveFirefox()
 		},
 		gecko_android:
 		{
-			strict_min_version: '119.0',
+			strict_min_version: '120.0',
 		},
 	};
 
