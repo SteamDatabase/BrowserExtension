@@ -43,10 +43,24 @@
 			<p>To prevent excessive requests to the Steam Store, your user data is cached in your browser's local storage.</p>
 		</details>
 
-		<label class="checkbox">
-			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
-			<div>Highlight owned and wished products on steamdb.info</div>
-		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight" id="checkbox-steamdb-highlight">
+			<div>
+				<label for="checkbox-steamdb-highlight">Highlight owned and wished products on steamdb.info</label>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div>Wishlist, follow, and ignore products on the Steam store directly from SteamDB</div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div><a href="https://steamdb.info/freepackages/" target="_blank" rel="noopener">Enables the free packages script</a></div>
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					<div>Enables extra filtering on <a href="https://steamdb.info/sales/" target="_blank" rel="noopener">sales page</a> and <a href="https://steamdb.info/bundles/" target="_blank" rel="noopener">bundles page</a></div>
+				</div>
+			</div>
+		</div>
 
 
 		<h3>Extra data</h3>
@@ -56,25 +70,24 @@
 			<p>When the "Display current concurrent players and max peaks on app pages" option is enabled, the extension will do a secure
 			request to steamdb.info to get the current amount of players and last depot update
 			(the latter only if "Display last depot update on app pages" option is enabled).</p>
-			<p>When "Display lowest recorded price on app pages" option is enabled, the extension will do a secure request
+			<p>When "Display the lowest recorded price on app pages" option is enabled, the extension will do a secure request
 			to steamdb.info with your currency (with what Steam thinks it is) to get the lowest recorded price for a specific game.</p>
 		</details>
 
 		<label class="checkbox">
 			<input type="checkbox" class="option-check" data-option="steamdb-lowest-price" checked>
-			<div>Display lowest recorded price on app pages</div>
+			<div>Display the lowest recorded price on app pages</div>
 		</label>
-		<label class="checkbox">
-			<input type="checkbox" class="option-check" data-option="online-stats" checked>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" data-option="online-stats" checked id="checkbox-online-stats">
 			<div>
-				Display current concurrent players and max peaks on app pages
-
+				<label for="checkbox-online-stats">Display current concurrent players and max peaks on app pages</label>
 				<label class="checkbox">
 					<input type="checkbox" class="option-check" checked data-option="steamdb-last-update">
 					<div>Display last depot update on app pages</div>
 				</label>
 			</div>
-		</label>
+		</div>
 
 		<h3>Buttons &amp; links</h3>
 
@@ -125,30 +138,34 @@
 			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-sidebar">
 			<div>Move game selection on inventory page to the side</div>
 		</label>
-		<label class="checkbox">
-			<input type="checkbox" class="option-check" checked data-option="link-inventory">
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked data-option="link-inventory" id="checkbox-link-inventory">
 			<div>
-				Link each gift and coupon in your inventory to SteamDB
+				<label for="checkbox-link-inventory">Link each gift and coupon in your inventory to SteamDB</label>
 				<label class="checkbox">
 					<input type="checkbox" class="option-check" checked data-option="link-inventory-gift-subid">
 					<div>Correctly figure out gift SubID in your inventory</div>
 				</label>
 			</div>
-		</label>
+		</div>
 		<label class="checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-no-sell-reload">
 			<div>Do not refresh the inventory when selling an item</div>
 		</label>
-		<label class="checkbox">
-			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-quick-sell">
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-quick-sell" id="checkbox-enhancement-inventory-quick-sell">
 			<div>
-				Add quick sell buttons
+				<label for="checkbox-enhancement-inventory-quick-sell">Add quick sell buttons</label>
 				<label class="checkbox">
 					<input type="checkbox" class="option-check" data-option="enhancement-inventory-quick-sell-auto">
 					<div>Automatically accept quick sell</div>
 				</label>
 			</div>
-		</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div>Display item market price in other users' inventories</div>
+		</div>
 
 		<h3>Trade Offers</h3>
 		<label class="checkbox">
@@ -162,6 +179,10 @@
 			<input type="checkbox" class="option-check" data-option="enhancement-tradeoffer-no-gift-confirm">
 			<div>Suppress "this trade appears suspicious" and "are you sure this is a gift?" trade offer alerts</div>
 		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div>Display better error messages, instead of Valve's cryptic error numbers</div>
+		</div>
 
 		<h3>Enhancements</h3>
 
@@ -187,28 +208,28 @@
 		<label class="checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-no-linkfilter">
 			<div>
-				Remove all linkfilter links
+				Remove all link filter links
 			</div>
 		</label>
 		<label class="checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-appicon" checked>
 			<div>Display app icons on store and community pages</div>
 		</label>
-		<label class="checkbox">
-			<input type="checkbox" class="option-check" data-option="hidden-achievements" checked>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" data-option="hidden-achievements" checked id="checkbox-hidden-achievements">
 			<div>
-				Load hidden achievements and their descriptions
+				<label for="checkbox-hidden-achievements">Load hidden achievements and their descriptions</label>
 				<label class="checkbox">
 					<input type="checkbox" class="option-check" data-option="spoiler-achievements" checked>
 					<div>Hide descriptions behind a spoiler element</div>
 				</label>
 			</div>
-		</label>
+		</div>
 		<label class="checkbox">
 			<input type="checkbox" class="option-check" data-option="prevent-store-images">
 			<div>
 				Stop images from loading on app store pages
-				<div class="muted">Some developers put multiple megabytes of images in game descriptions which can take a while to load, click on an image to load</div>
+				<div class="muted">Some developers put megabytes of images in game descriptions which can take a while to load, click on an image to load</div>
 			</div>
 		</label>
 		<label class="checkbox">
@@ -218,6 +239,45 @@
 				<div><a href="https://github.com/SteamDatabase/BrowserExtension#automatically-open-grant-an-award-popup-from-a-link-using-award" target="_blank" rel="noopener" class="muted">See explanation on GitHub</a></div>
 			</div>
 		</label>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			Display total amount of card drops remaining on badges page
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			Allow sending gifts to friends that already own the game
+		</div>
+
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			Adds a button to cheat the discovery queue during sales
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" class="option-check" checked disabled>
+			<div>
+				Improve global achievements page
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					Link to your own achievements page
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					Locked achievements have a lock icon for more visibility
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					Display hidden achievement descriptions
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					Display achievement progress bar
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" class="option-check" checked disabled>
+					Display your achievements for family shared games
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<footer class="footer">
