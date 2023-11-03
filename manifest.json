@@ -62,6 +62,17 @@
 				"https://store.steampowered.com/*",
 				"https://steamcommunity.com/*"
 			]
+		},
+		{
+			"use_dynamic_url": true,
+			"resources":
+			[
+				"options/options.html"
+			],
+			"matches":
+			[
+				"https://steamdb.info/*"
+			]
 		}
 	],
 	"content_scripts":

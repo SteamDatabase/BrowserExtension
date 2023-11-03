@@ -1,11 +1,14 @@
 'use strict';
 
-const element = document.getElementById( 'steamdb-extension-protip' );
+const EXTENSION_INTEROP_VERSION = 2;
 
-if( element )
-{
-	element.setAttribute( 'hidden', true );
-}
+window.postMessage( {
+	version: EXTENSION_INTEROP_VERSION,
+	type: 'steamdb:extension-init',
+	data: {
+		options_url: GetLocalResource( 'options/options.html' ),
+	},
+}, GetHomepage() );
 
 window.addEventListener( 'message', ( request ) =>
 {
@@ -23,6 +26,7 @@ window.addEventListener( 'message', ( request ) =>
 				SendMessageToBackgroundScript( request.data, ( response ) =>
 				{
 					window.postMessage( {
+						version: EXTENSION_INTEROP_VERSION,
 						type: 'steamdb:extension-response',
 						request: request.data,
 						response,
@@ -61,6 +65,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 			WriteLog( 'Failed to load userdata', response.error );
 
 			window.postMessage( {
+				version: EXTENSION_INTEROP_VERSION,
 				type: 'steamdb:extension-error',
 				error: `Failed to load your games. ${response.error}`,
 			}, GetHomepage() );
@@ -69,6 +74,7 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 		if( response.data )
 		{
 			window.postMessage( {
+				version: EXTENSION_INTEROP_VERSION,
 				type: 'steamdb:extension-loaded',
 				data: response.data,
 			}, GetHomepage() );

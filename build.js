@@ -45,7 +45,10 @@ function ArchiveFirefox()
 		},
 	};
 
-	delete ffManifest.web_accessible_resources[ 0 ].use_dynamic_url; // Unsupported
+	for( const web_accessible_resources of ffManifest.web_accessible_resources )
+	{
+		delete web_accessible_resources.use_dynamic_url; // Unsupported
+	}
 
 	const json = JSON.stringify( ffManifest, null, '\t' );
 
