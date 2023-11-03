@@ -92,7 +92,17 @@
 	{
 		e.preventDefault();
 
-		browserObject.permissions.request( permissions );
+		try
+		{
+			browserObject.permissions.request( permissions ).catch( e =>
+			{
+				alert( `Failed to request permissions: ${e.message}` );
+			} );
+		}
+		catch( e )
+		{
+			alert( `Failed to request permissions: ${e.message}` );
+		}
 	} );
 
 	browserObject.permissions.onAdded.addListener( HideButtonIfAllPermissionsGranted );
