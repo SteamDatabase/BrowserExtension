@@ -15,23 +15,25 @@
 	<form class="container">
 		<div id="welcome" hidden>
 			<h2>👋 Thanks for installing SteamDB extension!</h2>
-			<p>Review the options below and disable or enable the ones you prefer.</p>
-			<p>You can get back to options from your browser addons page, or from the account dropdown menu on Steam pages.</p>
+			<p>Review the options below and toggle the ones you prefer. To get back here in the future:</p>
+			<ul>
+				<li>Settings page on SteamDB</li>
+				<li>Account dropdown on Steam pages</li>
+				<li>Your browser's addons page</li>
+			</ul>
 		</div>
 
 		<div id="permissions">
 			<p>
-				Click the button below to make the extension work correctly.<br>
-				This is required due to host permission changes in Manifest V3.
+				This extension requires additional permissions to work correctly on SteamDB, Steam Store, and Steam Community.
 			</p>
-			<button id="js-get-permissions">⚠️ Click here to grant browser permissions</button>
+			<button id="js-get-permissions">⚠️ Grant permissions</button>
 		</div>
 
 		<h3>SteamDB Website</h3>
 
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="steamdb-highlight">
-			<span class="control-indicator"></span>
 			Highlight owned and wished products on steamdb.info
 		</label>
 		<details style="padding-left:1.5rem">
@@ -57,17 +59,14 @@
 
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="steamdb-lowest-price" checked>
-			<span class="control-indicator"></span>
 			Display lowest recorded price on app pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="online-stats" checked>
-			<span class="control-indicator"></span>
 			Display current concurrent players and max peaks on app pages
 		</label>
 		<label class="control checkbox checkbox-sub">
 			<input type="checkbox" class="option-check" checked data-option="steamdb-last-update">
-			<span class="control-indicator"></span>
 			Display last depot update on app pages
 		</label>
 
@@ -76,52 +75,42 @@
 
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-app">
-			<span class="control-indicator"></span>
 			Display a button on app pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-pcgw">
-			<span class="control-indicator"></span>
 			Display PCGamingWiki button on app pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-sub">
-			<span class="control-indicator"></span>
 			Display a button on package pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-video">
-			<span class="control-indicator"></span>
 			Display a button on video pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-gamehub">
-			<span class="control-indicator"></span>
 			Display a button on game hubs
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="button-gamecards">
-			<span class="control-indicator"></span>
 			Display SteamDB and store page buttons on game cards page
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="link-subid">
-			<span class="control-indicator"></span>
 			Display SubID under each purchase option
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="link-subid-widget">
-			<span class="control-indicator"></span>
 			Display SubID in app widgets
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="link-accountpage">
-			<span class="control-indicator"></span>
 			Link each package on your accounts page
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="profile-calculator">
-			<span class="control-indicator"></span>
 			Add a calculator link on community profiles
 		</label>
 
@@ -129,45 +118,37 @@
 
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-sidebar">
-			<span class="control-indicator"></span>
 			Move game selection on inventory page to the side
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="link-inventory">
-			<span class="control-indicator"></span>
 			Link each gift and coupon in your inventory to SteamDB
 		</label>
 		<label class="control checkbox checkbox-sub">
 			<input type="checkbox" class="option-check" checked data-option="link-inventory-gift-subid">
-			<span class="control-indicator"></span>
 			Correctly figure out gift SubID in your inventory
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-no-sell-reload">
-			<span class="control-indicator"></span>
 			Do not refresh the inventory when selling an item <span class="muted">(item will fade out)</span>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-inventory-quick-sell">
-			<span class="control-indicator"></span>
 			Add quick sell buttons
 		</label>
 		<label class="control checkbox checkbox-sub">
 			<input type="checkbox" class="option-check" data-option="enhancement-inventory-quick-sell-auto">
-			<span class="control-indicator"></span>
 			Automatically accept quick sell
 		</label>
 
 		<h3>Trade Offers</h3>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-tradeoffer-url-items">
-			<span class="control-indicator"></span>
 			Support <code>for_item</code> and <code>my_item</code> parameters
 			<a href="https://github.com/SteamDatabase/BrowserExtension#trade-offers-support-for-for_item-and-my_item" target="_blank" rel="noopener" class="muted">(see explanation on GitHub)</a>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-tradeoffer-no-gift-confirm">
-			<span class="control-indicator"></span>
 			Suppress "this trade appears suspicious" and "are you sure this is a gift?" trade offer alerts
 		</label>
 
@@ -175,55 +156,45 @@
 
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-market-ssa" checked>
-			<span class="control-indicator"></span>
 			Accept SSA on market, inventory, and activate key pages automatically
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-skip-agecheck">
-			<span class="control-indicator"></span>
 			Skip age check gate
 			<span class="muted">(sets age and birthday cookies to always pass)</span>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-hide-install-button" checked>
-			<span class="control-indicator"></span>
 			Hide "Install Steam" button in header
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="steamdb-rating">
-			<span class="control-indicator"></span>
 			Display SteamDB rating on app pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-no-linkfilter">
-			<span class="control-indicator"></span>
 			Remove all linkfilter links
 			<span class="muted">(visiting linkfilter still works)</span>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="enhancement-appicon" checked>
-			<span class="control-indicator"></span>
 			Display app icons on store and community pages
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="hidden-achievements" checked>
-			<span class="control-indicator"></span>
 			Load hidden achievements and their descriptions
 		</label>
 		<label class="control checkbox checkbox-sub">
 			<input type="checkbox" class="option-check" data-option="spoiler-achievements" checked>
-			<span class="control-indicator"></span>
 			Hide descriptions behind a spoiler element
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" data-option="prevent-store-images">
-			<span class="control-indicator"></span>
 			Stop images from loading on app store pages
 			<p class="muted">Some developers put multiple megabytes of images in game descriptions which can take a while to load. Click on an image to load.</p>
 		</label>
 		<label class="control checkbox">
 			<input type="checkbox" class="option-check" checked data-option="enhancement-award-popup-url">
-			<span class="control-indicator"></span>
 			Support <code>award</code> parameters on profile and shared file links
 			<a href="https://github.com/SteamDatabase/BrowserExtension#automatically-open-grant-an-award-popup-from-a-link-using-award" target="_blank" rel="noopener" class="muted">(see explanation on GitHub)</a>
 		</label>

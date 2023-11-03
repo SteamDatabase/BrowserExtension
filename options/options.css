@@ -121,16 +121,20 @@ summary:hover {
 	padding-bottom: 1rem;
 	margin-top: 1rem;
 	color: #34c8fe;
+	text-wrap: balance;
+	text-wrap: pretty;
 }
 
 #welcome h2 {
 	font-size: 1.3rem;
 	font-weight: bold;
+	line-height: 1.4;
 	margin-bottom: 1rem;
 }
 
 #permissions {
 	background: #000;
+	color: #fff;
 	border-bottom: .4rem solid red;
 	margin-top: 1rem;
 	padding: 1rem;
@@ -155,4 +159,10 @@ summary:hover {
 #js-get-permissions:hover {
 	background: #00f;
 	color: #fff;
+}
+
+@media (max-width: 34rem) {
+	.container {
+		padding: 1rem;
+	}
 }
