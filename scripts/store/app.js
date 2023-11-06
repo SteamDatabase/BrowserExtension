@@ -563,7 +563,7 @@ function DrawOnlineStatsWidget( items )
 	const link = document.createElement( 'a' );
 	link.className = 'steamdb_stats_logo';
 	link.title = _t( 'view_on_steamdb' );
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/graphs/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
 
 	const image = document.createElement( 'img' );
 	image.src = GetLocalResource( 'icons/white.svg' );
