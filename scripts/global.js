@@ -38,9 +38,23 @@ else
 		{
 			const links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
 
-			for( let x = 0; x < links.length; x++ )
+			for( const link of links )
 			{
-				links[ x ].href = links[ x ].href.replace( /^https:\/\/steamcommunity\.com\/linkfilter\/(?:\?url=)?/, '' );
+				if( !link.search )
+				{
+					continue;
+				}
+
+				const params = new URLSearchParams( link.search );
+
+				if( params.has( 'u' ) )
+				{
+					link.href = params.get( 'u' );
+				}
+				else if( params.has( 'url' ) )
+				{
+					link.href = params.get( 'url' );
+				}
 			}
 		}
 	} );
