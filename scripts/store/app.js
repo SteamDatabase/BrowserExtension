@@ -18,6 +18,7 @@ else
 		'steamdb-lowest-price': true,
 		'steamdb-rating': true,
 		'steamdb-last-update': true,
+		'enhancement-hide-mobile-app-button': false,
 	}, function( items )
 	{
 		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
@@ -28,6 +29,17 @@ else
 		if( items[ 'steamdb-lowest-price' ] )
 		{
 			DrawLowestPrice();
+		}
+
+		if( items[ 'enhancement-hide-mobile-app-button' ] )
+		{
+			const button = document.querySelector( '.open_in_steam_container' );
+
+			if( button )
+			{
+				button.setAttribute( 'hidden', true );
+				button.style.display = 'none';
+			}
 		}
 
 		if( items[ 'button-app' ] )
