@@ -66,9 +66,14 @@ else
 		const optionsLink = document.createElement( 'a' );
 		optionsLink.rel = 'noopener';
 		optionsLink.target = '_blank';
-		optionsLink.className = 'popup_menu_item';
-		optionsLink.textContent = _t( 'steamdb_options' );
+		optionsLink.className = 'popup_menu_item steamdb_options_link';
+		optionsLink.textContent = ' ' + _t( 'steamdb_options' );
 		optionsLink.href = GetLocalResource( 'options/options.html' );
+
+		const image = document.createElement( 'img' );
+		image.className = 'ico16';
+		image.src = GetLocalResource( 'icons/white.svg' );
+		optionsLink.prepend( image );
 
 		popup.appendChild( optionsLink );
 	}

@@ -1,3 +1,11 @@
+.steamdb_options_link .ico16 {
+	background: none;
+}
+
+.steamdb_options_link:hover .ico16 {
+	filter: invert(1);
+}
+
 .steamdb_downtime {
 	color: #fff;
 	background-color: #c0392b;
