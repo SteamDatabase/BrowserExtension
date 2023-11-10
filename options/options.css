@@ -12,7 +12,7 @@ html {
 	color-scheme: dark;
 	font-size: 16px;
 	background: #1b1b24;
-	accent-color: #0074d9;
+	accent-color: #00aff4;
 }
 
 body {
@@ -116,10 +116,6 @@ summary:hover {
 	margin: 0;
 	margin-top: .3rem;
 	flex-shrink: 0;
-}
-
-.checkbox > input:disabled {
-	opacity: .5;
 }
 
 #welcome {
