@@ -1,0 +1,134 @@
+{
+	"extension_description": {
+		"message": "Ajouter les liens SteamDB et les nouvelles fonctionnalités sur le magasin Steam et la communauté. Afficher les prix des jeux les plus bas et les statistiques."
+	},
+
+	"steamdb_options": {
+		"message": "Options SteamDB"
+	},
+	"steamstatus": {
+		"message": "Verifier sur steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam semble rencontrer des problèmes techniques. "
+	},
+
+	"steamdb_is_optimizing": {
+		"message": "L'extension SteamDB optimise cette page…"
+	},
+
+	"view_on_steamdb": {
+		"message": "Voir sur SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Voir sur PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Voir vos accomplissements"
+	},
+	"store_page": {
+		"message": "Page du magasin"
+	},
+	"error": {
+		"message": "Erreur"
+	},
+
+	"id_app": {
+		"message": "App $1"
+	},
+	"id_sub": {
+		"message": "Sub $1"
+	},
+	"id_bundle": {
+		"message": "Bundle $1"
+	},
+
+	"app_steamdb_rating": {
+		"message": "Note SteamDB :"
+	},
+	"app_depots_update": {
+		"message": "Mise à jour des dépôts:"
+	},
+	"app_depots_updated_short": {
+		"message": "Mis à jour"
+	},
+	"app_stats_online": {
+		"message": "Statistiques en ligne"
+	},
+	"app_stats_online_now": {
+		"message": "En ligne actuellement:"
+	},
+	"app_stats_peak_today": {
+		"message": "Pointe sur 24 heures:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Pointe de tous les temps:"
+	},
+	"app_stats_followers": {
+		"message": "Abonnés:"
+	},
+	"app_lowest_price_": {
+		"message": ""
+	},
+	"app_nothing_selected": {
+		"message": "rien de sélectionné"
+	},
+
+	"explore_auto_discover": {
+		"message": "Auto-découverte"
+	},
+	"explore_auto_discover_description": {
+		"message": "Découvrir automatiquement la liste de découverte pour obtenir une carte d'événement."
+	},
+	"explore_generating": {
+		"message": "Génération d'une nouvelle liste de découverte, qui peut échouer si Steam est soumis à une importante demande…"
+	},
+	"explore_exploring": {
+		"message": "Exploration de la liste… Requête $1 sur $2"
+	},
+	"explore_failed_to_clear": {
+		"message": "Erreur lors de suppression d'un élément de la liste #$1, nouvel essai dans cinq secondes…"
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Erreur lors de suppression d'un élément de la liste  #$1 trop de tentatives. Vous pouvez réessayer plus tard."
+	},
+	"explore_failed_to_generate": {
+		"message": "Erreur lors de création d'une nouvelle liste, nouvel essai dans cinq secondes…"
+	},
+	"explore_finished": {
+		"message": "La liste de découverte a été explorée."
+	},
+
+	"badges_idle_apps": {
+		"message": "Applications inactives: $1"
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Applications inactives sur cette page: $1"
+	},
+	"badges_idle_drops": {
+		"message": "Drops restants: $1"
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Drops restants sur cette page: $1"
+	},
+
+	"achievement_your_progress": {
+		"message": "Votre avancement: $1 / $2"
+	},
+	"hidden_achievement": {
+		"message": "Accomplissement caché: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Accomplissement caché, survolez avez la souris pour révéler: "
+	},
+	"hidden_achievement_but_loaded": {
+		"message": " (mais l'extension SteamDB a pu charger vos accomplissements)"
+	},
+
+	"widget_view_app": {
+		"message": "Voir l'app $1 sur SteamDB"
+	},
+	"widget_view_sub": {
+		"message": "Voir le sub $1 sur SteamDB"
+	}
+}
