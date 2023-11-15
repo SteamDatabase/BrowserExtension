@@ -13,14 +13,14 @@
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
 	},
 	"devDependencies": {
-		"@types/chrome": "^0.0.248",
-		"@types/firefox-webext-browser": "^111.0.1",
+		"@types/chrome": "^0.0.251",
+		"@types/firefox-webext-browser": "^111.0.4",
 		"archiver": "^6.0.1",
-		"eslint": "^8.47.0",
-		"eslint-config-standard": "^17.0.0",
-		"stylelint": "^15.10.2",
+		"eslint": "^8.53.0",
+		"eslint-config-standard": "^17.1.0",
+		"stylelint": "^15.11.0",
 		"stylelint-config-standard": "^34.0.0",
-		"web-ext": "^7.6.2"
+		"web-ext": "^7.8.0"
 	},
 	"repository": {
 		"type": "git",
