@@ -121,9 +121,6 @@
 	"hidden_achievement_hover": {
 		"message": "Hidden achievement, mouse over to reveal: "
 	},
-	"hidden_achievement_but_loaded": {
-		"message": " (but SteamDB extension was able to load your achievements)"
-	},
 
 	"widget_view_app": {
 		"message": "View app $1 on SteamDB"

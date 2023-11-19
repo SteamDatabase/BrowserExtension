@@ -17,46 +17,64 @@ GetOption( {
 	{
 		achievementsContainer = achievementsContainer.parentNode.parentNode;
 
-		const headers = new Headers();
-		headers.append( 'Accept', 'text/html' );
-		headers.append( 'X-ValveUserAgent', 'panorama' );
-		headers.append( 'X-Requested-With', 'SteamDB' );
+		const appIdElement = document.querySelector( '.profile_small_header_additional .gameLogo a' );
+
+		if( !appIdElement )
+		{
+			return;
+		}
+
+		const appidMatch = appIdElement.href.match( /\/app\/(?<id>[0-9]+)/ );
+
+		if( !appidMatch )
+		{
+			return;
+		}
+
+		const appid = appidMatch.groups.id;
+		const applicationConfigElement = document.getElementById( 'application_config' );
+
+		if( !applicationConfigElement )
+		{
+			return;
+		}
+
+		const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
+
+		if( !accessToken )
+		{
+			return;
+		}
+
+		const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
 
 		const params = new URLSearchParams();
-		params.set( 'tab', 'achievements' );
-		params.set( 'panorama', 'please' );
+		params.set( 'format', 'json' );
+		params.set( 'access_token', accessToken );
+		params.set( 'appid', appid );
+		params.set( 'language', applicationConfig.LANGUAGE );
+		params.set( 'x_requested_with', 'SteamDB' ); // Request header field x-requested-with is not allowed by Access-Control-Allow-Headers in preflight response.
 
-		fetch( window.location.origin + window.location.pathname + '?' + params.toString(), {
-			headers,
-		} )
-			.then( ( response ) => response.text() )
+		fetch( `${applicationConfig.WEBAPI_BASE_URL}IPlayerService/GetGameAchievements/v1/?${params.toString()}` )
+			.then( ( response ) => response.json() )
 			.then( ( response ) =>
 			{
-				response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
-
-				if( !response )
+				if( !response || !response.response || !response.response.achievements )
 				{
 					return;
 				}
 
-				response = JSON.parse( response[ 1 ] );
+				const achievements = response.response.achievements;
 
-				if( !response.open )
+				for( const achievement of achievements )
 				{
-					return;
-				}
-
-				for( const key in response.open )
-				{
-					const achievement = response.open[ key ];
-
-					if( !achievement.hidden || achievement.closed )
+					if( !achievement.hidden )
 					{
 						continue;
 					}
 
 					const image = document.createElement( 'img' );
-					image.src = achievement.icon_open;
+					image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${achievement.icon_gray}`;
 
 					const achieveImgHolder = document.createElement( 'div' );
 					achieveImgHolder.className = 'achieveImgHolder';
@@ -64,7 +82,7 @@ GetOption( {
 
 					const h3 = document.createElement( 'h3' );
 					h3.className = 'ellipsis';
-					h3.appendChild( document.createTextNode( achievement.name ) );
+					h3.appendChild( document.createTextNode( achievement.localized_name ) );
 
 					const h5 = document.createElement( 'h5' );
 					h5.className = 'ellipsis';
@@ -73,7 +91,7 @@ GetOption( {
 					{
 						const span = document.createElement( 'span' );
 						span.className = 'steamdb_achievement_spoiler';
-						span.appendChild( document.createTextNode( achievement.desc ) );
+						span.appendChild( document.createTextNode( achievement.localized_desc ) );
 
 						const hiddenAchiev = document.createElement( 'i' );
 						hiddenAchiev.textContent = _t( 'hidden_achievement_hover' );
@@ -87,7 +105,7 @@ GetOption( {
 						hiddenAchiev.textContent = _t( 'hidden_achievement' );
 
 						h5.appendChild( hiddenAchiev );
-						h5.appendChild( document.createTextNode( achievement.desc ) );
+						h5.appendChild( document.createTextNode( achievement.localized_desc ) );
 					}
 
 					const achieveTxt = document.createElement( 'div' );

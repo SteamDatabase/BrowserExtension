@@ -13,7 +13,7 @@
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
 	},
 	"devDependencies": {
-		"@types/chrome": "^0.0.248",
+		"@types/chrome": "^0.0.251",
 		"@types/firefox-webext-browser": "^111.0.1",
 		"archiver": "^6.0.1",
 		"eslint": "^8.47.0",

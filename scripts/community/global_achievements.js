@@ -5,161 +5,121 @@ GetOption( {
 	'spoiler-achievements': true,
 }, function( items )
 {
-	if( !items[ 'hidden-achievements' ] )
-	{
-		return;
-	}
-
-	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
-	const ownsGame = !!document.querySelector( '#compareAvatar a' );
 	const currentUser = document.querySelector( '#global_actions .user_avatar' );
-	const path = window.location.pathname.match( /^\/stats\/\w+/ );
+	const currentUserPath = window.location.pathname.match( /^\/stats\/\w+/ );
 
-	if( currentUser && path )
+	if( currentUser && currentUserPath )
 	{
 		const currentUserUrl = currentUser.href.replace( /\/$/, '' );
-		console.log( currentUserUrl, path );
 
 		const tab = document.createElement( 'div' );
 		tab.className = 'tab steamdb_stats_tab';
 
 		const link = document.createElement( 'a' );
 		link.className = 'tabOn';
-		link.href = `${currentUserUrl}${path}?tab=achievements`;
+		link.href = `${currentUserUrl}${currentUserPath}?tab=achievements`;
 		link.textContent = _t( 'view_your_achievements' );
 
 		tab.appendChild( link );
 		document.querySelector( '#tabs' ).appendChild( tab );
-
-		const headers = new Headers();
-		headers.append( 'Accept', 'text/html' );
-		headers.append( 'X-ValveUserAgent', 'panorama' );
-		headers.append( 'X-Requested-With', 'SteamDB' );
-
-		const params = new URLSearchParams();
-		params.set( 'tab', 'achievements' );
-		params.set( 'panorama', 'please' );
-
-		fetch( `${currentUserUrl}${path}?${params.toString()}`, {
-			headers,
-		} )
-			.then( ( response ) => response.text() )
-			.then( ( response ) =>
-			{
-				response = response.match( /g_rgAchievements\s*=\s*(\{.+?\});/ );
-
-				if( !response )
-				{
-					return;
-				}
-
-				response = JSON.parse( response[ 1 ] );
-
-				if( !response )
-				{
-					return;
-				}
-
-				const elements = document.querySelectorAll( '.achieveTxt > h3' );
-				const achievements = Object.values( { ...response.closed, ...response.open } );
-
-				if( achievements.length === 0 )
-				{
-					return;
-				}
-
-				if( !ownsGame )
-				{
-					const headerContentLeft = document.getElementById( 'headerContentLeft' );
-
-					if( headerContentLeft )
-					{
-						headerContentLeft.appendChild( document.createTextNode( _t( 'hidden_achievement_but_loaded' ) ) );
-					}
-				}
-
-				for( const achievement of achievements )
-				{
-					for( const element of elements )
-					{
-						if( element.textContent !== achievement.name )
-						{
-							continue;
-						}
-
-						if( !achievement.closed && achievement.progress )
-						{
-							const progress = document.createElement( 'span' );
-							progress.className = 'achievePercent wt steamdb_achievement_progress';
-							progress.textContent = _t( 'achievement_your_progress', [ achievement.progress.currentVal, achievement.progress.max_val ] );
-
-							const meter = document.createElement( 'meter' );
-							meter.min = achievement.progress.min_val;
-							meter.max = achievement.progress.max_val;
-							meter.value = achievement.progress.currentVal;
-							progress.appendChild( meter );
-
-							const achievePercent = element.closest( '.achieveRow' ).querySelector( '.achievePercent' );
-							achievePercent.insertAdjacentElement( 'afterend', progress );
-						}
-
-						if( ownsGame )
-						{
-							if( achievement.closed )
-							{
-								continue;
-							}
-						}
-						else
-						{
-							const img = document.createElement( 'img' );
-							img.width = 64;
-							img.height = 64;
-							img.src = achievement.closed ? achievement.icon_closed : achievement.icon_open;
-							const compareImg = document.createElement( 'div' );
-							compareImg.className = 'compareImg compare_rightcol_element';
-							compareImg.appendChild( img );
-
-							const achieveRow = element.closest( '.achieveRow' );
-							achieveRow.insertBefore( compareImg, element.parentNode.parentNode );
-
-							if( achievement.closed )
-							{
-								achieveRow.classList.add( 'unlocked' );
-							}
-						}
-
-						if( !achievement.hidden )
-						{
-							continue;
-						}
-
-						const parent = element.parentNode.querySelector( 'h5' );
-
-						if( spoilerAchievements && !achievement.closed )
-						{
-							const span = document.createElement( 'span' );
-							span.className = 'steamdb_achievement_spoiler';
-							span.appendChild( document.createTextNode( achievement.desc ) );
-
-							const hiddenAchiev = document.createElement( 'i' );
-							hiddenAchiev.textContent = _t( 'hidden_achievement_hover' );
-
-							parent.appendChild( hiddenAchiev );
-							parent.appendChild( span );
-						}
-						else
-						{
-							const hiddenAchiev = document.createElement( 'i' );
-							hiddenAchiev.textContent = _t( 'hidden_achievement' );
-
-							parent.appendChild( hiddenAchiev );
-							parent.appendChild( document.createTextNode( achievement.desc ) );
-						}
-
-						break;
-					}
-				}
-			} );
 	}
+
+	if( !items[ 'hidden-achievements' ] )
+	{
+		return;
+	}
+
+	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
+
+	const appIdElement = document.querySelector( '.profile_small_header_additional .gameLogo a' );
+
+	if( !appIdElement )
+	{
+		return;
+	}
+
+	const appidMatch = appIdElement.href.match( /\/app\/(?<id>[0-9]+)/ );
+
+	if( !appidMatch )
+	{
+		return;
+	}
+
+	const appid = appidMatch.groups.id;
+	const applicationConfigElement = document.getElementById( 'application_config' );
+
+	if( !applicationConfigElement )
+	{
+		return;
+	}
+
+	const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
+
+	if( !accessToken )
+	{
+		return;
+	}
+
+	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+
+	const params = new URLSearchParams();
+	params.set( 'format', 'json' );
+	params.set( 'access_token', accessToken );
+	params.set( 'appid', appid );
+	params.set( 'language', applicationConfig.LANGUAGE );
+	params.set( 'x_requested_with', 'SteamDB' ); // Request header field x-requested-with is not allowed by Access-Control-Allow-Headers in preflight response.
+
+	fetch( `${applicationConfig.WEBAPI_BASE_URL}IPlayerService/GetGameAchievements/v1/?${params.toString()}` )
+		.then( ( response ) => response.json() )
+		.then( ( response ) =>
+		{
+			if( !response || !response.response || !response.response.achievements )
+			{
+				return;
+			}
+
+			const elements = document.querySelectorAll( '.achieveTxt > h3' );
+			const achievements = response.response.achievements;
+
+			for( const achievement of achievements )
+			{
+				if( !achievement.hidden )
+				{
+					continue;
+				}
+
+				for( const element of elements )
+				{
+					if( element.textContent !== achievement.localized_name )
+					{
+						continue;
+					}
+
+					const parent = element.parentNode.querySelector( 'h5' );
+
+					if( spoilerAchievements )
+					{
+						const span = document.createElement( 'span' );
+						span.className = 'steamdb_achievement_spoiler';
+						span.appendChild( document.createTextNode( achievement.localized_desc ) );
+
+						const hiddenAchiev = document.createElement( 'i' );
+						hiddenAchiev.textContent = _t( 'hidden_achievement_hover' );
+
+						parent.appendChild( hiddenAchiev );
+						parent.appendChild( span );
+					}
+					else
+					{
+						const hiddenAchiev = document.createElement( 'i' );
+						hiddenAchiev.textContent = _t( 'hidden_achievement' );
+
+						parent.appendChild( hiddenAchiev );
+						parent.appendChild( document.createTextNode( achievement.localized_desc ) );
+					}
+
+					break;
+				}
+			}
+		} );
 } );
