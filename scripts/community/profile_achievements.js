@@ -64,11 +64,24 @@ GetOption( {
 					return;
 				}
 
+				const elements = document.querySelectorAll( '.achieveTxt > h3' );
+				const seenAchievements = new Set();
+
+				for( const element of elements )
+				{
+					seenAchievements.add( element.textContent );
+				}
+
 				const achievements = response.response.achievements;
 
 				for( const achievement of achievements )
 				{
 					if( !achievement.hidden )
+					{
+						continue;
+					}
+
+					if( seenAchievements.has( achievement.localized_name ) )
 					{
 						continue;
 					}
