@@ -154,6 +154,15 @@ summary:hover {
 	border-top-right-radius: 1rem;
 }
 
+#star {
+	background: #000;
+	color: #fff;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	font-weight: bold;
+}
+
 #js-get-permissions {
 	appearance: none;
 	border: 0;

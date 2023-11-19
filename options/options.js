@@ -24,8 +24,12 @@
 	}
 
 	let element;
+	let starDismissed = false;
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
-	const options = {};
+	const options =
+	{
+		'clicked-star': null,
+	};
 
 	const SetOption = ( option, value ) =>
 	{
@@ -59,6 +63,13 @@
 	{
 		for( const item in items )
 		{
+			if( item === 'clicked-star' )
+			{
+				starDismissed = true;
+				document.getElementById( 'star' ).hidden = true;
+				continue;
+			}
+
 			element = options[ item ];
 
 			element.checked = items[ item ];
@@ -115,6 +126,35 @@
 		browserObject.permissions.contains( permissions, ( result ) =>
 		{
 			document.getElementById( 'permissions' ).hidden = result;
+			document.getElementById( 'star' ).hidden = starDismissed || !result;
 		} );
+	}
+
+	let storeHref = null;
+
+	if( browserObject.runtime.id === 'kdbmhfkmnlmbkgbabkdealhhbfhlmmon' )
+	{
+		storeHref = 'https://chromewebstore.google.com/detail/steamdb/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=Options';
+	}
+	else if( browserObject.runtime.id === 'hjknpdomhlodgaebegjopkmfafjpbblg' )
+	{
+		storeHref = 'https://microsoftedge.microsoft.com/addons/detail/steamdb/hjknpdomhlodgaebegjopkmfafjpbblg?utm_source=Options';
+	}
+	else if( browserObject.runtime.id === 'firefox-extension@steamdb.info' )
+	{
+		storeHref = 'https://addons.mozilla.org/en-US/firefox/addon/steam-database/?utm_source=Options';
+	}
+
+	const storeUrl = document.querySelector( '#star a' );
+	storeUrl.addEventListener( 'click', () =>
+	{
+		starDismissed = true;
+		SetOption( 'clicked-star', true );
+		document.getElementById( 'star' ).hidden = true;
+	} );
+
+	if( storeHref !== null )
+	{
+		storeUrl.href = storeHref;
 	}
 }() );
