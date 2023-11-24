@@ -97,7 +97,24 @@ summary:hover {
 	color: #888;
 }
 
-.footer {
+header {
+	margin-bottom: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	border-bottom: 1px solid #0197cf;
+	background-color: #000;
+	color: #fff;
+}
+
+header .logo {
+	font-size: 20px;
+}
+
+header svg {
+	vertical-align: middle;
+}
+
+footer {
 	margin-top: 3rem;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
@@ -107,11 +124,11 @@ summary:hover {
 	text-align: center;
 }
 
-.footer svg {
+footer svg {
 	margin-bottom: 1rem;
 }
 
-.footer p {
+footer p {
 	margin-bottom: 0.5rem;
 }
 
