@@ -78,7 +78,7 @@ GetOption( {
 				return;
 			}
 
-			const elements = document.querySelectorAll( '.achieveTxt > h3' );
+			const elements = document.querySelectorAll( '.achieveRow:not(.unlocked) .achieveTxt > h3' );
 			const achievements = response.response.achievements;
 
 			for( const achievement of achievements )
