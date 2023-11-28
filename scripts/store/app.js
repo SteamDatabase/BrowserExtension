@@ -3,6 +3,7 @@
 'use strict';
 
 const container = document.getElementById( 'error_box' );
+const numberFormatter = new Intl.NumberFormat( 'en-US' );
 
 if( container )
 {
@@ -328,6 +329,7 @@ else
 
 				const container = document.createElement( 'div' );
 				container.className = 'user_reviews_summary_row';
+				container.dataset.tooltipText = _t( 'app_steamdb_rating_tooltip', [ FormatNumber( positiveVotes ), FormatNumber( totalVotes ) ] );
 
 				const subtitle = document.createElement( 'div' );
 				subtitle.className = 'subtitle column';
@@ -345,7 +347,7 @@ else
 
 				const responsiveText = document.createElement( 'span' );
 				responsiveText.className = 'responsive_reviewdesc_short';
-				responsiveText.textContent = ' STEAMDB RATING';
+				responsiveText.textContent = _t( 'app_steamdb_rating_responsive' );
 				summary.appendChild( responsiveText );
 
 				container.appendChild( subtitle );
@@ -354,7 +356,10 @@ else
 				let element = document.querySelector( '#userReviews' );
 				if( element )
 				{
-					element.appendChild( container );
+					// Need an extra div wrapper because Valve's tooltip bind code looks inside added nodes
+					const wrapper = document.createElement( 'div' );
+					wrapper.append( container );
+					element.append( wrapper );
 				}
 
 				element = document.querySelector( '#userReviews_responsive' );
@@ -671,8 +676,6 @@ function DrawOnlineStatsWidget( items )
 
 		WriteLog( 'GetCurrentPlayers loaded' );
 
-		const FormatNumber = ( num ) => num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, ',' );
-
 		onlineNow.textContent = FormatNumber( response.data.CurrentPlayers );
 		peakToday.textContent = FormatNumber( response.data.MaxDailyPlayers );
 		peakAll.textContent = FormatNumber( response.data.MaxPlayers );
@@ -794,4 +797,9 @@ function HideCurator()
 			}
 		}
 	}
+}
+
+function FormatNumber( num )
+{
+	return numberFormatter.format( num );
 }

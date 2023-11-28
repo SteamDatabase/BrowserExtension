@@ -46,6 +46,12 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB Rating:"
 	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB RATING"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$1 of the $2 reviews are positive (all purchase types)"
+	},
 	"app_depots_update": {
 		"message": "Depots Update:"
 	},
