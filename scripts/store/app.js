@@ -739,13 +739,18 @@ function DrawOnlineStatsWidget( items )
 
 				const content = document.createElement( 'div' );
 				content.className = 'grid_content grid_date';
-				content.textContent = response.data.LastDepotUpdate;
+
+				const historyLink = document.createElement( 'a' );
 
 				if( response.data.WarnOldUpdate )
 				{
-					content.classList.add( 'steamdb_last_update_old' );
+					historyLink.className = 'steamdb_last_update_old';
 				}
 
+				historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				historyLink.textContent = response.data.LastDepotUpdate;
+
+				content.append( historyLink );
 				responsiveGrid.append( label );
 				responsiveGrid.append( content );
 			}
