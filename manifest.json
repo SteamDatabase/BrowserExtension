@@ -111,7 +111,6 @@
 				"https://store.steampowered.com/api/*",
 				"https://store.steampowered.com/broadcast/*",
 				"https://store.steampowered.com/buyitem/*",
-				"https://store.steampowered.com/checkout/*",
 				"https://store.steampowered.com/dynamicstore/*",
 				"https://store.steampowered.com/join/*",
 				"https://store.steampowered.com/login/*",
@@ -132,30 +131,6 @@
 			[
 				"styles/global.css",
 				"styles/store.css"
-			]
-		},
-		{
-			"run_at": "document_end",
-			"matches":
-			[
-				"https://store.steampowered.com/checkout/*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/store/invalidate_cache.js"
-			]
-		},
-		{
-			"run_at": "document_end",
-			"matches":
-			[
-				"https://store.steampowered.com/cart/*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/store/cart.js"
 			]
 		},
 		{
