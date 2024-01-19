@@ -449,7 +449,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 				{
 					const text = await response.clone().text();
 
-					if( text.includes( 'steam_parental_password_box' ) )
+					if( text.includes( 'data-featuretarget="parentalunlock"' ) )
 					{
 						throw new Error( 'Your account is currently under Family View restrictions. You need to exit Family View by entering your PIN on the Steam store and then retry this action.' );
 					}
