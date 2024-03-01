@@ -41,11 +41,6 @@ a.steamdb_link:hover {
 	color: #f44336 !important;
 }
 
-.steamdb_last_update_old::after {
-	display: inline-block;
-	content: " ⚠️️";
-}
-
 .steamdb_stats {
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
