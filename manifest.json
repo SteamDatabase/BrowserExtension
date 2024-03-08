@@ -286,16 +286,7 @@
 				"scripts/store/explore.js"
 			]
 		},
-		{
-			"matches":
-			[
-				"https://store.steampowered.com/checkout/sendgift/*"
-			],
-			"js":
-			[
-				"scripts/store/gifting.js"
-			]
-		},
+
 
 
 		{
