@@ -17,7 +17,7 @@
 	const hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
 	const homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage;
 	const originalPopulateActions = window.PopulateActions;
-	let hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile;
+	let hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
 	const originalPopulateMarketActions = window.PopulateMarketActions;
 
 	const dummySellEvent =
