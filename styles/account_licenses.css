@@ -1,0 +1,44 @@
+/* These styles are copied from Steam's account.css for mobile view */
+table.account_table {
+	table-layout: fixed;
+}
+
+table.account_table td {
+	word-wrap: break-word;
+}
+
+table.account_table th.license_date_col,
+table.account_table td.license_date_col {
+	width: 7em;
+}
+
+table.account_table th.license_acquisition_col,
+table.account_table td.license_acquisition_col {
+	width: 8em;
+}
+
+/* - */
+
+body:not(.steamdb_account_table_loaded) .account_table_ctn::after {
+	display: block;
+	padding: 16px;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	font-style: italic;
+	text-align: center;
+	content: "Page is loading…";
+}
+
+body:not(.steamdb_account_table_loaded) table.account_table {
+	display: none;
+}
+
+table.account_table th.steamdb_license_id_col,
+table.account_table td.steamdb_license_id_col {
+	width: 5em;
+}
+
+table.account_table td.steamdb_license_id_col a {
+	color: inherit;
+}

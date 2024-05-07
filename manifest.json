@@ -53,6 +53,7 @@
 				"scripts/community/filedetails_award_injected.js",
 				"scripts/community/profile_award_injected.js",
 				"scripts/community/tradeoffer_injected.js",
+				"scripts/store/account_licenses_injected.js",
 				"scripts/store/invalidate_cache_injected.js",
 				"scripts/store/registerkey_injected.js",
 				"scripts/store/subscriptions.js"
@@ -178,6 +179,7 @@
 			]
 		},
 		{
+			"run_at": "document_start",
 			"matches":
 			[
 				"https://store.steampowered.com/account/licenses*"
@@ -185,7 +187,11 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/store/account.js"
+				"scripts/store/account_licenses.js"
+			],
+			"css":
+			[
+				"styles/account_licenses.css"
 			]
 		},
 		{
