@@ -34,12 +34,19 @@ else
 
 		if( items[ 'enhancement-hide-mobile-app-button' ] )
 		{
-			const button = document.querySelector( '.open_in_steam_container' );
+			let button = document.querySelector( '.open_in_steam_container' );
 
 			if( button )
 			{
 				button.setAttribute( 'hidden', true );
 				button.style.display = 'none';
+			}
+
+			button = document.querySelector( '.banner_open_in_steam' );
+
+			if( button )
+			{
+				button.setAttribute( 'hidden', true );
 			}
 		}
 
