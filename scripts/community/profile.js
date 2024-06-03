@@ -63,7 +63,7 @@ GetOption( {
 		element.href = url;
 		element.className = 'popup_menu_item';
 		element.appendChild( image );
-		element.appendChild( document.createTextNode( '\u00a0 SteamDB Calculator' ) );
+		element.appendChild( document.createTextNode( '\u00a0 ' + _t( 'steamdb_calculator' ) ) );
 
 		container.insertBefore( element, null );
 	}
@@ -84,7 +84,7 @@ GetOption( {
 			element = document.createElement( 'a' );
 			element.className = 'btn_profile_action btn_medium';
 			element.href = url;
-			element.title = 'SteamDB Calculator';
+			element.title = _t( 'steamdb_calculator' );
 			element.appendChild( text );
 
 			container.appendChild( element );

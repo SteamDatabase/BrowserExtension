@@ -15,7 +15,9 @@
 	const giftCache = {};
 	const hasLinksEnabled = document.body.dataset.steamdbLinks === 'true';
 	const hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
-	const homepage = document.getElementById( 'steamdb_inventory_hook' ).dataset.homepage;
+	const scriptHook = document.getElementById( 'steamdb_inventory_hook' );
+	const homepage = scriptHook.dataset.homepage;
+	const i18n = JSON.parse( scriptHook.dataset.i18n );
 	const originalPopulateActions = window.PopulateActions;
 	let hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
 	const originalPopulateMarketActions = window.PopulateMarketActions;
@@ -105,20 +107,20 @@
 			buttons.className = 'steamdb_quick_sell';
 
 			const listNowText = document.createElement( 'span' );
-			listNowText.textContent = 'List at …';
+			listNowText.textContent = i18n.inventory_list_at.replace( '%price%', '…' );
 
 			const listNow = document.createElement( 'a' );
-			listNow.title = 'Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)';
+			listNow.title = i18n.inventory_list_at_title;
 			listNow.href = 'javascript:void(0)';
 			listNow.className = 'btn_small btn_blue_white_innerfade';
 			listNow.style.opacity = 0.5;
 			listNow.appendChild( listNowText );
 
 			const sellNowText = document.createElement( 'span' );
-			sellNowText.textContent = 'Sell at …';
+			sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', '…' );
 
 			const sellNow = document.createElement( 'a' );
-			sellNow.title = 'Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)';
+			sellNow.title = i18n.inventory_sell_at_title;
 			sellNow.href = 'javascript:void(0)';
 			sellNow.className = 'btn_small btn_blue_white_innerfade';
 			sellNow.style.opacity = 0.5;
@@ -214,7 +216,7 @@
 						listNow.style.removeProperty( 'display' );
 						listNow.dataset.price = listNowPrice;
 						listNow.addEventListener( 'click', quickSellButton );
-						listNowText.textContent = 'List at ' + data.price_prefix + listNowPrice + data.price_suffix;
+						listNowText.textContent = i18n.inventory_list_at.replace( '%price%', data.price_prefix + listNowPrice + data.price_suffix );
 					}
 					else
 					{
@@ -230,7 +232,7 @@
 						sellNow.style.removeProperty( 'display' );
 						sellNow.dataset.price = sellNowPrice;
 						sellNow.addEventListener( 'click', quickSellButton );
-						sellNowText.textContent = 'Sell at ' + data.price_prefix + sellNowPrice + data.price_suffix;
+						sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', data.price_prefix + sellNowPrice + data.price_suffix );
 					}
 					else
 					{

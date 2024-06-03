@@ -52,6 +52,12 @@ if( document.getElementById( 'inventory_link_753' ) )
 		element.type = 'text/javascript';
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
+		element.dataset.i18n = JSON.stringify( {
+			inventory_list_at: _t( 'inventory_list_at' ),
+			inventory_sell_at: _t( 'inventory_sell_at' ),
+			inventory_list_at_title: _t( 'inventory_list_at_title' ),
+			inventory_sell_at_title: _t( 'inventory_sell_at_title' ),
+		} );
 
 		document.head.appendChild( element );
 	} );

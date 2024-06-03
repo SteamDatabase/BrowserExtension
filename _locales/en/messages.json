@@ -6,15 +6,14 @@
 	"steamdb_options": {
 		"message": "SteamDB Options"
 	},
+	"steamdb_calculator": {
+		"message": "SteamDB Calculator"
+	},
 	"steamstatus": {
 		"message": "Check steamstat.us"
 	},
 	"steamstatus_downtime": {
 		"message": "Steam appears to be experiencing some downtime. "
-	},
-
-	"steamdb_is_optimizing": {
-		"message": "SteamDB extension is optimizing this page…"
 	},
 
 	"view_on_steamdb": {
@@ -31,6 +30,9 @@
 	},
 	"error": {
 		"message": "Error"
+	},
+	"search": {
+		"message": "Search"
 	},
 
 	"id_app": {
@@ -126,6 +128,19 @@
 	},
 	"hidden_achievement_hover": {
 		"message": "Hidden achievement, mouse over to reveal: "
+	},
+
+	"inventory_list_at": {
+		"message": "List at %price%"
+	},
+	"inventory_sell_at": {
+		"message": "Sell at %price%"
+	},
+	"inventory_list_at_title": {
+		"message": "Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)"
 	},
 
 	"widget_view_app": {

@@ -72,7 +72,7 @@ GetOption( { 'link-accountpage': true }, function( items )
 					params.set( 'q', nameCell.textContent.trim() );
 
 					link.href = `${GetHomepage()}search/?${params.toString()}`;
-					link.textContent = 'Search';
+					link.textContent = _t( 'Search' );
 				}
 
 				const newTd = document.createElement( 'td' );
