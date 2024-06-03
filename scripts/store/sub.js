@@ -16,7 +16,7 @@ GetOption( { 'button-sub': true }, function( items )
 
 		const link = document.createElement( 'a' );
 		link.className = 'action_btn';
-		link.href = GetHomepage() + 'sub/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+		link.href = GetHomepage() + 'sub/' + GetCurrentAppID() + '/';
 		link.appendChild( element );
 
 		element = document.createElement( 'div' );

@@ -83,7 +83,7 @@ else
 
 		const link = document.createElement( 'a' );
 		link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-		link.href = GetHomepage() + 'badge/' + badgeid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+		link.href = GetHomepage() + 'badge/' + badgeid + '/';
 		link.appendChild( span );
 
 		container.insertBefore( link, container.firstChild );

@@ -292,7 +292,7 @@
 						{
 							rgActions.push( {
 								steamdb: true,
-								link: homepage + 'sub/' + subs[ i ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
+								link: homepage + 'sub/' + subs[ i ] + '/',
 								name: 'View ' + subs[ i ] + ' on SteamDB',
 							} );
 						}
@@ -316,7 +316,7 @@
 						{
 							if( link.link.match( /^#steamdb_/ ) !== null )
 							{
-								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/';
 							}
 
 							foundState = FoundState.Added;
@@ -338,7 +338,7 @@
 
 						if( giftCache[ item.description.classid ] )
 						{
-							action.link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+							action.link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/';
 						}
 						else
 						{
@@ -354,7 +354,7 @@
 									if( link )
 									{
 										link.classList.remove( 'btn_disabled' );
-										link.href = homepage + 'sub/' + xhr.response.packageid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+										link.href = homepage + 'sub/' + xhr.response.packageid + '/';
 									}
 								}
 							};
@@ -402,7 +402,7 @@
 							{
 								rgActions.push( {
 									steamdb: true,
-									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
+									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/',
 									name: 'View on SteamDB',
 								} );
 
@@ -421,7 +421,7 @@
 					{
 						item.description.actions = rgActions = [ {
 							steamdb: true,
-							link: homepage + 'sub/' + link[ 1 ] + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension',
+							link: homepage + 'sub/' + link[ 1 ] + '/',
 							name: 'View on SteamDB',
 						} ];
 					}

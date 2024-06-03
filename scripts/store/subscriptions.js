@@ -17,7 +17,7 @@
 		}
 
 		link = link.parentNode.querySelector( '.steamdb_link' );
-		link.href = `${homepage}sub/${subId}/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension`;
+		link.href = `${homepage}sub/${subId}/`;
 		link.querySelector( '.steamdb_subid' ).textContent = `Sub ${subId}`;
 	};
 }() );

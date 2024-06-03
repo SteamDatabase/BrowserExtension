@@ -42,7 +42,7 @@
 			lineitem.append( image );
 
 			let link = document.createElement( 'a' );
-			link.href = script.dataset.homepage + 'sub/' + item.packageid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			link.href = script.dataset.homepage + 'sub/' + item.packageid + '/';
 			link.rel = 'noopener noreferrer';
 			link.target = '_blank';
 			link.appendChild( document.createTextNode( 'SteamDB' ) );

@@ -24,7 +24,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 
 	let link = document.createElement( 'a' );
 	link.className = 'btnv6_blue_hoverfade btn_medium';
-	link.href = 'https://store.steampowered.com/app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+	link.href = 'https://store.steampowered.com/app/' + GetCurrentAppID() + '/';
 	link.appendChild( span );
 
 	container.insertBefore( link, container.firstChild );
@@ -40,12 +40,10 @@ GetOption( { 'button-gamecards': true }, function( items )
 
 	link = document.createElement( 'a' );
 	link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/communityitems/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/communityitems/';
 	link.appendChild( span );
 
 	container.insertBefore( link, container.firstChild );
-
-	// Best hacks EU
 	container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
 
 	// Add to the page

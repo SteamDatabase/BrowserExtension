@@ -35,10 +35,6 @@ GetOption( { 'link-accountpage': true }, function( items )
 		{
 			const params = new URLSearchParams();
 			params.set( 'a', 'sub' );
-			params.set( 'q', '' );
-			params.set( 'utm_source', 'Steam' );
-			params.set( 'utm_medium', 'Steam' );
-			params.set( 'utm_campaign', 'SteamDB Extension' );
 
 			for( const tr of licenses )
 			{
@@ -68,7 +64,7 @@ GetOption( { 'link-accountpage': true }, function( items )
 
 					const subid = subidMatch.groups.subid;
 
-					link.href = `${GetHomepage()}sub/${subid}/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension`;
+					link.href = `${GetHomepage()}sub/${subid}/`;
 					link.textContent = subid;
 				}
 				else

@@ -58,7 +58,7 @@ else
 			{
 				const link = document.createElement( 'a' );
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 
 				const element = document.createElement( 'span' );
 				element.dataset.tooltipText = _t( 'view_on_steamdb' );
@@ -79,7 +79,7 @@ else
 			{
 				const link = document.createElement( 'a' );
 				link.className = 'linkbar responsive_chevron_right';
-				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 				link.textContent = _t( 'view_on_steamdb' );
 
 				lastLinkBar.insertAdjacentElement( 'afterend', link );
@@ -94,7 +94,7 @@ else
 			{
 				const link = document.createElement( 'a' );
 				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=SteamDB';
 
 				const element = document.createElement( 'span' );
 				element.dataset.tooltipText = _t( 'view_on_pcgamingwiki' );
@@ -107,8 +107,6 @@ else
 				element.appendChild( image );
 
 				container.insertBefore( link, container.firstChild );
-
-				// Best hacks EU
 				container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
 			}
 
@@ -118,7 +116,7 @@ else
 			{
 				const link = document.createElement( 'a' );
 				link.className = 'linkbar responsive_chevron_right';
-				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=SteamDB';
 				link.textContent = _t( 'view_on_pcgamingwiki' );
 
 				lastLinkBar.insertAdjacentElement( 'afterend', link );
@@ -152,7 +150,7 @@ else
 				if( subid.length > 0 )
 				{
 					subidElement.textContent = _t( 'id_sub', [ subid ] );
-					link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+					link.href = GetHomepage() + 'sub/' + subid + '/';
 					link.appendChild( subidElement );
 
 					if( element.className === 'game_purchase_action_bg' ) // series episode
@@ -203,7 +201,7 @@ else
 				link.appendChild( subidElement );
 
 				subidElement.textContent = _t( 'id_sub', [ subid ] );
-				link.href = GetHomepage() + 'sub/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = GetHomepage() + 'sub/' + subid + '/';
 				link.appendChild( subidElement );
 
 				element.closest( '.game_purchase_action' ).prepend( link );
@@ -232,7 +230,7 @@ else
 						link.appendChild( subidElement );
 
 						subidElement.textContent = _t( 'id_app', [ subid ] );
-						link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+						link.href = GetHomepage() + 'app/' + subid + '/';
 						link.appendChild( subidElement );
 
 						element.querySelector( '.game_purchase_action' ).prepend( link );
@@ -263,7 +261,7 @@ else
 						link.appendChild( subidElement );
 
 						subidElement.textContent = _t( 'id_app', [ subid ] );
-						link.href = GetHomepage() + 'app/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+						link.href = GetHomepage() + 'app/' + subid + '/';
 						link.appendChild( subidElement );
 
 						element.querySelector( '.game_purchase_action' ).prepend( link );
@@ -288,7 +286,7 @@ else
 				link.appendChild( subidElement );
 
 				subidElement.textContent = _t( 'id_bundle', [ subid ] );
-				link.href = GetHomepage() + 'bundle/' + subid + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = GetHomepage() + 'bundle/' + subid + '/';
 				link.appendChild( subidElement );
 
 				element.querySelector( '.game_purchase_action' ).prepend( link );
@@ -348,7 +346,7 @@ else
 
 				const link = document.createElement( 'a' );
 				link.className = 'responsive_hidden';
-				link.href = 'https://steamdb.info/blog/steamdb-rating/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				link.href = 'https://steamdb.info/blog/steamdb-rating/';
 				link.textContent = '(?)';
 				summary.appendChild( link );
 
@@ -551,7 +549,7 @@ function DrawLowestPrice()
 
 		element = document.createElement( 'a' );
 		element.className = 'steamdb_prices';
-		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Lowest%20Price';
+		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 
 		const image = document.createElement( 'img' );
 		image.src = GetLocalResource( 'icons/white.svg' );
@@ -587,7 +585,7 @@ function DrawOnlineStatsWidget( items )
 	const link = document.createElement( 'a' );
 	link.className = 'steamdb_stats_logo';
 	link.title = _t( 'view_on_steamdb' );
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/';
 
 	const image = document.createElement( 'img' );
 	image.src = GetLocalResource( 'icons/white.svg' );
@@ -709,7 +707,7 @@ function DrawOnlineStatsWidget( items )
 				historyLink.className = 'steamdb_last_update_old';
 			}
 
-			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
 			historyLink.textContent = response.data.LastDepotUpdate;
 
 			const subtitle = document.createElement( 'div' );
@@ -754,7 +752,7 @@ function DrawOnlineStatsWidget( items )
 					historyLink.className = 'steamdb_last_update_old';
 				}
 
-				historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+				historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
 				historyLink.textContent = response.data.LastDepotUpdate;
 
 				content.append( historyLink );

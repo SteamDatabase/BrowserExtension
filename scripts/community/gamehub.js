@@ -34,7 +34,7 @@ GetOption( {
 		{
 			link = document.createElement( 'a' );
 			link.className = 'apphub_NumInApp';
-			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/';
 			link.title = _t( 'view_on_steamdb' );
 			link.textContent = element.textContent;
 
@@ -45,7 +45,7 @@ GetOption( {
 		{
 			link = document.createElement( 'a' );
 			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/?utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 
 			element = document.createElement( 'span' );
 			element.dataset.tooltipText = _t( 'view_on_steamdb' );
@@ -71,7 +71,7 @@ GetOption( {
 		{
 			link = document.createElement( 'a' );
 			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
-			link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=Steam&utm_medium=Steam&utm_campaign=SteamDB%20Extension';
+			link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=SteamDB';
 
 			element = document.createElement( 'span' );
 			element.dataset.tooltipText = _t( 'view_on_pcgamingwiki' );
