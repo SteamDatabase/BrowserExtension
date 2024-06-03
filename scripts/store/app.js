@@ -300,6 +300,7 @@ else
 				element.type = 'text/javascript';
 				element.src = GetLocalResource( 'scripts/store/subscriptions.js' );
 				element.dataset.homepage = GetHomepage();
+				element.dataset.i18n = _t( 'id_sub', [ '%subid%' ] );
 
 				document.head.appendChild( element );
 			}
@@ -526,6 +527,7 @@ function DrawLowestPrice()
 
 		WriteLog( 'GetPrice loaded' );
 
+		// TODO: Localize, requires api changes
 		const top = document.createElement( 'div' );
 		top.className = 'steamdb_prices_top';
 		top.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
@@ -708,7 +710,7 @@ function DrawOnlineStatsWidget( items )
 			}
 
 			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
-			historyLink.textContent = response.data.LastDepotUpdate;
+			historyLink.textContent = response.data.LastDepotUpdate; // TODO: Localize, requires api changes
 
 			const subtitle = document.createElement( 'div' );
 			subtitle.className = 'subtitle column';
@@ -753,7 +755,7 @@ function DrawOnlineStatsWidget( items )
 				}
 
 				historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
-				historyLink.textContent = response.data.LastDepotUpdate;
+				historyLink.textContent = response.data.LastDepotUpdate; // TODO: Localize, requires api changes
 
 				content.append( historyLink );
 				responsiveGrid.append( label );
