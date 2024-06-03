@@ -3,6 +3,20 @@
 {
 	'use strict';
 
+	const localizable = document.querySelectorAll( '[data-msg]' );
+
+	for( const element of localizable )
+	{
+		const msg = _t( element.dataset.msg );
+
+		if( !msg )
+		{
+			console.error( 'Missing localization', element, element.dataset.msg );
+		}
+
+		element.innerHTML = msg;
+	}
+
 	if( location.search.includes( 'welcome=1' ) )
 	{
 		document.getElementById( 'welcome' ).hidden = false;

@@ -148,5 +148,227 @@
 	},
 	"widget_view_sub": {
 		"message": "View sub $1 on SteamDB"
+	},
+
+
+	"options": {
+		"message": "Options"
+	},
+	"options_welcome_title": {
+		"message": "👋 Thanks for installing SteamDB extension!"
+	},
+	"options_welcome_description": {
+		"message": "Review the options below and toggle the ones you prefer. To get back here in the future:"
+	},
+	"options_welcome_option1": {
+		"message": "Settings page on SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Account dropdown on Steam pages"
+	},
+	"options_welcome_option3": {
+		"message": "Your browser's addons page"
+	},
+	"options_review": {
+		"message": "Leave a review for this extension"
+	},
+	"options_permissions_description": {
+		"message": "This extension requires additional permissions to work correctly on SteamDB, Steam Store, and Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Grant permissions"
+	},
+
+	"options_footer1": {
+		"message": "Made with 💙 by <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> folks."
+	},
+	"options_footer2": {
+		"message": "It's <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, thanks to all the contributors!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Disabled checkboxes indicate built-in features."
+	},
+
+	"options_header_website": {
+		"message": "SteamDB Website"
+	},
+	"options_header_extra_data": {
+		"message": "Extra data"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Buttons &amp; links"
+	},
+	"options_header_inventory": {
+		"message": "Inventory"
+	},
+	"options_header_trade_offers": {
+		"message": "Trade Offers"
+	},
+	"options_header_enhancements": {
+		"message": "Enhancements"
+	},
+
+	"options_website_explanation": {
+		"message": "Explanation"
+	},
+	"options_website_explanation1": {
+		"message": "When this option is enabled, the extension will request some user data (wishlisted, owned, followed, ignored products, and products in cart) from the <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> and will use these to apply highlights on the site."
+	},
+	"options_website_explanation2": {
+		"message": "You have to be logged in on the store for this to work."
+	},
+	"options_website_explanation3": {
+		"message": "This is contained entirely within your browser and is never sent even to SteamDB backend."
+	},
+	"options_website_explanation4": {
+		"message": "To prevent excessive requests to the Steam Store, your user data is cached in your browser's local storage."
+	},
+	"options_website_highlight": {
+		"message": "Highlight owned and wished products on steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Wishlist, follow, and ignore products on the Steam store directly from SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Enable the free packages script</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Enable extra filtering on <a href=\"https://steamdb.info/sales/\" target=\"_blank\">sales page</a> and <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundles page</a>"
+	},
+
+	"options_extra_data": {
+		"message": "Extra data fetched from steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "When the \"Display current concurrent players and max peaks on app pages\" option is enabled, the extension will do a secure request to steamdb.info to get the current amount of players and last depot update (the latter only if \"Display last depot update on app pages\" option is enabled)."
+	},
+	"options_extra_data_prices": {
+		"message": "When \"Display the lowest recorded price on app pages\" option is enabled, the extension will do a secure request to steamdb.info with your currency (with what Steam thinks it is) to get the recorded price for a specific game."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Display the lowest recorded price on app pages"
+	},
+	"options_online_stats": {
+		"message": "Display current concurrent players and max peaks on app pages"
+	},
+	"options_steamdb_last_update": {
+		"message": "Display last depot update on app pages"
+	},
+	"options_button_app": {
+		"message": "Display a button on app pages"
+	},
+	"options_button_pcgw": {
+		"message": "Display PCGamingWiki button on app pages"
+	},
+	"options_button_sub": {
+		"message": "Display a button on package pages"
+	},
+	"options_button_video": {
+		"message": "Display a button on video pages"
+	},
+	"options_button_gamehub": {
+		"message": "Display a button on game hubs"
+	},
+	"options_button_gamecards": {
+		"message": "Display SteamDB and store page buttons on game cards page"
+	},
+	"options_link_subid": {
+		"message": "Display SubID under each purchase option"
+	},
+	"options_link_subid_widget": {
+		"message": "Display SubID in app widgets"
+	},
+	"options_link_accountpage": {
+		"message": "Link each package on your accounts page"
+	},
+	"options_profile_calculator": {
+		"message": "Add a calculator link on community profiles"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Move game selection on inventory page to the side"
+	},
+	"options_link_inventory": {
+		"message": "Link each gift and coupon in your inventory to SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Correctly figure out gift SubID in your inventory"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Do not refresh the inventory when selling an item"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Add quick sell buttons"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automatically accept quick sell"
+	},
+	"options_display_market_price_others": {
+		"message": "Display item market price in other users' inventories"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Support <code>for_item</code> and <code>my_item</code> parameters"
+	},
+	"options_github_explanation": {
+		"message": "See explanation on GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Suppress \"this trade appears suspicious\" and \"are you sure this is a gift?\" trade offer alerts"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Display better error messages, instead of Valve's cryptic error numbers"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Skip age check gate"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Sets age and birthday cookies to always pass"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Remove all link filter links"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Accept SSA on market, inventory, and activate key pages automatically"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Hide \"Install Steam\" button in header"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Hide \"Open in the Steam\" banner"
+	},
+	"options_steamdb_rating": {
+		"message": "Display SteamDB rating on app pages"
+	},
+	"options_enhancement_appicon": {
+		"message": "Display app icons on store and community pages"
+	},
+	"options_hidden_achievements": {
+		"message": "Load hidden achievements and their descriptions"
+	},
+	"options_spoiler_achievements": {
+		"message": "Hide descriptions behind a spoiler element"
+	},
+	"options_prevent_store_images": {
+		"message": "Stop images from loading on app store pages"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Some developers put megabytes of images in game descriptions which can take a while to load, click on an image to load"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Support <code>award</code> parameters on profile and shared file links"
+	},
+	"options_builtin_card_drops": {
+		"message": "Display total amount of card drops remaining on badges page"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Add a button to cheat the discovery queue during sales"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Improve global achievements page"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link to your own achievements page"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Locked achievements have a lock icon for more visibility"
 	}
 }
