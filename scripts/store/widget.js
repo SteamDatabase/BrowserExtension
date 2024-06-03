@@ -8,7 +8,6 @@ GetOption( { 'link-subid-widget': true }, function( items )
 	}
 
 	const link = document.createElement( 'a' );
-	link.rel = 'noopener';
 	link.target = '_blank';
 	link.className = 'steamdb_link';
 

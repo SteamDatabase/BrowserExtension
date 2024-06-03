@@ -43,7 +43,7 @@
 
 			let link = document.createElement( 'a' );
 			link.href = script.dataset.homepage + 'sub/' + item.packageid + '/';
-			link.rel = 'noopener noreferrer';
+			link.rel = 'noreferrer';
 			link.target = '_blank';
 			link.appendChild( document.createTextNode( 'SteamDB' ) );
 

@@ -64,7 +64,6 @@ else
 	if( popup )
 	{
 		const optionsLink = document.createElement( 'a' );
-		optionsLink.rel = 'noopener';
 		optionsLink.target = '_blank';
 		optionsLink.className = 'popup_menu_item steamdb_options_link';
 		optionsLink.textContent = ' ' + _t( 'steamdb_options' );

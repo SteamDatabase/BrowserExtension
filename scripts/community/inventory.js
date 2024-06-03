@@ -456,7 +456,6 @@
 			{
 				for( i = 0; i < link.length; i++ )
 				{
-					link[ i ].rel = 'noopener';
 					link[ i ].target = '_blank';
 				}
 			}
@@ -469,7 +468,6 @@
 			{
 				for( i = 0; i < link.length; i++ )
 				{
-					link[ i ].rel = 'noopener';
 					link[ i ].target = '_blank';
 					link[ i ].classList.add( 'btn_disabled' );
 				}
