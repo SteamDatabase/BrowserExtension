@@ -327,7 +327,7 @@ function StoreAddFreeLicense( request, callback )
 			case 5: message = 'Steam says this is an invalid package.'; break;
 			case 9: message = 'This product is already available in your Steam library.'; break;
 			case 24: message = 'You do not own the required app.'; break;
-			case 53: message = 'You got rate limited, try again in an hour.'; break;
+			case 53: message = 'You got rate limited, try again later.'; break;
 			default: message = resultCode === null
 				? `There was a problem adding this product to your account. ${response?.error ?? ''}`
 				: `There was a problem adding this product to your account. PurchaseResultDetail=${resultCode}`;
