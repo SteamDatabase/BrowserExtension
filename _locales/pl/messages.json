@@ -363,7 +363,7 @@
 		"message": "Niektórzy deweloperzy umieszczają megabajty obrazów w opisach gier, których załadowanie może zająć trochę czasu."
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Obsługa parametrów <code>award</code> w linkach do profili i plików udostępnionych"
+		"message": "Obsługa parametrów <code>award</code> w odnośnikach do profili i udostępnionych plików"
 	},
 	"options_builtin_card_drops": {
 		"message": "Wyświetl całkowitą liczbę pozostałych do zdobycia kart na stronie odznak"
