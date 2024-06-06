@@ -1,9 +1,9 @@
 name: translations
 
 on:
-  schedule:
-  - cron: '55 1 */7 * *'
   workflow_dispatch:
+#  schedule:
+#  - cron: '55 1 */7 * *'
 
 permissions:
   contents: write
