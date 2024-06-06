@@ -1,0 +1,28 @@
+name: crowdin-ci
+
+on:
+  push:
+    branches:
+    - master
+
+permissions: {}
+
+jobs:
+  upload:
+    environment: dev-crowdin
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        show-progress: false
+        submodules: recursive
+
+    - name: Upload latest strings for translation on Crowdin
+      uses: crowdin/github-action@v2
+      with:
+        crowdin_branch_name: master
+        config: 'crowdin.yml'
+        project_id: steamdb-extension
+        token: ${{ secrets.CROWDIN_API_TOKEN }}
