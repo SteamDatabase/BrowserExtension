@@ -112,7 +112,8 @@
 
 	},
 	"explore_generating": {
-		"message": "Generowanie nowej kolejki odkryć może się nie powieść, jeśli Steam jest pod dużym obciążeniem…"
+		"message": "Generowanie nowej kolejki odkryć może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
+
 	},
 	"explore_exploring": {
 		"message": "Odkrywanie kolejki… Zapytanie $1 z $2"
