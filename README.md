@@ -42,6 +42,9 @@ When writing code, make sure to run our linter:
 - If there are words that are used by Steam itself (such as discovery queue), match them
 - Substitution tokens like `$1` and strings instead of `<code>` tags should be kept
 
+[Translate on Crowdin](https://crowdin.com/project/steamdb-extension)  
+[![Crowdin](https://badges.crowdin.net/steamdb-extension/localized.svg)](https://crowdin.com/project/steamdb-extension)
+
 #### Making a release
 
 Run `npm run version 3.0.0` which updates `manifest.json`, creates a commit, creates a tag,
