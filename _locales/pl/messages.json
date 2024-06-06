@@ -96,7 +96,8 @@
 
 	},
 	"app_lowest_date": {
-		"message": "Cena zaobserwowana na $1 ($2)"
+		"message": "Cena zarejestrowana $1 ($2)"
+
 	},
 	"app_lowest_date_multiple": {
 		"message": "Cena zaobserwowana $3 razy, ostatnio na $1 ($2)"
