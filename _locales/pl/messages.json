@@ -92,7 +92,8 @@
 
 	},
 	"app_lowest_price_limited": {
-		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>, a w ciągu ostatnich dwóch lat to <b>$2</b>"
+		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>, a w ciągu ostatnich dwóch lat <b>$2</b>"
+
 	},
 	"app_lowest_date": {
 		"message": "Cena zaobserwowana na $1 ($2)"
