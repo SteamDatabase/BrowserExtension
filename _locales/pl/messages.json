@@ -55,7 +55,8 @@
 
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$1 z $2 recenzji jest pozytywne (wszystkie typy zakupów)"
+		"message": "$1 z $2 recenzji są pozytywne (wszystkie typy zakupów)"
+
 	},
 	"app_depots_update": {
 		"message": "Ostatnia aktualizacja:"
