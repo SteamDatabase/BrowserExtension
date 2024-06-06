@@ -50,7 +50,8 @@
 
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " RECENZJE STEAMDB"
+		"message": " RECENZJA STEAMDB"
+
 	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$1 z $2 recenzji jest pozytywne (wszystkie typy zakupów)"
