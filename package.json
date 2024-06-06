@@ -10,12 +10,15 @@
 		"build": "node build.js",
 		"version": "node version.js",
 		"test": "eslint . && stylelint \"**/*.css\"",
+		"test:ext": "web-ext lint",
+		"test:locale": "chromex-locale-lint",
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.267",
 		"@types/firefox-webext-browser": "^120.0.3",
 		"archiver": "^7.0.1",
+		"chromex-locale-lint": "^0.1.0",
 		"eslint": "^8.47.0",
 		"eslint-config-standard": "^17.0.0",
 		"stylelint": "^16.5.0",
