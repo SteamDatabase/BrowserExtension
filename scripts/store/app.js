@@ -22,7 +22,7 @@ else
 		'enhancement-hide-mobile-app-button': false,
 	}, function( items )
 	{
-		if( items[ 'online-stats' ] && !document.querySelector( '.game_area_dlc_bubble' ) )
+		if( ( items[ 'steamdb-last-update' ] || items[ 'online-stats' ] ) && !document.querySelector( '.game_area_dlc_bubble' ) )
 		{
 			DrawOnlineStatsWidget( items );
 		}
@@ -588,96 +588,105 @@ function DrawLowestPrice()
 
 function DrawOnlineStatsWidget( items )
 {
-	const container = document.querySelector( '.game_meta_data' );
+	let block = null;
+	let onlineNow = null;
+	let peakToday = null;
+	let peakAll = null;
+	let followers = null;
 
-	if( !container )
+	if( items[ 'online-stats' ] )
 	{
-		return;
+		const container = document.querySelector( '.game_meta_data' );
+
+		if( !container )
+		{
+			return;
+		}
+
+		const blockInner = document.createElement( 'div' );
+		blockInner.className = 'block_content_inner';
+
+		block = document.createElement( 'div' );
+		block.className = 'block responsive_apppage_details_right steamdb_stats';
+		block.appendChild( blockInner );
+
+		// Logo and link
+		const link = document.createElement( 'a' );
+		link.className = 'steamdb_stats_logo';
+		link.title = _t( 'view_on_steamdb' );
+		link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/';
+
+		const image = document.createElement( 'img' );
+		image.src = GetLocalResource( 'icons/white.svg' );
+		link.appendChild( image );
+
+		blockInner.appendChild( link );
+
+		// Online now
+		onlineNow = document.createElement( 'span' );
+		onlineNow.className = 'steamdb_stats_number';
+		onlineNow.textContent = '…';
+
+		let line = document.createElement( 'p' );
+		let lineText = document.createElement( 'span' );
+		lineText.className = 'steamdb_stats_name';
+		lineText.textContent = _t( 'app_stats_online_now' );
+		line.appendChild( lineText );
+		line.appendChild( onlineNow );
+
+		blockInner.appendChild( line );
+
+		// Peak today
+		peakToday = document.createElement( 'span' );
+		peakToday.className = 'steamdb_stats_number';
+		peakToday.textContent = '…';
+
+		line = document.createElement( 'p' );
+		lineText = document.createElement( 'span' );
+		lineText.className = 'steamdb_stats_name';
+		lineText.textContent = _t( 'app_stats_peak_today' );
+		line.appendChild( lineText );
+		line.appendChild( peakToday );
+
+		blockInner.appendChild( line );
+
+		// Peak all
+		peakAll = document.createElement( 'span' );
+		peakAll.className = 'steamdb_stats_number';
+		peakAll.textContent = '…';
+
+		line = document.createElement( 'p' );
+		lineText = document.createElement( 'span' );
+		lineText.className = 'steamdb_stats_name';
+		lineText.textContent = _t( 'app_stats_alL_time_peak' );
+		line.appendChild( lineText );
+		line.appendChild( peakAll );
+
+		blockInner.appendChild( line );
+
+		// Followers
+		followers = document.createElement( 'span' );
+		followers.className = 'steamdb_stats_number';
+		followers.textContent = '…';
+
+		line = document.createElement( 'p' );
+		lineText = document.createElement( 'span' );
+		lineText.className = 'steamdb_stats_name';
+		lineText.textContent = _t( 'app_stats_followers' );
+		line.appendChild( lineText );
+		line.appendChild( followers );
+
+		blockInner.appendChild( line );
+
+		// Add to container
+		container.insertBefore( block, container.firstChild );
+
+		// Add responsive text heading
+		const responsiveHeader = document.createElement( 'div' );
+		responsiveHeader.className = 'responsive_block_header responsive_apppage_details_left';
+		responsiveHeader.textContent = _t( 'app_stats_online' );
+		container.insertBefore( responsiveHeader, container.firstChild );
 	}
-
-	const blockInner = document.createElement( 'div' );
-	blockInner.className = 'block_content_inner';
-
-	const block = document.createElement( 'div' );
-	block.className = 'block responsive_apppage_details_right steamdb_stats';
-	block.appendChild( blockInner );
-
-	// Logo and link
-	const link = document.createElement( 'a' );
-	link.className = 'steamdb_stats_logo';
-	link.title = _t( 'view_on_steamdb' );
-	link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/';
-
-	const image = document.createElement( 'img' );
-	image.src = GetLocalResource( 'icons/white.svg' );
-	link.appendChild( image );
-
-	blockInner.appendChild( link );
-
-	// Online now
-	const onlineNow = document.createElement( 'span' );
-	onlineNow.className = 'steamdb_stats_number';
-	onlineNow.textContent = '…';
-
-	let line = document.createElement( 'p' );
-	let lineText = document.createElement( 'span' );
-	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = _t( 'app_stats_online_now' );
-	line.appendChild( lineText );
-	line.appendChild( onlineNow );
-
-	blockInner.appendChild( line );
-
-	// Peak today
-	const peakToday = document.createElement( 'span' );
-	peakToday.className = 'steamdb_stats_number';
-	peakToday.textContent = '…';
-
-	line = document.createElement( 'p' );
-	lineText = document.createElement( 'span' );
-	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = _t( 'app_stats_peak_today' );
-	line.appendChild( lineText );
-	line.appendChild( peakToday );
-
-	blockInner.appendChild( line );
-
-	// Peak all
-	const peakAll = document.createElement( 'span' );
-	peakAll.className = 'steamdb_stats_number';
-	peakAll.textContent = '…';
-
-	line = document.createElement( 'p' );
-	lineText = document.createElement( 'span' );
-	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = _t( 'app_stats_alL_time_peak' );
-	line.appendChild( lineText );
-	line.appendChild( peakAll );
-
-	blockInner.appendChild( line );
-
-	// Followers
-	const followers = document.createElement( 'span' );
-	followers.className = 'steamdb_stats_number';
-	followers.textContent = '…';
-
-	line = document.createElement( 'p' );
-	lineText = document.createElement( 'span' );
-	lineText.className = 'steamdb_stats_name';
-	lineText.textContent = _t( 'app_stats_followers' );
-	line.appendChild( lineText );
-	line.appendChild( followers );
-
-	blockInner.appendChild( line );
-
-	// Add to container
-	container.insertBefore( block, container.firstChild );
-
-	// Add responsive text heading
-	const responsiveHeader = document.createElement( 'div' );
-	responsiveHeader.className = 'responsive_block_header responsive_apppage_details_left';
-	responsiveHeader.textContent = _t( 'app_stats_online' );
-	container.insertBefore( responsiveHeader, container.firstChild );
 
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'GetApp',
@@ -695,24 +704,27 @@ function DrawOnlineStatsWidget( items )
 				WriteLog( 'GetApp failed to load' );
 			}
 
-			block.remove();
+			block?.remove();
 
 			return;
 		}
 
 		WriteLog( 'GetApp loaded' );
 
-		onlineNow.textContent = FormatNumber( response.data.cp );
-		peakToday.textContent = FormatNumber( response.data.mdp );
-		peakAll.textContent = FormatNumber( response.data.mp );
+		if( items[ 'online-stats' ] && block !== null )
+		{
+			onlineNow.textContent = FormatNumber( response.data.cp );
+			peakToday.textContent = FormatNumber( response.data.mdp );
+			peakAll.textContent = FormatNumber( response.data.mp );
 
-		if( response.data.f > 0 )
-		{
-			followers.textContent = FormatNumber( response.data.f );
-		}
-		else
-		{
-			followers.parentNode.remove();
+			if( response.data.f > 0 )
+			{
+				followers.textContent = FormatNumber( response.data.f );
+			}
+			else
+			{
+				followers.parentNode.remove();
+			}
 		}
 
 		if( items[ 'steamdb-last-update' ] && response.data.u )
