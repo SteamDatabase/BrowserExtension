@@ -24,7 +24,9 @@ jobs:
         download_translations: true
         skip_untranslated_strings: true
         push_translations: true
+        create_pull_request: false
         crowdin_branch_name: master
+        localization_branch_name: master
         config: 'crowdin.yml'
         project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
         token: ${{ secrets.CROWDIN_API_TOKEN }}
