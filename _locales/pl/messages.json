@@ -108,7 +108,8 @@
 		"message": "Auto-odkrycia"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automatycznie odkrywa kolejkę aby otrzymać kartę wydarzenia."
+		"message": "Automatycznie przegląda kolejkę, aby otrzymać kartę wydarzenia."
+
 	},
 	"explore_generating": {
 		"message": "Generowanie nowej kolejki odkryć może się nie powieść, jeśli Steam jest pod dużym obciążeniem…"
