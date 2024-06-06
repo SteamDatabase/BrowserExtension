@@ -324,7 +324,7 @@
 		"message": "Zignoruj powiadomienia ofert wymiany \"ta transakcja wydaje się podejrzana\" i \"czy jesteś pewien, że jest to prezent?\""
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Wyświetlaj lepsze komunikaty o błędach, zamiast tajemniczych numerów błędów Valve"
+		"message": "Wyświetlaj lepsze komunikaty o błędach, zamiast niezrozumiałych numerów błędów Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Pomiń stronę weryfikacji wieku"
