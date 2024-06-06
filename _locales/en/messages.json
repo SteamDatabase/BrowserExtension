@@ -55,7 +55,7 @@
 		"message": "$1 of the $2 reviews are positive (all purchase types)"
 	},
 	"app_depots_update": {
-		"message": "Depots Update:"
+		"message": "Last Update:"
 	},
 	"app_depots_updated_short": {
 		"message": "Updated"
@@ -253,7 +253,7 @@
 		"message": "Extra data fetched from steamdb.info"
 	},
 	"options_extra_data_players": {
-		"message": "When the \"Display current concurrent players and max peaks on app pages\" option is enabled, the extension will do a secure request to steamdb.info to get the current amount of players and last depot update (the latter only if \"Display last depot update on app pages\" option is enabled)."
+		"message": "When the \"Display current concurrent players and max peaks on app pages\" or \"Display last depot update on app pages\" option are enabled, the extension will do a secure request to steamdb.info to get the current amount of players and last depot update."
 	},
 	"options_extra_data_prices": {
 		"message": "When \"Display the lowest recorded price on app pages\" option is enabled, the extension will do a secure request to steamdb.info with your currency (with what Steam thinks it is) to get the recorded price for a specific game."
@@ -292,7 +292,7 @@
 		"message": "Display SubID in app widgets"
 	},
 	"options_link_accountpage": {
-		"message": "Link each package on your accounts page"
+		"message": "Link each package on your licenses page"
 	},
 	"options_profile_calculator": {
 		"message": "Add a calculator link on community profiles"
@@ -331,7 +331,7 @@
 		"message": "Display better error messages, instead of Valve's cryptic error numbers"
 	},
 	"options_enhancement_skip_agecheck": {
-		"message": "Skip age check gate"
+		"message": "Skip age check page"
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Sets age and birthday cookies to always pass"
