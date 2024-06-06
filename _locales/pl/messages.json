@@ -228,7 +228,7 @@
 		"message": "Aby to działało, musisz być zalogowany w sklepie."
 	},
 	"options_website_explanation3": {
-		"message": "Jest to w całości zawarte w twojej przeglądarce i nigdy nie jest wysyłane do bazy SteamDB."
+		"message": "Jest to w całości przechowywane w twojej przeglądarce i nigdy nie jest wysyłane do bazy SteamDB."
 	},
 	"options_website_explanation4": {
 		"message": "Aby zapobiec nadmiernym zapytaniom do Sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
