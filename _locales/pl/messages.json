@@ -330,7 +330,7 @@
 		"message": "Pomiń stronę weryfikacji wieku"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Ustaw ciasteczka wieku i urodzin, aby zawsze były akceptowane"
+		"message": "Ustaw wymagane ciasteczka, aby pominąć pytanie o wiek"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Usuń filtrowanie z odnośników"
