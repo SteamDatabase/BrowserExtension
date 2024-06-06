@@ -620,63 +620,55 @@ function DrawOnlineStatsWidget( items )
 		image.src = GetLocalResource( 'icons/white.svg' );
 		link.appendChild( image );
 
-		blockInner.appendChild( link );
+		const grid = document.createElement( 'div' );
+		grid.className = 'steamdb_stats_grid';
+
+		blockInner.append( grid );
+		blockInner.append( link );
 
 		// Online now
 		onlineNow = document.createElement( 'span' );
 		onlineNow.className = 'steamdb_stats_number';
 		onlineNow.textContent = '…';
 
-		let line = document.createElement( 'p' );
 		let lineText = document.createElement( 'span' );
 		lineText.className = 'steamdb_stats_name';
 		lineText.textContent = _t( 'app_stats_online_now' );
-		line.appendChild( lineText );
-		line.appendChild( onlineNow );
-
-		blockInner.appendChild( line );
+		grid.append( lineText );
+		grid.append( onlineNow );
 
 		// Peak today
 		peakToday = document.createElement( 'span' );
 		peakToday.className = 'steamdb_stats_number';
 		peakToday.textContent = '…';
 
-		line = document.createElement( 'p' );
 		lineText = document.createElement( 'span' );
 		lineText.className = 'steamdb_stats_name';
 		lineText.textContent = _t( 'app_stats_peak_today' );
-		line.appendChild( lineText );
-		line.appendChild( peakToday );
-
-		blockInner.appendChild( line );
+		grid.append( lineText );
+		grid.append( peakToday );
 
 		// Peak all
 		peakAll = document.createElement( 'span' );
 		peakAll.className = 'steamdb_stats_number';
 		peakAll.textContent = '…';
 
-		line = document.createElement( 'p' );
 		lineText = document.createElement( 'span' );
 		lineText.className = 'steamdb_stats_name';
 		lineText.textContent = _t( 'app_stats_alL_time_peak' );
-		line.appendChild( lineText );
-		line.appendChild( peakAll );
-
-		blockInner.appendChild( line );
+		grid.append( lineText );
+		grid.append( peakAll );
 
 		// Followers
 		followers = document.createElement( 'span' );
 		followers.className = 'steamdb_stats_number';
 		followers.textContent = '…';
 
-		line = document.createElement( 'p' );
 		lineText = document.createElement( 'span' );
 		lineText.className = 'steamdb_stats_name';
 		lineText.textContent = _t( 'app_stats_followers' );
-		line.appendChild( lineText );
-		line.appendChild( followers );
-
-		blockInner.appendChild( line );
+		grid.append( lineText );
+		grid.append( followers );
 
 		// Add to container
 		container.insertBefore( block, container.firstChild );
