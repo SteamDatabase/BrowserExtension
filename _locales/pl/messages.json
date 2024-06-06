@@ -100,7 +100,8 @@
 
 	},
 	"app_lowest_date_multiple": {
-		"message": "Cena zaobserwowana $3 razy, ostatnio na $1 ($2)"
+		"message": "Cena zarejestrowana $3 razy, ostatnio $1 ($2)"
+
 	},
 
 	"explore_auto_discover": {
