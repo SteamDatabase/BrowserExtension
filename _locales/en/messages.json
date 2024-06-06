@@ -398,7 +398,7 @@
 		"message": "Extra data fetched from steamdb.info"
 	},
 	"options_extra_data_players": {
-		"message": "When the \"Display current concurrent players and max peaks on app pages\" or \"Display last depot update on app pages\" option are enabled, the extension will do a secure request to steamdb.info to get the current amount of players and last depot update."
+		"message": "When the \"Display current concurrent players and max peaks on app pages\" or \"Display last update on app pages\" option are enabled, the extension will do a secure request to steamdb.info to get the current amount of players and last game update."
 	},
 	"options_extra_data_prices": {
 		"message": "When \"Display the lowest recorded price on app pages\" option is enabled, the extension will do a secure request to steamdb.info with your currency (with what Steam thinks it is) to get the recorded price for a specific game."
@@ -410,7 +410,7 @@
 		"message": "Display current concurrent players and max peaks on app pages"
 	},
 	"options_steamdb_last_update": {
-		"message": "Display last depot update on app pages"
+		"message": "Display last update on app pages"
 	},
 	"options_button_app": {
 		"message": "Display a button on app pages"
