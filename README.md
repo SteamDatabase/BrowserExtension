@@ -40,7 +40,7 @@ When writing code, make sure to run our linter:
 - Keep the HTML codes intact
 - If there is whitespace in the strings, keep it
 - If there are words that are used by Steam itself (such as discovery queue), match them
-- Substitution tokens like `$1` should be kept
+- Substitution tokens like `$1` and strings instead of `<code>` tags should be kept
 
 #### Making a release
 
