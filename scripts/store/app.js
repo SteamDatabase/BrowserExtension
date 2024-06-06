@@ -688,6 +688,65 @@ function DrawOnlineStatsWidget( items )
 		container.insertBefore( responsiveHeader, container.firstChild );
 	}
 
+	let depotsUpdate = null;
+	let historyLink = null;
+	let historyLinkResponsive = null;
+
+	if( items[ 'steamdb-last-update' ] )
+	{
+		depotsUpdate = document.createElement( 'div' );
+		depotsUpdate.className = 'dev_row steamdb_last_update';
+
+		const subtitle = document.createElement( 'div' );
+		subtitle.className = 'subtitle column';
+		subtitle.textContent = _t( 'app_depots_update' );
+
+		historyLink = document.createElement( 'a' );
+		historyLink.className = 'date';
+		historyLink.textContent = '…';
+		historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
+
+		depotsUpdate.appendChild( subtitle );
+		depotsUpdate.appendChild( historyLink );
+
+		const releaseDate = document.querySelector( '.release_date' );
+
+		if( releaseDate )
+		{
+			releaseDate.parentNode.insertBefore( depotsUpdate, releaseDate.nextSibling );
+		}
+		else
+		{
+			const firstDevRow = document.querySelector( '.glance_ctn_responsive_left .dev_row' );
+
+			if( firstDevRow )
+			{
+				firstDevRow.parentNode.insertBefore( depotsUpdate, firstDevRow );
+			}
+		}
+
+		// Responsive
+		const responsiveGrid = document.getElementById( 'appHeaderGridContainer' );
+
+		if( responsiveGrid )
+		{
+			const label = document.createElement( 'div' );
+			label.className = 'grid_label grid_date';
+			label.textContent = _t( 'app_depots_updated_short' );
+
+			const content = document.createElement( 'div' );
+			content.className = 'grid_content grid_date';
+
+			historyLinkResponsive = document.createElement( 'a' );
+			historyLinkResponsive.textContent = '…';
+			historyLinkResponsive.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
+
+			content.append( historyLinkResponsive );
+			responsiveGrid.append( label );
+			responsiveGrid.append( content );
+		}
+	}
+
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'GetApp',
 		appid: GetCurrentAppID(),
@@ -705,6 +764,7 @@ function DrawOnlineStatsWidget( items )
 			}
 
 			block?.remove();
+			depotsUpdate?.remove();
 
 			return;
 		}
@@ -733,15 +793,6 @@ function DrawOnlineStatsWidget( items )
 			const actualDateText = dateFormatter.format( new Date( response.data.u * 1000 ) );
 			const[ daysSinceLastUpdate, relativeText ] = FormatRelativeDate( response.data.u );
 
-			const depotsUpdate = document.createElement( 'div' );
-			depotsUpdate.className = 'dev_row steamdb_last_update';
-
-			const historyLink = document.createElement( 'a' );
-			historyLink.className = 'date';
-
-			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
-			historyLink.textContent = actualDateText + ' ';
-
 			const historyRelativeDate = document.createElement( 'span' );
 			historyRelativeDate.textContent = `(${relativeText})`;
 
@@ -750,50 +801,12 @@ function DrawOnlineStatsWidget( items )
 				historyRelativeDate.className = 'steamdb_last_update_old';
 			}
 
+			historyLink.textContent = actualDateText + ' ';
 			historyLink.append( historyRelativeDate );
 
-			const subtitle = document.createElement( 'div' );
-			subtitle.className = 'subtitle column';
-			subtitle.textContent = _t( 'app_depots_update' );
-
-			depotsUpdate.appendChild( subtitle );
-			depotsUpdate.appendChild( historyLink );
-
-			const releaseDate = document.querySelector( '.release_date' );
-
-			if( releaseDate )
+			if( historyLinkResponsive !== null )
 			{
-				releaseDate.parentNode.insertBefore( depotsUpdate, releaseDate.nextSibling );
-			}
-			else
-			{
-				const firstDevRow = document.querySelector( '.glance_ctn_responsive_left .dev_row' );
-
-				if( firstDevRow )
-				{
-					firstDevRow.parentNode.insertBefore( depotsUpdate, firstDevRow );
-				}
-			}
-
-			// Responsive
-			const responsiveGrid = document.getElementById( 'appHeaderGridContainer' );
-
-			if( responsiveGrid )
-			{
-				const label = document.createElement( 'div' );
-				label.className = 'grid_label grid_date';
-				label.textContent = _t( 'app_depots_updated_short' );
-
-				const content = document.createElement( 'div' );
-				content.className = 'grid_content grid_date';
-
-				const historyLink = document.createElement( 'a' );
-				historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
-				historyLink.textContent = `${actualDateText} (${relativeText})`;
-
-				content.append( historyLink );
-				responsiveGrid.append( label );
-				responsiveGrid.append( content );
+				historyLinkResponsive.textContent = `${actualDateText} (${relativeText})`;
 			}
 		}
 	} );
