@@ -206,7 +206,8 @@
 		"message": "Stworzone z 💙 przez zespół <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>"
 	},
 	"options_footer2": {
-		"message": "To rozszerzenie jest <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, dziękuję wszystkim kontrybutorom!"
+		"message": "To rozszerzenie jest <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">otwarto-źrodłowe</a>, dziękuję wszystkim zaangażowanym!"
+
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Wyłączone pola wyboru oznaczają wbudowane funkcje."
