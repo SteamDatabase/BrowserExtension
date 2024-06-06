@@ -36,29 +36,59 @@
 	},
 
 	"id_app": {
-		"message": "App $1"
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"id_sub": {
-		"message": "Sub $1"
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
 	},
 	"id_bundle": {
-		"message": "Bundle $1"
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
 	},
 
 	"app_steamdb_rating": {
 		"message": "SteamDB Rating:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB RATING"
+		"message": " STEAMDB RATING",
+		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$1 of the $2 reviews are positive (all purchase types)"
+		"message": "$positive$ of the $total$ reviews are positive (all purchase types)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
 	},
 	"app_depots_update": {
 		"message": "Last Update:"
 	},
 	"app_depots_updated_short": {
-		"message": "Updated"
+		"message": "Updated",
+		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
 		"message": "Online Stats"
@@ -80,19 +110,69 @@
 	},
 
 	"app_lowest_price": {
-		"message": "SteamDB lowest recorded price is <b>$1</b>"
+		"message": "SteamDB lowest recorded price is <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB lowest recorded price is <b>$1</b> at <b>-$2%</b>"
+		"message": "SteamDB lowest recorded price is <b>$price$</b> at <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB lowest recorded price is <b>$1</b> and 2-year low is <b>$2</b>"
+		"message": "SteamDB lowest recorded price is <b>$price$</b> and 2-year low is <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
 	},
 	"app_lowest_date": {
-		"message": "Price seen on $1 ($2)"
+		"message": "Price seen on $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Price seen $3 times, last on $1 ($2)"
+		"message": "Price seen $seen$ times, last on $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
 	},
 
 	"explore_auto_discover": {
@@ -105,13 +185,35 @@
 		"message": "Generating new discovery queue, this can fail if Steam is under high load…"
 	},
 	"explore_exploring": {
-		"message": "Exploring the queue… Request $1 of $2"
+		"message": "Exploring the queue… Request $current$ of $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Failed to clear queue item #$1, trying again in five seconds…"
+		"message": "Failed to clear queue item #$current$, trying again in five seconds…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Failed to clear queue item #$1 too many times. You can try again later."
+		"message": "Failed to clear queue item #$current$ too many times. You can try again later.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"explore_failed_to_generate": {
 		"message": "Failed to generate new queue, trying again in five seconds…"
@@ -121,21 +223,42 @@
 	},
 
 	"badges_idle_apps": {
-		"message": "Apps to idle: $1"
+		"message": "Apps to idle: $amount$",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Apps to idle on this page: $1"
+		"message": "Apps to idle on this page: $amount$",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops": {
-		"message": "Drops remaining: $1"
+		"message": "Drops remaining: $amount$",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Drops remaining on this page: $1"
+		"message": "Drops remaining on this page: $amount$",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 
-	"achievement_your_progress": {
-		"message": "Your progress: $1 / $2"
-	},
 	"hidden_achievement": {
 		"message": "Hidden achievement: "
 	},
@@ -144,10 +267,20 @@
 	},
 
 	"inventory_list_at": {
-		"message": "List at %price%"
+		"message": "List at $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%"
+			}
+		}
 	},
 	"inventory_sell_at": {
-		"message": "Sell at %price%"
+		"message": "Sell at $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%"
+			}
+		}
 	},
 	"inventory_list_at_title": {
 		"message": "Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)"
@@ -157,10 +290,22 @@
 	},
 
 	"widget_view_app": {
-		"message": "View app $1 on SteamDB"
+		"message": "View app $id$ on SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"widget_view_sub": {
-		"message": "View sub $1 on SteamDB"
+		"message": "View sub $id$ on SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 
 
@@ -319,7 +464,15 @@
 		"message": "Display item market price in other users' inventories"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Support <code>for_item</code> and <code>my_item</code> parameters"
+		"message": "Support $for_item$ and $my_item$ parameters",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
 	},
 	"options_github_explanation": {
 		"message": "See explanation on GitHub"
@@ -367,7 +520,12 @@
 		"message": "Some developers put megabytes of images in game descriptions which can take a while to load, click on an image to load"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Support <code>award</code> parameters on profile and shared file links"
+		"message": "Support $award$ parameters on profile and shared file links",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
 	},
 	"options_builtin_card_drops": {
 		"message": "Display total amount of card drops remaining on badges page"
