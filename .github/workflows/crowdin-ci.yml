@@ -19,8 +19,6 @@ jobs:
       uses: crowdin/github-action@v2
       with:
         crowdin_branch_name: master
-        auto_approve_imported: true
-        upload_translations: true
         config: 'crowdin.yml'
         project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
         token: ${{ secrets.CROWDIN_API_TOKEN }}
