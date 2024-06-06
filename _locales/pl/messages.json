@@ -14,7 +14,6 @@
 	},
 	"steamstatus_downtime": {
 		"message": "Wygląda na to, że występują problemy z połączeniem ze Steam. "
-
 	},
 
 	"view_on_steamdb": {
@@ -56,14 +55,12 @@
 	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$1 z $2 recenzji są pozytywne (wszystkie typy zakupów)"
-
 	},
 	"app_depots_update": {
 		"message": "Ostatnia aktualizacja:"
 	},
 	"app_depots_updated_short": {
 		"message": "Zaktualizowano"
-
 	},
 	"app_stats_online": {
 		"message": "Statystyki online"
@@ -89,19 +86,15 @@
 	},
 	"app_lowest_price_discount": {
 		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>, <b>-$2%</b>"
-
 	},
 	"app_lowest_price_limited": {
 		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>, a w ciągu ostatnich dwóch lat <b>$2</b>"
-
 	},
 	"app_lowest_date": {
 		"message": "Cena zarejestrowana $1 ($2)"
-
 	},
 	"app_lowest_date_multiple": {
 		"message": "Cena zarejestrowana $3 razy, ostatnio $1 ($2)"
-
 	},
 
 	"explore_auto_discover": {
@@ -130,7 +123,6 @@
 	},
 	"explore_finished": {
 		"message": "Kolejka została wyczyszczona."
-
 	},
 
 	"badges_idle_apps": {
@@ -145,7 +137,6 @@
 	"badges_idle_drops_on_this_page": {
 		"message": "Pozostałe dropy na tej stronie: $1"
 	},
-
 	"achievement_your_progress": {
 		"message": "Twój postęp: $1 / $2"
 	},
@@ -155,7 +146,6 @@
 	"hidden_achievement_hover": {
 		"message": "Ukryte osiągnięcie, najedź myszką aby je ujawnić: "
 	},
-
 	"inventory_list_at": {
 		"message": "Wystaw za %price%"
 	},
@@ -168,16 +158,12 @@
 	"inventory_sell_at_title": {
 		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)."
 	},
-
 	"widget_view_app": {
 		"message": "Wyświetl aplikację $1 na SteamDB"
-
 	},
 	"widget_view_sub": {
 		"message": "Wyświetl paczkę $1 on SteamDB"
 	},
-
-
 	"options": {
 		"message": "Opcje"
 	},
@@ -186,7 +172,6 @@
 	},
 	"options_welcome_description": {
 		"message": "Przejrzyj poniższe opcje i ustaw te, które preferujesz. Aby wrócić tutaj w przyszłości:"
-
 	},
 	"options_welcome_option1": {
 		"message": "Strona ustawień na SteamDB"
@@ -206,18 +191,15 @@
 	"options_permissions_button": {
 		"message": "⚠️ Przyznaj uprawnienia"
 	},
-
 	"options_footer1": {
 		"message": "Stworzone z 💙 przez zespół <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>"
 	},
 	"options_footer2": {
 		"message": "To rozszerzenie jest <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">otwarto-źrodłowe</a>, dziękuję wszystkim zaangażowanym!"
-
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Wyłączone pola wyboru oznaczają wbudowane funkcje."
 	},
-
 	"options_header_website": {
 		"message": "Strona SteamDB"
 	},
@@ -226,7 +208,6 @@
 	},
 	"options_header_buttons_and_links": {
 		"message": "Przyciski i odnośniki"
-
 	},
 	"options_header_inventory": {
 		"message": "Ekwipunek"
@@ -237,13 +218,11 @@
 	"options_header_enhancements": {
 		"message": "Rozszerzenia"
 	},
-
 	"options_website_explanation": {
 		"message": "Wyjaśnienie"
 	},
 	"options_website_explanation1": {
 		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (lista życzeń, posiadane, śledzone, ignorowane produkty i produkty w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
-
 	},
 	"options_website_explanation2": {
 		"message": "Aby to działało, musisz być zalogowany w sklepie."
@@ -266,7 +245,6 @@
 	"options_website_highlight3": {
 		"message": "Włącz dodatkowe filtrowanie na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stronie sprzedaży</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stronie zestawów</a>"
 	},
-
 	"options_extra_data": {
 		"message": "Dodatkowe dane pobrane z steamdb.info"
 	},
