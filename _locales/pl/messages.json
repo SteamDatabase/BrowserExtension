@@ -333,7 +333,7 @@
 		"message": "Ustaw ciasteczka wieku i urodzin, aby zawsze były akceptowane"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Usuń wszystkie linki filtru linków"
+		"message": "Usuń filtrowanie z odnośników"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Akceptuj SSA automatycznie na stronach rynku, ekwipunku i aktywacji kluczy"
