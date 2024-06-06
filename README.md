@@ -34,7 +34,13 @@ When writing code, make sure to run our linter:
 2. Run `npm test` which should report warnings
 3. Run `npm run fix` which should automatically fix most of the reported warnings
 
-**Please do not make pull requests adding translations or languages at this time.**
+#### Localization rules
+
+- Do not localize "SteamDB"
+- Keep the HTML codes intact
+- If there is whitespace in the strings, keep it
+- If there are words that are used by Steam itself (such as discovery queue), match them
+- Substitution tokens like `$1` should be kept
 
 #### Making a release
 
