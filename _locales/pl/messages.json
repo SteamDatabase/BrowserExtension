@@ -129,7 +129,8 @@
 		"message": "Nie udało się wygenerować nowej kolejki, ponowna próba za pięć sekund…"
 	},
 	"explore_finished": {
-		"message": "Kolejka została odkryta."
+		"message": "Kolejka została wyczyszczona."
+
 	},
 
 	"badges_idle_apps": {
