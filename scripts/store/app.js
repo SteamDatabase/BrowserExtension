@@ -497,7 +497,7 @@ function DrawLowestPrice()
 	WriteLog( `Currency is "${currency}"` );
 
 	SendMessageToBackgroundScript( {
-		contentScriptQuery: 'GetPrice',
+		contentScriptQuery: 'GetAppPrice',
 		appid: GetCurrentAppID(),
 		currency,
 	}, ( response ) =>
@@ -506,50 +506,69 @@ function DrawLowestPrice()
 		{
 			if( response && response.error )
 			{
-				WriteLog( `GetPrice failed to load: ${response.error}` );
+				WriteLog( `GetAppPrice failed to load: ${response.error}` );
 			}
 			else
 			{
-				WriteLog( 'GetPrice failed to load' );
+				WriteLog( 'GetAppPrice failed to load' );
 			}
 
 			return;
 		}
 
-		const data = response.data;
+		WriteLog( 'GetAppPrice loaded' );
 
-		if( !data.lowest )
-		{
-			WriteLog( 'GetPrice has no lowest' );
-
-			return;
-		}
-
-		WriteLog( 'GetPrice loaded' );
-
-		// TODO: Localize, requires api changes
 		const top = document.createElement( 'div' );
 		top.className = 'steamdb_prices_top';
-		top.appendChild( document.createTextNode( 'SteamDB lowest recorded price is ' ) );
 
-		let element = document.createElement( 'b' );
-		element.textContent = data.lowest.price;
-		top.appendChild( element );
-
-		if( data.lowest.discount > 0 )
+		// We trust the API, but this ensures safety
+		const escapeHtml = ( str ) =>
 		{
-			top.appendChild( document.createTextNode( ' at ' ) );
+			return str
+				.replaceAll( '&', '&amp;' )
+				.replaceAll( '<', '&lt;' )
+				.replaceAll( '"', '&quot;' )
+				.replaceAll( "'", '&apos;' );
+		};
 
-			element = document.createElement( 'b' );
-			element.textContent = `-${data.lowest.discount}%`;
-			top.appendChild( element );
+		const safePrice = escapeHtml( response.data.p );
+
+		if( response.data.l )
+		{
+			top.innerHTML = _t( 'app_lowest_price_limited', [ safePrice, escapeHtml( response.data.l ) ] );
+		}
+		else if( Number.isInteger( response.data.d ) && response.data.d > 0 )
+		{
+			top.innerHTML = _t( 'app_lowest_price_discount', [ safePrice, response.data.d.toString() ] );
+		}
+		else
+		{
+			top.innerHTML = _t( 'app_lowest_price', [ safePrice ] );
 		}
 
+		// Dates
 		const bottom = document.createElement( 'div' );
 		bottom.className = 'steamdb_prices_bottom';
-		bottom.appendChild( document.createTextNode( `Last on ${data.lowest.date}` ) );
 
-		element = document.createElement( 'a' );
+		const dateFormatter = new Intl.DateTimeFormat( undefined, { dateStyle: 'medium' } );
+		const lastOn = dateFormatter.format( response.data.t * 1000 );
+		const[ , relativeText ] = FormatRelativeDate( response.data.t );
+
+		if( response.data.c > 1 )
+		{
+			bottom.innerHTML = _t( 'app_lowest_date_multiple', [
+				lastOn,
+				relativeText,
+				response.data.c.toString(),
+			] );
+		}
+		else
+		{
+			bottom.innerHTML = _t( 'app_lowest_date', [ lastOn, relativeText ] );
+		}
+
+		// Container
+		const element = document.createElement( 'a' );
 		element.className = 'steamdb_prices';
 		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 
@@ -661,7 +680,7 @@ function DrawOnlineStatsWidget( items )
 	container.insertBefore( responsiveHeader, container.firstChild );
 
 	SendMessageToBackgroundScript( {
-		contentScriptQuery: 'GetCurrentPlayers',
+		contentScriptQuery: 'GetApp',
 		appid: GetCurrentAppID(),
 	}, ( response ) =>
 	{
@@ -669,11 +688,11 @@ function DrawOnlineStatsWidget( items )
 		{
 			if( response && response.error )
 			{
-				WriteLog( `GetCurrentPlayers failed to load: ${response.error}` );
+				WriteLog( `GetApp failed to load: ${response.error}` );
 			}
 			else
 			{
-				WriteLog( 'GetCurrentPlayers failed to load' );
+				WriteLog( 'GetApp failed to load' );
 			}
 
 			block.remove();
@@ -681,36 +700,45 @@ function DrawOnlineStatsWidget( items )
 			return;
 		}
 
-		WriteLog( 'GetCurrentPlayers loaded' );
+		WriteLog( 'GetApp loaded' );
 
-		onlineNow.textContent = FormatNumber( response.data.CurrentPlayers );
-		peakToday.textContent = FormatNumber( response.data.MaxDailyPlayers );
-		peakAll.textContent = FormatNumber( response.data.MaxPlayers );
+		onlineNow.textContent = FormatNumber( response.data.cp );
+		peakToday.textContent = FormatNumber( response.data.mdp );
+		peakAll.textContent = FormatNumber( response.data.mp );
 
-		if( response.data.Followers > 0 )
+		if( response.data.f > 0 )
 		{
-			followers.textContent = FormatNumber( response.data.Followers );
+			followers.textContent = FormatNumber( response.data.f );
 		}
 		else
 		{
 			followers.parentNode.remove();
 		}
 
-		if( items[ 'steamdb-last-update' ] && response.data.LastDepotUpdate )
+		if( items[ 'steamdb-last-update' ] && response.data.u )
 		{
+			const dateFormatter = new Intl.DateTimeFormat( undefined, { dateStyle: 'medium' } );
+			const actualDateText = dateFormatter.format( new Date( response.data.u * 1000 ) );
+			const[ daysSinceLastUpdate, relativeText ] = FormatRelativeDate( response.data.u );
+
 			const depotsUpdate = document.createElement( 'div' );
 			depotsUpdate.className = 'dev_row steamdb_last_update';
 
 			const historyLink = document.createElement( 'a' );
 			historyLink.className = 'date';
 
-			if( response.data.WarnOldUpdate )
+			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
+			historyLink.textContent = actualDateText + ' ';
+
+			const historyRelativeDate = document.createElement( 'span' );
+			historyRelativeDate.textContent = `(${relativeText})`;
+
+			if( daysSinceLastUpdate > 365 )
 			{
-				historyLink.className = 'steamdb_last_update_old';
+				historyRelativeDate.className = 'steamdb_last_update_old';
 			}
 
-			historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
-			historyLink.textContent = response.data.LastDepotUpdate; // TODO: Localize, requires api changes
+			historyLink.append( historyRelativeDate );
 
 			const subtitle = document.createElement( 'div' );
 			subtitle.className = 'subtitle column';
@@ -748,14 +776,8 @@ function DrawOnlineStatsWidget( items )
 				content.className = 'grid_content grid_date';
 
 				const historyLink = document.createElement( 'a' );
-
-				if( response.data.WarnOldUpdate )
-				{
-					historyLink.className = 'steamdb_last_update_old';
-				}
-
 				historyLink.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/patchnotes/';
-				historyLink.textContent = response.data.LastDepotUpdate; // TODO: Localize, requires api changes
+				historyLink.textContent = `${actualDateText} (${relativeText})`;
 
 				content.append( historyLink );
 				responsiveGrid.append( label );
@@ -814,4 +836,18 @@ function HideCurator()
 function FormatNumber( num )
 {
 	return numberFormatter.format( num );
+}
+
+function FormatRelativeDate( date )
+{
+	const relativeDateFormatter = new Intl.RelativeTimeFormat( undefined, { numeric: 'auto' } );
+	const dayInSeconds = 24 * 60 * 60;
+	const daysSinceLastUpdate = Math.floor( ( ( Date.now() / 1000 ) - date ) / dayInSeconds );
+
+	if( daysSinceLastUpdate > 30 )
+	{
+		return[ daysSinceLastUpdate, relativeDateFormatter.format( -Math.round( daysSinceLastUpdate / 30 ), 'month' ) ];
+	}
+
+	return[ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
 }

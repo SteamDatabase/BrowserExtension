@@ -37,8 +37,8 @@ a.steamdb_link:hover {
 	background: none;
 }
 
-.steamdb_last_update_old {
-	color: #f44336 !important;
+.date:not(:hover) .steamdb_last_update_old {
+	color: #f44336;
 }
 
 .steamdb_stats {
@@ -132,7 +132,7 @@ a.steamdb_link:hover {
 	color: #c6d4df;
 }
 
-.steamdb_prices b {
+.steamdb_prices_top b {
 	font-weight: bold;
 	color: #a3cf06;
 }

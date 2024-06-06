@@ -82,6 +82,22 @@
 		"message": "nothing selected"
 	},
 
+	"app_lowest_price": {
+		"message": "SteamDB lowest recorded price is <b>$1</b>"
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB lowest recorded price is <b>$1</b> at <b>-$2%</b>"
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB lowest recorded price is <b>$1</b> and 2-year low is <b>$2</b>"
+	},
+	"app_lowest_date": {
+		"message": "Price seen on $1 ($2)"
+	},
+	"app_lowest_date_multiple": {
+		"message": "Price seen $3 times, last on $1 ($2)"
+	},
+
 	"explore_auto_discover": {
 		"message": "Auto-discover"
 	},

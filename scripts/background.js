@@ -63,8 +63,8 @@ runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
-		case 'GetCurrentPlayers': GetCurrentPlayers( request.appid, callback ); return true;
-		case 'GetPrice': GetPrice( request, callback ); return true;
+		case 'GetApp': GetApp( request.appid, callback ); return true;
+		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
 		case 'StoreWishlistAdd': StoreWishlistAdd( request.appid, callback ); return true;
 		case 'StoreWishlistRemove': StoreWishlistRemove( request.appid, callback ); return true;
 		case 'StoreFollow': StoreFollow( request.appid, callback ); return true;
@@ -194,7 +194,7 @@ function GetJsonWithStatusCheck( response )
 	return response.json();
 }
 
-function GetCurrentPlayers( appid, callback )
+function GetApp( appid, callback )
 {
 	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
 	{
@@ -205,7 +205,7 @@ function GetCurrentPlayers( appid, callback )
 	const params = new URLSearchParams();
 	params.set( 'appid', parseInt( appid, 10 ) );
 
-	fetch( `https://steamdb.info/api/GetCurrentPlayers/?${params.toString()}`, {
+	fetch( `https://steamdb.info/api/ExtensionApp/?${params.toString()}`, {
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
@@ -216,7 +216,7 @@ function GetCurrentPlayers( appid, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
-function GetPrice( { appid, currency }, callback )
+function GetAppPrice( { appid, currency }, callback )
 {
 	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
 	{
@@ -228,7 +228,7 @@ function GetPrice( { appid, currency }, callback )
 	params.set( 'appid', parseInt( appid, 10 ) );
 	params.set( 'currency', currency );
 
-	fetch( `https://steamdb.info/api/ExtensionGetPrice/?${params.toString()}`, {
+	fetch( `https://steamdb.info/api/ExtensionAppPrice/?${params.toString()}`, {
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
