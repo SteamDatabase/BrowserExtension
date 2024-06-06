@@ -10,7 +10,7 @@
 		"message": "SteamDB Calculator"
 	},
 	"steamstatus": {
-		"message": "Check steamstat.us"
+		"message": "Check on steamstat.us"
 	},
 	"steamstatus_downtime": {
 		"message": "Steam appears to be experiencing some downtime. "
