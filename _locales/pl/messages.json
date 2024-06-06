@@ -180,7 +180,8 @@
 		"message": "👋 Dzięki za zainstalowanie rozszerzenia SteamDB!"
 	},
 	"options_welcome_description": {
-		"message": "Przejrzyj poniższe opcje i przełącz te, które preferujesz. Aby wrócić tutaj w przyszłości:"
+		"message": "Przejrzyj poniższe opcje i ustaw te, które preferujesz. Aby wrócić tutaj w przyszłości:"
+
 	},
 	"options_welcome_option1": {
 		"message": "Strona ustawień na SteamDB"
