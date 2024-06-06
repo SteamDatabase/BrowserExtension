@@ -28,3 +28,5 @@ jobs:
         config: 'crowdin.yml'
         project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
         token: ${{ secrets.CROWDIN_API_TOKEN }}
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
