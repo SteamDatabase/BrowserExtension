@@ -2,7 +2,6 @@
 	"extension_description": {
 		"message": "Dodaje linki SteamDB i nowe funkcjonalności w sklepie i społeczności Steam. Wyświetla najniższe ceny gier i ich statystyki."
 	},
-
 	"steamdb_options": {
 		"message": "Opcje SteamDB"
 	},
@@ -15,7 +14,6 @@
 	"steamstatus_downtime": {
 		"message": "Wygląda na to, że występują problemy z połączeniem ze Steam. "
 	},
-
 	"view_on_steamdb": {
 		"message": "Wyświetl na SteamDB"
 	},
@@ -34,7 +32,6 @@
 	"search": {
 		"message": "Szukaj"
 	},
-
 	"id_app": {
 		"message": "Aplikacja $1"
 	},
@@ -44,14 +41,11 @@
 	"id_bundle": {
 		"message": "Zestaw $1"
 	},
-
 	"app_steamdb_rating": {
 		"message": "Recenzja SteamDB:"
-
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " RECENZJA STEAMDB"
-
 	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$1 z $2 recenzji są pozytywne (wszystkie typy zakupów)"
@@ -80,7 +74,6 @@
 	"app_nothing_selected": {
 		"message": "nic nie zostało wybrane"
 	},
-
 	"app_lowest_price": {
 		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>"
 	},
@@ -96,21 +89,17 @@
 	"app_lowest_date_multiple": {
 		"message": "Cena zarejestrowana $3 razy, ostatnio $1 ($2)"
 	},
-
 	"explore_auto_discover": {
 		"message": "Auto-odkrycia"
 	},
 	"explore_auto_discover_description": {
 		"message": "Automatycznie przegląda kolejkę, aby otrzymać kartę wydarzenia."
-
 	},
 	"explore_generating": {
 		"message": "Generowanie nowej kolejki odkryć może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
-
 	},
 	"explore_exploring": {
 		"message": "Przeglądanie kolejki… Zapytanie $1 z $2"
-
 	},
 	"explore_failed_to_clear": {
 		"message": "Nie udało się wyczyścić elementu kolejki #$1, ponowna próba za pięć sekund…"
@@ -124,7 +113,6 @@
 	"explore_finished": {
 		"message": "Kolejka została wyczyszczona."
 	},
-
 	"badges_idle_apps": {
 		"message": "Aplikacje do idlowania: $1"
 	},
