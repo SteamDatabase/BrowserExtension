@@ -231,7 +231,7 @@
 		"message": "Jest to w całości zawarte w twojej przeglądarce i nigdy nie jest wysyłane do bazy SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Aby zapobiec nadmiernym zapytaniom do Sklepu Steam, dane użytkownika są buforowane w lokalnej pamięci przeglądarki."
+		"message": "Aby zapobiec nadmiernym zapytaniom do Sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
 	},
 	"options_website_highlight": {
 		"message": "Wyróżnij posiadane i znajdujące się na liście życzeń produkty na steamdb.info"
