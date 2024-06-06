@@ -46,7 +46,8 @@
 	},
 
 	"app_steamdb_rating": {
-		"message": "Recenzje SteamDB:"
+		"message": "Recenzja SteamDB:"
+
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " RECENZJE STEAMDB"
