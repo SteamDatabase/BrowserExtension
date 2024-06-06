@@ -249,7 +249,7 @@
 		"message": "Dodatkowe dane pobrane z steamdb.info"
 	},
 	"options_extra_data_players": {
-		"message": "Po włączeniu opcji \"Wyświetlaj bieżących graczy i maksymalne szczyty na stronach aplikacji\" lub \"Wyświetlaj ostatnią aktualizację składów na stronach aplikacji\" rozszerzenie wykona bezpieczne żądanie do steamdb.info, aby uzyskać aktualną liczbę graczy i ostatnią aktualizację składów."
+		"message": "Po włączeniu opcji \"Wyświetlaj bieżących graczy i maksymalne szczyty na stronach aplikacji\" lub \"Wyświetlaj ostatnią aktualizację składów na stronach aplikacji\" rozszerzenie wykona bezpieczne żądanie do steamdb.info, aby uzyskać aktualną liczbę graczy i ostatnią aktualizację plików."
 	},
 	"options_extra_data_prices": {
 		"message": "Gdy opcja \"Wyświetlaj najniższą zarejestrowaną cenę na stronach aplikacji\" jest włączona, rozszerzenie wykona bezpieczne żądanie do steamdb.info z twoją walutą (z tym, co Steam uzna za twoją walutę), aby uzyskać zarejestrowaną cenę dla określonej gry."
