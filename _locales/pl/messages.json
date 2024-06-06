@@ -234,7 +234,7 @@
 		"message": "Aby zapobiec nadmiernym zapytaniom do Sklepu Steam, dane użytkownika są buforowane w lokalnej pamięci przeglądarki."
 	},
 	"options_website_highlight": {
-		"message": "Wyróżnij posiadane i pożądane produkty na steamdb.info"
+		"message": "Wyróżnij posiadane i znajdujące się na liście życzeń produkty na steamdb.info"
 	},
 	"options_website_highlight1": {
 		"message": "Lista życień, obserwowane, i ignorowane produkty w sklepie Steam bezpośrednio z SteamDB"
