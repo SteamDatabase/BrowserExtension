@@ -13,7 +13,8 @@
 		"message": "Sprawdź steamstat.us"
 	},
 	"steamstatus_downtime": {
-		"message": "Wygląda na to, że Steam doświadcza pewnych awarii. "
+		"message": "Wygląda na to, że występują problemy z połączeniem ze Steam. "
+
 	},
 
 	"view_on_steamdb": {
