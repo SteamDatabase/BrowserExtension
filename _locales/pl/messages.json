@@ -116,7 +116,8 @@
 
 	},
 	"explore_exploring": {
-		"message": "Odkrywanie kolejki… Zapytanie $1 z $2"
+		"message": "Przeglądanie kolejki… Zapytanie $1 z $2"
+
 	},
 	"explore_failed_to_clear": {
 		"message": "Nie udało się wyczyścić elementu kolejki #$1, ponowna próba za pięć sekund…"
