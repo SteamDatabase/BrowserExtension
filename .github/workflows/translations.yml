@@ -1,0 +1,30 @@
+name: translations
+
+on:
+  schedule:
+  - cron: '55 1 */7 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    environment: dev-crowdin
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download latest translations from Crowdin
+      uses: crowdin/github-action@v2
+      with:
+        upload_sources: false
+        download_translations: true
+        skip_untranslated_strings: true
+        skip_untranslated_files: true
+        push_translations: true
+        crowdin_branch_name: master
+        config: 'crowdin.yml'
+        project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
+        token: ${{ secrets.CROWDIN_API_TOKEN }}
