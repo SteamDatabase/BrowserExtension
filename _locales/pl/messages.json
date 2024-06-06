@@ -164,7 +164,8 @@
 	},
 
 	"widget_view_app": {
-		"message": "Wyświetl aplikacje $1 na SteamDB"
+		"message": "Wyświetl aplikację $1 na SteamDB"
+
 	},
 	"widget_view_sub": {
 		"message": "Wyświetl paczkę $1 on SteamDB"
