@@ -62,7 +62,8 @@
 		"message": "Ostatnia aktualizacja:"
 	},
 	"app_depots_updated_short": {
-		"message": "Zaaktualizowano"
+		"message": "Zaktualizowano"
+
 	},
 	"app_stats_online": {
 		"message": "Statystyki online"
