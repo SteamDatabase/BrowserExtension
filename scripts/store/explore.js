@@ -45,7 +45,7 @@ function GenerateQueue()
 
 	if( !session )
 	{
-		span.textContent = _t( 'error' );
+		span.textContent = 'Failed to find g_sessionID'; // This shouldn't happen, so don't translate
 		return;
 	}
 

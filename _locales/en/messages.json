@@ -28,9 +28,6 @@
 	"store_page": {
 		"message": "Store Page"
 	},
-	"error": {
-		"message": "Error"
-	},
 	"search": {
 		"message": "Search"
 	},
@@ -224,6 +221,7 @@
 
 	"badges_idle_apps": {
 		"message": "Apps to idle: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -233,6 +231,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Apps to idle on this page: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -242,6 +241,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Drops remaining: $amount$",
+		"description": "Shown on your badges page",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -251,6 +251,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Drops remaining on this page: $amount$",
+		"description": "Shown on your badges page",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -270,7 +271,8 @@
 		"message": "List at $price$",
 		"placeholders": {
 			"price": {
-				"content": "%price%"
+				"content": "%price%",
+				"example": "1,99€"
 			}
 		}
 	},
@@ -278,7 +280,8 @@
 		"message": "Sell at $price$",
 		"placeholders": {
 			"price": {
-				"content": "%price%"
+				"content": "%price%",
+				"example": "1,99€"
 			}
 		}
 	},
@@ -493,7 +496,8 @@
 		"message": "Remove all link filter links"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Accept SSA on market, inventory, and activate key pages automatically"
+		"message": "Accept SSA on market, inventory, and activate key pages automatically",
+		"description": "SSA is Steam Subscriber Agreement"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Hide \"Install Steam\" button in header"
