@@ -53,6 +53,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
 		element.dataset.i18n = JSON.stringify( {
+			view_on_steamdb: _t( 'view_on_steamdb' ),
 			inventory_list_at: _t( 'inventory_list_at' ),
 			inventory_sell_at: _t( 'inventory_sell_at' ),
 			inventory_list_at_title: _t( 'inventory_list_at_title' ),

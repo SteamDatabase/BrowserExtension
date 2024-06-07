@@ -509,13 +509,16 @@
 		"message": "Sets age and birthday cookies to always pass"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Remove \"You are leaving Steam\" link filter from external sites"
+		"message": "Remove \"You are leaving Steam\" link filter from external sites",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Accept Subscriber Agreement on market, inventory, and activate key pages automatically"
+		"message": "Accept Subscriber Agreement on market, inventory, and activate key pages automatically",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Hide \"Install Steam\" button in header"
+		"message": "Hide \"Install Steam\" button in header",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Hide \"Open in the Steam\" banner"

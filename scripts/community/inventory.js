@@ -295,7 +295,7 @@
 							rgActions.push( {
 								steamdb: true,
 								link: homepage + 'sub/' + subs[ i ] + '/',
-								name: 'View ' + subs[ i ] + ' on SteamDB',
+								name: i18n.view_on_steamdb, // TODO: Add subid?
 							} );
 						}
 
@@ -335,7 +335,7 @@
 						{
 							steamdb: true,
 							link: '#steamdb_' + item.assetid,
-							name: 'View on SteamDB',
+							name: i18n.view_on_steamdb,
 						};
 
 						if( giftCache[ item.description.classid ] )
@@ -357,6 +357,7 @@
 									{
 										link.classList.remove( 'btn_disabled' );
 										link.href = homepage + 'sub/' + xhr.response.packageid + '/';
+										// TODO: Add subid to the button text?
 									}
 								}
 							};
@@ -405,7 +406,7 @@
 								rgActions.push( {
 									steamdb: true,
 									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/',
-									name: 'View on SteamDB',
+									name: i18n.view_on_steamdb, // TODO: Add id?
 								} );
 
 								foundState = FoundState.Added;
@@ -424,7 +425,7 @@
 						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'sub/' + link[ 1 ] + '/',
-							name: 'View on SteamDB',
+							name: i18n.view_on_steamdb,
 						} ];
 					}
 					else
@@ -432,7 +433,7 @@
 						item.description.actions = rgActions = [ {
 							steamdb: true,
 							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.description.name ),
-							name: 'Search on SteamDB',
+							name: i18n.view_on_steamdb,
 						} ];
 					}
 
