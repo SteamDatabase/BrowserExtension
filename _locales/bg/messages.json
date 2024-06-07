@@ -201,7 +201,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Оставащи ползи: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -211,7 +211,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Ползи оставащи на тази страница: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",

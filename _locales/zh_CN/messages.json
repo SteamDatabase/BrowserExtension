@@ -1,15 +1,15 @@
 {
 	"extension_description": {
-		"message": "在Steam商店和社区中添加 SteamDB 链接和新功能。查看最低的游戏价格和统计数据。"
+		"message": "在 Steam 商店和社区中添加 SteamDB 链接和新功能，查阅游戏史低价格和在线统计数据。"
 	},
 	"steamdb_options": {
-		"message": "SteamDB 选项"
+		"message": "SteamDB 设置"
 	},
 	"steamdb_calculator": {
 		"message": "SteamDB 账号价值计算器"
 	},
 	"steamstatus": {
-		"message": "在 steamstat.us 上检查"
+		"message": "在 steamstat.us 上查看详情"
 	},
 	"steamstatus_downtime": {
 		"message": "Steam 似乎出现了一些故障。 "
@@ -57,14 +57,14 @@
 		}
 	},
 	"app_steamdb_rating": {
-		"message": "SteamDB 评分："
+		"message": "SteamDB 好评率："
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " SteamDB 评分",
+		"message": " SteamDB 好评率",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$ 条评论中的 $positive$ 为好评 (所有购买类型)",
+		"message": "此游戏的 $total$ 篇用户评测中有 $positive$ 为好评 (所有购买类型)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -77,26 +77,26 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "最近更新："
+		"message": "最近更新日期："
 	},
 	"app_depots_updated_short": {
-		"message": "已更新",
+		"message": "最近更新于",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "在线统计"
+		"message": "在线状态统计"
 	},
 	"app_stats_online_now": {
-		"message": "当前在线人数："
+		"message": "实时在线人数："
 	},
 	"app_stats_peak_today": {
-		"message": "24小时峰值人数："
+		"message": "24小时最高在线人数："
 	},
 	"app_stats_alL_time_peak": {
-		"message": "历史峰值人数："
+		"message": "历史最高在线人数："
 	},
 	"app_stats_followers": {
-		"message": "关注者数："
+		"message": "关注数："
 	},
 	"app_nothing_selected": {
 		"message": "未选中任何内容"
@@ -111,7 +111,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，折扣为 <b>-$discount$%</b>",
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，对应的折扣为 <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -124,7 +124,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，2 年内史低为 <b>$price_limited$</b>",
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，2 年内的最低价格为 <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -137,7 +137,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "$date$ 的价格($relative$)",
+		"message": "此价格出现于 $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -167,13 +167,13 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "自动探索"
+		"message": "自动探索队列"
 	},
 	"explore_auto_discover_description": {
-		"message": "自动探索队列，以获取一张活动卡"
+		"message": "自动探索队列，以获取一张活动卡牌"
 	},
 	"explore_generating": {
-		"message": "正在生成新的探索队列，如果 Steam 负载较高，这可能会失败......"
+		"message": "正在生成新的探索队列，如果 Steam 负载较高，可能会失败..."
 	},
 	"explore_exploring": {
 		"message": "正在探索队列中... $current$ / $total$",
@@ -213,8 +213,8 @@
 		"message": "队列探索完成"
 	},
 	"badges_idle_apps": {
-		"message": "仍有卡牌掉落的应用：$amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"message": "可掉落卡牌的应用数：$amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -223,8 +223,8 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "仍有卡牌掉落的应用（本页）：$amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"message": "本页可掉落卡牌的应用数：$amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -234,7 +234,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "剩余掉落数：$amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -244,7 +244,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "本页剩余掉落数：$amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -277,10 +277,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "以市场中已上架的最低价格出售物品\n\n显示的价格是您收到的实际金额(不含手续费)"
+		"message": "以市场中的最低上架价格上架物品\n\n显示的价格是您收到的实际金额(不含手续费)"
 	},
 	"inventory_sell_at_title": {
-		"message": "以市场最高订购单价格出售项目\n\n显示的价格是您收到的金额(不含费用)"
+		"message": "以市场订购单的最高出价出售物品\n\n显示的价格是您收到的实际金额(不含手续费)"
 	},
 	"widget_view_app": {
 		"message": "在 SteamDB 上查看 app $id$",
@@ -307,7 +307,7 @@
 		"message": "👋 感谢您安装 SteamDB 扩展！"
 	},
 	"options_welcome_description": {
-		"message": "您可按照自身偏好，启用或关闭页面下方的各个选项。如需之后返回该页面："
+		"message": "您可按照自身偏好，启用或关闭页面下方的各个选项。之后如需返回本页："
 	},
 	"options_welcome_option1": {
 		"message": "SteamDB 设置页面"
@@ -322,7 +322,7 @@
 		"message": "为这个扩展留下评论"
 	},
 	"options_permissions_description": {
-		"message": "此扩展需要额外的权限才能在 SteamDB, Steam 商店 和 Steam 社区正常工作。"
+		"message": "此扩展需要额外的权限才能在 SteamDB，Steam 商店和 Steam 社区正常工作。"
 	},
 	"options_permissions_button": {
 		"message": "⚠️ 授予权限"
@@ -358,7 +358,7 @@
 		"message": "说明"
 	},
 	"options_website_explanation1": {
-		"message": "如果启用此选项，扩展将获取一些 <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam商店</a> 中的用户数据 (愿望单、已拥有、已关注、已忽略 和 购物车中 的内容)，并将其高亮。"
+		"message": "启用此选项后，扩展将从 <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 商店</a>请求一些用户数据（例如已添加至愿望单、购物车、已拥有、已关注、已忽略的产品）并在网站上用高亮标记这些条目。"
 	},
 	"options_website_explanation2": {
 		"message": "您必须登录商店才能正常使用。"
@@ -499,7 +499,7 @@
 		"message": "加载隐藏成就及其说明"
 	},
 	"options_spoiler_achievements": {
-		"message": "通过防剧透文本元素隐藏描述"
+		"message": "隐藏详细信息以防剧透"
 	},
 	"options_prevent_store_images": {
 		"message": "在应用商店页面中停止加载图像"
@@ -528,6 +528,6 @@
 		"message": "链接到您自己的成就页面"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "以一个锁定图标提高锁定成就的可见性"
+		"message": "使用锁定图标表示已锁定的成就来提高可见性"
 	}
 }

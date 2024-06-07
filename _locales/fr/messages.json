@@ -198,7 +198,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Impossible d'effacer la file d'attente #$current$ trop de fois. Réessayez ultérieurement.",
+		"message": "Échec de la suppression de l'article #$current$ trop de fois. Réessayez plus tard.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -207,14 +207,14 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Impossible de générer une nouvelle file d'attente, essayez à nouveau dans cinq secondes…"
+		"message": "Échec de la génération d'une nouvelle file d'attente, nouvelle tentative dans cinq secondes…"
 	},
 	"explore_finished": {
 		"message": "Liste exploré."
 	},
 	"badges_idle_apps": {
 		"message": "Applications à collecter : $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -224,7 +224,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Applications à collecter sur cette page : $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -234,7 +234,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Cartes restantes : $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -244,7 +244,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Cartes restantes sur cette page : $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -280,7 +280,7 @@
 		"message": "Liste l'article pour le prix de vente le plus bas de la liste\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Liste l'article pour le prix d'achat le plus élevé\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
+		"message": "Liste les articles au prix de la plus haute commande d'achat.\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
 	},
 	"widget_view_app": {
 		"message": "Voir l'application $id$ sur SteamDB",
@@ -322,13 +322,13 @@
 		"message": "Laisser un avis pour cette extension"
 	},
 	"options_permissions_description": {
-		"message": "Cette extension nécessite des autorisations supplémentaires pour fonctionner correctement sur SteamDB, le store Steam et la communauté Steam."
+		"message": "Cette extension nécessite des permissions supplémentaires pour fonctionner correctement sur SteamDB, le magasin Steam et la communauté Steam."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Accorder les permissions"
 	},
 	"options_footer1": {
-		"message": "Fait avec 💙 par <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+		"message": "Fait avec le 💙 par <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
 		"message": "C'est <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, merci à tous les contributeurs !"
@@ -448,7 +448,7 @@
 		"message": "Accepter automatiquement lors d'une vente rapide"
 	},
 	"options_display_market_price_others": {
-		"message": "Afficher le prix du marché des articles dans les inventaires des autres utilisateurs"
+		"message": "Afficher le prix du marché des articles dans l'inventaire des autres utilisateurs"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Prendre en charge les paramètres $for_item$ et $my_item$",

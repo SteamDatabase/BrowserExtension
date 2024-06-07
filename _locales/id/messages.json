@@ -214,7 +214,7 @@
 	},
 	"badges_idle_apps": {
 		"message": "Aplikasi diam: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -224,7 +224,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Aplikasi yang menganggur di halaman ini: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -234,7 +234,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Drop yang tersisa: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -244,7 +244,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Drop yang tersisa di halaman ini: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -258,6 +258,15 @@
 	"hidden_achievement_hover": {
 		"message": "Pencapaian tersembunyi, arahkan mouse ke atas untuk mengungkapkannya: "
 	},
+	"inventory_list_at": {
+		"message": "Daftarkan di $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
 	"inventory_sell_at": {
 		"message": "Jual pada $price$",
 		"placeholders": {
@@ -267,8 +276,23 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "Daftarkan item dengan harga terendah\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa fees)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Daftarkan item dengan harga tertinggi\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa fees)"
+	},
 	"widget_view_app": {
 		"message": "Lihat app $id$ di SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Lihat sub $id$ di SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -309,6 +333,9 @@
 	"options_footer2": {
 		"message": "Ini adalah <a href=“https://github.com/SteamDatabase/BrowserExtension” target=“_blank”>sumber terbuka</a>, terima kasih kepada semua kontributor!"
 	},
+	"options_disabled_checkboxes": {
+		"message": "* Checkboxes yang dinonaktifkan menunjukkan fitur bawaan."
+	},
 	"options_header_website": {
 		"message": "Situs web SteamDB"
 	},
@@ -330,11 +357,32 @@
 	"options_website_explanation": {
 		"message": "Penjelasan"
 	},
+	"options_website_explanation1": {
+		"message": "Jika opsi ini diaktifkan, ekstensi akan meminta beberapa data pengguna (produk yang diinginkan, dimiliki, diikuti, diabaikan, dan produk dalam keranjang) dari <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> dan akan menggunakannya untuk di highlight."
+	},
+	"options_website_explanation2": {
+		"message": "Anda harus log in di store terlebih dahulu agar ini dapat berfungsi."
+	},
+	"options_extra_data": {
+		"message": "Data lain diambil dari steamdb.info"
+	},
+	"options_steamdb_last_update": {
+		"message": "Tampilkan terakhir diperbarui di halaman aplikasi"
+	},
 	"options_button_app": {
 		"message": "Menampilkan tombol di halaman aplikasi"
 	},
 	"options_button_pcgw": {
 		"message": "Menampilkan tombol PCGamingWiki di halaman aplikasi"
+	},
+	"options_button_video": {
+		"message": "Tampilkan tombol di halaman video"
+	},
+	"options_button_gamehub": {
+		"message": "Tampilkan tombol di game hubs"
+	},
+	"options_profile_calculator": {
+		"message": "Tambahkan tautan kalkulator di profil komunitas"
 	},
 	"options_enhancement_inventory_sidebar": {
 		"message": "Pindah pilihan permainan yang ada di halaman inventory ke samping"
@@ -353,6 +401,9 @@
 	},
 	"options_display_market_price_others": {
 		"message": "Tampilkan harga barang di inventory pengguna lainnya"
+	},
+	"options_github_explanation": {
+		"message": "Lihat penjelasan di GitHub"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Lewati halaman pemeriksaan usia"

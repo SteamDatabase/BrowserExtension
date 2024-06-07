@@ -214,7 +214,7 @@
 	},
 	"badges_idle_apps": {
 		"message": "Applicaties om stil te zetten: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -224,7 +224,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Inactieve applicaties op deze pagina: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",

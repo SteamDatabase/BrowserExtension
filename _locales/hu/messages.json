@@ -102,7 +102,7 @@
 		"message": "nincs kiválasztott elem"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB legkisebb rögzített ár <b>$price$</b>",
+		"message": "SteamDB legkisebb rögzített ára <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -111,7 +111,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB legkisebb rögzített ár <b>$price$</b> <b>-$discount$%</b>",
+		"message": "SteamDB legkisebb rögzített ára <b>$price$</b> <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -124,7 +124,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB legkisebb rögzített ár <b>$price$</b> és a 2 éves legalacsonyabb <b>$price_limited$</b>",
+		"message": "SteamDB legkisebb rögzített ára <b>$price$</b> és a 2 éves legalacsonyabb <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -173,7 +173,7 @@
 		"message": "Fedezd fel automatikusan a várólistát, hogy szerezz egy esemény kártyát."
 	},
 	"explore_generating": {
-		"message": "Új felfedezési várólista generálása meghiúsulhat, hogyha a Steam nagy terhelés alatt van…"
+		"message": "Új felfedezési várólista generálása, ez meghiúsulhat, ha a Steam nagy terhelés alatt van…"
 	},
 	"explore_exploring": {
 		"message": "Várólista felfedezése... Kérés $current$ az $total$",
@@ -212,9 +212,29 @@
 	"explore_finished": {
 		"message": "Várólista már fel lett fedezve."
 	},
+	"badges_idle_apps": {
+		"message": "Appok dropokkal: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Hátra maradt droppok az oldalon: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"badges_idle_drops": {
 		"message": "Hátra maradt droppok: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -224,7 +244,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Hátra maradt droppok az oldalon: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -256,8 +276,23 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "Az tárgyat a legalacsonyabb jegyzett eladási áron listázza\n\nA megjelenített ár az Ön által kapott pénzösszeg (díjak nélkül)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Az elemet a legmagasabb jegyzett eladási áron listázza\n\nA megjelenített ár az Ön által kapott pénzösszeg (díjak nélkül)"
+	},
 	"widget_view_app": {
 		"message": "$id$. alkalmazás megtekintése SteamDB-n",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "$id$ megtekintése a SteamDB-n",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -271,11 +306,23 @@
 	"options_welcome_title": {
 		"message": "👋 Köszi, hogy felraktad a SteamDB kiegészítőt!"
 	},
+	"options_welcome_description": {
+		"message": "Tekintse át az alábbi lehetőségeket, és kapcsolja be a kívántakat. Hogy a jövőben visszatérhessen ide:"
+	},
+	"options_welcome_option1": {
+		"message": "Beállítások oldal a SteamDB-n"
+	},
+	"options_welcome_option2": {
+		"message": "Fiók legördülő lista a Steam oldalakon"
+	},
 	"options_welcome_option3": {
 		"message": "Böngésződ bővítményoldala"
 	},
 	"options_review": {
 		"message": "Értékeld ezt a bővítményt"
+	},
+	"options_permissions_description": {
+		"message": "Ez a bővítmény további engedélyeket igényel a SteamDB, a Steam Store és a Steam Community megfelelő működéséhez."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Engedélyek megadása"
@@ -285,6 +332,9 @@
 	},
 	"options_footer2": {
 		"message": "Köszönhetően a közreműködőknek, a kiegészítő <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">nyílt forráskódú</a>!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* A letiltott jelölőnégyzetek a beépített funkciókat jelzik."
 	},
 	"options_header_website": {
 		"message": "SteamDB Weboldal"
@@ -311,19 +361,82 @@
 		"message": "Amikor ez az opció engedélyezve van, a kiegészítő felhasználói adatokat fog lekérdezni (kívánt, birtokolt, követett, mellőzött és a kosárban lévő termékekről) a <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam áruházból</a> és ezeket az adatokat fogja használni, hogy kiemelje őket az oldalon."
 	},
 	"options_website_explanation2": {
-		"message": "Ahhoz, hogy ez működjön be kell lépned az áruházba."
+		"message": "Ahhoz, hogy ez működjön, be kell lépned az áruházba."
 	},
 	"options_website_explanation3": {
 		"message": "Minden a böngésződben van tárolva és nincs elküldve a SteamDB-nek."
 	},
+	"options_website_explanation4": {
+		"message": "A Steam Store-ba irányuló túlzott kérések megelőzése érdekében az Ön felhasználói adatai a böngésző helyi tárolójában kerülnek gyorsítótárazásra."
+	},
 	"options_website_highlight": {
 		"message": "Birtokolt és kívánságlistán lévő termékek kiemelése a steamdb.info oldalon"
+	},
+	"options_website_highlight1": {
+		"message": "Kívánságlista, termékek követése és figyelmen kívül hagyása a Steam áruházban közvetlenül a SteamDB-ből"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Az ingyenes csomagok szkript engedélyezése</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Extra szűrés engedélyezése az <a href=\"https://steamdb.info/sales/\" target=\"_blank\">értékesítési oldalon</a> és a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">csomagok oldalon</a>"
+	},
+	"options_extra_data": {
+		"message": "A steamdb.info oldalról származó extra adatok"
+	},
+	"options_extra_data_players": {
+		"message": "Ha a „Jelenlegi egyidejű játékosok és maximális csúcsok megjelenítése az alkalmazás oldalain” vagy „Utolsó frissítés megjelenítése az alkalmazás oldalain” opciót engedélyezed, a bővítmény biztonságos kérést küld a steamdb.info oldalra, hogy lekérdezze a játékosok aktuális számát és a játék utolsó frissítését."
+	},
+	"options_extra_data_prices": {
+		"message": "Ha a „Legalacsonyabb rögzített ár megjelenítése az alkalmazás oldalain” opció engedélyezve van, a bővítmény biztonságos kérést küld a steamdb.info oldalra a valutáddal (amit a Steam annak vél), hogy megtudja egy adott játék rögzített árát."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "A legalacsonyabb rögzített ár megjelenítése az alkalmazás oldalain"
+	},
+	"options_online_stats": {
+		"message": "Egyidejű játékosok és csúcsok megjelenítése a játékoldalakon"
+	},
+	"options_steamdb_last_update": {
+		"message": "A legújabb frissítés megjelenítése a játék oldalán"
+	},
+	"options_button_app": {
+		"message": "Gomb megjelenítése az alkalmazás oldalain"
 	},
 	"options_button_pcgw": {
 		"message": "PCGamingWiki gomb megjelenítése alkalmazások oldalain"
 	},
+	"options_button_sub": {
+		"message": "Gomb megjelenítése a csomagoldalakon"
+	},
+	"options_button_video": {
+		"message": "Gomb megjelenítése a videóoldalakon"
+	},
 	"options_button_gamehub": {
 		"message": "Gomb megjelenítése a Közösségközpontokban"
+	},
+	"options_button_gamecards": {
+		"message": "SteamDB és áruház oldal gombok megjelenítése a játékkártyák oldalán"
+	},
+	"options_link_subid": {
+		"message": "SubID megjelenítése minden egyes vásárlási opció alatt"
+	},
+	"options_link_subid_widget": {
+		"message": "SubID megjelenítése az alkalmazás widgetjeiben"
+	},
+	"options_link_accountpage": {
+		"message": "Linkelje az egyes csomagokat az engedélyek oldalán"
+	},
+	"options_profile_calculator": {
+		"message": "Számológép link hozzáadása a közösségi profilokhoz"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "A leltároldalon lévő játékválasztás áthelyezése oldalra"
+	},
+	"options_link_inventory": {
+		"message": "Minden ajándékot és kupont a leltáradban a SteamDB-hez kapcsolj"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Helyesen állapítsa meg az ajándék SubID-t a leltárban"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne frissüljön a raktár tárgyak eladásakor"
@@ -334,8 +447,28 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Gyors eladás automatikus elfogadása"
 	},
+	"options_display_market_price_others": {
+		"message": "A tétel piaci árának megjelenítése más felhasználók leltárában"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "$for_item$ és $my_item$ paraméterek támogatása",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
 	"options_github_explanation": {
 		"message": "Magyarázatért lásd: GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "„Ez a kereskedés gyanúsnak tűnik” és „Biztos, hogy ez egy ajándék?” kereskedelmi ajánlat riasztások elnyomása"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Jobb hibaüzenetek megjelenítése a Valve rejtélyes hibaszámai helyett"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Korod hitelesítésének átugrása"
@@ -352,6 +485,9 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "A \"Steam telepítése\" gomb eltüntetése a fejlécben"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Rejtse el a „Megnyitás a Steamben” transzparenst"
 	},
 	"options_steamdb_rating": {
 		"message": "A SteamDB értékelés megjelenítése a termék oldalakon"
@@ -371,6 +507,14 @@
 	"options_prevent_store_images_description": {
 		"message": "Néhány fejlesztő megabájtnyi képeket helyeznek el a játék leírásokban amik növelik az oldal betöltéi sebességét. Kattints a képre a betöltéshez"
 	},
+	"options_enhancement_award_popup_url": {
+		"message": "$award$ paraméterek támogatása profil és megosztott fájl linkeken",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
 	"options_builtin_card_drops": {
 		"message": "Jelenítsd meg a teljes még kiszedhető kártyákat a kitűzők oldalon"
 	},
@@ -379,5 +523,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Globális játékstatisztikák oldal feljavítása"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link a saját teljesítmény oldaladra"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "A zárolt teljesítmények a jobb láthatóság érdekében egy zárolás ikonnal jelennek meg"
 	}
 }

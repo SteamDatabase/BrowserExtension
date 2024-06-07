@@ -1,12 +1,12 @@
 {
 	"extension_description": {
-		"message": "Додаје СтеамДБ линкове и нове функције ма Стеам продавницу и заједницу. Погледајте најниже цене игрица и њихову статистику."
+		"message": "Додаје SteamDB линкове и нове функције ма Стеам продавницу и заједницу. Погледајте најниже цене игрица и њихову статистику."
 	},
 	"steamdb_options": {
-		"message": "СтеамДБ подешавања"
+		"message": "SteamDB подешавања"
 	},
 	"steamdb_calculator": {
-		"message": "СтеамДБ калкулатор"
+		"message": "SteamDB калкулатор"
 	},
 	"steamstatus": {
 		"message": "Провери на steamstat.us"
@@ -15,7 +15,7 @@
 		"message": "Изгледа да Стеам тренутно има застој. "
 	},
 	"view_on_steamdb": {
-		"message": "Погледај на СтеамДБ"
+		"message": "Погледај на SteamDB"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Погледај на PCGamingWiki"
@@ -102,7 +102,7 @@
 		"message": "ништа није изабрано"
 	},
 	"app_lowest_price": {
-		"message": "СтеамДБ најмање забележена цена је <b>$price$</b>",
+		"message": "SteamDB најмање забележена цена је <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -111,7 +111,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "СтеамДБ најниже забележена цена је <b>$price$</b> на <b>-$discount$%</b>",
+		"message": "SteamDB најниже забележена цена је <b>$price$</b> на <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -124,7 +124,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "СтеамДБ најниже забележена цена је <b>$price$</b> и најнижа цена у претходне 2 године је <b>$price_limited$</b>",
+		"message": "SteamDB најниже забележена цена је <b>$price$</b> и најнижа цена у претходне 2 године је <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

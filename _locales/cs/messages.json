@@ -89,6 +89,12 @@
 	"app_stats_online_now": {
 		"message": "Právě online:"
 	},
+	"app_stats_peak_today": {
+		"message": "24hodinový vrchol:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Rekord:"
+	},
 	"app_stats_followers": {
 		"message": "Sledující:"
 	},
@@ -208,7 +214,7 @@
 	},
 	"badges_idle_apps": {
 		"message": "Aplikace k nečinnosti: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -218,7 +224,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Aplikace k neččinosti na této stránce: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -228,7 +234,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Zbývající Drops: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -238,7 +244,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Zbývající Drops na této stránce: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -252,6 +258,15 @@
 	"hidden_achievement_hover": {
 		"message": "Skrytý achievement, najeďte myší pro odhalení: "
 	},
+	"inventory_list_at": {
+		"message": "Prodat za $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
 	"inventory_sell_at": {
 		"message": "Prodat za $price$",
 		"placeholders": {
@@ -260,6 +275,12 @@
 				"example": "1,99€"
 			}
 		}
+	},
+	"inventory_list_at_title": {
+		"message": "Zobrazená cena je částka, kterou obdržíte (bez poplatků)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Zobrazená cena je částka, kterou obdržíte (bez poplatků)"
 	},
 	"widget_view_app": {
 		"message": "Zobrazit aplikaci $id$ na SteamDB",
@@ -276,11 +297,47 @@
 	"options_welcome_title": {
 		"message": "👋 Děkujeme za instalaci SteamDB rozšíření!"
 	},
+	"options_welcome_description": {
+		"message": "Prohlédněte si níže uvedené možnosti a zapněte ty, které chcete. Chcete-li se vrátit sem do budoucna:"
+	},
 	"options_welcome_option1": {
 		"message": "Stránka nastavení na SteamDB"
 	},
+	"options_welcome_option2": {
+		"message": "Rozbalovací seznam účtu na stránkách Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Stránka doplňků vašeho prohlížeče"
+	},
+	"options_review": {
+		"message": "Zanechat recenzi pro toto rozšíření"
+	},
+	"options_permissions_description": {
+		"message": "Toto rozšíření vyžaduje další oprávnění, aby správně fungovalo na SteamDB, Steam Store, a Steam komunitě."
+	},
 	"options_permissions_button": {
 		"message": "⚠️ Udělit oprávnění"
+	},
+	"options_footer1": {
+		"message": "Vyrobeno s 💙 lidmi od <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Je to <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, děkujeme všem, co přispěli!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Nezaškrklá políčka označují vestavěné funkce."
+	},
+	"options_header_website": {
+		"message": "Webové stránky SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Další data"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Tlačítka a odkazy"
+	},
+	"options_header_inventory": {
+		"message": "Inventář"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Neobnovujte inventář když prodáváte položku"

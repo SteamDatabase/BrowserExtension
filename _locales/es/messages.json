@@ -9,7 +9,7 @@
 		"message": "Calculadora de SteamDB"
 	},
 	"steamstatus": {
-		"message": "Comprobar en steamstat.us"
+		"message": "Comprobar en SteamStat.us"
 	},
 	"steamstatus_downtime": {
 		"message": "Parece que Steam está experimentando algún periodo de interrupción. "
@@ -21,7 +21,7 @@
 		"message": "Ver en PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Ver tus logros"
+		"message": "Consultar tus logros"
 	},
 	"store_page": {
 		"message": "Página de la tienda"
@@ -30,7 +30,7 @@
 		"message": "Buscar"
 	},
 	"id_app": {
-		"message": "Aplicación $id$",
+		"message": "App $id$",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -57,14 +57,14 @@
 		}
 	},
 	"app_steamdb_rating": {
-		"message": "Puntuación de SteamDB:"
+		"message": "Puntuación SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " PUNTUACIÓN DE STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "El $positive$ de $total$ reseñas son positivas (mediante todos los tipos de compra).",
+		"message": "$positive$ de las $total$ reseñas son positivas (todos los tipos de compra)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -77,7 +77,7 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Última Actualización:"
+		"message": "Última actualización:"
 	},
 	"app_depots_updated_short": {
 		"message": "Actualizado",
@@ -99,7 +99,7 @@
 		"message": "Seguidores:"
 	},
 	"app_nothing_selected": {
-		"message": "no se ha seleccionado nada"
+		"message": "nada seleccionado"
 	},
 	"app_lowest_price": {
 		"message": "El precio más bajo registrado en SteamDB es <b>$price$</b>",
@@ -137,7 +137,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Precio visto en $date$ ($relative$)",
+		"message": "Precio visto el $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -150,7 +150,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Precio visto $seen$ veces, la última en $date$ ($relative$)",
+		"message": "Precio visto $seen$ veces, la última el $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -167,7 +167,7 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Autodescubrir"
+		"message": "Descubrir automáticamente"
 	},
 	"explore_auto_discover_description": {
 		"message": "Descubre automáticamente la cola para obtener un cromo de evento."
@@ -176,7 +176,7 @@
 		"message": "Generando nueva cola de descubrimiento, esto puede fallar si Steam está sometido a una alta demanda…"
 	},
 	"explore_exploring": {
-		"message": "Explorando la cola… Solicitando $current$ de $total$",
+		"message": "Explorando la cola… Petición $current$ de $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -189,7 +189,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Se produjo un error al borrar el elemento de la cola n.º $current$, inténtelo de nuevo en cinco segundos…",
+		"message": "Error al eliminar el elemento #$current$ de la cola, se reintentará en cinco segundos…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -214,7 +214,7 @@
 	},
 	"badges_idle_apps": {
 		"message": "Aplicaciones con cromos: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -224,7 +224,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Aplicaciones con cromos en esta página: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -234,7 +234,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Cromos restantes: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -244,7 +244,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Cromos restantes en esta página: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -259,7 +259,7 @@
 		"message": "Logro oculto, mueve el ratón por encima para revelarlo: "
 	},
 	"inventory_list_at": {
-		"message": "Poner a la venta a $price$",
+		"message": "Listar a $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -280,10 +280,10 @@
 		"message": "Pone el artículo al precio de venta más bajo.\n\nEl precio mostrado es el dinero que recibes (sin comisiones)."
 	},
 	"inventory_sell_at_title": {
-		"message": "Pone el artículo al precio más alto de la orden de compra.\n\nEl precio mostrado es el dinero que recibes (sin comisiones)."
+		"message": "Lista el artículo al precio más alto del pedido de compra.\n\nEl precio mostrado es el dinero que recibes (sin tasas)"
 	},
 	"widget_view_app": {
-		"message": "Ver la $id$ de la aplicación en SteamDB",
+		"message": "Ver app $id$ en SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -310,13 +310,13 @@
 		"message": "Revisa las opciones a continuación y cambia las que prefieras. Para volver aquí en el futuro:"
 	},
 	"options_welcome_option1": {
-		"message": "Ajustes de SteamDB"
+		"message": "Página de ajustes en SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Cuenta desplegable en las páginas de Steam"
+		"message": "Menú desplegable de cuentas en las páginas de Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Extensiones de tu navegador"
+		"message": "Página de extensiones de tu navegador"
 	},
 	"options_review": {
 		"message": "Deja una reseña de esta extensión"

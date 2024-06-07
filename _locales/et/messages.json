@@ -1,4 +1,7 @@
 {
+	"extension_description": {
+		"message": "Lisab SteamDB lingid ja uued funktsioonid Steami poodi ja kogukonda. Vaadake mängude madalaimaid hindu ja statistikat."
+	},
 	"steamdb_options": {
 		"message": "SteamDB Sätted"
 	},
@@ -69,5 +72,8 @@
 	},
 	"options_website_explanation": {
 		"message": "Selgitus"
+	},
+	"options_website_explanation1": {
+		"message": "Kui see valik on lubatud, laiendus küsib mõningaid kasutajaandmeid (soovitud, ostetud, jälgitavad, eiratud tooted ja tooted ostukorvis) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam'i poest</a> ja kasutab neid saidil esiletõstmiseks."
 	}
 }

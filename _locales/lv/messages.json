@@ -25,5 +25,35 @@
 	},
 	"store_page": {
 		"message": "Veikals"
+	},
+	"search": {
+		"message": "Meklēt"
+	},
+	"id_app": {
+		"message": "Lietojumprogrammas $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Abonementa $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Komplekta $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
 	}
 }
