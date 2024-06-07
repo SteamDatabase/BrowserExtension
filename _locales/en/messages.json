@@ -493,7 +493,7 @@
 		"message": "Sets age and birthday cookies to always pass"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Remove all link filter links"
+		"message": "Remove all link filter links <i class=\"muted\">(\"You are leaving Steam\" page)</i>"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Accept SSA on market, inventory, and activate key pages automatically",
