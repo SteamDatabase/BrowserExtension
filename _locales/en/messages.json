@@ -461,9 +461,6 @@
 	"options_button_sub": {
 		"message": "Display a button on package pages"
 	},
-	"options_button_video": {
-		"message": "Display a button on video pages"
-	},
 	"options_button_gamehub": {
 		"message": "Display a button on game hubs"
 	},

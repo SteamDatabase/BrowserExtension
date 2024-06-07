@@ -253,21 +253,6 @@
 			]
 		},
 		{
-			"matches":
-			[
-				"https://store.steampowered.com/video/*"
-			],
-			"js":
-			[
-				"scripts/common.js",
-				"scripts/store/video.js"
-			],
-			"css":
-			[
-				"styles/store.css"
-			]
-		},
-		{
 			"run_at": "document_end",
 			"matches":
 			[
