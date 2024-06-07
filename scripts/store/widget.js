@@ -16,14 +16,14 @@ GetOption( { 'link-subid-widget': true }, function( items )
 	if( subid )
 	{
 		link.href = GetHomepage() + 'sub/' + subid.value + '/';
-		link.textContent = _t( 'widget_view_sub', subid.value );
+		link.textContent = _t( 'widget_view_sub', [ subid.value ] );
 	}
 	else
 	{
 		const appid = GetCurrentAppID();
 
 		link.href = GetHomepage() + 'app/' + appid + '/';
-		link.textContent = _t( 'widget_view_app', appid );
+		link.textContent = _t( 'widget_view_app', [ appid ] );
 	}
 
 	const container = document.createElement( 'p' );
