@@ -1,4 +1,4 @@
-name: crowdin-ci
+name: Upload to Crowdin
 
 on:
   push:

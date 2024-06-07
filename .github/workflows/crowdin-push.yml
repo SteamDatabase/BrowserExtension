@@ -1,4 +1,4 @@
-name: translations
+name: Push from Crowdin
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  update:
+  push:
     environment: dev-crowdin
     runs-on: ubuntu-latest
 
