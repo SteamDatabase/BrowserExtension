@@ -55,5 +55,72 @@
 				"example": "9846"
 			}
 		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB reitings:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB REITINGS",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ no $total$ ir pozitīvi (visi pirkuma veidi)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Pēdējo reizi atjaunots:"
+	},
+	"app_depots_updated_short": {
+		"message": "Atjaunināts",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Tiešsaistes statistika"
+	},
+	"app_stats_online_now": {
+		"message": "Pašlaik tiešsaistē:"
+	},
+	"app_stats_peak_today": {
+		"message": "24 stundu maksimums:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Visu laiku maksimums:"
+	},
+	"app_stats_followers": {
+		"message": "Sekotāji:"
+	},
+	"app_nothing_selected": {
+		"message": "nekas nav izvēlēts"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB zemākā reģistrētā cena ir <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB zemākā reģistrētā cena ir <b>$price$</b> uz <b>-$discount$%</b> atlaidi",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
 	}
 }

@@ -1,1 +1,41 @@
-{}
+{
+	"extension_description": {
+		"message": "מוסיף קישורי SteamDB ותכונות חדשות בחנות ובקהילה של Steam. צפה במחירי המשחקים ובסטטיסטיקה הנמוכים ביותר."
+	},
+	"steamdb_options": {
+		"message": "הגדרות SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "מחשבון SteamDB"
+	},
+	"steamstatus": {
+		"message": "בדוק ב-steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "נראה כי יש בעיות שרת ב-Steam. "
+	},
+	"view_on_steamdb": {
+		"message": "הצג ב-SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "הצג ב-PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "הצג את ההישגים שלך"
+	},
+	"store_page": {
+		"message": "עמוד המשחק בחנות"
+	},
+	"search": {
+		"message": "חיפוש"
+	},
+	"id_app": {
+		"message": "אפליקציה $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	}
+}

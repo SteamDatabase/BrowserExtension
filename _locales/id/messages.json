@@ -363,6 +363,24 @@
 	"options_website_explanation2": {
 		"message": "Anda harus log in di store terlebih dahulu agar ini dapat berfungsi."
 	},
+	"options_website_explanation3": {
+		"message": "Ini sepenuhnya terdapat di dalam browser anda dan tidak pernah dikirim ke pihak SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Untuk mencegah permintaan berlebihan ke Steam, data anda di-cache di penyimpanan lokal anda."
+	},
+	"options_website_highlight": {
+		"message": "Sorot produk yang dimiliki dan di-wishlist di steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Wishlist, follow, dan abaikan produk yang ada di Steam langsung ke SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Hidupkan script packages gratis</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Hidupkan filtering extra di <a href=\"https://steamdb.info/sales/\" target=\"_blank\">halaman diskon</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">halaman bundles</a>"
+	},
 	"options_extra_data": {
 		"message": "Data lain diambil dari steamdb.info"
 	},

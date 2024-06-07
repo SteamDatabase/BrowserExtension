@@ -64,7 +64,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$ incelemeden $positive$ olumlu (tüm satın alma türleri)",
+		"message": "$total$ incelemeden $positive$ olumlu (tüm satın alım türleri)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",

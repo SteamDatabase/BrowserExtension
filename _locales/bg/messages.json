@@ -312,6 +312,9 @@
 	"options_website_explanation2": {
 		"message": "Трябва да сте влезли в магазина, за да може тази опция да работи."
 	},
+	"options_website_explanation3": {
+		"message": "Това се съдържа изцяло във вашия браузър и никога не се изпраща до бекенда на SteamDB."
+	},
 	"options_website_highlight1": {
 		"message": "Добавяне към „Желани“, следване и игнориране на игри в магазина на Steam директно от SteamDB"
 	},

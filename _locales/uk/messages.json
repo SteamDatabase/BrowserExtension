@@ -21,7 +21,7 @@
 		"message": "Переглянути на PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Проглянути свої досягнення"
+		"message": "Переглянути свої досягнення"
 	},
 	"store_page": {
 		"message": "Сторінка в крамниці"
@@ -167,10 +167,10 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Авторозкриття"
+		"message": "Автодослідження"
 	},
 	"explore_auto_discover_description": {
-		"message": "Автоматично розкрити чергу знахідок та отримати картку події."
+		"message": "Автоматично дослідити чергу знахідок, щоб отримати картку події."
 	},
 	"explore_generating": {
 		"message": "Генеруємо нову чергу знахідок. Це може не спрацювати, якщо Steam перебуває під високим навантаженням…"
@@ -213,7 +213,7 @@
 		"message": "Чергу досліджено."
 	},
 	"badges_idle_apps": {
-		"message": "Застосунки з карточками: $amount$",
+		"message": "Застосунків з картками: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -223,7 +223,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Застосунки в простої на цій сторінці: $amount$",
+		"message": "Застосунків з картками на цій сторінці: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -233,7 +233,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Ще може випасти: $amount$",
+		"message": "Ще може випасти предметів: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -243,7 +243,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Ще може випасти на цій сторінці: $amount$",
+		"message": "Ще може випасти предметів на цій сторінці: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -256,7 +256,7 @@
 		"message": "Приховане досягнення: "
 	},
 	"hidden_achievement_hover": {
-		"message": "Приховане досягнення, наведіть вказівник миші для розкриття: "
+		"message": "Приховане досягнення, наведіть миш для розкриття: "
 	},
 	"inventory_list_at": {
 		"message": "Виставити за $price$",
@@ -322,7 +322,7 @@
 		"message": "Залиште відгук до цього розширення"
 	},
 	"options_permissions_description": {
-		"message": "Це розширення вимагає додаткових дозволів для коректної роботи на сайтах SteamDB, Крамниці Steam та Спільноті Steam."
+		"message": "Це розширення вимагає додаткових дозволів для коректної роботи на сайтах SteamDB, Крамниці Steam та Спільноти Steam."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Надати дозволи"
@@ -370,7 +370,7 @@
 		"message": "Щоб запобігти надмірним запитам до Крамниці Steam, ваші дані користувача кешуються у локальному сховищі вашого браузера."
 	},
 	"options_website_highlight": {
-		"message": "Виділити наявні та бажані товари на steamdb.info"
+		"message": "Виділяти наявні та бажані товари на steamdb.info"
 	},
 	"options_website_highlight1": {
 		"message": "Додавати до бажаного, відстежувати та ігнорувати товари в Крамниці Steam безпосередньо з SteamDB"

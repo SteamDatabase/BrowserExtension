@@ -48,7 +48,7 @@
 		}
 	},
 	"id_bundle": {
-		"message": "Pacote $id$",
+		"message": "Conjunto $id$",
 		"placeholders": {
 			"id": {
 				"content": "$1",

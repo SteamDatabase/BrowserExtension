@@ -213,7 +213,7 @@
 		"message": "Jono on tutkittu."
 	},
 	"badges_idle_apps": {
-		"message": "Sovelluksia idletettävänä: $amount$",
+		"message": "Sovelluksia jäljellä: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -223,7 +223,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Sovelluksia idletettävänä tällä sivulla: $amount$",
+		"message": "Sovelluksia jäljellä tällä sivulla: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {

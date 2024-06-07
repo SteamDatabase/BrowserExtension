@@ -1,1 +1,39 @@
-{}
+{
+	"steamdb_options": {
+		"message": "SteamDB Možnosti"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Calculator"
+	},
+	"view_on_steamdb": {
+		"message": "Pozrieť na SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Pozrieť na PCGamingWiki"
+	},
+	"store_page": {
+		"message": "Stránka Obchodu"
+	},
+	"search": {
+		"message": "Hľadať"
+	},
+	"app_depots_updated_short": {
+		"message": "Aktualizované",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online_now": {
+		"message": "Práve online:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-hour peak:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "All-time peak:"
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"options_header_inventory": {
+		"message": "Inventár"
+	}
+}

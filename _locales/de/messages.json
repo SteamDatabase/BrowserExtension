@@ -301,7 +301,7 @@
 		}
 	},
 	"options": {
-		"message": "Optionen"
+		"message": "Einstellungen"
 	},
 	"options_welcome_title": {
 		"message": "👋 Vielen Dank für die Installation der SteamDB-Erweiterung!"

@@ -451,7 +451,7 @@
 		"message": "عرض سعر السوق للعنصر في مخزونات المستخدمين الآخرين"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "دعم المعلمات $for_item$ و $my_item$",
+		"message": "دعم $for_item$ و $my_item$ المعلمات",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"

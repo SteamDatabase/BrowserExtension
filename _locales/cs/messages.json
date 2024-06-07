@@ -291,6 +291,15 @@
 			}
 		}
 	},
+	"widget_view_sub": {
+		"message": "Zobrazit sub $id$ na SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
 	"options": {
 		"message": "Možnosti"
 	},
@@ -339,6 +348,96 @@
 	"options_header_inventory": {
 		"message": "Inventář"
 	},
+	"options_header_trade_offers": {
+		"message": "Obchodní nabídky"
+	},
+	"options_header_enhancements": {
+		"message": "Rozšíření"
+	},
+	"options_website_explanation": {
+		"message": "Vysvětlení"
+	},
+	"options_website_explanation1": {
+		"message": "Pokud je tato možnost povolena, rozšíření bude vyžadovat některá uživatelská data (na seznamu přání, sledováno, ignorováno produkty), a produkty v košíku) z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> a budou tyto produkty používat pro zvýraznění na webu."
+	},
+	"options_website_explanation2": {
+		"message": "Aby toto fungovalo, musíte být přihlášeni do obchodu."
+	},
+	"options_website_explanation3": {
+		"message": "Toto je zcela obsaženo ve vašem prohlížeči a nikdy není odesílán ani na SteamDB backend."
+	},
+	"options_website_explanation4": {
+		"message": "Aby se zabránilo nadměrným požadavkům na Steam Store, jsou vaše uživatelská data uložena v místním úložišti vašeho prohlížeče."
+	},
+	"options_website_highlight": {
+		"message": "Zvýraznit vlastněné a přané produkty na Steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Seznam přání, sledovat a ignorovat produkty v Steam obchodě přímo ze SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Povolit skript</a> balíčků zdarma"
+	},
+	"options_website_highlight3": {
+		"message": "Povolit další filtrování na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">obchodní stránce</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčky</a>"
+	},
+	"options_extra_data": {
+		"message": "Extra data načtená ze steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "Pokud je volba \"Zobrazit aktuální přehrávače a maximální počet píků na stránkách aplikace\" nebo \"Zobrazit poslední aktualizaci na stránkách aplikace\" povolena, rozšíření provede bezpečný požadavek na steamdb.info pro získání aktuálního počtu hráčů a poslední aktualizace hry."
+	},
+	"options_extra_data_prices": {
+		"message": "Pokud je volba \"Zobrazit nejnižší zaznamenanou cenu na stránkách aplikace\" povolena, rozšíření provede bezpečný požadavek na steamdb.info s Vaší měnou (s tím, co si to myslí Steam), abyste získali zaznamenanou cenu za konkrétní hru."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Zobrazit nejnižší zaznamenanou cenu na stránce s aplikacemi"
+	},
+	"options_online_stats": {
+		"message": "Zobrazit aktuální hráče a maximální špičky na stránce s aplikacemi"
+	},
+	"options_steamdb_last_update": {
+		"message": "Zobrazit nejnovější aktualizaci hry na stránce s aplikacemi"
+	},
+	"options_button_app": {
+		"message": "Zobrazit tlačítko na stránce s aplikacemi"
+	},
+	"options_button_pcgw": {
+		"message": "Zobrazit tlačítko PCGamingWiki na stránce s aplikacemi"
+	},
+	"options_button_sub": {
+		"message": "Zobrazit tlačítko na stránce s balíčky"
+	},
+	"options_button_video": {
+		"message": "Zobrazit tlačítko na video stránkách"
+	},
+	"options_button_gamehub": {
+		"message": "Zobrazit tlačítko na stránce s game huby"
+	},
+	"options_button_gamecards": {
+		"message": "Zobrazit tlačítka stránky SteamDB a stránky obchodu na stránce s herními kartami"
+	},
+	"options_link_subid": {
+		"message": "Zobrazit subID pod každou možností nákupu"
+	},
+	"options_link_subid_widget": {
+		"message": "Zobrazit subID ve widgetech aplikací"
+	},
+	"options_link_accountpage": {
+		"message": "Propojit každý balíček na stránce s vašimi licencemi"
+	},
+	"options_profile_calculator": {
+		"message": "Přidat odkaz na kalkulačku v komunitních profilech"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Přesunout výběr hry na stránku inventáře na stranu"
+	},
+	"options_link_inventory": {
+		"message": "Propojit každý dárek a kupón ve vašem inventáři se SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Úspěšně načtíst dárkové SubID ve vašem inventáři"
+	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Neobnovujte inventář když prodáváte položku"
 	},
@@ -347,6 +446,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automaticky přijímat rychlý prodej"
+	},
+	"options_display_market_price_others": {
+		"message": "Zobrazit tržní cenu položky v inventáři ostatních uživatelů"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podpora parametrů $for_item$ a $my_item$",
@@ -361,5 +463,71 @@
 	},
 	"options_github_explanation": {
 		"message": "Viz vysvětlení na GitHubu"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Potlačit upozornění \"tento obchod se zdá podezřelý\" a \"Jste si jistí, že se jedná o dárek?\" na obchodních nabídkách"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Zobrazit lepší chybové zprávy, místo kryptických číselných chyb od Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Přeskočit stránku kontroly věku"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Nastaví věl a narozeninové cookies na vždy projít"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Odstranění odkazů z linkfiltru"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Automaticky přijímat SSA na trhu, inventář a aktivovat stránky s klíčem",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Skrýt tlačítko \"Instalovat Steam\" v záhlaví"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Skrýt \"Otevřít ve Steamu\" banner"
+	},
+	"options_steamdb_rating": {
+		"message": "Zobrazit hodnocení SteamDB na stránkáce s aplikacemi"
+	},
+	"options_enhancement_appicon": {
+		"message": "Zobrazit ikony aplikací v obchodě a komunitní stránce"
+	},
+	"options_hidden_achievements": {
+		"message": "Načíst skryté achievementy a jejich popisky"
+	},
+	"options_spoiler_achievements": {
+		"message": "Skrýt popisky za prvkem spoileru"
+	},
+	"options_prevent_store_images": {
+		"message": "Zastavit načítání obrázků na stránce obchodu s aplikacemi"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Někteří vývojáři vloží megabajty obrázků do popisku hry, které mohou chvíli trvat, než se načtou, klikněte na obrázek pro načtení"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Podporovat $award$ parametry profilu a sdílené odkazy na soubory",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Zobrazit celkový počet zbývajících karetních dropů na stránce s odznaky"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Přidat tlačítko pro podvádění fronty při prodeji"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Zlepšit stránku globálních achievementů"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Odkaz na vaši vlastní stránku s achievementy"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Uzamčené achievementy mají ikonu zámku pro větší viditelnost"
 	}
 }

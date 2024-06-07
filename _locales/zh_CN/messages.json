@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "在 Steam 商店和社区中添加 SteamDB 链接和新功能，查阅游戏史低价格和在线统计数据。"
+		"message": "在 Steam 商店和社区页面中添加 SteamDB 链接和新功能，可查阅游戏史低价格和在线统计数据。"
 	},
 	"steamdb_options": {
 		"message": "SteamDB 设置"
@@ -233,7 +233,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "剩余掉落数：$amount$",
+		"message": "剩余卡牌掉落数：$amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -243,7 +243,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "本页剩余掉落数：$amount$",
+		"message": "本页剩余卡牌掉落数：$amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -427,7 +427,7 @@
 		"message": "在您的许可页面上链接每个游戏包"
 	},
 	"options_profile_calculator": {
-		"message": "在个人资料页面上添加一个账号价值计算链接"
+		"message": "在个人资料页面上添加账号价值计算链接"
 	},
 	"options_enhancement_inventory_sidebar": {
 		"message": "将库存页面上的游戏筛选栏移到侧边"

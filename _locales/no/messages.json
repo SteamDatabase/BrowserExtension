@@ -58,5 +58,46 @@
 	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Rangering:"
+	},
+	"app_depots_update": {
+		"message": "Siste oppdatering:"
+	},
+	"app_depots_updated_short": {
+		"message": "Oppdatert",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online Statistikker"
+	},
+	"app_stats_followers": {
+		"message": "Følgere:"
+	},
+	"app_nothing_selected": {
+		"message": "ingenting er valgt"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB laveste registrerte pris er <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB laveste registrerte pris er <b>$price$</b> ved <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"options_welcome_title": {
+		"message": "👋 Takk for at du installerte SteamDB utvidelsen!"
 	}
 }
