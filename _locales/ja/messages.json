@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "SteamDB へのリンクと新機能を Steam ストアとコミュニティに追加します。また、ゲームの最低価格や統計を表示できます。"
+	},
+	"steamdb_options": {
+		"message": "SteamDB オプション"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB 計算ツール"
+	},
+	"steamstatus": {
+		"message": "steamstat.us でチェック"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam は現在、一時的なサービス停止が発生しているようです。 "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB で見る"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki で見る"
+	},
+	"view_your_achievements": {
+		"message": "あなたの実績を表示"
+	},
+	"store_page": {
+		"message": "ストアページ"
+	},
+	"search": {
+		"message": "検索"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB での評価:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " SteamDB での評価:",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ 件中 $positive$ 件のレビューが好評です (すべての購入タイプ)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "最終更新日:"
+	},
+	"app_depots_updated_short": {
+		"message": "更新日",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "オンライン統計情報"
+	},
+	"app_stats_online_now": {
+		"message": "現在のオンライン人数:"
+	},
+	"app_stats_peak_today": {
+		"message": "24時間のピーク:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "これまでの最大人数:"
+	},
+	"app_stats_followers": {
+		"message": "フォロワー数:"
+	},
+	"app_nothing_selected": {
+		"message": "何も選択されていません"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB 記録された最低価格は <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB 記録された最低価格は <b>$price$</b> で <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB 記録された最低価格は <b>$price$</b> で、過去 2 年間での最低価格は <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$ ($relative$) 時点での価格",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "価格は $seen$ 回、最後は $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "自動検索"
+	},
+	"explore_auto_discover_description": {
+		"message": "イベントカードを取得するためにキューを自動的に発見します。"
+	},
+	"explore_generating": {
+		"message": "ディスカバリーキューを生成中です。Steam に負荷がかかっている場合失敗する可能性があります..."
+	},
+	"explore_exploring": {
+		"message": "キーを探索中... $total$ 件中 $current$ 件をリクエスト",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "キューのアイテム #$current$ のクリアに失敗しました。5 秒後にやり直します...",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "キューのアイテム #$current$ のクリアに複数回失敗しました。時間を空けてやり直してください。",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "キューの生成に失敗しました。5 秒後にやり直します..."
+	},
+	"explore_finished": {
+		"message": "キューが探索されました。"
+	},
+	"badges_idle_apps": {
+		"message": "アイドル状態にするアプリ数: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "このページでアイドル状態にするアプリ数: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "残りのドロップ: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "このページに残っているドロップ: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "隠し実績: "
+	},
+	"hidden_achievement_hover": {
+		"message": "隠し実績。マウスオーバーで表示: "
+	},
+	"inventory_list_at": {
+		"message": "$price$ で販売",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "$price$で販売",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "最も低い販売価格でアイテムを販売\n\n表示価格は、あなたが受け取るお金です(手数料なし)。"
+	},
+	"inventory_sell_at_title": {
+		"message": "最も高い注文価格でアイテムを販売\n\n表示価格は、あなたが受け取るお金です(手数料なし)。"
+	},
+	"widget_view_app": {
+		"message": "SteamDB でApp $id$ を表示",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "SteamDB でSub $id$ を表示",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "オプション"
+	},
+	"options_welcome_title": {
+		"message": "👋 SteamDB 拡張機能をインストールしていただきありがとうございます！"
+	},
+	"options_welcome_description": {
+		"message": "以下のオプションを確認し、好みのオプションに切り替えます。今後ここに戻るには:"
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB の設定ページ"
+	},
+	"options_welcome_option2": {
+		"message": "Steam ページのアカウントのドロップダウンメニュー"
+	},
+	"options_welcome_option3": {
+		"message": "ブラウザのアドオンページ"
+	},
+	"options_review": {
+		"message": "この拡張機能のレビューを書く"
+	},
+	"options_permissions_description": {
+		"message": "この拡張機能は、SteamDB、Steam Store、Steam コミュニティで正しく動作するための追加の権限が必要です。"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ 権限を付与する"
+	},
+	"options_footer1": {
+		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> のみんなと💙を持って作られました。"
+	},
+	"options_footer2": {
+		"message": "<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">オープンソース</a> であり、すべてのコントリビューターに感謝しています！"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* 無効化されたチェックボックスは組み込み機能を示します。"
+	},
+	"options_header_website": {
+		"message": "SteamDB ウェブサイト"
+	},
+	"options_header_extra_data": {
+		"message": "追加データ"
+	},
+	"options_header_buttons_and_links": {
+		"message": "ボタンとリンク"
+	},
+	"options_header_inventory": {
+		"message": "インベントリ"
+	},
+	"options_header_trade_offers": {
+		"message": "トレードオファー"
+	},
+	"options_header_enhancements": {
+		"message": "機能強化"
+	},
+	"options_website_explanation": {
+		"message": "説明"
+	},
+	"options_website_explanation1": {
+		"message": "このオプションが有効の場合、拡張機能はいくつかのユーザーデータ (ウィッシュリスト、所有物、フォローした製品、カートに入っている製品) を <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam ストア</a> から取得し、サイトでのハイライトを適用するために使用します。"
+	},
+	"options_website_explanation2": {
+		"message": "この機能を利用するには、ストアにログインする必要があります。"
+	},
+	"options_website_explanation3": {
+		"message": "これはブラウザ内に完全に留まり、SteamDB バックエンドにも送信されることはありません。"
+	},
+	"options_website_explanation4": {
+		"message": "Steam ストアへの過剰なリクエストを防ぐため、ユーザーデータはブラウザのローカルストレージにキャッシュされます。"
+	},
+	"options_website_highlight": {
+		"message": "steamdb.info で所有しているかウィッシュリストの製品を強調表示する"
+	},
+	"options_website_highlight1": {
+		"message": "SteamDB から直接 Steam ストアの製品をウィッシュリストに追加、フォロー、無視する"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">フリーパッケージスクリプト</a> を有効化"
+	},
+	"options_website_highlight3": {
+		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">セールページ</a> および <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">バンドルページ</a> で追加フィルタリングを有効にする"
+	},
+	"options_extra_data": {
+		"message": "steamdb.info から取得した追加データ"
+	},
+	"options_extra_data_players": {
+		"message": "「現在の同時プレイヤー数と最大ピーク数をアプリページに表示」または「アプリページに最終更新日を表示」オプションが有効になっている場合、拡張機能は steamdb.info に安全なリクエストを行い、現在のプレイヤー数と最後のゲームの最終更新日を取得します。"
+	},
+	"options_extra_data_prices": {
+		"message": "「アプリページに最安価格を表示」オプションが有効になっている場合、拡張機能は steamdb.info に対して、あなたの通貨(Steam が認識している)で安全なリクエストを行い、特定のゲームの記録された価格を取得します。"
+	},
+	"options_steamdb_lowest_price": {
+		"message": "アプリページに最低価格を表示"
+	},
+	"options_online_stats": {
+		"message": "現在の同時プレイヤー数と最大ピーク数をアプリページに表示"
+	},
+	"options_steamdb_last_update": {
+		"message": "アプリページに最終更新日を表示"
+	},
+	"options_button_app": {
+		"message": "アプリページにボタンを表示"
+	},
+	"options_button_pcgw": {
+		"message": "アプリページに PCGamingWiki ボタンを表示"
+	},
+	"options_button_sub": {
+		"message": "パッケージページにボタンを表示"
+	},
+	"options_button_video": {
+		"message": "ビデオページにボタンを表示"
+	},
+	"options_button_gamehub": {
+		"message": "ゲームハブにボタンを表示"
+	},
+	"options_button_gamecards": {
+		"message": "ゲームカードのページに SteamDB とストアページボタンを表示"
+	},
+	"options_link_subid": {
+		"message": "各購入オプションにSubIDを表示"
+	},
+	"options_link_subid_widget": {
+		"message": "アプリウィジェットにSubIDを表示"
+	},
+	"options_link_accountpage": {
+		"message": "あなたのライセンスページで各パッケージをリンク"
+	},
+	"options_profile_calculator": {
+		"message": "コミュニティプロフィールに計算ツールへのリンクを追加"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "インベントリページでゲーム選択メニューをサイドに移動"
+	},
+	"options_link_inventory": {
+		"message": "あなたのインベントリ内の各ギフトとクーポンを SteamDB にリンク"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "インベントリ内のギフトSubIDを正しく把握"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "アイテムの販売時にインベントリを更新しない"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "クイックセルボタンを追加"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "自動的にクイックセルを承認"
+	},
+	"options_display_market_price_others": {
+		"message": "他のユーザーのインベントリにアイテムのマーケット価格を表示"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "$for_item$ と $my_item$ パラメータをサポート",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "GitHub で説明を見る"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "「このトレードは疑わしいようです」と「本当にこれはギフトですか？」のトレードオファーアラートを抑制"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Valveの不可解なエラー番号の代わりに、より良いエラーメッセージを表示"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "年齢確認ページをスキップ"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "年齢と誕生日のクッキーを常に渡すように設定します"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "すべてのリンクフィルタリンクを削除"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "マーケット、インベントリ、キー有効化ページでSSAに自動的に同意",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "ヘッダーの「Steam をインストール」ボタンを隠す"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "「Steam で開く」バナーを隠す"
+	},
+	"options_steamdb_rating": {
+		"message": "SteamDB での評価をアプリページに表示"
+	},
+	"options_enhancement_appicon": {
+		"message": "ストアとコミュニティページでアプリアイコンを表示する"
+	},
+	"options_hidden_achievements": {
+		"message": "隠し実績とその説明を読み込む"
+	},
+	"options_spoiler_achievements": {
+		"message": "ネタバレ要素で説明を隠す"
+	},
+	"options_prevent_store_images": {
+		"message": "アプリストアページで画像の読み込みを停止する"
+	},
+	"options_prevent_store_images_description": {
+		"message": "ゲーム概要欄に読み込みに時間がかかる数メガバイトの画像を入れる開発者もいます。画像をクリックして読み込めるようになります。"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "プロファイルと共有ファイルのリンクで $award$ パラメータをサポート",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "バッジページにカードドロップの残り枚数を表示"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "セール中にディスカバリーキューをチートするボタンを追加する"
+	},
+	"options_builtin_achievements_global": {
+		"message": "グローバル実績ページの改善"
+	},
+	"options_builtin_achievements_link": {
+		"message": "自分の実績ページへのリンク"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "ロックされた実績にはロックアイコンを表示"
+	}
+}

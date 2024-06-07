@@ -1,1 +1,62 @@
-{}
+{
+	"extension_description": {
+		"message": "Legger til SteamDB lenker og nye funksjoner i Steam-butikken og samfunnet. Se laveste spillpriser og statistikk."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Innstillinger"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Kalkulator"
+	},
+	"steamstatus": {
+		"message": "Sjekk på steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Det ser ut til at Steam opplever noe nedetid. "
+	},
+	"view_on_steamdb": {
+		"message": "Vis på SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Vis på PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Se dine prestasjoner"
+	},
+	"store_page": {
+		"message": "Butikkside"
+	},
+	"search": {
+		"message": "Søk"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bunte $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Rangering:"
+	}
+}

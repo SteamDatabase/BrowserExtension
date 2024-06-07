@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "Lägger till SteamDB-länkar och nya funktioner i Steam-butiken och Steam-gemenskapen. Visa lägsta priser och statistik."
+	},
+	"steamdb_options": {
+		"message": "SteamDB-inställningar"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB-kalkylator"
+	},
+	"steamstatus": {
+		"message": "Kontrollera steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam verkar ha ett driftstopp. "
+	},
+	"view_on_steamdb": {
+		"message": "Visa på SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Visa på PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Se dina prestationer"
+	},
+	"store_page": {
+		"message": "Butikssida"
+	},
+	"search": {
+		"message": "Sök"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Paket $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB-betyg:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB-BETYG",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ av $total$ recensioner är positiva (alla typer av köp)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Senast Uppdaterad:"
+	},
+	"app_depots_updated_short": {
+		"message": "Uppdaterad",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online-statistik"
+	},
+	"app_stats_online_now": {
+		"message": "Online nu:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-timmarstopp:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Toppnotering:"
+	},
+	"app_stats_followers": {
+		"message": "Följare:"
+	},
+	"app_nothing_selected": {
+		"message": "ingenting valt"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB:s lägsta registrerade pris är <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB:s lägsta noterade pris är <b>$price$</b> med <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Tidigare lägsta pris på SteamDB var <b>$price$</b> och 2 års-lägsta var <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Pris noterat den $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Priset har setts $seen$ gånger, senast den $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Utforska automatiskt"
+	},
+	"explore_auto_discover_description": {
+		"message": "Utforska kön automatiskt för att få ett event-samlarkort."
+	},
+	"explore_generating": {
+		"message": "Genererar ny discovery-kö, detta kan misslyckas om Steam är under hög belastning…"
+	},
+	"explore_exploring": {
+		"message": "Utforskar kön… Begär $current$ av $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Misslyckades med köartikel #$current$, försöker igen om fem sekunder…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Köobjekt #$current$ misslyckades för många gånger. Du kan försöka igen senare.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Misslyckades med att generera ny kö, försöker igen om fem sekunder…"
+	},
+	"explore_finished": {
+		"message": "Kön har utforskats."
+	},
+	"badges_idle_apps": {
+		"message": "Appar att idle:a: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Appar att spela passivt på den här sidan: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Återstående kort: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Återstående samlarkort på den här sidan: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Dold prestation: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Dold prestation, hovra muspekaren över för att avslöja: "
+	},
+	"inventory_list_at": {
+		"message": "Lägg upp för försäljning för $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Sälj för $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Lägg upp för försäljning för det lägsta efterfrågade försäljningspris\n\nVisat pris är de pengar du får (utan avgifter)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Lägg upp för försäljning för det högsta efterfrågade försäljningspris\n\nVisat pris är de pengar du får (utan avgifter)"
+	},
+	"widget_view_app": {
+		"message": "Visa app $id$ på SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Visa sub $id$ på SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Inställningar"
+	},
+	"options_welcome_title": {
+		"message": "👋 Tack för att du installerade SteamDB-tillägget!"
+	},
+	"options_welcome_description": {
+		"message": "Granska alternativen nedan och växla mellan dem du föredrar. För att komma tillbaka hit i framtiden:"
+	},
+	"options_welcome_option1": {
+		"message": "Inställningssidan på SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Rullgardinsmeny för konton på Steam-sidor"
+	},
+	"options_welcome_option3": {
+		"message": "Din webbläsares tilläggssida"
+	},
+	"options_review": {
+		"message": "Lämna ett omdöme för detta tillägg"
+	},
+	"options_permissions_description": {
+		"message": "Detta tillägg behöver ytterligare tillstånd för att fungera korrekt på SteamDB, Steam-butiken och på Steam-gemenskapen."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Bevilja tillstånd"
+	},
+	"options_footer1": {
+		"message": "Gjord med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Detta tillägg är <a href=”https://github.com/SteamDatabase/BrowserExtension” target=”_blank”>open source</a>, tack till alla inblandade!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Ofyllda kryssrutor indikerar inbyggda funktioner."
+	},
+	"options_header_website": {
+		"message": "SteamDB:s webbplats"
+	},
+	"options_header_extra_data": {
+		"message": "Extra information"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Knappar och länkar"
+	},
+	"options_header_inventory": {
+		"message": "Föremålsförråd"
+	},
+	"options_header_trade_offers": {
+		"message": "Bytesförslag"
+	},
+	"options_header_enhancements": {
+		"message": "Förbättringar"
+	},
+	"options_website_explanation": {
+		"message": "Förklaring"
+	},
+	"options_website_explanation1": {
+		"message": "När denna inställning är aktiverad så kommer tillägget att begära användardata (önskelistade, ägda, följda, ignorerade produkter och produkter i varukorgen) från <a href=”https://store.steampowered.com/dynamicstore/userdata/” target=”_blank”>Steam-butiken</a> och använda dessa för att tillämpa färgmarkeringar på webbplatsen."
+	},
+	"options_website_explanation2": {
+		"message": "Du måste vara inloggad i butiken för att detta ska fungera."
+	},
+	"options_website_explanation3": {
+		"message": "Detta finns helt och hållet i din webbläsare och skickas aldrig till SteamDB:s servrar."
+	},
+	"options_website_explanation4": {
+		"message": "För att förhindra alltför många förfrågningar till Steam så sparas din användardata temporärt i webbläsarens lokala lagringsutrymme."
+	},
+	"options_website_highlight": {
+		"message": "Markera ägda och önskade produkter på steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Lägg till i önskelistan, följ och ignorera produkter på Steam direkt från SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Aktivera skriptet för kostnadsfria paket</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Aktivera extra filter på SteamDBs sidor om <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prissänkta produkter</a> och <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">paketerbjudande</a>"
+	},
+	"options_extra_data": {
+		"message": "Ytterligare information hämtad från steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "När alternativet ”Visa antal spelare och maximalt antal spelare på appsidor” eller ”Visa senaste ändringen på appsidor” är aktiverat kommer tillägget att göra en säker förfrågan till steamdb.info för att få det aktuella antalet spelare och den senaste speluppdateringen."
+	},
+	"options_extra_data_prices": {
+		"message": "När ”Visa det lägsta registrerade priset på appsidor” är aktiverat kommer tillägget göra en säker begäran till steamdb.info med din valuta (med det Steam tror att din valuta är) för att få det registrerade priset för ett specifikt spel."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Visa det lägsta registrerade priset på appsidor"
+	},
+	"options_online_stats": {
+		"message": "Visa aktuella samtidiga spelare och max peaks på appsidor"
+	},
+	"options_steamdb_last_update": {
+		"message": "Visa den senaste uppdateringen på appsidor"
+	},
+	"options_button_app": {
+		"message": "Visa en knapp på appsidor"
+	},
+	"options_button_pcgw": {
+		"message": "Visa en PCGamingWiki knapp på appsidor"
+	},
+	"options_button_sub": {
+		"message": "Visa en knapp på paketsidor"
+	},
+	"options_button_video": {
+		"message": "Visa en knapp på videosidor"
+	},
+	"options_button_gamehub": {
+		"message": "Visa en knapp på spelhubbar"
+	},
+	"options_button_gamecards": {
+		"message": "Visa SteamDB och butikknappar på spelkortsidan"
+	},
+	"options_link_subid": {
+		"message": "Visa SubID under varje köpalternativ"
+	},
+	"options_link_subid_widget": {
+		"message": "Visa SubID i appwidgets"
+	},
+	"options_link_accountpage": {
+		"message": "Länka varje paket på din licenssida"
+	},
+	"options_profile_calculator": {
+		"message": "Lägg till en kalkylatorlänk på gemenskapsprofiler"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Flytta spelväljaren i förrådet åt sidan"
+	},
+	"options_link_inventory": {
+		"message": "Länka varje gåva och kupong i ditt förråd till SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Lista ut SubID för gåva i ditt förråd"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Ladda inte om förrådet när en artikel säljs"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Lägg till snabbsäljningsknappar"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Acceptera snabbförsäljning automatiskt"
+	},
+	"options_display_market_price_others": {
+		"message": "Visa artiklars värde i andra användares förråd"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Stöd för $for_item$ och $my_item$ parametrar",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Se förklaring på GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Dölj \"denna handel verkar misstänksam\" och \"är du säker på att detta är en gåva?\" bytesvarningar"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Visa bättre felmeddelanden, istället för Valves kryptiska felnummer"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Hoppa över ålderkontrollssidan"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Anger ålder och födelsedagskakor för att hoppa över ålderskontrollen"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Ta bort alla länkfilterlänkar"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Acceptera SSA på marknaden, förrådet och på nyckelaktiveringssidor automatiskt",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Dölj \"Installera Steam\" knappen"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Dölj \"Öppna i Steam\" bannern"
+	},
+	"options_steamdb_rating": {
+		"message": "Visa SteamDB betyg på appsidor"
+	},
+	"options_enhancement_appicon": {
+		"message": "Visa appikoner på butik och gemenskapssidor"
+	},
+	"options_hidden_achievements": {
+		"message": "Ladda dolda prestationer och deras beskrivningar"
+	},
+	"options_spoiler_achievements": {
+		"message": "Dölj beskrivningar bakom spoilers"
+	},
+	"options_prevent_store_images": {
+		"message": "Stoppa bilder från att ladda på appbutikssidor"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Vissa utvecklare lägger flera megabyte av bilder i spelbeskrivningar vilket kan ta ett tag att ladda. Klicka på en bild för att ladda"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Stöd för $award$ parametrar på profil och delade fillänkar",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Visa återstånde kort som kan hittas på märkessidan"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Lägg till en knapp för att fuska discovery-kön under reor"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Förbättra sidan för globala prestationer"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Länka till din egna prestationssida"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Låsta prestationer har en låsikon för bättre synlighet"
+	}
+}

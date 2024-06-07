@@ -1,0 +1,533 @@
+{
+	"extension_description": {
+		"message": "Pridėtos SteamDB nuorodos ir naujos funkcijos Steam parduotuvėje ir bendruomenėje. Peržiūrėkite mažiausias žaidimų kainas ir statistiką."
+	},
+	"steamdb_options": {
+		"message": "SteamDB nustatymai"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB kalkuliatorius"
+	},
+	"steamstatus": {
+		"message": "Patikrinti per steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Atrodo, kad Steam patiria tam tikrą veiklos sutrikimą. "
+	},
+	"view_on_steamdb": {
+		"message": "Peržiūrėti per SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Peržiūrėti per PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Peržiūrėkite savo pasiekimus"
+	},
+	"store_page": {
+		"message": "Parduotuvės tinklalapis"
+	},
+	"search": {
+		"message": "Ieškoti"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB reitingas:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB REITINGAS",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ iš $total$ atsiliepimų yra teigiami (visi pirkimo tipai)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Paskutinį kartą atnaujinta:"
+	},
+	"app_depots_updated_short": {
+		"message": "Atnaujinta",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Interneto statistika"
+	},
+	"app_stats_online_now": {
+		"message": "Dabar prisijungę:"
+	},
+	"app_stats_peak_today": {
+		"message": "24 valandų pikas:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Visų laikų pikas:"
+	},
+	"app_stats_followers": {
+		"message": "Sekėjų:"
+	},
+	"app_nothing_selected": {
+		"message": "niekas nepasirinkta"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB mažiausia užfiksuota kaina yra <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB mažiausia užfiksuota kaina yra <b>$price$</b> su <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB žemiausia užfiksuota kaina yra <b>$price$</b> o 2 metų žemiausia kaina yra <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Kainos, matytos $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Kaina matyta $seen$ kartų, paskutinį kartą $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automatinis atradimas"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automatiškai atrasti eilę ir gauti įvykio kortelę."
+	},
+	"explore_generating": {
+		"message": "Generuojama nauja atradimo eilė, tai gali nepavykti, jei Steam yra labai apkrautas…"
+	},
+	"explore_exploring": {
+		"message": "Tyrinėjama eilė... Reikalaujame $current$ iš $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Nepavyko išvalyti eilės įrašo #$current$, bandysime dar kartą po penkių sekundžių…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nepavyko išvalyti eilės įrašo #$current$ per daug kartų. Jūs galite pabandyti dar kartą vėliau.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Nepavyko sugeneruoti naujos eilės, bandysime dar kartą po penkių sekundžių…"
+	},
+	"explore_finished": {
+		"message": "Išnagrinėta eilė."
+	},
+	"badges_idle_apps": {
+		"message": "Programos, kuriomis idle'inti: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Programos, kuriomis idle'inti šiame puslapyje: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Likusių numetimų: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Likę numetimai šiame puslapyje: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Paslėptas pasiekimas: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Paslėptas pasiekimas, užveskite pelę, kad atskleistumėte: "
+	},
+	"inventory_list_at": {
+		"message": "Sąrašas su $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Parduoti už $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Pateikia prekę už mažiausią nurodytą pardavimo kainą\n\nRodoma kaina yra pinigai, kuriuos gaunate (be mokesčių)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Pateikia prekę už didžiausią nurodytą pirkimo užsakymo kainą\n\nRodoma kaina - tai pinigai, kuriuos gaunate (be mokesčių)"
+	},
+	"widget_view_app": {
+		"message": "Peržiūrėti programą $id$ per SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Peržiūrėti sub $id$ per SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Nustatymai"
+	},
+	"options_welcome_title": {
+		"message": "👋 Ačiū, kad įdiegėte SteamDB plėtinį!"
+	},
+	"options_welcome_description": {
+		"message": "Peržvelkite žemiau pateiktas parinktis ir perjunkite tas, kurios yra jums priimtiniausios. Norėdami grįžti čia ateityje:"
+	},
+	"options_welcome_option1": {
+		"message": "Nustatymų puslapis per SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Paskyros išskleidžiamoji eilutė ant Steam puslapių"
+	},
+	"options_welcome_option3": {
+		"message": "Jūsų naršyklės priedų puslapis"
+	},
+	"options_review": {
+		"message": "Palikite atsiliepimą apie šį plėtinį"
+	},
+	"options_permissions_description": {
+		"message": "Šis plėtinys turi turėti papildomų leidimų, kad teisingai veiktų SteamDB, Steam parduotuvėje ir Steam bendruomenėje."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Suteikti leidimus"
+	},
+	"options_footer1": {
+		"message": "Pagaminta su 💙 pagal <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> žmones."
+	},
+	"options_footer2": {
+		"message": "Tai <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">atviro kodo programa</a>, ačiū visiems prisidėjusiems!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Išjungti žymimi langeliai žymi integruotas funkcijas."
+	},
+	"options_header_website": {
+		"message": "SteamDB svetainė"
+	},
+	"options_header_extra_data": {
+		"message": "Papildomi duomenys"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Mygtukai ir nuorodos"
+	},
+	"options_header_inventory": {
+		"message": "Inventorius"
+	},
+	"options_header_trade_offers": {
+		"message": "Keitimo pasiūlymai"
+	},
+	"options_header_enhancements": {
+		"message": "Patobulinimai"
+	},
+	"options_website_explanation": {
+		"message": "Paaiškinimas"
+	},
+	"options_website_explanation1": {
+		"message": "Kai ši parinktis įjungta, papildinys paprašys kai kurių naudotojo duomenų (pageidaujamų, turimų, sekamų, ignoruojamų produktų ir produktų krepšelyje) iš <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam parduotuvės</a> ir panaudos šitos paryškinti juos svetainėje."
+	},
+	"options_website_explanation2": {
+		"message": "Turite būti prisijungę prie parduotuvės, kad tai veiktų."
+	},
+	"options_website_explanation3": {
+		"message": "Tai yra tik jūsų naršyklėje ir niekada nesiunčiama net į SteamDB galinę dalį."
+	},
+	"options_website_explanation4": {
+		"message": "Tam, kad būtų išvengta pernelyg didelių užklausų Steam parduotuvėje, jūsų naudotojo duomenys yra talpinami vietinėje naršyklės saugykloje."
+	},
+	"options_website_highlight": {
+		"message": "Paryškinti turimus ir pageidaujamus produktus steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Pageidavimų sąrašas, sekimas ir prekių ignoravimas ant Steam parduotuvės tiesiai iš SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Įjunkite nemokamų paketų skriptą</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Įjungti papildomą filtravimą <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> pardavimų puslapyje</a> ir <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">komplektų puslapyje</a>"
+	},
+	"options_extra_data": {
+		"message": "Papildomi duomenys, paimti iš steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "Kai įjungta parinktis „Rodyti dabartinius vienu metu žaidžiančius žaidėjus ir didžiausius pikus programos puslapiuose“ arba „Rodyti paskutinį atnaujinimą programos puslapiuose“, plėtinys atliks saugią užklausą į steamdb.info, kad gautų dabartinį žaidėjų skaičių ir paskutinį žaidimo atnaujinimą."
+	},
+	"options_extra_data_prices": {
+		"message": "Kai \"Rodyti mažiausią užregistruotą kainą programų puslapiuose\" parinktis yra įjungta, plėtinys atliks saugų užklausima į steamdb.info su jūsų valiuta (su tokia, kokia Steam mano esant), kad gautų užregistruotą konkretaus žaidimo kainą."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Rodyti mažiausią užregistruotą kainą programų puslapiuose"
+	},
+	"options_online_stats": {
+		"message": "Rodyti dabar esamus vienu metu žaidžiančius žaidėjus ir didžiausią piką programėlės puslapiuose"
+	},
+	"options_steamdb_last_update": {
+		"message": "Rodyti paskutinį atnaujinimą programų puslapiuose"
+	},
+	"options_button_app": {
+		"message": "Rodyti mygtuką programėlių puslapiuose"
+	},
+	"options_button_pcgw": {
+		"message": "Rodyti PCGamingWiki mygtuką programų puslapiuose"
+	},
+	"options_button_sub": {
+		"message": "Rodyti mygtuką paketų puslapiuose"
+	},
+	"options_button_video": {
+		"message": "Rodyti mygtuką vaizdo įrašų puslapiuose"
+	},
+	"options_button_gamehub": {
+		"message": "Rodyti mygtuką ant žaidimo centrų"
+	},
+	"options_button_gamecards": {
+		"message": "Rodyti SteamDB ir parduotuvės puslapio mygtukus ant žaidimo kortelių puslapio"
+	},
+	"options_link_subid": {
+		"message": "Rodyti SubID po kiekvienu pirkinio pasirinkimu"
+	},
+	"options_link_subid_widget": {
+		"message": "Rodyti SubID programos valdikliuose"
+	},
+	"options_link_accountpage": {
+		"message": "Susieti kiekvieną paketą savo licencijų puslapyje"
+	},
+	"options_profile_calculator": {
+		"message": "Pridėti nuorodą į kalkuliatorių ant bendruomenės profilių"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Perkelti žaidimo pasirinkimą inventoriaus puslapyje į šoną"
+	},
+	"options_link_inventory": {
+		"message": "Susieti kiekvieną dovaną ir kuponą savo inventoriuje su SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Teisingai išsiaiškinkite dovanų SubID jūsų inventoriuje"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Neatnaujinti inventoriaus parduodant prekę"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Pridėti greito pardavimo mygtukus"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automatiškai priimti greitą pardavimą"
+	},
+	"options_display_market_price_others": {
+		"message": "Rodyti prekės rinkos kainą kitų naudotojų inventoriuje"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Palaikomi $for_item$ ir $my_item$ parametrai",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Žiūrėti paaiškinimą per GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Slopinti įspėjimus \"šis sandoris atrodo įtartinas\" ir \"ar esate tikri, kad tai dovana?\" apie siūlomus pasikeitimus"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Rodyti geresnius klaidų pranešimus, o ne Valve paslaptingų klaidų numerius"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Praleisti amžiaus patikrinimo puslapį"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Nustato, kad amžiaus ir gimtadienio slapukai visada būtų perduodami"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Pašalinti visas nuorodų filtro nuorodas"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Priimti SSA rinkoje, inventoriuje ir automatiškai aktyvuoti raktų puslapius",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Paslėpti \"Įdiegti Steam\" mygtuką antraštėje"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Paslėpti \"Atidaryti per Steam\" užrašą"
+	},
+	"options_steamdb_rating": {
+		"message": "Rodyti SteamDB reitingą programų puslapiuose"
+	},
+	"options_enhancement_appicon": {
+		"message": "Rodyti programėlių piktogramas parduotuvės ir bendruomenės puslapiuose"
+	},
+	"options_hidden_achievements": {
+		"message": "Pakrauti paslėptus pasiekimus ir jų aprašymus"
+	},
+	"options_spoiler_achievements": {
+		"message": "Paslėpti aprašymus už spoilerio elemento"
+	},
+	"options_prevent_store_images": {
+		"message": "Sustabdyti vaizdų krovimą programų parduotuvės puslapiuose"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Kai kurie žaidimų kūrėjai deda megabaitinius paveikslėlius į žaidimų aprašymus, kurių įkėlimas gali užtrukti, spustelėkite ant paveikslėlio, kad jis būtų įkeltas"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Palaikyti $award$ parametrus profilio ir bendrųjų failų nuorodose",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Rodyti bendrą likusių kortelių kiekį ženklelio puslapyje"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Pridėti mygtuką, skirtą apgauti atradimo eilę pardavimo metu"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Patobulinkite pasaulio pasiekimų puslapį"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Susieti su savo pasiekimų puslapiu"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Užrakinti pasiekimai turi užrakto piktogramą, kad būtų geriau matomi"
+	}
+}

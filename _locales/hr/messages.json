@@ -1,0 +1,139 @@
+{
+	"extension_description": {
+		"message": "Dodaje SteamDB Linkove i nova svosjtva na Steam Prodavnicu i zajednici. Provjeri najniže cijene i statistike."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Postavke"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Kalkulator"
+	},
+	"steamstatus": {
+		"message": "Provjeri na steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Izgldea da Steam je trenutačno nedustupan. "
+	},
+	"view_on_steamdb": {
+		"message": "Pogledaj na SteamDB-u"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Pogledaj na PCGamingWiki-u"
+	},
+	"view_your_achievements": {
+		"message": "Pogledaj svoja Dostignuča"
+	},
+	"store_page": {
+		"message": "Prodajna Stranica"
+	},
+	"search": {
+		"message": "Pretraga"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Pod $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Paket $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Ocjena:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB OCJENA",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ od $total$ recenzija je positivno (Svih kupovni tipova)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Zdanji Update:"
+	},
+	"app_depots_updated_short": {
+		"message": "Updajtovano",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online Statistike"
+	},
+	"app_stats_online_now": {
+		"message": "Trenutačno Online:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-Satni Vrhunac:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Vrhunac Svih Vremena:"
+	},
+	"app_stats_followers": {
+		"message": "Pratioci:"
+	},
+	"app_nothing_selected": {
+		"message": "nije ništa izabrano"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB-ova naj niža zapračena cijena je <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB-ova naj niža zapračena cijene je <b>$price$</b> na <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Cijena viđena $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	}
+}

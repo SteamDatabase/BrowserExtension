@@ -1,0 +1,51 @@
+{
+	"app_depots_update": {
+		"message": "Huling Update:"
+	},
+	"app_stats_online": {
+		"message": "Estadistika ng Online"
+	},
+	"app_stats_online_now": {
+		"message": "Online ngayon:"
+	},
+	"app_stats_peak_today": {
+		"message": "Pinakamataas sa loob ng 24 na oras:"
+	},
+	"app_lowest_price": {
+		"message": "Ang pinakamababang naitalang presyo sa SteamDB ay <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Ang pinakamababang naitalang presyo sa SteamDB ay <b>$price$</b> na may <b>-$discount$%</b> na bawas",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Nakatagong achievement: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Nakatagong achievement, i-hover para makita: "
+	},
+	"widget_view_app": {
+		"message": "Tingnan ang app $id$ sa SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	}
+}

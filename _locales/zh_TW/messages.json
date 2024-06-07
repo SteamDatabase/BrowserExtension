@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "在 Steam 商店和社群中加入 SteamDB 連結和新功能。查看最低遊戲價格和統計數據。"
+	},
+	"steamdb_options": {
+		"message": "SteamDB 選項"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB 計算機"
+	},
+	"steamstatus": {
+		"message": "檢查 steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam 似乎遇到了停機時間。 "
+	},
+	"view_on_steamdb": {
+		"message": "在 SteamDB 上檢視"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "在 PCGamingWiki 上檢視"
+	},
+	"view_your_achievements": {
+		"message": "檢視您的成就"
+	},
+	"store_page": {
+		"message": "商店頁面"
+	},
+	"search": {
+		"message": "搜尋"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB 評分:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB 評分",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ 則評論中的 $positive$ 為正面評價（所有購買類型）",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "最後更新："
+	},
+	"app_depots_updated_short": {
+		"message": "已更新",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "線上統計"
+	},
+	"app_stats_online_now": {
+		"message": "現已上線："
+	},
+	"app_stats_peak_today": {
+		"message": "24小時高峰："
+	},
+	"app_stats_alL_time_peak": {
+		"message": "歷史最高點："
+	},
+	"app_stats_followers": {
+		"message": "關注者："
+	},
+	"app_nothing_selected": {
+		"message": "未選擇任何內容"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB 最低記錄價格為 <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB 最低記錄價格為 <b>$price$</b>，價格為 <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB 最低記錄價格為 <b>$price$</b>，2 年最低價為 <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$ 看到的價格（$relative$）",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "價格已查看 $seen$ 次，上次日期為 $date$（$relative$）",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "自動探索"
+	},
+	"explore_auto_discover_description": {
+		"message": "自動探索佇列以取得卡片。"
+	},
+	"explore_generating": {
+		"message": "產生新的探索佇列，如果 Steam 負載較高，這可能會失敗..."
+	},
+	"explore_exploring": {
+		"message": "探索佇列... 請求 $current$ 共 $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "無法清除佇列項目 #$current$，請在五秒後重試...",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "無法清除佇列項目 #$current$ 太多次。您可以稍後再試。",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "產生新佇列失敗，請五秒後重試..."
+	},
+	"explore_finished": {
+		"message": "佇列已經探索。"
+	},
+	"badges_idle_apps": {
+		"message": "閒置的應用程式：$amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "此頁面上閒置的應用程式：$amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "剩餘掉落數：$amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "此頁剩餘掉落數：$amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "隱藏成就: "
+	},
+	"hidden_achievement_hover": {
+		"message": "隱藏成就，滑鼠懸停即可顯示： "
+	},
+	"inventory_list_at": {
+		"message": "以 $price$ 上架",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "以 $price$ 出售",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "列出最低售價的商品\n顯示的價格是您收到的金額（不含服務費）"
+	},
+	"inventory_sell_at_title": {
+		"message": "列出最高購買訂單價格的項目\n顯示的價格是您收到的金額（不含服務費）"
+	},
+	"widget_view_app": {
+		"message": "在 SteamDB 上檢視 App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "在 SteamDB 上檢視 Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "選項"
+	},
+	"options_welcome_title": {
+		"message": "👋 感謝您安裝 SteamDB 擴充套件!"
+	},
+	"options_welcome_description": {
+		"message": "查看下面的選項並切換您喜歡的選項。之後會再回到這裡："
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB 上的設定頁面"
+	},
+	"options_welcome_option2": {
+		"message": "Steam 頁面上的帳戶下拉選單"
+	},
+	"options_welcome_option3": {
+		"message": "您的瀏覽器的插件頁面"
+	},
+	"options_review": {
+		"message": "為這個擴充套件留下評論"
+	},
+	"options_permissions_description": {
+		"message": "此擴充功能需要額外的權限才能在 SteamDB、Steam 商店和 Steam 社群上正常運作。"
+	},
+	"options_permissions_button": {
+		"message": "⚠️授予權限"
+	},
+	"options_footer1": {
+		"message": "由 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> 人員用 💙 發電。"
+	},
+	"options_footer2": {
+		"message": "這是<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">開源</a>，感謝所有貢獻者！"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* 停用的複選框表示內建功能。"
+	},
+	"options_header_website": {
+		"message": "SteamDB 網站"
+	},
+	"options_header_extra_data": {
+		"message": "額外資料"
+	},
+	"options_header_buttons_and_links": {
+		"message": "按鈕和連結"
+	},
+	"options_header_inventory": {
+		"message": "物品庫"
+	},
+	"options_header_trade_offers": {
+		"message": "交易提案"
+	},
+	"options_header_enhancements": {
+		"message": "強化的功能"
+	},
+	"options_website_explanation": {
+		"message": "說明"
+	},
+	"options_website_explanation1": {
+		"message": "啟用此選項後，擴充功能將從<a href=\"https://store.steampowered.com/dynamicstore/userdata/\" 請求一些使用者資料（願望清單、擁有、關注、忽略的產品和購物車中的產品) target=\"_blank\">Steam 商店</a> 並將使用它們在網站上轉為亮色。"
+	},
+	"options_website_explanation2": {
+		"message": "您必須在商店上登入才能使用。"
+	},
+	"options_website_explanation3": {
+		"message": "這只會包含在您的瀏覽器中，不會發送到 SteamDB 後端。"
+	},
+	"options_website_explanation4": {
+		"message": "為了防止對 Steam 商店發出過多請求，用戶資料會將快取放在瀏覽器的本機端。"
+	},
+	"options_website_highlight": {
+		"message": "在 steamdb.info 上反白已擁有和願望清單產品"
+	},
+	"options_website_highlight1": {
+		"message": "直接從 SteamDB 中新增願望清單、追蹤並忽略 Steam 商店中的產品"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">啟用免費包腳本</a>"
+	},
+	"options_website_highlight3": {
+		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">販售頁面</a>和<a href=\"https://steamdb.info/bundles/\"目標啟用額外過濾=\"_blank\">捆綁包頁面</a>"
+	},
+	"options_extra_data": {
+		"message": "從 steamdb.info 取得的額外資料"
+	},
+	"options_extra_data_players": {
+		"message": "當啟用「在應用程式頁面上顯示目前拼發玩家和最大峰值」或「在應用程式頁面上顯示上次更新」選項時，擴充功能將向 steamdb.info 發出安全性請求，以取得當前玩家數量和上次遊戲更新。"
+	},
+	"options_extra_data_prices": {
+		"message": "當 「在 App 頁面顯示最低記錄價格」選項啟用時，擴充程式將使用您設定的貨幣 (與 Steam 認為的貨幣匹配) 向 steamdb.info 發出安全請求，以獲取特定遊戲的記錄價格"
+	},
+	"options_steamdb_lowest_price": {
+		"message": "在 App 頁面顯示最低記錄價格"
+	},
+	"options_online_stats": {
+		"message": "在 App 頁面上顯示目前的玩家數量和最高紀錄"
+	},
+	"options_steamdb_last_update": {
+		"message": "在 App 頁面顯示最近的更新"
+	},
+	"options_button_app": {
+		"message": "在 App 頁面顯示按鈕"
+	},
+	"options_button_pcgw": {
+		"message": "在 App 頁面上顯示 PCGamingWiki 按鈕"
+	},
+	"options_button_sub": {
+		"message": "在 App 頁面顯示按鈕"
+	},
+	"options_button_video": {
+		"message": "在影片頁面顯示按鈕"
+	},
+	"options_button_gamehub": {
+		"message": "在遊戲中心顯示按鈕"
+	},
+	"options_button_gamecards": {
+		"message": "在遊戲主頁顯示 SteamDB 和商店頁面按鈕"
+	},
+	"options_link_subid": {
+		"message": "在每個購買選項底下顯示 SubID"
+	},
+	"options_link_subid_widget": {
+		"message": "在小工具中顯示 SubID"
+	},
+	"options_link_accountpage": {
+		"message": "連結許可證頁面上的每個 App"
+	},
+	"options_profile_calculator": {
+		"message": "在社群的個人資料上增加計算機連結"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "將庫存頁面上的遊戲選擇移至一側"
+	},
+	"options_link_inventory": {
+		"message": "將庫存中的每件禮物和優惠券連結到 SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "正確找出庫存中的禮物 SubID"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "出售物品時不要刷新庫存"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "加入快速出售按鈕"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "自動接受快速販賣"
+	},
+	"options_display_market_price_others": {
+		"message": "在其他人的物品庫中顯示物品市集價格"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "支援 $for_item$ 和 $my_item$ 參數",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "請參閱 GitHub 上的說明"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "禁止 “此交易看起來可疑” 和 “您確定這是一份禮物嗎？” 交易報價提醒"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "顯示更好的錯誤訊息，而不是 Valve 神秘的錯誤號"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "跳過年齡檢查"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "將年齡和生日 cookie 設定為始終略過"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "刪除所有連結與過濾連結"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "自動接受市集、庫存與啟動頁面的 SSA",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "隱藏標題中的「安裝 Steam」按鈕"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "隱藏「在 Steam 中開啟」橫幅"
+	},
+	"options_steamdb_rating": {
+		"message": "在 App 頁面上顯示 SteamDB 評分"
+	},
+	"options_enhancement_appicon": {
+		"message": "在商店及社群頁面上顯示 App 圖示"
+	},
+	"options_hidden_achievements": {
+		"message": "載入隱藏的成就和成就敘述"
+	},
+	"options_spoiler_achievements": {
+		"message": "將描述隱藏在劇透元素後面"
+	},
+	"options_prevent_store_images": {
+		"message": "在 App 商店頁面上停止讀取圖片"
+	},
+	"options_prevent_store_images_description": {
+		"message": "有些開發人員會在遊戲敘述內放上大容量圖片導致讀取時間變長，點擊以讀取圖片"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "支援個人資料和共享文件連結上的 $award$ 參數",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "在徽章頁面上顯示剩餘的可掉落卡片總數"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "增加一個按鈕以在銷售期間欺騙發現佇列"
+	},
+	"options_builtin_achievements_global": {
+		"message": "改進全球成就頁面"
+	},
+	"options_builtin_achievements_link": {
+		"message": "連結到自己的成就頁面"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "鎖定的成就用鎖定圖示來提高可見性"
+	}
+}

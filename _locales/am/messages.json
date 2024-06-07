@@ -1,0 +1,26 @@
+{
+	"extension_description": {
+		"message": "Adiciona links do SteamDB e novas funções na loja e comunidade do Steam. Veja estatísticas e o preço mais baixo dos jogos."
+	},
+	"steamdb_options": {
+		"message": "Opções do SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Calculadora SteamDB"
+	},
+	"steamstatus_downtime": {
+		"message": "O Steam parece estar temporariamente indisponível. "
+	},
+	"view_on_steamdb": {
+		"message": "Veja no SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Veja no PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Ver suas conquistas"
+	},
+	"store_page": {
+		"message": "Página na loja"
+	}
+}

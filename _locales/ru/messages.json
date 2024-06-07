@@ -9,7 +9,7 @@
 		"message": "Калькулятор SteamDB"
 	},
 	"steamstatus": {
-		"message": "Проверьте на steamstat.us"
+		"message": "Проверить на steamstat.us"
 	},
 	"steamstatus_downtime": {
 		"message": "Похоже, что Steam испытывает некоторые перебои в работе. "
@@ -26,47 +26,74 @@
 	"store_page": {
 		"message": "Страница магазина"
 	},
-	"error": {
-		"message": "Ошибка"
-	},
 	"search": {
 		"message": "Поиск"
 	},
 	"id_app": {
-		"message": "Приложение $1"
+		"message": "Приложение $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"id_sub": {
-		"message": "Комплект $1"
+		"message": "Пакет $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
 	},
 	"id_bundle": {
-		"message": "Набор $1"
+		"message": "Набор $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
 	},
 	"app_steamdb_rating": {
 		"message": "Рейтинг SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " РЕЙТИНГ STEAMDB"
+		"message": " РЕЙТИНГ STEAMDB",
+		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$1 из $2 отзывов — положительные (все типы покупок)"
+		"message": "$positive$ из $total$ отзывов — положительные (все типы покупок)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
 	},
 	"app_depots_update": {
 		"message": "Обновлено:"
 	},
 	"app_depots_updated_short": {
-		"message": "Обновлено"
+		"message": "Обновлено",
+		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Онлайн статистика"
+		"message": "Онлайн-статистика"
 	},
 	"app_stats_online_now": {
 		"message": "Сейчас онлайн:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-часовой пик:"
+		"message": "Пик за день:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Пик всех времен:"
+		"message": "Пик за всё время:"
 	},
 	"app_stats_followers": {
 		"message": "Подписчики:"
@@ -75,37 +102,109 @@
 		"message": "ничего не выбрано"
 	},
 	"app_lowest_price": {
-		"message": "Самая низкая зарегистрированная цена в SteamDB — <b>$1</b>"
+		"message": "Самая низкая зарегистрированная цена в SteamDB — <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Самая низкая зарегистрированная цена в SteamDB — <b>$1</b> при <b>-$2%</b>"
+		"message": "Самая низкая зарегистрированная цена в SteamDB — <b>$price$</b> при <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Самая низкая зарегистрированная цена в SteamDB — <b>$1</b>, а двухлетний минимум — <b>$2</b>"
+		"message": "Самая низкая зарегистрированная цена в SteamDB — <b>$price$</b>, а двухлетний минимум — <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
 	},
 	"app_lowest_date": {
-		"message": "Цену видели $1 ($2)"
+		"message": "Цену видели $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Цену видели $3 раз(а), последний раз $1 ($2)"
+		"message": "Цену видели $seen$ раз(-а), последний раз $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
 	},
 	"explore_auto_discover": {
-		"message": "Авто-обход очереди"
+		"message": "Автообход очереди"
 	},
 	"explore_auto_discover_description": {
-		"message": "Автоматическое открытие очереди для получения карточки распродажы"
+		"message": "Автоматическое создание очереди для получения карточки распродажи."
 	},
 	"explore_generating": {
-		"message": "Генерирование новой очереди рекомендаций, это может не сработать, если Steam испытывает высокую нагрузку…"
+		"message": "Создание новой очереди рекомендаций, это может не сработать, если Steam испытывает высокую нагрузку…"
 	},
 	"explore_exploring": {
-		"message": "Просмотр очереди… Запрос $1 из $2"
+		"message": "Просмотр очереди… Запрос $current$ из $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Не удалось очистить элемент очереди #$1, повторю попытку через пять секунд…"
+		"message": "Не удалось очистить элемент очереди № $current$, повторю попытку через пять секунд…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Не удалось очистить элемент очереди #$1 слишком много раз. Вы можете повторить попытку позже."
+		"message": "Не удалось очистить элемент очереди № $current$ слишком много раз. Вы можете повторить попытку позже.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"explore_failed_to_generate": {
 		"message": "Не удалось создать новую очередь, повторю попытку через пять секунд…"
@@ -114,31 +213,68 @@
 		"message": "Очередь пройдена."
 	},
 	"badges_idle_apps": {
-		"message": "Игр с карточками: $1"
+		"message": "Игр с карточками: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Игр с карточками на этой странице: $1"
+		"message": "Игр с карточками на этой странице: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops": {
-		"message": "Осталось карточек: $1"
+		"message": "Осталось карточек: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Карточки оставшиеся на этой странице: $1"
-	},
-	"achievement_your_progress": {
-		"message": "Ваш прогресс: $1 / $2"
+		"message": "Карточки, оставшиеся на этой странице: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"hidden_achievement": {
 		"message": "Скрытое достижение: "
 	},
 	"hidden_achievement_hover": {
-		"message": "Скрытое достижение, наведите курсор чтобы раскрыть его: "
+		"message": "Скрытое достижение, наведите курсор, чтобы раскрыть его: "
 	},
 	"inventory_list_at": {
-		"message": "Выставить за %price%"
+		"message": "Выставить за $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
 	},
 	"inventory_sell_at": {
-		"message": "Продать за %price%"
+		"message": "Продать за $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
 	},
 	"inventory_list_at_title": {
 		"message": "Выставляет товар на продажу по самой низкой цене\n\nОтображаемая цена — это деньги, которые вы получаете (без комиссии)"
@@ -147,10 +283,22 @@
 		"message": "Выставляет товар по самой высокой цене из запросов на покупку\n\nОтображаемая цена — это деньги, которые вы получаете (без комиссии)"
 	},
 	"widget_view_app": {
-		"message": "Посмотреть приложение $1 на SteamDB"
+		"message": "Посмотреть приложение $id$ на SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"widget_view_sub": {
-		"message": "Посмотреть пакет $1 на SteamDB"
+		"message": "Посмотреть пакет $id$ на SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"options": {
 		"message": "Настройки"
@@ -165,7 +313,7 @@
 		"message": "Страница настроек на SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Выпадающий список учетных записей на страницах Steam"
+		"message": "Выпадающий список аккаунтов на страницах Steam"
 	},
 	"options_welcome_option3": {
 		"message": "Страница дополнений вашего браузера"
@@ -174,7 +322,7 @@
 		"message": "Оставьте отзыв для этого расширения"
 	},
 	"options_permissions_description": {
-		"message": "Это расширение требует дополнительных разрешений для корректной работы на SteamDB, Steam Store и Steam Community"
+		"message": "Это расширение требует дополнительных разрешений для корректной работы на SteamDB, Steam Store и Steam Community."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Предоставление разрешений"
@@ -186,7 +334,7 @@
 		"message": "<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">Исходный код открыт</a>, спасибо всем помощникам!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Отключенные флажки указывают на встроенные функции"
+		"message": "* Отключённые флажки указывают на встроенные функции."
 	},
 	"options_header_website": {
 		"message": "Веб-сайт SteamDB"
@@ -216,7 +364,7 @@
 		"message": "Чтобы это работало, вы должны быть авторизованы в магазине."
 	},
 	"options_website_explanation3": {
-		"message": "Это происходит исключительно в вашем браузере и никогда не отправляется даже в бэкэнд SteamDB."
+		"message": "Это происходит исключительно в вашем браузере и никогда не отправляется даже в запросы на SteamDB."
 	},
 	"options_website_explanation4": {
 		"message": "Чтобы предотвратить чрезмерные запросы к магазину Steam, пользовательские данные кэшируются в локальном хранилище браузера."
@@ -237,10 +385,10 @@
 		"message": "Дополнительные данные получены с steamdb.info"
 	},
 	"options_extra_data_players": {
-		"message": "Когда опция \"Отображать текущих одновременных игроков и максимальных пиков на страницах приложений\" включена, расширение будет делать безопасный запрос к steamdb.info, чтобы получить текущее количество игроков и последнее обновление депо (последнее только если \"Отображать последнее обновление депо на страницах приложения\" включено)"
+		"message": "Когда опции «Отображать текущих одновременных игроков и максимальных пиков на страницах приложений» или «Отображать последнее обновление на страницах приложений» включены, расширение будет делать безопасный запрос к steamdb.info, чтобы получить текущее количество игроков и последнее обновление игры."
 	},
 	"options_extra_data_prices": {
-		"message": "При включении опции \"Отображать самую низкую зарегистрированную цену на страницах приложений\" расширение выполнит безопасный запрос к steamdb.info с вашей валютой (с той, которую считает Steam), чтобы получить зарегистрированную цену на конкретную игру."
+		"message": "При включении опции «Отображать самую низкую зарегистрированную цену на страницах приложений» расширение выполнит безопасный запрос к steamdb.info с вашей валютой (с той, которую считает Steam), чтобы получить зарегистрированную цену на конкретную игру."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Отображать самую низкую зарегистрированную цену на страницах приложений"
@@ -249,7 +397,7 @@
 		"message": "Отображать текущих одновременных игроков и максимальных пиков на страницах приложений"
 	},
 	"options_steamdb_last_update": {
-		"message": "Отображать последнее обновление хранилища на страницах приложений"
+		"message": "Отображать последнее обновление на страницах приложений"
 	},
 	"options_button_app": {
 		"message": "Отображать кнопки на страницах приложений"
@@ -303,13 +451,21 @@
 		"message": "Отображать рыночную цену товара в инвентаре других пользователей"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Поддержка параметров <code>for_item</code> и <code>my_item</code>"
+		"message": "Поддержка параметров $for_item$ и $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
 	},
 	"options_github_explanation": {
 		"message": "Смотрите объяснение на GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Подавить \"эта сделка кажется подозрительной\" и \"вы уверены, что это подарок?\" предупреждения в торговых предложениях"
+		"message": "Подавить предупреждения «эта сделка кажется подозрительной» и «вы уверены, что это подарок?» в торговых предложениях"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Отображать более понятные сообщения об ошибках вместо загадочных номеров ошибок Valve"
@@ -324,13 +480,14 @@
 		"message": "Удалить все ссылки фильтра ссылок"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Принимать SSA на рынке, в инвентаре, и странице активации ключей"
+		"message": "Принимать SSA на рынке, в инвентаре, и странице активации ключей",
+		"description": "SSA is Steam Subscriber Agreement"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Скрыть кнопку \"Установить Steam\" в заголовке"
+		"message": "Скрыть кнопку «Установить Steam» в заголовке"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Скрыть \"Открыть в Steam\" баннер"
+		"message": "Скрыть баннер «Открыть в Steam»"
 	},
 	"options_steamdb_rating": {
 		"message": "Отображать рейтинг SteamDB на страницах приложений"
@@ -351,7 +508,12 @@
 		"message": "Некоторые разработчики помещают в описания игр мегабайты изображений, которые могут долго загружаться. Нажмите на изображение, чтобы оно загрузилось"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Поддержка параметров <code>award</code> в профиле и ссылках на файлы"
+		"message": "Поддержка параметров $award$ в профиле и ссылках на файлы",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
 	},
 	"options_builtin_card_drops": {
 		"message": "Отображать общее количество оставшихся выпадений карт на странице значков"

@@ -1,1 +1,308 @@
-{}
+{
+	"extension_description": {
+		"message": "Přidá SteamDB odkazy a nové funkce v Steam obchodě a komunitě. Zobrazit nejnižší ceny a statistiky."
+	},
+	"steamdb_options": {
+		"message": "Nastavení SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB kalkulačka"
+	},
+	"steamstatus": {
+		"message": "Zkontrolujte na steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Zdá se, že Steam má nějaký výpadek. "
+	},
+	"view_on_steamdb": {
+		"message": "Zobrazit na SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Zobrazit na PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Zobrazit vaše achievementy"
+	},
+	"store_page": {
+		"message": "Stránka v obchodě"
+	},
+	"search": {
+		"message": "Hledat"
+	},
+	"id_app": {
+		"message": "$id$ aplikace",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "$id$ balíčku",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB hodnocení:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB HODNOCENÍ",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ z $total$ recenzí jsou pozitivní (všechny typy nákupů)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Poslední aktualizace:"
+	},
+	"app_depots_updated_short": {
+		"message": "Aktualizováno",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online statistiky"
+	},
+	"app_stats_online_now": {
+		"message": "Právě online:"
+	},
+	"app_stats_followers": {
+		"message": "Sledující:"
+	},
+	"app_nothing_selected": {
+		"message": "nic není vybráno"
+	},
+	"app_lowest_price": {
+		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b> v <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b> a nejnižší cena za poslední 2 roky je <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Cena spatřena $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Cena viděná $seen$ krát, naposledy $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automatické objevování"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automaticky objevte frontu pro získání karty událostí."
+	},
+	"explore_generating": {
+		"message": "Generování nové fronty na objevení, může selhat, pokud je Steam pod vysokým zatížením…"
+	},
+	"explore_exploring": {
+		"message": "Prozkoumávání fronty… Žádost $current$ z $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Položku fronty #$current$se nepodařilo vymazat, zkuste to znovu za pět sekund…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Položku fronty #$current$ se nepodařilo vyčistit. Můžete to zkusit znovu později.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Nepodařilo se vygenerovat novou frontu, zkuste to znovu za pět sekund…"
+	},
+	"explore_finished": {
+		"message": "Fronta byla prozkoumána."
+	},
+	"badges_idle_apps": {
+		"message": "Aplikace k nečinnosti: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplikace k neččinosti na této stránce: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Zbývající Drops: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Zbývající Drops na této stránce: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Skrytý achievement: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Skrytý achievement, najeďte myší pro odhalení: "
+	},
+	"inventory_sell_at": {
+		"message": "Prodat za $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"widget_view_app": {
+		"message": "Zobrazit aplikaci $id$ na SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"options_welcome_title": {
+		"message": "👋 Děkujeme za instalaci SteamDB rozšíření!"
+	},
+	"options_welcome_option1": {
+		"message": "Stránka nastavení na SteamDB"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Udělit oprávnění"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Neobnovujte inventář když prodáváte položku"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Přidat tlačítko na rychlé prodávání"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automaticky přijímat rychlý prodej"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Podpora parametrů $for_item$ a $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Viz vysvětlení na GitHubu"
+	}
+}

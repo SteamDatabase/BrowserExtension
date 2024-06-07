@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "Adaugă link-uri SteamDB și funcții noi în magazinul Steam și comunitate. Vezi cele mai mici prețuri de joc și statistici."
+	},
+	"steamdb_options": {
+		"message": "Opțiuni SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Calculator SteamDB"
+	},
+	"steamstatus": {
+		"message": "Verifică pe steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam pare să se confrunte cu conexiune la moment. "
+	},
+	"view_on_steamdb": {
+		"message": "Vezi pe SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Vezi pe PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Vezi achievement-uri tale"
+	},
+	"store_page": {
+		"message": "Pagina magazinului"
+	},
+	"search": {
+		"message": "Caută"
+	},
+	"id_app": {
+		"message": "Aplicație $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Pachet $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "Evaluare SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " EVALUARE STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ din $total$ recenziile sunt pozitive (toate tipurile de achiziții)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Ultima actualizare:"
+	},
+	"app_depots_updated_short": {
+		"message": "Actualizat",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Statistici online"
+	},
+	"app_stats_online_now": {
+		"message": "Online acum:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-ore:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Total:"
+	},
+	"app_stats_followers": {
+		"message": "Urmăritori:"
+	},
+	"app_nothing_selected": {
+		"message": "nimic selectat"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB cel mai mic preț înregistrat este <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB cel mai mic preț înregistrat este <b>$price$</b> la <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB cel mai mic preț înregistrat este <b>$price$</b> și peste 2 ani este <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Preț este văzută pe $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Preț văzut $seen$ de ori, ultima dată pe $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Auto-descoperire"
+	},
+	"explore_auto_discover_description": {
+		"message": "Descoperă automat pentru a obține un card de eveniment."
+	},
+	"explore_generating": {
+		"message": "Generează o nouă coadă de așteptare, acest lucru poate eșua dacă Steam este sub încărcare mare…"
+	},
+	"explore_exploring": {
+		"message": "Explorând lista de așteptare… Solicită $current$ de $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Nu s-a reușit ștergerea cozii elementului #$current$, încercând din nou în cinci secunde…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Eroare la ștergerea cozii de element #$current$ de prea multe ori. Puteți încerca din nou mai târziu.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Generarea unei noi cozi a eșuat, se încearcă din nou în cinci secunde…"
+	},
+	"explore_finished": {
+		"message": "Lista a fost explorată."
+	},
+	"badges_idle_apps": {
+		"message": "Aplicații pentru a farma: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplicații de farmat pe această pagină: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Drop-uri rămase: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Drop-uri pe această pagină: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Achievement-uri ascunse: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Achievement ascunsă, glisare pentru a vedea: "
+	},
+	"inventory_list_at": {
+		"message": "Listează la $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Vânzare la $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Listează articolul pentru cel mai mic preț de vânzare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Listează articolul pentru cel mai mare preț al ordinului de cumpărare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"
+	},
+	"widget_view_app": {
+		"message": "Vezi aplicație $id$ pe SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Vezi sub $id$ pe SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Opțiuni"
+	},
+	"options_welcome_title": {
+		"message": "👋 Mulțumim că ai instalat extensia SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Examinați opțiunile de mai jos și comutați opțiunile pe care le preferați. Pentru a reveni aici în viitor:"
+	},
+	"options_welcome_option1": {
+		"message": "Pagina de setări pe SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Cont derulant pe Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Gestionează extensiile a browser-ului dvs"
+	},
+	"options_review": {
+		"message": "Lasă o recenzie"
+	},
+	"options_permissions_description": {
+		"message": "Această extensie necesită permisiuni suplimentare pentru a funcționa corect pe SteamDB, Steam și Comunitatea Steam."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Acordă permisiuni"
+	},
+	"options_footer1": {
+		"message": "Făcut cu drag💙 de Comunitate <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Este <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, mulțumită tuturor contribuitorilor!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Căsuțele de selectare dezactivate indică funcțiile încorporate."
+	},
+	"options_header_website": {
+		"message": "Site-ul SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Informații suplimentare"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Butoane și link-uri"
+	},
+	"options_header_inventory": {
+		"message": "Inventar"
+	},
+	"options_header_trade_offers": {
+		"message": "Trade ofertă"
+	},
+	"options_header_enhancements": {
+		"message": "Îmbunătățiri"
+	},
+	"options_website_explanation": {
+		"message": "Explicație"
+	},
+	"options_website_explanation1": {
+		"message": "Când această opțiune este activată, extensia va solicita unele date de utilizator (dorite, deținute, urmate, produse ignorate, și produse în coș) de la <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Magazinul Steam</a> și le va folosi pentru a aplica marcaje pe site-ul."
+	},
+	"options_website_explanation2": {
+		"message": "Trebuie sa fii autentificat in Steam pentru ca acesta sa functioneze."
+	},
+	"options_website_explanation3": {
+		"message": "Acest lucru este conținut în întregime în browser-ul dvs. și nu se alocă niciodată pe SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Pentru a preveni cereri excesive către magazinul Steam, datele tale de utilizator sunt stocate în memoria locală a browser-ului tău."
+	},
+	"options_website_highlight": {
+		"message": "Evidențiază produse deținute și dorite pe steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Doriți să urmați și să ignorați produsele din magazinul Steam direct din SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Activează scriptul pentru pachete gratuite</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Activați filtrarea suplimentară pe pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de vânzări</a> și <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pachete (bundles)</a>"
+	},
+	"options_extra_data": {
+		"message": "Date suplimentare obținute din steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "Când este activată opțiunea \"Afișează jucătorii curenți concomitent și maxim pe paginile aplicației\" sau opțiunea \"Afișează ultima actualizare pe paginile aplicațiilor\", extensia va face o cerere securizat pe steamdb.info pentru a obține numărul actual de jucători și ultima actualizare a jocului."
+	},
+	"options_extra_data_prices": {
+		"message": "Când opțiunea \"Afișează cel mai mic preț înregistrat pe paginile aplicațiilor\" este activată, extensia va face o cerere securizat pe steamdb.info cu valută pe care ați ales (cu cea ce crede Steam că este) pentru a obține prețul înregistrat pentru un anumit jocul."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Afișează cel mai mic preț înregistrat pe paginile aplicațiilor"
+	},
+	"options_online_stats": {
+		"message": "Afişează jucătorii actual simultan şi maximul pe paginile aplicaţiei"
+	},
+	"options_steamdb_last_update": {
+		"message": "Afişează ultima actualizare pe paginile aplicaţiei"
+	},
+	"options_button_app": {
+		"message": "Afișează un buton pe paginile aplicației"
+	},
+	"options_button_pcgw": {
+		"message": "Afișează butonul PCGamingWiki pe paginile aplicației"
+	},
+	"options_button_sub": {
+		"message": "Afișează un buton pe paginile pachetului"
+	},
+	"options_button_video": {
+		"message": "Afișează un buton pe paginile video"
+	},
+	"options_button_gamehub": {
+		"message": "Afișează un buton pe hub-uri jocului"
+	},
+	"options_button_gamecards": {
+		"message": "Afișează butoanele SteamDB și magazin pe pagina cardurilor jocului"
+	},
+	"options_link_subid": {
+		"message": "Afișează subID-ul la fiecare opțiune de cumpărare"
+	},
+	"options_link_subid_widget": {
+		"message": "Afișează subID-ul în widget-uri ale aplicației"
+	},
+	"options_link_accountpage": {
+		"message": "Conectați fiecare pachet pe pagina de licențe"
+	},
+	"options_profile_calculator": {
+		"message": "Adaugă un link cu calculator pe profilurile comunității"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Mută selecția de jocul pe pagina de inventar pe partea laterală"
+	},
+	"options_link_inventory": {
+		"message": "Asociază fiecare cadou și cupon din inventarul tău pe SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Găsiți corect subID-ul al cadoului în inventarul dvs"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Nu reîmprospătați inventarul atunci când vindeți un articol"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Adaugă butoane de vânzare rapidă"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Acceptă automat vânzarea rapidă"
+	},
+	"options_display_market_price_others": {
+		"message": "Afișează prețul pieței în inventarele altor utilizatori"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Susțineți $for_item$ și $my_item$ parametri",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Vezi explicația pe GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Suprimați alerte cu mesaje de oferte \"acesta trade pare suspicios\" și \"eşti sigur că acesta este un cadou?\""
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Afișează mesaje de eroare mai bune, în locul numerelor de eroare criptice ale Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Sari peste pagina de verificare a vârstei"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Setează cookie-urile zilei de naștere și vârstă pentru a trece întotdeauna"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Elimină toate link-urile de filtrare a linkurilor"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Acceptați SSA pe piață, inventariați și activați automat paginile cheie",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Ascunde butonul \"Instalează Steam\" în antet"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Ascunde banner-ul \"Deschide în aplicație Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "Afișează rating-ul SteamDB pe paginile aplicației"
+	},
+	"options_enhancement_appicon": {
+		"message": "Afișează pictogramele aplicațiilor în magazinul și paginile comunității"
+	},
+	"options_hidden_achievements": {
+		"message": "Încarcă achievement-uri ascunse și descrierile lor"
+	},
+	"options_spoiler_achievements": {
+		"message": "Ascundeți descrierile din spatele unui element al spoilerului"
+	},
+	"options_prevent_store_images": {
+		"message": "Opriți încărcarea imaginilor pe paginile magazinului de aplicații"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Unii dezvoltatori pun megabytes de imagini în descrierile jocului, ceea ce poate dura o vreme să se încarce, apasă pe o imagine pentru a încărca"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Susține parametrii $award$ pentru profilul și link-urile fișierului partajat",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Afișează numărul total de drop-uri de card-uri rămase pe pagina de insigne"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Adaugă un buton pentru a trișa coada de descoperire în timpul vânzărilor"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Îmbunătățește pagina de realizări globale"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link către propria pagină de realizări"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Realizările blocate au o iconiță de blocare pentru mai multă vizibilitate"
+	}
+}

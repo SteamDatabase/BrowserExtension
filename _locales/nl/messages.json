@@ -1,1 +1,235 @@
-{}
+{
+	"extension_description": {
+		"message": "Voegt SteamDB links en nieuwe functies toe aan de Steam winkel en community. Bekijk de laagste spel prijzen en statistieken."
+	},
+	"steamdb_options": {
+		"message": "SteamDB opties"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB rekenmachine"
+	},
+	"steamstatus": {
+		"message": "Check op steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Het lijkt erop dat Steam een storing aan het ervaren is. "
+	},
+	"view_on_steamdb": {
+		"message": "Bekijk op SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Bekijk op PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Bekijk je prestaties"
+	},
+	"store_page": {
+		"message": "Winkelpagina"
+	},
+	"search": {
+		"message": "Zoeken"
+	},
+	"id_app": {
+		"message": "Applicatie $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub- $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundel $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Beoordeling:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB WAARDERING",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ van de $total$ beoordelingen zijn positief (alle aankoopsoorten)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Laatste Wijziging:"
+	},
+	"app_depots_updated_short": {
+		"message": "Bijgewerkt",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online-statistieken"
+	},
+	"app_stats_online_now": {
+		"message": "Nu online:"
+	},
+	"app_stats_peak_today": {
+		"message": "24 uur piek:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Hoogtepunt:"
+	},
+	"app_stats_followers": {
+		"message": "Volgers:"
+	},
+	"app_nothing_selected": {
+		"message": "niets geselecteerd"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB laagst opgenomen prijs is <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB laagste opgenomen prijs is <b>$price$</b> bij <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB laagste opgenomen prijs is <b>$price$</b> en 2 jaar laagtepunt is <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Prijs gezien op $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Prijs $seen$ keer gezien, laatst op $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automatisch ontdekken"
+	},
+	"explore_auto_discover_description": {
+		"message": "Ontdek automatisch de wachtrij om een event kaart te ontvangen."
+	},
+	"explore_generating": {
+		"message": "Een nieuwe ontdekkingswachtrij aan het genereren, dit kan mislukken als Steam onder hoge druk staat…"
+	},
+	"explore_exploring": {
+		"message": "Wachtrij aan het ontdekken... Verzoek $current$ van $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Wachtrij artikel #$current$ gefaald met wissen, opnieuw proberen in 5 seconden…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Wachtrij artikel #$current$ te vaak gefaald met wissen. Je kunt het later opnieuw proberen.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Gefaald met nieuwe wachtrij genereren, opnieuw proberen in 5 seconden…"
+	},
+	"explore_finished": {
+		"message": "Wachtrij is verkend."
+	},
+	"badges_idle_apps": {
+		"message": "Applicaties om stil te zetten: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Inactieve applicaties op deze pagina: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	}
+}

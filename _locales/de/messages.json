@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "Fügt SteamDB Links und neue Features dem Steam Shop und der Steam Community hinzu. Zeigt immer die niedrigsten Preise und Statistiken an."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Optionen"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Rechner"
+	},
+	"steamstatus": {
+		"message": "Auf steamstat.us ansehen"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam hat möglicherweise gerade einen Ausfall. "
+	},
+	"view_on_steamdb": {
+		"message": "Auf SteamDB anzeigen"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Auf PCGamingWiki anzeigen"
+	},
+	"view_your_achievements": {
+		"message": "Errungenschaften anzeigen"
+	},
+	"store_page": {
+		"message": "Shop-Seite"
+	},
+	"search": {
+		"message": "Suche"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Unter- $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Bewertung:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB BEWERTUNG",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ von $total$ Bewertungen sind positiv (Alle Kaufoptionen)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Letztes Update:"
+	},
+	"app_depots_updated_short": {
+		"message": "Aktualisiert",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online-Statistiken"
+	},
+	"app_stats_online_now": {
+		"message": "Aktuell online:"
+	},
+	"app_stats_peak_today": {
+		"message": "Maximum der letzten 24h:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Historisches Maximum:"
+	},
+	"app_stats_followers": {
+		"message": "Follower:"
+	},
+	"app_nothing_selected": {
+		"message": "Nichts ausgewählt"
+	},
+	"app_lowest_price": {
+		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b> mit <b>-$discount$%</b> Rabatt",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Niedrigster von SteamDB aufgezeichneter Preis lautet <b>$price$</b>. In den letzten 2 Jahren lag dieser bei <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Preis am $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Preis wurde $seen$ mal gesehen, zuletzt am $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automatisch entdecken"
+	},
+	"explore_auto_discover_description": {
+		"message": "Entdecke automatisch die Warteschlange, um eine Aktionssammelkarte zu erhalten."
+	},
+	"explore_generating": {
+		"message": "Generiere eine neue Entdeckungsliste, dies kann fehlschlagen, wenn Steam unter hoher Last ist…"
+	},
+	"explore_exploring": {
+		"message": "Erkunden der Warteschlange… Anfrage $current$ von $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Der Eintrag #$current$ in der Entdeckungsliste konnte nicht gelöscht werden, versuche es in fünf Sekunden erneut…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Der Eintrag #$current$ in der Entdeckungsliste konnte zu oft nicht gelöscht werden. Du kannst es später noch einmal versuchen.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Fehler beim Generieren einer neuen Entdeckungsliste, versuche es erneut in fünf Sekunden…"
+	},
+	"explore_finished": {
+		"message": "Die Entdeckungsliste wurde erkundet."
+	},
+	"badges_idle_apps": {
+		"message": "Apps mit verbleibenden Drops: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Apps mit verbleibenden Drops auf dieser Seite: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Verbleibende Drops: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Verbleibende Drops auf dieser Seite: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Versteckte Errungenschaft: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Versteckte Errungenschaften. Mit der Maus drüberfahren, um mehr zu erfahren: "
+	},
+	"inventory_list_at": {
+		"message": "Liste bei $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Für $price$ verkaufen",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Listet den Gegenstand für den niedrigsten Verkaufspreis\n\nDer angezeigte Preis ist das Geld, das du erhältst (ohne Steuer)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Listet den Gegenstand für den niedrigsten Verkaufspreis\n\nDer angezeigte Preis ist das Geld, das du erhältst (ohne Gebühren)"
+	},
+	"widget_view_app": {
+		"message": "App $id$ auf SteamDB anzeigen",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Sub $id$ auf SteamDB anzeigen",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Optionen"
+	},
+	"options_welcome_title": {
+		"message": "👋 Vielen Dank für die Installation der SteamDB-Erweiterung!"
+	},
+	"options_welcome_description": {
+		"message": "Prüfen Sie die folgenden Optionen und schalten Sie die bevorzugten ein. Um in Zukunft wieder hierher zu kommen:"
+	},
+	"options_welcome_option1": {
+		"message": "Einstellungsseite auf SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Account-Dropdown auf Steam-Seiten"
+	},
+	"options_welcome_option3": {
+		"message": "Die Erweiterungen Seite deines Browsers"
+	},
+	"options_review": {
+		"message": "Bewerte diese Erweiterung"
+	},
+	"options_permissions_description": {
+		"message": "Diese Erweiterung benötigt zusätzliche Berechtigungen, um korrekt auf SteamDB, dem Steam Shop und in der Steam Community zu funktionieren."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Berechtigungen erteilen"
+	},
+	"options_footer1": {
+		"message": "Mit 💙 von <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> Leuten entwickelt."
+	},
+	"options_footer2": {
+		"message": "Es ist <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">Open Source</a>, Dank den Mitwirkenden!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Deaktivierte Kontrollkästchen deuten eingebaute Funktionen an."
+	},
+	"options_header_website": {
+		"message": "SteamDB Webseite"
+	},
+	"options_header_extra_data": {
+		"message": "Zusätzliche Daten"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Buttons und Links"
+	},
+	"options_header_inventory": {
+		"message": "Inventar"
+	},
+	"options_header_trade_offers": {
+		"message": "Handelsanfragen"
+	},
+	"options_header_enhancements": {
+		"message": "Verbesserungen"
+	},
+	"options_website_explanation": {
+		"message": "Erklärung"
+	},
+	"options_website_explanation1": {
+		"message": "Wenn diese Option aktiviert ist, wird die Erweiterung einige Benutzerdaten (gewünschte, gekaufte, gefolgte, ignorierte Produkte und Produkte im Warenkorb) von <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam Shop</a> anfordern und wird diese verwenden, um Highlights auf der Website anzuwenden."
+	},
+	"options_website_explanation2": {
+		"message": "Du musst im Shop angemeldet sein, damit dies funktioniert."
+	},
+	"options_website_explanation3": {
+		"message": "Dies ist nur auf deinem Browser gespeichert und wird nie an das SteamDB Backend gesendet."
+	},
+	"options_website_explanation4": {
+		"message": "Um übermäßige Anfragen an den Steam Shop zu vermeiden, werden deine Benutzerdaten im lokalen Speicher deines Browsers zwischengespeichert."
+	},
+	"options_website_highlight": {
+		"message": "Hervorheben von gekauften und gewünschte Produkten auf steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Wünsche, folge und ignoriere Produkte im Steam Shop direkt von SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Aktiviere das Skript für kostenlose Pakete</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Zusätzliche Filter auf <a href=\"https://steamdb.info/sales/\" target=\"_blank\">Angebotsseite</a> und <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">Bundles Seite</a> aktivieren"
+	},
+	"options_extra_data": {
+		"message": "Zusätzliche Daten von steamdb.info abrufen"
+	},
+	"options_extra_data_players": {
+		"message": "Wenn die Optionen „Zeige aktuell gleichzeitige Spieler und der maximalen Peaks auf App-Seiten“ oder „Neuste Aktualisierung auf App-Seiten anzeigen“ aktiviert sind, führt die Erweiterung eine sichere Anfrage an steamdb.info aus, um die aktuelle Anzahl der Spieler und die letzte Spielaktualisierung zu erhalten."
+	},
+	"options_extra_data_prices": {
+		"message": "Wenn die Option „Zeige den niedrigsten Preis auf App-Seiten“ aktiviert ist, führt die Erweiterung eine sichere Anfrage an steamdb.info mit deiner Währung durch (mit der von Steam angenommenen Währung), um den aufgezeichneten Preis für ein bestimmtes Spiel zu erhalten."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Zeige den niedrigsten Preis auf App-Seiten"
+	},
+	"options_online_stats": {
+		"message": "Zeige aktuell gleichzeitige Spieler und der maximalen Peaks auf App-Seiten"
+	},
+	"options_steamdb_last_update": {
+		"message": "Neuste Aktualisierung auf App-Seiten anzeigen"
+	},
+	"options_button_app": {
+		"message": "Einen Button auf den App-Seiten anzeigen"
+	},
+	"options_button_pcgw": {
+		"message": "PCGamingWiki Schaltfläche auf App-Seiten anzeigen"
+	},
+	"options_button_sub": {
+		"message": "Schaltfläche auf Paketseiten anzeigen"
+	},
+	"options_button_video": {
+		"message": "Schaltfläche auf Videoseiten anzeigen"
+	},
+	"options_button_gamehub": {
+		"message": "Schaltfläche auf Spiele-Hubs anzeigen"
+	},
+	"options_button_gamecards": {
+		"message": "Anzeige von SteamDB und Shop Seiten Schaltflächen auf der Sammelkartenseite"
+	},
+	"options_link_subid": {
+		"message": "SubID unter jeder Kaufoption anzeigen"
+	},
+	"options_link_subid_widget": {
+		"message": "SubID in App-Widgets anzeigen"
+	},
+	"options_link_accountpage": {
+		"message": "Verlinke jedes Paket auf der Lizenzseite"
+	},
+	"options_profile_calculator": {
+		"message": "Rechner Link zu Community-Profilen hinzufügen"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Spielauswahl auf Inventarseite an die Seite verschieben"
+	},
+	"options_link_inventory": {
+		"message": "Verknüpfe jedes Geschenk und jeden Gutschein in deinem Inventar mit SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Ermitteln der richtige Geschenk SubID in deinem Inventar"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Inventar beim Verkauf eines Gegenstands nicht aktualisieren"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Schnellverkaufs-Buttons hinzufügen"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Schnellverkauf automatisch akzeptieren"
+	},
+	"options_display_market_price_others": {
+		"message": "Artikel-Marktpreis im Inventar anderer Nutzer anzeigen"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Unterstütze $for_item$ und $my_item$ Parameter",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Siehe Erklärung auf GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Unterdrücken der Warnungen „Dieser Handel erscheint verdächtig“ und „Sind Sie sicher, dass dies ein Geschenk ist?“"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Vereinfachte Fehlermeldungen anzeigen - anstatt von Valve's kryptischen Fehlercodes"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Alterskontrolle überspringen"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Setzt Cookies für Alter und Geburtstag um Alterskontrolle zu überspringen"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Linkfilter-Links entfernen"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Steam-Nutzungsvertrag (\"SSA\") im Marktplatz, Inventar und \"Aktiviere ein Spiel auf Steam\" automatisch zustimmen",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "\"Steam installieren\"-Button im Header ausblenden"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Banner \"In Steam öffnen\" ausblenden"
+	},
+	"options_steamdb_rating": {
+		"message": "SteamDB Bewertungen auf App-Seiten anzeigen"
+	},
+	"options_enhancement_appicon": {
+		"message": "App-Icons im Shop und Community-Seiten anzeigen"
+	},
+	"options_hidden_achievements": {
+		"message": "Versteckte Errungenschaften und deren Beschreibungen laden"
+	},
+	"options_spoiler_achievements": {
+		"message": "Beschreibungen hinter einem Spoiler-Element verbergen"
+	},
+	"options_prevent_store_images": {
+		"message": "Laden von Bildinhalten auf App-Store-Seiten stoppen"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Manche Entwickler fügen ihrer Spielbeschreibung Megabytes an Bildern hinzu - was zu langen Ladezeiten führen kann. Um ein Bild zu laden, klicke einfach darauf"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Unterstütze $award$ Parameter auf Profil und freigegebenen Datei-Links",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Gesamtzahl von restlichen Sammelkarten-Drops auf der Abzeichen-Seite anzeigen"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Füge eine Schaltfläche hinzu, um die Entdeckungsliste während des Sales zu umgehen"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Seite für globale Errungenschaften verbessern"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link zu deiner eigenen Errungenschaften-Seite"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Gesperrte Errungenschaften haben ein Schlosssymbol für mehr Sichtbarkeit"
+	}
+}

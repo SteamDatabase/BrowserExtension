@@ -1,0 +1,119 @@
+{
+	"extension_description": {
+		"message": "স্টিম স্টোর এবং কমিউনিটিতে SteamDB লিঙ্ক এবং নতুন বৈশিষ্ট্য যোগ করে। নিম্নতম গেম মূল্য এবং স্ট্যাটস দেখুন."
+	},
+	"steamdb_options": {
+		"message": "SteamDB অপশনসমূহ"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB ক্যালকুলেটর"
+	},
+	"steamstatus": {
+		"message": "steamstat.us দেখুন"
+	},
+	"steamstatus_downtime": {
+		"message": "স্টিম বর্তমানে কিছু অনুপস্থিতি অনুভব করছে. "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB তে দেখুন"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki তে দেখুন"
+	},
+	"view_your_achievements": {
+		"message": "আপনার সাফল্য দেখুন"
+	},
+	"store_page": {
+		"message": "স্টোর পেজ"
+	},
+	"search": {
+		"message": "খুঁজুন"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB রেটিং:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB রেটিং",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ রিভিউ এর $positive$ রেটিং সাক্ষাতকারিক (সকল ক্রয়ের ধরণের)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "সর্বশেষ আপডেট:"
+	},
+	"app_depots_updated_short": {
+		"message": "আপডেট হয়েছে",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "অনলাইন পরিসংখ্যান"
+	},
+	"app_stats_online_now": {
+		"message": "এখন অনলাইন:"
+	},
+	"app_stats_peak_today": {
+		"message": "২৪ ঘণ্টার শীর্ষ:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "সর্বকালের শীর্ষ:"
+	},
+	"app_stats_followers": {
+		"message": "অনুসরণকারীগণ:"
+	},
+	"app_nothing_selected": {
+		"message": "কোনো কিছু নির্বাচিত হয়নি"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB-এর সর্বনিম্ন রেকর্ডকৃত মূল্য হল <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"options": {
+		"message": "অপশনসমূহ"
+	},
+	"options_header_inventory": {
+		"message": "ইনভেনটরি"
+	}
+}

@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات اللعبة."
+	},
+	"steamdb_options": {
+		"message": "خيارات SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "حاسبة SteamDB"
+	},
+	"steamstatus": {
+		"message": "تأكد من Steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "يبدو أن ستيم يعاني بعض الأعطال. "
+	},
+	"view_on_steamdb": {
+		"message": "عرض على SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "عرض على PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "عرض إنجازاتك"
+	},
+	"store_page": {
+		"message": "صفحة المتجر"
+	},
+	"search": {
+		"message": "البحث"
+	},
+	"id_app": {
+		"message": "التطبيق $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "القسم الفرعي $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "حزمة $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "تقييم SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " تقييم STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ من $total$ مراجعات إيجابية (جميع أنواع الشراء)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "آخر تحديث:"
+	},
+	"app_depots_updated_short": {
+		"message": "محدث",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "إحصائيات الإنترنت"
+	},
+	"app_stats_online_now": {
+		"message": "متصل الآن:"
+	},
+	"app_stats_peak_today": {
+		"message": "الذروة على مدار 24 ساعة:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "الذروة القصوى:"
+	},
+	"app_stats_followers": {
+		"message": "المتابِعون:"
+	},
+	"app_nothing_selected": {
+		"message": "لا شيء محدد"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB أدنى سعر مسجل هو <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB أدنى سعر مسجل هو <b>$price$</b> بخصم <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "أدنى سعر مسجل لـ SteamDB هو <b>$price$</b> و أدنى سعر في العامين الماضيين هو <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "سعر شوهد بتاريخ $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "سعر شوهد $seen$ مرات، آخر مرة بتاريخ $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "اكتشاف تلقائي"
+	},
+	"explore_auto_discover_description": {
+		"message": "اكتشف تلقائياً قائمة الانتظار للحصول على بطاقة حدث."
+	},
+	"explore_generating": {
+		"message": "إنشاء قائمة انتظار اكتشاف جديدة، هذا يمكن أن يفشل إذا كان Steam تحت حمولة عالية…"
+	},
+	"explore_exploring": {
+		"message": "استكشاف قائمة الانتظار… طلب $current$ من $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "فشل مسح عنصر قائمة الانتظار #$current$، ستتم محاولة أخرى بعد خمس ثوانٍ…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "فشل مسح عنصر قائمة الانتظار #$current$ مرات كثيرة جدًا. يمكنك إعادة المحاولة لاحقاً.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "فشل في إنشاء قائمة انتظار جديدة، ستتم محاولة أخرى بعد خمس ثوانٍ…"
+	},
+	"explore_finished": {
+		"message": "تم استكشاف قائمة الانتظار."
+	},
+	"badges_idle_apps": {
+		"message": "تطبيقات للتخميل: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "تطبيقات للتخميل على هذه الصفحة: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "القطرات المتبقية: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "القطرات المتبقية في هذه الصفحة: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "الإنجازات الخفية: "
+	},
+	"hidden_achievement_hover": {
+		"message": "إنجاز مخفي، مرر الفأرة للكشف: "
+	},
+	"inventory_list_at": {
+		"message": "قائمة بسعر $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "بيع بسعر $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "يعرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (بدون رسوم)"
+	},
+	"inventory_sell_at_title": {
+		"message": "يُدرج العنصر بسعر أعلى طلب شراء مُدرَج\n\nالسعر المعروض هو المبلغ الذي تتلقاه (بدون رسوم)"
+	},
+	"widget_view_app": {
+		"message": "عرض التطبيق $id$ على SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "عرض التطبيق الفرعي $id$ على SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "خيارات"
+	},
+	"options_welcome_title": {
+		"message": "👋 شكرًا لتثبيت إضافة SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "راجع الخيارات أدناه وقم باختيار الخيارات التي تفضلها. للعودة إلى هنا في المستقبل:"
+	},
+	"options_welcome_option1": {
+		"message": "صفحة الإعدادات على SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "القائمة المنسدلة للحساب على صفحات Steam"
+	},
+	"options_welcome_option3": {
+		"message": "صفحة الإضافات في متصفحك"
+	},
+	"options_review": {
+		"message": "اترك تعليقًا على هذا الامتداد"
+	},
+	"options_permissions_description": {
+		"message": "هذه الأضافة تتطلب أذونات إضافية للعمل بشكل صحيح على SteamDB و Steam Store، و Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ منح الصلاحيات"
+	},
+	"options_footer1": {
+		"message": "صنع مع 💙 بواسطة <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "إنه <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">مفتوح المصدر</a>، شكراً لكل المساهمين!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* تعطيل خانات الاختيار تشير إلى ميزات مدمجة."
+	},
+	"options_header_website": {
+		"message": "موقع SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "بيانات إضافية"
+	},
+	"options_header_buttons_and_links": {
+		"message": "الأزرار والروابط"
+	},
+	"options_header_inventory": {
+		"message": "المخزون"
+	},
+	"options_header_trade_offers": {
+		"message": "عروض المبادلة"
+	},
+	"options_header_enhancements": {
+		"message": "التحسينات"
+	},
+	"options_website_explanation": {
+		"message": "تعليمات"
+	},
+	"options_website_explanation1": {
+		"message": "عند تمكين هذا الخيار، سيطلب الملحق بعض من بيانات المستخدم (القائمة الأمنية، المملوكة، المتابعة، المنتجات المتجاهله، والمنتجات في عربة التسوق <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> وسوف تستخدم هذه التطبيقات لتطبيق النقاط البارزة على الموقع."
+	},
+	"options_website_explanation2": {
+		"message": "يجب عليك تسجيل الدخول إلى المتجر من أجل أن يعمل هذا."
+	},
+	"options_website_explanation3": {
+		"message": "هذا موجود بالكامل داخل المتصفح الخاص بك ولا يتم إرساله حتى إلى خلفية SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "لمنع الطلبات الزائدة على متجر تسيم، يتم تخزين بيانات المستخدم الخاص بك في التخزين المحلي لمتصفحك."
+	},
+	"options_website_highlight": {
+		"message": "إبراز المنتجات التي تملكها وتمنياتها على Steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "قائمة الرغبات، متابعة، وتجاهل المنتجات على متجر Steam مباشرة من SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">فعل البرنامج النصي للحزم المجانية</a>"
+	},
+	"options_website_highlight3": {
+		"message": "تفعيل التصفية الإضافية على صفحة التخفيضات<a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">حزم الصفحة</a>"
+	},
+	"options_extra_data": {
+		"message": "بيانات إضافية تم جلبها من Steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "عند تمكين خيار \"عرض اللاعبين المتزامنين الحاليين والذروات القصوى على صفحات التطبيق\" أو \"عرض آخر تحديث على صفحات التطبيق\"، ستقوم الإضافة بإجراء طلب آمن إلى steamdb.info للحصول على العدد الحالي للاعبين وآخر تحديث للعبة."
+	},
+	"options_extra_data_prices": {
+		"message": "عند تمكين خيار \"عرض أدنى سعر مسجل على صفحات التطبيق\"، ستقوم الإضافة بإجراء طلب آمن إلى steamdb.info بعملتك (مع ما يعتقده Steam) للحصول على السعر المسجل للعبة معينة."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "عرض أقل سعر مسجل على صفحات التطبيق"
+	},
+	"options_online_stats": {
+		"message": "عرض اللاعبين المتزامنين الحاليين والذروات القصوى على صفحات التطبيق"
+	},
+	"options_steamdb_last_update": {
+		"message": "عرض آخر تحديث على صفحات التطبيق"
+	},
+	"options_button_app": {
+		"message": "عرض زر على صفحات التطبيق"
+	},
+	"options_button_pcgw": {
+		"message": "عرض زر PCGamingWiki على صفحات التطبيق"
+	},
+	"options_button_sub": {
+		"message": "عرض زر على صفحات الحزمة"
+	},
+	"options_button_video": {
+		"message": "عرض زر على صفحات الفيديو"
+	},
+	"options_button_gamehub": {
+		"message": "عرض زر على محاور اللعبة"
+	},
+	"options_button_gamecards": {
+		"message": "عرض أزرار صفحة SteamDB وصفحة المتجر على صفحة بطاقات الألعاب"
+	},
+	"options_link_subid": {
+		"message": "عرض SubID تحت كل خيار شراء"
+	},
+	"options_link_subid_widget": {
+		"message": "عرض SubID في عناصر واجهة المستخدم في التطبيق"
+	},
+	"options_link_accountpage": {
+		"message": "ربط كل حزمة على صفحة التراخيص الخاصة بك"
+	},
+	"options_profile_calculator": {
+		"message": "أضف رابط آلة حاسبة على ملفات المجتمع الشخصيّة"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "نقل اختيار اللعبة في صفحة المخزون إلى الجانب"
+	},
+	"options_link_inventory": {
+		"message": "ربط كل هدية وقسيمة في مخزونك ب SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "لتحديد معرف الهدية الفرعي بشكل صحيح في مخزونك"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "لا تقم بتحديث المخزون عند بيع عنصر ما"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "إضافة أزرار البيع السريع"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "قبول البيع السريع تلقائياً"
+	},
+	"options_display_market_price_others": {
+		"message": "عرض سعر السوق للعنصر في مخزونات المستخدمين الآخرين"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "دعم المعلمات $for_item$ و $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "انظر الشرح على GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "إيقاف تنبيهات عرض التجارة \"تبدو هذه التجارة مشبوهة\" و \"هل أنت متأكد أن هذه هدية؟\""
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "عرض رسائل خطأ أفضل بدلاً من أرقام الأخطاء الغامضة من Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "تخطي صفحة التحقق من العمر"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "يحدد ملفات تعريف الارتباط للعمر وتاريخ الميلاد لتكون دائمًا صالحة"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "إزالة جميع روابط فلترة الروابط"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "قبول SSA تلقائيًا على صفحات السوق والمخزون وتنشيط المفتاح",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "إخفاء زر ”تثبيت Steam“ في الرأس"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "إخفاء شعار ”فتح في البخار“"
+	},
+	"options_steamdb_rating": {
+		"message": "عرض تصنيف SteamDB على صفحات التطبيق"
+	},
+	"options_enhancement_appicon": {
+		"message": "عرض أيقونات التطبيقات على صفحات المتجر والمجتمع"
+	},
+	"options_hidden_achievements": {
+		"message": "تحميل الإنجازات المخفية وأوصافها"
+	},
+	"options_spoiler_achievements": {
+		"message": "إخفاء الأوصاف خلف عنصر الحاشي"
+	},
+	"options_prevent_store_images": {
+		"message": "إيقاف تحميل الصور من التحميل على صفحات متجر التطبيقات"
+	},
+	"options_prevent_store_images_description": {
+		"message": "بعض المطورين يضعون ميغابايتات من الصور في وصف الألعاب مما قد يستغرق وقتًا طويلاً للتحميل، انقر على الصورة لتحميلها"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "دعم معلمات $award$ على الروابط الشخصية وروابط الملفات المشتركة",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "عرض المبلغ الإجمالي لإسقاط البطاقات المتبقية على صفحة الشارات"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "إضافة زر لخداع قائمة انتظار الاكتشاف أثناء المبيعات"
+	},
+	"options_builtin_achievements_global": {
+		"message": "تحسين صفحة الإنجازات العالمية"
+	},
+	"options_builtin_achievements_link": {
+		"message": "رابط إلى صفحة الإنجازات الخاصة بك"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "تحتوي الإنجازات المقفلة على أيقونة قفل لمزيد من الرؤية"
+	}
+}

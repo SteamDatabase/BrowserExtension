@@ -1,1 +1,410 @@
-{}
+{
+	"extension_description": {
+		"message": "Tambahkan tautan dan fitur baru SteamDB di toko dan komunitas Steam. Kunjungi statistik dan harga game terendah."
+	},
+	"steamdb_options": {
+		"message": "Pengaturan SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Kalkulator SteamDB"
+	},
+	"steamstatus": {
+		"message": "Periksa di steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam tampaknya sedang mengalami gangguan. "
+	},
+	"view_on_steamdb": {
+		"message": "Lihat di SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Lihat di PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Lihat pencapaian anda"
+	},
+	"store_page": {
+		"message": "Halaman Toko"
+	},
+	"search": {
+		"message": "Cari"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundel $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "Rating SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " RATING STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ dari $total$ review adalah positif ( Semua jenis Pembelian)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Pembaruan Terakhir:"
+	},
+	"app_depots_updated_short": {
+		"message": "Diperbarui",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Statistik Online"
+	},
+	"app_stats_online_now": {
+		"message": "Sedang online:"
+	},
+	"app_stats_peak_today": {
+		"message": "Puncak 24 jam:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Puncak setiap saat:"
+	},
+	"app_stats_followers": {
+		"message": "Pengikut:"
+	},
+	"app_nothing_selected": {
+		"message": "tidak ada yang dipilih"
+	},
+	"app_lowest_price": {
+		"message": "Harga Terendah tercacat SteamDB adalah <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Harga Terendah tercatat SteamDB adalah <b>$price$</b> pada <b>$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Harga Terendah tercatat SteamDB adalah <b>$price$</b> dan Terendah selama 2 tahun adalah <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Harga saat $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Harga terlihat $seen$ kali, terakhir pada $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Temuan-otomatis"
+	},
+	"explore_auto_discover_description": {
+		"message": "Pencarian automatis antrian untuk mendapatkan event card."
+	},
+	"explore_generating": {
+		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
+	},
+	"explore_exploring": {
+		"message": "Menjelajah antrian… request $current$ dari $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Gagal untuk menghapus item antrian #$current$, mencoba lagi dalam Lima detik…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Gagal menghapus item antrian #$current$ terlalu banyak. Coba lagi nanti.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Gagal untuk menghasilkan antrian baru, coba lagi dalam Lima detik…"
+	},
+	"explore_finished": {
+		"message": "Antrian telah dijelajahi."
+	},
+	"badges_idle_apps": {
+		"message": "Aplikasi diam: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplikasi yang menganggur di halaman ini: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Drop yang tersisa: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Drop yang tersisa di halaman ini: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Pencapaian tersembunyi: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Pencapaian tersembunyi, arahkan mouse ke atas untuk mengungkapkannya: "
+	},
+	"inventory_sell_at": {
+		"message": "Jual pada $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"widget_view_app": {
+		"message": "Lihat app $id$ di SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Pengaturan"
+	},
+	"options_welcome_title": {
+		"message": "👋 Terima kasih telah memasang ekstensi SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Tinjau opsi di bawah ini dan alihkan ke opsi yang Anda sukai. Untuk kembali ke sini di masa mendatang:"
+	},
+	"options_welcome_option1": {
+		"message": "Halaman pengaturan di SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Menu tarik-turun akun di halaman Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Halaman pengaya peramban Anda"
+	},
+	"options_review": {
+		"message": "Tinggalkan ulasan untuk ekstensi ini"
+	},
+	"options_permissions_description": {
+		"message": "Ekstensi ini membutuhkan izin tambahan agar dapat berfungsi dengan baik di SteamDB, Steam Store, dan Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Memberikan izin"
+	},
+	"options_footer1": {
+		"message": "Dibuat dengan 💙 oleh <a href=“https://steamdb.info” target=“_blank”>SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Ini adalah <a href=“https://github.com/SteamDatabase/BrowserExtension” target=“_blank”>sumber terbuka</a>, terima kasih kepada semua kontributor!"
+	},
+	"options_header_website": {
+		"message": "Situs web SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Data extra"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Tombol dan tautan"
+	},
+	"options_header_inventory": {
+		"message": "Inventaris"
+	},
+	"options_header_trade_offers": {
+		"message": "Penawaran"
+	},
+	"options_header_enhancements": {
+		"message": "Peningkatan"
+	},
+	"options_website_explanation": {
+		"message": "Penjelasan"
+	},
+	"options_button_app": {
+		"message": "Menampilkan tombol di halaman aplikasi"
+	},
+	"options_button_pcgw": {
+		"message": "Menampilkan tombol PCGamingWiki di halaman aplikasi"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Pindah pilihan permainan yang ada di halaman inventory ke samping"
+	},
+	"options_link_inventory": {
+		"message": "Tautkan setiap hadiah dan kupon dalam inventaris Anda ke SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Mengetahui SubID hadiah di inventaris Anda dengan benar"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Tambah tombol jual cepat"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Otomatis menerima jual cepat"
+	},
+	"options_display_market_price_others": {
+		"message": "Tampilkan harga barang di inventory pengguna lainnya"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Lewati halaman pemeriksaan usia"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Menghapus semua tautan filter tautan"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Sembunyikan tombol “Instal Steam” di header"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Menyembunyikan spanduk “Buka di Steam”"
+	},
+	"options_steamdb_rating": {
+		"message": "Menampilkan peringkat SteamDB pada halaman aplikasi"
+	},
+	"options_enhancement_appicon": {
+		"message": "Menampilkan ikon aplikasi di halaman toko dan komunitas"
+	},
+	"options_hidden_achievements": {
+		"message": "Memuat pencapaian tersembunyi dan deskripsinya"
+	},
+	"options_spoiler_achievements": {
+		"message": "Menyembunyikan deskripsi di balik elemen spoiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Menghentikan pemuatan gambar di halaman toko aplikasi"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Beberapa pengembang meletakkan gambar berukuran megabyte dalam deskripsi game yang mungkin membutuhkan waktu beberapa saat untuk dimuat, klik pada gambar untuk memuat"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Mendukung parameter $award$ pada profil dan tautan file bersama",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Menampilkan jumlah total kartu yang tersisa pada halaman lencana"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Tambahkan tombol untuk menipu antrean penemuan selama penjualan"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Tingkatkan halaman pencapaian global"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Tautan ke halaman pencapaian anda"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Pencapaian yang terkunci memiliki ikon kunci agar lebih mudah dilihat"
+	}
+}

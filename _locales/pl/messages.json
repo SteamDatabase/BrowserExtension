@@ -9,88 +9,165 @@
 		"message": "Kalkulator SteamDB"
 	},
 	"steamstatus": {
-		"message": "Sprawdź steamstat.us"
+		"message": "Sprawdź na steamstat.us"
 	},
 	"steamstatus_downtime": {
 		"message": "Wygląda na to, że występują problemy z połączeniem ze Steam. "
 	},
 	"view_on_steamdb": {
-		"message": "Wyświetl na SteamDB"
+		"message": "Zobacz na SteamDB"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "Wyświetl na PCGamingWiki"
+		"message": "Zobacz na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Wyświetl swoje osiągnięcia"
+		"message": "Zobacz swoje osiągnięcia"
 	},
 	"store_page": {
 		"message": "Strona sklepu"
-	},
-	"error": {
-		"message": "Błąd"
 	},
 	"search": {
 		"message": "Szukaj"
 	},
 	"id_app": {
-		"message": "Aplikacja $1"
+		"message": "Aplikacja $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"id_sub": {
-		"message": "Paczka $1"
+		"message": "Pakiet $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
 	},
 	"id_bundle": {
-		"message": "Zestaw $1"
+		"message": "Zestaw $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
 	},
 	"app_steamdb_rating": {
-		"message": "Recenzja SteamDB:"
+		"message": "Ocena SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " RECENZJA STEAMDB"
+		"message": " OCENA STEAMDB",
+		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$1 z $2 recenzji są pozytywne (wszystkie typy zakupów)"
+		"message": "$positive$ z $total$ opinii jest pozytywnych (wszystkie rodzaje zakupów)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
 	},
 	"app_depots_update": {
 		"message": "Ostatnia aktualizacja:"
 	},
 	"app_depots_updated_short": {
-		"message": "Zaktualizowano"
+		"message": "Zaktualizowano",
+		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
 		"message": "Statystyki online"
 	},
 	"app_stats_online_now": {
-		"message": "Online teraz:"
+		"message": "Aktualnie online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-godzinny szczyt:"
+		"message": "Rekord z 24 godzin:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Najwyższy szczyt w historii:"
+		"message": "Najwyższy rekord w historii:"
 	},
 	"app_stats_followers": {
 		"message": "Obserwujący:"
 	},
 	"app_nothing_selected": {
-		"message": "nic nie zostało wybrane"
+		"message": "nic nie wybrano"
 	},
 	"app_lowest_price": {
-		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>"
+		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>, <b>-$2%</b>"
+		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b> podczas <b>$discount$%</b> zniżki",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Najniższa zarejestrowana cena na SteamDB to <b>$1</b>, a w ciągu ostatnich dwóch lat <b>$2</b>"
+		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b>, a w ciągu ostatnich dwóch lat <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
 	},
 	"app_lowest_date": {
-		"message": "Cena zarejestrowana $1 ($2)"
+		"message": "Cena zarejestrowana $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Cena zarejestrowana $3 razy, ostatnio $1 ($2)"
+		"message": "Cena zarejestrowana $seen$ razy, ostatni raz $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
 	},
 	"explore_auto_discover": {
-		"message": "Auto-odkrycia"
+		"message": "Odkryj automatycznie"
 	},
 	"explore_auto_discover_description": {
 		"message": "Automatycznie przegląda kolejkę, aby otrzymać kartę wydarzenia."
@@ -99,58 +176,129 @@
 		"message": "Generowanie nowej kolejki odkryć może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
 	},
 	"explore_exploring": {
-		"message": "Przeglądanie kolejki… Zapytanie $1 z $2"
+		"message": "Odkrywanie kolejki… Zapytanie $current$ z $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Nie udało się wyczyścić elementu kolejki #$1, ponowna próba za pięć sekund…"
+		"message": "Nie udało się wyczyścić pozycji #$current$, ponawianie próby za pięć sekund…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Nie udało się wyczyścić elementu kolejki #$1 zbyt wiele razy. Możesz spróbować ponownie później."
+		"message": "Nie udało się wyczyścić pozycji #$current$ zbyt wiele razy, ponów próbę później.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"explore_failed_to_generate": {
 		"message": "Nie udało się wygenerować nowej kolejki, ponowna próba za pięć sekund…"
 	},
 	"explore_finished": {
-		"message": "Kolejka została wyczyszczona."
+		"message": "Kolejka została przejrzana."
 	},
 	"badges_idle_apps": {
-		"message": "Aplikacje do idlowania: $1"
+		"message": "Aplikacje z kartami do zdobycia: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Aplikacje do idlowania na tej stronie: $1"
+		"message": "Aplikacje z kartami do zdobycia na tej stronie: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops": {
-		"message": "Pozostałe dropy: $1"
+		"message": "Pozostałe karty do zdobycia: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Pozostałe dropy na tej stronie: $1"
-	},
-	"achievement_your_progress": {
-		"message": "Twój postęp: $1 / $2"
+		"message": "Pozostałe karty do zdobycia na tej stronie: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"hidden_achievement": {
 		"message": "Ukryte osiągnięcie: "
 	},
 	"hidden_achievement_hover": {
-		"message": "Ukryte osiągnięcie, najedź myszką aby je ujawnić: "
+		"message": "Ukryte osiągnięcie, najedź myszką, aby je ujawnić: "
 	},
 	"inventory_list_at": {
-		"message": "Wystaw za %price%"
+		"message": "Wystaw za $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
 	},
 	"inventory_sell_at": {
-		"message": "Sprzedaj za %price%"
+		"message": "Sprzedaj za $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
 	},
 	"inventory_list_at_title": {
-		"message": "Wystawia przedmiot po najniższej, podanej cenie sprzedaży\n\nWyświetlona cena to kwota, którą otrzymasz (bez opłat)"
+		"message": "Wystawia przedmiot po najniższej podanej cenie sprzedaży\n\nWyświetlona cena to kwota, którą otrzymasz (bez opłat)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)."
+		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
 	},
 	"widget_view_app": {
-		"message": "Wyświetl aplikację $1 na SteamDB"
+		"message": "Zobacz aplikację $id$ na SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"widget_view_sub": {
-		"message": "Wyświetl paczkę $1 on SteamDB"
+		"message": "Sprawdź pakiet $id$ na SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
 	},
 	"options": {
 		"message": "Opcje"
@@ -180,10 +328,10 @@
 		"message": "⚠️ Przyznaj uprawnienia"
 	},
 	"options_footer1": {
-		"message": "Stworzone z 💙 przez zespół <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>"
+		"message": "Stworzone z 💙 przez zespół <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "To rozszerzenie jest <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">otwarto-źrodłowe</a>, dziękuję wszystkim zaangażowanym!"
+		"message": "To rozszerzenie jest <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open-source</a>, dziękuję wszystkim zaangażowanym!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Wyłączone pola wyboru oznaczają wbudowane funkcje."
@@ -210,7 +358,7 @@
 		"message": "Wyjaśnienie"
 	},
 	"options_website_explanation1": {
-		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (lista życzeń, posiadane, śledzone, ignorowane produkty i produkty w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
+		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (lista życzeń, posiadane, obserwowane, ignorowane produkty i produkty w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
 	},
 	"options_website_explanation2": {
 		"message": "Aby użyć tej funkcji, musisz być zalogowany w sklepie."
@@ -225,31 +373,31 @@
 		"message": "Wyróżnij posiadane i znajdujące się na liście życzeń produkty na steamdb.info"
 	},
 	"options_website_highlight1": {
-		"message": "Lista życień, obserwowane, i ignorowane produkty w sklepie Steam bezpośrednio z SteamDB"
+		"message": "Lista życzeń, obserwowane i ignorowane produkty w sklepie Steam bezpośrednio ze SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Włącz skrypt darmowych pakietów</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Włącz skrypt odbierania darmowych pakietów</a>"
 	},
 	"options_website_highlight3": {
 		"message": "Włącz dodatkowe filtrowanie na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stronie sprzedaży</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stronie zestawów</a>"
 	},
 	"options_extra_data": {
-		"message": "Dodatkowe dane pobrane z steamdb.info"
+		"message": "Dodatkowe dane pobrane ze steamdb.info"
 	},
 	"options_extra_data_players": {
-		"message": "Po włączeniu opcji \"Wyświetlaj bieżących graczy i maksymalne szczyty na stronach aplikacji\" lub \"Wyświetlaj ostatnią aktualizację składów na stronach aplikacji\" rozszerzenie wykona bezpieczne żądanie do steamdb.info, aby uzyskać aktualną liczbę graczy i ostatnią aktualizację plików."
+		"message": "Gdy włączona jest opcja \"Wyświetlaj bieżących graczy i maksymalne rekordy na stronach aplikacji\" lub \"Wyświetl ostatnią aktualizację na stronach aplikacji\", rozszerzenie wykona bezpieczne żądanie do steamdb.info, aby uzyskać aktualną liczbę graczy i ostatnią aktualizację gry."
 	},
 	"options_extra_data_prices": {
-		"message": "Gdy opcja \"Wyświetlaj najniższą zarejestrowaną cenę na stronach aplikacji\" jest włączona, rozszerzenie wykona bezpieczne żądanie do steamdb.info z twoją walutą (z tym, co Steam uzna za twoją walutę), aby uzyskać zarejestrowaną cenę dla określonej gry."
+		"message": "Gdy opcja \"Wyświetlaj najniższą zarejestrowaną cenę na stronach aplikacji\" jest włączona, rozszerzenie wykona bezpieczne żądanie do steamdb.info z twoją walutą (którą określa Steam), aby uzyskać zarejestrowaną cenę dla określonej gry."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Wyświetlaj najniższą zarejestrowaną cenę na stronach aplikacji"
 	},
 	"options_online_stats": {
-		"message": "Wyświetlaj bieżących graczy i maksymalne szczyty na stronach aplikacji"
+		"message": "Wyświetlaj bieżących graczy i maksymalne rekordy na stronach aplikacji"
 	},
 	"options_steamdb_last_update": {
-		"message": "Wyświetlaj ostatnią aktualizację plików na stronach aplikacji"
+		"message": "Wyświetlaj ostatnią aktualizację na stronach aplikacji"
 	},
 	"options_button_app": {
 		"message": "Wyświetl przycisk na stronach aplikacji"
@@ -270,10 +418,10 @@
 		"message": "Wyświetl przyciski SteamDB i strony sklepu na stronie kart gier"
 	},
 	"options_link_subid": {
-		"message": "Wyświetl ID paczki dla każdej opcji zakupu"
+		"message": "Wyświetl ID pakietu dla każdej opcji zakupu"
 	},
 	"options_link_subid_widget": {
-		"message": "Wyświetl ID paczki w widżetach aplikacji"
+		"message": "Wyświetl ID pakietu w widżetach aplikacji"
 	},
 	"options_link_accountpage": {
 		"message": "Link do każdej paczki na stronie licencji"
@@ -303,10 +451,18 @@
 		"message": "Wyświetl cenę rynkową przedmiotów w ekwipunkach innych użytkowników"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Wspieraj parametry <code>for_item</code> i <code>my_item</code>"
+		"message": "Obsługa parametrów $for_item$ i $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
 	},
 	"options_github_explanation": {
-		"message": "Zobacz wyjaśnienie na GitHubie"
+		"message": "Zobacz wyjaśnienie na GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
 		"message": "Zignoruj powiadomienia ofert wymiany \"ta transakcja wydaje się podejrzana\" i \"czy jesteś pewien, że jest to prezent?\""
@@ -324,7 +480,8 @@
 		"message": "Usuń filtrowanie z odnośników"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Akceptuj SSA automatycznie na stronach rynku, ekwipunku i aktywacji kluczy"
+		"message": "Automatycznie akceptuj SSA (Umowę użytkownika Steam) na stronach rynku, ekwipunku i aktywacji kluczy",
+		"description": "SSA is Steam Subscriber Agreement"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Schowaj przycisk \"Zainstaluj Steam\" w nagłówku"
@@ -351,13 +508,18 @@
 		"message": "Niektórzy deweloperzy umieszczają megabajty obrazów w opisach gier, których załadowanie może zająć trochę czasu."
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Obsługa parametrów <code>award</code> w odnośnikach do profili i udostępnionych plików"
+		"message": "Obsługa parametrów $award$ na profilu i udostępnionych linkach do plików",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
 	},
 	"options_builtin_card_drops": {
 		"message": "Wyświetl całkowitą liczbę pozostałych do zdobycia kart na stronie odznak"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Dodaj przycisk, aby wyczyścić kolejkę odkrywania podczas wyprzedaży"
+		"message": "Dodaj przycisk, aby oszukać kolejkę odkryć podczas wyprzedaży"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Popraw stronę globalnych osiągnięć"

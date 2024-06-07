@@ -1,0 +1,29 @@
+{
+	"extension_description": {
+		"message": "Pievieno SteamDB saites un jaunas funkcijas Steam veikalam kā arī kopienai. Skatīt zemākās spēļu cenas un statistiku."
+	},
+	"steamdb_options": {
+		"message": "Opcijas"
+	},
+	"steamdb_calculator": {
+		"message": "Kalkulators"
+	},
+	"steamstatus": {
+		"message": "Pārbaudi vietnē steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Šķiet, ka Steam piedzīvo kādu darbības pārtraukumu. "
+	},
+	"view_on_steamdb": {
+		"message": "Skatīt"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Skatīt"
+	},
+	"view_your_achievements": {
+		"message": "Skatīt savus sasniegumus"
+	},
+	"store_page": {
+		"message": "Veikals"
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"steamdb_options": {
+		"message": "SteamDB Sätted"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB kalkulaator"
+	},
+	"view_on_steamdb": {
+		"message": "Vaata SteamDB-s"
+	},
+	"store_page": {
+		"message": "Poeleht"
+	},
+	"search": {
+		"message": "Otsi"
+	},
+	"id_app": {
+		"message": "Äpp $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Hindamine:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB HINDAMINE",
+		"description": "Visible on the mobile version"
+	},
+	"app_depots_update": {
+		"message": "Viimane uuendus:"
+	},
+	"app_depots_updated_short": {
+		"message": "Uuendatud",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_followers": {
+		"message": "Jälgijad:"
+	},
+	"app_nothing_selected": {
+		"message": "midagi pole valitud"
+	},
+	"widget_view_app": {
+		"message": "Vaata äpp $id$ SteamDB-s",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Sätted"
+	},
+	"options_header_website": {
+		"message": "SteamDB Veebisait"
+	},
+	"options_header_extra_data": {
+		"message": "Täiendavad andmed"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Nuppud ja lingid"
+	},
+	"options_header_inventory": {
+		"message": "Inventar"
+	},
+	"options_website_explanation": {
+		"message": "Selgitus"
+	}
+}

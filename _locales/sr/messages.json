@@ -1,1 +1,181 @@
-{}
+{
+	"extension_description": {
+		"message": "Додаје СтеамДБ линкове и нове функције ма Стеам продавницу и заједницу. Погледајте најниже цене игрица и њихову статистику."
+	},
+	"steamdb_options": {
+		"message": "СтеамДБ подешавања"
+	},
+	"steamdb_calculator": {
+		"message": "СтеамДБ калкулатор"
+	},
+	"steamstatus": {
+		"message": "Провери на steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Изгледа да Стеам тренутно има застој. "
+	},
+	"view_on_steamdb": {
+		"message": "Погледај на СтеамДБ"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Погледај на PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Погледај своја достигнућа"
+	},
+	"store_page": {
+		"message": "Страница продавнице"
+	},
+	"search": {
+		"message": "Претрага"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Пакет $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB оцена:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB ОЦЕНА",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ од $total$ рецензија је позитивно(сви типови куповине)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Последња измена:"
+	},
+	"app_depots_updated_short": {
+		"message": "Ажурирано",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Онлајн статистика"
+	},
+	"app_stats_online_now": {
+		"message": "На мрежи сада:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-часовни максимум:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Највећи максимум икада:"
+	},
+	"app_stats_followers": {
+		"message": "Пратиоци:"
+	},
+	"app_nothing_selected": {
+		"message": "ништа није изабрано"
+	},
+	"app_lowest_price": {
+		"message": "СтеамДБ најмање забележена цена је <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "СтеамДБ најниже забележена цена је <b>$price$</b> на <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "СтеамДБ најниже забележена цена је <b>$price$</b> и најнижа цена у претходне 2 године је <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Цена виђена на датум $date$($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Цена је виђена $seen$ пута, последњи пут $date$($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Аутоматски-откривач"
+	},
+	"hidden_achievement": {
+		"message": "Скривена медаља: "
+	},
+	"options": {
+		"message": "Опције"
+	},
+	"options_header_inventory": {
+		"message": "Инвентар"
+	}
+}

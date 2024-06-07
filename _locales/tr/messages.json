@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "Steam mağazası ve topluluğuna SteamDB bağlantılarını ve yeni özellikleri ekler. En düşük oyun fiyatlarını ve istatistiklerini görüntüleyin."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Ayarları"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Hesaplayıcı"
+	},
+	"steamstatus": {
+		"message": "steamstat.us'tan kontrol et"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam'de kesinti yaşanıyor gibi görünüyor. "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB'de Görüntüle"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki'de Görüntüle"
+	},
+	"view_your_achievements": {
+		"message": "Başarımlarını görüntüle"
+	},
+	"store_page": {
+		"message": "Mağaza Sayfası"
+	},
+	"search": {
+		"message": "Ara"
+	},
+	"id_app": {
+		"message": "Uygulama $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Alt $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Paket $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Puanı:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB PUANI",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ incelemeden $positive$ olumlu (tüm satın alma türleri)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Son Güncelleme:"
+	},
+	"app_depots_updated_short": {
+		"message": "Güncellendi",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Çevrim içi İstatistik"
+	},
+	"app_stats_online_now": {
+		"message": "Şu an Aktif:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-saat en fazlası:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Tüm zamanların en fazlası:"
+	},
+	"app_stats_followers": {
+		"message": "Takipçi:"
+	},
+	"app_nothing_selected": {
+		"message": "hiçbir şey seçilmedi"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB verilerine göre en düşük fiyat: <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB verilerine göre <b>%$discount$</b> indirim ile en düşük fiyat: <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB verilerine göre en düşük fiyat: <b>$price$</b>, en düşük indirim: <b>%$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$ ($relative$) tarihinde görülen fiyat",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "En son $date$ ($relative$) tarihinde $seen$ kez görülen fiyat",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Otomatik Keşfet"
+	},
+	"explore_auto_discover_description": {
+		"message": "Etkinlik kartı almak için kuyruğu otomatik olarak keşfedin."
+	},
+	"explore_generating": {
+		"message": "Yeni keşif kuyruğu oluşturuluyor, Steam yüksek yük altındaysa bu işlem başarısız olabilir…"
+	},
+	"explore_exploring": {
+		"message": "Kuyruk keşfediliyor... $current$/$total$ istenildi",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Kuyruktaki $current$. sıradaki öğe temizlenemedi, beş saniye içinde tekrar denenecek…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Kuyruktaki $current$. sıradaki öğeyi temizleme birçok kez başarısız oldu. Daha sonra tekrar deneyebilirsiniz.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Yeni kuyruk oluşturulamadı, beş saniye içinde tekrar denenecek…"
+	},
+	"explore_finished": {
+		"message": "Kuyruk keşfedildi."
+	},
+	"badges_idle_apps": {
+		"message": "Boşta kalacak uygulamalar: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Bu sayfada boşta kalacak uygulamalar: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Kalan ödüller: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Bu sayfada kalan ödüller: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Gizli başarım: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Gizli başarım, görüntülemek için fare ile üzerine gelin: "
+	},
+	"inventory_list_at": {
+		"message": "Listele: $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Sat: $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Listelenen en düşük satış fiyatına sahip ürünü listeler\n\nGösterilen fiyat, aldığınız paradır (vergisiz)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Listelenen en yüksek satın alma siparişi fiyatına sahip ürünü listeler\n\nGösterilen fiyat, aldığınız paradır (vergisiz)"
+	},
+	"widget_view_app": {
+		"message": "$id$ uygulamasını SteamDB üzerinde görüntüle",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "$id$ uygulamasını SteamDB üzerinde görüntüle",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Seçenekler"
+	},
+	"options_welcome_title": {
+		"message": "👋 SteamDB uzantısını indirdiğin için teşekkürler!"
+	},
+	"options_welcome_description": {
+		"message": "Aşağıdaki seçenekleri inceleyin ve tercih ettiklerinizi değiştirin. Gelecekte buraya geri dönmek için:"
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB'deki ayarlar sayfası"
+	},
+	"options_welcome_option2": {
+		"message": "Steam sayfalarında hesap ödül düşüşü"
+	},
+	"options_welcome_option3": {
+		"message": "Tarayıcının eklentiler sayfası"
+	},
+	"options_review": {
+		"message": "Bu eklenti için bir inceleme bırak"
+	},
+	"options_permissions_description": {
+		"message": "Bu uzantı doğru bir şekilde çalışması için SteamDB, Steam Mağazası ve Steam Toplulukları üzerinde ek izinlere ihtiyacı var."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ İzin ver"
+	},
+	"options_footer1": {
+		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> arkadaşlarıyla 💙 ile yapıldı."
+	},
+	"options_footer2": {
+		"message": "Tüm katkıda bulunanlara teşekkürler, eklenti <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">açık kaynaktır</a>!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Devre dışı bırakılan onay kutuları geliştirilme aşamasındadır."
+	},
+	"options_header_website": {
+		"message": "SteamDB İnternet Sitesi"
+	},
+	"options_header_extra_data": {
+		"message": "Ekstra veri"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Düğmeler ve bağlantılar"
+	},
+	"options_header_inventory": {
+		"message": "Envanter"
+	},
+	"options_header_trade_offers": {
+		"message": "Takas Teklifleri"
+	},
+	"options_header_enhancements": {
+		"message": "Geliştirmeler"
+	},
+	"options_website_explanation": {
+		"message": "Açıklama"
+	},
+	"options_website_explanation1": {
+		"message": "Seçenek aktifleştirildiğinde eklenti <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam Mağazası</a> verilerine erişim talep edecek ve bu kullanıcı verilerini sayfada kullanacak. (İstek listesindekiler, sahip olunanlar, takip edilenler, kısıtlanan ürünler ve sepetteki ürünler)."
+	},
+	"options_website_explanation2": {
+		"message": "Bunun çalışması için giriş yapmış olman gerekli."
+	},
+	"options_website_explanation3": {
+		"message": "Veriler tamamen tarayıcınızda tutulur ve SteamDB veri tabanına asla gönderilmez."
+	},
+	"options_website_explanation4": {
+		"message": "Steam Mağazasına aşırı talep gelmesini önlemek için kullanıcı verileriniz tarayıcınızın yerel deposunda önbelleğe alınır."
+	},
+	"options_website_highlight": {
+		"message": "Sahip olunan ve istek listesine eklenen ürünleri steamdb.info üzerinde vurgula"
+	},
+	"options_website_highlight1": {
+		"message": "SteamDB üzerinden Steam mağazasındaki ürünleri doğrudan istek listesine ekle, takip et ve yok say"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ücretsiz paket alma komut dosyasını etkinleştirin</a>"
+	},
+	"options_website_highlight3": {
+		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">Satışlar</a> ve <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">Paketler</a> sayfasında ekstra filtrelemeyi aktifleştir"
+	},
+	"options_extra_data": {
+		"message": "Steamdb.info'dan alınan ekstra veriler"
+	},
+	"options_extra_data_players": {
+		"message": "\"Uygulama sayfalarında mevcut eşzamanlı oyuncuları ve maksimum zirveleri görüntüle\" veya \"Uygulama sayfalarında son güncellemeyi görüntüle\" seçeneği etkinleştirildiğinde, uzantı, mevcut oyuncu sayısını ve son oyun güncellemesini almak için steamdb.info'ya güvenli bir istekte bulunacaktır."
+	},
+	"options_extra_data_prices": {
+		"message": "\"Uygulama sayfalarında kaydedilen en düşük fiyatı görüntüle\" seçeneği etkinleştirildiğinde, uzantı, belirli bir oyun için kayıtlı fiyatı almak için steamdb.info'ya para biriminizle (Steam'in düşündüğü şekilde) güvenli bir istekte bulunacaktır."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Uygulama sayfalarında kaydedilen en düşük fiyatı görüntüle"
+	},
+	"options_online_stats": {
+		"message": "Mevcut eşzamanlı oyuncular sayısını ve maksimum zirveleri uygulama sayfalarında görüntüleyin"
+	},
+	"options_steamdb_last_update": {
+		"message": "Uygulama sayfalarında son güncellemeyi görüntüle"
+	},
+	"options_button_app": {
+		"message": "Uygulama sayfalarında bir düğme görüntüle"
+	},
+	"options_button_pcgw": {
+		"message": "Uygulama sayfalarında PCGamingWiki düğmesini görüntüle"
+	},
+	"options_button_sub": {
+		"message": "Paket sayfalarında bir düğme görüntüle"
+	},
+	"options_button_video": {
+		"message": "Video sayfalarında bir düğme görüntüleme"
+	},
+	"options_button_gamehub": {
+		"message": "Oyun Forumlarında bir buton göster"
+	},
+	"options_button_gamecards": {
+		"message": "Oyun kartları sayfasında SteamDB ve mağaza sayfası düğmelerini görüntüleyin"
+	},
+	"options_link_subid": {
+		"message": "Her satın alma seçeneğinin altında SubID'yi görüntüle"
+	},
+	"options_link_subid_widget": {
+		"message": "Uygulama widget'larında SubID'yi görüntüle"
+	},
+	"options_link_accountpage": {
+		"message": "Her paketi lisanslar sayfanıza bağlayın"
+	},
+	"options_profile_calculator": {
+		"message": "Topluluk profillerine bir hesaplayıcı bağlantısı ekle"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Envanter sayfasındaki oyun seçimini yana taşı"
+	},
+	"options_link_inventory": {
+		"message": "Envanterinizdeki her hediyeyi ve kuponu SteamDB'ye bağlayın"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Envanterinizdeki hediye SubID'sini doğru şekilde belirleyin"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Bir öğe satarken envanteri yenileme"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Hızlı satma tuşları ekle"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Hızlı satmayı otomatik olarak kabul et"
+	},
+	"options_display_market_price_others": {
+		"message": "Diğer kullanıcıların envanterlerindeki öğe piyasa fiyatını görüntüle"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "$for_item$ ve $my_item$ parametrelerini destekleyin",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "GitHub'daki açıklamayı görüntüle"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "\"Bu takas şüpheli görünüyor\" ve \"Bunun bir hediye olduğundan emin misiniz?\" uyarılarını gizle"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Valve'ın kriptik hata numaraları yerine daha iyi hata mesajları göster"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Yaş doğrulama kontrolünü geç"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Yaş ve doğum günü çerezlerini her zaman geçecek şekilde ayarla"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Tüm bağlantı filtreleme bağlantılarını kaldır"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Pazarda ve envanterde SSA'yı kabul edin ve önemli sayfaları otomatik olarak etkinleştirin",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Başlıktaki \"Steam'i Yükle\" düğmesini gizle"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "\"Steam'de Aç\" yazısını gizle"
+	},
+	"options_steamdb_rating": {
+		"message": "SteamDB derecelendirmesini uygulama sayfalarında görüntüleyin"
+	},
+	"options_enhancement_appicon": {
+		"message": "Mağaza ve topluluk sayfalarında uygulama ikonlarını görüntüle"
+	},
+	"options_hidden_achievements": {
+		"message": "Gizli başarımları ve açıklamalarını yükle"
+	},
+	"options_spoiler_achievements": {
+		"message": "Açıklamaları spoiler ögesinin arkasına gizleyin"
+	},
+	"options_prevent_store_images": {
+		"message": "Mağaza sayfalarında resimlerin yüklenmesini durdur"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Kimi geliştiriciler oyun açıklamalarına yüksek boyutlu görseller eklediğinden sayfanın yüklenmesi uzun sürebilir. Görseli yüklemek için üzerine tıklayın"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Profilde ve paylaşılan dosya bağlantılarında $award$ parametrelerini destekleyin",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Rozetler sayfasında kalan kart düşürme sayısını görüntüle"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "İndirimler sırasında keşif kuyruğunda hile yapmak için bir düğme ekleyin"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Global Başarımlar sayfasını iyileştir"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Kişisel Başarılar sayfana bağla"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Kilitli başarılarda daha iyi görünürlük için kilit ikonu vardır"
+	}
+}

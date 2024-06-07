@@ -1,1 +1,151 @@
-{}
+{
+	"extension_description": {
+		"message": "Tilføjer SteamDB links og nye funktioner i Steam-butikken og -fællesskabet. Se de laveste spilpriser og statistiker."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Indstillinger"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Lommeregner"
+	},
+	"steamstatus": {
+		"message": "Tjek på steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam ser ud til at opleve noget nedetid. "
+	},
+	"view_on_steamdb": {
+		"message": "Se på SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Se på PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Se dine præstationer"
+	},
+	"store_page": {
+		"message": "Butiks Side"
+	},
+	"search": {
+		"message": "Søg"
+	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Pakke $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Bedømmelse:"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ af $total$ anmeldelser er positive (alle købstyper)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Seneste opdatering:"
+	},
+	"app_depots_updated_short": {
+		"message": "Opdateret",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online Statistikker"
+	},
+	"app_stats_online_now": {
+		"message": "Online nu:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-timers top:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Højeste nogensinde:"
+	},
+	"app_stats_followers": {
+		"message": "Følgere:"
+	},
+	"app_nothing_selected": {
+		"message": "Intet valgt"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB's laveste registrerede pris er <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB's laveste registrerede pris er <b>$price$</b> med <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB's laveste registrerede pris er <b>$price$</b> med <b>-$price_limited$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Pris set på $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"options_welcome_title": {
+		"message": "👋 Tak for at installere SteamDB udvidelse!"
+	}
+}

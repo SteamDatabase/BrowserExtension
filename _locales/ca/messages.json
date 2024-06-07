@@ -1,1 +1,533 @@
-{}
+{
+	"extension_description": {
+		"message": "Afegeix enllaços de SteamDB i noves funcionalitats a la botiga i comunitat de Steam. Mira els preus més baixos dels jocs i estadístiques."
+	},
+	"steamdb_options": {
+		"message": "Opcions de SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Calculadora de SteamDB"
+	},
+	"steamstatus": {
+		"message": "Consulta a steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Sembla que Steam està patint alguna mena de temps d'aturada. "
+	},
+	"view_on_steamdb": {
+		"message": "Veure a SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Veure a PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Veure els teus assoliments"
+	},
+	"store_page": {
+		"message": "Pàgina de la botiga"
+	},
+	"search": {
+		"message": "Cerca"
+	},
+	"id_app": {
+		"message": "Aplicació $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Paquet $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "Valoració de SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " VALORACIÓ DE STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ de les $total$ valoracions són positives (tots els tipus de compra)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Darrera actualització:"
+	},
+	"app_depots_updated_short": {
+		"message": "Actualitzat",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Estadístiques En línia"
+	},
+	"app_stats_online_now": {
+		"message": "En línia ara:"
+	},
+	"app_stats_peak_today": {
+		"message": "Pic de 24 hores:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Pic de tots els temps:"
+	},
+	"app_stats_followers": {
+		"message": "Seguidors:"
+	},
+	"app_nothing_selected": {
+		"message": "res seleccionat"
+	},
+	"app_lowest_price": {
+		"message": "El preu més baix registrat a SteamDB és <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "El preu més baix registrat a SteamDB és <b>$price$</b> al <b>$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "El preu més baix registrat a SteamDB és <b>$price$</b> i el més baix en 2 anys és <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Preu vist al $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Preu vist $seen$ vegades, per últim cop el $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Autodescobreix"
+	},
+	"explore_auto_discover_description": {
+		"message": "Descobreix automàticament la cua per aconseguir una targeta d'esdeveniment."
+	},
+	"explore_generating": {
+		"message": "Generant una nova cua de descobriment, això pot fallar si Steam està sota una alta càrrega…"
+	},
+	"explore_exploring": {
+		"message": "Explorant la cua… Sol·licitud $current$ de $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "No s'ha pogut esborrar l'ítem #$current$ de la cua, tornant a provar en cinc segons…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "No s'ha pogut esborrar l'ítem #$current$ de la cua molts cops. Pots provar un altre cop més endavant.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "No s'ha pogut generar una nova cua, provant un altre cop en cinc segons…"
+	},
+	"explore_finished": {
+		"message": "La cua ha sigut explorada."
+	},
+	"badges_idle_apps": {
+		"message": "Aplicacions en inactiu: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplicacions en inactiu en aquesta pàgina: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Drops restants: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Drops restants a aquesta pàgina: $amount$",
+		"description": "Shown on your badges page",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Assoliments ocults: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Assoliments ocults, passa el ratolí per sobre per revelar: "
+	},
+	"inventory_list_at": {
+		"message": "Vendre a $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Vendre a $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Llista l'article pel preu de venda més baix\n\nEl preu mostrat són els diners que reps (sense comissions)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Llista l'article pel preu més alt de la comanda de compra\n\nEl preu mostrat són els diners que reps (sense comissions)"
+	},
+	"widget_view_app": {
+		"message": "Veure l'aplicació $id$ a SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Veure sub $id$ a SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Opcions"
+	},
+	"options_welcome_title": {
+		"message": "👋 Gràcies per instal·lar l'extensió de SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Revisa les opcions següents i canvia les que prefereixis. Per tornar aquí en el futur:"
+	},
+	"options_welcome_option1": {
+		"message": "Pàgina d'opcions a SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Menú desplegable del compte a les pàgines de Steam"
+	},
+	"options_welcome_option3": {
+		"message": "La pàgina de complements del teu navegador"
+	},
+	"options_review": {
+		"message": "Deixa una ressenya per aquesta extensió"
+	},
+	"options_permissions_description": {
+		"message": "Aquesta extensió necessita permisos addicionals per funcionar correctament a SteamDB, la Botiga de Steam, i a la Comunitat de Steam."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Donar permisos"
+	},
+	"options_footer1": {
+		"message": "Fet amb 💙 per la gent de <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "És de <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">codi obert</a>, gràcies a tots els col·laboradors!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Les caselles de selecció desactivades indiquen funcions integrades."
+	},
+	"options_header_website": {
+		"message": "Pàgina web de SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Dades addicionals"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Botons i enllaços"
+	},
+	"options_header_inventory": {
+		"message": "Inventari"
+	},
+	"options_header_trade_offers": {
+		"message": "Ofertes d'intercanvi"
+	},
+	"options_header_enhancements": {
+		"message": "Millores"
+	},
+	"options_website_explanation": {
+		"message": "Explicació"
+	},
+	"options_website_explanation1": {
+		"message": "Quan aquesta opció està activa, l'extensió demanarà certa informació a l'usuari (llista de desitjos, en propietat, seguits, productes ignorats, i productes al carro) de la <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Botiga de Steam</a> i els utilitzarà per aplicar aspectes destacats al lloc."
+	},
+	"options_website_explanation2": {
+		"message": "Has d'haver iniciat sessió a la botiga perquè funcioni."
+	},
+	"options_website_explanation3": {
+		"message": "Això està contingut completament dins del teu navegador i mai s'enviarà al back-end de SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Per evitar sol·licituds excessives a la Botiga de Steam, les teves dades d'usuari es guarden a l'emmagatzematge local del teu navegador."
+	},
+	"options_website_highlight": {
+		"message": "Destaca els productes en propietat i desitjats a steamdb.info"
+	},
+	"options_website_highlight1": {
+		"message": "Afegeix a desitjats, segueix i ignora productes de la botiga de Steam directament des de SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Habilita l'script de paquets gratuïts</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Activa el filtratge addicional a la <a href=\"https://steamdb.info/sales/\" target=\"_blank\">pàgina de vendes</a> i a la<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pàgina de paquets</a>"
+	},
+	"options_extra_data": {
+		"message": "Dades addicionals obtingudes de steamdb.info"
+	},
+	"options_extra_data_players": {
+		"message": "Quan l'opció de \"Mostra jugadors simultanis i pics màxims a les pàgines de l'aplicació\" o \"Mostra l'última actualització a les pàgines de l'aplicació\" és activa, l'extensió farà una sol·licitud segura a steamdb.info per obtenir la quantitat de jugadors actuals i l'última actualització del joc."
+	},
+	"options_extra_data_prices": {
+		"message": "Quan l'opció de \"Mostra el preu més baix enregistrat a les pàgines de l'aplicació\" és activa, l'extensió farà una sol·licitud segura a steamdb.info amb la teva moneda (amb la que Steam pensa que és) per obtenir el preu enregistrat per a un joc en específic."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Mostra el preu més baix enregistrat a les pàgines de l'aplicació"
+	},
+	"options_online_stats": {
+		"message": "Mostra jugadors simultanis i pics màxims a les pàgines de l'aplicació"
+	},
+	"options_steamdb_last_update": {
+		"message": "Mostra l'última actualització a les pàgines de l'aplicació"
+	},
+	"options_button_app": {
+		"message": "Mostra un botó a les pàgines de l'aplicació"
+	},
+	"options_button_pcgw": {
+		"message": "Mostra el botó de PCGamingWiki a les pàgines de les aplicacions"
+	},
+	"options_button_sub": {
+		"message": "Mostra un botó a les pàgines del paquet"
+	},
+	"options_button_video": {
+		"message": "Mostra un botó a les pàgines del vídeo"
+	},
+	"options_button_gamehub": {
+		"message": "Mostra un botó als hubs del jocs"
+	},
+	"options_button_gamecards": {
+		"message": "Mostra els botons de SteamDB i la botiga a la pàgina de cartes del joc"
+	},
+	"options_link_subid": {
+		"message": "Mostra el SubID sota cada opció de compra"
+	},
+	"options_link_subid_widget": {
+		"message": "Mostra el SubID als estris de l'aplicació"
+	},
+	"options_link_accountpage": {
+		"message": "Enllaça cada paquet a la teva pàgina de llicències"
+	},
+	"options_profile_calculator": {
+		"message": "Afegeix un enllaç a una calculadora als perfils de la comunitat"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Mou cap al costat la selecció del joc a la pàgina d'inventari"
+	},
+	"options_link_inventory": {
+		"message": "Enllaça amb SteamDB cada regal i cupó al teu inventari"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Desxifrar correctament el SubID del regal al teu inventari"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "No refrescar l'inventari quan es ven un article"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Afegir botons de venda ràpida"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Acceptar automàticament una venda ràpida"
+	},
+	"options_display_market_price_others": {
+		"message": "Mostrar l'inventari d'altres usuaris el preu de mercat de l'article"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Suport per paràmetres $for_item$ i $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Veure explicació a GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Suprimeix les alertes d'intercanvi de \"aquest intercanvi sembla sospitós\" i \"estàs segur que és un regal?\""
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Mostra millors missatges d'error, en comptes dels nombres d'error críptics de Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Salta la pàgina de comprovació d'edat"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Estableix les galetes d'edat i d'aniversari perquè sempre passin"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Elimina tots els enllaços de filtre d'enllaços"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Accepta SSA (Acord de Subscriptor de Steam) al mercat, inventari i activa les claus de pàgines automàticament",
+		"description": "SSA is Steam Subscriber Agreement"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Amaga el botó d'\"Instal·lar Steam\" a la capçalera"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Amaga el banner d'\"Obrir a Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "Mostra la puntuació de SteamDB a les pàgines de les apps"
+	},
+	"options_enhancement_appicon": {
+		"message": "Mostra les icones de l'aplicació a les pàgines de botiga i comunitat"
+	},
+	"options_hidden_achievements": {
+		"message": "Carrega els assoliments amagats i les seves descripcions"
+	},
+	"options_spoiler_achievements": {
+		"message": "Amaga les descripcions al darrere d'un element d'espòiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Evita que les imatges es carreguin a les pàgines de la botiga de les aplicacions"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Alguns desenvolupadors posen megabytes d'imatges a les descripcions de jocs que poden trigar una estona a carregar-se, feu clic a una imatge per carregar-la"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Admet paràmetres de $award$ al perfil i als enllaços de fitxers compartits",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Mostra la quantitat total de drops de targetes restants a la pàgina d'insígnies"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Afegiu un botó per enganyar la cua de descobriment durant les rebaixes"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Millora la pàgina d'assoliments globals"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Enllaç a la teva pròpia pàgina d'assoliments"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Els assoliments bloquejats tenen una icona d'un pany per a més visibilitat"
+	}
+}

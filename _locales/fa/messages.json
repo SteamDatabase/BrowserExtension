@@ -1,0 +1,64 @@
+{
+	"extension_description": {
+		"message": "استیم دی بی لینک و ویژگی های جدیدی به فروشگاه استیم و کامیونیتی اضافه می کند. مشاهده پایین ترین قیمت بازی و آمار."
+	},
+	"steamdb_options": {
+		"message": "ویژگی های استیم دی بی"
+	},
+	"steamdb_calculator": {
+		"message": "ماشین حساب استیم دی بی"
+	},
+	"steamstatus": {
+		"message": "چک کنید در steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "به نظر می رسد استیم دچار برخی خرابی شده است. "
+	},
+	"view_on_steamdb": {
+		"message": "مشاهده در استیم دی بی"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "مشاهده در پی سی گیمینگ ویکی"
+	},
+	"view_your_achievements": {
+		"message": "دستاورد های خود را مشاهده کنید"
+	},
+	"store_page": {
+		"message": "صفحه فروشگاه"
+	},
+	"search": {
+		"message": "جُستجو"
+	},
+	"id_app": {
+		"message": "برنامه $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "رتبه بندی استیم دی پی:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " رتبه بندی استیم دی بی",
+		"description": "Visible on the mobile version"
+	},
+	"app_depots_update": {
+		"message": "آخرین بروزرسانی:"
+	},
+	"app_depots_updated_short": {
+		"message": "به روز شد",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "آمار آنلاین"
+	},
+	"app_stats_online_now": {
+		"message": "هم اکنون آنلاین:"
+	},
+	"options": {
+		"message": "تنظیمات"
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"extension_description": {
+		"message": "Menambah pautan SteamDB dan ciri-ciri baharu pada kedai dan komuniti Steam. Lihat harga terendah permainan dan statistik."
+	},
+	"steamdb_options": {
+		"message": "Pilihan SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Kalkulator SteamDB"
+	},
+	"steamstatus": {
+		"message": "Semak di steamstat.us"
+	},
+	"steamstatus_downtime": {
+		"message": "Steam nampaknya sedang mengalami sedikit masa tidak berfungsi. "
+	},
+	"view_on_steamdb": {
+		"message": "Lihat di SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Lihat di PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Lihat pencapaian anda"
+	},
+	"store_page": {
+		"message": "Halaman Kedai"
+	},
+	"search": {
+		"message": "Cari"
+	},
+	"id_app": {
+		"message": "Aplikasi $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Pakej $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " Penilaian STEAMDB",
+		"description": "Visible on the mobile version"
+	}
+}
