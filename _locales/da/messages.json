@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB Lommeregner"
 	},
-	"steamstatus": {
-		"message": "Tjek på steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam ser ud til at opleve noget nedetid. "
 	},

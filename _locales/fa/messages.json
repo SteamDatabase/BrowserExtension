@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "ماشین حساب استیم دی بی"
 	},
-	"steamstatus": {
-		"message": "چک کنید در steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "به نظر می رسد استیم دچار برخی خرابی شده است. "
 	},
@@ -76,6 +73,19 @@
 			"price": {
 				"content": "$1",
 				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "کمترین قیمت ثبت شده در استیم دی بی <b>$price$</b> در <b>-$discount$%</b> است",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
 			}
 		}
 	},
@@ -151,5 +161,8 @@
 	},
 	"options_welcome_description": {
 		"message": "گزینه های زیر را بررسی کنید و گزینه هایی را که ترجیح می دهید را تغییر دهید. برای بازگشت در آینده به اینجا:"
+	},
+	"options_review": {
+		"message": "بررسی خود برای این افزونه را ثبت کنید"
 	}
 }

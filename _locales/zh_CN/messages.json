@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB 账号价值计算器"
 	},
-	"steamstatus": {
-		"message": "在 steamstat.us 上查看详情"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam 似乎出现了一些故障。 "
 	},
@@ -64,7 +61,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "此游戏的 $total$ 篇用户评测中有 $positive$ 为好评 (所有购买类型)",
+		"message": "此游戏的 $total$ 篇用户评测中有 $positive$ 篇好评 (所有购买类型)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -173,7 +170,7 @@
 		"message": "自动探索队列，以获取一张活动卡牌"
 	},
 	"explore_generating": {
-		"message": "正在生成新的探索队列，如果 Steam 负载较高，可能会失败..."
+		"message": "正在生成新的探索队列（Steam 负载较高时可能会失败）..."
 	},
 	"explore_exploring": {
 		"message": "正在探索队列中... $current$ / $total$",
@@ -210,7 +207,7 @@
 		"message": "无法生成新的队列，将在五秒后重试…"
 	},
 	"explore_finished": {
-		"message": "队列探索完成"
+		"message": "队列探索完成。"
 	},
 	"badges_idle_apps": {
 		"message": "可掉落卡牌的应用数：$amount$",
@@ -307,7 +304,7 @@
 		"message": "👋 感谢您安装 SteamDB 扩展！"
 	},
 	"options_welcome_description": {
-		"message": "您可按照自身偏好，启用或关闭页面下方的各个选项。之后如需返回本页："
+		"message": "请根据需要启用或关闭页面下方的各个选项。之后如需返回本页，您可以访问："
 	},
 	"options_welcome_option1": {
 		"message": "SteamDB 设置页面"
@@ -319,10 +316,10 @@
 		"message": "您的浏览器插件页面"
 	},
 	"options_review": {
-		"message": "为这个扩展留下评论"
+		"message": "评论本扩展"
 	},
 	"options_permissions_description": {
-		"message": "此扩展需要额外的权限才能在 SteamDB，Steam 商店和 Steam 社区正常工作。"
+		"message": "此扩展需要额外的权限才能在 SteamDB、Steam 商店和 Steam 社区正常工作。"
 	},
 	"options_permissions_button": {
 		"message": "⚠️ 授予权限"
@@ -331,7 +328,7 @@
 		"message": "由 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> 团队用 💙 制作。"
 	},
 	"options_footer2": {
-		"message": "这是 <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">开源</a>的，感谢所有贡献者！"
+		"message": "这是<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">开源项目</a>，感谢所有贡献者！"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* 内置功能的复选框不可修改"
@@ -361,7 +358,7 @@
 		"message": "启用此选项后，扩展将从 <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 商店</a>请求一些用户数据（例如已添加至愿望单、购物车、已拥有、已关注、已忽略的产品）并在网站上用高亮标记这些条目。"
 	},
 	"options_website_explanation2": {
-		"message": "您必须登录商店才能正常使用。"
+		"message": "您必须登录商店才能使用此功能。"
 	},
 	"options_website_explanation3": {
 		"message": "这些数据完全存储在您的浏览器中，不会被发送到 SteamDB。"
@@ -369,41 +366,29 @@
 	"options_website_explanation4": {
 		"message": "为了防止向 Steam 发送过多的请求，您的用户数据被缓存在您的浏览器的本地存储中。"
 	},
-	"options_website_highlight": {
-		"message": "在 steamdb.info 上高亮已拥有和愿望单中的项目"
-	},
 	"options_website_highlight1": {
 		"message": "直接在 SteamDB 上管理 Steam 商店的愿望单、关注和忽略内容"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">启用免费游戏包脚本</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">启用批量激活免费游戏包脚本</a>"
 	},
 	"options_website_highlight3": {
-		"message": "在 <a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页</a> 和 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
-	},
-	"options_extra_data": {
-		"message": "从 steamdb.info 获取额外数据"
-	},
-	"options_extra_data_players": {
-		"message": "当启用“在页面上显示当前同时在线玩家数量和历史最高在线玩家数量”或“在页面上显示最后更新时间”选项时，扩展将通过安全请求在 steamdb.info 中获取当前玩家数量和最后游戏更新时间。"
-	},
-	"options_extra_data_prices": {
-		"message": "当启用“在页面上显示历史最低价格”选项时，该扩展将使用您所设置的货币 (与 Steam 认为的货币相匹配) 通过安全请求在 steamdb.info 中获取特定游戏的记录价格。"
+		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页面</a>和<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
 	},
 	"options_steamdb_lowest_price": {
-		"message": "在页面上显示历史最低价格"
+		"message": "在 app 商店页面上显示历史最低价格"
 	},
 	"options_online_stats": {
 		"message": "在页面上显示当前同时在线玩家数量和历史最高在线玩家数量"
 	},
 	"options_steamdb_last_update": {
-		"message": "在页面上显示最后更新时间"
+		"message": "在 app 商店页面上显示最后更新时间"
 	},
 	"options_button_app": {
-		"message": "在应用页面上显示按钮"
+		"message": "在 app 商店页面上显示按钮"
 	},
 	"options_button_pcgw": {
-		"message": "在应用页面显示 PCGamingWiki 按钮"
+		"message": "在 app 商店页面中显示 PCGamingWiki 按钮"
 	},
 	"options_button_sub": {
 		"message": "在游戏包页面上显示按钮"
@@ -439,7 +424,7 @@
 		"message": "在库存中显示礼物的 SubID"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "出售时不要刷新库存"
+		"message": "上架物品后阻止库存页面刷新"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "添加快速售出按钮"
@@ -474,38 +459,40 @@
 		"message": "跳过年龄确认页面"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "将年龄和生日的cookie设置为始终通过"
+		"message": "添加年龄和生日的 cookie 以便随时跳过年龄确认"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "移除站外链接安全提示"
+		"message": "移除“您正在离开 Steam”的中转页面",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "自动接受市场、库存和激活密钥页面上的 Steam 订户协议",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "在市场、库存和激活密钥页面上自动接受 Steam 订户协议。",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "隐藏顶部的“安装Steam”按钮"
+		"message": "隐藏顶部的“安装 Steam”按钮",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "隐藏 “在 Steam 中打开 ”横幅"
+		"message": "隐藏“在 Steam 中打开”横幅"
 	},
 	"options_steamdb_rating": {
 		"message": "在应用页面显示 SteamDB 评分"
 	},
 	"options_enhancement_appicon": {
-		"message": "在商店和社区页面上显示app图标"
+		"message": "在商店和社区页面上显示 app 图标"
 	},
 	"options_hidden_achievements": {
 		"message": "加载隐藏成就及其说明"
 	},
 	"options_spoiler_achievements": {
-		"message": "隐藏详细信息以防剧透"
+		"message": "通过防剧透文本元素隐藏描述"
 	},
 	"options_prevent_store_images": {
-		"message": "在应用商店页面中停止加载图像"
+		"message": "在应用商店页面中阻止图像加载"
 	},
 	"options_prevent_store_images_description": {
-		"message": "开发者在游戏描述中放置了数兆字节的图片，这些图片可能需要一段时间才能加载，点击图片即可加载。"
+		"message": "一些开发者可能会在游戏介绍中添加几兆字节的大图片，使页面加载变慢。点击这些图片即可加载。"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "支持个人资料和共享文件链接上的 $award$ 参数",
@@ -519,7 +506,7 @@
 		"message": "在徽章页面显示剩余可掉落卡片总数量"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "在特卖期间添加一个按钮来欺骗探索队列"
+		"message": "添加特卖期间快速完成探索队列来获得奖励的按钮"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改善全球成就统计页面"

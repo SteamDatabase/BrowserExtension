@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB калкулатор"
 	},
-	"steamstatus": {
-		"message": "Провери на steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Изгледа да Стеам тренутно има застој. "
 	},

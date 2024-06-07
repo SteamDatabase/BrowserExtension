@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Calcolatore SteamDB"
 	},
-	"steamstatus": {
-		"message": "Controlla su steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Sembra che Steam stia sperimentando un errore di server temporaneo. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Per evitare richieste eccessive al negozio di Steam, i dati utente vengono memorizzati nella cache nella memoria locale del browser."
 	},
-	"options_website_highlight": {
-		"message": "Evidenzia i prodotti posseduti e desiderati su steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Lista dei desideri, segui e ignora i prodotti sul negozio Steam direttamente da SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Abilita filtraggio extra sulla pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">di vendita</a> e <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundle</a>"
-	},
-	"options_extra_data": {
-		"message": "Dati aggiuntivi recuperati da steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Quando l'opzione \"Mostra i giocatori attuali simultanei e i picchi massimi nelle pagine delle app\" o \"Mostra l'ultimo aggiornamento sulle pagine delle app\" sono abilitati, l'estensione farà una richiesta a steamdb.info per ottenere la quantità attuale di giocatori e l'ultimo aggiornamento del gioco."
-	},
-	"options_extra_data_prices": {
-		"message": "Quando l'opzione \"Visualizza il prezzo più basso registrato nelle pagine dell'app\" è abilitata, l'estensione farà una richiesta a steamdb.info con la tua valuta (con quello che Steam pensa che sia) per ottenere il prezzo registrato per un gioco specifico."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Mostra il prezzo più basso registrato nelle pagine delle app"
@@ -476,15 +461,9 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Imposta i cookie di età e compleanno per passare sempre"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "Rimuovi tutti i link dal filtro dei link"
-	},
-	"options_enhancement_market_ssa": {
-		"message": "Accetta gli SSA sul mercato, l'inventario e attiva automaticamente le pagine chiave",
-		"description": "SSA is Steam Subscriber Agreement"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "Nascondi il pulsante \"Installa Steam\" nell'intestazione"
+		"message": "Nascondi il pulsante \"Installa Steam\" nell'intestazione",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Nascondi il banner \"Apri in Steam\""

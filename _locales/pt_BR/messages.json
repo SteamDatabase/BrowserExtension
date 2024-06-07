@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Calculadora do SteamDB"
 	},
-	"steamstatus": {
-		"message": "Conferir no steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "O Steam parece estar momentaneamente indisponível. "
 	},
@@ -170,7 +167,7 @@
 		"message": "Explorar automaticamente"
 	},
 	"explore_auto_discover_description": {
-		"message": "Explorar automaticamente para ganhar uma carta de promoção."
+		"message": "Explora automaticamente para ganhar uma carta do evento."
 	},
 	"explore_generating": {
 		"message": "Gerando lista de descobrimento. Isso pode falhar caso o Steam esteja sob alta carga…"
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Para evitar solicitações excessivas à Loja Steam, os seus dados de usuário são armazenados em cache no armazenamento local do seu navegador."
 	},
-	"options_website_highlight": {
-		"message": "Destacar produtos adquiridos e desejados no site do SteamDB"
-	},
 	"options_website_highlight1": {
 		"message": "Adicione ou remova produtos da lista de desejos e siga ou ignore aplicativos diretamente no site do SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Ativar filtros adicionais na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">página de promoções</a> e na <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">página de conjuntos</a>"
-	},
-	"options_extra_data": {
-		"message": "Dados adicionais obtidos em steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Quando a opção \"Exibir número atual de jogadores simultâneos e picos máximos nas páginas dos aplicativos\" ou \"Exibir data da última atualização nas páginas dos aplicativos\" estiver ativada, a extensão fará uma solicitação segura ao steamdb.info para obter informações sobre a quantidade atual de jogadores e a última atualização do jogo."
-	},
-	"options_extra_data_prices": {
-		"message": "Quando a opção \"Exibir o preço mais baixo registrado nas páginas dos aplicativos\" estiver ativada, a extensão fará uma solicitação segura ao steamdb.info, usando a sua moeda local (conforme definido no Steam), para obter informações sobre o preço mais baixo registrado de um jogo específico."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Exibir o preço mais baixo registrado nas páginas dos aplicativos"
@@ -477,14 +462,16 @@
 		"message": "Define os cookies de idade e aniversário para sempre passarem"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Remover todos os links do filtro de links"
+		"message": "Remove o filtro de link \"Você está saindo da Steam\" de sites externos",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Aceitar automaticamente o Acordo de Assinatura do Steam nas páginas do Mercado, inventário e ativação de códigos",
-		"description": "SSA is Steam Subscriber Agreement"
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Ocultar o botão \"Instale o Steam\" no cabeçalho"
+		"message": "Ocultar o botão \"Instale o Steam\" no cabeçalho",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar banner \"Abrir no Steam\""

@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Máy tính SteamDB"
 	},
-	"steamstatus": {
-		"message": "Kiểm tra trên steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam có vẻ như đang gặp sự cố. "
 	},
@@ -21,7 +18,7 @@
 		"message": "Xem trên PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Xem thành tích của bạn"
+		"message": "Xem thành tựu của bạn"
 	},
 	"store_page": {
 		"message": "Trang cửa hàng"
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Để ngăn chặn các yêu cầu quá mức tới Steam Store, dữ liệu người dùng của bạn sẽ được lưu vào bộ nhớ cục bộ của trình duyệt."
 	},
-	"options_website_highlight": {
-		"message": "Làm nổi bật các sản phẩm đã sở hữu và trong danh sách ước trên steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Thêm vào danh sách ước, theo dõi và bỏ qua trên cửa hàng Steam trực tiếp từ SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói.</a>"
-	},
-	"options_extra_data": {
-		"message": "Dữ liệu bổ sung được lấy từ steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Khi tùy chọn \"Hiển thị số người chơi đồng thời hiện tại và mức tối đa tối đa trên các trang ứng dụng\" hoặc \"Hiển thị bản cập nhật cuối cùng trên các trang ứng dụng\" được bật, tiện ích mở rộng sẽ thực hiện yêu cầu an toàn tới steamdb.info để nhận số lượng người chơi hiện tại và bản cập nhật trò chơi gần đây nhất."
-	},
-	"options_extra_data_prices": {
-		"message": "Khi tùy chọn \"Hiển thị giá được ghi thấp nhất trên các trang ứng dụng\" được bật, tiện ích mở rộng sẽ thực hiện yêu cầu an toàn tới steamdb.info bằng loại tiền tệ của bạn (với giá mà Steam cho là như vậy) để nhận được mức giá đã ghi cho một trò chơi cụ thể."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Hiển thị giá ghi thấp nhất trên các trang ứng dụng"
@@ -477,14 +462,16 @@
 		"message": "Lưu các cookie tuổi và sinh nhật để luôn bỏ qua xác nhận"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Xóa tất cả bộ lọc liên kết"
+		"message": "Bỏ qua bộ lọc \"Bạn đang rời khỏi Steam\" dẫn tới liên kết ngoài",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Chấp nhận SSA trên chợ, kho đồ và tự động kích hoạt các trang chính",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Tự động chấp nhận \"Thỏa thuận người đăng ký\" trong chợ, kho đồ và trang kích hoạt sản phẩm của Steam",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Ẩn nút \"Cài đặt Steam\" trên đầu trang"
+		"message": "Ẩn nút \"Cài đặt Steam\" trên đầu trang",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ẩn banner \"Mở trong Steam\""

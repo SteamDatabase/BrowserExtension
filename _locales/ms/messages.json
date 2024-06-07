@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Kalkulator SteamDB"
 	},
-	"steamstatus": {
-		"message": "Semak di steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam nampaknya sedang mengalami sedikit masa tidak berfungsi. "
 	},
@@ -38,6 +35,15 @@
 			}
 		}
 	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
 	"id_bundle": {
 		"message": "Pakej $id$",
 		"placeholders": {
@@ -47,8 +53,145 @@
 			}
 		}
 	},
+	"app_steamdb_rating": {
+		"message": "Penilaian SteamDB:"
+	},
 	"app_steamdb_rating_responsive": {
 		"message": " Penilaian STEAMDB",
 		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ daripada $total$ kritikan adalah positif (Keseluruhan jenis pembelian)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Kemas Kini Terakhir:"
+	},
+	"app_depots_updated_short": {
+		"message": "Telah Dikemas Kini",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Status Online"
+	},
+	"app_stats_online_now": {
+		"message": "Online Ketika Ini:"
+	},
+	"app_stats_peak_today": {
+		"message": "Puncak Dalam 24 Jam:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Puncak Keseluruhan Masa:"
+	},
+	"app_stats_followers": {
+		"message": "Para Pengikut:"
+	},
+	"app_nothing_selected": {
+		"message": "Tiada yang Dipilih"
+	},
+	"app_lowest_price": {
+		"message": "Rekod harga terendah SteamDB<b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Rekod harga terendah SteamDB<b>$price$</b>pada<b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Rekod harga terendah SteamDB<b>$price$</b> dan 2 Tahun terendah <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Harga dilihat pada $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Harga dilihat $seen$ kali, pada $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Auto-discover"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automatik Discover Queue untuk mendapat Event Card."
+	},
+	"explore_generating": {
+		"message": "Menjana Discover Queue yang baru, Ini berkemungkinan akan Gagal jika Steam keadaan High Load…"
+	},
+	"explore_exploring": {
+		"message": "Teroka Queue… menjana $current$ dari $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Gagal untuk membersihkan Queue item #$current$, Cuba lagi selepas 5 saat…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	}
 }

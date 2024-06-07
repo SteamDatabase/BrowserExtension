@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB ক্যালকুলেটর"
 	},
-	"steamstatus": {
-		"message": "steamstat.us দেখুন"
-	},
 	"steamstatus_downtime": {
 		"message": "স্টিম বর্তমানে কিছু অনুপস্থিতি অনুভব করছে. "
 	},

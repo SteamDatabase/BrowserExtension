@@ -9,7 +9,12 @@
 		"message": "Калькулятор SteamDB"
 	},
 	"steamstatus": {
-		"message": "Проверить на steamstat.us"
+		"message": "Проверить на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Похоже, что Steam испытывает некоторые перебои в работе. "
@@ -370,7 +375,12 @@
 		"message": "Чтобы предотвратить чрезмерные запросы к магазину Steam, пользовательские данные кэшируются в локальном хранилище браузера."
 	},
 	"options_website_highlight": {
-		"message": "Выделять принадлежащие и желаемые продукты на steamdb.info"
+		"message": "Выделять принадлежащие и желаемые продукты на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Желайте, подписывайтесь и игнорируйте товары в магазине Steam прямо из SteamDB"
@@ -382,13 +392,40 @@
 		"message": "Включить дополнительную фильтрацию на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">странице продаж</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">странице наборов</a>"
 	},
 	"options_extra_data": {
-		"message": "Дополнительные данные получены с steamdb.info"
+		"message": "Дополнительные данные получены с $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_extra_data_players": {
-		"message": "Когда опции «Отображать текущих одновременных игроков и максимальных пиков на страницах приложений» или «Отображать последнее обновление на страницах приложений» включены, расширение будет делать безопасный запрос к steamdb.info, чтобы получить текущее количество игроков и последнее обновление игры."
+		"message": "Когда включена опция \"$options_online_stats$\" или \"$options_steamdb_last_update$\", расширение сделает безопасный запрос на $domain$ для получения текущего количества игроков и последнего обновления игры.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
 	},
 	"options_extra_data_prices": {
-		"message": "При включении опции «Отображать самую низкую зарегистрированную цену на страницах приложений» расширение выполнит безопасный запрос к steamdb.info с вашей валютой (с той, которую считает Steam), чтобы получить зарегистрированную цену на конкретную игру."
+		"message": "При включении опции «$options_steamdb_lowest_price$» расширение выполнит безопасный запрос к $domain$ с вашей валютой (с той, которую считает Steam), чтобы получить зарегистрированную цену на конкретную игру.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Отображать самую низкую зарегистрированную цену на страницах приложений"
@@ -477,14 +514,16 @@
 		"message": "Устанавливает возраст и день рождения, чтобы всегда передавать файлы cookie"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Удалить все ссылки фильтра ссылок"
+		"message": "Убрать фильтр ссылок \"Вы покидаете сайт Steam\" с внешних сайтов",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Принимать SSA на рынке, в инвентаре, и странице активации ключей",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Принимать соглашение на рынке, в инвентаре, и странице активации ключей автоматически",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Скрыть кнопку «Установить Steam» в заголовке"
+		"message": "Скрыть кнопку «Установить Steam» в заголовке",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Скрыть баннер «Открыть в Steam»"

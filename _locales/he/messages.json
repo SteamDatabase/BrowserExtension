@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "מחשבון SteamDB"
 	},
-	"steamstatus": {
-		"message": "בדוק ב-steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "נראה כי יש בעיות שרת ב-Steam. "
 	},
@@ -37,5 +34,413 @@
 				"example": "730"
 			}
 		}
+	},
+	"id_sub": {
+		"message": "תת אפליקציה $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "חבילה $id$#",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "דירוג SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " דירוג SteamDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ דירוגים חיובים מתוך $total$ (לכל סוגי הרכישות)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "עודכן לאחרונה:"
+	},
+	"app_depots_updated_short": {
+		"message": "עודכן",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "מידע עדכני"
+	},
+	"app_stats_online_now": {
+		"message": "מחוברים כעת:"
+	},
+	"app_stats_peak_today": {
+		"message": "שיא 24-שעות:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "שיא כל הזמנים:"
+	},
+	"app_stats_followers": {
+		"message": "עוקבים:"
+	},
+	"app_nothing_selected": {
+		"message": "לא נבחר דבר"
+	},
+	"app_lowest_price": {
+		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b> בהנחה של <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b> והמחיר הנמוך ביותר בשנתיים האחרונות הוא <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "אומת בתאריך $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "המחיר נצפה $seen$ פעמים, אומת לאחרונה ב $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "גילוי אוטומטי"
+	},
+	"explore_auto_discover_description": {
+		"message": "גלה אוטומטית את הרשימה על מנת לזכות בקלף איוונט."
+	},
+	"explore_generating": {
+		"message": "צור רשימת גילוי חדשה, פעולה זו עשויה להכשל אם סטים נמצא תחת עומס כבד…"
+	},
+	"explore_exploring": {
+		"message": "חוקר את הגילוי… בקשה $current$ מתוך $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "נכשל בניקוי המעקב במשחק #$current$, מנסה שנית בעוד חמש שניות…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "נכשל בניקוי הגילוי במשחק #$current$ יותר מדי פעמים. אנא נסה שנית מאוחר יותר.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "נכשל ביצירת רשימת גילוי חדשה, מנסה שנית בעוד חמש שניות…"
+	},
+	"explore_finished": {
+		"message": "הגילוי נצפה."
+	},
+	"badges_idle_drops": {
+		"message": "דרופים שנותרו: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "דרופים שנותרו בעמוד זה: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "הישגים מוסתרים: "
+	},
+	"hidden_achievement_hover": {
+		"message": "הישגים מוסתרים, סמן על מנת לחשוף: "
+	},
+	"inventory_list_at": {
+		"message": "פרסם במחיר $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "מכור במחיר $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"widget_view_app": {
+		"message": "צפה באפליקציה $id$ ב SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "צפה בחבילה $id$ ב SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "הגדרות"
+	},
+	"options_welcome_title": {
+		"message": "תודה שהתקנתם את התוסף SteamDB!"
+	},
+	"options_welcome_option1": {
+		"message": "עמוד ההגדרות ב SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "תפריט משתמש נשלף בעמודי סטים"
+	},
+	"options_welcome_option3": {
+		"message": "עמוד התוספים של הדפדפן"
+	},
+	"options_review": {
+		"message": "השאר ביקורת עבור התוסף"
+	},
+	"options_permissions_description": {
+		"message": "תוסף זה דורש הרשאות נוספות על מנת לעבוד בצורה תקינה מול SteamDB, חנות סטים וקהילות סטים."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ הענק הרשאות"
+	},
+	"options_footer1": {
+		"message": "נוצר ב 💙 ע\"י הצוות של <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "זהו <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">קוד פתוח</a>, תודה לכל התורמים!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* כפתורים אפורים מציגים פיצרים מקובעים."
+	},
+	"options_header_website": {
+		"message": "אתר SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "נתונים נוספים"
+	},
+	"options_header_buttons_and_links": {
+		"message": "כפתורים ולינקים"
+	},
+	"options_header_inventory": {
+		"message": "תיק"
+	},
+	"options_header_trade_offers": {
+		"message": "הצעות החלפה"
+	},
+	"options_header_enhancements": {
+		"message": "שידרוגים נוספים"
+	},
+	"options_website_explanation": {
+		"message": "הסבר"
+	},
+	"options_website_explanation2": {
+		"message": "עליך להיות מחובר לחנות על מנת שזה יעבוד."
+	},
+	"options_website_explanation3": {
+		"message": "מידע זה נשמע בדפדפן שלך ולא נשלח לעולם לשרתי SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "על מנת לחסוך בכמות הבקשות הנשלחות לחנות סטים, פרטי המשתמש נשמרים מוטמנים בזיכרון הלוקאלי של הדפדפן."
+	},
+	"options_website_highlight1": {
+		"message": "הוסף מוצרים לרשימת המשאלות, מעקב או הסתרה בחנות סטים ישירות מ SteamDB"
+	},
+	"options_steamdb_lowest_price": {
+		"message": "הצג את המחיר הנמוך ביותר בעמודי אפליקציה"
+	},
+	"options_online_stats": {
+		"message": "מציג את כמות השחקנים המחוברים כעט ואת שיא השחקנים בעמודי משחקים"
+	},
+	"options_steamdb_last_update": {
+		"message": "הצג את עדכון המשחק האחרון עמודי משחק"
+	},
+	"options_button_app": {
+		"message": "הצג כפתור בעמודי משחק"
+	},
+	"options_button_pcgw": {
+		"message": "הצג כפתור PCGamingWiki בעמודי משחק"
+	},
+	"options_button_sub": {
+		"message": "הצג כפתור בעמודי חבילות"
+	},
+	"options_button_video": {
+		"message": "הצג כפתור בעמודי סירטונים"
+	},
+	"options_button_gamecards": {
+		"message": "הצג את כפתורי חנות סטים ו SteamDB בעמוד הקלפים"
+	},
+	"options_link_subid": {
+		"message": "הצג את מזהה החבילה תחת כל אופצית רכישה"
+	},
+	"options_link_subid_widget": {
+		"message": "הצג את מזהה החבילה בווידג'ט של אפליקציות"
+	},
+	"options_profile_calculator": {
+		"message": "הוסף לינק למחשבון לעמודי פרופיל"
+	},
+	"options_link_inventory": {
+		"message": "קשר בין כל מתנה וקופון בתיק שלך ל SteamDB"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "אל תעדכן את התיק שלך במכירת חפץ"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "הוסף כפתורי מכירה מהירה"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "אשר אוטומטית מכירה מהירה"
+	},
+	"options_display_market_price_others": {
+		"message": "הצג מחירי חפצים בתיק של משתמש אחר"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "תמוך בפרמטרים מסוג $for_item$ ו $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "צפה בהסבר ב GitHub"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "דלג על עמוד בדיקת גיל"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "מגדיר את עוגיות הגיל והתאריך לידה לוויתור"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "להסיר את \"אתה עוזב את סטים\" פילטר בלחיצה על לינק לאתר חיצוני",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "הסתר את באנר \"פתח בסטים\""
+	},
+	"options_steamdb_rating": {
+		"message": "הצג את דירוג SteamDB בעמוד האפליקציה"
+	},
+	"options_spoiler_achievements": {
+		"message": "הסתר תיאורים מאחורי אלמנט ספויילר"
+	},
+	"options_prevent_store_images": {
+		"message": "עצור טעינה של תמונות בעמודי אפליקציות"
+	},
+	"options_prevent_store_images_description": {
+		"message": "חלק מהמפתחים מעלים תמונות גדולוות לתיאור המשחק, דבר אשר עלול לגרום לטעינת העמוד לקחת יותר זמן, לחץ על תמונה על מנת לטעון אותה"
+	},
+	"options_builtin_card_drops": {
+		"message": "הצג סכום קלפים שנותרו לנפילה בעמוד הסיכות"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "הוסף כפתור עקיפה לרשימת הגילוי בזמן מכירות"
+	},
+	"options_builtin_achievements_global": {
+		"message": "שיפורים לעמוד ההישגים"
+	},
+	"options_builtin_achievements_link": {
+		"message": "לינק לעמוד ההישגים שלך"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "הישגים נעולים יסומנו ע\"י מנעול על מנת להיות ברורים יותר"
 	}
 }

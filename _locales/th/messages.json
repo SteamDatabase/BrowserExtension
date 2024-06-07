@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "เครื่องคำนวณ SteamDB"
 	},
-	"steamstatus": {
-		"message": "ตรวจสอบบน steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "ดูเหมือนว่า Steam กำลังประสบปัญหาการหยุดทำงานอยู่บ้าง "
 	},
@@ -35,6 +32,15 @@
 			"id": {
 				"content": "$1",
 				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
 			}
 		}
 	},
@@ -282,6 +288,15 @@
 			}
 		}
 	},
+	"widget_view_sub": {
+		"message": "ดูsub $id$ บน SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
 	"options": {
 		"message": "ตัวเลือก"
 	},
@@ -328,7 +343,7 @@
 		"message": "ปุ่มและลิงค์ต่างๆ"
 	},
 	"options_header_inventory": {
-		"message": "รายการทรัพย์สิน"
+		"message": "คลัง"
 	},
 	"options_header_trade_offers": {
 		"message": "ข้อเสนอทางการค้า"
@@ -351,13 +366,155 @@
 	"options_website_explanation4": {
 		"message": "เพื่อป้องกันการร้องขอไปยังร้านค้า Steam มากเกินไป ข้อมูลผู้ใช้ของคุณจะถูกแคชไว้ในที่จัดเก็บในตัวเครื่องของเบราว์เซอร์ของคุณ"
 	},
-	"options_website_highlight": {
-		"message": "เน้นผลิตภัณฑ์ที่เป็นเจ้าของและเป็นที่ต้องการบน Steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "รายการที่อยากได้, ติดตาม และเพิกเฉยต่อผลิตภัณฑ์บนร้านค้า Steam โดยตรงจาก SteamDB"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">เปิดใช้งานสคริปต์แพ็คเกจฟรี</a>"
+	},
+	"options_website_highlight3": {
+		"message": "เปิดใช้งานการกรองเพิ่มเติมใน<a href=\"https://steamdb.info/sales/\" target=\"_blank\">หน้าการขาย</a> และ<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">หน้าบันเดิล</a>"
+	},
+	"options_steamdb_lowest_price": {
+		"message": "แสดงราคาต่ำสุดที่บันทึกไว้บนหน้าแอป"
+	},
+	"options_online_stats": {
+		"message": "แสดงผู้เล่นพร้อมกันในปัจจุบันและจุดสูงสุดบนหน้าแอป"
+	},
+	"options_steamdb_last_update": {
+		"message": "แสดงการอัปเดตล่าสุดบนหน้าแอป"
+	},
+	"options_button_app": {
+		"message": "แสดงปุ่มบนหน้าแอพ"
+	},
+	"options_button_pcgw": {
+		"message": "แสดงปุ่ม PCGamingWiki บนหน้าแอพ"
+	},
+	"options_button_sub": {
+		"message": "แสดงปุ่มบนหน้าแพ็คเกจ"
+	},
+	"options_button_video": {
+		"message": "แสดงปุ่มบนหน้าวิดีโอ"
+	},
+	"options_button_gamehub": {
+		"message": "แสดงปุ่มบนฮับเกม"
+	},
+	"options_button_gamecards": {
+		"message": "แสดงปุ่ม SteamDB และหน้าร้านค้าบนหน้าการ์ดเกม"
+	},
+	"options_link_subid": {
+		"message": "แสดง SubID ใต้ตัวเลือกการซื้อแต่ละรายการ"
+	},
+	"options_link_subid_widget": {
+		"message": "แสดง SubID ในวิดเจ็ตแอป"
+	},
+	"options_link_accountpage": {
+		"message": "เชื่อมโยงแต่ละแพ็คเกจบนหน้าใบอนุญาตของคุณ"
+	},
+	"options_profile_calculator": {
+		"message": "เพิ่มลิงก์เครื่องคิดเลขบนโปรไฟล์ชุมชน"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "ย้ายการเลือกเกมบนหน้าคลังไปด้านข้าง"
+	},
+	"options_link_inventory": {
+		"message": "เชื่อมโยงของขวัญและคูปองแต่ละรายการในคลังของคุณกับ SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "ค้นหา SubID ของของขวัญในคลังของคุณอย่างถูกต้อง"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "อย่ารีเฟรชคลังเมื่อขายสินค้า"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "เพิ่มปุ่มขายด่วน"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "ยอมรับการขายด่วนโดยอัตโนมัติ"
+	},
+	"options_display_market_price_others": {
+		"message": "แสดงราคาตลาดของสินค้าในคลังของผู้ใช้รายอื่น"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "รองรับพารามิเตอร์ $for_item$ และ $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "ดูคำอธิบายใน GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "ระงับ \"การค้านี้ดูน่าสงสัย\" และ \"คุณแน่ใจหรือว่านี่คือของขวัญ\" การแจ้งเตือนข้อเสนอการค้า"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "แสดงข้อความแสดงข้อผิดพลาดที่ดีขึ้น แทนตัวเลขข้อผิดพลาดที่เป็นความลับของ Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "ข้ามหน้าตรวจสอบอายุ"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "ตั้งค่าคุกกี้อายุและวันเกิดให้ผ่านทุกครั้ง"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "ลบตัวกรองลิงก์ \"คุณกำลังออกจาก Steam\" ออกจากไซต์ภายนอก",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "ยอมรับข้อตกลงสมาชิกในตลาด, คลัง และเปิดใช้งานหน้าหลักโดยอัตโนมัติ",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "ซ่อนปุ่ม \"ติดตั้ง Steam\" ที่ส่วนหัว",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "ซ่อนแบนเนอร์ \"เปิดใน Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "แสดงคะแนน SteamDB บนหน้าแอพ"
+	},
+	"options_enhancement_appicon": {
+		"message": "แสดงไอคอนแอปบนหน้าร้านค้าและชุมชน"
+	},
+	"options_hidden_achievements": {
+		"message": "โหลดความสำเร็จที่ซ่อนอยู่และคำอธิบาย"
+	},
+	"options_spoiler_achievements": {
+		"message": "ซ่อนคำอธิบายด้านหลังองค์ประกอบสปอยเลอร์"
+	},
+	"options_prevent_store_images": {
+		"message": "หยุดการโหลดภาพบนหน้าร้านแอป"
+	},
+	"options_prevent_store_images_description": {
+		"message": "นักพัฒนาซอฟต์แวร์บางรายใส่รูปภาพขนาดเมกะไบต์ไว้ในคำอธิบายเกม ซึ่งอาจใช้เวลาในการโหลดสักครู่ คลิกที่รูปภาพเพื่อโหลด"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "รองรับพารามิเตอร์ $award$ บนโปรไฟล์และลิงก์ไฟล์ที่แชร์",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "แสดงจำนวนการ์ดที่เหลือทั้งหมดบนหน้าตราสัญลักษณ์"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "เพิ่มปุ่มเพื่อโกงคิวการค้นหาในระหว่างการขาย"
+	},
+	"options_builtin_achievements_global": {
+		"message": "ปรับปรุงหน้าความสำเร็จระดับโลก"
+	},
+	"options_builtin_achievements_link": {
+		"message": "เชื่อมโยงไปยังหน้าความสำเร็จของคุณ"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "ความสำเร็จที่ล็อคไว้จะมีไอคอนล็อคเพื่อให้มองเห็นได้มากขึ้น"
 	}
 }

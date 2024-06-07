@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB rekenmachine"
 	},
-	"steamstatus": {
-		"message": "Check op steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Het lijkt erop dat Steam een storing aan het ervaren is. "
 	},
@@ -231,5 +228,103 @@
 				"example": "5"
 			}
 		}
+	},
+	"badges_idle_drops": {
+		"message": "Resterende kaarten: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Resterende kaarten op deze pagina: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Verborgen prestatie: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Verborgen prestatie, doe je muis erover om te onthullen: "
+	},
+	"inventory_list_at": {
+		"message": "Vermeld voor: $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Verkoop voor $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Vermeld dit item voor de laagst vermelde verkoopprijs\n\nWeergegeven prijs is het geld dat je krijgt (zonder vergoeding)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Vermeld het item voor de hoogst vermelde vraagprijs\n\nWeergegeven prijs is het geld dat je krijgt (zonder vergoedingen)"
+	},
+	"widget_view_app": {
+		"message": "Geef app $id$ weer op SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Geef sub $id$ weer op SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Opties"
+	},
+	"options_welcome_title": {
+		"message": "👋 Bedankt voor het installeren van de SteamDB extensie!"
+	},
+	"options_welcome_description": {
+		"message": "Controleer de opties hieronder en verander de relevante voorkeuren. Om later hier terug te komen:"
+	},
+	"options_welcome_option1": {
+		"message": "De instellingenpagina op SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Je \"Account\" dropdown op de Steam pagina's"
+	},
+	"options_welcome_option3": {
+		"message": "De add-on pagina van je browser"
+	},
+	"options_review": {
+		"message": "Laat een review achter voor deze extensie"
+	},
+	"options_permissions_description": {
+		"message": "Deze extensie heeft extra rechten nodig om goed te werken met SteamDB, de Steam Store en de Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Toestemmingen verlenen"
+	},
+	"options_footer1": {
+		"message": "Gemaakt met 💙 door de mensen bij <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	}
 }

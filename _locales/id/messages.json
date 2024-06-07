@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Kalkulator SteamDB"
 	},
-	"steamstatus": {
-		"message": "Periksa di steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam tampaknya sedang mengalami gangguan. "
 	},
@@ -170,7 +167,7 @@
 		"message": "Temuan-otomatis"
 	},
 	"explore_auto_discover_description": {
-		"message": "Pencarian automatis antrian untuk mendapatkan event card."
+		"message": "Temukan antrian secara otomatis untuk mendapatkan event card."
 	},
 	"explore_generating": {
 		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Untuk mencegah permintaan berlebihan ke Steam, data anda di-cache di penyimpanan lokal anda."
 	},
-	"options_website_highlight": {
-		"message": "Sorot produk yang dimiliki dan di-wishlist di steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Wishlist, follow, dan abaikan produk yang ada di Steam langsung ke SteamDB"
 	},
@@ -381,8 +375,11 @@
 	"options_website_highlight3": {
 		"message": "Hidupkan filtering extra di <a href=\"https://steamdb.info/sales/\" target=\"_blank\">halaman diskon</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">halaman bundles</a>"
 	},
-	"options_extra_data": {
-		"message": "Data lain diambil dari steamdb.info"
+	"options_steamdb_lowest_price": {
+		"message": "Tampilkan harga terendah yang tercatat di halaman aplikasi"
+	},
+	"options_online_stats": {
+		"message": "Tampilkan jumlah pemain saat ini dan dan puncak tertinggi pada halaman aplikasi"
 	},
 	"options_steamdb_last_update": {
 		"message": "Tampilkan terakhir diperbarui di halaman aplikasi"
@@ -393,11 +390,26 @@
 	"options_button_pcgw": {
 		"message": "Menampilkan tombol PCGamingWiki di halaman aplikasi"
 	},
+	"options_button_sub": {
+		"message": "Tampilkan tombol pada halaman paket"
+	},
 	"options_button_video": {
 		"message": "Tampilkan tombol di halaman video"
 	},
 	"options_button_gamehub": {
 		"message": "Tampilkan tombol di game hubs"
+	},
+	"options_button_gamecards": {
+		"message": "Tampilkan SteamDB dan simpan tombol halaman di halaman kartu permainan"
+	},
+	"options_link_subid": {
+		"message": "Tampilkan SubID di bawah setiap opsi pembelian"
+	},
+	"options_link_subid_widget": {
+		"message": "Tampilkan SubID di widget aplikasi"
+	},
+	"options_link_accountpage": {
+		"message": "Tautkan setiap paket di halaman lisensi Anda"
 	},
 	"options_profile_calculator": {
 		"message": "Tambahkan tautan kalkulator di profil komunitas"
@@ -411,6 +423,9 @@
 	"options_link_inventory_gift_subid": {
 		"message": "Mengetahui SubID hadiah di inventaris Anda dengan benar"
 	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Jangan perbaharui inventaris saat menjual sebuah barang"
+	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "Tambah tombol jual cepat"
 	},
@@ -420,17 +435,43 @@
 	"options_display_market_price_others": {
 		"message": "Tampilkan harga barang di inventory pengguna lainnya"
 	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Dukungan parameter $for_item$ dan $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
 	"options_github_explanation": {
 		"message": "Lihat penjelasan di GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Tekan \"perdagangan ini tampak mencurigakan\" dan \"apakah Anda yakin ini adalah hadiah?\" peringatan penawaran dagang"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Tampilkan pesan kesalahan yang lebih jelas, daripada nomor kesalahan yang kriptik dari Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Lewati halaman pemeriksaan usia"
 	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Tetapkan cookie usia dan tanggal lahir agar selalu melewati verifikasi usia"
+	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Menghapus semua tautan filter tautan"
+		"message": "Hapus filter tautan \"Kamu akan keluar dari Steam\" dari situs eksternal",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Setujui Perjanjian Pelanggan di halaman pasar, inventaris, dan aktivasi kunci secara otomatis",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Sembunyikan tombol “Instal Steam” di header"
+		"message": "Sembunyikan tombol “Instal Steam” di header",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Menyembunyikan spanduk “Buka di Steam”"

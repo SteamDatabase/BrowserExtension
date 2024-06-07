@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB kalkuliatorius"
 	},
-	"steamstatus": {
-		"message": "Patikrinti per steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Atrodo, kad Steam patiria tam tikrą veiklos sutrikimą. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Tam, kad būtų išvengta pernelyg didelių užklausų Steam parduotuvėje, jūsų naudotojo duomenys yra talpinami vietinėje naršyklės saugykloje."
 	},
-	"options_website_highlight": {
-		"message": "Paryškinti turimus ir pageidaujamus produktus steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Pageidavimų sąrašas, sekimas ir prekių ignoravimas ant Steam parduotuvės tiesiai iš SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Įjungti papildomą filtravimą <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> pardavimų puslapyje</a> ir <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">komplektų puslapyje</a>"
-	},
-	"options_extra_data": {
-		"message": "Papildomi duomenys, paimti iš steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Kai įjungta parinktis „Rodyti dabartinius vienu metu žaidžiančius žaidėjus ir didžiausius pikus programos puslapiuose“ arba „Rodyti paskutinį atnaujinimą programos puslapiuose“, plėtinys atliks saugią užklausą į steamdb.info, kad gautų dabartinį žaidėjų skaičių ir paskutinį žaidimo atnaujinimą."
-	},
-	"options_extra_data_prices": {
-		"message": "Kai \"Rodyti mažiausią užregistruotą kainą programų puslapiuose\" parinktis yra įjungta, plėtinys atliks saugų užklausima į steamdb.info su jūsų valiuta (su tokia, kokia Steam mano esant), kad gautų užregistruotą konkretaus žaidimo kainą."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Rodyti mažiausią užregistruotą kainą programų puslapiuose"
@@ -477,14 +462,16 @@
 		"message": "Nustato, kad amžiaus ir gimtadienio slapukai visada būtų perduodami"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Pašalinti visas nuorodų filtro nuorodas"
+		"message": "Pašalinti nuorodų filtrą „Jūs paliekate Steam“ iš išorinių svetainių",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Priimti SSA rinkoje, inventoriuje ir automatiškai aktyvuoti raktų puslapius",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Priimti prenumeratoriaus sutikimą rinkoje, inventoriuje ir automatiškai aktyvuoti raktų puslapius",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Paslėpti \"Įdiegti Steam\" mygtuką antraštėje"
+		"message": "Paslėpti \"Įdiegti Steam\" mygtuką antraštėje",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Paslėpti \"Atidaryti per Steam\" užrašą"

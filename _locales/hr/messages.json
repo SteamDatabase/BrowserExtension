@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB Kalkulator"
 	},
-	"steamstatus": {
-		"message": "Provjeri na steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Izgldea da Steam je trenutačno nedustupan. "
 	},

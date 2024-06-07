@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Kalkulators"
 	},
-	"steamstatus": {
-		"message": "Pārbaudi vietnē steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Šķiet, ka Steam piedzīvo kādu darbības pārtraukumu. "
 	},

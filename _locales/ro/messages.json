@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Calculator SteamDB"
 	},
-	"steamstatus": {
-		"message": "Verifică pe steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam pare să se confrunte cu conexiune la moment. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Pentru a preveni cereri excesive către magazinul Steam, datele tale de utilizator sunt stocate în memoria locală a browser-ului tău."
 	},
-	"options_website_highlight": {
-		"message": "Evidențiază produse deținute și dorite pe steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Doriți să urmați și să ignorați produsele din magazinul Steam direct din SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Activați filtrarea suplimentară pe pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de vânzări</a> și <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pachete (bundles)</a>"
-	},
-	"options_extra_data": {
-		"message": "Date suplimentare obținute din steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Când este activată opțiunea \"Afișează jucătorii curenți concomitent și maxim pe paginile aplicației\" sau opțiunea \"Afișează ultima actualizare pe paginile aplicațiilor\", extensia va face o cerere securizat pe steamdb.info pentru a obține numărul actual de jucători și ultima actualizare a jocului."
-	},
-	"options_extra_data_prices": {
-		"message": "Când opțiunea \"Afișează cel mai mic preț înregistrat pe paginile aplicațiilor\" este activată, extensia va face o cerere securizat pe steamdb.info cu valută pe care ați ales (cu cea ce crede Steam că este) pentru a obține prețul înregistrat pentru un anumit jocul."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Afișează cel mai mic preț înregistrat pe paginile aplicațiilor"
@@ -476,15 +461,9 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Setează cookie-urile zilei de naștere și vârstă pentru a trece întotdeauna"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "Elimină toate link-urile de filtrare a linkurilor"
-	},
-	"options_enhancement_market_ssa": {
-		"message": "Acceptați SSA pe piață, inventariați și activați automat paginile cheie",
-		"description": "SSA is Steam Subscriber Agreement"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "Ascunde butonul \"Instalează Steam\" în antet"
+		"message": "Ascunde butonul \"Instalează Steam\" în antet",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ascunde banner-ul \"Deschide în aplicație Steam\""

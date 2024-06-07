@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB 計算機"
 	},
-	"steamstatus": {
-		"message": "檢查 steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam 似乎遇到了停機時間。 "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "為了防止對 Steam 商店發出過多請求，用戶資料會將快取放在瀏覽器的本機端。"
 	},
-	"options_website_highlight": {
-		"message": "在 steamdb.info 上反白已擁有和願望清單產品"
-	},
 	"options_website_highlight1": {
 		"message": "直接從 SteamDB 中新增願望清單、追蹤並忽略 Steam 商店中的產品"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">販售頁面</a>和<a href=\"https://steamdb.info/bundles/\"目標啟用額外過濾=\"_blank\">捆綁包頁面</a>"
-	},
-	"options_extra_data": {
-		"message": "從 steamdb.info 取得的額外資料"
-	},
-	"options_extra_data_players": {
-		"message": "當啟用「在應用程式頁面上顯示目前拼發玩家和最大峰值」或「在應用程式頁面上顯示上次更新」選項時，擴充功能將向 steamdb.info 發出安全性請求，以取得當前玩家數量和上次遊戲更新。"
-	},
-	"options_extra_data_prices": {
-		"message": "當 「在 App 頁面顯示最低記錄價格」選項啟用時，擴充程式將使用您設定的貨幣 (與 Steam 認為的貨幣匹配) 向 steamdb.info 發出安全請求，以獲取特定遊戲的記錄價格"
 	},
 	"options_steamdb_lowest_price": {
 		"message": "在 App 頁面顯示最低記錄價格"
@@ -476,15 +461,9 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "將年齡和生日 cookie 設定為始終略過"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "刪除所有連結與過濾連結"
-	},
-	"options_enhancement_market_ssa": {
-		"message": "自動接受市集、庫存與啟動頁面的 SSA",
-		"description": "SSA is Steam Subscriber Agreement"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "隱藏標題中的「安裝 Steam」按鈕"
+		"message": "隱藏標題中的「安裝 Steam」按鈕",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隱藏「在 Steam 中開啟」橫幅"

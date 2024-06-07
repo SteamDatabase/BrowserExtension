@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "حاسبة SteamDB"
 	},
-	"steamstatus": {
-		"message": "تأكد من Steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "يبدو أن ستيم يعاني بعض الأعطال. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "لمنع الطلبات الزائدة على متجر تسيم، يتم تخزين بيانات المستخدم الخاص بك في التخزين المحلي لمتصفحك."
 	},
-	"options_website_highlight": {
-		"message": "إبراز المنتجات التي تملكها وتمنياتها على Steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "قائمة الرغبات، متابعة، وتجاهل المنتجات على متجر Steam مباشرة من SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "تفعيل التصفية الإضافية على صفحة التخفيضات<a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">حزم الصفحة</a>"
-	},
-	"options_extra_data": {
-		"message": "بيانات إضافية تم جلبها من Steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "عند تمكين خيار \"عرض اللاعبين المتزامنين الحاليين والذروات القصوى على صفحات التطبيق\" أو \"عرض آخر تحديث على صفحات التطبيق\"، ستقوم الإضافة بإجراء طلب آمن إلى steamdb.info للحصول على العدد الحالي للاعبين وآخر تحديث للعبة."
-	},
-	"options_extra_data_prices": {
-		"message": "عند تمكين خيار \"عرض أدنى سعر مسجل على صفحات التطبيق\"، ستقوم الإضافة بإجراء طلب آمن إلى steamdb.info بعملتك (مع ما يعتقده Steam) للحصول على السعر المسجل للعبة معينة."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "عرض أقل سعر مسجل على صفحات التطبيق"
@@ -477,14 +462,16 @@
 		"message": "يحدد ملفات تعريف الارتباط للعمر وتاريخ الميلاد لتكون دائمًا صالحة"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "إزالة جميع روابط فلترة الروابط"
+		"message": "إزالة فلتر الروابط التحذيرية \"أنت سوف تترك موقع Steam\" عن المواقع الخارجية",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "قبول SSA تلقائيًا على صفحات السوق والمخزون وتنشيط المفتاح",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "قَبُول الشروط, لتصفح السوق والمخزن وصفحة تنشيط المفتاح",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "إخفاء زر ”تثبيت Steam“ في الرأس"
+		"message": "إخفاء زر ”تثبيت Steam“ في الرأس",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "إخفاء شعار ”فتح في البخار“"

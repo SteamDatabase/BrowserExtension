@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB 計算ツール"
 	},
-	"steamstatus": {
-		"message": "steamstat.us でチェック"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam は現在、一時的なサービス停止が発生しているようです。 "
 	},
@@ -102,7 +99,7 @@
 		"message": "何も選択されていません"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB 記録された最低価格は <b>$price$</b>",
+		"message": "SteamDB で記録された最低価格は <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -150,7 +147,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "価格は $seen$ 回、最後は $date$ ($relative$)",
+		"message": "この価格は $seen$ 回、最後に $date$ ($relative$) に記録されています。",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -259,7 +256,7 @@
 		"message": "隠し実績。マウスオーバーで表示: "
 	},
 	"inventory_list_at": {
-		"message": "$price$ で販売",
+		"message": "$price$ で出品",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -268,7 +265,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "$price$で販売",
+		"message": "$price$ で売る",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -277,10 +274,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "最も低い販売価格でアイテムを販売\n\n表示価格は、あなたが受け取るお金です(手数料なし)。"
+		"message": "最も低い販売価格でアイテムを出品します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
 	},
 	"inventory_sell_at_title": {
-		"message": "最も高い注文価格でアイテムを販売\n\n表示価格は、あなたが受け取るお金です(手数料なし)。"
+		"message": "最も高い買い注文の価格でアイテムを販売します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
 	},
 	"widget_view_app": {
 		"message": "SteamDB でApp $id$ を表示",
@@ -331,7 +328,7 @@
 		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> のみんなと💙を持って作られました。"
 	},
 	"options_footer2": {
-		"message": "<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">オープンソース</a> であり、すべてのコントリビューターに感謝しています！"
+		"message": "<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">オープンソース</a>であり、すべてのコントリビューターに感謝しています！"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* 無効化されたチェックボックスは組み込み機能を示します。"
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Steam ストアへの過剰なリクエストを防ぐため、ユーザーデータはブラウザのローカルストレージにキャッシュされます。"
 	},
-	"options_website_highlight": {
-		"message": "steamdb.info で所有しているかウィッシュリストの製品を強調表示する"
-	},
 	"options_website_highlight1": {
 		"message": "SteamDB から直接 Steam ストアの製品をウィッシュリストに追加、フォロー、無視する"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">セールページ</a> および <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">バンドルページ</a> で追加フィルタリングを有効にする"
-	},
-	"options_extra_data": {
-		"message": "steamdb.info から取得した追加データ"
-	},
-	"options_extra_data_players": {
-		"message": "「現在の同時プレイヤー数と最大ピーク数をアプリページに表示」または「アプリページに最終更新日を表示」オプションが有効になっている場合、拡張機能は steamdb.info に安全なリクエストを行い、現在のプレイヤー数と最後のゲームの最終更新日を取得します。"
-	},
-	"options_extra_data_prices": {
-		"message": "「アプリページに最安価格を表示」オプションが有効になっている場合、拡張機能は steamdb.info に対して、あなたの通貨(Steam が認識している)で安全なリクエストを行い、特定のゲームの記録された価格を取得します。"
 	},
 	"options_steamdb_lowest_price": {
 		"message": "アプリページに最低価格を表示"
@@ -477,14 +462,16 @@
 		"message": "年齢と誕生日のクッキーを常に渡すように設定します"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "すべてのリンクフィルタリンクを削除"
+		"message": "外部リンクで「Steam から離れようとしています」ページをスキップ",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "マーケット、インベントリ、キー有効化ページでSSAに自動的に同意",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "マーケット、インベントリとキー有効化ページで Steam 利用規約に自動で同意",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "ヘッダーの「Steam をインストール」ボタンを隠す"
+		"message": "ヘッダーの「Steam をインストール」ボタンを隠す",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "「Steam で開く」バナーを隠す"

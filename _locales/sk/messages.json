@@ -1,9 +1,15 @@
 {
+	"extension_description": {
+		"message": "Pridáva odkazy na SteamDB a nové funkcie v obchode a komunite Steam. Pozrite si najnižšie ceny hier a štatistiky."
+	},
 	"steamdb_options": {
 		"message": "SteamDB Možnosti"
 	},
 	"steamdb_calculator": {
 		"message": "SteamDB Calculator"
+	},
+	"steamstatus_downtime": {
+		"message": "Zdá sa, že Steam má nejaký výpadok. "
 	},
 	"view_on_steamdb": {
 		"message": "Pozrieť na SteamDB"
@@ -11,15 +17,71 @@
 	"view_on_pcgamingwiki": {
 		"message": "Pozrieť na PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Pozrite si svoje úspechy"
+	},
 	"store_page": {
 		"message": "Stránka Obchodu"
 	},
 	"search": {
 		"message": "Hľadať"
 	},
+	"id_app": {
+		"message": "App $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Balíček $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB Hodnotenie:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " HODNOTENIE STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ z $total$ recenzie sú pozitívne (všetky typy nákupov)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Posledný Update:"
+	},
 	"app_depots_updated_short": {
 		"message": "Aktualizované",
 		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Online štatistiky"
 	},
 	"app_stats_online_now": {
 		"message": "Práve online:"
@@ -29,6 +91,99 @@
 	},
 	"app_stats_alL_time_peak": {
 		"message": "All-time peak:"
+	},
+	"app_stats_followers": {
+		"message": "Sledujúci:"
+	},
+	"app_nothing_selected": {
+		"message": "nič nie je vybrané"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB najnižšia zaznamenaná cena je <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Najnižšia zaznamenaná cena SteamDB je <b>$price$</b> pri <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Najnižšia zaznamenaná cena SteamDB je <b>$price$</b> a 2-ročné minimum je <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Cena zaznamenaná dňa $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Cena zaznamenaná $seen$-krát, naposledy $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automatické objavovanie"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automaticky zistite poradie a získajte kartu udalosti."
+	},
+	"explore_generating": {
+		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
+	},
+	"explore_exploring": {
+		"message": "Skúma sa poradie… Žiadosť $current$ z $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
 	},
 	"options": {
 		"message": "Možnosti"

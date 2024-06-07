@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Υπολογιστής SteamDB"
 	},
-	"steamstatus": {
-		"message": "Ελέγξτε το steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Το Steam φαίνεται να αντιμετωπίζει κάποια διακοπή. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Για να αποφύγετε υπερβολικές αιτήσεις στο Κατάστημα Steam, τα δεδομένα χρήστη αποθηκεύονται προσωρινά στον τοπικό αποθηκευτικό χώρο του προγράμματος περιήγησης."
 	},
-	"options_website_highlight": {
-		"message": "Επισήμανση ιδιόκτητων και επιθυμητών προϊόντων στο steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Λίστα επιθυμιών, ακολουθήστε και αγνοημένα προϊόντα στο Κατάστημα Steam απευθείας από το SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Ενεργοποίηση επιπλέον φίλτρα στη σελίδα πωλήσεων <a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> και <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">σελίδα πακέτων</a>"
-	},
-	"options_extra_data": {
-		"message": "Επιπλέον δεδομένα που λαμβάνονται από το steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Όταν η επιλογή \"Εμφάνιση ταυτόχρονων παικτών και μέγιστων κορυφών στις σελίδες εφαρμογών\" ή \"Εμφάνιση τελευταίας ενημέρωσης στις σελίδες εφαρμογών\" είναι ενεργοποιημένη, η επέκταση θα κάνει ένα ασφαλές αίτημα στο steamdb.info για να πάρει το τρέχον ποσό των παικτών και την τελευταία ενημέρωση του παιχνιδιού."
-	},
-	"options_extra_data_prices": {
-		"message": "Όταν είναι ενεργοποιημένη η επιλογή \"Εμφάνιση της χαμηλότερης καταγεγραμμένης τιμής στις σελίδες εφαρμογών\", η επέκταση θα κάνει ένα ασφαλές αίτημα στο steamdb.info με το νόμισμά σας (με αυτό που το Steam νομίζει ότι είναι) για να πάρετε την καταγεγραμμένη τιμή για ένα συγκεκριμένο παιχνίδι."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Εμφάνιση της χαμηλότερης καταγεγραμμένης τιμής στις σελίδες εφαρμογών"
@@ -476,15 +461,9 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Ορίζει τα cookies ηλικίας και γενεθλίων να περνούν πάντα"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "Αφαίρεση όλων των συνδέσμων φίλτρου"
-	},
-	"options_enhancement_market_ssa": {
-		"message": "Αποδοχή SSA στην αγορά, απόθεμα, και σελίδα ενεργοποίησης κλειδιών αυτόματα",
-		"description": "SSA is Steam Subscriber Agreement"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "Απόκρυψη κουμπιού \"Εγκατάσταση Steam\" στην κεφαλίδα"
+		"message": "Απόκρυψη κουμπιού \"Εγκατάσταση Steam\" στην κεφαλίδα",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Απόκρυψη του banner \"Άνοιγμα στο Steam\""

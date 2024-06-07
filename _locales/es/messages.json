@@ -9,7 +9,12 @@
 		"message": "Calculadora de SteamDB"
 	},
 	"steamstatus": {
-		"message": "Comprobar en SteamStat.us"
+		"message": "Ver en $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Parece que Steam está experimentando algún periodo de interrupción. "
@@ -370,7 +375,12 @@
 		"message": "Para evitar peticiones excesivas a la tienda de Steam, los datos de usuario se almacenan en caché en el almacenamiento local de tu navegador."
 	},
 	"options_website_highlight": {
-		"message": "Destacar productos propios y deseados en steamdb.info"
+		"message": "Destacar productos en propiedad y deseados en $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Enlista a deseados, sigue e ignora los productos de steam directamente desde SteamDB"
@@ -382,13 +392,40 @@
 		"message": "Habilita filtrado extra en <a href=\"https://steamdb.info/sales/\" target=\"_blank\">pagina de ventas</a> y <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pagina de bundles</a>"
 	},
 	"options_extra_data": {
-		"message": "Datos adicionales obtenidos de steamdb.info"
+		"message": "Datos adicionales obtenidos de $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_extra_data_players": {
-		"message": "Cuando la opción \"Mostrar los jugadores actuales y los picos máximos en las páginas de la aplicación\" o \"Mostrar la última actualización en las páginas de la aplicación\" están habilitados, la extensión hará una solicitud segura a Steamdb.info para obtener la cantidad actual de jugadores y la última actualización del juego."
+		"message": "Cuando la opción \"$options_online_stats$\" o \"$options_steamdb_last_update$\" está habilitada, la extensión hará una solicitud segura a $domain$ para obtener la cantidad actual de jugadores y la última actualización del juego.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
 	},
 	"options_extra_data_prices": {
-		"message": "Cuando la opción «Mostrar el precio más bajo registrado en las páginas de la aplicación» está activada, la extensión realizará una petición segura a steamdb.info con tu divisa (con la que Steam cree que es) para obtener el precio registrado de un juego específico."
+		"message": "Cuando la opción de\"$options_steamdb_lowest_price$\"está activada, la extensión hará una solicitud segura a $domain$ con tu moneda(la que Steam cree que es) para obtener el precio de un juego específico.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Muestra el precio más bajo registrado en las páginas de la aplicación"
@@ -477,14 +514,16 @@
 		"message": "Establece las cookies de edad y cumpleaños para que siempre pasen"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Eliminar todos los enlaces del filtro de enlaces"
+		"message": "Quitar el filtro de enlaces \"Estás saliendo de Steam\" De sitios externos",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Aceptar SSA en el mercado, inventario y activar páginas clave automáticamente",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Aceptar el acuerdo de subscriptores en el mercado, inventario, y activa las páginas clave automáticamente",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Ocultar botón \"Instalar Steam\" en el encabezado"
+		"message": "Ocultar botón \"Instalar Steam\" en el encabezado",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar el aviso «Abrir en Steam»"

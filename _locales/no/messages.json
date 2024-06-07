@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB Kalkulator"
 	},
-	"steamstatus": {
-		"message": "Sjekk på steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Det ser ut til at Steam opplever noe nedetid. "
 	},

@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Calculadora de SteamDB"
 	},
-	"steamstatus": {
-		"message": "Consulta a steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Sembla que Steam està patint alguna mena de temps d'aturada. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Per evitar sol·licituds excessives a la Botiga de Steam, les teves dades d'usuari es guarden a l'emmagatzematge local del teu navegador."
 	},
-	"options_website_highlight": {
-		"message": "Destaca els productes en propietat i desitjats a steamdb.info"
-	},
 	"options_website_highlight1": {
 		"message": "Afegeix a desitjats, segueix i ignora productes de la botiga de Steam directament des de SteamDB"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Activa el filtratge addicional a la <a href=\"https://steamdb.info/sales/\" target=\"_blank\">pàgina de vendes</a> i a la<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pàgina de paquets</a>"
-	},
-	"options_extra_data": {
-		"message": "Dades addicionals obtingudes de steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Quan l'opció de \"Mostra jugadors simultanis i pics màxims a les pàgines de l'aplicació\" o \"Mostra l'última actualització a les pàgines de l'aplicació\" és activa, l'extensió farà una sol·licitud segura a steamdb.info per obtenir la quantitat de jugadors actuals i l'última actualització del joc."
-	},
-	"options_extra_data_prices": {
-		"message": "Quan l'opció de \"Mostra el preu més baix enregistrat a les pàgines de l'aplicació\" és activa, l'extensió farà una sol·licitud segura a steamdb.info amb la teva moneda (amb la que Steam pensa que és) per obtenir el preu enregistrat per a un joc en específic."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Mostra el preu més baix enregistrat a les pàgines de l'aplicació"
@@ -476,15 +461,9 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Estableix les galetes d'edat i d'aniversari perquè sempre passin"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "Elimina tots els enllaços de filtre d'enllaços"
-	},
-	"options_enhancement_market_ssa": {
-		"message": "Accepta SSA (Acord de Subscriptor de Steam) al mercat, inventari i activa les claus de pàgines automàticament",
-		"description": "SSA is Steam Subscriber Agreement"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "Amaga el botó d'\"Instal·lar Steam\" a la capçalera"
+		"message": "Amaga el botó d'\"Instal·lar Steam\" a la capçalera",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Amaga el banner d'\"Obrir a Steam\""

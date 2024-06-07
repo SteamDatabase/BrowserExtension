@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "Calculadora do SteamDB"
 	},
-	"steamstatus": {
-		"message": "Verifica no steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "O Steam está com problemas ou em manutenção. "
 	},
@@ -137,7 +134,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Preço visto em $date$ ($relative$)",
+		"message": "Preço visto a $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -150,7 +147,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Preço visto $seen$ vezes, última vez em $date$ ($relative$)",
+		"message": "Preço visto $seen$ vezes, última vez a $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -167,7 +164,7 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Descobrir automaticamente"
+		"message": "Auto-descobrir"
 	},
 	"explore_auto_discover_description": {
 		"message": "Descobrir automaticamente a fila para obter uma carta de evento."
@@ -256,10 +253,10 @@
 		"message": "Proeza oculta: "
 	},
 	"hidden_achievement_hover": {
-		"message": "Proeza oculta, passa com rato para mostrar: "
+		"message": "Proeza oculta, passa o rato para mostrar: "
 	},
 	"inventory_list_at": {
-		"message": "Lista em $price$",
+		"message": "Colocar à venda por $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -268,7 +265,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Vende em $price$",
+		"message": "Vender por $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -313,10 +310,10 @@
 		"message": "Página de definições no SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Menu suspenso de contas nas páginas Steam"
+		"message": "Menu pendente da conta nas páginas do Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Página extras do navegador"
+		"message": "Página de extensões do teu navegador"
 	},
 	"options_review": {
 		"message": "Deixa uma avaliação para esta extensão"
@@ -331,10 +328,10 @@
 		"message": "Feito com 💙 pela malta do <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "É <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">de código aberto</a>, graças a todos os colaboradores!"
+		"message": "É <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">código aberto</a>, graças a todos os colaboradores!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* As caixas de seleção desativadas indicam características incorporadas."
+		"message": "* As caixas de seleção desativadas indicam funcionalidades incorporadas."
 	},
 	"options_header_website": {
 		"message": "Site do SteamDB"
@@ -358,19 +355,16 @@
 		"message": "Explicação"
 	},
 	"options_website_explanation1": {
-		"message": "Quando esta opção é ativada, a extensão irá solicitar alguns dados de utilizador (lista de desejos, possuídos, seguidos, produtos ignorados, e produtos no carrinho) da <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">loja Steam</a> e vai usá-los para aplicar destaques no site."
+		"message": "Quando esta opção é ativada, a extensão irá solicitar alguns dados de utilizador (lista de desejos, produtos possuídos, seguidos, ignorados, e no carrinho) da <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">loja Steam</a> e vai usá-los para aplicar destaques no site."
 	},
 	"options_website_explanation2": {
 		"message": "Tens de estar com sessão iniciada na loja para que isto funcione."
 	},
 	"options_website_explanation3": {
-		"message": "Isso é contido inteiramente no teu navegador e nunca é enviado para o backend da SteamDB."
+		"message": "Isso é contido inteiramente no teu navegador e nunca é enviado para o backend do SteamDB."
 	},
 	"options_website_explanation4": {
 		"message": "Para evitar pedidos excessivos à loja Steam, os teus dados de utilizador são armazenados em cache no armazenamento local do teu navegador."
-	},
-	"options_website_highlight": {
-		"message": "Destacar produtos adquiridos e desejados no steamdb.info"
 	},
 	"options_website_highlight1": {
 		"message": "Adiciona à lista de desejos, segue e ignora produtos na loja Steam diretamente do SteamDB"
@@ -379,25 +373,16 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ativar o script de pacotes grátis</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Ativar filtragem extra na página <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de promoções</a> e <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pacotes</a>"
-	},
-	"options_extra_data": {
-		"message": "Dados adicionais obtidos do steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Quando a opção \"Mostrar jogadores em simultâneo atuais e picos máximos nas páginas da aplicação\" ou \"Mostrar última atualização nas páginas da aplicação\" estão ativadas a extensão fará um pedido seguro para a steamdb.info para obter a quantidade atual de jogadores e a última atualização do jogo."
-	},
-	"options_extra_data_prices": {
-		"message": "Quando a opção \"Mostrar o menor preço gravado nas páginas da aplicação\" estiver ativada, a extensão fará um pedido seguro para a steamdb.info com sua moeda (com o que o Steam acha que é) obter o preço gravado para um jogo específico."
+		"message": "Ativar filtragem extra nas páginas <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de promoções</a> e nas <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> páginas de conjuntos</a>"
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Mostrar o menor preço gravado nas páginas da aplicação"
+		"message": "Mostrar o menor preço registado nas páginas das aplicações"
 	},
 	"options_online_stats": {
-		"message": "Mostra os jogadores em simultâneo e picos mais altos nas páginas das aplicações"
+		"message": "Mostra os jogadores em simultâneo atuais e os picos máximos nas páginas das aplicações"
 	},
 	"options_steamdb_last_update": {
-		"message": "Mostra a última atualização do jogo na página do jogo"
+		"message": "Mostra a última atualização nas páginas das aplicações"
 	},
 	"options_button_app": {
 		"message": "Mostrar um botão nas páginas das aplicações"
@@ -412,7 +397,7 @@
 		"message": "Mostrar um botão nas páginas de vídeo"
 	},
 	"options_button_gamehub": {
-		"message": "Exibir um botão nos hubs do jogo"
+		"message": "Exibir um botão nas centrais comunitárias dos jogos"
 	},
 	"options_button_gamecards": {
 		"message": "Mostrar botões do SteamDB e da loja na página de cartas do jogo"
@@ -421,7 +406,7 @@
 		"message": "Mostrar SubID sob cada opção de compra"
 	},
 	"options_link_subid_widget": {
-		"message": "Mostrar SubID nos widgets de aplicação"
+		"message": "Mostrar SubID nos widgets das aplicações"
 	},
 	"options_link_accountpage": {
 		"message": "Vincular cada pacote na tua página de licenças"
@@ -477,14 +462,16 @@
 		"message": "Define os cookies de idade e aniversário para passarem sempre"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Remove o filtro de hiperligações"
+		"message": "Remover o filtro de ligações \"Estás a sair do Steam\" de sites externos",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Aceitar Acordo de Subscrição Steam (SSA) no mercado, inventário e páginas de ativação de chaves automaticamente",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Aceitar Acordo de Subscrição no mercado, inventário e páginas de ativação de chaves automaticamente",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Ocultar botão \"Instale o Steam\" no cabeçalho"
+		"message": "Ocultar botão \"Instale o Steam\" no cabeçalho",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar banner \"Abrir no Steam\""

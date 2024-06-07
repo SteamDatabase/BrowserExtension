@@ -58,6 +58,12 @@
 	"options": {
 		"message": "Sätted"
 	},
+	"options_permissions_button": {
+		"message": "⚠️ Lubade andmine"
+	},
+	"options_footer2": {
+		"message": "See on <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">vabavaraline</a>, tänu kõikidele panustajatele!"
+	},
 	"options_header_website": {
 		"message": "SteamDB Veebisait"
 	},

@@ -9,7 +9,12 @@
 		"message": "Калькулятор SteamDB"
 	},
 	"steamstatus": {
-		"message": "Перевірити на steamstat.us"
+		"message": "Перевірити на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Схоже, що Steam відчуває деякі перебої. "
@@ -233,7 +238,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Ще може випасти предметів: $amount$",
+		"message": "Ще може випасти: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -370,7 +375,12 @@
 		"message": "Щоб запобігти надмірним запитам до Крамниці Steam, ваші дані користувача кешуються у локальному сховищі вашого браузера."
 	},
 	"options_website_highlight": {
-		"message": "Виділяти наявні та бажані товари на steamdb.info"
+		"message": "Виділити наявні та бажані товари на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Додавати до бажаного, відстежувати та ігнорувати товари в Крамниці Steam безпосередньо з SteamDB"
@@ -382,13 +392,24 @@
 		"message": "Увімкнути додаткову фільтрацію на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">сторінці продажу</a> та на <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">сторінці комплектів</a>"
 	},
 	"options_extra_data": {
-		"message": "Додаткові дані, взяті з steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "Якщо ввімкнено параметр «Показувати поточних одночасних гравців та максимальні піки на сторінках застосунків» або «Показувати останнє оновлення на сторінках застосунків», розширення зробить безпечний запит до steamdb.info, щоб отримати поточну кількість гравців та останнє оновлення гри."
+		"message": "Додаткові дані, взяті з $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_extra_data_prices": {
-		"message": "Якщо ввімкнено параметр «Показувати найнижчу зафіксовану ціну на сторінках застосунків», розширення зробить безпечний запит до steamdb.info у вашій валюті (у тій, яку вважає Steam), щоб отримати зафіксовану ціну для певної гри."
+		"message": "Коли опція \"$options_steamdb_lowest_price$\" увімкнена, розширення зробить безпечний запит до $domain$ з вашою валютою (тією, що вважає Steam) щоби отримати зафіксовану ціну для конкретної гри.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Показувати найнижчу зафіксовану ціну на сторінках застосунків"
@@ -430,10 +451,10 @@
 		"message": "Додати посилання на калькулятор у профілі спільноти"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Перемістити вибір гри на сторінці інвентарю убік"
+		"message": "Перемістити вибір гри на сторінці інвентарю в сторону"
 	},
 	"options_link_inventory": {
-		"message": "Додати посилання на SteamDB під кожен дарунок і купон у вашому інвентарі"
+		"message": "Додати посилання на кожен дарунок і купон у вашому інвентарі до SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
 		"message": "Правильно визначати SubID дарунка у вашому інвентарі"
@@ -451,7 +472,7 @@
 		"message": "Показувати ринкову ціну предмета в інвентарях інших користувачів"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Підтримка для параметрів $for_item$ та $my_item$",
+		"message": "Підтримка параметрів $for_item$ та $my_item$",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -474,17 +495,19 @@
 		"message": "Пропускати сторінку перевірки віку"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Встановлює кукі віку та дня народження щоб пропускати перевірку"
+		"message": "Встановлює пропуск перевірки кукі-файлів віку та дня народження"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Вилучити всі посилання фільтра посилань"
+		"message": "Прибрати фільтр посилань \"Ви залишаєте Steam\" із зовнішніх сайтів",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Приймати SSA на сторінці ринку, інвентарю та активації ключів автоматично",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Приймати Угоду підписника на ринку, інвентар, і автоматично активувати ключові сторінки",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Сховати кнопку «Інсталювати Steam» у хедері"
+		"message": "Сховати кнопку «Інсталювати в Steam» у заголовку",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Сховати банер «Відкрити в Steam»"
@@ -499,7 +522,7 @@
 		"message": "Завантажувати приховані досягнення та їх опис"
 	},
 	"options_spoiler_achievements": {
-		"message": "Приховувати описи за елементом спойлера"
+		"message": "Сховати описи за елементом спойлера"
 	},
 	"options_prevent_store_images": {
 		"message": "Зупиняти завантаження зображень на сторінках застосунків у крамниці"

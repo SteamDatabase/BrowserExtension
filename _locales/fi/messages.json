@@ -6,10 +6,7 @@
 		"message": "SteamDB-asetukset"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB-laskin"
-	},
-	"steamstatus": {
-		"message": "Tarkista steamstat.us"
+		"message": "SteamDB Laskin"
 	},
 	"steamstatus_downtime": {
 		"message": "Steamissä näyttä olevan toimintahäiriöitä. "
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Estääksemme liialliset pyynnöt Steam-kauppaan, käyttäjätietosi tallennetaan selaimesi välimuistiin."
 	},
-	"options_website_highlight": {
-		"message": "Korosta omistetut ja toivotut tuotteet steamdb.info:ssa"
-	},
 	"options_website_highlight1": {
 		"message": "Lisää toivelistallesi, seuraa ja ohita Steam-kaupan tuotteita suoraan SteamDB:stä"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "Ota käyttöön lisäsuodatukset <a href=\"https://steamdb.info/sales/\" target=\"_blank\">alennukset</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> paketit -sivuilla</a>"
-	},
-	"options_extra_data": {
-		"message": "Lisätiedot haettu Steamdb.info:sta"
-	},
-	"options_extra_data_players": {
-		"message": "Kun \"Näytä tämänhetkiset ja korkeimmat pelaajaluvut kauppasivuilla\" tai \"Näytä viimeisin päivitys kauppasivuilla\" ovat käytössä, laajennus tekee salatun pyynnön steamdb.info:on saadakseen tämänhetkisen pelaajamäärän ja viimeisimmän pelin päivityksen."
-	},
-	"options_extra_data_prices": {
-		"message": "Kun \"Näytä alhaisin tallennettu hinta kauppasivulla\" on käytössä, laajennus tekee salatun pyynnön steamdb.info:on sinun valuutallasi (tai minkä Steam luulee valuuttasi olevan) saadakseen tallennetun hinnan kyseiselle pelille."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Näytä alhaisin tallennettu hinta kauppasivulla"
@@ -477,14 +462,16 @@
 		"message": "Asettaa iän ja syntymäpäivän evästeet aina läpäiseväksi"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Poista kaikki linkkien suodatinlinkit"
+		"message": "Poista \"Olet poistumassa Steamista\" linkkisuodatin ulkoisilta sivustoilta",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Hyväksy Steam-tilaussopimus (SSA) kauppapaikka, tavaraluettelo ja aktivoi tuote -sivuilla automaattisesti",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Hyväksy Steam-tilaussopimus kauppapaikka, tavaraluettelo ja aktivoi tuote -sivuilla automaattisesti",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Piilota \"Asenna Steam\" -painike ylätunnisteesta"
+		"message": "Piilota \"Asenna Steam\" -painike ylätunnisteesta",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Piilota \"Avaa Steamissa\" banneri"

@@ -9,7 +9,12 @@
 		"message": "SteamDB-kalkylator"
 	},
 	"steamstatus": {
-		"message": "Kontrollera steamstat.us"
+		"message": "Kontrollera $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Steam verkar ha ett driftstopp. "
@@ -370,7 +375,12 @@
 		"message": "För att förhindra alltför många förfrågningar till Steam så sparas din användardata temporärt i webbläsarens lokala lagringsutrymme."
 	},
 	"options_website_highlight": {
-		"message": "Markera ägda och önskade produkter på steamdb.info"
+		"message": "Markera ägda och önskade produkter på $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Lägg till i önskelistan, följ och ignorera produkter på Steam direkt från SteamDB"
@@ -382,13 +392,12 @@
 		"message": "Aktivera extra filter på SteamDBs sidor om <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prissänkta produkter</a> och <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">paketerbjudande</a>"
 	},
 	"options_extra_data": {
-		"message": "Ytterligare information hämtad från steamdb.info"
-	},
-	"options_extra_data_players": {
-		"message": "När alternativet ”Visa antal spelare och maximalt antal spelare på appsidor” eller ”Visa senaste ändringen på appsidor” är aktiverat kommer tillägget att göra en säker förfrågan till steamdb.info för att få det aktuella antalet spelare och den senaste speluppdateringen."
-	},
-	"options_extra_data_prices": {
-		"message": "När ”Visa det lägsta registrerade priset på appsidor” är aktiverat kommer tillägget göra en säker begäran till steamdb.info med din valuta (med det Steam tror att din valuta är) för att få det registrerade priset för ett specifikt spel."
+		"message": "Ytterligare information hämtad från $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Visa det lägsta registrerade priset på appsidor"
@@ -476,15 +485,9 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Anger ålder och födelsedagskakor för att hoppa över ålderskontrollen"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "Ta bort alla länkfilterlänkar"
-	},
-	"options_enhancement_market_ssa": {
-		"message": "Acceptera SSA på marknaden, förrådet och på nyckelaktiveringssidor automatiskt",
-		"description": "SSA is Steam Subscriber Agreement"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "Dölj \"Installera Steam\" knappen"
+		"message": "Dölj \"Installera Steam\" knappen",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Dölj \"Öppna i Steam\" bannern"

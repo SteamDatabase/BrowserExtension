@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB Hesaplayıcı"
 	},
-	"steamstatus": {
-		"message": "steamstat.us'tan kontrol et"
-	},
 	"steamstatus_downtime": {
 		"message": "Steam'de kesinti yaşanıyor gibi görünüyor. "
 	},
@@ -369,9 +366,6 @@
 	"options_website_explanation4": {
 		"message": "Steam Mağazasına aşırı talep gelmesini önlemek için kullanıcı verileriniz tarayıcınızın yerel deposunda önbelleğe alınır."
 	},
-	"options_website_highlight": {
-		"message": "Sahip olunan ve istek listesine eklenen ürünleri steamdb.info üzerinde vurgula"
-	},
 	"options_website_highlight1": {
 		"message": "SteamDB üzerinden Steam mağazasındaki ürünleri doğrudan istek listesine ekle, takip et ve yok say"
 	},
@@ -380,15 +374,6 @@
 	},
 	"options_website_highlight3": {
 		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">Satışlar</a> ve <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">Paketler</a> sayfasında ekstra filtrelemeyi aktifleştir"
-	},
-	"options_extra_data": {
-		"message": "Steamdb.info'dan alınan ekstra veriler"
-	},
-	"options_extra_data_players": {
-		"message": "\"Uygulama sayfalarında mevcut eşzamanlı oyuncuları ve maksimum zirveleri görüntüle\" veya \"Uygulama sayfalarında son güncellemeyi görüntüle\" seçeneği etkinleştirildiğinde, uzantı, mevcut oyuncu sayısını ve son oyun güncellemesini almak için steamdb.info'ya güvenli bir istekte bulunacaktır."
-	},
-	"options_extra_data_prices": {
-		"message": "\"Uygulama sayfalarında kaydedilen en düşük fiyatı görüntüle\" seçeneği etkinleştirildiğinde, uzantı, belirli bir oyun için kayıtlı fiyatı almak için steamdb.info'ya para biriminizle (Steam'in düşündüğü şekilde) güvenli bir istekte bulunacaktır."
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Uygulama sayfalarında kaydedilen en düşük fiyatı görüntüle"
@@ -477,14 +462,16 @@
 		"message": "Yaş ve doğum günü çerezlerini her zaman geçecek şekilde ayarla"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Tüm bağlantı filtreleme bağlantılarını kaldır"
+		"message": "\"Steam'den ayrılıyorsunuz\" link filtresini harici sitelerden kaldır",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Pazarda ve envanterde SSA'yı kabul edin ve önemli sayfaları otomatik olarak etkinleştirin",
-		"description": "SSA is Steam Subscriber Agreement"
+		"message": "Pazar, envanter ve diğer önemli sayfalarını otomatik etkinleştirmek için Steam Abonelik Sözleşmesini kabul edin",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Başlıktaki \"Steam'i Yükle\" düğmesini gizle"
+		"message": "Başlıktaki \"Steam'i Yükle\" düğmesini gizle",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"Steam'de Aç\" yazısını gizle"

@@ -1,15 +1,12 @@
 {
 	"extension_description": {
-		"message": "Ajoute des liens SteamDB et de nouvelles fonctionnalités au store et à la communauté Steam. Vous pouvez également voir les prix les plus bas ainsi que les statistiques."
+		"message": "Ajoute des liens vers SteamDB, et de nouvelles fonctionnalités au magasin et à la communauté Steam. Vous pouvez voir les prix les plus bas et des statistiques."
 	},
 	"steamdb_options": {
 		"message": "Options de SteamDB"
 	},
 	"steamdb_calculator": {
-		"message": "Total SteamDB"
-	},
-	"steamstatus": {
-		"message": "Vérifier sur steamstat.us"
+		"message": "Calculatrice SteamDB"
 	},
 	"steamstatus_downtime": {
 		"message": "Steam semble être en maintenance. "
@@ -84,7 +81,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Stats en ligne"
+		"message": "Statistique en-ligne"
 	},
 	"app_stats_online_now": {
 		"message": "En ligne :"
@@ -93,7 +90,7 @@
 		"message": "Pic du jour :"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Pic :"
+		"message": "Pic de tout les temps :"
 	},
 	"app_stats_followers": {
 		"message": "Abonnés :"
@@ -198,7 +195,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Échec de la suppression de l'article #$current$ trop de fois. Réessayez plus tard.",
+		"message": "Échec de l'effacement de l'élément de la file d'attente #$current$ trop de fois. Vous pouvez réessayer plus tard.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -364,13 +361,18 @@
 		"message": "Vous devez être connecté sur le magasin Steam pour que cela fonctionne."
 	},
 	"options_website_explanation3": {
-		"message": "Ceci est contenu entièrement dans votre navigateur et n'est jamais envoyé même sur les serveurs de SteamDB."
+		"message": "Ceci est contenu entièrement dans votre navigateur et n'est jamais envoyé, même vers les serveurs de SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Pour éviter les requêtes excessives sur le Magasin Steam, vos données utilisateur sont mises en cache dans le stockage local de votre navigateur."
+		"message": "Pour éviter les requêtes excessives sur le magasin Steam, vos données utilisateur sont mises en cache dans le stockage local de votre navigateur."
 	},
 	"options_website_highlight": {
-		"message": "Mettre en avant les produits possédés et désirés sur steamdb.info"
+		"message": "Mettre en avant les produits possédés et désirés sur $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Ajouter à la liste de souhaits, suivre et ignorer les produits sur le magasin Steam directement depuis SteamDB"
@@ -382,13 +384,28 @@
 		"message": "Activer le filtrage supplémentaire sur <a href=\"https://steamdb.info/sales/\" target=\"_blank\">la page des ventes</a> et <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">la page des packs</a>"
 	},
 	"options_extra_data": {
-		"message": "Données supplémentaires récupérées depuis steamdb.info"
+		"message": "Données supplémentaires récupérées depuis $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_extra_data_players": {
-		"message": "Lorsque l'option \"Afficher les joueurs simultanés actuels et les pics max sur les pages du magasin\" ou \"Afficher la date de dernière mise à jour sur les pages du magasin\" est activée, l'extension fera une requête sécurisée à steamdb.info pour obtenir le nombre actuel de joueurs et la date de dernière mise à jour de jeu."
-	},
-	"options_extra_data_prices": {
-		"message": "Lorsque l'option \"Afficher le prix enregistré le plus bas sur les pages du magasin\" est activée, l'extension fera une requête sécurisée à steamdb.info avec votre devise (avec ce que Steam pense que c'est) pour obtenir le prix enregistré pour un jeu spécifique."
+		"message": "Lorsque les options \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" sont activées, l'extension fera une requête sécurisée à $domain$ pour obtenir le nombre actuel de joueurs et la dernière mise à jour du jeu.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Afficher le prix enregistré le plus bas sur les pages du magasin"
@@ -477,14 +494,16 @@
 		"message": "Définit l'âge et la date d'anniversaire des cookies pour toujours passer"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Supprimer tous les liens de filtre de lien"
+		"message": "Supprimer l'avertissement \"Vous quittez Steam\" lorsque vous cliquez sur un lien externe à Steam",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Accepter le Contrat d'abonnement Steam sur le marché, l'inventaire et activer automatiquement les pages clés",
-		"description": "SSA is Steam Subscriber Agreement"
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Cacher le bouton \"Installer Steam\" dans l'en-tête"
+		"message": "Cacher le bouton \"Installer Steam\" dans l'en-tête",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Cacher la bannière \"Ouvrir dans la Steam\""

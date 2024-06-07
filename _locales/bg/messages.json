@@ -8,9 +8,6 @@
 	"steamdb_calculator": {
 		"message": "SteamDB калкулатор"
 	},
-	"steamstatus": {
-		"message": "Проверете в steamstat.us"
-	},
 	"steamstatus_downtime": {
 		"message": "Изглежда, че Steam е временно недостъпен. "
 	},
@@ -90,7 +87,7 @@
 		"message": "Онлайн в момента:"
 	},
 	"app_stats_peak_today": {
-		"message": "максимум за 24 ч:"
+		"message": "Максимум за 24 ч:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Mаксимум за всички времена:"
@@ -123,8 +120,21 @@
 			}
 		}
 	},
+	"app_lowest_price_limited": {
+		"message": "Най-ниската регистрирана цена в SteamDB е <b>$price$</b>, а за последните 2 години е <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
 	"app_lowest_date": {
-		"message": "Цена, видяна на $date$ ($relative$)",
+		"message": "Цена към $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -137,7 +147,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Цена, видяна $seen$ пъти, последно на $date$ ($relative$)",
+		"message": "Цената е видяна $seen$ пъти, последно на $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -199,6 +209,26 @@
 	"explore_finished": {
 		"message": "Опашката е разгледана."
 	},
+	"badges_idle_apps": {
+		"message": "Приложения на изчакване: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Приложения на изчакване на тази страница: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"badges_idle_drops": {
 		"message": "Оставащи ползи: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
@@ -246,8 +276,20 @@
 	"inventory_list_at_title": {
 		"message": "Пускане на артикула за най-ниската посочена продажна цена\n\nПоказаната цена са парите, които получавате (без такси)"
 	},
+	"inventory_sell_at_title": {
+		"message": "Пускане на артикула за най-високата посочена продажна цена\n\nПоказаната цена са парите, които получавате (без такси)"
+	},
 	"widget_view_app": {
 		"message": "Вижте приложението $id$ в SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Вижте пакет $id$ в SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -267,6 +309,9 @@
 	"options_welcome_option1": {
 		"message": "Страница с настройки в SteamDB"
 	},
+	"options_welcome_option2": {
+		"message": "Падащо меню за акаунт в страници на Steam"
+	},
 	"options_welcome_option3": {
 		"message": "Страницата с добавки на вашия браузър"
 	},
@@ -281,6 +326,9 @@
 	},
 	"options_footer1": {
 		"message": "Направено с 💙 от <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Приложението е <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, благодарение на всички сътрудници!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Деактивираните квадратчета за отметка означават вградени функции."
@@ -313,7 +361,10 @@
 		"message": "Трябва да сте влезли в магазина, за да може тази опция да работи."
 	},
 	"options_website_explanation3": {
-		"message": "Това се съдържа изцяло във вашия браузър и никога не се изпраща до бекенда на SteamDB."
+		"message": "Това се съдържа само във вашия браузър и няма да се изпраща на бекенда на SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "To prevent excessive requests to the Steam Store, your user data is cached in your browser's local storage.\nЗа да предотвратим излишни заявки в Steam Store, твоите данни се кешират в паметта на твоя браузър."
 	},
 	"options_website_highlight1": {
 		"message": "Добавяне към „Желани“, следване и игнориране на игри в магазина на Steam директно от SteamDB"
@@ -321,8 +372,8 @@
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Активирайте скрипта за безплатни пакети</a>"
 	},
-	"options_extra_data": {
-		"message": "Допълнителни данни, извлечени от steamdb.info"
+	"options_website_highlight3": {
+		"message": "Позволете допълнително филтриране в <a href=\"https://steamdb.info/sales/\" target=\"_blank\">sales page</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundles page</a>"
 	},
 	"options_button_pcgw": {
 		"message": "Показване на бутона за PCGamingWiki на страниците на приложенията"
@@ -374,11 +425,9 @@
 	"options_enhancement_skip_agecheck": {
 		"message": "Пропуснете страницата за проверка на възрастта"
 	},
-	"options_enhancement_no_linkfilter": {
-		"message": "Премахване на всички филтри за връзки"
-	},
 	"options_enhancement_hide_install_button": {
-		"message": "Скрий \"Инсталирай Steam\" бутона в горната лента"
+		"message": "Скрий \"Инсталирай Steam\" бутона в горната лента",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Скрий \"Отвори в Steam\" банера"
@@ -393,7 +442,7 @@
 		"message": "Покажи скритите постижения и техните описания"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Някой разработчици поставят мегабайти от снимки в описанията на игрите, което може да отнеме известно време да зареди, натисни за да заредиш сниката"
+		"message": "Някои разработчици слагат в описанията на игрите по-тежки изображения, които може да се зареждат по-бавно. Щракнете върху дадено изображение, за да се зареди"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Подобрете страницата с глобални постижения"
