@@ -221,7 +221,7 @@
 
 	"badges_idle_apps": {
 		"message": "Apps to idle: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -231,7 +231,7 @@
 	},
 	"badges_idle_apps_on_this_page": {
 		"message": "Apps to idle on this page: $amount$",
-		"description": "Shown on your badges page, can also be translated as apps with drops",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -241,7 +241,7 @@
 	},
 	"badges_idle_drops": {
 		"message": "Drops remaining: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
@@ -251,7 +251,7 @@
 	},
 	"badges_idle_drops_on_this_page": {
 		"message": "Drops remaining on this page: $amount$",
-		"description": "Shown on your badges page",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
 				"content": "$1",
