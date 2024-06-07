@@ -98,7 +98,6 @@ summary:hover {
 }
 
 header {
-	margin-bottom: 1rem;
 	padding-top: .5rem;
 	padding-bottom: .5rem;
 	border-bottom: 1px solid #0197cf;
@@ -112,6 +111,16 @@ header .logo {
 
 header svg {
 	vertical-align: middle;
+}
+
+#localization {
+	background-color: #16161d;
+	color: #888;
+}
+
+#localization .container {
+	padding-top: .3rem;
+	padding-bottom: .3rem;
 }
 
 footer {
