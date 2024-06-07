@@ -9,11 +9,25 @@
 
 	for( const element of localizable )
 	{
-		const msg = _t( element.dataset.msg );
+		const token = element.dataset.msg;
+		let msg = null;
+
+		if( token === 'options_extra_data_players' )
+		{
+			msg = _t( token, [ _t( 'options_online_stats' ), _t( 'options_steamdb_last_update' ) ] );
+		}
+		else if( token === 'options_extra_data_prices' )
+		{
+			msg = _t( token, [ _t( 'options_steamdb_lowest_price' ) ] );
+		}
+		else
+		{
+			msg = _t( token );
+		}
 
 		if( !msg )
 		{
-			console.error( 'Missing localization', element, element.dataset.msg );
+			console.error( 'Missing localization', element, token );
 		}
 
 		element.innerHTML = msg;
