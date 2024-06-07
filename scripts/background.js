@@ -336,6 +336,7 @@ function StoreAddFreeLicense( request, callback )
 		callback( {
 			success: false,
 			error: message,
+			resultCode,
 		} );
 	};
 
