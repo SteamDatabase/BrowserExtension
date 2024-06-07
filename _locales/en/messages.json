@@ -10,7 +10,12 @@
 		"message": "SteamDB Calculator"
 	},
 	"steamstatus": {
-		"message": "Check on steamstat.us"
+		"message": "Check on $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Steam appears to be experiencing some downtime. "
@@ -385,7 +390,12 @@
 		"message": "To prevent excessive requests to the Steam Store, your user data is cached in your browser's local storage."
 	},
 	"options_website_highlight": {
-		"message": "Highlight owned and wished products on steamdb.info"
+		"message": "Highlight owned and wished products on $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Wishlist, follow, and ignore products on the Steam store directly from SteamDB"
@@ -398,11 +408,19 @@
 	},
 
 	"options_extra_data": {
-		"message": "Extra data fetched from steamdb.info"
+		"message": "Extra data fetched from $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_extra_data_players": {
-		"message": "When the \"$options_online_stats$\" or \"$options_steamdb_last_update$\" option are enabled, the extension will do a secure request to steamdb.info to get the current amount of players and last game update.",
+		"message": "When the \"$options_online_stats$\" or \"$options_steamdb_last_update$\" option are enabled, the extension will do a secure request to $domain$ to get the current amount of players and last game update.",
 		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
 			"options_online_stats": {
 				"content": "$1",
 				"description": "Uses translation for options_online_stats"
@@ -414,8 +432,11 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "When the \"$options_steamdb_lowest_price$\" option is enabled, the extension will do a secure request to steamdb.info with your currency (with what Steam thinks it is) to get the recorded price for a specific game.",
+		"message": "When the \"$options_steamdb_lowest_price$\" option is enabled, the extension will do a secure request to $domain$ with your currency (with what Steam thinks it is) to get the recorded price for a specific game.",
 		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
