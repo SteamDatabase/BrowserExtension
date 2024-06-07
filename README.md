@@ -45,6 +45,9 @@ When writing code, make sure to run our linter:
 [Translate on Crowdin](https://crowdin.com/project/steamdb-extension)  
 [![Crowdin](https://badges.crowdin.net/steamdb-extension/localized.svg)](https://crowdin.com/project/steamdb-extension)
 
+To test a specific language in Chrome, see this link:  
+https://developer.chrome.com/docs/extensions/reference/api/i18n#how-to-set-browsers-locale
+
 #### Making a release
 
 Run `npm run version 3.0.0` which updates `manifest.json`, creates a commit, creates a tag,
