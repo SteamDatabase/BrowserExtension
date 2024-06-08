@@ -13,7 +13,8 @@
 		"message": "Check on $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"description": "The domain is steamstat.us"
 			}
 		}
 	},
@@ -31,7 +32,8 @@
 		"message": "Personal achievements"
 	},
 	"store_page": {
-		"message": "Store Page"
+		"message": "Store Page",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Search"
@@ -393,7 +395,8 @@
 		"message": "Highlight owned and wished products on $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"description": "The domain is steamdb.info"
 			}
 		}
 	},
@@ -411,7 +414,8 @@
 		"message": "Extra data fetched from $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"description": "The domain is steamdb.info"
 			}
 		}
 	},
@@ -419,7 +423,8 @@
 		"message": "When the \"$options_online_stats$\" or \"$options_steamdb_last_update$\" option are enabled, the extension will do a secure request to $domain$ to get the current amount of players and last game update.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"description": "The domain is steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -435,7 +440,8 @@
 		"message": "When the \"$options_steamdb_lowest_price$\" option is enabled, the extension will do a secure request to $domain$ with your currency (with what Steam thinks it is) to get the recorded price for a specific game.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"description": "The domain is steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -444,25 +450,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Display the lowest recorded price on app pages"
+		"message": "Display the lowest recorded price on product pages"
 	},
 	"options_online_stats": {
-		"message": "Display current concurrent players and max peaks on app pages"
+		"message": "Display current concurrent players and max peaks on product pages"
 	},
 	"options_steamdb_last_update": {
-		"message": "Display last update on app pages"
+		"message": "Display last update on product pages"
 	},
 	"options_button_app": {
-		"message": "Display a button on app pages"
+		"message": "Display a button on product pages"
 	},
 	"options_button_pcgw": {
-		"message": "Display PCGamingWiki button on app pages"
+		"message": "Display PCGamingWiki button on product pages"
 	},
 	"options_button_sub": {
 		"message": "Display a button on package pages"
 	},
 	"options_button_gamehub": {
-		"message": "Display a button on game hubs"
+		"message": "Display a button on community hubs"
 	},
 	"options_button_gamecards": {
 		"message": "Display SteamDB and store page buttons on game cards page"
@@ -471,7 +477,8 @@
 		"message": "Display SubID under each purchase option"
 	},
 	"options_link_subid_widget": {
-		"message": "Display SubID in app widgets"
+		"message": "Display SubID in embed widgets",
+		"description": "Example widget: https://store.steampowered.com/widget/10"
 	},
 	"options_link_accountpage": {
 		"message": "Link each package on your licenses page"
@@ -542,10 +549,11 @@
 		"message": "Hide \"Open in the Steam\" banner"
 	},
 	"options_steamdb_rating": {
-		"message": "Display SteamDB rating on app pages"
+		"message": "Display SteamDB rating on product pages"
 	},
 	"options_enhancement_appicon": {
-		"message": "Display app icons on store and community pages"
+		"message": "Display product icon on store and community pages",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Load hidden achievements and their descriptions"
@@ -554,10 +562,10 @@
 		"message": "Hide descriptions behind a spoiler element"
 	},
 	"options_prevent_store_images": {
-		"message": "Stop images from loading on app store pages"
+		"message": "Stop images from loading on product pages"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Some developers put megabytes of images in game descriptions which can take a while to load, click on an image to load"
+		"message": "Some developers put megabytes of images in product descriptions which can take a while to load, click on an image to load"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Support $award$ parameters on profile and shared file links",
@@ -571,7 +579,7 @@
 		"message": "Display total amount of card drops remaining on badges page"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Add a button to cheat the discovery queue during sales"
+		"message": "Add a button to automatically discover the queue during sales"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Improve global achievements page"
