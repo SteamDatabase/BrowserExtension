@@ -15,7 +15,7 @@
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
 	},
 	"devDependencies": {
-		"@types/chrome": "^0.0.267",
+		"@types/chrome": "^0.0.268",
 		"@types/firefox-webext-browser": "^120.0.3",
 		"archiver": "^7.0.1",
 		"chromex-locale-lint": "^0.1.0",
@@ -23,7 +23,7 @@
 		"eslint-config-standard": "^17.0.0",
 		"stylelint": "^16.5.0",
 		"stylelint-config-standard": "^36.0.0",
-		"web-ext": "^7.6.2"
+		"web-ext": "^8.0.0"
 	},
 	"repository": {
 		"type": "git",
