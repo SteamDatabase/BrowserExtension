@@ -12,7 +12,8 @@
 		"message": "შეამოწმე $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "პირადი მიღწევები"
 	},
 	"store_page": {
-		"message": "მაღაზია"
+		"message": "მაღაზია",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "ძებნა"
 	},
 	"id_app": {
 		"message": "აპლიკაცია $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "სუბ $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "კრებული $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "გამოკვეთე ნაქონი და ვიშლისთში დამატებული პროდუქტები $domain$-ზე",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "დამატებითი მონაცემები აღებულია $domain$-დან",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "როდესაც \"$options_online_stats$\"-ს ან \"$options_steamdb_last_update$\"-ს ფუნქციები ჩართულია, SteamDB გააგზავნის დაცულ მოთხოვნას $domain$ რომ მიიღოს ამჟამინდელი მოთამაშეების რაოდენობა და თამაშის ბოლო განახლება.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "როდესაც \"$options_steamdb_lowest_price$\" არის ჩართული, SteamDB გააგზავნის უსაფრთხო მოთხოვნას $domain$-ზე და მისცემს მას შენს ვალუტას (იმ ვალუტას რომელიც Steam-ს გონია) რომ გამოსახოს ჩაწერილი ფასი კონკრეტულ თამაშისთვის.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "გამოაჩინოს ყველაზე დაბალი ჩაწერილი ფასი აპლიკაციის გვერდებზე"
+		"message": "გამოაჩინოს ყველაზე დაბალი ჩაწერილი ფასი პროდუქტის გვერდებზე"
 	},
 	"options_online_stats": {
-		"message": "გამოაჩინოს ახლანდელი მოთამაშეების რაოდენობა და მაქსიმალური პიკები აპლიკაციის გვერდებზე"
+		"message": "გამოაჩინოს ახლანდელი მოთამაშეების რაოდენობა და მაქსიმალური პიკები პროდუქტის გვერდებზე"
 	},
 	"options_steamdb_last_update": {
-		"message": "გამოაჩინოს ბოლო განახლება აპლიკაციის გვერდებზე"
+		"message": "გამოაჩინოს ბოლო განახლება პროდუქტის გვერდებზე"
 	},
 	"options_button_app": {
-		"message": "გამოაჩინოს ღილაკი აპლიკაციის გვერდებზე"
+		"message": "გამოაჩინოს ღილაკი პროდუქტის გვერდებზე"
 	},
 	"options_button_pcgw": {
-		"message": "გამოაჩინოს PCGamingWiki-ს ღილაკი აპლიკაციის გვერდებზე"
+		"message": "გამოაჩინოს PCGamingWiki-ს ღილაკი პროდუქტის გვერდებზე"
 	},
 	"options_button_sub": {
 		"message": "გამოაჩინოს ღილაკი ფექეჯების გვერდებზე"
 	},
 	"options_button_gamehub": {
-		"message": "გამოაჩინოს ღილაკი თამაშის ჰაბებზე"
+		"message": "გამოაჩინოს ღილაკი ქომუნითის ჰაბებზე"
 	},
 	"options_button_gamecards": {
 		"message": "გამოაჩინოს SteamDB-ს და მაღაზიის გვერდის ღილაკები თამაშის კარტების გვერდეზე"
@@ -455,7 +464,8 @@
 		"message": "გამოაჩინოს საბ აიდი ყველა ყიდვის არჩევანზე"
 	},
 	"options_link_subid_widget": {
-		"message": "გამოაჩინოს საბ აიდი აპლიკაციის ვიჯეტებში"
+		"message": "გამოაჩინოს საბ აიდი მიბმულ ვიჯეტებში",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "მიაბი თითო პექეჯი შენი ლიცენზიების გვერდზე"
@@ -526,10 +536,11 @@
 		"message": "დამალე \"Open in the Steam\"-ის ბანერი"
 	},
 	"options_steamdb_rating": {
-		"message": "გამოაჩინე SteamDB-ს რეიტინგები აპლიკაციის გვერდებზე"
+		"message": "გამოაჩინე SteamDB-ს რეიტინგები პროდუქტის გვერდებზე"
 	},
 	"options_enhancement_appicon": {
-		"message": "გამოაჩინე აპლიკაციის სურათები მაღაზიის და ქომუნითის გვერდებზე"
+		"message": "გამოაჩინე პროდუქტის სურათები მაღაზიის და ქომუნითის გვერდებზე",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "ჩატვირთე დამალული მიღწევები და მათი აღწერები"
@@ -538,10 +549,10 @@
 		"message": "დამალე აღწერები სპოილერის უკან"
 	},
 	"options_prevent_store_images": {
-		"message": "არ ჩატვირთო სურათები აპლიკაციის მაღაზიის გვერდებზე"
+		"message": "არ ჩატვირთო სურათები პროდუქტის გვერდებზე"
 	},
 	"options_prevent_store_images_description": {
-		"message": "ზოგი დეველოპერი დებს მეგაბაიტობით სურათებს თამაშის აღწერაში რასაც შეიძლება დიდი ხანი დასჭირდეს, დააჭირე სურათს რომ ჩატვირთო ის"
+		"message": "ზოგი დეველოპერი დებს მეგაბაიტობით სურათებს პროდუქტის აღწერაში რასაც შეიძლება დიდი ხანი დასჭირდეს, დააჭირე სურათს რომ ჩატვირთო ის"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "მხარს უჭერს $award$-ის პარამეტრებს პროფილებზე და გაზიარებულ ფაილის ლინკებზე",
@@ -555,7 +566,7 @@
 		"message": "გამოაჩინე დროპებისა და დარჩენილი ბედჯების რაოდენობა"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "დაამატე ღილაკი რომ თავი აარიდო აღმოჩენის რიგს ფასდაკლებების დროს"
+		"message": "დაამატე ღილაკი რომ ავტომატურად აღმოაჩინო რიგი ფასდაკლებების დროს"
 	},
 	"options_builtin_achievements_global": {
 		"message": "გააუმჯობესე გლობალური მიღწევების გვერდი"

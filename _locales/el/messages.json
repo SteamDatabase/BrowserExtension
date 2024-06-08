@@ -8,6 +8,15 @@
 	"steamdb_calculator": {
 		"message": "Υπολογιστής SteamDB"
 	},
+	"steamstatus": {
+		"message": "Ελέγξτε στο $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Το Steam φαίνεται να αντιμετωπίζει κάποια διακοπή. "
 	},
@@ -17,14 +26,19 @@
 	"view_on_pcgamingwiki": {
 		"message": "Προβολή στο PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Προσωπικά επιτεύγματα"
+	},
 	"store_page": {
-		"message": "Σελίδα Καταστήματος"
+		"message": "Σελίδα Καταστήματος",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Αναζήτηση"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -34,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -43,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Πακέτο $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -363,6 +379,15 @@
 	"options_website_explanation4": {
 		"message": "Για να αποφύγετε υπερβολικές αιτήσεις στο Κατάστημα Steam, τα δεδομένα χρήστη αποθηκεύονται προσωρινά στον τοπικό αποθηκευτικό χώρο του προγράμματος περιήγησης."
 	},
+	"options_website_highlight": {
+		"message": "Επισήμανση κατεχόμενων και επιθυμητών προϊόντων στο $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Λίστα επιθυμιών, ακολουθήστε και αγνοημένα προϊόντα στο Κατάστημα Steam απευθείας από το SteamDB"
 	},
@@ -372,11 +397,50 @@
 	"options_website_highlight3": {
 		"message": "Ενεργοποίηση επιπλέον φίλτρα στη σελίδα πωλήσεων <a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> και <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">σελίδα πακέτων</a>"
 	},
+	"options_extra_data": {
+		"message": "Επιπρόσθετα δεδομένα που ανακτήθηκαν από το $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Όταν οι επιλογές \"$options_online_stats$\" ή \"$options_steamdb_last_update$\" είναι ενεργοποιημένες, η επέκταση θα κάνει ένα ασφαλές αίτημα στο $domain$ για να ανακτήσει το τρέχον ποσό παικτών και την τελευταία ενημέρωση του παιχνιδιού.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Όταν είναι ενεργοποιημένη η επιλογή \"$options_steamdb_lowest_price$\", η επέκταση θα κάνει ένα ασφαλές αίτημα στο $domain$ με το νόμισμά σας (με αυτό που το Steam νομίζει ότι είναι) για να ανακτήσει την καταγεγραμμένη τιμή για ένα συγκεκριμένο παιχνίδι.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Εμφάνιση της χαμηλότερης καταγεγραμμένης τιμής στις σελίδες εφαρμογών"
 	},
 	"options_online_stats": {
-		"message": "Εμφάνιση ταυτόχρονων παικτών και μέγιστη απήχηση στις σελίδες εφαρμογών"
+		"message": "Εμφάνιση στιγμιαίων τωρινών παικτών και μέγιστων κορυφώσεων στις σελίδες εφαρμογών"
 	},
 	"options_steamdb_last_update": {
 		"message": "Εμφάνιση τελευταίας ενημέρωσης στις σελίδες εφαρμογών"
@@ -391,7 +455,7 @@
 		"message": "Εμφάνιση κουμπιού στις σελίδες πακέτων"
 	},
 	"options_button_gamehub": {
-		"message": "Εμφάνιση κουμπιού στους κόμβους του παιχνιδιού"
+		"message": "Εμφάνιση κουμπιού στα κέντρα κοινότητας των παιχνιδιών"
 	},
 	"options_button_gamecards": {
 		"message": "Εμφάνιση κουμπιών SteamDB και σελίδας καταστήματος στη σελίδα καρτών παιχνιδιών"
@@ -400,7 +464,8 @@
 		"message": "Εμφάνιση SubID σε κάθε επιλογή αγοράς"
 	},
 	"options_link_subid_widget": {
-		"message": "Εμφάνιση του SubID στα widget εφαρμογών"
+		"message": "Εμφάνιση του SubID στα widget εφαρμογών",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Σύνδεση κάθε πακέτου στη σελίδα αδειών χρήσης σας"
@@ -455,6 +520,14 @@
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Ορίζει τα cookies ηλικίας και γενεθλίων να περνούν πάντα"
 	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Αφαίρεση του φίλτρου συνδέσμου \"Αποχωρείτε από το Steam\" από εξωτερικές ιστοσελίδες",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Αποδοχή του συμφωνητικού συνδρομητή στην αγορά, στα αντικείμενα, και στη σελίδα ενεργοποίησης προϊόντος αυτόματα",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Απόκρυψη κουμπιού \"Εγκατάσταση Steam\" στην κεφαλίδα",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -463,10 +536,11 @@
 		"message": "Απόκρυψη του banner \"Άνοιγμα στο Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Εμφάνιση αξιολόγησης SteamDB σε σελίδες εφαρμογών"
+		"message": "Εμφάνιση αξιολόγησης του SteamDB στις σελίδες των εφαρμογών"
 	},
 	"options_enhancement_appicon": {
-		"message": "Εμφάνιση εικονιδίων εφαρμογών στο κατάστημα και στις σελίδες κοινότητας"
+		"message": "Εμφάνιση εικονιδίων εφαρμογών στις σελίδες του καταστήματος και της κοινότητας",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Φόρτωση κρυφών επιτευγμάτων και περιγραφών"
@@ -475,10 +549,10 @@
 		"message": "Απόκρυψη περιγραφών πίσω από ένα στοιχείο spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Διακοπή της φόρτωσης εικόνων σε σελίδες καταστήματος εφαρμογών"
+		"message": "Διακοπή των εικόνων από το να φορτώσουν στις σελίδες εφαρμογών"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Μερικοί προγραμματιστές βάζουν megabytes εικόνων στις περιγραφές του παιχνιδιού οι οποίες μπορούν να πάρουν λίγο χρόνο για να φορτώσουν, κάντε κλικ σε μια εικόνα για να φορτώσει"
+		"message": "Ορισμένοι προγραμματιστές βάζουν megabytes εικόνων στις περιγραφές προϊόντων που μπορούν να πάρουν λίγο χρόνο για να φορτώσουν, κάντε κλικ σε μια εικόνα για να φορτώσει"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Υποστήριξη $award$ παραμέτρων στο προφίλ και τους συνδέσμους κοινόχρηστων αρχείων",
@@ -492,7 +566,7 @@
 		"message": "Εμφάνιση του συνολικού ποσού των καρτών Drops που απομένουν στη σελίδα εμβλημάτων"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Προσθέστε ένα κουμπί για να εξαπατήσει την ουρά ανακάλυψης κατά τη διάρκεια πωλήσεων"
+		"message": "Πρόσθεση κουμπιού ώστε να διαπερνάτε τη σειρά ανακάλυψης αυτόματα κατά τη διάρκεια προσφορών"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Βελτίωση της σελίδας παγκόσμιων επιτευγμάτων"

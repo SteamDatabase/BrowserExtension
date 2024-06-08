@@ -12,7 +12,8 @@
 		"message": "Tjek på $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -26,13 +27,15 @@
 		"message": "Se på PCGamingWiki"
 	},
 	"store_page": {
-		"message": "Butiks Side"
+		"message": "Butiks Side",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Søg"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -42,6 +45,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -51,6 +55,7 @@
 	},
 	"id_bundle": {
 		"message": "Pakke $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -375,7 +380,8 @@
 		"message": "Fremhæv ejede og ønskede produkter på $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -392,7 +398,8 @@
 		"message": "Ekstra data hentet fra $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -400,7 +407,8 @@
 		"message": "Når \"$options_online_stats$\" eller \"$options_steamdb_last_update$\" er aktiveret, vil udvidelsen lave en sikker anmodning til $domain$ for at få den aktuelle mængde spillere og sidste spilopdatering.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -416,7 +424,8 @@
 		"message": "Når \"$options_steamdb_lowest_price$\"-indstillingen er aktiveret, vil udvidelsen lave en sikker anmodning til $domain$ med din valuta (med hvad Steam mener det er) for at få den registrerede pris for et bestemt spil.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -424,35 +433,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Vis den laveste registrerede pris på app-sider"
-	},
-	"options_online_stats": {
-		"message": "Vis nuværende samtidige spillere og det top antal spillere på spilsider"
-	},
-	"options_steamdb_last_update": {
-		"message": "Vis seneste spilopdatering på spilsiden"
-	},
-	"options_button_app": {
-		"message": "Vis en knap på app-sider"
-	},
-	"options_button_pcgw": {
-		"message": "Vis PCGamingWiki knap på app-sider"
-	},
 	"options_button_sub": {
 		"message": "Vis en knap på pakkesider"
-	},
-	"options_button_gamehub": {
-		"message": "Vis en knap på spilhubs"
 	},
 	"options_button_gamecards": {
 		"message": "Vis SteamDB og gemme sideknapper på spilkortsiden"
 	},
 	"options_link_subid": {
 		"message": "Vis subID under hver købsmulighed"
-	},
-	"options_link_subid_widget": {
-		"message": "Vis SubID i app-widgets"
 	},
 	"options_link_accountpage": {
 		"message": "Link hver pakke på din licensside"
@@ -522,23 +510,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skjul \"Åbn i Steam\" banneret"
 	},
-	"options_steamdb_rating": {
-		"message": "Vis SteamDB's rating på appsider"
-	},
-	"options_enhancement_appicon": {
-		"message": "Vis appikoner på butiks- og fællesskabssider"
-	},
 	"options_hidden_achievements": {
 		"message": "Indlæs skjulte præstationer og deres beskrivelser"
 	},
 	"options_spoiler_achievements": {
 		"message": "Skjul beskrivelser bag et spoiler-element"
-	},
-	"options_prevent_store_images": {
-		"message": "Stop billeder fra at blive indlæst på sider i appbutikken"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Nogle udviklere sætter megabyte af billeder i spilbeskrivelser, som kan tage et stykke tid at indlæse, klik på et billede for at indlæse"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Støt $award$ parametre på profil og delte fil-links",
@@ -550,9 +526,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Vis det samlede antal resterende kort træk på badges side"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Tilføj en knap for at snyde opdagelsen køen under salget"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Forbedre siden for globale præstationer"

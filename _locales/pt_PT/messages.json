@@ -12,7 +12,8 @@
 		"message": "Verifica em $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Proezas pessoais"
 	},
 	"store_page": {
-		"message": "Página da Loja"
+		"message": "Página da Loja",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Procurar"
 	},
 	"id_app": {
 		"message": "Aplicação $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Conjunto $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -318,7 +323,7 @@
 		"message": "Página de definições no SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Menu pendente da conta nas páginas do Steam"
+		"message": "Menu suspenso de conta nas páginas da Steam"
 	},
 	"options_welcome_option3": {
 		"message": "Página de extensões do teu navegador"
@@ -378,7 +383,8 @@
 		"message": "Destacar produtos adquiridos e desejados no $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Dados adicionais obtidos a partir de $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Quando as opções “$options_online_stats$” ou “$options_steamdb_last_update$” estão ativas, a extensão fará um pedido seguro ao $domain$ para obter o número atual de jogadores e a última atualização do jogo.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Quando a opção “$options_steamdb_lowest_price$” estiver ativa, a extensão fará um pedido seguro a $domain$ com a tua moeda (com o que o Steam pensa ser) para obter o preço registado para um jogo específico.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Mostrar o menor preço registado nas páginas das aplicações"
+		"message": "Exibir o menor preço registrado nas páginas dos produtos"
 	},
 	"options_online_stats": {
-		"message": "Mostra os jogadores em simultâneo atuais e os picos máximos nas páginas das aplicações"
+		"message": "Exibir jogadores simultâneos atuais e picos máximos nas páginas do produto"
 	},
 	"options_steamdb_last_update": {
-		"message": "Mostra a última atualização nas páginas das aplicações"
+		"message": "Mostrar a última atualização nas páginas dos produtos"
 	},
 	"options_button_app": {
-		"message": "Mostrar um botão nas páginas das aplicações"
+		"message": "Exibir um botão nas páginas do produto"
 	},
 	"options_button_pcgw": {
-		"message": "Mostrar botão PCGamingWiki nas páginas das aplicações"
+		"message": "Exibir botão PCGamingWiki nas páginas dos produtos"
 	},
 	"options_button_sub": {
 		"message": "Mostrar um botão nas páginas de pacotes"
 	},
 	"options_button_gamehub": {
-		"message": "Exibir um botão nas centrais comunitárias dos jogos"
+		"message": "Mostrar um botão nas centrais comunitárias dos jogos"
 	},
 	"options_button_gamecards": {
 		"message": "Mostrar botões do SteamDB e da loja na página de cartas do jogo"
@@ -455,7 +464,8 @@
 		"message": "Mostrar SubID sob cada opção de compra"
 	},
 	"options_link_subid_widget": {
-		"message": "Mostrar SubID nos widgets das aplicações"
+		"message": "Exibir SubID em widgets incorporados",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Vincular cada pacote na tua página de licenças"
@@ -526,10 +536,11 @@
 		"message": "Ocultar banner \"Abrir no Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Mostrar a avaliação do SteamDB nas páginas das aplicações"
+		"message": "Exibir avaliação do SteamDB nas páginas dos produtos"
 	},
 	"options_enhancement_appicon": {
-		"message": "Mostrar ícones de aplicações nas páginas da loja e da comunidade"
+		"message": "Exibir ícone do produto nas páginas da loja e da comunidade",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Carregar proezas ocultas e as suas descrições"
@@ -538,10 +549,10 @@
 		"message": "Ocultar descrições atrás de um elemento spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Impedir o carregamento de imagens nas páginas da loja de aplicações"
+		"message": "Desativar o carregamento de imagens nas páginas do produto"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Alguns programadores colocam megabytes de imagens nas descrições dos jogos que podem demorar algum tempo a carregar, clica na imagem para carregar"
+		"message": "Alguns desenvolvedores colocam imagens com megabytes de tamanho nas descrições dos produtos, o que pode levar um tempo para carregar. Clique em uma imagem para carregá-la"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Suportar parâmetros $award$ no perfil e hiperligações de ficheiros partilhados",
@@ -555,7 +566,7 @@
 		"message": "Mostrar a quantidade total de cartas restantes na página de medalhas"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Adicionar um botão para fazer batota na fila de descoberta durante as promoções"
+		"message": "Adiciona um botão para descobrir automaticamente a fila durante as promoções"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de proezas globais"

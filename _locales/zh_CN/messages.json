@@ -12,7 +12,8 @@
 		"message": "在 $domain$ 上查看详情",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "个人成就"
 	},
 	"store_page": {
-		"message": "商店页面"
+		"message": "商店页面",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "搜索"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -324,7 +329,7 @@
 		"message": "您的浏览器插件页面"
 	},
 	"options_review": {
-		"message": "为这个扩展留下评论"
+		"message": "评价此扩展"
 	},
 	"options_permissions_description": {
 		"message": "此扩展需要额外的权限才能在 SteamDB、Steam 商店和 Steam 社区正常工作。"
@@ -372,13 +377,14 @@
 		"message": "这些数据完全存储在您的浏览器中，不会被发送到 SteamDB。"
 	},
 	"options_website_explanation4": {
-		"message": "为了防止向 Steam 发送过多的请求，您的用户数据被缓存在您的浏览器的本地存储中。"
+		"message": "为了防止向 Steam 发送过多的请求，您的用户数据被存储在您浏览器的本地缓存中。"
 	},
 	"options_website_highlight": {
-		"message": "在 $domain$ 上高亮您已拥有和在愿望单中的产品",
+		"message": "在 $domain$ 上高亮显示您已拥有和在愿望单中的产品",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -389,21 +395,23 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">启用批量激活免费游戏包脚本</a>"
 	},
 	"options_website_highlight3": {
-		"message": "在 <a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页</a> 和 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
+		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页面</a>和<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
 	},
 	"options_extra_data": {
 		"message": "从 $domain$ 获取的额外数据",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
 	"options_extra_data_players": {
-		"message": "当 ”$options_online_stats$“ 或 ”$options_steamdb_last_update$“ 选项被启用时，此拓展程序将向 $domain$ 发送一个安全的请求，以获取当前的在线玩家数目以及游戏上次更新的时间",
+		"message": "启用“$options_online_stats$”或“$options_steamdb_last_update$”时，扩展程序将通过安全请求从 $domain$ 获取当前玩家在线数量和游戏的最终更新日期。",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -416,10 +424,11 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "当启用 “$options_steamdb_lowest_price$” 选项时，此扩展程序将向 $domain$ 发送一个包含您当前使用的货币 (即现在 Steam 上使用的货币) 信息的安全的请求，以获取特定游戏的历史最低价格。",
+		"message": "启用“$options_steamdb_lowest_price$”选项时，扩展程序将通过安全请求将您的货币（即现在 Steam 上使用的货币）发送给 $domain$ 来获取特定游戏的历史最低价格。",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "在 app 商店页面上显示历史最低价格"
+		"message": "在产品页面显示历史最低价格"
 	},
 	"options_online_stats": {
-		"message": "在页面上显示当前同时在线玩家数量和历史最高在线玩家数量"
+		"message": "在产品页面显示实时在线人数和历史在线人数峰值"
 	},
 	"options_steamdb_last_update": {
-		"message": "在 app 商店页面上显示最后更新时间"
+		"message": "在产品页面显示最后更新时间"
 	},
 	"options_button_app": {
-		"message": "在 app 商店页面上显示按钮"
+		"message": "在产品页面显示 SteamDB 按钮"
 	},
 	"options_button_pcgw": {
-		"message": "在 app 商店页面中显示 PCGamingWiki 按钮"
+		"message": "在产品页面显示 PCGamingWiki 按钮"
 	},
 	"options_button_sub": {
-		"message": "在游戏包页面上显示按钮"
+		"message": "在包页面上显示 SteamDB 按钮"
 	},
 	"options_button_gamehub": {
-		"message": "在游戏中心上显示按钮"
+		"message": "在社区中心显示 SteamDB 按钮"
 	},
 	"options_button_gamecards": {
 		"message": "在卡牌页面上显示 SteamDB 和商店页面按钮"
@@ -455,10 +464,11 @@
 		"message": "在每个购买选项下显示 SubID"
 	},
 	"options_link_subid_widget": {
-		"message": "在小部件中显示 SubID"
+		"message": "在 Widget 中显示 SubID",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "在您的许可页面上链接每个游戏包"
+		"message": "在您的许可页面上显示每条许可的 SteamDB 链接"
 	},
 	"options_profile_calculator": {
 		"message": "在个人资料页面上添加账号价值计算链接"
@@ -467,7 +477,7 @@
 		"message": "将库存页面上的游戏筛选栏移到侧边"
 	},
 	"options_link_inventory": {
-		"message": "将您的库存中的每个礼物和优惠券关联到 SteamDB"
+		"message": "显示您库存中礼物和优惠券的 SteamDB 链接"
 	},
 	"options_link_inventory_gift_subid": {
 		"message": "在库存中显示礼物的 SubID"
@@ -499,13 +509,13 @@
 		"message": "请参见 GitHub 上的说明"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "禁止“此交易看起来可疑”和“您确定这是一份礼物吗?”的交易报价警告"
+		"message": "禁用“此交易看起来可疑”和“您确定这是一份礼物吗?”的交易报价警告"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "显示更清晰的错误信息，而不是 Valve 令人费解的错误编号"
+		"message": "显示更详细的错误信息，而不是 Valve 的模糊错误代码"
 	},
 	"options_enhancement_skip_agecheck": {
-		"message": "跳过年龄确认页面"
+		"message": "跳过年龄检查页面"
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "添加年龄和生日的 cookie 以便随时跳过年龄确认"
@@ -526,10 +536,11 @@
 		"message": "隐藏“在 Steam 中打开”横幅"
 	},
 	"options_steamdb_rating": {
-		"message": "在应用页面显示 SteamDB 评分"
+		"message": "在产品页面显示 SteamDB 好评率"
 	},
 	"options_enhancement_appicon": {
-		"message": "在商店和社区页面上显示 app 图标"
+		"message": "在商店与社区页面显示产品图标",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "加载隐藏成就及其说明"
@@ -538,10 +549,10 @@
 		"message": "通过防剧透文本元素隐藏描述"
 	},
 	"options_prevent_store_images": {
-		"message": "在应用商店页面中阻止图像加载"
+		"message": "在产品页面阻止图像加载"
 	},
 	"options_prevent_store_images_description": {
-		"message": "一些开发者可能会在游戏介绍中添加几兆字节的大图片，使页面加载变慢。点击这些图片即可加载。"
+		"message": "一些开发者可能会在产品介绍中加入大尺寸的图像，从而使得页面加载变慢，点击这些图片来使其加载"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "支持个人资料和共享文件链接上的 $award$ 参数",
@@ -555,15 +566,15 @@
 		"message": "在徽章页面显示剩余可掉落卡片总数量"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "添加特卖期间快速完成探索队列来获得奖励的按钮"
+		"message": "在特卖期间添加一个按钮以自动完成探索队列"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改善全球成就统计页面"
 	},
 	"options_builtin_achievements_link": {
-		"message": "链接到您自己的成就页面"
+		"message": "添加您的个人成就统计页面的链接"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "锁定的成就有一个锁定图标以提高可见性"
+		"message": "给未解锁的成就添加一个锁定图标以提高辨识度"
 	}
 }

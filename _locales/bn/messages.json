@@ -18,13 +18,15 @@
 		"message": "PCGamingWiki তে দেখুন"
 	},
 	"store_page": {
-		"message": "স্টোর পেজ"
+		"message": "স্টোর পেজ",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "খুঁজুন"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -34,6 +36,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -43,6 +46,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",

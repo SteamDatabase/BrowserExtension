@@ -12,7 +12,8 @@
 		"message": "Comprova a $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Assoliments personals"
 	},
 	"store_page": {
-		"message": "Pàgina de la botiga"
+		"message": "Pàgina de la botiga",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Cerca"
 	},
 	"id_app": {
 		"message": "Aplicació $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Paquet $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Ressalta productes en possessió i desitjats a $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Dades addicionals obtingudes de $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Quan l'opció de \"$options_online_stats$\" o \"$options_steamdb_last_update$\" és activa, l'extensió farà una sol·licitud segura a $domain$ per obtenir la quantitat de jugadors actual i l'última actualització del joc.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Quan l'opció de \"$options_steamdb_lowest_price$\" és activa, l'extensió farà una sol·licitud segura a $domain$ amb la teva moneda (amb la que Steam pensa que és) per obtenir el preu enregistrat per a un joc en específic.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Mostra el preu més baix enregistrat a les pàgines de l'aplicació"
+		"message": "Mostra el preu més baix enregistrat a les pàgines del producte"
 	},
 	"options_online_stats": {
-		"message": "Mostra jugadors simultanis i pics màxims a les pàgines de l'aplicació"
+		"message": "Mostra jugadors simultanis i pics màxims a les pàgines del producte"
 	},
 	"options_steamdb_last_update": {
-		"message": "Mostra l'última actualització a les pàgines de l'aplicació"
+		"message": "Mostra l'última actualització a les pàgines del producte"
 	},
 	"options_button_app": {
-		"message": "Mostra un botó a les pàgines de l'aplicació"
+		"message": "Mostra un botó a les pàgines del producte"
 	},
 	"options_button_pcgw": {
-		"message": "Mostra el botó de PCGamingWiki a les pàgines de les aplicacions"
+		"message": "Mostra el botó de PCGamingWiki a les pàgines del producte"
 	},
 	"options_button_sub": {
 		"message": "Mostra un botó a les pàgines del paquet"
 	},
 	"options_button_gamehub": {
-		"message": "Mostra un botó als hubs del jocs"
+		"message": "Mostra un botó als hubs de la comunitat"
 	},
 	"options_button_gamecards": {
 		"message": "Mostra els botons de SteamDB i la botiga a la pàgina de cartes del joc"
@@ -455,7 +464,8 @@
 		"message": "Mostra el SubID sota cada opció de compra"
 	},
 	"options_link_subid_widget": {
-		"message": "Mostra el SubID als estris de l'aplicació"
+		"message": "Mostra el SubID als estris inserits",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Enllaça cada paquet a la teva pàgina de llicències"
@@ -526,10 +536,11 @@
 		"message": "Amaga el banner d'\"Obrir a Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Mostra la puntuació de SteamDB a les pàgines de les apps"
+		"message": "Mostra la puntuació de SteamDB a les pàgines del producte"
 	},
 	"options_enhancement_appicon": {
-		"message": "Mostra les icones de l'aplicació a les pàgines de botiga i comunitat"
+		"message": "Mostra la icona del producte a les pàgines de botiga i comunitat",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Carrega els assoliments amagats i les seves descripcions"
@@ -538,10 +549,10 @@
 		"message": "Amaga les descripcions al darrere d'un element d'espòiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Evita que les imatges es carreguin a les pàgines de la botiga de les aplicacions"
+		"message": "Evita que les imatges es carreguin a les pàgines del producte"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Alguns desenvolupadors posen megabytes d'imatges a les descripcions de jocs que poden trigar una estona a carregar-se, feu clic a una imatge per carregar-la"
+		"message": "Alguns desenvolupadors posen megabytes d'imatges a les descripcions del producte que poden trigar una estona a carregar-se, feu clic a una imatge per carregar-la"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Admet paràmetres de $award$ al perfil i als enllaços de fitxers compartits",
@@ -555,7 +566,7 @@
 		"message": "Mostra la quantitat total de drops de targetes restants a la pàgina d'insígnies"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Afegiu un botó per enganyar la cua de descobriment durant les rebaixes"
+		"message": "Afegeix un botó per fer automàticament la cua de descobriment durant les rebaixes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Millora la pàgina d'assoliments globals"

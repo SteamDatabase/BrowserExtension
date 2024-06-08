@@ -3,13 +3,22 @@
 		"message": "Menambah pautan SteamDB dan ciri-ciri baharu pada kedai dan komuniti Steam. Lihat harga terendah permainan dan statistik."
 	},
 	"steamdb_options": {
-		"message": "Pilihan SteamDB"
+		"message": "Option SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "Kalkulator SteamDB"
 	},
+	"steamstatus": {
+		"message": "Periksa di $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
-		"message": "Steam nampaknya sedang mengalami sedikit masa tidak berfungsi. "
+		"message": "Steam sedang mengalami masalah ketidakfungsian. "
 	},
 	"view_on_steamdb": {
 		"message": "Lihat di SteamDB"
@@ -17,14 +26,19 @@
 	"view_on_pcgamingwiki": {
 		"message": "Lihat di PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Pencapaian peribadi"
+	},
 	"store_page": {
-		"message": "Halaman Kedai"
+		"message": "Halaman Store",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Cari"
 	},
 	"id_app": {
-		"message": "Aplikasi $id$",
+		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -34,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -42,7 +57,8 @@
 		}
 	},
 	"id_bundle": {
-		"message": "Pakej $id$",
+		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -206,8 +222,18 @@
 	"explore_finished": {
 		"message": "Queue Telah di Teroka."
 	},
+	"badges_idle_apps": {
+		"message": "Apps untuk dihentikan: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Apps to idle dalam page ini: $amount$",
+		"message": "Apps untuk dihentikan dalam page ini: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -349,5 +375,52 @@
 	},
 	"options_website_explanation3": {
 		"message": "Ini terkandung sepenuhnya dalam Browser anda dan Tidak akan dihantar walaupun pada SteamDB backend."
+	},
+	"options_website_explanation4": {
+		"message": "Untuk mengelakkan permintaan tinggi kepada Steam Store, data pengguna anda di cache dalam simpanan Browser Pc anda."
+	},
+	"options_website_highlight": {
+		"message": "Highlight Dimiki and Senarai Diingini di $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Senarai Diingini, Mengikuti, dan Produk Diabaikan di Steam store secara terus dari SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Enable Skrip Pakej Percuma</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Enable penapisan tambahan pada <a href=\"https://steamdb.info/sales/\" target=\"_blank\">sales page</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundles page</a>"
+	},
+	"options_extra_data": {
+		"message": "Ambil Data Tambahan dari $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Bila \"$options_online_stats$\" or \"$options_steamdb_last_update$\" option adalah enabled, Extension akan melakukan permintaan keselamatan pada $domain$ untuk mendapatkan jumlah pemain semasa dan kemas kini game terbaharu.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
 	}
 }

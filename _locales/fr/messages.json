@@ -12,7 +12,8 @@
 		"message": "Jette un œil à $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Succès personnels"
 	},
 	"store_page": {
-		"message": "Page du magasin"
+		"message": "Page du magasin",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Recherche"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Package $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -89,7 +94,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Statistique en-ligne"
+		"message": "Statistiques en ligne"
 	},
 	"app_stats_online_now": {
 		"message": "En ligne :"
@@ -378,7 +383,8 @@
 		"message": "Mettre en avant les produits possédés et désirés sur $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Données supplémentaires récupérées depuis $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Lorsque les options \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" sont activées, l'extension fera une requête sécurisée à $domain$ pour obtenir le nombre actuel de joueurs et la dernière mise à jour du jeu.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Lorsque l'option \"$options_steamdb_lowest_price$\" est activée, l'extension fera une requête sécurisée vers $domain$ avec votre devise (celle que Steam suppose être la vôtre) pour obtenir le prix enregistré pour un jeu spécifique.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Afficher le prix enregistré le plus bas sur les pages du magasin"
+		"message": "Afficher le prix le plus bas historique de cette application"
 	},
 	"options_online_stats": {
-		"message": "Afficher les joueurs simultanés actuels et les pics max sur les pages du magasin"
+		"message": "Afficher le nombre actuel et maximum sur les pages du produit"
 	},
 	"options_steamdb_last_update": {
-		"message": "Afficher la date de dernière mise à jour sur les pages du magasin"
+		"message": "Afficher la dernière mise à jour sur les pages du produit"
 	},
 	"options_button_app": {
-		"message": "Afficher un bouton sur les pages de l'application"
+		"message": "Afficher le bouton sur les pages des produits"
 	},
 	"options_button_pcgw": {
-		"message": "Afficher le bouton PCGamingWiki sur les pages du magasin"
+		"message": "Afficher le bouton PCGamingWiki sur les pages des produits"
 	},
 	"options_button_sub": {
 		"message": "Afficher un bouton sur les pages des packages"
 	},
 	"options_button_gamehub": {
-		"message": "Afficher un bouton sur les hubs de jeu"
+		"message": "Afficher un bouton sur le hub de la communauté"
 	},
 	"options_button_gamecards": {
 		"message": "Afficher les boutons de SteamDB et de la page du magasin sur la page des cartes de jeu"
@@ -455,7 +464,8 @@
 		"message": "Afficher le SubID sous chaque option d'achat"
 	},
 	"options_link_subid_widget": {
-		"message": "Afficher le SubID dans les widgets de l'application"
+		"message": "Afficher le SubID dans les widgets",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Lier chaque paquet sur votre page de licences"
@@ -526,10 +536,7 @@
 		"message": "Cacher la bannière \"Ouvrir dans la Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Afficher l'évaluation SteamDB sur les pages du magasin"
-	},
-	"options_enhancement_appicon": {
-		"message": "Afficher les icônes des jeux / applications sur la boutique et les pages communautaires"
+		"message": "Afficher la note SteamDB sur les pages du produit"
 	},
 	"options_hidden_achievements": {
 		"message": "Charger les réalisations cachées et leurs descriptions"
@@ -538,10 +545,7 @@
 		"message": "Masquer les descriptions derrière un élément spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Empêcher le chargement des images sur les pages du magasin"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Certains devs ont mis de lourdes images dans la description de leur(s) jeu(x), ces dernières peuvent prendre un moment à charger, cliquez sur une image pour la charger"
+		"message": "Empêcher le chargement des images sur les pages du produit"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Prise en charge des paramètres $award$ sur le profil et les liens de fichiers partagés",
@@ -553,9 +557,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Afficher le nombre total de cartes restantes sur la page des badges"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Ajouter un bouton pour tricher la file de découverte pendant les ventes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Améliorer la page des succès mondiaux"

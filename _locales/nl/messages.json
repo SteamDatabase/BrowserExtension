@@ -12,7 +12,8 @@
 		"message": "Controleer op $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Persoonlijke prestaties"
 	},
 	"store_page": {
-		"message": "Winkelpagina"
+		"message": "Winkelpagina",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Zoeken"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub- $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundel $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Mankeer eigen en wenslijst producten op $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -392,7 +398,8 @@
 		"message": "Extra gegevens opgehaald van $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -400,7 +407,8 @@
 		"message": "Wanneer de \"$options_online_stats$\" of \"$options_steamdb_last_update$\" optie zijn ingeschakeld zal de extensie een veilig verzoek doen aan $domain$ om het huidige aantal spelers en de laatste update voor het spel te krijgen.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -412,8 +420,17 @@
 			}
 		}
 	},
-	"options_button_pcgw": {
-		"message": "PCGamingWiki-knop weergeven op app-pagina's"
+	"options_steamdb_lowest_price": {
+		"message": "Toon de laagst geregistreerde prijs op productpagina's"
+	},
+	"options_steamdb_last_update": {
+		"message": "Laatste update weergeven op productpagina's"
+	},
+	"options_button_sub": {
+		"message": "Een knop weergeven op pakketpagina's"
+	},
+	"options_profile_calculator": {
+		"message": "Voeg een rekenmachine link toe aan community profielen"
 	},
 	"options_github_explanation": {
 		"message": "Uitleg bekijken op GitHub"

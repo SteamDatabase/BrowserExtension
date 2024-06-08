@@ -12,7 +12,8 @@
 		"message": "Провери на $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Лични постижения"
 	},
 	"store_page": {
-		"message": "Страница в магазина"
+		"message": "Страница в магазина",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Търсене"
 	},
 	"id_app": {
 		"message": "Приложение $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Пакети $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Комплекти $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Отбележете притежавани или желани продукти на $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Допълнителна информация взета от $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Когато \"$options_online_stats$\" и \"$options_steamdb_last_update$\" опции са избрани, приставката ще направи сигурно запитване към $domain$ за да получи текущия брой играчи и последни ъпдейти.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Когато \"$options_steamdb_lowest_price$\" опция е избрана, добавката ще направи сигурно запитване към $domain$ с вашата валута (с тази която Steam мисли, че ползвате) за да вземе записаната цена за специфична игра.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Покажи най-ниската записана цена на страницата на приложенията"
-	},
-	"options_online_stats": {
-		"message": "Покажи текущи и максимални играчи на страницата на играта"
-	},
-	"options_steamdb_last_update": {
-		"message": "Показване на последеното обновяване в страницата на играта"
-	},
-	"options_button_app": {
-		"message": "Показване на бутон на страниците на игрите"
-	},
-	"options_button_pcgw": {
-		"message": "Показване на бутона за PCGamingWiki на страниците на приложенията"
-	},
 	"options_button_sub": {
 		"message": "Показване на бутон в страници с пакети"
-	},
-	"options_button_gamehub": {
-		"message": "Показване на бутон в игровите общества"
 	},
 	"options_button_gamecards": {
 		"message": "Показване на SteamDB и страницата в магазина на страницата с игровите карти"
 	},
 	"options_link_subid": {
 		"message": "Показване на SubID под всяка опция за покупка"
-	},
-	"options_link_subid_widget": {
-		"message": "Показване на SubID в уиджетите на приложението"
 	},
 	"options_link_accountpage": {
 		"message": "Свържи всеки пакет в твоята страница с лицензи"
@@ -525,29 +513,14 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Скрий \"Отвори в Steam\" банера"
 	},
-	"options_steamdb_rating": {
-		"message": "Показване на SteamDB рейтинг в страниците на приложенията"
-	},
-	"options_enhancement_appicon": {
-		"message": "Показване на икони на приложенията на страниците на магазина и общността"
-	},
 	"options_hidden_achievements": {
 		"message": "Покажи скритите постижения и техните описания"
 	},
 	"options_spoiler_achievements": {
 		"message": "Сриване на описанието за да не се развали изненадата"
 	},
-	"options_prevent_store_images": {
-		"message": "Спира зареждането на изображения на страниците на игрите"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Някои разработчици слагат в описанията на игрите по-тежки изображения, които може да се зареждат по-бавно. Щракнете върху дадено изображение, за да се зареди"
-	},
 	"options_builtin_card_drops": {
 		"message": "Показване на общата сума на оставащите падащи карти на страницата със значки"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Добави бутон за да прескочиш discovery queue по време на разпродажби"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Подобрете страницата с глобални постижения"

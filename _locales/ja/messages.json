@@ -12,7 +12,8 @@
 		"message": "$domain$ を確認",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "自分の実績"
 	},
 	"store_page": {
-		"message": "ストアページ"
+		"message": "ストアページ",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "検索"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "所有している商品とウィッシュリストを $domain$ で強調表示する",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,25 @@
 		"message": "$domain$ の追加データ設定",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "「$options_online_stats$」または「$options_steamdb_last_update$」がONの時、拡張機能はセキュア リクエストで $domain$ から同時接続プレイヤー数とゲームの最終更新日を取得します。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
 			}
 		}
 	},
@@ -403,7 +427,8 @@
 		"message": "「$options_steamdb_lowest_price$」のオプションが有効の時、あなたの Steam アカウントでお使いの通貨から、ゲームの最低価格を$domain$より安全に取得して表示します。",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -412,34 +437,16 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "アプリページに最低価格を表示"
-	},
-	"options_online_stats": {
-		"message": "現在の同時プレイヤー数と最大ピーク数をアプリページに表示"
-	},
-	"options_steamdb_last_update": {
-		"message": "アプリページに最終更新日を表示"
-	},
-	"options_button_app": {
-		"message": "アプリページにボタンを表示"
-	},
-	"options_button_pcgw": {
-		"message": "アプリページに PCGamingWiki ボタンを表示"
+		"message": "製品ページに最低価格を表示"
 	},
 	"options_button_sub": {
 		"message": "パッケージページにボタンを表示"
-	},
-	"options_button_gamehub": {
-		"message": "ゲームハブにボタンを表示"
 	},
 	"options_button_gamecards": {
 		"message": "ゲームカードのページに SteamDB とストアページボタンを表示"
 	},
 	"options_link_subid": {
 		"message": "各購入オプションにSubIDを表示"
-	},
-	"options_link_subid_widget": {
-		"message": "アプリウィジェットにSubIDを表示"
 	},
 	"options_link_accountpage": {
 		"message": "あなたのライセンスページで各パッケージをリンク"
@@ -509,23 +516,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "「Steam で開く」バナーを隠す"
 	},
-	"options_steamdb_rating": {
-		"message": "SteamDB での評価をアプリページに表示"
-	},
-	"options_enhancement_appicon": {
-		"message": "ストアとコミュニティページでアプリアイコンを表示する"
-	},
 	"options_hidden_achievements": {
 		"message": "隠し実績とその説明を読み込む"
 	},
 	"options_spoiler_achievements": {
 		"message": "ネタバレ要素で説明を隠す"
-	},
-	"options_prevent_store_images": {
-		"message": "アプリストアページで画像の読み込みを停止する"
-	},
-	"options_prevent_store_images_description": {
-		"message": "ゲーム概要欄に読み込みに時間がかかる数メガバイトの画像を入れる開発者もいます。画像をクリックして読み込めるようになります。"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "プロファイルと共有ファイルのリンクで $award$ パラメータをサポート",
@@ -537,9 +532,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "バッジページにカードドロップの残り枚数を表示"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "セール中にディスカバリーキューをチートするボタンを追加する"
 	},
 	"options_builtin_achievements_global": {
 		"message": "グローバル実績ページの改善"

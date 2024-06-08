@@ -12,7 +12,8 @@
 		"message": "Verifica $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Realizări personale"
 	},
 	"store_page": {
-		"message": "Pagina magazinului"
+		"message": "Pagina magazinului",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Caută"
 	},
 	"id_app": {
 		"message": "Aplicație $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Pachet $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Evidențiați produsele deținute și dorite pe $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Date suplimentare preluate de la $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Când opțiunea „$options_online_stats$” sau „$options_steamdb_last_update$” este activată, extensia va face o solicitare sigură către $domain$ pentru a obține numărul actual de jucători și ultima actualizare a jocului.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Când opțiunea „$options_steamdb_lowest_price$” este activată, extensia va face o solicitare sigură către $domain$ cu banii dvs. (cu ceea ce crede Steam că este) pentru a obține prețul înregistrat pentru un anumit joc.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Afișează cel mai mic preț înregistrat pe paginile aplicațiilor"
-	},
-	"options_online_stats": {
-		"message": "Afişează jucătorii actual simultan şi maximul pe paginile aplicaţiei"
-	},
-	"options_steamdb_last_update": {
-		"message": "Afişează ultima actualizare pe paginile aplicaţiei"
-	},
-	"options_button_app": {
-		"message": "Afișează un buton pe paginile aplicației"
-	},
-	"options_button_pcgw": {
-		"message": "Afișează butonul PCGamingWiki pe paginile aplicației"
-	},
 	"options_button_sub": {
 		"message": "Afișează un buton pe paginile pachetului"
-	},
-	"options_button_gamehub": {
-		"message": "Afișează un buton pe hub-uri jocului"
 	},
 	"options_button_gamecards": {
 		"message": "Afișează butoanele SteamDB și magazin pe pagina cardurilor jocului"
 	},
 	"options_link_subid": {
 		"message": "Afișează subID-ul la fiecare opțiune de cumpărare"
-	},
-	"options_link_subid_widget": {
-		"message": "Afișează subID-ul în widget-uri ale aplicației"
 	},
 	"options_link_accountpage": {
 		"message": "Conectați fiecare pachet pe pagina de licențe"
@@ -525,23 +513,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ascunde banner-ul \"Deschide în aplicație Steam\""
 	},
-	"options_steamdb_rating": {
-		"message": "Afișează rating-ul SteamDB pe paginile aplicației"
-	},
-	"options_enhancement_appicon": {
-		"message": "Afișează pictogramele aplicațiilor în magazinul și paginile comunității"
-	},
 	"options_hidden_achievements": {
 		"message": "Încarcă achievement-uri ascunse și descrierile lor"
 	},
 	"options_spoiler_achievements": {
 		"message": "Ascundeți descrierile din spatele unui element al spoilerului"
-	},
-	"options_prevent_store_images": {
-		"message": "Opriți încărcarea imaginilor pe paginile magazinului de aplicații"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Unii dezvoltatori pun megabytes de imagini în descrierile jocului, ceea ce poate dura o vreme să se încarce, apasă pe o imagine pentru a încărca"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Susține parametrii $award$ pentru profilul și link-urile fișierului partajat",
@@ -553,9 +529,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Afișează numărul total de drop-uri de card-uri rămase pe pagina de insigne"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Adaugă un buton pentru a trișa coada de descoperire în timpul vânzărilor"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Îmbunătățește pagina de realizări globale"

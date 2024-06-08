@@ -12,7 +12,8 @@
 		"message": "Pārbaudiet $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -26,13 +27,15 @@
 		"message": "Skatīt iekš PCGamingWiki"
 	},
 	"store_page": {
-		"message": "Veikala lapa"
+		"message": "Veikala lapa",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Meklēt"
 	},
 	"id_app": {
 		"message": "Lietojumprogramma $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -42,6 +45,7 @@
 	},
 	"id_sub": {
 		"message": "Abonementa $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -51,6 +55,7 @@
 	},
 	"id_bundle": {
 		"message": "Komplekta $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -236,7 +241,8 @@
 		"message": "Papildus dati ņemti no $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -268,11 +274,5 @@
 	"options_enhancement_hide_install_button": {
 		"message": "Paslēpt \"Install Steam\" pogu galvenē",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
-	},
-	"options_prevent_store_images": {
-		"message": "Neļaut attēliem ielādēties veikala lapās"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Spēļu aprakstos dažreiz ir ievietoti vairāku megabaitu lieli attēli, kas var lēni ielādēties. Attēli tiks ielādēti tikai tad, ja uz tiem uzklikšķināsiet."
 	}
 }

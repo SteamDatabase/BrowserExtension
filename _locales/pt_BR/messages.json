@@ -12,7 +12,8 @@
 		"message": "Conferir $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Conquistas pessoais"
 	},
 	"store_page": {
-		"message": "Página na loja"
+		"message": "Página na loja",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Buscar"
 	},
 	"id_app": {
 		"message": "Aplicativo $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Pacote $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Conjunto $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -288,7 +293,7 @@
 		"message": "Anuncia o item com o maior preço de encomenda\n\nO preço exibido é o valor que você receberá (sem taxas)"
 	},
 	"widget_view_app": {
-		"message": "Ver aplicativo de ID $id$ no SteamDB",
+		"message": "Ver aplicativo $id$ no SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -297,7 +302,7 @@
 		}
 	},
 	"widget_view_sub": {
-		"message": "Ver pacote de ID $id$ no SteamDB",
+		"message": "Ver pacote $id$ no SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Destacar produtos adquiridos e desejados no site $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Dados adicionais obtidos de $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Quando as opções \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" estiverem ativadas, a extensão realizará uma requisição segura ao site $domain$ para obter informações sobre a quantidade atual de jogadores e a última atualização do jogo.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Quando a opção \"$options_steamdb_lowest_price$\" estiver ativada, a extensão realizará uma requisição segura ao site $domain$, usando a sua moeda local (de acordo com o Steam), para obter informações sobre o menor preço registrado de um jogo específico.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Exibir o menor preço registrado nas páginas dos aplicativos"
-	},
-	"options_online_stats": {
-		"message": "Exibir número atual de jogadores simultâneos e picos máximos nas páginas dos aplicativos"
-	},
-	"options_steamdb_last_update": {
-		"message": "Exibir a data da última atualização nas páginas dos aplicativos"
-	},
-	"options_button_app": {
-		"message": "Exibir um botão nas páginas dos aplicativos"
-	},
-	"options_button_pcgw": {
-		"message": "Exibir um botão para a PCGamingWiki nas páginas dos aplicativos"
-	},
 	"options_button_sub": {
 		"message": "Exibir um botão nas páginas de pacotes"
-	},
-	"options_button_gamehub": {
-		"message": "Exibir um botão nas centrais de jogos"
 	},
 	"options_button_gamecards": {
 		"message": "Exibir botões para o SteamDB e para a página na loja na página de insígnias do jogo"
 	},
 	"options_link_subid": {
 		"message": "Exibir o ID do pacote (SubID) sob cada opção de compra"
-	},
-	"options_link_subid_widget": {
-		"message": "Exibir o ID do pacote (SubID) em widgets de aplicativos"
 	},
 	"options_link_accountpage": {
 		"message": "Associar cada licença ao seu pacote correspondente na página de licenças"
@@ -525,23 +513,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar o banner \"Abrir no aplicativo\""
 	},
-	"options_steamdb_rating": {
-		"message": "Exibir a classificação do SteamDB nas páginas dos aplicativos"
-	},
-	"options_enhancement_appicon": {
-		"message": "Exibir o ícone do aplicativo nas páginas da Comunidade e na loja"
-	},
 	"options_hidden_achievements": {
 		"message": "Carregar conquistas ocultas e suas descrições"
 	},
 	"options_spoiler_achievements": {
 		"message": "Ocultar as descrições usando um elemento de spoiler"
-	},
-	"options_prevent_store_images": {
-		"message": "Impedir o carregamento de certas imagens nas páginas dos aplicativos"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Alguns desenvolvedores incluem imagens desnecessariamente grandes nas descrições dos jogos, o que pode atrasar o carregamento de páginas. Clique no ícone de foto para carregá-las."
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Suporte ao parâmetro $award$ em links de perfis e conteúdo criado pela comunidade",
@@ -553,9 +529,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Exibir o total de cartas disponíveis restantes na página de insígnias"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Adicionar um botão para explorar automaticamente a lista de descobrimento durante promoções temáticas"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de conquistas globais"

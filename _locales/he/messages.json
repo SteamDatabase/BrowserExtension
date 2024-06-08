@@ -8,6 +8,15 @@
 	"steamdb_calculator": {
 		"message": "מחשבון SteamDB"
 	},
+	"steamstatus": {
+		"message": "בדיקה ב$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "נראה כי יש בעיות שרת ב-Steam. "
 	},
@@ -17,14 +26,19 @@
 	"view_on_pcgamingwiki": {
 		"message": "הצג ב-PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "הישגים אישיים"
+	},
 	"store_page": {
-		"message": "עמוד המשחק בחנות"
+		"message": "עמוד המשחק בחנות",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "חיפוש"
 	},
 	"id_app": {
 		"message": "אפליקציה $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -34,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "תת אפליקציה $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -43,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "חבילה $id$#",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -334,23 +350,17 @@
 	"options_website_highlight1": {
 		"message": "הוסף מוצרים לרשימת המשאלות, מעקב או הסתרה בחנות סטים ישירות מ SteamDB"
 	},
-	"options_steamdb_lowest_price": {
-		"message": "הצג את המחיר הנמוך ביותר בעמודי אפליקציה"
-	},
-	"options_online_stats": {
-		"message": "מציג את כמות השחקנים המחוברים כעט ואת שיא השחקנים בעמודי משחקים"
-	},
-	"options_steamdb_last_update": {
-		"message": "הצג את עדכון המשחק האחרון עמודי משחק"
-	},
 	"options_button_app": {
-		"message": "הצג כפתור בעמודי משחק"
+		"message": "הצג כפתור בעמודי מוצרים"
 	},
 	"options_button_pcgw": {
-		"message": "הצג כפתור PCGamingWiki בעמודי משחק"
+		"message": "הצג כפתור PCGamingWiki בעמודי המוצרים"
 	},
 	"options_button_sub": {
 		"message": "הצג כפתור בעמודי חבילות"
+	},
+	"options_button_gamehub": {
+		"message": "הצג כפתור במרכז הקהילתי"
 	},
 	"options_button_gamecards": {
 		"message": "הצג את כפתורי חנות סטים ו SteamDB בעמוד הקלפים"
@@ -359,7 +369,8 @@
 		"message": "הצג את מזהה החבילה תחת כל אופצית רכישה"
 	},
 	"options_link_subid_widget": {
-		"message": "הצג את מזהה החבילה בווידג'ט של אפליקציות"
+		"message": "הצג את מזהה החבילה בווידג'ט של אפליקציות",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_profile_calculator": {
 		"message": "הוסף לינק למחשבון לעמודי פרופיל"
@@ -414,23 +425,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "הסתר את באנר \"פתח בסטים\""
 	},
-	"options_steamdb_rating": {
-		"message": "הצג את דירוג SteamDB בעמוד האפליקציה"
-	},
 	"options_spoiler_achievements": {
 		"message": "הסתר תיאורים מאחורי אלמנט ספויילר"
 	},
-	"options_prevent_store_images": {
-		"message": "עצור טעינה של תמונות בעמודי אפליקציות"
-	},
-	"options_prevent_store_images_description": {
-		"message": "חלק מהמפתחים מעלים תמונות גדולוות לתיאור המשחק, דבר אשר עלול לגרום לטעינת העמוד לקחת יותר זמן, לחץ על תמונה על מנת לטעון אותה"
-	},
 	"options_builtin_card_drops": {
 		"message": "הצג סכום קלפים שנותרו לנפילה בעמוד הסיכות"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "הוסף כפתור עקיפה לרשימת הגילוי בזמן מכירות"
 	},
 	"options_builtin_achievements_global": {
 		"message": "שיפורים לעמוד ההישגים"

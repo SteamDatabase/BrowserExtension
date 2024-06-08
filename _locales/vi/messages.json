@@ -1,9 +1,9 @@
 {
 	"extension_description": {
-		"message": "Thêm các link của SteamDB và tính năng mới vào trang cửa hàng và cộng đồng của Steam. Xem giá thấp nhất và số liệu."
+		"message": "Thêm liên kết và tính năng mới của SteamDB vào trang cửa hàng và cộng đồng của Steam. Xem giá thấp nhất và số liệu mỗi trò chơi."
 	},
 	"steamdb_options": {
-		"message": "Tuỳ chọn SteamDB"
+		"message": "Cài đặt SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "Máy tính SteamDB"
@@ -12,7 +12,8 @@
 		"message": "Kiểm tra trên $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -26,16 +27,18 @@
 		"message": "Xem trên PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Thành tựu của cá nhân"
+		"message": "Thành tựu cá nhân"
 	},
 	"store_page": {
-		"message": "Trang cửa hàng"
+		"message": "Trang cửa hàng",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Tìm kiếm"
 	},
 	"id_app": {
 		"message": "Ứng dụng $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -44,7 +47,8 @@
 		}
 	},
 	"id_sub": {
-		"message": "Sub $id$",
+		"message": "Gói $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Gói $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -62,10 +67,10 @@
 		}
 	},
 	"app_steamdb_rating": {
-		"message": "Xếp hạng SteamDB:"
+		"message": "Điểm số SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " Đánh giá của SteamDB",
+		"message": " ĐIỂM SỐ STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
@@ -92,13 +97,13 @@
 		"message": "Thống kê trực tuyến"
 	},
 	"app_stats_online_now": {
-		"message": "Đang online:"
+		"message": "Đang trong game:"
 	},
 	"app_stats_peak_today": {
-		"message": "Cao điểm hôm nay:"
+		"message": "Cao nhất trong 24h:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Cao điểm toàn thời gian:"
+		"message": "Cao nhất trong lịch sử:"
 	},
 	"app_stats_followers": {
 		"message": "Người theo dõi:"
@@ -116,7 +121,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB ghi nhận giá thấp nhất ở mức <b>$discount$%</b> là <b>$price$</b>",
+		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b> (<b>-$discount$%</b>)",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -155,7 +160,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Giá được xem $seen$ lần, lần cuối vào ngày $date$ ($relative$)",
+		"message": "Giá xuất hiện $seen$ lần, lần cuối vào ngày $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -181,7 +186,7 @@
 		"message": "Đang tạo hàng chờ khám phá mới, có thể không thành công nếu Steam bị quá tải…"
 	},
 	"explore_exploring": {
-		"message": "Khám phá hàng đợi… Yêu cầu $current$ trên $total$",
+		"message": "Đang khám phá hàng đợi… Số lượng $current$ trên $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -194,7 +199,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Không thể xóa mục #$current$ khỏi hàng đợi, thử lại sau 5 giây nữa…",
+		"message": "Không thể bỏ món #$current$ khỏi hàng đợi, thử lại sau 5 giây nữa…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -203,7 +208,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Không thể xoá mục #$current$ khỏi hàng đợi quá nhiều lần. Bạn có thể thử lại sau.",
+		"message": "Không thể bỏ món #$current$ khỏi hàng đợi quá nhiều lần. Vui lòng thử lại sau.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -215,7 +220,7 @@
 		"message": "Không tạo được hàng đợi mới, hãy thử lại sau 5 giây…"
 	},
 	"explore_finished": {
-		"message": "Hàng đợi đã được xem hết."
+		"message": "Đã xem hết hàng đợi."
 	},
 	"badges_idle_apps": {
 		"message": "Số ứng dụng cần treo: $amount$",
@@ -264,7 +269,7 @@
 		"message": "Đây là thành tựu ẩn, đưa chuột vào để xem: "
 	},
 	"inventory_list_at": {
-		"message": "Liệt kê với mức giá: $price$",
+		"message": "Đăng bán với giá: $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -273,7 +278,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Bán với mức giá: $price$",
+		"message": "Bán ngay với giá: $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -282,10 +287,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Liệt kê mặt hàng có giá bán niêm yết thấp nhất\n\nGiá hiển thị là số tiền bạn nhận được (không tính phí)"
+		"message": "Đăng bán với giá đang được đăng thấp nhất\n\nGiá hiển thị là số tiền bạn nhận được (chưa kèm phí)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Liệt kê mặt hàng có giá đặt mua niêm yết cao nhất\n\nGiá hiển thị là số tiền bạn nhận được (không tính phí)"
+		"message": "Đăng bán với giá đang được đặt mua cao nhất\n\nGiá hiển thị là số tiền bạn nhận được (chưa kèm phí)"
 	},
 	"widget_view_app": {
 		"message": "Xem ứng dụng $id$ trên SteamDB",
@@ -297,7 +302,7 @@
 		}
 	},
 	"widget_view_sub": {
-		"message": "Xem sub $id$ trên SteamDB",
+		"message": "Xem gói $id$ trên SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -312,13 +317,13 @@
 		"message": "👋 Cảm ơn vì đã cài tiện ích SteamDB!"
 	},
 	"options_welcome_description": {
-		"message": "Xem lại cài đặt phía dưới và chọn những cái bạn muốn. Để quay lại trong tương lai:"
+		"message": "Xem lại và tùy chỉnh cài đặt theo ý bạn. Để mở lại trang này:"
 	},
 	"options_welcome_option1": {
 		"message": "Trang cài đặt trong SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Trình đơn xổ xuống tài khoản trên các trang Steam"
+		"message": "Menu tài khoản xổ xuống trên Steam"
 	},
 	"options_welcome_option3": {
 		"message": "Trang tiện ích bổ sung của trình duyệt"
@@ -339,10 +344,10 @@
 		"message": "Đây là dự án <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">mã nguồn mở</a>, xin cảm ơn những người đã đóng góp!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Những ô bị vô hiệu hóa là những tính năng đã được tích hợp sẵn."
+		"message": "* Những ô bị khóa nghĩa là các tính năng được tích hợp sẵn."
 	},
 	"options_header_website": {
-		"message": "Trang web StreamDB"
+		"message": "Trang web SteamDB"
 	},
 	"options_header_extra_data": {
 		"message": "Dữ liệu bổ sung"
@@ -363,47 +368,50 @@
 		"message": "Giải thích"
 	},
 	"options_website_explanation1": {
-		"message": "Khi tùy chọn này được bật, tiện ích mở rộng sẽ yêu cầu một số dữ liệu người dùng (sản phẩm trong danh sách yêu thích, sản phẩm đã sở hữu, sản phẩm đã theo dõi, sản phẩm bị bỏ qua và sản phẩm trong giỏ hàng) từ <a href=\"https://store.steamPowered.com/dynamicstore/userdata/\" target=\"_blank\">Cửa hàng Steam</a> và sẽ sử dụng chúng để áp dụng trên trang web."
+		"message": "Khi tùy chọn này được bật, tiện ích sẽ yêu cầu một số dữ liệu người dùng (sản phẩm trong danh sách ước, sản phẩm đã sở hữu, sản phẩm đã theo dõi, sản phẩm bị phớt lờ và sản phẩm trong giỏ hàng) từ <a href=\"https://store.steamPowered.com/dynamicstore/userdata/\" target=\"_blank\">Cửa hàng Steam</a> và sẽ sử dụng chúng để bổ sung thông tin trên trang web."
 	},
 	"options_website_explanation2": {
-		"message": "Bạn phải đăng nhập vào cửa hàng để làm việc này."
+		"message": "Vui lòng đăng nhập vào cửa hàng để sử dụng các tính năng này."
 	},
 	"options_website_explanation3": {
-		"message": "Điều này được chứa hoàn toàn trong trình duyệt của bạn và sẽ không bao giờ được gửi đến SteamDB."
+		"message": "Những thông tin này được lưu trữ hoàn toàn trong trình duyệt của bạn và sẽ không bao giờ bị gửi đi đâu kể cả đến hệ thống của SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Để ngăn chặn các yêu cầu quá mức tới Steam Store, dữ liệu người dùng của bạn sẽ được lưu vào bộ nhớ cục bộ của trình duyệt."
+		"message": "Để tránh việc gửi yêu cầu dư thừa tới Cửa hàng Steam, dữ liệu người dùng của bạn sẽ được lưu vào bộ nhớ cục bộ của trình duyệt."
 	},
 	"options_website_highlight": {
 		"message": "Làm nổi bật các sản phẩm đã sở hữu và trong danh sách ước trên $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Thêm vào danh sách ước, theo dõi và bỏ qua trên cửa hàng Steam trực tiếp từ SteamDB"
+		"message": "Thêm vào danh sách ước, theo dõi và phớt lờ sản phẩm trên cửa hàng Steam trực tiếp từ giao diện SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Kích hoạt tập lệnh gói miễn phí</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Bật hiện sản phẩm miễn phí</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói.</a>"
+		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói</a>"
 	},
 	"options_extra_data": {
 		"message": "Dữ liệu bổ sung được lấy từ $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Khi tùy chọn \"$options_online_stats$\" hoặc \"$options_steamdb_last_update$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để lấy số lượng người chơi hiện có và cập nhật mới nhất của trò chơi.",
+		"message": "Khi tùy chọn \"$options_online_stats$\" hoặc \"$options_steamdb_last_update$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để lấy số lượng người đang chơi hiện tại cùng cập nhật gần nhất cho trò chơi đó.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -416,10 +424,11 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Khi tùy chọn \"$options_steamdb_lowest_price$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ với đơn vị tiền của bạn (theo những gì Steam ước tính được) để hiển thị giá được ghi nhận cho trò chơi nhất định.",
+		"message": "Khi tùy chọn \"$options_steamdb_lowest_price$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ kèm đơn vị tiền của bạn (theo thông tin được Steam giả định) để hiển thị giá được ghi nhận cho trò chơi nhất định.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,52 +437,53 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Hiển thị giá ghi thấp nhất trên các trang ứng dụng"
+		"message": "Hiển thị giá thấp nhất được ghi nhận trên trang sản phẩm"
 	},
 	"options_online_stats": {
-		"message": "Hiển thị người chơi đồng thời hiện tại và mức tối đa trên các trang ứng dụng"
+		"message": "Hiển thị số lượng người chơi hiện tại và cao nhất trên trang sản phẩm"
 	},
 	"options_steamdb_last_update": {
-		"message": "Hiển thị cập nhật cuối cùng trên các trang ứng dụng"
+		"message": "Hiển thị lần cập nhật cuối trên trang sản phẩm"
 	},
 	"options_button_app": {
-		"message": "Hiển thị một nút trên các trang ứng dụng"
+		"message": "Hiển thị nút trên trang sản phẩm"
 	},
 	"options_button_pcgw": {
-		"message": "Hiển thị nút PCGamingWiki trên các trang ứng dụng"
+		"message": "Hiển thị nút PCGamingWiki trên trang sản phẩm"
 	},
 	"options_button_sub": {
-		"message": "Hiển thị một nút trên các trang gói"
+		"message": "Hiển thị nút trên trang của gói"
 	},
 	"options_button_gamehub": {
-		"message": "Hiển thị một nút trên game hub"
+		"message": "Hiển thị nút trên trang cộng đồng"
 	},
 	"options_button_gamecards": {
-		"message": "Hiển thị các nút trang SteamDB và cửa hàng trên trang"
+		"message": "Hiển thị nút của SteamDB và cửa hàng trên trang thẻ của game"
 	},
 	"options_link_subid": {
-		"message": "Hiển thị SubID dưới mỗi tùy chọn mua hàng"
+		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
 	},
 	"options_link_subid_widget": {
-		"message": "Hiển thị SubID trong tiện ích ứng dụng"
+		"message": "Hiển thị SubID (mã gói) trên các widget",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Liên kết từng gói trên trang giấy phép của bạn"
+		"message": "Đính kèm liên kết từng món trên trang sản phẩm sở hữu của bạn"
 	},
 	"options_profile_calculator": {
-		"message": "Thêm liên kết máy tính vào hồ sơ cộng đồng"
+		"message": "Thêm liên kết tới máy tính trên hồ sơ người khác"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Di chuyển lựa chọn trò chơi trên trang kho đồ sang một bên"
+		"message": "Di chuyển mục liệt kê trò chơi trên trang kho đồ sang một bên"
 	},
 	"options_link_inventory": {
-		"message": "Liên kết từng quà tặng và phiếu giảm giá trong kho của bạn với SteamDB"
+		"message": "Đính kèm liên kết tới SteamDB khi xem quà tặng và phiếu giảm giá trong kho đồ của bạn"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Tìm ra chính xác SubID quà tặng trong kho của bạn"
+		"message": "Hiện chính xác SubID của quà tặng trong kho của bạn"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "Không làm mới kho khi bán một mặt hàng"
+		"message": "Không làm mới kho đồ khi bán một món"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "Thêm nút bán nhanh"
@@ -482,7 +492,7 @@
 		"message": "Tự động chấp nhận bán nhanh"
 	},
 	"options_display_market_price_others": {
-		"message": "Hiển thị giá thị trường của mặt hàng trong kho của người dùng khác"
+		"message": "Hiển thị giá thị trường của món hàng trong kho đồ của người khác"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Hỗ trợ thông số $for_item$ và $my_item$",
@@ -526,22 +536,23 @@
 		"message": "Ẩn banner \"Mở trong Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Hiển thị xếp hạng SteamDB trên các trang ứng dụng"
+		"message": "Hiển thị xếp hạng SteamDB trên trang sản phẩm"
 	},
 	"options_enhancement_appicon": {
-		"message": "Hiển thị biểu tượng ứng dụng trên các trang cửa hàng và cộng đồng"
+		"message": "Hiển thị biểu tượng ứng dụng trên các trang cửa hàng và cộng đồng",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Tải những thành tựu ẩn và mô tả của chúng"
 	},
 	"options_spoiler_achievements": {
-		"message": "Ẩn mô tả thành tựu bằng yếu tố spoiler"
+		"message": "Ẩn mô tả thành tựu bằng yếu tố bôi đen"
 	},
 	"options_prevent_store_images": {
-		"message": "Dừng tải hình ảnh trên các trang cửa hàng ứng dụng"
+		"message": "Dừng tải hình ảnh trên các trang sản phẩm"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả trò chơi. Việc này có thể mất một lúc để tải, hãy nhấp vào hình ảnh để tải"
+		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh để tải"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang tập tin được chia sẻ",
@@ -555,13 +566,13 @@
 		"message": "Hiển thị tổng số lượng thẻ rơi còn lại trên trang huy hiệu"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Thêm một nút để gian lận hàng khám phá trong các đợt giảm giá"
+		"message": "Thêm một nút để tự động khám phá hàng chờ trong các đợt giảm giá"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Cải thiện trang thành tích toàn cầu"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Liên kết đến trang thành tích của riêng bạn"
+		"message": "Liên kết đến trang thành tích cá nhân"
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Thành tích bị khóa có biểu tượng khóa để dễ nhìn hơn"

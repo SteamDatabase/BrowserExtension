@@ -12,7 +12,8 @@
 		"message": "Provjeri $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -25,14 +26,19 @@
 	"view_on_pcgamingwiki": {
 		"message": "Pogledaj na PCGamingWiki-u"
 	},
+	"view_your_achievements": {
+		"message": "Osobna postignuća"
+	},
 	"store_page": {
-		"message": "Prodajna Stranica"
+		"message": "Prodajna Stranica",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Pretraga"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -42,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Pod $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -51,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Paket $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -190,11 +198,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear": {
+		"message": "Nije uspjelo brisanje stavke reda #$current$, pokušavam ponovno za pet sekundi…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nije uspjelo brisanje stavke reda #$current$ previše puta. Možete pokušati ponovno kasnije.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Nije uspjelo generiranje novog reda, pokušavam ponovno za pet sekundi…"
+	},
 	"explore_finished": {
 		"message": "Lista je pretražena."
 	},
 	"badges_idle_apps": {
 		"message": "Programi s preostalim karticama: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplikacije koje miruju na ovoj stranici: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -226,8 +265,89 @@
 	"hidden_achievement": {
 		"message": "Skriveno Postignuće: "
 	},
+	"hidden_achievement_hover": {
+		"message": "Skriveno postignuće, prijeđi mišem da otkriješ: "
+	},
+	"inventory_list_at": {
+		"message": "Popis po cijeni od $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Prodaj po cijeni od $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Popisuje stavku po najnižoj navedenoj prodajnoj cijeni\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Popisuje stavku po najvišoj navedenoj cijeni kupovne narudžbe\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
+	},
+	"widget_view_app": {
+		"message": "Pogledaj aplikaciju $id$ na SteamDB-u",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Pogledaj paket $id$ na SteamDB-u",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Opcije"
+	},
 	"options_welcome_title": {
 		"message": "Hvala vam na instalaciji SteamDB proširenja!"
+	},
+	"options_welcome_description": {
+		"message": "Pregledajte opcije ispod i uključite one koje preferirate. Da biste se vratili ovdje u budućnosti:"
+	},
+	"options_welcome_option1": {
+		"message": "Stranica s postavkama na SteamDB-u"
+	},
+	"options_welcome_option2": {
+		"message": "Izbornik računa na Steam stranicama"
+	},
+	"options_welcome_option3": {
+		"message": "Stranica dodataka vašeg preglednika"
+	},
+	"options_review": {
+		"message": "Ostavite recenziju za ovo proširenje"
+	},
+	"options_permissions_description": {
+		"message": "Ovo proširenje zahtijeva dodatne dozvole za ispravan rad na SteamDB-u, Steam trgovini i Steam zajednici."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Dodijeli dozvole"
+	},
+	"options_footer1": {
+		"message": "Izrađeno s 💙 od strane <a href='https://steamdb.info' target='_blank'>SteamDB</a> tima."
+	},
+	"options_footer2": {
+		"message": "To je <a href='https://github.com/SteamDatabase/BrowserExtension' target='_blank'>open source</a>, hvala svim suradnicima!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Onemogućeni potvrdni okviri označavaju ugrađene značajke."
+	},
+	"options_header_website": {
+		"message": "SteamDB web stranica"
 	},
 	"options_header_extra_data": {
 		"message": "Dodatni podaci"
@@ -237,5 +357,98 @@
 	},
 	"options_header_inventory": {
 		"message": "Inventar"
+	},
+	"options_header_trade_offers": {
+		"message": "Ponude za razmjenu"
+	},
+	"options_header_enhancements": {
+		"message": "Poboljšanje"
+	},
+	"options_website_explanation": {
+		"message": "Objašnjenje"
+	},
+	"options_website_explanation1": {
+		"message": "Kada je ova opcija omogućena, proširenje će zatražiti neke korisničke podatke (proizvodi na listi želja, posjedovani, praćeni, ignorirani proizvodi i proizvodi u košarici) iz <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam trgovine</a> i koristiti ih za primjenu isticanja na stranici."
+	},
+	"options_website_explanation2": {
+		"message": "Morate biti prijavljeni u trgovinu da bi ovo radilo."
+	},
+	"options_website_explanation3": {
+		"message": "Ovo je u potpunosti sadržano unutar vašeg preglednika i nikada se ne šalje čak ni na SteamDB backend."
+	},
+	"options_website_explanation4": {
+		"message": "Kako bi se spriječili prekomjerni zahtjevi prema Steam trgovini, vaši korisnički podaci pohranjuju se u lokalnoj memoriji vašeg preglednika."
+	},
+	"options_website_highlight": {
+		"message": "Istaknite posjedovane i željene proizvode na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "\"Dodajte na listu želja, pratite i ignorirajte proizvode u Steam trgovini izravno sa SteamDB-a"
+	},
+	"options_website_highlight2": {
+		"message": "<a href='https://steamdb.info/freepackages/' target='_blank'>Omogućite skriptu za besplatne pakete</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Omogućite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stranici s popustima</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stranici s paketima</a>"
+	},
+	"options_extra_data": {
+		"message": "Dodatni podaci preuzeti s $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kada su omogućene opcije \"$options_online_stats$\" ili \"$options_steamdb_last_update$\", proširenje će napraviti siguran zahtjev prema $domain$ kako bi dobilo trenutni broj igrača i zadnje ažuriranje igre.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kada je omogućena opcija \"$options_steamdb_lowest_price$\", proširenje će napraviti siguran zahtjev prema $domain$ s vašom valutom (prema onome što Steam misli da je) kako bi dobilo zabilježenu cijenu za određenu igru.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Prikažite najnižu zabilježenu cijenu na stranicama proizvoda"
+	},
+	"options_online_stats": {
+		"message": "Prikažite trenutni broj istovremenih igrača i maksimalne vrhunce na stranicama proizvoda"
+	},
+	"options_steamdb_last_update": {
+		"message": "Prikažite zadnje ažuriranje na stranicama proizvoda"
+	},
+	"options_button_app": {
+		"message": "Prikažite gumb na stranicama proizvoda"
+	},
+	"options_button_pcgw": {
+		"message": "Prikažite gumb PCGamingWiki na stranicama proizvoda"
 	}
 }

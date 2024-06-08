@@ -12,7 +12,8 @@
 		"message": "Kontrollera $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Personliga prestationer"
 	},
 	"store_page": {
-		"message": "Butikssida"
+		"message": "Butikssida",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Sök"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Paket $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Markera ägda och önskade produkter på $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Ytterligare information hämtad från $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "När \"$options_online_stats$\" eller \"$options_steamdb_last_update$\" är aktiverat, kommer tillägget att göra en säker förfrågan till $domain$ för att få det aktuella antalet spelare och senaste speluppdateringen.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "När alternativet ”$options_steamdb_lowest_price$” är aktiverat så kommer tillägget att göra en säker begäran till $domain$ med din valuta (med vad Steam tror att den är) för att få det angivna priset för ett specifikt spel.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Visa det lägsta registrerade priset på produktsidor"
-	},
-	"options_online_stats": {
-		"message": "Visa nuvarande antal spelare och maximala antal spelare på appsidor"
-	},
-	"options_steamdb_last_update": {
-		"message": "Visa den senaste uppdateringen på appsidor"
-	},
-	"options_button_app": {
-		"message": "Visa en knapp på appsidor"
-	},
-	"options_button_pcgw": {
-		"message": "Visa en PCGamingWiki-knapp på appsidor"
-	},
 	"options_button_sub": {
 		"message": "Visa en knapp på paketsidor"
-	},
-	"options_button_gamehub": {
-		"message": "Visa en knapp på spelhubbar"
 	},
 	"options_button_gamecards": {
 		"message": "Visa knapp för SteamDB och butik på sidan för samlarkort"
 	},
 	"options_link_subid": {
 		"message": "Visa SubID under varje köpalternativ"
-	},
-	"options_link_subid_widget": {
-		"message": "Visa SubID i varje butikswidget"
 	},
 	"options_link_accountpage": {
 		"message": "Länka varje paket på din licenssida"
@@ -525,23 +513,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Dölj banderollen för \"Öppna i Steam\""
 	},
-	"options_steamdb_rating": {
-		"message": "Visa SteamDB-betyg på produktsidor"
-	},
-	"options_enhancement_appicon": {
-		"message": "Visa produktikoner på butiks- och gemenskapssidor"
-	},
 	"options_hidden_achievements": {
 		"message": "Ladda dolda prestationer och deras beskrivningar"
 	},
 	"options_spoiler_achievements": {
 		"message": "Dölj beskrivningar bakom en spoiler"
-	},
-	"options_prevent_store_images": {
-		"message": "Hindra bilder från att ladda på appsidor i butiken"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Vissa utvecklare lägger in megabyte med bilder i spelbeskrivningar som kan ta lång tid att ladda, klicka på en bild för att ladda"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Stöd för $award$-parametern på profillänkar, delade workshoplänkar och skärmdumplänkar",
@@ -553,9 +529,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Visa totalt antal samlarkort som fortfarande kan släppas på märkessidan"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Lägg till en knapp för att fuska i Discovery-kön under event"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Förbättra sidan för globala prestationer"

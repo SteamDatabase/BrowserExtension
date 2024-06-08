@@ -12,7 +12,8 @@
 		"message": "Katso $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Henkilökohtaiset saavutukset"
 	},
 	"store_page": {
-		"message": "Kauppasivu"
+		"message": "Kauppasivu",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Haku"
 	},
 	"id_app": {
 		"message": "Sovellustunnus $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Alatunnus $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Pakettitunnus $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Korosta omistetut ja toivotut tuotteet $domain$:ssa",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Lisätiedot haettu $domain$:sta",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Kun \"$options_online_stats$\" tai \"$options_steamdb_last_update$\" ovat käytössä, laajennus tekee salatun pyynnön $domain$:on saadakseen tämänhetkisen pelaajaluvun ja viimeisimmän pelin päivityksen.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Kun \"$options_steamdb_lowest_price$\" on käytössä, laajennus tekee salatun pyynnön $domain$:on sinun valuutallasi (tai minkä Steam luulee valuuttasi olevan) saadakseen tallennetun hinnan kyseiselle pelille.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,7 +437,7 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Näytä alhaisin tallennettu hinta kauppasivulla"
+		"message": "Näytä alhaisin tallennettu hinta kauppasivuilla"
 	},
 	"options_online_stats": {
 		"message": "Näytä tämänhetkiset ja korkeimmat pelaajaluvut kauppasivuilla"
@@ -446,7 +455,7 @@
 		"message": "Näytä painike pakettisivuilla"
 	},
 	"options_button_gamehub": {
-		"message": "Näytä painike yhteisökeskuksessa"
+		"message": "Näytä painike yhteisökeskuksissa"
 	},
 	"options_button_gamecards": {
 		"message": "Näytä SteamDB ja kauppasivu painikkeet keräilykorttisivulla"
@@ -455,7 +464,8 @@
 		"message": "Näytä SubID jokaisen ostovaihtoedon alla"
 	},
 	"options_link_subid_widget": {
-		"message": "Näytä SubID sovelluswidgeteissä"
+		"message": "Näytä SubID pienoisohjelmissa",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Linkitä paketit käyttöoikeudet -sivullasi"
@@ -529,7 +539,8 @@
 		"message": "Näytä SteamDB arvostelut kauppasivuilla"
 	},
 	"options_enhancement_appicon": {
-		"message": "Näytä tuotteen kuvake kauppa- ja yhteisösivuilla"
+		"message": "Näytä tuotteen kuvake kauppa- ja yhteisösivuilla",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Lataa piilotetut saavutukset ja niiden kuvaukset"
@@ -538,10 +549,10 @@
 		"message": "Piilota kuvaukset spoilerielementin taakse"
 	},
 	"options_prevent_store_images": {
-		"message": "Pysäytä kuvat lataamasta sovellusten kauppasivuilla"
+		"message": "Estä kuvien lataaminen kauppasivuilla"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Jotkut kehittäjät laittavat megatavujen edestä kuvia pelien kuvauksiin, jotka saattavat kestää pitkään ladata. Klikkaa kuvaa ladataksesi sen"
+		"message": "Jotkut kehittäjät laittavat megatavujen edestä kuvia pelien kuvauksiin, joissa saattaa kestää pitkään ladata. Klikkaa kuvaa ladataksesi sen"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Tue $award$ parametriä profiileissa ja jaetuissa tiedostolinkeissä",
@@ -555,7 +566,7 @@
 		"message": "Näytä jäljellä olevien korttilöytöjen määrä merkit -sivulla"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Lisää painike huijataksesi löytöjonon alennusten aikana"
+		"message": "Lisää painike löytöjonon automatisoimiseen alennusten aikana"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Paranna maailmanlaajuiset saavutukset -sivua"

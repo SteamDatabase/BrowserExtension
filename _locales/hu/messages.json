@@ -12,7 +12,8 @@
 		"message": "Részletek: $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Személyes teljesítmények"
 	},
 	"store_page": {
-		"message": "Áruházi oldal"
+		"message": "Áruházi oldal",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Keresés"
 	},
 	"id_app": {
 		"message": "$id$. alkalmazás",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "$id$. csomag",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "$id$. köteg",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "A birtokolt és kívánságlistán szereplő termékek kiemelése a $domain$ oldalon",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "A $domain$ oldalról származó további adatok",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Amikor a(z) \"$options_online_stats$\" vagy a(z) \"$options_steamdb_last_update$\" opció be van kapcsolva, akkor a bővítmény egy biztonságos kérést küld a $domain$ számára, hogy megkapja a játékosok aktuális számát és az utolsó játékfrissítést.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Amikor a \"$options_steamdb_lowest_price$\" opció be van kapcsolva, a bővítmény biztonságos kérést küld a $domain$ számára az általad jelenleg használt pénznemmel (amit a Steam gondol annak), hogy megkapja a rögzített árát egy megadott játéknak.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "A legalacsonyabb rögzített ár megjelenítése az alkalmazás oldalain"
+		"message": "A legalacsonyabb rögzített ár megjelenítése a termékek oldalain"
 	},
 	"options_online_stats": {
-		"message": "Egyidejű játékosok és csúcsok megjelenítése a játékoldalakon"
+		"message": "Egyidejű játékosok és csúcs mennyiségű játékosok megjelenítése a termékek oldalán"
 	},
 	"options_steamdb_last_update": {
-		"message": "A legújabb frissítés megjelenítése a játék oldalán"
+		"message": "A legújabb frissítés megjelenítése a termékek oldalán"
 	},
 	"options_button_app": {
-		"message": "Gomb megjelenítése az alkalmazás oldalain"
+		"message": "Gomb megjelenítése a termékek oldalán"
 	},
 	"options_button_pcgw": {
-		"message": "PCGamingWiki gomb megjelenítése alkalmazások oldalain"
+		"message": "PCGamingWiki gomb megjelenítése az alkalmazások oldalain"
 	},
 	"options_button_sub": {
 		"message": "Gomb megjelenítése a csomagoldalakon"
 	},
 	"options_button_gamehub": {
-		"message": "Gomb megjelenítése a Közösségközpontokban"
+		"message": "Gomb megjelenítése a közösségi központokban"
 	},
 	"options_button_gamecards": {
 		"message": "SteamDB és áruház oldal gombok megjelenítése a játékkártyák oldalán"
@@ -455,7 +464,8 @@
 		"message": "SubID megjelenítése minden egyes vásárlási opció alatt"
 	},
 	"options_link_subid_widget": {
-		"message": "SubID megjelenítése az alkalmazás widgetjeiben"
+		"message": "SubID megjelenítése az alkalmazás widgetjeiben",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Linkelje az egyes csomagokat az engedélyek oldalán"
@@ -529,7 +539,8 @@
 		"message": "SteamDB értékelések megjelenítése a termékoldalakon"
 	},
 	"options_enhancement_appicon": {
-		"message": "Alkalmazásikonok megjelenítése az áruházi és közösségi oldalakon"
+		"message": "Alkalmazásikonok megjelenítése az áruházi és közösségi oldalakon",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Rejtett teljesítmények és leírásaik betöltése"
@@ -541,7 +552,7 @@
 		"message": "Képek betöltésének mellőzése a termékek áruház oldalain"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Néhány fejlesztő több megabájtnyi képet helyez el játékaik leírásában, amelyek betöltése egy ideig eltarthat; kattints egy képre a betöltéséhez"
+		"message": "Néhány fejlesztő több megabájtnyi képet helyez el a termékeik leírásában, amelyek betöltése egy ideig eltarthat; kattints egy képre a betöltéséhez"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "$award$ paraméterek támogatása profil és megosztott fájl linkeken",
@@ -555,7 +566,7 @@
 		"message": "Megszerezhető kártyák számának megjelenítése a kitűzők oldalon"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Legyen egy gomb a felfedezési várólista elcsalására a leárazások ideje alatt"
+		"message": "Adjon hozzá egy gombot, amelyel autómatikusan végigmehet a felfedezési várólistán"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Globális játékstatisztikák oldal feljavítása"

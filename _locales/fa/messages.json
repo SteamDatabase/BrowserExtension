@@ -12,7 +12,8 @@
 		"message": "در $domain$ مشاهده کنید",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "دستاورد های شخصی"
 	},
 	"store_page": {
-		"message": "صفحه فروشگاه"
+		"message": "صفحه فروشگاه",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "جستجو"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "هایلایت بازی های خریداری شده و یا دنبال شده در $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "اطلاعات اضافی دریافت شده از $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "زمانی که گزینه $options_online_stats$ یا $options_steamdb_last_update$ فعال باشند، این افزونه یک درخواست امن به $domain$ ارسال می‌کند تا تعداد بازیکنان همزمان و آخرین به روز رسانی بازی را دریافت کند.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "زمانی که گزینه $options_steamdb_lowest_price$ فعال باشد، افزونه یک درخواست امن با ارز ریجن شما(چیزی که در حساب استیم تان ثبت شده باشد) به $domain$ ارسال می‌کند تا قیمت ثبت شده یک بازی خاص را دریافت کند.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "نمایش کمترین قیمت ثبت شده در صفحات بازی ها و برنامه ها"
-	},
-	"options_online_stats": {
-		"message": "نمایش بازیکن های همزمان کنونی و اوج تعداد بازیکن ها در صفحات بازی ها و برنامه ها"
-	},
-	"options_steamdb_last_update": {
-		"message": "نمایش آخرین به روز رسانی در صفحات بازی ها و برنامه ها"
-	},
-	"options_button_app": {
-		"message": "نمایش یک دکمه در صفحات بازی ها و برنامه ها"
-	},
-	"options_button_pcgw": {
-		"message": "نمایش دکمه PCGamingWiki در صفحات بازی ها و برنامه ها"
-	},
 	"options_button_sub": {
 		"message": "نمایش یک دکمه در صفحات پکیج ها"
-	},
-	"options_button_gamehub": {
-		"message": "نمایش یک دکمه در صفحات کامیونیتی بازی ها"
 	},
 	"options_button_gamecards": {
 		"message": "نمایش دکمه های SteamDB و صفحه فروشگاه در صفحات کارت های بازی ها"
 	},
 	"options_link_subid": {
 		"message": "نمایش SubID زیر هر یک از گزینه های خرید"
-	},
-	"options_link_subid_widget": {
-		"message": "نمایش SubID در ویجت های بازی ها و برنامه ها"
 	},
 	"options_link_accountpage": {
 		"message": "لینک کردن هر پکیج در صفحه لایسنس های خود"
@@ -525,23 +513,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "مخفی کردن بنر \"Open in the Steam\""
 	},
-	"options_steamdb_rating": {
-		"message": "نمایش امتیاز SteamDB در صفحات بازی ها و برنامه ها"
-	},
-	"options_enhancement_appicon": {
-		"message": "نمایش آیکون بازی یا برنامه در صفحات فروشگاه و کامیونیتی"
-	},
 	"options_hidden_achievements": {
 		"message": "نمایش دستاوردهای مخفی و توضیحات شان"
 	},
 	"options_spoiler_achievements": {
 		"message": "مخفی کردن توضیحات پشت یک محافظ اسپویلر"
-	},
-	"options_prevent_store_images": {
-		"message": "جلوگیری از بالا آمدن تصاویر در صفحات فروشگاه بازی ها و برنامه ها"
-	},
-	"options_prevent_store_images_description": {
-		"message": "بعضی از توسعه دهندگان تصاویر حجیمی را در بخش توضیحات محصول قرار میدهند که بالا آمدنشان زمان زیادی می برد، در عوض روی هر عکس کلیک کنید تا بالا بیاید"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "پشتیبانی از پارامتر $award$ در لینک های shared file و لینک های پروفایل",
@@ -553,9 +529,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "نمایش تعداد دراپ های کارت باقی‌مانده در صفحات Badges"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "افزودن یک دکمه برای فریب دادن صف اکتشاف در ایام تخفیفات"
 	},
 	"options_builtin_achievements_global": {
 		"message": "بهبود صفحه دستاوردها"

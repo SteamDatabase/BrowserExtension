@@ -12,7 +12,8 @@
 		"message": "Sprawdź na $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Osobiste osiągnięcia"
 	},
 	"store_page": {
-		"message": "Strona sklepu"
+		"message": "Strona sklepu",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Szukaj"
 	},
 	"id_app": {
 		"message": "Aplikacja $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Pakiet $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Zestaw $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -203,7 +208,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Czyszczenie pozycji #$current$ w kolejce nie powiodło się zbyt wiele razy, ponów próbę później.",
+		"message": "Czyszczenie pozycji #$current$ w kolejce nie powiodło się zbyt wiele razy. Spróbuj ponownie później.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Wyróżnij produkty posiadane i znajdujące się na liście życzeń na $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Dodatkowe dane pobrane z $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Kiedy opcja \"$options_online_stats$\" lub \"$options_steamdb_last_update$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$, aby uzyskać aktualną liczbę graczy i datę ostatniej aktualizacji gry.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Kiedy opcja \"$options_steamdb_lowest_price$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$ z walutą (którą określa Steam), aby uzyskać cenę dla konkretnej gry.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Wyświetlaj najniższą zarejestrowaną cenę na stronach aplikacji"
+		"message": "Pokaż najtańszą zarejestrowaną cenę produktu na jego stronie"
 	},
 	"options_online_stats": {
-		"message": "Wyświetlaj aktualną i maksymalną liczbę graczy na stronach aplikacji"
+		"message": "Wyświetl aktualną i najwyżej zarejestrowaną liczbę graczy na stronach produktu"
 	},
 	"options_steamdb_last_update": {
-		"message": "Wyświetlaj ostatnią aktualizację na stronach aplikacji"
+		"message": "Wyświetlaj ostatnią aktualizację na stronach produktu"
 	},
 	"options_button_app": {
-		"message": "Wyświetlaj przycisk na stronach aplikacji"
+		"message": "Wyświetlaj przycisk na stronach produktu"
 	},
 	"options_button_pcgw": {
-		"message": "Wyświetlaj przycisk PCGamingWiki na stronach aplikacji"
+		"message": "Wyświetlaj przycisk PCGamingWiki na stronach produktu"
 	},
 	"options_button_sub": {
 		"message": "Wyświetlaj przycisk na stronach paczek"
 	},
 	"options_button_gamehub": {
-		"message": "Wyświetlaj przycisk w centach gier"
+		"message": "Wyświetlaj przycisk w centrach gier"
 	},
 	"options_button_gamecards": {
 		"message": "Wyświetlaj przyciski do SteamDB i strony w sklepie na stronach kart"
@@ -455,10 +464,11 @@
 		"message": "Wyświetlaj SubID pod każdą opcją zakupu"
 	},
 	"options_link_subid_widget": {
-		"message": "Wyświetlaj SubID w widżetach aplikacji"
+		"message": "Wyświetlaj SubID w osadzonych widżetach",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Dodaj link do każdej paczki na twojej stronie licencji"
+		"message": "Dodaj link do każdej paczki na stronie twoich licencji"
 	},
 	"options_profile_calculator": {
 		"message": "Dodaj link do kalkulatora na profilach społecznościowych"
@@ -526,10 +536,11 @@
 		"message": "Schowaj baner \"Otwórz w Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Wyświetl oceny SteamDB na stronach aplikacji"
+		"message": "Wyświetlaj ocenę SteamDB na stronach produktu"
 	},
 	"options_enhancement_appicon": {
-		"message": "Wyświetl ikony aplikacji na stronach sklepu i społeczności"
+		"message": "Wyświetlaj ikonę produkty na stronach sklepu i społeczności",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Załaduj ukryte osiągnięcia i ich opisy"
@@ -538,10 +549,10 @@
 		"message": "Ukryj opisy za spoilerami"
 	},
 	"options_prevent_store_images": {
-		"message": "Zatrzymaj ładowanie obrazów w sklepie na stronach aplikacji"
+		"message": "Zatrzymaj ładowanie obrazów na sklepowych stronach produktu"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Niektórzy gry zawierają w opisie obrazy, których załadowanie może zająć trochę czasu. Kliknij obraz, aby go załadować"
+		"message": "Niektóre produkty zawierają w opisie obrazy, których załadowanie może zając trochę czasu. Kliknij obraz, aby go załadować"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Obsługa parametru $award$ na linkach do profilu i udostępnionych plików",

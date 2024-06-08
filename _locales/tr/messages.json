@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Steam mağazası ve topluluğuna SteamDB bağlantılarını ve yeni özellikleri ekler. En düşük oyun fiyatlarını ve istatistiklerini görüntüleyin."
+		"message": "Steam mağazası ve topluluğuna SteamDB bağlantılarını ve yeni özellikleri ekler. En düşük oyun fiyatlarını ve istatistiklerini şimdi görüntüleyin."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Ayarları"
@@ -12,30 +12,33 @@
 		"message": "$domain$ adresinden kontrol edin",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam'de kesinti yaşanıyor gibi görünüyor. "
+		"message": "Görünüşe göre Steam'de bir kesinti yaşanıyor. "
 	},
 	"view_on_steamdb": {
-		"message": "SteamDB'de Görüntüle"
+		"message": "SteamDB'de görüntüle"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "PCGamingWiki'de Görüntüle"
+		"message": "PCGamingWiki'de görüntüle"
 	},
 	"view_your_achievements": {
 		"message": "Kişisel başarımlar"
 	},
 	"store_page": {
-		"message": "Mağaza Sayfası"
+		"message": "Mağaza Sayfası",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Ara"
 	},
 	"id_app": {
 		"message": "Uygulama $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -44,7 +47,8 @@
 		}
 	},
 	"id_sub": {
-		"message": "Alt $id$",
+		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Paket $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -69,7 +74,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$ incelemeden $positive$ olumlu (tüm satın alım türleri)",
+		"message": "$total$ incelemenin $positive$ adeti olumludur (tüm satın alma türleri dahil)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -95,10 +100,10 @@
 		"message": "Şimdi çevrimiçi:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-saat en fazlası:"
+		"message": "Son 24 saat:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Tüm zamanların en fazlası:"
+		"message": "En fazla:"
 	},
 	"app_stats_followers": {
 		"message": "Takipçi:"
@@ -107,7 +112,7 @@
 		"message": "hiçbir şey seçilmedi"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB verilerine göre en düşük fiyat: <b>$price$</b>",
+		"message": "SteamDB verilerine göre en düşük fiyatı <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -155,7 +160,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "En son $date$ ($relative$) tarihinde $seen$ kez görülen fiyat",
+		"message": "En son $date$ ($relative$) tarihi olmak üzere bu fiyat toplamda $seen$ kez görüldü",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -175,13 +180,13 @@
 		"message": "Otomatik Keşfet"
 	},
 	"explore_auto_discover_description": {
-		"message": "Etkinlik kartı almak için kuyruğu otomatik olarak keşfedin."
+		"message": "Etkinlik kartı almak için kuyruğu otomatik olarak keşfeder."
 	},
 	"explore_generating": {
-		"message": "Yeni bir keşif kuyruğu oluşturuluyor, Steam sunucuları aşırı yük altındaysa bu işlem başarısız olabilir..."
+		"message": "Yeni bir keşif kuyruğu oluşturuluyor, Steam sunucuları aşırı yoğunsa bu işlem başarısız olabilir…"
 	},
 	"explore_exploring": {
-		"message": "Kuyruk keşfediliyor... Kalan $current$/$total$",
+		"message": "Kuyruk keşfediliyor... Keşfedilen $current$/$total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -238,7 +243,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Kalan ödüller: $amount$",
+		"message": "Düşürülebilecek kart sayısı: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -248,7 +253,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Bu sayfada kalan ödüller: $amount$",
+		"message": "Bu sayfada kalan düşürülebilecek kart sayısı: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -261,7 +266,7 @@
 		"message": "Gizli başarım: "
 	},
 	"hidden_achievement_hover": {
-		"message": "Gizli başarım, görüntülemek için fare ile üzerine gelin: "
+		"message": "Gizli başarımı görmek için fareyi üzerine getirin: "
 	},
 	"inventory_list_at": {
 		"message": "Satışa koy: $price$",
@@ -273,7 +278,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Sat: $price$",
+		"message": "$price$'dan sat",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -297,7 +302,7 @@
 		}
 	},
 	"widget_view_sub": {
-		"message": "$id$ uygulamasını SteamDB'de görüntüle",
+		"message": "$id$ sub uygulamasını SteamDB'de görüntüle",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -306,13 +311,13 @@
 		}
 	},
 	"options": {
-		"message": "Seçenekler"
+		"message": "Ayarlar"
 	},
 	"options_welcome_title": {
 		"message": "👋 SteamDB uzantısını yüklediğiniz için teşekkürler!"
 	},
 	"options_welcome_description": {
-		"message": "Aşağıdaki ayarları gözden geçirin ve istediğiniz seçenekleri değiştirin. Gelecekte buraya geri dönebilmek için:"
+		"message": "Aşağıdaki seçenekleri gözden geçirin ve istediğinizi değiştirin. Gelecekte buraya geri dönebilmek için:"
 	},
 	"options_welcome_option1": {
 		"message": "SteamDB'deki ayarlar sayfası"
@@ -324,7 +329,7 @@
 		"message": "Tarayıcınızın uzantılar sayfası"
 	},
 	"options_review": {
-		"message": "Bu eklenti için bir inceleme bırak"
+		"message": "Bu uzantı için bir yorum bırak"
 	},
 	"options_permissions_description": {
 		"message": "Bu SteamDB uzantısının, Steam Mağazasında ve Steam Topluluğunda düzgün çalışabilmesi için ek izinlere ihtiyacı vardır."
@@ -333,7 +338,7 @@
 		"message": "⚠️ İzin ver"
 	},
 	"options_footer1": {
-		"message": "💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> tarafından yapılmıştır."
+		"message": "💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> kullanıcıları tarafından yapılmıştır."
 	},
 	"options_footer2": {
 		"message": "Bu uzantı <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">açık kaynak</a> kodludur, katkıda bulunan herkese teşekkürler!"
@@ -366,44 +371,47 @@
 		"message": "Bu özellik etkinleştirildiğinde, uzantı <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam mağazanızdan</a> bazı kullanıcı verilerinizi (istek listeniz, sahip olduklarınız, takip ettikleriniz, yok saydıklarınız ve sepetinizdeki ürünler) isteyecek ve bunları sitede vurgu yapmak için kullanacaktır."
 	},
 	"options_website_explanation2": {
-		"message": "Bunun çalışması için giriş yapmış olman gerekli."
+		"message": "Bunun çalışabilmesi için mağazada oturum açmanız gerekiyor."
 	},
 	"options_website_explanation3": {
 		"message": "Veriler tamamen tarayıcınızda tutulur ve SteamDB veri tabanına asla gönderilmez."
 	},
 	"options_website_explanation4": {
-		"message": "Steam Mağazasına aşırı talep gelmesini önlemek için kullanıcı verileriniz tarayıcınızın yerel deposunda önbelleğe alınır."
+		"message": "Steam Mağazası'na yönelik aşırı istekleri önlemek için kullanıcı verileriniz, tarayıcınızın yerel depolama alanındaki önbelleğe alınır."
 	},
 	"options_website_highlight": {
-		"message": "İstek listenizdeki ve sahip olduğunuz ürünleri $domain$'da vurgulayın",
+		"message": "İstek listenizdeki ve sahip olduğunuz ürünleri $domain$'da vurgula",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Steam mağazasındaki ürünleri doğrudan SteamDB' üzerinden istek listenize ekleyin, takip edin veya yok sayın"
+		"message": "Steam mağazasındaki ürünleri doğrudan SteamDB' üzerinden istek listene ekle, takip et veya yok say"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ücretsiz paketler için komut dosyasını etkinleştirin</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ücretsiz paketler için komut dosyasını etkinleştir</a>"
 	},
 	"options_website_highlight3": {
-		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">Satış</a> ve <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">paketler</a> sayfasında ekstra filtrelemeyi etkinleştirin"
+		"message": "<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">Paket</a> ve <a href=\"https://steamdb.info/sales/\" target=\"_blank\">satış</a> sayfasında ekstra filtrelemeyi etkinleştir"
 	},
 	"options_extra_data": {
 		"message": "$domain$'dan alınan ekstra veriler",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
 	"options_extra_data_players": {
-		"message": "“$options_online_stats$” veya “$options_steamdb_last_update$” seçeneği etkinleştirildiğinde, uzantı mevcut oyuncu sayısını ve son oyun güncellemesini almak için $domain$'ya güvenli bir istekte bulunacaktır.",
+		"message": "\"$options_online_stats$\" veya \"$options_steamdb_last_update$\" özelliği etkinleştirildiğinde, uzantı mevcut oyuncu sayısını ve son güncelleme tarihini öğrenmek için $domain$'dan bir sorgulama yapacaktır.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -416,10 +424,11 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "\"$options_steamdb_lowest_price$\" özelliğini etkinleştirdiğinizde, bu özellik görüntülediğiniz bir oyunun kaydedilmiş en düşük fiyatını öğrenmeniz için $domain$'ya para biriminizle (Steam' e göre) birlikte güvenli bir sorguda bulunacaktır.",
+		"message": "\"$options_steamdb_lowest_price$\" özelliği etkinleştirildiğinde, görüntülediğiniz bir oyunun kaydedilmiş en düşük fiyatını öğrenmek için para biriminizle (Steam'e göre) $domain$'dan bir sorgulama yapacaktır.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Uygulama sayfalarında kaydedilen en düşük fiyatı görüntüle"
+		"message": "Ürün sayfalarında kayıtlı en düşük fiyatı göster"
 	},
 	"options_online_stats": {
-		"message": "Mevcut eşzamanlı oyuncular sayısını ve maksimum zirveleri uygulama sayfalarında görüntüleyin"
+		"message": "Ürün sayfalarında anlık oyuncu sayısını ve oyunun ulaşabildiği en yüksek oyuncu sayısını göster"
 	},
 	"options_steamdb_last_update": {
-		"message": "Uygulama sayfalarında son güncellemeyi görüntüle"
+		"message": "Ürün sayfalarında son güncellemeyi göster"
 	},
 	"options_button_app": {
-		"message": "Uygulama sayfalarında bir düğme görüntüle"
+		"message": "Ürün sayfalarında bir buton göster"
 	},
 	"options_button_pcgw": {
-		"message": "Uygulama sayfalarında PCGamingWiki düğmesini görüntüle"
+		"message": "Ürün sayfalarında PCGamingWiki butonu göster"
 	},
 	"options_button_sub": {
 		"message": "Paket sayfasında bir buton göster"
 	},
 	"options_button_gamehub": {
-		"message": "Topluluk merkezinde buton göster"
+		"message": "Topluluk merkezlerinde bir buton göster"
 	},
 	"options_button_gamecards": {
 		"message": "Oyun kartları sayfasında mağaza ve SteamDB sayfalarının butonlarını göster"
@@ -455,7 +464,8 @@
 		"message": "Her satın alma seçeneğinin altında SubID'yi görüntüle"
 	},
 	"options_link_subid_widget": {
-		"message": "Uygulama widget'larında SubID'yi görüntüle"
+		"message": "Gömme widget'larında SubID'yi görüntüle",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Her paketi lisanslar sayfanıza bağlayın"
@@ -464,7 +474,7 @@
 		"message": "Topluluk profillerine bir hesaplayıcı bağlantısı ekle"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Envanter sayfasındaki oyun seçimini yana taşı"
+		"message": "Envanter sayfasındaki oyun seçim menüsünü yana taşı"
 	},
 	"options_link_inventory": {
 		"message": "Envanterinizdeki her hediyeyi ve kuponu SteamDB'ye bağlayın"
@@ -482,7 +492,7 @@
 		"message": "Hızlı satmayı otomatik olarak kabul et"
 	},
 	"options_display_market_price_others": {
-		"message": "Diğer kullanıcıların envanterlerindeki öğe piyasa fiyatını görüntüle"
+		"message": "Diğer kullanıcıların envanterlerindeki öğelerin market fiyatını göster"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ ve $my_item$ parametrelerini destekleyin",
@@ -508,28 +518,29 @@
 		"message": "Yaş doğrulama kontrolünü geç"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Yaş ve doğum günü çerezlerini her zaman geçecek şekilde ayarla"
+		"message": "Yaş ve doğum günü çerezlerini, kontrolü her zaman geçecek şekilde ayarlar"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "\"Steam'den ayrılıyorsunuz\" link filtresini harici sitelerden kaldır",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Pazar, envanter ve diğer önemli sayfalarını otomatik etkinleştirmek için Steam Abonelik Sözleşmesini kabul edin",
+		"message": "Pazar, envanter ve ürün aktifleştirme sayfalarında Abonelik Sözleşmesini otomatik olarak kabul et",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Başlıktaki \"Steam'i Yükle\" düğmesini gizle",
+		"message": "Başlıktaki \"Steam'i Yükle\" butonunu gizle",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"Steam'de Aç\" yazısını gizle"
 	},
 	"options_steamdb_rating": {
-		"message": "SteamDB derecelendirmesini uygulama sayfalarında görüntüleyin"
+		"message": "SteamDB derecelendirmesini ürün sayfalarında görüntüleyin"
 	},
 	"options_enhancement_appicon": {
-		"message": "Mağaza ve topluluk sayfalarında uygulama ikonlarını görüntüle"
+		"message": "Ürün simgesini mağaza ve topluluk sayfalarında görüntüle",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Gizli başarımları ve açıklamalarını yükle"
@@ -538,10 +549,10 @@
 		"message": "Açıklamaları spoiler ögesinin arkasına gizleyin"
 	},
 	"options_prevent_store_images": {
-		"message": "Mağaza sayfalarında resimlerin yüklenmesini durdur"
+		"message": "Görsellerin ürün sayfalarına yüklenmesini durdur"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Kimi geliştiriciler oyun açıklamalarına yüksek boyutlu görseller eklediğinden sayfanın yüklenmesi uzun sürebilir. Görseli yüklemek için üzerine tıklayın"
+		"message": "Kimi geliştiriciler ürün açıklamalarına yüksek boyutlu görseller eklediğinden sayfanın yüklenmesi uzun sürebilir. Görseli yüklemek için üzerine tıklayın"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Profilde ve paylaşılan dosya bağlantılarında $award$ parametrelerini destekleyin",
@@ -552,10 +563,10 @@
 		}
 	},
 	"options_builtin_card_drops": {
-		"message": "Rozetler sayfasında kalan kart düşürme sayısını görüntüle"
+		"message": "Rozetler sayfasında kalan kart düşürme sayısını göster"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "İndirimler sırasında keşif kuyruğunda hile yapmak için bir düğme ekleyin"
+		"message": "İndirimler sırasında keşif kuyruğunuzu otomatik olarak tamamlamak için bir buton ekle"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Global Başarımlar sayfasını iyileştir"
@@ -564,6 +575,6 @@
 		"message": "Kişisel Başarılar sayfana bağla"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Kilitli başarılarda daha iyi görünürlük için kilit ikonu vardır"
+		"message": "Kilitli başarılarda daha iyi görünürlük için kilit ikonu bulunsun"
 	}
 }

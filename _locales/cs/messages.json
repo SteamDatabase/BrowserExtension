@@ -12,7 +12,8 @@
 		"message": "Zkontrolujte $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Osobní úspěchy"
 	},
 	"store_page": {
-		"message": "Stránka v obchodě"
+		"message": "Stránka v obchodě",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Hledat"
 	},
 	"id_app": {
 		"message": "$id$ aplikace",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "$id$ balíčku",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Zvýraznit vlastněné a vysněné produkty na $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Další data načtena z $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Pokud je zvolena volba \"$options_online_stats$\" nebo \"$options_steamdb_last_update$, rozšíření provede bezpečný požadavek na $domain$ pro získání aktuálního počtu hráčů a poslední aktualizaci hry.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Když je volba \"$options_steamdb_lowest_price$\" povolena, rozšíření provede bezpečný požadavek na $domain$ s vaší měnou (tu kterou si myslí Steam, že je vaše) pro získání ceny specifické hry.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -431,22 +440,22 @@
 		"message": "Zobrazit nejnižší zaznamenanou cenu na stránce s aplikacemi"
 	},
 	"options_online_stats": {
-		"message": "Zobrazit aktuální hráče a maximální špičky na stránce s aplikacemi"
+		"message": "Zobrazit aktuální hráče a maximální špičky na stránkách produktů"
 	},
 	"options_steamdb_last_update": {
-		"message": "Zobrazit nejnovější aktualizaci hry na stránce s aplikacemi"
+		"message": "Zobrazit nejnovější aktualizaci hry na stránce s produkty"
 	},
 	"options_button_app": {
-		"message": "Zobrazit tlačítko na stránce s aplikacemi"
+		"message": "Zobrazit tlačítko na stránkách produktů"
 	},
 	"options_button_pcgw": {
-		"message": "Zobrazit tlačítko PCGamingWiki na stránce s aplikacemi"
+		"message": "Zobrazit tlačítko PCGamingWiki na stránce s produkty"
 	},
 	"options_button_sub": {
 		"message": "Zobrazit tlačítko na stránce s balíčky"
 	},
 	"options_button_gamehub": {
-		"message": "Zobrazit tlačítko na stránce s game huby"
+		"message": "Zobrazit tlačítko na stránce s komunitnými huby"
 	},
 	"options_button_gamecards": {
 		"message": "Zobrazit tlačítka stránky SteamDB a stránky obchodu na stránce s herními kartami"
@@ -455,7 +464,8 @@
 		"message": "Zobrazit subID pod každou možností nákupu"
 	},
 	"options_link_subid_widget": {
-		"message": "Zobrazit subID ve widgetech aplikací"
+		"message": "Zobrazit subID ve věstavěných widgetech",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Propojit každý balíček na stránce s vašimi licencemi"
@@ -526,10 +536,11 @@
 		"message": "Skrýt \"Otevřít ve Steamu\" banner"
 	},
 	"options_steamdb_rating": {
-		"message": "Zobrazit hodnocení SteamDB na stránkáce s aplikacemi"
+		"message": "Zobrazit hodnocení SteamDB na stránce s aplikacemi"
 	},
 	"options_enhancement_appicon": {
-		"message": "Zobrazit ikony aplikací v obchodě a komunitní stránce"
+		"message": "Zobrazit ikony produktů v obchodě a komunitní stránce",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Načíst skryté achievementy a jejich popisky"
@@ -538,10 +549,10 @@
 		"message": "Skrýt popisky za prvkem spoileru"
 	},
 	"options_prevent_store_images": {
-		"message": "Zastavit načítání obrázků na stránce obchodu s aplikacemi"
+		"message": "Zastavit načítání obrázků na stránce obchodu s produkty"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Někteří vývojáři vloží megabajty obrázků do popisku hry, které mohou chvíli trvat, než se načtou, klikněte na obrázek pro načtení"
+		"message": "Někteří vývojáři vloží megabajty obrázků do popisku produktu, které mohou chvíli trvat, než se načtou, klikněte na obrázek pro načtení"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Podporovat $award$ parametry profilu a sdílené odkazy na soubory",

@@ -18,13 +18,15 @@
 		"message": "Vis på PCGamingWiki"
 	},
 	"store_page": {
-		"message": "Butikkside"
+		"message": "Butikkside",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Søk"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -34,6 +36,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -43,6 +46,7 @@
 	},
 	"id_bundle": {
 		"message": "Bunte $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -135,12 +139,6 @@
 	},
 	"options_website_explanation3": {
 		"message": "Dette blir helt i nettleseren og sendes aldri til og med til SteamDB-backend."
-	},
-	"options_steamdb_lowest_price": {
-		"message": "Vis den laveste registrerte prisen på appsider"
-	},
-	"options_button_gamehub": {
-		"message": "Vis en knapp på spillhubene"
 	},
 	"options_button_gamecards": {
 		"message": "Vis SteamDB og butikksideknapper på spillkortsiden"

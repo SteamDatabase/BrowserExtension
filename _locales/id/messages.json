@@ -12,7 +12,8 @@
 		"message": "Periksa di $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Pencapaian Pribadi"
 	},
 	"store_page": {
-		"message": "Halaman Toko"
+		"message": "Halaman Toko",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Cari"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundel $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Menandai produk yang sudah dimiliki dan yang diinginkan di $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Data tambahan yang diambil dari $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Ketika opsi \"$options_online_stats$\" atau \"$options_steamdb_last_update$\" diaktifkan, ekstensi akan melakukan permintaan aman ke $domain$ untuk mendapatkan jumlah pemain saat ini dan pembaruan permainan terakhir.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Ketika opsi \"$options_steamdb_lowest_price$\" diaktifkan, ekstensi akan melakukan permintaan aman ke $domain$ dengan mata uang Anda (dengan apa yang dikira Steam) untuk mendapatkan catatan harga untuk permainan tertentu.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,25 +437,25 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Tampilkan harga terendah yang tercatat di halaman aplikasi"
+		"message": "Tampilkan harga terendah yang tercatat dalam halaman produk"
 	},
 	"options_online_stats": {
-		"message": "Tampilkan jumlah pemain saat ini dan puncak tertinggi pada halaman aplikasi"
+		"message": "Tampilkan jumlah pemain saat ini dan puncak tertinggi dalam halaman produk"
 	},
 	"options_steamdb_last_update": {
-		"message": "Tampilkan terakhir diperbarui di halaman aplikasi"
+		"message": "Tampilkan pembaharuan terakhir dalam halaman produk"
 	},
 	"options_button_app": {
-		"message": "Menampilkan tombol di halaman aplikasi"
+		"message": "Tampilkan sebuah tombol dalam halaman produk"
 	},
 	"options_button_pcgw": {
-		"message": "Menampilkan tombol PCGamingWiki di halaman aplikasi"
+		"message": "Tampilkan tombol PCGamingWiki dalam halaman produk"
 	},
 	"options_button_sub": {
 		"message": "Tampilkan tombol pada halaman paket"
 	},
 	"options_button_gamehub": {
-		"message": "Tampilkan tombol di game hubs"
+		"message": "Tampilkan sebuah tombol dalam hub komunitas"
 	},
 	"options_button_gamecards": {
 		"message": "Tampilkan SteamDB dan simpan tombol halaman di halaman kartu permainan"
@@ -455,7 +464,8 @@
 		"message": "Tampilkan SubID di bawah setiap opsi pembelian"
 	},
 	"options_link_subid_widget": {
-		"message": "Tampilkan SubID di widget aplikasi"
+		"message": "Tampilkan SubID dalam widget tersemat",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Tautkan setiap paket di halaman lisensi Anda"
@@ -526,10 +536,11 @@
 		"message": "Menyembunyikan spanduk “Buka di Steam”"
 	},
 	"options_steamdb_rating": {
-		"message": "Menampilkan peringkat SteamDB pada halaman aplikasi"
+		"message": "Tampilkan peringkat SteamDB dalam halaman produk"
 	},
 	"options_enhancement_appicon": {
-		"message": "Menampilkan ikon aplikasi di halaman toko dan komunitas"
+		"message": "Tampilkan ikon produk dalam halaman toko dan komunitas",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "Memuat pencapaian tersembunyi dan deskripsinya"
@@ -538,10 +549,10 @@
 		"message": "Menyembunyikan deskripsi di balik elemen spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Menghentikan pemuatan gambar di halaman toko aplikasi"
+		"message": "Hentikan pemuatan gambar di halaman produk"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Beberapa pengembang meletakkan gambar berukuran megabyte dalam deskripsi game yang mungkin membutuhkan waktu beberapa saat untuk dimuat, klik pada gambar untuk memuat"
+		"message": "Beberapa pengembang memasukkan gambar berukuran besar dalam deskripsi produk yang dapat melambatkan waktu muat, klik pada gambar untuk memuatnya"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Mendukung parameter $award$ pada profil dan tautan file bersama",
@@ -553,9 +564,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Menampilkan jumlah total kartu yang tersisa pada halaman lencana"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Tambahkan tombol untuk menipu antrean penemuan selama penjualan"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Tingkatkan halaman pencapaian global"

@@ -18,6 +18,7 @@
 		"message": "Veja no PCGamingWiki"
 	},
 	"store_page": {
-		"message": "Página na loja"
+		"message": "Página na loja",
+		"description": "This translation should match how Steam translates it on community hubs"
 	}
 }

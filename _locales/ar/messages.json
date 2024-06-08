@@ -12,7 +12,8 @@
 		"message": "تحقق في $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "الإنجازات الشخصية"
 	},
 	"store_page": {
-		"message": "صفحة المتجر"
+		"message": "صفحة المتجر",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "البحث"
 	},
 	"id_app": {
 		"message": "التطبيق $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "القسم الفرعي $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "حزمة $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "تسليط الضوء على المنتجات المملوكة والمتمنية على $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "بيانات إضافية تم جلبها من $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "عندما يتم تمكين خيار \"$options_online_stats$أو \"$options_steamdb_last_update$\"، التمديد سيقوم بطلب آمن لـ $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "عندما يتم تمكين خيار \"$options_steamdb_lowest_price$\" ، سيؤدي التحديد إلى طلب آمن لـ $domain$ بعملتك (مع ما يعتقد Steam أنها موجودة) للحصول على السعر المسجل للعبة معينة.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -428,34 +437,31 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "عرض أقل سعر مسجل على صفحات التطبيق"
+		"message": "عرض اقل سعر مسجل على صفحات التطبيق"
 	},
 	"options_online_stats": {
-		"message": "عرض اللاعبين المتزامنين الحاليين والذروات القصوى على صفحات التطبيق"
+		"message": "عرض عدد اللاعبين الحاليين وأعلى عدد لاعبين تم تسجيله على صفحات المنتج"
 	},
 	"options_steamdb_last_update": {
-		"message": "عرض آخر تحديث على صفحات التطبيق"
+		"message": "عرض آخر تحديث على صفحات المنتج"
 	},
 	"options_button_app": {
-		"message": "عرض زر على صفحات التطبيق"
+		"message": "عرض زر على صفحات المنتج"
 	},
 	"options_button_pcgw": {
-		"message": "عرض زر PCGamingWiki على صفحات التطبيق"
+		"message": "عرض زر PCGamingWiki على صفحات المنتج"
 	},
 	"options_button_sub": {
 		"message": "عرض زر على صفحات الحزمة"
 	},
 	"options_button_gamehub": {
-		"message": "عرض زر على محاور اللعبة"
+		"message": "عرض زر على صفحات المجتمع"
 	},
 	"options_button_gamecards": {
 		"message": "عرض أزرار صفحة SteamDB وصفحة المتجر على صفحة بطاقات الألعاب"
 	},
 	"options_link_subid": {
 		"message": "عرض SubID تحت كل خيار شراء"
-	},
-	"options_link_subid_widget": {
-		"message": "عرض SubID في عناصر واجهة المستخدم في التطبيق"
 	},
 	"options_link_accountpage": {
 		"message": "ربط كل حزمة على صفحة التراخيص الخاصة بك"
@@ -526,10 +532,11 @@
 		"message": "إخفاء شعار ”فتح في البخار“"
 	},
 	"options_steamdb_rating": {
-		"message": "عرض تصنيف SteamDB على صفحات التطبيق"
+		"message": "عرض تقييم SteamDB في صفحات المنتج"
 	},
 	"options_enhancement_appicon": {
-		"message": "عرض أيقونات التطبيقات على صفحات المتجر والمجتمع"
+		"message": "عرض أيقونة المنتج على صفحات المتجر والمجتمع",
+		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
 		"message": "تحميل الإنجازات المخفية وأوصافها"
@@ -538,10 +545,10 @@
 		"message": "إخفاء الأوصاف خلف عنصر الحاشي"
 	},
 	"options_prevent_store_images": {
-		"message": "إيقاف تحميل الصور من التحميل على صفحات متجر التطبيقات"
+		"message": "إيقاف الصور من التحميل على صفحات المنتج"
 	},
 	"options_prevent_store_images_description": {
-		"message": "بعض المطورين يضعون ميغابايتات من الصور في وصف الألعاب مما قد يستغرق وقتًا طويلاً للتحميل، انقر على الصورة لتحميلها"
+		"message": "بعض المطورين يضعون ميغابايت من الصور في أوصاف المنتجات التي يمكن أن تستغرق بعض الوقت لتحميلها، انقر على صورة لتحميلها"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "دعم معلمات $award$ على الروابط الشخصية وروابط الملفات المشتركة",
@@ -555,7 +562,7 @@
 		"message": "عرض المبلغ الإجمالي لإسقاط البطاقات المتبقية على صفحة الشارات"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "إضافة زر لخداع قائمة انتظار الاكتشاف أثناء المبيعات"
+		"message": "إضافة زر لعرض قائمة الانتظار تِلْقائيًا في أثناء الخصومات"
 	},
 	"options_builtin_achievements_global": {
 		"message": "تحسين صفحة الإنجازات العالمية"

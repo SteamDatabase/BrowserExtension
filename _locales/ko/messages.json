@@ -12,7 +12,8 @@
 		"message": "$domain$에서 확인",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "개인 성과"
 	},
 	"store_page": {
-		"message": "스토어 페이지"
+		"message": "스토어 페이지",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "검색"
 	},
 	"id_app": {
 		"message": "앱 $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "서브 $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "번들 $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -105,5 +110,79 @@
 	},
 	"app_nothing_selected": {
 		"message": "선택되지 않음"
+	},
+	"app_lowest_price": {
+		"message": "\"SteamDB\"에 기록된 최저 가격은 <b>$price$</b>입니다",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "\"SteamDB\"에 기록된 최저가격은 <b> $discount$%</b>할인 된 <b> $price$ </b>입니다",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "\"SteamDB\"에 기록된 최저가격은 <b> $price$ </b>이고 최근 2년 이내 최저가격은 <b> $price_limited$ </b>입니다",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$에 표시된 가격입니다 ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "$seen$번 표시된 가격이며 마지막으로 $date$에 표시되었습니다 ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "자동탐색"
+	},
+	"explore_auto_discover_description": {
+		"message": "이벤트 카드를 얻기 위해 대기열을 자동으로 검색합니다."
+	},
+	"explore_generating": {
+		"message": "새로운 \"탐색 대기열\"을 생성하는 중입니다. \"Steam\"의 부하가 높으면 실패할 수 있습니다…"
 	}
 }

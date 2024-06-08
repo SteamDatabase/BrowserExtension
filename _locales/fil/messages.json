@@ -12,7 +12,8 @@
 		"message": "Tingnan ito sa $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Iyong mga achievements"
 	},
 	"store_page": {
-		"message": "Store Page"
+		"message": "Store Page",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Maghanap"
 	},
 	"id_app": {
 		"message": "Ika-$id$ na app",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Ika-$id$ na sub",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Ika-$id$ na bundle",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "I-highlight ang mga pag-aari at gustong produkto sa $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Karagdagang data na nakuha mula sa $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Kapag pinagana ang opsyong \"$options_online_stats$\" o \"$options_steamdb_last_update$\", gagawa ang extension ng secure na request sa $domain$ para makuha ang kasalukuyang halaga ng mga manlalaro at huling update sa laro.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Kapag pinagana ang opsyong \"$options_steamdb_lowest_price$\", gagawa ang extension ng secure na request sa $domain$ gamit ang iyong pera (kung ano ang iniisip ng Steam) para makuha ang naitalang presyo para sa isang partikular na laro.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Ipakita ang pinakamababang naitalang presyo sa mga page ng app"
-	},
-	"options_online_stats": {
-		"message": "Ipakita ang mga kasabay na manlalaro at max peak sa mga page ng app"
-	},
-	"options_steamdb_last_update": {
-		"message": "Ipakita ang huling update sa mga page ng app"
-	},
-	"options_button_app": {
-		"message": "Ipakita ang button sa mga page ng app"
-	},
-	"options_button_pcgw": {
-		"message": "Ipakita ang PCGamingWiki na button sa mga page ng app"
-	},
 	"options_button_sub": {
 		"message": "Ipakita ang button sa mga page ng package"
-	},
-	"options_button_gamehub": {
-		"message": "Ipakita ang button sa mga game hub"
 	},
 	"options_button_gamecards": {
 		"message": "Ipakita ang SteamDB at mga button ng page sa mga game card"
 	},
 	"options_link_subid": {
 		"message": "Ipakita ang SubID sa ilalim ng bawat opsyon sa pagbili"
-	},
-	"options_link_subid_widget": {
-		"message": "Ipakita ang SubID sa mga widget ng app"
 	},
 	"options_link_accountpage": {
 		"message": "I-link ang bawat package sa page ng iyong mga lisensya"
@@ -525,23 +513,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Itago ang banner na \"Open in the Steam\""
 	},
-	"options_steamdb_rating": {
-		"message": "Ipakita ang rating ng SteamDB sa mga page ng app"
-	},
-	"options_enhancement_appicon": {
-		"message": "Ipakita ang mga icon ng app sa mga page ng store at komunidad"
-	},
 	"options_hidden_achievements": {
 		"message": "Ipakita ang mga nakatagong achievements at ang kanilang mga deskripsyon"
 	},
 	"options_spoiler_achievements": {
 		"message": "Itago ang mga achievements gamit ang spoiler na element"
-	},
-	"options_prevent_store_images": {
-		"message": "Pigilan ang paglo-load ng mga larawan sa mga page ng app store"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Ang ilang mga developer ay naglagay ng mga megabyte ng mga larawan sa mga deskripsyon ng laro na maaaring resulta ng matagal na pag-load, i-click ang isang imahe upang ma-load"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Suportahan ang mga parameter ng $award$ sa mga link ng profile at mga nai-share na mga link ng file",
@@ -553,9 +529,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Ipakita ang kabuuang halaga ng mga natitira na card drop sa page ng mga badge"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Magdagdag ng button para dayain ang discovery queue habang nagbebenta"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Pagbutihin ang page ng mga achievements"

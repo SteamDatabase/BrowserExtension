@@ -12,7 +12,8 @@
 		"message": "Patikrinti per $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamstat.us"
+				"content": "steamstat.us",
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -29,13 +30,15 @@
 		"message": "Asmeniniai pasiekimai"
 	},
 	"store_page": {
-		"message": "Parduotuvės tinklalapis"
+		"message": "Parduotuvės tinklalapis",
+		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Ieškoti"
 	},
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -45,6 +48,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -54,6 +58,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -378,7 +383,8 @@
 		"message": "Paryškinti turimus ir pageidaujamus produktus esančius $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -395,7 +401,8 @@
 		"message": "Papildoma informacija, gauta iš $domain$",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -403,7 +410,8 @@
 		"message": "Kai \"$options_online_stats$\" arba \"$options_steamdb_last_update$\" parinktys yra įjungtos plėtinys padarys saugia užklausa $domain$ kad gautu dabartinį žaidėjų kiekį ir paskutini žaidimo atnaujinima.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -419,7 +427,8 @@
 		"message": "Kai \"$options_steamdb_lowest_price$\" parinktis yra įjungta, plėtinys atliks saugią užklausą į $domain$ su jūsų valiuta (su tokia, kokia Steam mano yra), kad gautų įrašyta konkretaus žaidimo kainą.",
 		"placeholders": {
 			"domain": {
-				"content": "steamdb.info"
+				"content": "steamdb.info",
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -427,35 +436,14 @@
 			}
 		}
 	},
-	"options_steamdb_lowest_price": {
-		"message": "Rodyti mažiausią užregistruotą kainą programų puslapiuose"
-	},
-	"options_online_stats": {
-		"message": "Rodyti dabar esamus vienu metu žaidžiančius žaidėjus ir didžiausią piką programėlės puslapiuose"
-	},
-	"options_steamdb_last_update": {
-		"message": "Rodyti paskutinį atnaujinimą programų puslapiuose"
-	},
-	"options_button_app": {
-		"message": "Rodyti mygtuką programėlių puslapiuose"
-	},
-	"options_button_pcgw": {
-		"message": "Rodyti PCGamingWiki mygtuką programų puslapiuose"
-	},
 	"options_button_sub": {
 		"message": "Rodyti mygtuką paketų puslapiuose"
-	},
-	"options_button_gamehub": {
-		"message": "Rodyti mygtuką ant žaidimo centrų"
 	},
 	"options_button_gamecards": {
 		"message": "Rodyti SteamDB ir parduotuvės puslapio mygtukus ant žaidimo kortelių puslapio"
 	},
 	"options_link_subid": {
 		"message": "Rodyti SubID po kiekvienu pirkinio pasirinkimu"
-	},
-	"options_link_subid_widget": {
-		"message": "Rodyti SubID programos valdikliuose"
 	},
 	"options_link_accountpage": {
 		"message": "Susieti kiekvieną paketą savo licencijų puslapyje"
@@ -525,23 +513,11 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Paslėpti \"Atidaryti per Steam\" užrašą"
 	},
-	"options_steamdb_rating": {
-		"message": "Rodyti SteamDB reitingą programų puslapiuose"
-	},
-	"options_enhancement_appicon": {
-		"message": "Rodyti programėlių piktogramas parduotuvės ir bendruomenės puslapiuose"
-	},
 	"options_hidden_achievements": {
 		"message": "Pakrauti paslėptus pasiekimus ir jų aprašymus"
 	},
 	"options_spoiler_achievements": {
 		"message": "Paslėpti aprašymus už spoilerio elemento"
-	},
-	"options_prevent_store_images": {
-		"message": "Sustabdyti vaizdų krovimą programų parduotuvės puslapiuose"
-	},
-	"options_prevent_store_images_description": {
-		"message": "Kai kurie žaidimų kūrėjai deda megabaitinius paveikslėlius į žaidimų aprašymus, kurių įkėlimas gali užtrukti, spustelėkite ant paveikslėlio, kad jis būtų įkeltas"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Palaikyti $award$ parametrus profilio ir bendrųjų failų nuorodose",
@@ -553,9 +529,6 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Rodyti bendrą likusių kortelių kiekį ženklelio puslapyje"
-	},
-	"options_builtin_queue_cheat": {
-		"message": "Pridėti mygtuką, skirtą apgauti atradimo eilę pardavimo metu"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Patobulinkite pasaulio pasiekimų puslapį"
