@@ -14,7 +14,7 @@
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
-				"description": "The domain is steamstat.us"
+				"example": "steamstat.us"
 			}
 		}
 	},
@@ -41,6 +41,7 @@
 
 	"id_app": {
 		"message": "App $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -50,6 +51,7 @@
 	},
 	"id_sub": {
 		"message": "Sub $id$",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -59,6 +61,7 @@
 	},
 	"id_bundle": {
 		"message": "Bundle $id$",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -396,7 +399,7 @@
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
-				"description": "The domain is steamdb.info"
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -415,7 +418,7 @@
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
-				"description": "The domain is steamdb.info"
+				"example": "steamdb.info"
 			}
 		}
 	},
@@ -424,7 +427,7 @@
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
-				"description": "The domain is steamdb.info"
+				"example": "steamdb.info"
 			},
 			"options_online_stats": {
 				"content": "$1",
@@ -441,7 +444,7 @@
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
-				"description": "The domain is steamdb.info"
+				"example": "steamdb.info"
 			},
 			"options_steamdb_lowest_price": {
 				"content": "$1",
@@ -478,7 +481,7 @@
 	},
 	"options_link_subid_widget": {
 		"message": "Display SubID in embed widgets",
-		"description": "Example widget: https://store.steampowered.com/widget/10"
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Link each package on your licenses page"
