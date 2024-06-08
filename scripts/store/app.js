@@ -680,13 +680,13 @@ function DrawOnlineStatsWidget( items )
 		container.insertBefore( responsiveHeader, container.firstChild );
 	}
 
-	let depotsUpdate = null;
 	let historyLink = null;
 	let historyLinkResponsive = null;
+	const updateElements = [];
 
 	if( items[ 'steamdb-last-update' ] )
 	{
-		depotsUpdate = document.createElement( 'div' );
+		const depotsUpdate = document.createElement( 'div' );
 		depotsUpdate.className = 'dev_row steamdb_last_update';
 
 		const subtitle = document.createElement( 'div' );
@@ -700,6 +700,7 @@ function DrawOnlineStatsWidget( items )
 
 		depotsUpdate.appendChild( subtitle );
 		depotsUpdate.appendChild( historyLink );
+		updateElements.push( depotsUpdate );
 
 		const releaseDate = document.querySelector( '.release_date' );
 
@@ -736,6 +737,8 @@ function DrawOnlineStatsWidget( items )
 			content.append( historyLinkResponsive );
 			responsiveGrid.append( label );
 			responsiveGrid.append( content );
+
+			updateElements.push( label, content );
 		}
 	}
 
@@ -756,7 +759,11 @@ function DrawOnlineStatsWidget( items )
 			}
 
 			block?.remove();
-			depotsUpdate?.remove();
+
+			for( const el of updateElements )
+			{
+				el.remove();
+			}
 
 			return;
 		}
@@ -799,6 +806,13 @@ function DrawOnlineStatsWidget( items )
 			if( historyLinkResponsive !== null )
 			{
 				historyLinkResponsive.textContent = `${actualDateText} (${relativeText})`;
+			}
+		}
+		else
+		{
+			for( const el of updateElements )
+			{
+				el.remove();
 			}
 		}
 	} );
