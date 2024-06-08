@@ -17,9 +17,6 @@
 	"view_on_pcgamingwiki": {
 		"message": "Προβολή στο PCGamingWiki"
 	},
-	"view_your_achievements": {
-		"message": "Δείτε τα επιτεύγματά σας"
-	},
 	"store_page": {
 		"message": "Σελίδα Καταστήματος"
 	},
@@ -392,9 +389,6 @@
 	},
 	"options_button_sub": {
 		"message": "Εμφάνιση κουμπιού στις σελίδες πακέτων"
-	},
-	"options_button_video": {
-		"message": "Εμφάνιση κουμπιού στις σελίδες βίντεο"
 	},
 	"options_button_gamehub": {
 		"message": "Εμφάνιση κουμπιού στους κόμβους του παιχνιδιού"

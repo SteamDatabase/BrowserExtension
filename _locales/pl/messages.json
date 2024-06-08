@@ -1,12 +1,20 @@
 {
 	"extension_description": {
-		"message": "Dodaje linki SteamDB i nowe funkcjonalności w sklepie i społeczności Steam. Wyświetla najniższe ceny gier i ich statystyki."
+		"message": "Dodaje linki SteamDB i nowe funkcje w sklepie i w społeczności Steam. Wyświetla najniższe ceny gier i ich statystyki."
 	},
 	"steamdb_options": {
 		"message": "Opcje SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "Kalkulator SteamDB"
+	},
+	"steamstatus": {
+		"message": "Sprawdź na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Wygląda na to, że występują problemy z połączeniem ze Steam. "
@@ -18,7 +26,7 @@
 		"message": "Zobacz na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Zobacz swoje osiągnięcia"
+		"message": "Osobiste osiągnięcia"
 	},
 	"store_page": {
 		"message": "Strona sklepu"
@@ -108,7 +116,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b> podczas <b>$discount$%</b> zniżki",
+		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b> podczas <b>-$discount$%</b> zniżki",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -173,7 +181,7 @@
 		"message": "Generowanie nowej kolejki odkryć może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
 	},
 	"explore_exploring": {
-		"message": "Odkrywanie kolejki… Zapytanie $current$ z $total$",
+		"message": "Przeglądanie kolejki… Żądanie $current$ z $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -289,7 +297,7 @@
 		}
 	},
 	"widget_view_sub": {
-		"message": "Sprawdź pakiet $id$ na SteamDB",
+		"message": "Wyświetl pakiet $id$ na SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -304,13 +312,13 @@
 		"message": "👋 Dzięki za zainstalowanie rozszerzenia SteamDB!"
 	},
 	"options_welcome_description": {
-		"message": "Przejrzyj poniższe opcje i ustaw te, które preferujesz. Aby wrócić tutaj w przyszłości:"
+		"message": "Przejrzyj poniższe ustawienia i przełącz te, które preferujesz. Aby wrócić tutaj w przyszłości:"
 	},
 	"options_welcome_option1": {
 		"message": "Strona ustawień na SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Rozwijane menu konta na stronach Steam"
+		"message": "Rozwijane menu przy nazwie konta na Steam"
 	},
 	"options_welcome_option3": {
 		"message": "Strona rozszerzeń twojej przeglądarki"
@@ -319,7 +327,7 @@
 		"message": "Wystaw recenzję dla tego rozszerzenia"
 	},
 	"options_permissions_description": {
-		"message": "To rozszerzenie wymaga dodatkowych uprawnień do poprawnego działania w SteamDB, Sklepie Steam i Społeczności Steam."
+		"message": "To rozszerzenie wymaga dodatkowych uprawnień do poprawnego działania na SteamDB, Sklepie Steam i Społeczności Steam."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Przyznaj uprawnienia"
@@ -340,7 +348,7 @@
 		"message": "Dodatkowe dane"
 	},
 	"options_header_buttons_and_links": {
-		"message": "Przyciski i odnośniki"
+		"message": "Przyciski i linki"
 	},
 	"options_header_inventory": {
 		"message": "Ekwipunek"
@@ -349,22 +357,30 @@
 		"message": "Oferty wymiany"
 	},
 	"options_header_enhancements": {
-		"message": "Rozszerzenia"
+		"message": "Dodatkowe opcje"
 	},
 	"options_website_explanation": {
 		"message": "Wyjaśnienie"
 	},
 	"options_website_explanation1": {
-		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (lista życzeń, posiadane, obserwowane, ignorowane produkty i produkty w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
+		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (lista życzeń, produkty posiadane, obserwowane, ignorowane oraz znajdujące się w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
 	},
 	"options_website_explanation2": {
 		"message": "Aby użyć tej funkcji, musisz być zalogowany w sklepie."
 	},
 	"options_website_explanation3": {
-		"message": "Jest to w całości przechowywane w twojej przeglądarce i nigdy nie jest wysyłane do bazy SteamDB."
+		"message": "Dane są przechowywane lokalnie w twojej przeglądarce i nie są nigdzie wysyłane, nawet do serwerów SteamDB."
 	},
 	"options_website_explanation4": {
 		"message": "Aby zapobiec nadmiernym zapytaniom do Sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
+	},
+	"options_website_highlight": {
+		"message": "Wyróżnij produkty posiadane i znajdujące się na liście życzeń na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
 	},
 	"options_website_highlight1": {
 		"message": "Lista życzeń, obserwowane i ignorowane produkty w sklepie Steam bezpośrednio ze SteamDB"
@@ -375,11 +391,47 @@
 	"options_website_highlight3": {
 		"message": "Włącz dodatkowe filtrowanie na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stronie sprzedaży</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stronie zestawów</a>"
 	},
+	"options_extra_data": {
+		"message": "Dodatkowe dane pobrane z $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kiedy opcja \"$options_online_stats$\" lub \"$options_steamdb_last_update$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$, aby uzyskać aktualną liczbę graczy i datę ostatniej aktualizacji gry.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kiedy opcja \"$options_steamdb_lowest_price$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$ z walutą (którą określa Steam), aby uzyskać cenę dla konkretnej gry.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Wyświetlaj najniższą zarejestrowaną cenę na stronach aplikacji"
 	},
 	"options_online_stats": {
-		"message": "Wyświetlaj bieżących graczy i maksymalne rekordy na stronach aplikacji"
+		"message": "Wyświetlaj aktualną i maksymalną liczbę graczy na stronach aplikacji"
 	},
 	"options_steamdb_last_update": {
 		"message": "Wyświetlaj ostatnią aktualizację na stronach aplikacji"
@@ -393,23 +445,20 @@
 	"options_button_sub": {
 		"message": "Wyświetlaj przycisk na stronach paczek"
 	},
-	"options_button_video": {
-		"message": "Wyświetlaj przycisk na stronach wideo"
-	},
 	"options_button_gamehub": {
-		"message": "Wyświetlaj przycisk w hubach gier"
+		"message": "Wyświetlaj przycisk w centach gier"
 	},
 	"options_button_gamecards": {
-		"message": "Wyświetlaj przyciski do SteamDB i strony w sklepie na stronach kart gier"
+		"message": "Wyświetlaj przyciski do SteamDB i strony w sklepie na stronach kart"
 	},
 	"options_link_subid": {
-		"message": "Wyświetlaj SubID dla każdej opcji zakupu"
+		"message": "Wyświetlaj SubID pod każdą opcją zakupu"
 	},
 	"options_link_subid_widget": {
 		"message": "Wyświetlaj SubID w widżetach aplikacji"
 	},
 	"options_link_accountpage": {
-		"message": "Link do każdej paczki na stronie twoich licencji"
+		"message": "Dodaj link do każdej paczki na twojej stronie licencji"
 	},
 	"options_profile_calculator": {
 		"message": "Dodaj link do kalkulatora na profilach społecznościowych"
@@ -459,7 +508,7 @@
 		"message": "Pomiń stronę weryfikacji wieku"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Ustaw wymagane ciasteczka, aby pominąć pytanie o wiek"
+		"message": "Ustawia ciasteczka wieku oraz urodzin, aby pomijać pytanie o wiek"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Usuń filtrowanie \"Opuszczasz Steam\" z linków do zewnętrznych stron",
@@ -492,7 +541,7 @@
 		"message": "Zatrzymaj ładowanie obrazów w sklepie na stronach aplikacji"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Niektórzy deweloperzy umieszczają megabajty obrazów w opisach gier, których załadowanie może zająć trochę czasu."
+		"message": "Niektórzy gry zawierają w opisie obrazy, których załadowanie może zająć trochę czasu. Kliknij obraz, aby go załadować"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Obsługa parametru $award$ na linkach do profilu i udostępnionych plików",

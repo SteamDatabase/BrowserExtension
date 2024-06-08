@@ -17,9 +17,6 @@
 	"view_on_pcgamingwiki": {
 		"message": "Pozrieť na PCGamingWiki"
 	},
-	"view_your_achievements": {
-		"message": "Pozrite si svoje úspechy"
-	},
 	"store_page": {
 		"message": "Stránka Obchodu"
 	},
@@ -190,5 +187,13 @@
 	},
 	"options_header_inventory": {
 		"message": "Inventár"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Odstraňuje filter odkazov „Opúšťate Steam“ z externých stránok",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Automaticky prijímate Predplatiteľskú Zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	}
 }

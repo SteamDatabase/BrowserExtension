@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "Calculatrice SteamDB"
 	},
+	"steamstatus": {
+		"message": "Jette un œil à $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steam semble être en maintenance. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Voir sur PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Voir vos succès"
+		"message": "Succès personnels"
 	},
 	"store_page": {
 		"message": "Page du magasin"
@@ -36,7 +44,7 @@
 		}
 	},
 	"id_sub": {
-		"message": "Sub $id$",
+		"message": "Package $id$",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -407,6 +415,18 @@
 			}
 		}
 	},
+	"options_extra_data_prices": {
+		"message": "Lorsque l'option \"$options_steamdb_lowest_price$\" est activée, l'extension fera une requête sécurisée vers $domain$ avec votre devise (celle que Steam suppose être la vôtre) pour obtenir le prix enregistré pour un jeu spécifique.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Afficher le prix enregistré le plus bas sur les pages du magasin"
 	},
@@ -424,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Afficher un bouton sur les pages des packages"
-	},
-	"options_button_video": {
-		"message": "Afficher un bouton sur les pages des vidéos"
 	},
 	"options_button_gamehub": {
 		"message": "Afficher un bouton sur les hubs de jeu"

@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB калкулатор"
 	},
+	"steamstatus": {
+		"message": "Провери на $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Изгледа да Стеам тренутно има застој. "
 	},
@@ -16,9 +24,6 @@
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Погледај на PCGamingWiki"
-	},
-	"view_your_achievements": {
-		"message": "Погледај своја достигнућа"
 	},
 	"store_page": {
 		"message": "Страница продавнице"
@@ -165,6 +170,79 @@
 	},
 	"explore_auto_discover": {
 		"message": "Аутоматски-откривач"
+	},
+	"explore_auto_discover_description": {
+		"message": "Аутоматски откриј ред да би добио картицу ца догађај."
+	},
+	"explore_generating": {
+		"message": "Генерисанје новог реда за откривање, ово може да пропадне ако су Стеам сервери под великим притиском…"
+	},
+	"explore_exploring": {
+		"message": "Истраживање реда… Затражи $current$ од $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Грешка при чишћењу ствари из реда #$current$, покушавам поново за пет секунди…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Грешка при чишћењу ствари из реда #$current$ превише пута. Можеш покушати поново касније.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Грешка при генерисању новог реда, покушавам поново за пет секунди…"
+	},
+	"explore_finished": {
+		"message": "Ред је истражен."
+	},
+	"badges_idle_apps": {
+		"message": "Апликације за мировање: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Апликације за мировање на овој страни: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Преостало је $amount$ картица",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"hidden_achievement": {
 		"message": "Скривена медаља: "

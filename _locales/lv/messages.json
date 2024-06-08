@@ -3,31 +3,36 @@
 		"message": "Pievieno SteamDB saites un jaunas funkcijas Steam veikalam kā arī kopienai. Skatīt zemākās spēļu cenas un statistiku."
 	},
 	"steamdb_options": {
-		"message": "Opcijas"
+		"message": "SteamDB Opcijas"
 	},
 	"steamdb_calculator": {
-		"message": "Kalkulators"
+		"message": "SteamDB Kalkulators"
+	},
+	"steamstatus": {
+		"message": "Pārbaudiet $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Šķiet, ka Steam piedzīvo kādu darbības pārtraukumu. "
 	},
 	"view_on_steamdb": {
-		"message": "Skatīt"
+		"message": "Skatīt iekš SteamDB"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "Skatīt"
-	},
-	"view_your_achievements": {
-		"message": "Skatīt savus sasniegumus"
+		"message": "Skatīt iekš PCGamingWiki"
 	},
 	"store_page": {
-		"message": "Veikals"
+		"message": "Veikala lapa"
 	},
 	"search": {
 		"message": "Meklēt"
 	},
 	"id_app": {
-		"message": "Lietojumprogrammas $id$",
+		"message": "Lietojumprogramma $id$",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -61,7 +66,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ no $total$ ir pozitīvi (visi pirkuma veidi)",
+		"message": "$positive$ no $total$ vērtējumiem ir pozitīvi (visi pirkumu veidi)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -119,5 +124,155 @@
 				"example": "80"
 			}
 		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB zemākā reģistrētā cena ir <b>$price$</b> un pēdējo 2 gadu zemākā cena ir <b>-$price_limited$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Cena reģistrēta $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Cena reģistrēta $seen$ reizes, pēdējo reizi $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_exploring": {
+		"message": "Rinda tiek izskatīta… Pieprasījums nr. $current$ no $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Neizdevās radīt jaunu rindu, atkārtots mēģinājums pēc piecām sekundēm…"
+	},
+	"explore_finished": {
+		"message": "Rinda ir izskatīta."
+	},
+	"inventory_list_at": {
+		"message": "Izlikt par $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Pārdot par $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"options": {
+		"message": "Iestatījumi"
+	},
+	"options_welcome_title": {
+		"message": "👋 Paldies, ka instalējāt SteamDB paplašinājumu!"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Dot piekļuvi"
+	},
+	"options_header_website": {
+		"message": "SteamDB mājaslapa"
+	},
+	"options_header_extra_data": {
+		"message": "Papildus dati"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Pogas un saites"
+	},
+	"options_header_trade_offers": {
+		"message": "Maiņas piedāvājumi"
+	},
+	"options_header_enhancements": {
+		"message": "Uzlabojumi"
+	},
+	"options_website_explanation": {
+		"message": "Skaidrojums"
+	},
+	"options_extra_data": {
+		"message": "Papildus dati ņemti no $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_button_sub": {
+		"message": "Rādīt pogu paku lapās"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Pievienot ātrās pārdošanas pogas"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automātiski apstiprināt ātro pārdošanu"
+	},
+	"options_github_explanation": {
+		"message": "Skatīt skaidrojumu GitHub"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Rādīt labākus kļūdu paziņojumus, nevis kriptiskos Valve kļūdu kodus"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Izlaist vecuma pārbaudes lapu"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Iestata vecuma un dzimšanas dienas sīkdatnes, lai vienmēr izlaistu"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Noņem \"Jūs pametat Steam\" saišu filtru no ārējām lapām",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Paslēpt \"Install Steam\" pogu galvenē",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_prevent_store_images": {
+		"message": "Neļaut attēliem ielādēties veikala lapās"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Spēļu aprakstos dažreiz ir ievietoti vairāku megabaitu lieli attēli, kas var lēni ielādēties. Attēli tiks ielādēti tikai tad, ja uz tiem uzklikšķināsiet."
 	}
 }

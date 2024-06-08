@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB 計算ツール"
 	},
+	"steamstatus": {
+		"message": "$domain$ を確認",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steam は現在、一時的なサービス停止が発生しているようです。 "
 	},
@@ -18,7 +26,7 @@
 		"message": "PCGamingWiki で見る"
 	},
 	"view_your_achievements": {
-		"message": "あなたの実績を表示"
+		"message": "自分の実績"
 	},
 	"store_page": {
 		"message": "ストアページ"
@@ -90,7 +98,7 @@
 		"message": "24時間のピーク:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "これまでの最大人数:"
+		"message": "最大同時接続者数"
 	},
 	"app_stats_followers": {
 		"message": "フォロワー数:"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Steam ストアへの過剰なリクエストを防ぐため、ユーザーデータはブラウザのローカルストレージにキャッシュされます。"
 	},
+	"options_website_highlight": {
+		"message": "所有している商品とウィッシュリストを $domain$ で強調表示する",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "SteamDB から直接 Steam ストアの製品をウィッシュリストに追加、フォロー、無視する"
 	},
@@ -374,6 +390,26 @@
 	},
 	"options_website_highlight3": {
 		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">セールページ</a> および <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">バンドルページ</a> で追加フィルタリングを有効にする"
+	},
+	"options_extra_data": {
+		"message": "$domain$ の追加データ設定",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "「$options_steamdb_lowest_price$」のオプションが有効の時、あなたの Steam アカウントでお使いの通貨から、ゲームの最低価格を$domain$より安全に取得して表示します。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "アプリページに最低価格を表示"
@@ -392,9 +428,6 @@
 	},
 	"options_button_sub": {
 		"message": "パッケージページにボタンを表示"
-	},
-	"options_button_video": {
-		"message": "ビデオページにボタンを表示"
 	},
 	"options_button_gamehub": {
 		"message": "ゲームハブにボタンを表示"

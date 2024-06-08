@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "Máy tính SteamDB"
 	},
+	"steamstatus": {
+		"message": "Kiểm tra trên $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steam có vẻ như đang gặp sự cố. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Xem trên PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Xem thành tựu của bạn"
+		"message": "Thành tựu của cá nhân"
 	},
 	"store_page": {
 		"message": "Trang cửa hàng"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Để ngăn chặn các yêu cầu quá mức tới Steam Store, dữ liệu người dùng của bạn sẽ được lưu vào bộ nhớ cục bộ của trình duyệt."
 	},
+	"options_website_highlight": {
+		"message": "Làm nổi bật các sản phẩm đã sở hữu và trong danh sách ước trên $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Thêm vào danh sách ước, theo dõi và bỏ qua trên cửa hàng Steam trực tiếp từ SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói.</a>"
+	},
+	"options_extra_data": {
+		"message": "Dữ liệu bổ sung được lấy từ $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Khi tùy chọn \"$options_online_stats$\" hoặc \"$options_steamdb_last_update$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để lấy số lượng người chơi hiện có và cập nhật mới nhất của trò chơi.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Khi tùy chọn \"$options_steamdb_lowest_price$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ với đơn vị tiền của bạn (theo những gì Steam ước tính được) để hiển thị giá được ghi nhận cho trò chơi nhất định.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Hiển thị giá ghi thấp nhất trên các trang ứng dụng"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Hiển thị một nút trên các trang gói"
-	},
-	"options_button_video": {
-		"message": "Hiển thị một nút trên các trang video"
 	},
 	"options_button_gamehub": {
 		"message": "Hiển thị một nút trên game hub"

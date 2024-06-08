@@ -8,8 +8,16 @@
 	"steamdb_calculator": {
 		"message": "SteamDB rekenmachine"
 	},
+	"steamstatus": {
+		"message": "Controleer op $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
-		"message": "Het lijkt erop dat Steam een storing aan het ervaren is. "
+		"message": "Het lijkt erop dat Steam een storing heeft. "
 	},
 	"view_on_steamdb": {
 		"message": "Bekijk op SteamDB"
@@ -18,7 +26,7 @@
 		"message": "Bekijk op PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Bekijk je prestaties"
+		"message": "Persoonlijke prestaties"
 	},
 	"store_page": {
 		"message": "Winkelpagina"
@@ -27,7 +35,7 @@
 		"message": "Zoeken"
 	},
 	"id_app": {
-		"message": "Applicatie $id$",
+		"message": "App $id$",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -108,7 +116,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB laagste opgenomen prijs is <b>$price$</b> bij <b>-$discount$%</b>",
+		"message": "SteamDB laagst opgenomen prijs is <b>$price$</b> voor <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -167,7 +175,7 @@
 		"message": "Automatisch ontdekken"
 	},
 	"explore_auto_discover_description": {
-		"message": "Ontdek automatisch de wachtrij om een event kaart te ontvangen."
+		"message": "Ontdek wachtrij automatisch om een event kaart te ontvangen."
 	},
 	"explore_generating": {
 		"message": "Een nieuwe ontdekkingswachtrij aan het genereren, dit kan mislukken als Steam onder hoge druk staat…"
@@ -186,7 +194,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Wachtrij artikel #$current$ gefaald met wissen, opnieuw proberen in 5 seconden…",
+		"message": "Wissen van wachtrij artikel #$current$ mislukt, opnieuw proberen in 5 seconden…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -195,7 +203,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Wachtrij artikel #$current$ te vaak gefaald met wissen. Je kunt het later opnieuw proberen.",
+		"message": "Te vaak mislukt op wachtrij artikel #$current$ te wissen. Je kunt het later opnieuw proberen.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -204,13 +212,13 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Gefaald met nieuwe wachtrij genereren, opnieuw proberen in 5 seconden…"
+		"message": "Nieuwe wachtrij genereren mislukt, opnieuw proberen in 5 seconden…"
 	},
 	"explore_finished": {
 		"message": "Wachtrij is verkend."
 	},
 	"badges_idle_apps": {
-		"message": "Applicaties om stil te zetten: $amount$",
+		"message": "Apps om te inactief te krijgen: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -326,5 +334,96 @@
 	},
 	"options_footer1": {
 		"message": "Gemaakt met 💙 door de mensen bij <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Het is <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, dank aan alle bijdragers!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Uitgeschakelde selectievakjes geven ingebouwde functies aan."
+	},
+	"options_header_website": {
+		"message": "SteamDB website"
+	},
+	"options_header_extra_data": {
+		"message": "Extra gegevens"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Knoppen en links"
+	},
+	"options_header_inventory": {
+		"message": "Inventaris"
+	},
+	"options_header_trade_offers": {
+		"message": "Ruilaanbiedingen"
+	},
+	"options_header_enhancements": {
+		"message": "Verbeteringen"
+	},
+	"options_website_explanation": {
+		"message": "Toelichting"
+	},
+	"options_website_explanation1": {
+		"message": "Wanneer deze optie is ingeschakeld, zal de extensie sommige gebruikersgegevens opvragen (wenslijst, eigen-, gevolgd-, genegeerde producten, en producten in de winkelwagen) van de <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> en zal deze gebruiken om mankeringen toe te passen op de site."
+	},
+	"options_website_explanation2": {
+		"message": "Je moet ingelogd zijn in de Steam store om dit te laten werken."
+	},
+	"options_website_explanation3": {
+		"message": "Dit is volledig geïsoleerd in je browser en wordt nooit verzonden naar SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Om overtollige aanvragen te voorkomen naar de Steam Store, wordt je gebruikersdata opgeslagen in de lokale opslag van de browser."
+	},
+	"options_website_highlight": {
+		"message": "Mankeer eigen en wenslijst producten op $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Wensenlijst, volg en negeer producten in de Steam winkel rechtstreeks vanuit SteamDB"
+	},
+	"options_website_highlight3": {
+		"message": "Extra filtering inschakelen op <a href=\"https://steamdb.info/sales/\" target=\"_blank\">verkooppagina</a> en <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundel pagina</a>"
+	},
+	"options_extra_data": {
+		"message": "Extra gegevens opgehaald van $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Wanneer de \"$options_online_stats$\" of \"$options_steamdb_last_update$\" optie zijn ingeschakeld zal de extensie een veilig verzoek doen aan $domain$ om het huidige aantal spelers en de laatste update voor het spel te krijgen.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_button_pcgw": {
+		"message": "PCGamingWiki-knop weergeven op app-pagina's"
+	},
+	"options_github_explanation": {
+		"message": "Uitleg bekijken op GitHub"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Verwijder \"Je verlaat Steam\" link filter voor externe websites",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Accepteer Abonneeovereenkomst op de markt, inventaris en activeer belangrijke pagina's automatisch",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	}
 }

@@ -17,9 +17,6 @@
 	"view_on_pcgamingwiki": {
 		"message": "Vis på PCGamingWiki"
 	},
-	"view_your_achievements": {
-		"message": "Se dine prestasjoner"
-	},
 	"store_page": {
 		"message": "Butikkside"
 	},
@@ -96,5 +93,76 @@
 	},
 	"options_welcome_title": {
 		"message": "👋 Takk for at du installerte SteamDB utvidelsen!"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Gi tillatelser"
+	},
+	"options_footer1": {
+		"message": "Laget med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> -folkene."
+	},
+	"options_footer2": {
+		"message": "Det er <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">åpen kildekode</a>, takket være alle bidragsytere!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Deaktiverte avmerkingsbokser indikerer innebygde funksjoner."
+	},
+	"options_header_website": {
+		"message": "SteamDB Nettside"
+	},
+	"options_header_extra_data": {
+		"message": "Extra data"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Knapper og lenker"
+	},
+	"options_header_inventory": {
+		"message": "Lager"
+	},
+	"options_header_trade_offers": {
+		"message": "Tilbud om byttehandel"
+	},
+	"options_header_enhancements": {
+		"message": "Forbedringer"
+	},
+	"options_website_explanation": {
+		"message": "Forklaring"
+	},
+	"options_website_explanation1": {
+		"message": "Når dette alternativet er aktivert, vil utvidelsen be om noen brukerdata (Ønskelistet, eid, følget, ignorert produkter, og produkter i handlekurven) fra <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam-butikken</a> og vil bruke disse til å bruke høydepunkt på nettstedet."
+	},
+	"options_website_explanation2": {
+		"message": "Du må være logget inn på butikken for at dette skal fungere."
+	},
+	"options_website_explanation3": {
+		"message": "Dette blir helt i nettleseren og sendes aldri til og med til SteamDB-backend."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Vis den laveste registrerte prisen på appsider"
+	},
+	"options_button_gamehub": {
+		"message": "Vis en knapp på spillhubene"
+	},
+	"options_button_gamecards": {
+		"message": "Vis SteamDB og butikksideknapper på spillkortsiden"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Støtt $award$ parametere på profil og delte fil linker",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Vis det totale antallet av kort-dropp som gjenstår på emblemsiden"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Forbedre global prestasjonsside"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link til din egen prestasjonside"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Låste prestasjoner har et låseikon for mer synlighet"
 	}
 }

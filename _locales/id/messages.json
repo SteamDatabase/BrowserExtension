@@ -1,12 +1,20 @@
 {
 	"extension_description": {
-		"message": "Tambahkan tautan dan fitur baru SteamDB di toko dan komunitas Steam. Kunjungi statistik dan harga game terendah."
+		"message": "Menambahkan tautan SteamDB dan fitur baru di Toko Steam dan komunitas. Melihat harga permainan terendah dan statistik."
 	},
 	"steamdb_options": {
 		"message": "Pengaturan SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "Kalkulator SteamDB"
+	},
+	"steamstatus": {
+		"message": "Periksa di $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Steam tampaknya sedang mengalami gangguan. "
@@ -18,7 +26,7 @@
 		"message": "Lihat di PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Lihat pencapaian anda"
+		"message": "Pencapaian Pribadi"
 	},
 	"store_page": {
 		"message": "Halaman Toko"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Untuk mencegah permintaan berlebihan ke Steam, data anda di-cache di penyimpanan lokal anda."
 	},
+	"options_website_highlight": {
+		"message": "Menandai produk yang sudah dimiliki dan yang diinginkan di $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Wishlist, follow, dan abaikan produk yang ada di Steam langsung ke SteamDB"
 	},
@@ -375,11 +391,47 @@
 	"options_website_highlight3": {
 		"message": "Hidupkan filtering extra di <a href=\"https://steamdb.info/sales/\" target=\"_blank\">halaman diskon</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">halaman bundles</a>"
 	},
+	"options_extra_data": {
+		"message": "Data tambahan yang diambil dari $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Ketika opsi \"$options_online_stats$\" atau \"$options_steamdb_last_update$\" diaktifkan, ekstensi akan melakukan permintaan aman ke $domain$ untuk mendapatkan jumlah pemain saat ini dan pembaruan permainan terakhir.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Ketika opsi \"$options_steamdb_lowest_price$\" diaktifkan, ekstensi akan melakukan permintaan aman ke $domain$ dengan mata uang Anda (dengan apa yang dikira Steam) untuk mendapatkan catatan harga untuk permainan tertentu.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Tampilkan harga terendah yang tercatat di halaman aplikasi"
 	},
 	"options_online_stats": {
-		"message": "Tampilkan jumlah pemain saat ini dan dan puncak tertinggi pada halaman aplikasi"
+		"message": "Tampilkan jumlah pemain saat ini dan puncak tertinggi pada halaman aplikasi"
 	},
 	"options_steamdb_last_update": {
 		"message": "Tampilkan terakhir diperbarui di halaman aplikasi"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Tampilkan tombol pada halaman paket"
-	},
-	"options_button_video": {
-		"message": "Tampilkan tombol di halaman video"
 	},
 	"options_button_gamehub": {
 		"message": "Tampilkan tombol di game hubs"

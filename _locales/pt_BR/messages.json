@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "Calculadora do SteamDB"
 	},
+	"steamstatus": {
+		"message": "Conferir $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "O Steam parece estar momentaneamente indisponível. "
 	},
@@ -18,10 +26,10 @@
 		"message": "Ver na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Suas conquistas"
+		"message": "Conquistas pessoais"
 	},
 	"store_page": {
-		"message": "Página da loja"
+		"message": "Página na loja"
 	},
 	"search": {
 		"message": "Buscar"
@@ -77,20 +85,20 @@
 		"message": "Última atualização:"
 	},
 	"app_depots_updated_short": {
-		"message": "Atualizado",
+		"message": "Atualizado:",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Estatísticas on-line"
+		"message": "Estatísticas de jogadores"
 	},
 	"app_stats_online_now": {
-		"message": "Jogadores on-line:"
+		"message": "Jogando agora:"
 	},
 	"app_stats_peak_today": {
-		"message": "Últimas 24 horas:"
+		"message": "Pico diário:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Recorde de jogadores:"
+		"message": "Recorde:"
 	},
 	"app_stats_followers": {
 		"message": "Seguidores:"
@@ -167,10 +175,10 @@
 		"message": "Explorar automaticamente"
 	},
 	"explore_auto_discover_description": {
-		"message": "Explora automaticamente para ganhar uma carta do evento."
+		"message": "Explorar automaticamente para ganhar uma carta do evento."
 	},
 	"explore_generating": {
-		"message": "Gerando lista de descobrimento. Isso pode falhar caso o Steam esteja sob alta carga…"
+		"message": "Gerando lista de descobrimento. Esta operação pode falhar caso o Steam esteja instável."
 	},
 	"explore_exploring": {
 		"message": "Explorando a lista… Solicitação $current$ de $total$",
@@ -186,7 +194,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Falha ao remover o item $current$ da lista. Tentando novamente em 5 segundos…",
+		"message": "Falha ao remover o $current$º item da lista. Tentando novamente em 5 segundos…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -195,7 +203,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Múltiplas falha ao remover o item $current$ da lista. Tente novamente mais tarde.",
+		"message": "Houve muitas tentativas fracassadas ao tentar remover o $current$º item da lista. Tente novamente mais tarde.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -210,7 +218,7 @@
 		"message": "A lista de descobrimento foi explorada."
 	},
 	"badges_idle_apps": {
-		"message": "Aplicativos para coletar: $amount$",
+		"message": "Jogos com cartas: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -220,7 +228,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Aplicativos para coletar nesta página: $amount$",
+		"message": "Jogos com cartas nesta página: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -274,7 +282,7 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Anuncia o item de acordo com o anúncio mais baixo\n\nO preço exibido é o valor que você receberá (sem taxas)"
+		"message": "Anuncia o ‘item’ conforme o anúncio mais baixo\n\nO preço exibido é o valor que você receberá (sem taxas)"
 	},
 	"inventory_sell_at_title": {
 		"message": "Anuncia o item com o maior preço de encomenda\n\nO preço exibido é o valor que você receberá (sem taxas)"
@@ -319,10 +327,10 @@
 		"message": "Avalie a extensão"
 	},
 	"options_permissions_description": {
-		"message": "Esta extensão requer permissões adicionais para funcionar corretamente no SteamDB, na Loja Steam e na Comunidade Steam."
+		"message": "Esta extensão requer permissões adicionais para funcionar corretamente no site do SteamDB, na Loja Steam e na Comunidade Steam."
 	},
 	"options_permissions_button": {
-		"message": "⚠️ Conceder permissões"
+		"message": "⚠️ Solicitar permissões"
 	},
 	"options_footer1": {
 		"message": "Feito com 💙 pelo pessoal do <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -366,8 +374,16 @@
 	"options_website_explanation4": {
 		"message": "Para evitar solicitações excessivas à Loja Steam, os seus dados de usuário são armazenados em cache no armazenamento local do seu navegador."
 	},
+	"options_website_highlight": {
+		"message": "Destacar produtos adquiridos e desejados no site $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
-		"message": "Adicione ou remova produtos da lista de desejos e siga ou ignore aplicativos diretamente no site do SteamDB"
+		"message": "Ativar os botões de seguir, ignorar e adicionar à lista de desejos"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ativar o script \"Free Packages\"</a>"
@@ -375,14 +391,50 @@
 	"options_website_highlight3": {
 		"message": "Ativar filtros adicionais na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">página de promoções</a> e na <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">página de conjuntos</a>"
 	},
+	"options_extra_data": {
+		"message": "Dados adicionais obtidos de $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Quando as opções \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" estiverem ativadas, a extensão realizará uma requisição segura ao site $domain$ para obter informações sobre a quantidade atual de jogadores e a última atualização do jogo.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Quando a opção \"$options_steamdb_lowest_price$\" estiver ativada, a extensão realizará uma requisição segura ao site $domain$, usando a sua moeda local (de acordo com o Steam), para obter informações sobre o menor preço registrado de um jogo específico.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
-		"message": "Exibir o preço mais baixo registrado nas páginas dos aplicativos"
+		"message": "Exibir o menor preço registrado nas páginas dos aplicativos"
 	},
 	"options_online_stats": {
 		"message": "Exibir número atual de jogadores simultâneos e picos máximos nas páginas dos aplicativos"
 	},
 	"options_steamdb_last_update": {
-		"message": "Exibir data da última atualização nas páginas dos aplicativos"
+		"message": "Exibir a data da última atualização nas páginas dos aplicativos"
 	},
 	"options_button_app": {
 		"message": "Exibir um botão nas páginas dos aplicativos"
@@ -393,14 +445,11 @@
 	"options_button_sub": {
 		"message": "Exibir um botão nas páginas de pacotes"
 	},
-	"options_button_video": {
-		"message": "Exibir um botão nas páginas de vídeos"
-	},
 	"options_button_gamehub": {
-		"message": "Exibir um botão nas centrais do jogo"
+		"message": "Exibir um botão nas centrais de jogos"
 	},
 	"options_button_gamecards": {
-		"message": "Exibir botões para o SteamDB e a página da loja na página de insígnias do jogo"
+		"message": "Exibir botões para o SteamDB e para a página na loja na página de insígnias do jogo"
 	},
 	"options_link_subid": {
 		"message": "Exibir o ID do pacote (SubID) sob cada opção de compra"
@@ -409,7 +458,7 @@
 		"message": "Exibir o ID do pacote (SubID) em widgets de aplicativos"
 	},
 	"options_link_accountpage": {
-		"message": "Vincular cada pacote na sua página de licenças"
+		"message": "Associar cada licença ao seu pacote correspondente na página de licenças"
 	},
 	"options_profile_calculator": {
 		"message": "Adicionar um link de calculadora nos perfis da comunidade"
@@ -418,22 +467,22 @@
 		"message": "Mover seleção de jogo na página do inventário para o lado"
 	},
 	"options_link_inventory": {
-		"message": "Vincular cada cupom e presente em seu inventário ao SteamDB"
+		"message": "Associar presentes e cupons no inventário às páginas relevantes no SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Descubra corretamente a subID de presente no seu inventário"
+		"message": "Identificar corretamente o ID do pacote (SubID) de presentes guardados no inventário"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "Não atualizar o inventário quando vender um item"
+		"message": "Não atualizar o inventário ao vender um item"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "Adicionar botões de venda rápida"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "Aceitar automaticamente a venda rápida"
+		"message": "Confirmar anúncio de forma automática"
 	},
 	"options_display_market_price_others": {
-		"message": "Exibir o preço de mercado de itens no inventário de outros usuários"
+		"message": "Exibir o preço dos itens nos inventários de outros usuários"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suporte aos parâmetros $for_item$ e $my_item$",
@@ -456,13 +505,13 @@
 		"message": "Exibir mensagens de erro mais claras, em vez dos números de erro enigmáticos da Valve"
 	},
 	"options_enhancement_skip_agecheck": {
-		"message": "Ignorar página de verificação de idade"
+		"message": "Ignorar a página de verificação de idade"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Define os cookies de idade e aniversário para sempre passarem"
+		"message": "Define os cookies de idade e aniversário para sempre serem aceitos"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Remove o filtro de link \"Você está saindo da Steam\" de sites externos",
+		"message": "Remover o filtro de links externos",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
@@ -474,28 +523,28 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Ocultar banner \"Abrir no Steam\""
+		"message": "Ocultar o banner \"Abrir no aplicativo\""
 	},
 	"options_steamdb_rating": {
 		"message": "Exibir a classificação do SteamDB nas páginas dos aplicativos"
 	},
 	"options_enhancement_appicon": {
-		"message": "Exibir ícones de aplicativos nas páginas da loja e da comunidade"
+		"message": "Exibir o ícone do aplicativo nas páginas da Comunidade e na loja"
 	},
 	"options_hidden_achievements": {
 		"message": "Carregar conquistas ocultas e suas descrições"
 	},
 	"options_spoiler_achievements": {
-		"message": "Ocultar descrições por trás de um elemento spoiler"
+		"message": "Ocultar as descrições usando um elemento de spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Impedir o carregamento de imagens na loja de apps"
+		"message": "Impedir o carregamento de certas imagens nas páginas dos aplicativos"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Alguns desenvolvedores colocaram megabytes de imagens nas descrições do jogo que podem demorar um pouco para carregar, clique em uma imagem para carregar"
+		"message": "Alguns desenvolvedores incluem imagens desnecessariamente grandes nas descrições dos jogos, o que pode atrasar o carregamento de páginas. Clique no ícone de foto para carregá-las."
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Apoie parâmetros do $award$ no perfil e links de arquivos compartilhados",
+		"message": "Suporte ao parâmetro $award$ em links de perfis e conteúdo criado pela comunidade",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"
@@ -503,10 +552,10 @@
 		}
 	},
 	"options_builtin_card_drops": {
-		"message": "Mostrar a quantidade total de cartas restantes na página de insígnias"
+		"message": "Exibir o total de cartas disponíveis restantes na página de insígnias"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Adicione um botão para enganar a fila de descoberta durante as vendas"
+		"message": "Adicionar um botão para explorar automaticamente a lista de descobrimento durante promoções temáticas"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de conquistas globais"

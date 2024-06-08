@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB kalkulačka"
 	},
+	"steamstatus": {
+		"message": "Zkontrolujte $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Zdá se, že Steam má nějaký výpadek. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Zobrazit na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Zobrazit vaše achievementy"
+		"message": "Osobní úspěchy"
 	},
 	"store_page": {
 		"message": "Stránka v obchodě"
@@ -87,10 +95,10 @@
 		"message": "Právě online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24hodinový vrchol:"
+		"message": "24hodinový maximum:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Rekord:"
+		"message": "Celkový rekord:"
 	},
 	"app_stats_followers": {
 		"message": "Sledující:"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Aby se zabránilo nadměrným požadavkům na Steam Store, jsou vaše uživatelská data uložena v místním úložišti vašeho prohlížeče."
 	},
+	"options_website_highlight": {
+		"message": "Zvýraznit vlastněné a vysněné produkty na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Seznam přání, sledovat a ignorovat produkty v Steam obchodě přímo ze SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Povolit další filtrování na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">obchodní stránce</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčky</a>"
+	},
+	"options_extra_data": {
+		"message": "Další data načtena z $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Pokud je zvolena volba \"$options_online_stats$\" nebo \"$options_steamdb_last_update$, rozšíření provede bezpečný požadavek na $domain$ pro získání aktuálního počtu hráčů a poslední aktualizaci hry.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Když je volba \"$options_steamdb_lowest_price$\" povolena, rozšíření provede bezpečný požadavek na $domain$ s vaší měnou (tu kterou si myslí Steam, že je vaše) pro získání ceny specifické hry.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Zobrazit nejnižší zaznamenanou cenu na stránce s aplikacemi"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Zobrazit tlačítko na stránce s balíčky"
-	},
-	"options_button_video": {
-		"message": "Zobrazit tlačítko na video stránkách"
 	},
 	"options_button_gamehub": {
 		"message": "Zobrazit tlačítko na stránce s game huby"
@@ -460,6 +509,14 @@
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Nastaví věl a narozeninové cookies na vždy projít"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Odebrat filtr odkazů \"Opouštíte Steam\" při přecházení na externí stránky",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Automaticky příjmat Účastnickou smlouvu na trhu, inventáři a na stránce aktivace klíče",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skrýt tlačítko \"Instalovat Steam\" v záhlaví",

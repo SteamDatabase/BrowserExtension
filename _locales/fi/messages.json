@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB Laskin"
 	},
+	"steamstatus": {
+		"message": "Katso $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steamissä näyttä olevan toimintahäiriöitä. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Näytä PCGamingWikissä"
 	},
 	"view_your_achievements": {
-		"message": "Katso saavutuksesi"
+		"message": "Henkilökohtaiset saavutukset"
 	},
 	"store_page": {
 		"message": "Kauppasivu"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Estääksemme liialliset pyynnöt Steam-kauppaan, käyttäjätietosi tallennetaan selaimesi välimuistiin."
 	},
+	"options_website_highlight": {
+		"message": "Korosta omistetut ja toivotut tuotteet $domain$:ssa",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Lisää toivelistallesi, seuraa ja ohita Steam-kaupan tuotteita suoraan SteamDB:stä"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Ota käyttöön lisäsuodatukset <a href=\"https://steamdb.info/sales/\" target=\"_blank\">alennukset</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> paketit -sivuilla</a>"
+	},
+	"options_extra_data": {
+		"message": "Lisätiedot haettu $domain$:sta",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kun \"$options_online_stats$\" tai \"$options_steamdb_last_update$\" ovat käytössä, laajennus tekee salatun pyynnön $domain$:on saadakseen tämänhetkisen pelaajaluvun ja viimeisimmän pelin päivityksen.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kun \"$options_steamdb_lowest_price$\" on käytössä, laajennus tekee salatun pyynnön $domain$:on sinun valuutallasi (tai minkä Steam luulee valuuttasi olevan) saadakseen tallennetun hinnan kyseiselle pelille.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Näytä alhaisin tallennettu hinta kauppasivulla"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Näytä painike pakettisivuilla"
-	},
-	"options_button_video": {
-		"message": "Näytä painike videosivuilla"
 	},
 	"options_button_gamehub": {
 		"message": "Näytä painike yhteisökeskuksessa"

@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "เครื่องคำนวณ SteamDB"
 	},
+	"steamstatus": {
+		"message": "ดูใน $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "ดูเหมือนว่า Steam กำลังประสบปัญหาการหยุดทำงานอยู่บ้าง "
 	},
@@ -18,7 +26,7 @@
 		"message": "ดูบน PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "ดูความสำเร็จของคุณ"
+		"message": "รางวัลความสำเร็จส่วนตัว"
 	},
 	"store_page": {
 		"message": "หน้าร้านค้า"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "เพื่อป้องกันการร้องขอไปยังร้านค้า Steam มากเกินไป ข้อมูลผู้ใช้ของคุณจะถูกแคชไว้ในที่จัดเก็บในตัวเครื่องของเบราว์เซอร์ของคุณ"
 	},
+	"options_website_highlight": {
+		"message": "ไฮไลท์รายการที่เป็นเจ้าของและที่อยากได้ใน $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "รายการที่อยากได้, ติดตาม และเพิกเฉยต่อผลิตภัณฑ์บนร้านค้า Steam โดยตรงจาก SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "เปิดใช้งานการกรองเพิ่มเติมใน<a href=\"https://steamdb.info/sales/\" target=\"_blank\">หน้าการขาย</a> และ<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">หน้าบันเดิล</a>"
+	},
+	"options_extra_data": {
+		"message": "ข้อมูลเพิ่มเติมที่ดึงมาจาก $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "เมื่อเปิดใช้งานตัวเลือก \"$options_online_stats$\" หรือ \"$options_steamdb_last_update$\" ส่วนขยายจะส่งคำขอที่ปลอดภัยไปยัง $domain$ เพื่อรับจำนวนผู้เล่นในปัจจุบันและการอัปเดตเกมล่าสุด",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "เมื่อเปิดใช้งานตัวเลือก \"$options_steamdb_lowest_price$\" ส่วนขยายจะส่งคำขอที่ปลอดภัยไปยัง $domain$ ด้วยสกุลเงินของคุณ (ตามที่ Steam คิดว่าเป็น) เพื่อรับสถิติราคาสำหรับแต่ละเกม",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "แสดงราคาต่ำสุดที่บันทึกไว้บนหน้าแอป"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "แสดงปุ่มบนหน้าแพ็คเกจ"
-	},
-	"options_button_video": {
-		"message": "แสดงปุ่มบนหน้าวิดีโอ"
 	},
 	"options_button_gamehub": {
 		"message": "แสดงปุ่มบนฮับเกม"

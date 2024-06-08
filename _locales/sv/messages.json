@@ -6,7 +6,7 @@
 		"message": "SteamDB-inställningar"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB-kalkylator"
+		"message": "SteamDB Kalkylator"
 	},
 	"steamstatus": {
 		"message": "Kontrollera $domain$",
@@ -26,7 +26,7 @@
 		"message": "Visa på PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Se dina prestationer"
+		"message": "Personliga prestationer"
 	},
 	"store_page": {
 		"message": "Butikssida"
@@ -351,7 +351,7 @@
 		"message": "Knappar och länkar"
 	},
 	"options_header_inventory": {
-		"message": "Föremålsförråd"
+		"message": "Steams förråd"
 	},
 	"options_header_trade_offers": {
 		"message": "Bytesförslag"
@@ -399,11 +399,39 @@
 			}
 		}
 	},
+	"options_extra_data_players": {
+		"message": "När \"$options_online_stats$\" eller \"$options_steamdb_last_update$\" är aktiverat, kommer tillägget att göra en säker förfrågan till $domain$ för att få det aktuella antalet spelare och senaste speluppdateringen.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "När alternativet ”$options_steamdb_lowest_price$” är aktiverat så kommer tillägget att göra en säker begäran till $domain$ med din valuta (med vad Steam tror att den är) för att få det angivna priset för ett specifikt spel.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
-		"message": "Visa det lägsta registrerade priset på appsidor"
+		"message": "Visa det lägsta registrerade priset på produktsidor"
 	},
 	"options_online_stats": {
-		"message": "Visa aktuella samtidiga spelare och max peaks på appsidor"
+		"message": "Visa nuvarande antal spelare och maximala antal spelare på appsidor"
 	},
 	"options_steamdb_last_update": {
 		"message": "Visa den senaste uppdateringen på appsidor"
@@ -412,31 +440,28 @@
 		"message": "Visa en knapp på appsidor"
 	},
 	"options_button_pcgw": {
-		"message": "Visa en PCGamingWiki knapp på appsidor"
+		"message": "Visa en PCGamingWiki-knapp på appsidor"
 	},
 	"options_button_sub": {
 		"message": "Visa en knapp på paketsidor"
-	},
-	"options_button_video": {
-		"message": "Visa en knapp på videosidor"
 	},
 	"options_button_gamehub": {
 		"message": "Visa en knapp på spelhubbar"
 	},
 	"options_button_gamecards": {
-		"message": "Visa SteamDB och butikknappar på spelkortsidan"
+		"message": "Visa knapp för SteamDB och butik på sidan för samlarkort"
 	},
 	"options_link_subid": {
 		"message": "Visa SubID under varje köpalternativ"
 	},
 	"options_link_subid_widget": {
-		"message": "Visa SubID i appwidgets"
+		"message": "Visa SubID i varje butikswidget"
 	},
 	"options_link_accountpage": {
 		"message": "Länka varje paket på din licenssida"
 	},
 	"options_profile_calculator": {
-		"message": "Lägg till en kalkylatorlänk på gemenskapsprofiler"
+		"message": "Lägg till en priskalkylatorlänk på gemenskapsprofiler"
 	},
 	"options_enhancement_inventory_sidebar": {
 		"message": "Flytta spelväljaren i förrådet åt sidan"
@@ -448,19 +473,19 @@
 		"message": "Lista ut SubID för gåva i ditt förråd"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "Ladda inte om förrådet när en artikel säljs"
+		"message": "Ladda inte om förrådet när ett föremål säljs"
 	},
 	"options_enhancement_inventory_quick_sell": {
-		"message": "Lägg till snabbsäljningsknappar"
+		"message": "Lägg till snabbförsäljningsknappar"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "Acceptera snabbförsäljning automatiskt"
+		"message": "Godkänn snabbförsäljning automatiskt"
 	},
 	"options_display_market_price_others": {
-		"message": "Visa artiklars värde i andra användares förråd"
+		"message": "Visa föremålets marknadspris i andra användares förråd"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Stöd för $for_item$ och $my_item$ parametrar",
+		"message": "Lägg till stöd för parametrarna $for_item$ och $my_item$",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -474,44 +499,52 @@
 		"message": "Se förklaring på GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Dölj \"denna handel verkar misstänksam\" och \"är du säker på att detta är en gåva?\" bytesvarningar"
+		"message": "Dölj varningarna ”det här bytesförslaget verkar misstänkt” och ”är du säker på att det här är en gåva?”"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Visa bättre felmeddelanden, istället för Valves kryptiska felnummer"
+		"message": "Visa bättre felmeddelanden, istället för Valves kryptiska felkoder"
 	},
 	"options_enhancement_skip_agecheck": {
-		"message": "Hoppa över ålderkontrollssidan"
+		"message": "Hoppa över sidan för ålderskontroll"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Anger ålder och födelsedagskakor för att hoppa över ålderskontrollen"
+		"message": "Sätter ålders- och födelsedagskakor så att du alltid kan hoppa över åldersgränsen"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Ta bort länkfiltret ”Du lämnar Steam” för externa webbplatser",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Acceptera automatiskt Steams abonnentavtal på marknaden, förrådet och när du aktiverar en produkt",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Dölj \"Installera Steam\" knappen",
+		"message": "Dölj ”Installera Steam”-knappen",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Dölj \"Öppna i Steam\" bannern"
+		"message": "Dölj banderollen för \"Öppna i Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Visa SteamDB betyg på appsidor"
+		"message": "Visa SteamDB-betyg på produktsidor"
 	},
 	"options_enhancement_appicon": {
-		"message": "Visa appikoner på butik och gemenskapssidor"
+		"message": "Visa produktikoner på butiks- och gemenskapssidor"
 	},
 	"options_hidden_achievements": {
 		"message": "Ladda dolda prestationer och deras beskrivningar"
 	},
 	"options_spoiler_achievements": {
-		"message": "Dölj beskrivningar bakom spoilers"
+		"message": "Dölj beskrivningar bakom en spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Stoppa bilder från att ladda på appbutikssidor"
+		"message": "Hindra bilder från att ladda på appsidor i butiken"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Vissa utvecklare lägger flera megabyte av bilder i spelbeskrivningar vilket kan ta ett tag att ladda. Klicka på en bild för att ladda"
+		"message": "Vissa utvecklare lägger in megabyte med bilder i spelbeskrivningar som kan ta lång tid att ladda, klicka på en bild för att ladda"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Stöd för $award$ parametrar på profil och delade fillänkar",
+		"message": "Stöd för $award$-parametern på profillänkar, delade workshoplänkar och skärmdumplänkar",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"
@@ -519,18 +552,18 @@
 		}
 	},
 	"options_builtin_card_drops": {
-		"message": "Visa återstånde kort som kan hittas på märkessidan"
+		"message": "Visa totalt antal samlarkort som fortfarande kan släppas på märkessidan"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Lägg till en knapp för att fuska discovery-kön under reor"
+		"message": "Lägg till en knapp för att fuska i Discovery-kön under event"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Förbättra sidan för globala prestationer"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Länka till din egna prestationssida"
+		"message": "Lägg till länk till din egen prestationssida"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Låsta prestationer har en låsikon för bättre synlighet"
+		"message": "Lägg till en låsikon för prestationer för att förtydliga att de är låsta"
 	}
 }

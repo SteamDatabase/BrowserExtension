@@ -1,1 +1,109 @@
-{}
+{
+	"extension_description": {
+		"message": "SteamDB 링크와 Steam 스토어 및 커뮤니티에 새로운 기능을 추가합니다. 최저 게임 가격 및 통계 보기."
+	},
+	"steamdb_options": {
+		"message": "SteamDB 옵션"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB 계산기"
+	},
+	"steamstatus": {
+		"message": "$domain$에서 확인",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam 에 약간의 다운타임이 발생하고 있는 것 같습니다. "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB 에서 보기"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki 에서 보기"
+	},
+	"view_your_achievements": {
+		"message": "개인 성과"
+	},
+	"store_page": {
+		"message": "스토어 페이지"
+	},
+	"search": {
+		"message": "검색"
+	},
+	"id_app": {
+		"message": "앱 $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "서브 $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "번들 $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB 등급:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB 등급",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$중 $positive$개의 리뷰가 긍정적",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "마지막 업데이트:"
+	},
+	"app_depots_updated_short": {
+		"message": "업데이트",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "온라인 통계"
+	},
+	"app_stats_online_now": {
+		"message": "현재 온라인 :"
+	},
+	"app_stats_peak_today": {
+		"message": "24시간 동안의 최고 접속량"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "역대 최고 접속량"
+	},
+	"app_stats_followers": {
+		"message": "팔로워"
+	},
+	"app_nothing_selected": {
+		"message": "선택되지 않음"
+	}
+}

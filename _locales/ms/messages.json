@@ -17,9 +17,6 @@
 	"view_on_pcgamingwiki": {
 		"message": "Lihat di PCGamingWiki"
 	},
-	"view_your_achievements": {
-		"message": "Lihat pencapaian anda"
-	},
 	"store_page": {
 		"message": "Halaman Kedai"
 	},
@@ -186,12 +183,171 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Gagal untuk membersihkan Queue item #$current$, Cuba lagi selepas 5 saat…",
+		"message": "Gagal untuk mengosongkan Queue item #$current$, Cuba lagi selepas 5 saat…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
 				"example": "5"
 			}
 		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Gagal untuk mengosongkan Queue item #$current$ berulang banyak kali, Anda boleh cuba lagi kemudian.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Gagal untuk menjana Queue baharu, Cuba lagi selepas 5 saat…"
+	},
+	"explore_finished": {
+		"message": "Queue Telah di Teroka."
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Apps to idle dalam page ini: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Drops yang tinggal: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Drops yang tinggal dalam page ini: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Achievement tersembunyi: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Achievement tersembunyi, gerak mouse berikut untuk melihat: "
+	},
+	"inventory_list_at": {
+		"message": "Disenarai pada $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Dijual pada $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Senaraikan item untuk harga jualan yang tersenarai terendah\n\nTunjuk harga Money anda terima (tanpa fees)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Senaraikan item untuk harga jualan yang tersenarai tertinggi\n\nTunjuk harga Money anda terima (tanpa fees)"
+	},
+	"widget_view_app": {
+		"message": "Lihat app $id$ di SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Lihat sub $id$ di SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Options"
+	},
+	"options_welcome_title": {
+		"message": "👋 Terima kasih kerana Install SteamDB extension!"
+	},
+	"options_welcome_description": {
+		"message": "Lihat pilihan berikut and tekan salah satu toggle yang anda pilih. Untuk kembali kesini pada akan datang:"
+	},
+	"options_welcome_option1": {
+		"message": "Setting Page di SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "“Account” drop-down di Steam page"
+	},
+	"options_welcome_option3": {
+		"message": "Browser's addons page anda"
+	},
+	"options_review": {
+		"message": "Tinggalkan Review anda untuk extension ini"
+	},
+	"options_permissions_description": {
+		"message": "Extension memerlukan permissions tambahan untuk berfungsi di SteamDB, Steam Store, dan Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Grant permissions (Benarkan permissions)"
+	},
+	"options_footer1": {
+		"message": "Dicipta 💙 oleh warga <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Ini adalah <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, Terima kasih kepada yang membantu!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Pada checkboxes menunjukkan built-in features."
+	},
+	"options_header_website": {
+		"message": "SteamDB Website"
+	},
+	"options_header_extra_data": {
+		"message": "Data Tambahan"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Buttons dan links"
+	},
+	"options_header_inventory": {
+		"message": "Inventory"
+	},
+	"options_header_trade_offers": {
+		"message": "Trade Offers"
+	},
+	"options_header_enhancements": {
+		"message": "Penambahbaikan"
+	},
+	"options_website_explanation": {
+		"message": "Penjelasan"
+	},
+	"options_website_explanation1": {
+		"message": "Jika option ini dipilih, extansion akan meminta beberapa data pengguna (Senarai Diingini, Dimiliki, Mengikuti, Produk Diabaikan, dan produk dalam troli) dari <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> dan akan menggunakan ini untuk highlights di site ini."
+	},
+	"options_website_explanation2": {
+		"message": "Anda perlu Log in pada store untuk ini berfungsi."
+	},
+	"options_website_explanation3": {
+		"message": "Ini terkandung sepenuhnya dalam Browser anda dan Tidak akan dihantar walaupun pada SteamDB backend."
 	}
 }

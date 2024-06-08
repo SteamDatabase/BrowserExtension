@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "Calculadora de SteamDB"
 	},
+	"steamstatus": {
+		"message": "Comprova a $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Sembla que Steam està patint alguna mena de temps d'aturada. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Veure a PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Veure els teus assoliments"
+		"message": "Assoliments personals"
 	},
 	"store_page": {
 		"message": "Pàgina de la botiga"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Per evitar sol·licituds excessives a la Botiga de Steam, les teves dades d'usuari es guarden a l'emmagatzematge local del teu navegador."
 	},
+	"options_website_highlight": {
+		"message": "Ressalta productes en possessió i desitjats a $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Afegeix a desitjats, segueix i ignora productes de la botiga de Steam directament des de SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Activa el filtratge addicional a la <a href=\"https://steamdb.info/sales/\" target=\"_blank\">pàgina de vendes</a> i a la<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pàgina de paquets</a>"
+	},
+	"options_extra_data": {
+		"message": "Dades addicionals obtingudes de $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Quan l'opció de \"$options_online_stats$\" o \"$options_steamdb_last_update$\" és activa, l'extensió farà una sol·licitud segura a $domain$ per obtenir la quantitat de jugadors actual i l'última actualització del joc.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Quan l'opció de \"$options_steamdb_lowest_price$\" és activa, l'extensió farà una sol·licitud segura a $domain$ amb la teva moneda (amb la que Steam pensa que és) per obtenir el preu enregistrat per a un joc en específic.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Mostra el preu més baix enregistrat a les pàgines de l'aplicació"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Mostra un botó a les pàgines del paquet"
-	},
-	"options_button_video": {
-		"message": "Mostra un botó a les pàgines del vídeo"
 	},
 	"options_button_gamehub": {
 		"message": "Mostra un botó als hubs del jocs"
@@ -460,6 +509,14 @@
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Estableix les galetes d'edat i d'aniversari perquè sempre passin"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Elimina el filtre de \"Estàs sortint de Steam\" als enllaços externs",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Accepta l'Acord de Subscriptor al mercat, inventari, i activa les claus de pàgines automàticament",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Amaga el botó d'\"Instal·lar Steam\" a la capçalera",

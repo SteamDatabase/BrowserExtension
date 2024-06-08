@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB Kalkulator"
 	},
+	"steamstatus": {
+		"message": "Provjeri $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Izgldea da Steam je trenutačno nedustupan. "
 	},
@@ -16,9 +24,6 @@
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Pogledaj na PCGamingWiki-u"
-	},
-	"view_your_achievements": {
-		"message": "Pogledaj svoja Dostignuča"
 	},
 	"store_page": {
 		"message": "Prodajna Stranica"
@@ -120,6 +125,19 @@
 			}
 		}
 	},
+	"app_lowest_price_limited": {
+		"message": "Najniža SteamDB-ova rekordna cijena je <b>$price$</b>. U zadnje 2 godine iznosila je <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
 	"app_lowest_date": {
 		"message": "Cijena viđena $date$ ($relative$)",
 		"placeholders": {
@@ -132,5 +150,92 @@
 				"example": "71 months ago"
 			}
 		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Cijena viđena $seen$ puta, zadnji put $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automatski Otkrij"
+	},
+	"explore_auto_discover_description": {
+		"message": "Preskoči listu otkrivanja novih igrica, kako bi dobio event-karticu."
+	},
+	"explore_generating": {
+		"message": "Generiram novu listu za otkrivanje novih igrica, može doći do greške ako je Steam pod visokim opterećenjem…"
+	},
+	"explore_exploring": {
+		"message": "Otkrivanje Liste… Zahtjev $current$ od $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_finished": {
+		"message": "Lista je pretražena."
+	},
+	"badges_idle_apps": {
+		"message": "Programi s preostalim karticama: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Preostalo Kartica: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Kartica preostalo na ovoj stranici: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Skriveno Postignuće: "
+	},
+	"options_welcome_title": {
+		"message": "Hvala vam na instalaciji SteamDB proširenja!"
+	},
+	"options_header_extra_data": {
+		"message": "Dodatni podaci"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Tipke i linkovi"
+	},
+	"options_header_inventory": {
+		"message": "Inventar"
 	}
 }

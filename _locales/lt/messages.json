@@ -6,7 +6,15 @@
 		"message": "SteamDB nustatymai"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB kalkuliatorius"
+		"message": "SteamDB skaičiuotuvas"
+	},
+	"steamstatus": {
+		"message": "Patikrinti per $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Atrodo, kad Steam patiria tam tikrą veiklos sutrikimą. "
@@ -18,7 +26,7 @@
 		"message": "Peržiūrėti per PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Peržiūrėkite savo pasiekimus"
+		"message": "Asmeniniai pasiekimai"
 	},
 	"store_page": {
 		"message": "Parduotuvės tinklalapis"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Tam, kad būtų išvengta pernelyg didelių užklausų Steam parduotuvėje, jūsų naudotojo duomenys yra talpinami vietinėje naršyklės saugykloje."
 	},
+	"options_website_highlight": {
+		"message": "Paryškinti turimus ir pageidaujamus produktus esančius $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Pageidavimų sąrašas, sekimas ir prekių ignoravimas ant Steam parduotuvės tiesiai iš SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Įjungti papildomą filtravimą <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> pardavimų puslapyje</a> ir <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">komplektų puslapyje</a>"
+	},
+	"options_extra_data": {
+		"message": "Papildoma informacija, gauta iš $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kai \"$options_online_stats$\" arba \"$options_steamdb_last_update$\" parinktys yra įjungtos plėtinys padarys saugia užklausa $domain$ kad gautu dabartinį žaidėjų kiekį ir paskutini žaidimo atnaujinima.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kai \"$options_steamdb_lowest_price$\" parinktis yra įjungta, plėtinys atliks saugią užklausą į $domain$ su jūsų valiuta (su tokia, kokia Steam mano yra), kad gautų įrašyta konkretaus žaidimo kainą.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Rodyti mažiausią užregistruotą kainą programų puslapiuose"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Rodyti mygtuką paketų puslapiuose"
-	},
-	"options_button_video": {
-		"message": "Rodyti mygtuką vaizdo įrašų puslapiuose"
 	},
 	"options_button_gamehub": {
 		"message": "Rodyti mygtuką ant žaidimo centrų"

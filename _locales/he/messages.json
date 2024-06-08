@@ -17,9 +17,6 @@
 	"view_on_pcgamingwiki": {
 		"message": "הצג ב-PCGamingWiki"
 	},
-	"view_your_achievements": {
-		"message": "הצג את ההישגים שלך"
-	},
 	"store_page": {
 		"message": "עמוד המשחק בחנות"
 	},
@@ -355,9 +352,6 @@
 	"options_button_sub": {
 		"message": "הצג כפתור בעמודי חבילות"
 	},
-	"options_button_video": {
-		"message": "הצג כפתור בעמודי סירטונים"
-	},
 	"options_button_gamecards": {
 		"message": "הצג את כפתורי חנות סטים ו SteamDB בעמוד הקלפים"
 	},
@@ -408,6 +402,10 @@
 	"options_enhancement_no_linkfilter": {
 		"message": "להסיר את \"אתה עוזב את סטים\" פילטר בלחיצה על לינק לאתר חיצוני",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "אישרור אוטומטית של תנאי שימוש בחנות, תיק ועמודי הכנסת מפתח",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",

@@ -1,12 +1,20 @@
 {
 	"extension_description": {
-		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات اللعبة."
+		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات الألعاب."
 	},
 	"steamdb_options": {
 		"message": "خيارات SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "حاسبة SteamDB"
+	},
+	"steamstatus": {
+		"message": "تحقق في $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "يبدو أن ستيم يعاني بعض الأعطال. "
@@ -18,7 +26,7 @@
 		"message": "عرض على PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "عرض إنجازاتك"
+		"message": "الإنجازات الشخصية"
 	},
 	"store_page": {
 		"message": "صفحة المتجر"
@@ -61,7 +69,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ من $total$ مراجعات إيجابية (جميع أنواع الشراء)",
+		"message": "$positive$ من $total$ مراجعات إيجابية (جميع طرق الشراء)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -81,7 +89,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "إحصائيات الإنترنت"
+		"message": "إحصائيات المتصلين"
 	},
 	"app_stats_online_now": {
 		"message": "متصل الآن:"
@@ -90,7 +98,7 @@
 		"message": "الذروة على مدار 24 ساعة:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "الذروة القصوى:"
+		"message": "الذروة الإجمالية:"
 	},
 	"app_stats_followers": {
 		"message": "المتابِعون:"
@@ -250,13 +258,13 @@
 		}
 	},
 	"hidden_achievement": {
-		"message": "الإنجازات الخفية: "
+		"message": "الإنجازات المخفية: "
 	},
 	"hidden_achievement_hover": {
 		"message": "إنجاز مخفي، مرر الفأرة للكشف: "
 	},
 	"inventory_list_at": {
-		"message": "قائمة بسعر $price$",
+		"message": "اعرض بسعر $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -274,10 +282,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "يعرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (بدون رسوم)"
+		"message": "عَرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (دون رسوم)"
 	},
 	"inventory_sell_at_title": {
-		"message": "يُدرج العنصر بسعر أعلى طلب شراء مُدرَج\n\nالسعر المعروض هو المبلغ الذي تتلقاه (بدون رسوم)"
+		"message": "عَرض العنصر بأعلى سعر شراء مطلوب\n\nالسعر المعروض هو المبلغ الذي تتلقاه (دون رسوم)"
 	},
 	"widget_view_app": {
 		"message": "عرض التطبيق $id$ على SteamDB",
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "لمنع الطلبات الزائدة على متجر تسيم، يتم تخزين بيانات المستخدم الخاص بك في التخزين المحلي لمتصفحك."
 	},
+	"options_website_highlight": {
+		"message": "تسليط الضوء على المنتجات المملوكة والمتمنية على $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "قائمة الرغبات، متابعة، وتجاهل المنتجات على متجر Steam مباشرة من SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "تفعيل التصفية الإضافية على صفحة التخفيضات<a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">حزم الصفحة</a>"
+	},
+	"options_extra_data": {
+		"message": "بيانات إضافية تم جلبها من $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "عندما يتم تمكين خيار \"$options_online_stats$أو \"$options_steamdb_last_update$\"، التمديد سيقوم بطلب آمن لـ $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "عندما يتم تمكين خيار \"$options_steamdb_lowest_price$\" ، سيؤدي التحديد إلى طلب آمن لـ $domain$ بعملتك (مع ما يعتقد Steam أنها موجودة) للحصول على السعر المسجل للعبة معينة.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "عرض أقل سعر مسجل على صفحات التطبيق"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "عرض زر على صفحات الحزمة"
-	},
-	"options_button_video": {
-		"message": "عرض زر على صفحات الفيديو"
 	},
 	"options_button_gamehub": {
 		"message": "عرض زر على محاور اللعبة"

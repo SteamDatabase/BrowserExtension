@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB 账号价值计算器"
 	},
+	"steamstatus": {
+		"message": "在 $domain$ 上查看详情",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steam 似乎出现了一些故障。 "
 	},
@@ -18,7 +26,7 @@
 		"message": "在 PCGamingWiki 上查看"
 	},
 	"view_your_achievements": {
-		"message": "查看您的成就"
+		"message": "个人成就"
 	},
 	"store_page": {
 		"message": "商店页面"
@@ -87,10 +95,10 @@
 		"message": "实时在线人数："
 	},
 	"app_stats_peak_today": {
-		"message": "24小时最高在线人数："
+		"message": "24小时峰值人数："
 	},
 	"app_stats_alL_time_peak": {
-		"message": "历史最高在线人数："
+		"message": "历史峰值人数："
 	},
 	"app_stats_followers": {
 		"message": "关注数："
@@ -121,7 +129,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，2 年内的最低价格为 <b>$price_limited$</b>",
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，2 年内史低为 <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -253,7 +261,7 @@
 		"message": "隐藏成就: "
 	},
 	"hidden_achievement_hover": {
-		"message": "隐藏成就，鼠标移至上方即可显示: "
+		"message": "隐藏成就，鼠标悬停查看： "
 	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
@@ -277,7 +285,7 @@
 		"message": "以市场中的最低上架价格上架物品\n\n显示的价格是您收到的实际金额(不含手续费)"
 	},
 	"inventory_sell_at_title": {
-		"message": "以市场订购单的最高出价出售物品\n\n显示的价格是您收到的实际金额(不含手续费)"
+		"message": "以市场最高订购单价格出售项目\n\n显示的价格是您收到的金额(不含费用)"
 	},
 	"widget_view_app": {
 		"message": "在 SteamDB 上查看 app $id$",
@@ -316,7 +324,7 @@
 		"message": "您的浏览器插件页面"
 	},
 	"options_review": {
-		"message": "评论本扩展"
+		"message": "为这个扩展留下评论"
 	},
 	"options_permissions_description": {
 		"message": "此扩展需要额外的权限才能在 SteamDB、Steam 商店和 Steam 社区正常工作。"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "为了防止向 Steam 发送过多的请求，您的用户数据被缓存在您的浏览器的本地存储中。"
 	},
+	"options_website_highlight": {
+		"message": "在 $domain$ 上高亮您已拥有和在愿望单中的产品",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "直接在 SteamDB 上管理 Steam 商店的愿望单、关注和忽略内容"
 	},
@@ -373,7 +389,43 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">启用批量激活免费游戏包脚本</a>"
 	},
 	"options_website_highlight3": {
-		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页面</a>和<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
+		"message": "在 <a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页</a> 和 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
+	},
+	"options_extra_data": {
+		"message": "从 $domain$ 获取的额外数据",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "当 ”$options_online_stats$“ 或 ”$options_steamdb_last_update$“ 选项被启用时，此拓展程序将向 $domain$ 发送一个安全的请求，以获取当前的在线玩家数目以及游戏上次更新的时间",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "当启用 “$options_steamdb_lowest_price$” 选项时，此扩展程序将向 $domain$ 发送一个包含您当前使用的货币 (即现在 Steam 上使用的货币) 信息的安全的请求，以获取特定游戏的历史最低价格。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "在 app 商店页面上显示历史最低价格"
@@ -393,14 +445,11 @@
 	"options_button_sub": {
 		"message": "在游戏包页面上显示按钮"
 	},
-	"options_button_video": {
-		"message": "在视频页面上显示按钮"
-	},
 	"options_button_gamehub": {
 		"message": "在游戏中心上显示按钮"
 	},
 	"options_button_gamecards": {
-		"message": "在卡牌页面上显示 SteamDB 和 Store Page 按钮"
+		"message": "在卡牌页面上显示 SteamDB 和商店页面按钮"
 	},
 	"options_link_subid": {
 		"message": "在每个购买选项下显示 SubID"
@@ -424,7 +473,7 @@
 		"message": "在库存中显示礼物的 SubID"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "上架物品后阻止库存页面刷新"
+		"message": "上架物品时阻止库存页面刷新"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "添加快速售出按钮"
@@ -515,6 +564,6 @@
 		"message": "链接到您自己的成就页面"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "使用锁定图标表示已锁定的成就来提高可见性"
+		"message": "锁定的成就有一个锁定图标以提高可见性"
 	}
 }

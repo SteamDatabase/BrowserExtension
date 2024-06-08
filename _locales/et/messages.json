@@ -8,8 +8,25 @@
 	"steamdb_calculator": {
 		"message": "SteamDB kalkulaator"
 	},
+	"steamstatus": {
+		"message": "Rist on $domain$ peal",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Tundub et Steam ootab mõningat seisakut. "
+	},
 	"view_on_steamdb": {
 		"message": "Vaata SteamDB-s"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Vaata PCGamingWiki peal"
+	},
+	"view_your_achievements": {
+		"message": "Personaalsed saavutused"
 	},
 	"store_page": {
 		"message": "Poeleht"
@@ -26,12 +43,43 @@
 			}
 		}
 	},
+	"id_sub": {
+		"message": "Alam $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Kimp $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Hindamine:"
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " STEAMDB HINDAMINE",
 		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ $total$est arvustustest on positiivsed (kõik maksmisvõimalused)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
 	},
 	"app_depots_update": {
 		"message": "Viimane uuendus:"
@@ -40,11 +88,45 @@
 		"message": "Uuendatud",
 		"description": "Visible on the mobile version"
 	},
+	"app_stats_online": {
+		"message": "Võrgus Statistika"
+	},
+	"app_stats_online_now": {
+		"message": "Võrgus praegu:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-tunni tipp:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Kõigi-aegade tipp:"
+	},
 	"app_stats_followers": {
 		"message": "Jälgijad:"
 	},
 	"app_nothing_selected": {
 		"message": "midagi pole valitud"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> allahindlusega <b>$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
 	},
 	"widget_view_app": {
 		"message": "Vaata äpp $id$ SteamDB-s",

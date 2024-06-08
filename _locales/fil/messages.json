@@ -1,6 +1,92 @@
 {
+	"extension_description": {
+		"message": "Nagdagdag ng mga link ng SteamDB at mga bagong feature sa Steam store at komunidad. Tingnan ang pinakamababang presyo at istatistika ng laro."
+	},
+	"steamdb_options": {
+		"message": "Mga option ng SteamDB"
+	},
+	"steamdb_calculator": {
+		"message": "Calculator ng SteamDB"
+	},
+	"steamstatus": {
+		"message": "Tingnan ito sa $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Mukhang nakakaranas ng downtime ang Steam. "
+	},
+	"view_on_steamdb": {
+		"message": "Tingnan ito sa SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Tingnan ito sa PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Iyong mga achievements"
+	},
+	"store_page": {
+		"message": "Store Page"
+	},
+	"search": {
+		"message": "Maghanap"
+	},
+	"id_app": {
+		"message": "Ika-$id$ na app",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "Ika-$id$ na sub",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Ika-$id$ na bundle",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "Rating sa SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " RATING SA STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ sa $total$ na mga review ay positibo (lahat ng uri ng pagbili)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
 	"app_depots_update": {
 		"message": "Huling Update:"
+	},
+	"app_depots_updated_short": {
+		"message": "Na-update",
+		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
 		"message": "Estadistika ng Online"
@@ -10,6 +96,15 @@
 	},
 	"app_stats_peak_today": {
 		"message": "Pinakamataas sa loob ng 24 na oras:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "All-time na peak:"
+	},
+	"app_stats_followers": {
+		"message": "Mga nagfo-follow:"
+	},
+	"app_nothing_selected": {
+		"message": "walang napili"
 	},
 	"app_lowest_price": {
 		"message": "Ang pinakamababang naitalang presyo sa SteamDB ay <b>$price$</b>",
@@ -33,11 +128,164 @@
 			}
 		}
 	},
+	"app_lowest_price_limited": {
+		"message": "Ang pinakamababang naitalang presyo ng SteamDB ay <b>$price$</b> at ang pinakamababa sa 2 taon ay <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Nakita ang presyo sa $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Nakita ang presyo ng $seen$ beses, noong $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Awtomatikong pag-discover"
+	},
+	"explore_auto_discover_description": {
+		"message": "Awtomatikong i-discover ang queue para makakuha ng event card."
+	},
+	"explore_generating": {
+		"message": "Bumubuo ng bagong discovery queue, maaari itong hindi magtagumpay kung marami ang nag-access sa Steam sa parehong oras…"
+	},
+	"explore_exploring": {
+		"message": "Ine-explore ang queue... Ikaw ang ika-$current$ ng $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Hindi matagumpay ang pag-clear ng queue item #$current$, susubukan muli sa limang segundo…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Hindi matagumpay ang pag-clear ng queue item na #$current$ nang masyadong maraming beses. Maaari mong subukan muli sa ibang pagkakataon.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Hindi matagumpay ang pagbuo ng bagong queue, susubukan muli sa limang segundo…"
+	},
+	"explore_finished": {
+		"message": "Na-explore na ang queue."
+	},
+	"badges_idle_apps": {
+		"message": "Mga idle na app: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Mga idle na app sa page na ito: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Natitira na mga drop: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Natitira na mga drop sa page na ito: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"hidden_achievement": {
 		"message": "Nakatagong achievement: "
 	},
 	"hidden_achievement_hover": {
 		"message": "Nakatagong achievement, i-hover para makita: "
+	},
+	"inventory_list_at": {
+		"message": "Ilista ito ng $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Ibenta ito ng $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Inililista ang item para sa pinakamababang nakalistang presyo ng pagbebenta\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Inililista ang item para sa pinakamataas na nakalistang presyo ng buy order\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
 	},
 	"widget_view_app": {
 		"message": "Tingnan ang app $id$ sa SteamDB",
@@ -47,5 +295,275 @@
 				"example": "730"
 			}
 		}
+	},
+	"widget_view_sub": {
+		"message": "Tingnan ang ika-$id$ na sub sa SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Mga Option"
+	},
+	"options_welcome_title": {
+		"message": "👋 Salamat sa pag-install sa extension ng SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Suriin ang mga opsyon sa ibaba at i-toggle ang mga gusto mo. Para makabalik dito sa hinaharap:"
+	},
+	"options_welcome_option1": {
+		"message": "Page ng mga setting sa SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Dropdown ng account sa mga page ng Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Mga page ng addon sa iyong browser"
+	},
+	"options_review": {
+		"message": "Mag-iwan ng review para sa extension na ito"
+	},
+	"options_permissions_description": {
+		"message": "Ang extension na ito ay nangangailangan ng karagdagang mga permiso upang gagana nang tama sa SteamDB, Steam Store, at Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Magbigay ng mga permiso"
+	},
+	"options_footer1": {
+		"message": "Ginawa gamit ang buong pagmamahal 💙 ng <a href=\"https://steamdb.info\" target=\"_blank\"> mga tao sa SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Ito ay <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, salamat sa lahat ng mga kontribyutor!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Ang mga naka-disable na checkbox ay palatandaan na ito ay built-in na feature."
+	},
+	"options_header_website": {
+		"message": "Website ng SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Karagdagang Data"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Mga button at link"
+	},
+	"options_header_inventory": {
+		"message": "Inventory"
+	},
+	"options_header_trade_offers": {
+		"message": "Mga Offer ng Pag-trade"
+	},
+	"options_header_enhancements": {
+		"message": "Mga Enhancement"
+	},
+	"options_website_explanation": {
+		"message": "Paliwanag"
+	},
+	"options_website_explanation1": {
+		"message": "Kapag pinagana ang opsyong ito, hihiling ang extension ng ilang data ng user (na-wishlist, mga pagmamay-ari, mga nai-follow, na-ignore na mga produkto, at mga produkto sa cart) mula sa <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> at gagamitin ang mga ito upang maglapat ng mga highlight sa site."
+	},
+	"options_website_explanation2": {
+		"message": "Kailangan na naka-log in ka sa store para gumana ito."
+	},
+	"options_website_explanation3": {
+		"message": "Ito ay nasa loob ng iyong browser lamang at hindi kailanman ipinadala kahit sa backend ng SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Upang maiwasan ang labis na mga pag-request sa Steam Store, naka-cache ang data ng iyong user sa lokal na storage ng iyong browser."
+	},
+	"options_website_highlight": {
+		"message": "I-highlight ang mga pag-aari at gustong produkto sa $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Wishlist, mga nai-follow, at na-ignore na mga produkto sa Steam store nang direkta mula sa SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Paganahin ang script ng mga libreng package</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Paganahin ang karagdagang pag-filter sa <a href=\"https://steamdb.info/sales/\" target=\"_blank\">page ng pagbebenta</a> at <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">page ng mga bundle</a>"
+	},
+	"options_extra_data": {
+		"message": "Karagdagang data na nakuha mula sa $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kapag pinagana ang opsyong \"$options_online_stats$\" o \"$options_steamdb_last_update$\", gagawa ang extension ng secure na request sa $domain$ para makuha ang kasalukuyang halaga ng mga manlalaro at huling update sa laro.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kapag pinagana ang opsyong \"$options_steamdb_lowest_price$\", gagawa ang extension ng secure na request sa $domain$ gamit ang iyong pera (kung ano ang iniisip ng Steam) para makuha ang naitalang presyo para sa isang partikular na laro.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Ipakita ang pinakamababang naitalang presyo sa mga page ng app"
+	},
+	"options_online_stats": {
+		"message": "Ipakita ang mga kasabay na manlalaro at max peak sa mga page ng app"
+	},
+	"options_steamdb_last_update": {
+		"message": "Ipakita ang huling update sa mga page ng app"
+	},
+	"options_button_app": {
+		"message": "Ipakita ang button sa mga page ng app"
+	},
+	"options_button_pcgw": {
+		"message": "Ipakita ang PCGamingWiki na button sa mga page ng app"
+	},
+	"options_button_sub": {
+		"message": "Ipakita ang button sa mga page ng package"
+	},
+	"options_button_gamehub": {
+		"message": "Ipakita ang button sa mga game hub"
+	},
+	"options_button_gamecards": {
+		"message": "Ipakita ang SteamDB at mga button ng page sa mga game card"
+	},
+	"options_link_subid": {
+		"message": "Ipakita ang SubID sa ilalim ng bawat opsyon sa pagbili"
+	},
+	"options_link_subid_widget": {
+		"message": "Ipakita ang SubID sa mga widget ng app"
+	},
+	"options_link_accountpage": {
+		"message": "I-link ang bawat package sa page ng iyong mga lisensya"
+	},
+	"options_profile_calculator": {
+		"message": "Magdagdag ng link ng calculator sa mga profile ng komunidad"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Ilipat sa gilid ang pagpili ng laro sa page ng inventory"
+	},
+	"options_link_inventory": {
+		"message": "I-link ang bawat regalo at kupon sa iyong inventory sa SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Tamang alamin ang SubID ng regalo sa iyong inventory"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Huwag i-refresh ang inventory kapag nagbebenta ng item"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Magdagdag ng mga pindutan ng quick sell"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Awtomatikong tumanggap ng quick sell"
+	},
+	"options_display_market_price_others": {
+		"message": "Ipakita ang presyo ng item sa mga inventory ng ibang mga user"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Suportahan ang $for_item$ at $my_item$ na mga parameter",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Tingnan ang paliwanag sa GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Pigilan ang \"this trade appears suspicious\" at \"are you sure this is a gift?\" na mga alerto ng pag-offer ng trade"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Magpakita ng mas mahusay na mga mensahe ng error, sa halip na mga misteryosong numero ng error ng Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Laktawan ang page ng pagsusuri sa edad"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Itakda ang edad at birthday na mga cookie para laging pumasa"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Alisin ang filter ng link na \"You are leaving Steam\" mula sa mga panlabas na site",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Tanggapin ang Agreement ng Subscriber sa market, inventory, at awtomatikong i-activate ang mga pangunahing page",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Itago ang button na \"Install Steam\" sa header",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Itago ang banner na \"Open in the Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "Ipakita ang rating ng SteamDB sa mga page ng app"
+	},
+	"options_enhancement_appicon": {
+		"message": "Ipakita ang mga icon ng app sa mga page ng store at komunidad"
+	},
+	"options_hidden_achievements": {
+		"message": "Ipakita ang mga nakatagong achievements at ang kanilang mga deskripsyon"
+	},
+	"options_spoiler_achievements": {
+		"message": "Itago ang mga achievements gamit ang spoiler na element"
+	},
+	"options_prevent_store_images": {
+		"message": "Pigilan ang paglo-load ng mga larawan sa mga page ng app store"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Ang ilang mga developer ay naglagay ng mga megabyte ng mga larawan sa mga deskripsyon ng laro na maaaring resulta ng matagal na pag-load, i-click ang isang imahe upang ma-load"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Suportahan ang mga parameter ng $award$ sa mga link ng profile at mga nai-share na mga link ng file",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Ipakita ang kabuuang halaga ng mga natitira na card drop sa page ng mga badge"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Magdagdag ng button para dayain ang discovery queue habang nagbebenta"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Pagbutihin ang page ng mga achievements"
+	},
+	"options_builtin_achievements_link": {
+		"message": "I-link sa iyong sariling page ng mga achievement"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Mayroong lock na icon ang mga naka-lock na mga achievements para indikasyon nito na naka-lock ito"
 	}
 }

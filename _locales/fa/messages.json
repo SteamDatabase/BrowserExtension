@@ -1,24 +1,32 @@
 {
 	"extension_description": {
-		"message": "استیم دی بی لینک و ویژگی های جدیدی به فروشگاه استیم و کامیونیتی اضافه می کند. مشاهده پایین ترین قیمت بازی و آمار."
+		"message": "SteamDB لینک و ویژگی های جدیدی به فروشگاه استیم و کامیونیتی اضافه می کند. پایین ترین قیمت های بازی و آمار را مشاهده کنید."
 	},
 	"steamdb_options": {
-		"message": "ویژگی های استیم دی بی"
+		"message": "ویژگی های SteamDB"
 	},
 	"steamdb_calculator": {
-		"message": "ماشین حساب استیم دی بی"
+		"message": "ماشین حساب SteamDB"
+	},
+	"steamstatus": {
+		"message": "در $domain$ مشاهده کنید",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
-		"message": "به نظر می رسد استیم دچار برخی خرابی شده است. "
+		"message": "به نظر می رسد استیم دچار مدتی از کار افتادگی شده است. "
 	},
 	"view_on_steamdb": {
-		"message": "مشاهده در استیم دی بی"
+		"message": "مشاهده در SteamDB"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "مشاهده در پی سی گیمینگ ویکی"
+		"message": "مشاهده در PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "دستاورد های خود را مشاهده کنید"
+		"message": "دستاورد های شخصی"
 	},
 	"store_page": {
 		"message": "صفحه فروشگاه"
@@ -27,7 +35,7 @@
 		"message": "جستجو"
 	},
 	"id_app": {
-		"message": "برنامه $id$",
+		"message": "App $id$",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -35,12 +43,43 @@
 			}
 		}
 	},
+	"id_sub": {
+		"message": "Sub $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "Bundle $id$",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
 	"app_steamdb_rating": {
-		"message": "رتبه بندی استیم دی پی:"
+		"message": "امتیاز SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " رتبه بندی استیم دی بی",
+		"message": " امتیاز STEAMDB",
 		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "تعداد $positive$ از مجموع $total$ بررسی مثبت هستند(تمامی انواع خریدها)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
 	},
 	"app_depots_update": {
 		"message": "آخرین بروزرسانی:"
@@ -68,7 +107,7 @@
 		"message": "هیچ چیز انتخاب نشده"
 	},
 	"app_lowest_price": {
-		"message": "کمترین قیمت ثبت شده در استیم دی بی <b>$price$</b>",
+		"message": "کمترین قیمت ثبت شده در استیم دی بی <b>$price$</b> است",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -77,7 +116,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "کمترین قیمت ثبت شده در استیم دی بی <b>$price$</b> در <b>-$discount$%</b> است",
+		"message": "کمترین قیمت ثبت شده در استیم دی بی <b>$price$</b> با تخفیف <b>-$discount$%</b> است",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -89,8 +128,21 @@
 			}
 		}
 	},
+	"app_lowest_price_limited": {
+		"message": "کمترین قیمت ثبت شده در SteamDB <b>$price$</b> و کمترین قیمت در 2 سال گذشته <b>-$price_limited$%</b> است",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
 	"app_lowest_date": {
-		"message": "مشاهده قیمت در $date$ ($relative$)",
+		"message": "قیمت مشاهده شده در $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -102,26 +154,117 @@
 			}
 		}
 	},
+	"app_lowest_date_multiple": {
+		"message": "این قیمت $seen$ بار مشاهده شده است، آخرین بار در $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
 	"explore_auto_discover": {
-		"message": "جست و جوی خودکار"
+		"message": "اکتشاف خودکار"
 	},
 	"explore_auto_discover_description": {
-		"message": "به‌طور خودکار صف دریافت کارت رویداد را کشف کنید."
+		"message": "به‌طور خودکار صف را کشف کنید تا کارت رویداد را دریافت کنید."
 	},
 	"explore_generating": {
-		"message": "استیم ممکن است به خاطر فشار بار زیاد در ایجاد صف کشف جدید شکست بخورد…"
+		"message": "درحال ساخت صف اکتشاف جدید، عملیات ممکن است درصورت وجود فشار بار زیاد بر روی استیم شکست بخورد…"
+	},
+	"explore_exploring": {
+		"message": "درحال گشت و گذار در صف… شماره درخواست $current$ از $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "خطا در روند پاکسازی آیتم شماره $current$ از لیست، تللاش دوباره در 5 ثانیه دیگر…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "تعداد خطا در روند پاکسازی آیتم شماره $current$ از لیست بیش از حد می باشد، می توانید بعدا دوباره امتحان کنید.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "خطا در ایجاد لیست جدید، تلاش دوباره در 5 ثانیه دیگر…"
 	},
 	"explore_finished": {
-		"message": "صف بررسی شده است."
+		"message": "صف اکتشاف شده است."
+	},
+	"badges_idle_apps": {
+		"message": "بازی های دارای دراپ: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "بازی های دارای دراپ در صفحه فعلی: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "دراپ های باقی‌مانده: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "دراپ های باقی‌مانده در صفحه فعلی: $amount$‌",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"hidden_achievement": {
 		"message": "دستاورد مخفی: "
 	},
 	"hidden_achievement_hover": {
-		"message": "دستاورد مخفی موس خودرا روی آن قرار دهید تا نمایان شود: "
+		"message": "دستاورد مخفی، موس خود را روی آن قرار دهید تا نمایان شود: "
 	},
 	"inventory_list_at": {
-		"message": "خرید از $price$",
+		"message": "خرید به قیمت $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -130,7 +273,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "فروش از $price$",
+		"message": "فروش به قیمت $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -139,13 +282,22 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "محصول را برای کمترین قیمت فروش ثبت شده فهرست می کند\n\n قیمت نمایش داده شده پولی است که دریافت می کنید (بدون کارمزد)"
+		"message": "محصول را برای کمترین قیمت خرید ثبت شده فهرست می کند\n\n قیمت نمایش داده شده پولی است که شما دریافت می کنید (بدون کارمزد)"
 	},
 	"inventory_sell_at_title": {
-		"message": "آیتم را برای بالاترین قیمت سفارش خرید فهرست شده لیست می کند\n\n قیمت نمایش داده شده پولی است که دریافت می کنید (بدون کارمزد)"
+		"message": "آیتم را برای بالاترین قیمت سفارش خرید فهرست شده لیست می کند\n\n قیمت نمایش داده شده پولی است که شما دریافت می کنید (بدون کارمزد)"
 	},
 	"widget_view_app": {
-		"message": "مشاهده در برنامه $id$ در استیم دی بی",
+		"message": "مشاهده app $id$ در SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "مشاهده sub $id$ در SteamDB",
 		"placeholders": {
 			"id": {
 				"content": "$1",
@@ -157,12 +309,261 @@
 		"message": "تنظیمات"
 	},
 	"options_welcome_title": {
-		"message": "👋 متشکریم بابت نصب افزونه استیم دی بی!"
+		"message": "👋 بابت نصب افزونه SteamDB متشکریم!"
 	},
 	"options_welcome_description": {
-		"message": "گزینه های زیر را بررسی کنید و گزینه هایی را که ترجیح می دهید را تغییر دهید. برای بازگشت در آینده به اینجا:"
+		"message": "تنظیمات زیر را بررسی کنید و مواردی را که ترجیح می دهید، تغییر دهید. برای بازگشت به اینجا در آینده:"
+	},
+	"options_welcome_option1": {
+		"message": "صفحه تنظیمات در SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "منوی کشویی حساب در صفحات استیم"
+	},
+	"options_welcome_option3": {
+		"message": "صفحه افزونه های مرورگر خود"
 	},
 	"options_review": {
-		"message": "بررسی خود برای این افزونه را ثبت کنید"
+		"message": "نظر خود را برای این افزونه ثبت کنید"
+	},
+	"options_permissions_description": {
+		"message": "این افزونه برای کارکرد صحیح در SteamDB، فروشگاه استیم، و استیم کامیونیتی نیاز به دسترسی های اضافی دارد."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ اعطای دسترسی ها"
+	},
+	"options_footer1": {
+		"message": "ساخته شده با 💙 توسط کارمندان <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "این یک پروژه <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">متن باز</a> است، با تشکر از تمامی مشارکت کنندگان!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* چک باکس های خاموش نمایانگر قابلیت های داخلی هستند."
+	},
+	"options_header_website": {
+		"message": "وبسایت SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "داده های اضافی"
+	},
+	"options_header_buttons_and_links": {
+		"message": "دکمه ها و لینک ها"
+	},
+	"options_header_inventory": {
+		"message": "انباری"
+	},
+	"options_header_trade_offers": {
+		"message": "درخواست های ترید"
+	},
+	"options_header_enhancements": {
+		"message": "بهبودها"
+	},
+	"options_website_explanation": {
+		"message": "توضیحات"
+	},
+	"options_website_explanation1": {
+		"message": "زمانی که این گزینه فعال باشد، افزونه مقداری از اطلاعات کاربر(مانند ویش‌لیست، بازی های خریداری شده،دنبال شده و محصولات داخل سبد خرید) را از <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">فروشگاه استیم</a> درخواست می کند و از آن برای هایلایت کردن در سایت استفاده خواهد کرد."
+	},
+	"options_website_explanation2": {
+		"message": "برای به کار افتادن این افزونه باید وارد حساب استیم خود در فروشگاه شوید."
+	},
+	"options_website_explanation3": {
+		"message": "این اطلاعات تنها در مرورگر شما ذخیره شده و هرگز به جایی از جمله بک اند SteamDB ارسال نخواهد شد."
+	},
+	"options_website_explanation4": {
+		"message": "برای جلوگیری از ارسال درخواست های بیش از حد به فروشگاه استیم، اطلاعات کاربری شما در داخل حافظه محلی مرورگر شما کش شده است."
+	},
+	"options_website_highlight": {
+		"message": "هایلایت بازی های خریداری شده و یا دنبال شده در $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Wishlist کردن، دنبال کردن، و نادیده گرفتن بازی ها مستقیما از SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">فعال کردن اسکریپت پکیج های رایگان</a>"
+	},
+	"options_website_highlight3": {
+		"message": "فعال کردن فیلتر های اضافه برای <a href=\"https://steamdb.info/sales/\" target=\"_blank\">صفحه تخفیفات</a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">صفحه باندل ها</a>"
+	},
+	"options_extra_data": {
+		"message": "اطلاعات اضافی دریافت شده از $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "زمانی که گزینه $options_online_stats$ یا $options_steamdb_last_update$ فعال باشند، این افزونه یک درخواست امن به $domain$ ارسال می‌کند تا تعداد بازیکنان همزمان و آخرین به روز رسانی بازی را دریافت کند.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "زمانی که گزینه $options_steamdb_lowest_price$ فعال باشد، افزونه یک درخواست امن با ارز ریجن شما(چیزی که در حساب استیم تان ثبت شده باشد) به $domain$ ارسال می‌کند تا قیمت ثبت شده یک بازی خاص را دریافت کند.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "نمایش کمترین قیمت ثبت شده در صفحات بازی ها و برنامه ها"
+	},
+	"options_online_stats": {
+		"message": "نمایش بازیکن های همزمان کنونی و اوج تعداد بازیکن ها در صفحات بازی ها و برنامه ها"
+	},
+	"options_steamdb_last_update": {
+		"message": "نمایش آخرین به روز رسانی در صفحات بازی ها و برنامه ها"
+	},
+	"options_button_app": {
+		"message": "نمایش یک دکمه در صفحات بازی ها و برنامه ها"
+	},
+	"options_button_pcgw": {
+		"message": "نمایش دکمه PCGamingWiki در صفحات بازی ها و برنامه ها"
+	},
+	"options_button_sub": {
+		"message": "نمایش یک دکمه در صفحات پکیج ها"
+	},
+	"options_button_gamehub": {
+		"message": "نمایش یک دکمه در صفحات کامیونیتی بازی ها"
+	},
+	"options_button_gamecards": {
+		"message": "نمایش دکمه های SteamDB و صفحه فروشگاه در صفحات کارت های بازی ها"
+	},
+	"options_link_subid": {
+		"message": "نمایش SubID زیر هر یک از گزینه های خرید"
+	},
+	"options_link_subid_widget": {
+		"message": "نمایش SubID در ویجت های بازی ها و برنامه ها"
+	},
+	"options_link_accountpage": {
+		"message": "لینک کردن هر پکیج در صفحه لایسنس های خود"
+	},
+	"options_profile_calculator": {
+		"message": "افزودن یک دکمه ماشین حساب در پروفایل های کامیونیتی"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "انتقال لیست انتخابی بازی ها در صفحه انباری به بغل"
+	},
+	"options_link_inventory": {
+		"message": "لینک کردن هر گیفت و کوپن در انباری خود به SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "نمایش صحیح SubID های گیفت ها در انباری خود"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "عدم رفرش کردن صفحه انباری هنگام فروش آیتم"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "افزودن دکمه فروش سریع"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "قبول کردن فروش سریع به طور خودکار"
+	},
+	"options_display_market_price_others": {
+		"message": "نمایش قیمت هر آیتم در صفحه اینونتوری دیگر کاربران"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "پشتیبانی از پارامتر های $for_item$ و $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "نمایش توضیحات در گیت‌هاب"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "مخفی کردن هشدارهای \"this trade appears suspicious\" یا \"are you sure this is a gift\" در درخواست ترید"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "نمایش پیام خطاهای بهتر به جای اعداد مرموز مربوط به خطاها از سمت Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "رد کردن صفحه بررسی سن"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "کوکی های مربوط به سن و تاریخ تولد را به \"همیشه قبول کن\" تغییر می دهد"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "حذف صفحه \"You are leaving Steam\" به هنگام باز کردن لینک های ناشناس",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "قبول اتوماتیک قوانین استیم در صفحات مارکت، انباری و فعالسازی کلید",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "مخفی کردن دکمه \"Install Steam\" در بالای صفحه",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "مخفی کردن بنر \"Open in the Steam\""
+	},
+	"options_steamdb_rating": {
+		"message": "نمایش امتیاز SteamDB در صفحات بازی ها و برنامه ها"
+	},
+	"options_enhancement_appicon": {
+		"message": "نمایش آیکون بازی یا برنامه در صفحات فروشگاه و کامیونیتی"
+	},
+	"options_hidden_achievements": {
+		"message": "نمایش دستاوردهای مخفی و توضیحات شان"
+	},
+	"options_spoiler_achievements": {
+		"message": "مخفی کردن توضیحات پشت یک محافظ اسپویلر"
+	},
+	"options_prevent_store_images": {
+		"message": "جلوگیری از بالا آمدن تصاویر در صفحات فروشگاه بازی ها و برنامه ها"
+	},
+	"options_prevent_store_images_description": {
+		"message": "بعضی از توسعه دهندگان تصاویر حجیمی را در بخش توضیحات محصول قرار میدهند که بالا آمدنشان زمان زیادی می برد، در عوض روی هر عکس کلیک کنید تا بالا بیاید"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "پشتیبانی از پارامتر $award$ در لینک های shared file و لینک های پروفایل",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "نمایش تعداد دراپ های کارت باقی‌مانده در صفحات Badges"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "افزودن یک دکمه برای فریب دادن صف اکتشاف در ایام تخفیفات"
+	},
+	"options_builtin_achievements_global": {
+		"message": "بهبود صفحه دستاوردها"
+	},
+	"options_builtin_achievements_link": {
+		"message": "لینک کردن به صفحه دستاوردهای خود"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "دستاوردهای قفل شده برای خوانایی بهتر دارای آیکن قفل هستند"
 	}
 }

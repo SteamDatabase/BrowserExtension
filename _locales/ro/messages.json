@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "Calculator SteamDB"
 	},
+	"steamstatus": {
+		"message": "Verifica $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steam pare să se confrunte cu conexiune la moment. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Vezi pe PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Vezi achievement-uri tale"
+		"message": "Realizări personale"
 	},
 	"store_page": {
 		"message": "Pagina magazinului"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Pentru a preveni cereri excesive către magazinul Steam, datele tale de utilizator sunt stocate în memoria locală a browser-ului tău."
 	},
+	"options_website_highlight": {
+		"message": "Evidențiați produsele deținute și dorite pe $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Doriți să urmați și să ignorați produsele din magazinul Steam direct din SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Activați filtrarea suplimentară pe pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de vânzări</a> și <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pachete (bundles)</a>"
+	},
+	"options_extra_data": {
+		"message": "Date suplimentare preluate de la $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Când opțiunea „$options_online_stats$” sau „$options_steamdb_last_update$” este activată, extensia va face o solicitare sigură către $domain$ pentru a obține numărul actual de jucători și ultima actualizare a jocului.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Când opțiunea „$options_steamdb_lowest_price$” este activată, extensia va face o solicitare sigură către $domain$ cu banii dvs. (cu ceea ce crede Steam că este) pentru a obține prețul înregistrat pentru un anumit joc.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Afișează cel mai mic preț înregistrat pe paginile aplicațiilor"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Afișează un buton pe paginile pachetului"
-	},
-	"options_button_video": {
-		"message": "Afișează un buton pe paginile video"
 	},
 	"options_button_gamehub": {
 		"message": "Afișează un buton pe hub-uri jocului"
@@ -460,6 +509,14 @@
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Setează cookie-urile zilei de naștere și vârstă pentru a trece întotdeauna"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Eliminați filtrul de link „Părăsiți Steam” de pe site-uri externe",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Acceptați Acordul de abonat pe piață, inventar și activați automat paginile cheie",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ascunde butonul \"Instalează Steam\" în antet",

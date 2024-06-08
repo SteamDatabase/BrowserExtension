@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "Calcolatore SteamDB"
 	},
+	"steamstatus": {
+		"message": "Controlla su $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Sembra che Steam stia sperimentando un errore di server temporaneo. "
 	},
@@ -18,7 +26,7 @@
 		"message": "Visualizza su PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Visualizza i tuoi obiettivi"
+		"message": "Achievement Personali"
 	},
 	"store_page": {
 		"message": "Pagina del negozio"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "Per evitare richieste eccessive al negozio di Steam, i dati utente vengono memorizzati nella cache nella memoria locale del browser."
 	},
+	"options_website_highlight": {
+		"message": "Evidenzia i prodotti posseduti e desiderati $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "Lista dei desideri, segui e ignora i prodotti sul negozio Steam direttamente da SteamDB"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "Abilita filtraggio extra sulla pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">di vendita</a> e <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundle</a>"
+	},
+	"options_extra_data": {
+		"message": "Dati aggiuntivi recuperati da $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Quando l'opzione \"$options_online_stats$\" o \"$options_steamdb_last_update$\" è abilitata, l'estensione farà una richiesta sicura a $domain$ ottenere il numero attuale di giocatori e l'ultimo aggiornamento del gioco.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Quando l'opzione \"$options_steamdb_lowest_price$\" è abilitata, l'estensione farà una richiesta sicura a $domain$ con il tuo saldo (con ciò che Steam pensa che sia) prende e registra il prezzo per un gioco specifico.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "Mostra il prezzo più basso registrato nelle pagine delle app"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "Mostra un pulsante sulle pagine del pacchetto"
-	},
-	"options_button_video": {
-		"message": "Visualizzare un pulsante sulle pagine delle app"
 	},
 	"options_button_gamehub": {
 		"message": "Visualizza un pulsante sul hub di gioco"
@@ -460,6 +509,14 @@
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Imposta i cookie di età e compleanno per passare sempre"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Rimuovi il filtro link \"Stai uscendo da Steam\" da siti esterni",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Accetta il contratto di abbonamento sul mercato, sull'inventario e attiva automaticamente le pagine chiave",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Nascondi il pulsante \"Installa Steam\" nell'intestazione",

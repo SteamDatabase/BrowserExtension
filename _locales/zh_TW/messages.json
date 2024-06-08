@@ -8,6 +8,14 @@
 	"steamdb_calculator": {
 		"message": "SteamDB 計算機"
 	},
+	"steamstatus": {
+		"message": "前往$domain$查看",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "Steam 似乎遇到了停機時間。 "
 	},
@@ -18,7 +26,7 @@
 		"message": "在 PCGamingWiki 上檢視"
 	},
 	"view_your_achievements": {
-		"message": "檢視您的成就"
+		"message": "個人成就"
 	},
 	"store_page": {
 		"message": "商店頁面"
@@ -366,6 +374,14 @@
 	"options_website_explanation4": {
 		"message": "為了防止對 Steam 商店發出過多請求，用戶資料會將快取放在瀏覽器的本機端。"
 	},
+	"options_website_highlight": {
+		"message": "在$domain$標記已擁有和在願望清單上的產品",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "直接從 SteamDB 中新增願望清單、追蹤並忽略 Steam 商店中的產品"
 	},
@@ -374,6 +390,42 @@
 	},
 	"options_website_highlight3": {
 		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">販售頁面</a>和<a href=\"https://steamdb.info/bundles/\"目標啟用額外過濾=\"_blank\">捆綁包頁面</a>"
+	},
+	"options_extra_data": {
+		"message": "更多從$domain$取得的資料",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "當打開 \"$options_online_stats$\" 或 \"$options_steamdb_last_update$\" 選項時，擴充程式會向$domain$傳送請求已取得在線玩家數和最近的更新日誌。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "當 \"$options_steamdb_lowest_price$\" 選項啟用時，擴充程式將向$domain$發出請求以取得特定遊戲在您使用(即在 Steam 所設定) 的貨幣之歷史最低價格。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
 	},
 	"options_steamdb_lowest_price": {
 		"message": "在 App 頁面顯示最低記錄價格"
@@ -392,9 +444,6 @@
 	},
 	"options_button_sub": {
 		"message": "在 App 頁面顯示按鈕"
-	},
-	"options_button_video": {
-		"message": "在影片頁面顯示按鈕"
 	},
 	"options_button_gamehub": {
 		"message": "在遊戲中心顯示按鈕"
@@ -460,6 +509,14 @@
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "將年齡和生日 cookie 設定為始終略過"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "關閉在前往外部網站時顯示的「你正在離開 Steam 」警示",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "自動勾選市集、庫存與產品啟動頁面的「同意 Steam 訂戶協議」選項",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "隱藏標題中的「安裝 Steam」按鈕",
