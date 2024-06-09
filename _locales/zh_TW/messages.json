@@ -36,36 +36,6 @@
 	"search": {
 		"message": "搜尋"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Bundle $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB 評分："
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "關注者："
-	},
-	"app_nothing_selected": {
-		"message": "未選擇任何內容"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB 最低記錄價格為 <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "價格已出現 $seen$ 次，上次出現在 $date$（$relative$）",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "列出最高購買訂單價格的項目\n顯示的價格是您收到的金額（不含服務費）"
-	},
-	"widget_view_app": {
-		"message": "在 SteamDB 上檢視 App $id$",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "在 SteamDB 上檢視 Sub $id$",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "選項"

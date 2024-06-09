@@ -3,7 +3,7 @@
 		"message": "Menambah pautan SteamDB dan ciri-ciri baharu pada kedai dan komuniti Steam. Lihat harga terendah permainan dan statistik."
 	},
 	"steamdb_options": {
-		"message": "Option SteamDB"
+		"message": "Pilihan SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "Kalkulator SteamDB"
@@ -35,36 +35,6 @@
 	},
 	"search": {
 		"message": "Cari"
-	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Bundle $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
 	},
 	"app_steamdb_rating": {
 		"message": "Penilaian SteamDB:"
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Para Pengikut:"
-	},
-	"app_nothing_selected": {
-		"message": "tiada yang dipilih"
 	},
 	"app_lowest_price": {
 		"message": "Rekod harga terendah SteamDB<b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Harga dilihat $seen$ kali, pada $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Senaraikan item untuk harga jualan yang tersenarai tertinggi\n\nTunjuk harga Money anda terima (tanpa fees)"
-	},
-	"widget_view_app": {
-		"message": "Lihat app $id$ di SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Lihat sub $id$ di SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Options"
@@ -514,6 +464,12 @@
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Paparkan mesej ralat yang lebih baik, bukannya nombor ralat samar Valve"
 	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Langkau halaman semakan umur"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Menetapkan kuki umur dan tarikh lahir kepada lulus sentiasa"
+	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Alih keluar penapis pautan \"Anda meninggalkan Steam\" daripada tapak luaran",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
@@ -521,6 +477,13 @@
 	"options_enhancement_market_ssa": {
 		"message": "Terima Subscriber Agreement di market, inventory, dan activate key page secara automatik",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Sembunyi butang \"Pasang Steam\" pada rentangan",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Sembunyi rentangan \"Buka di dalam Steam\""
 	},
 	"options_steamdb_rating": {
 		"message": "Paparkan rating SteamDB pada halaman produk"
@@ -530,6 +493,12 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Sesetengah pembangun meletakkan megabyte imej dalam penerangan produk yang boleh mengambil sedikit masa untuk dimuatkan, klik pada imej untuk dimuatkan"
+	},
+	"options_builtin_card_drops": {
+		"message": "Papar jumlah baki 'card drops' pada halaman lencana"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Menambah baik paparan pencapaian global"
 	},
 	"options_builtin_achievements_link": {
 		"message": "Paut ke halaman pencapaian anda sendiri"

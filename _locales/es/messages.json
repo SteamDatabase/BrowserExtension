@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Buscar"
 	},
-	"id_app": {
-		"message": "Aplicación $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Paquete $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Lote $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Valoración de SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Seguidores:"
-	},
-	"app_nothing_selected": {
-		"message": "nada seleccionado"
 	},
 	"app_lowest_price": {
 		"message": "El precio más bajo registrado en SteamDB es de <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Precio visto $seen$ veces, la última el $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Lista el artículo al precio más alto del pedido de compra.\n\nEl precio mostrado es el dinero que recibes (sin tasas)"
-	},
-	"widget_view_app": {
-		"message": "Ver la aplicación $id$ en SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Ver el paquete $id$ en SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Opciones"

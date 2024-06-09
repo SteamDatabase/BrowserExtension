@@ -3,10 +3,10 @@
 		"message": "Hozzáadja A SteamDB linkjeit és új funkcióit a Steam Áruház és Közösség oldalaihoz. Megtekinthetőek a legalacsonyabb játékárak és különböző statisztikák."
 	},
 	"steamdb_options": {
-		"message": "SteamDB Beállítások"
+		"message": "SteamDB beállítások"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB Számológép"
+		"message": "SteamDB kalkulátor"
 	},
 	"steamstatus": {
 		"message": "Részletek: $domain$",
@@ -27,7 +27,7 @@
 		"message": "Megtekintés itt: PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Saját teljesítmények"
+		"message": "Személyes teljesítmények"
 	},
 	"store_page": {
 		"message": "Áruházi oldal",
@@ -36,38 +36,8 @@
 	"search": {
 		"message": "Keresés"
 	},
-	"id_app": {
-		"message": "$id$. alkalmazás",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "$id$. csomag",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "$id$. köteg",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
-		"message": "SteamDB Értékelés:"
+		"message": "SteamDB értékelés:"
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " STEAMDB ÉRTÉKELÉS",
@@ -108,11 +78,8 @@
 	"app_stats_followers": {
 		"message": "Követők:"
 	},
-	"app_nothing_selected": {
-		"message": "nincs kiválasztott elem"
-	},
 	"app_lowest_price": {
-		"message": "A SteamDB által ismert legkisebb ára <b>$price$</b>",
+		"message": "A SteamDB által rögzített legalacsonyabb ár <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Ez az ár $seen$ esetben fordult elő, utoljára $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -199,7 +167,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "#$current$ várolista elem törlése nem sikerült, újrapróbálás öt másodperc múlva…",
+		"message": "$current$. várólistaelem törlése sikertelen, újrapróbálás öt másodperc múlva…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -292,24 +260,6 @@
 	"inventory_sell_at_title": {
 		"message": "Tárgy felajánlása eladásra a legmagasabb vételi áron\n\nA megjelenített ár az összeg amit meg fogsz kapni (azaz díjak nélkül)"
 	},
-	"widget_view_app": {
-		"message": "$id$. alkalmazás megtekintése SteamDB-n",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "$id$ megtekintése a SteamDB-n",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
 	"options": {
 		"message": "Beállítások"
 	},
@@ -317,7 +267,7 @@
 		"message": "👋 Köszönjük, hogy telepítetted a SteamDB bővítményt!"
 	},
 	"options_welcome_description": {
-		"message": "Tekintse át az alábbi lehetőségeket, és kapcsolja be a kívántakat. Hogy a jövőben visszatérhessen ide:"
+		"message": "Tekintsd át az alábbi beállításokat, és módosítsd azokat kedved szerint. Az alábbi módokon térhetsz vissza ide később:"
 	},
 	"options_welcome_option1": {
 		"message": "Beállítások oldal a SteamDB-n"
@@ -353,7 +303,7 @@
 		"message": "További adatok"
 	},
 	"options_header_buttons_and_links": {
-		"message": "Gombok és linkek"
+		"message": "Gombok és hivatkozások"
 	},
 	"options_header_inventory": {
 		"message": "Raktár"
@@ -374,7 +324,7 @@
 		"message": "Ez a szolgáltatás csak az áruházba bejelentkezve működik."
 	},
 	"options_website_explanation3": {
-		"message": "Minden a böngésződben van tárolva és nincs elküldve a SteamDB-nek."
+		"message": "Ez teljesen mértékben a böngésződben történik, és sohasem kerül továbbításra a SteamDB szervereire sem."
 	},
 	"options_website_explanation4": {
 		"message": "A Steam Áruház túlzott terhelésének elkerülése érdekében felhasználói adataid a böngésződ helyi tárhelyén tárolódnak."
@@ -424,7 +374,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Amikor a \"$options_steamdb_lowest_price$\" opció be van kapcsolva, a bővítmény biztonságos kérést küld a $domain$ számára az általad jelenleg (Steam szerint) használt pénznemmel, hogy megkapja a SteamDB által feljegyzett legalacsonyabb árát a megadott játéknak.",
+		"message": "Amikor a(z) „$options_steamdb_lowest_price$” opció be van kapcsolva, a bővítmény biztonságos kérést küld a(z) $domain$ számára az általad (Steam szerint) használt pénznemmel, hogy lekérje a SteamDB által rögzített legalacsonyabb árát egy adott játéknak.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -452,23 +402,23 @@
 		"message": "PCGamingWiki gomb megjelenítése az alkalmazások oldalain"
 	},
 	"options_button_sub": {
-		"message": "Gomb megjelenítése a csomagoldalakon"
+		"message": "Gomb megjelenítése a csomagok oldalain"
 	},
 	"options_button_gamehub": {
-		"message": "Gomb megjelenítése a közösségi központokban"
+		"message": "Gomb megjelenítése a közösségközpontokon"
 	},
 	"options_button_gamecards": {
 		"message": "SteamDB és áruház oldal gombok megjelenítése a játékkártyák oldalán"
 	},
 	"options_link_subid": {
-		"message": "SubID megjelenítése minden egyes vásárlási opció alatt"
+		"message": "SubID megjelenítése a vásárlási lehetőségek alatt"
 	},
 	"options_link_subid_widget": {
-		"message": "SubID megjelenítése az alkalmazás widgetjeiben",
+		"message": "SubID megjelenítése beágyazott widgetekben",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Linkelje az egyes csomagokat az engedélyek oldalán"
+		"message": "Hivatkozás minden csomaghoz a licencek oldalán"
 	},
 	"options_profile_calculator": {
 		"message": "Számológép link hozzáadása a közösségi profilokhoz"
@@ -477,10 +427,10 @@
 		"message": "Játékválasztó áthelyezése oldalra a raktárakban"
 	},
 	"options_link_inventory": {
-		"message": "Összes raktárban lévő ajándék és kupon SteamDB-hez kapcsolása"
+		"message": "SteamDB-re mutató hivatkozások megjelenítése az összes raktárban lévő ajándéknál és kuponnál"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "A raktárban lévő ajándékokhoz tartozó alazonosító (SubID) helyes meghatározása"
+		"message": "Raktárban lévő ajándékok csomagazonosítóinak pontos meghatározása"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne frissüljön a raktár tárgyak eladásakor"
@@ -555,7 +505,7 @@
 		"message": "Néhány fejlesztő több megabájtnyi képet helyez el a termékeik leírásában, amelyek betöltése egy ideig eltarthat; kattints egy képre a betöltéséhez"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "$award$ paraméterek támogatása a profil oldalon és megosztott fájl linkeken",
+		"message": "$award$ paraméterek támogatása a profilok és a megosztott fájlok hivatkozásain",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"

@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Ara"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Bundle $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Puanı:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Takipçi:"
-	},
-	"app_nothing_selected": {
-		"message": "hiçbir şey seçilmedi"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB verilerine göre en düşük fiyatı <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "En son $date$ ($relative$) tarihi olmak üzere bu fiyat toplamda $seen$ kez görüldü",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -199,7 +167,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Kuyrukta bulunan $current$. sıradaki öğe temizlenemedi, beş saniye içinde tekrar denenecek…",
+		"message": "Kuyruktaki $current$. içerik atlanamadı, beş saniye içinde tekrar denenecek…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -208,7 +176,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Kuyrukta bulunan $current$. sıradaki öğeyi temizleme işlemi birçok kez başarısız oldu. Daha sonra tekrar deneyebilirsiniz.",
+		"message": "Kuyruktaki $current$. içerik pek çok kez atlanamaya çalışıldı ancak geçilemedi. Daha sonra tekrar deneyin.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -223,7 +191,7 @@
 		"message": "Kuyruk keşfedildi."
 	},
 	"badges_idle_apps": {
-		"message": "Boşta duracak uygulamalar: $amount$",
+		"message": "Kart düşürebilen uygulamalar: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -233,7 +201,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Bu sayfada boşta duracak uygulamalar: $amount$",
+		"message": "Bu sayfadaki kart düşürebilen uygulamalar: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -243,7 +211,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Düşürülebilecek kalan kart sayısı: $amount$",
+		"message": "Düşürülebilecek kart sayısı: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -253,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Bu sayfada kalan düşürülebilecek kart sayısı: $amount$",
+		"message": "Bu sayfadaki düşebilecek kart sayısı: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Listelenen en yüksek sipariş fiyatına öğeyi listeler\n\nGösterilen fiyat alacağınız miktardır (komisyonsuz)"
-	},
-	"widget_view_app": {
-		"message": "SteamDB'de app $id$ içeriğini görüntüle",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "SteamDB'de sub $id$ içeriğini görüntüle",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Ayarlar"

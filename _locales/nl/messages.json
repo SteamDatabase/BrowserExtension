@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Zoeken"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Bundel $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Beoordeling:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Volgers:"
-	},
-	"app_nothing_selected": {
-		"message": "niets geselecteerd"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB laagst opgenomen prijs is <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Prijs $seen$ keer gezien, laatst op $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Vermeld het item voor de hoogst vermelde vraagprijs\n\nWeergegeven prijs is het geld dat je krijgt (zonder vergoedingen)"
-	},
-	"widget_view_app": {
-		"message": "Geef app $id$ weer op SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Geef sub $id$ weer op SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Opties"

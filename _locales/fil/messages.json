@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Maghanap"
 	},
-	"id_app": {
-		"message": "Ika-$id$ na app",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Ika-$id$ na sub",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Ika-$id$ na bundle",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Rating sa SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Mga nagfo-follow:"
-	},
-	"app_nothing_selected": {
-		"message": "walang napili"
 	},
 	"app_lowest_price": {
 		"message": "Ang pinakamababang naitalang presyo sa SteamDB ay <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Nakita ang presyo ng $seen$ beses, noong $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -292,24 +260,6 @@
 	"inventory_sell_at_title": {
 		"message": "Inililista ang item para sa pinakamataas na nakalistang presyo ng buy order\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
 	},
-	"widget_view_app": {
-		"message": "Tingnan ang app $id$ sa SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Tingnan ang ika-$id$ na sub sa SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
 	"options": {
 		"message": "Mga Option"
 	},
@@ -436,14 +386,36 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "Ipakita ang pinakamababang naitalang presyo sa mga page ng produkto"
+	},
+	"options_online_stats": {
+		"message": "Ipakita ang mga kasalukuyang kasabay na manlalaro at max peak sa mga page ng produkto"
+	},
+	"options_steamdb_last_update": {
+		"message": "Ipakita ang huling update sa mga page ng produkto"
+	},
+	"options_button_app": {
+		"message": "Ipakita ang button sa mga page ng produckto"
+	},
+	"options_button_pcgw": {
+		"message": "Ipakita ang PCGamingWiki na button sa mga page ng produkto"
+	},
 	"options_button_sub": {
 		"message": "Ipakita ang button sa mga page ng package"
+	},
+	"options_button_gamehub": {
+		"message": "Ipakita ang button sa community hubs"
 	},
 	"options_button_gamecards": {
 		"message": "Ipakita ang SteamDB at mga button ng page sa mga game card"
 	},
 	"options_link_subid": {
 		"message": "Ipakita ang SubID sa ilalim ng bawat opsyon sa pagbili"
+	},
+	"options_link_subid_widget": {
+		"message": "Ipakita ang SubID sa naka-embed na widget",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "I-link ang bawat package sa page ng iyong mga lisensya"
@@ -513,11 +485,24 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Itago ang banner na \"Open in the Steam\""
 	},
+	"options_steamdb_rating": {
+		"message": "Ipakita ang mga rating ng SteamDB sa mga page ng app"
+	},
+	"options_enhancement_appicon": {
+		"message": "Ipakita ang icon ng produkto sa store at community pages",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "Ipakita ang mga nakatagong achievements at ang kanilang mga deskripsyon"
 	},
 	"options_spoiler_achievements": {
 		"message": "Itago ang mga achievements gamit ang spoiler na element"
+	},
+	"options_prevent_store_images": {
+		"message": "Pigilan ang paglo-load ng mga larawan sa mga page ng produkto"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Mayroong mga developer na naglalagay ng mga megabyte sa mga larawan sa deskripsyon ng produkto na maaaring resulta ng matagal na pag-load, mag-click sa isang larawan upang ma-load"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Suportahan ang mga parameter ng $award$ sa mga link ng profile at mga nai-share na mga link ng file",
@@ -529,6 +514,9 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Ipakita ang kabuuang halaga ng mga natitira na card drop sa page ng mga badge"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Magdagdag ng button para awtomatikong ma-discover ang queue habang nagbebenta"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Pagbutihin ang page ng mga achievements"

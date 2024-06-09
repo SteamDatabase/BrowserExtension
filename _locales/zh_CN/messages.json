@@ -36,36 +36,6 @@
 	"search": {
 		"message": "搜索"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Bundle $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB 好评率："
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "关注数："
-	},
-	"app_nothing_selected": {
-		"message": "未选中任何内容"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "此价格已出现 $seen$ 次，上一次出现于 $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -290,25 +258,7 @@
 		"message": "以市场中的最低上架价格上架物品\n\n显示的价格是您收到的实际金额(不含手续费)"
 	},
 	"inventory_sell_at_title": {
-		"message": "以市场最高订购单价格出售项目\n\n显示的价格是您收到的金额(不含费用)"
-	},
-	"widget_view_app": {
-		"message": "在 SteamDB 上查看 app $id$",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "在 SteamDB 上查看 sub $id$",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
+		"message": "以市场订购单的最高出价出售物品\n\n显示的价格是您收到的实际金额(不含手续费)"
 	},
 	"options": {
 		"message": "设置"

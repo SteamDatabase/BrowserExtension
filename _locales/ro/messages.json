@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Caută"
 	},
-	"id_app": {
-		"message": "Aplicație $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Pachet $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Evaluare SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Urmăritori:"
-	},
-	"app_nothing_selected": {
-		"message": "nimic selectat"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB cel mai mic preț înregistrat este <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Preț văzut $seen$ de ori, ultima dată pe $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Listează articolul pentru cel mai mare preț al ordinului de cumpărare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"
-	},
-	"widget_view_app": {
-		"message": "Vezi aplicație $id$ pe SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Vezi sub $id$ pe SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Opțiuni"

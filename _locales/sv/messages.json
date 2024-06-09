@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Sök"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Paket $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB-betyg:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Följare:"
-	},
-	"app_nothing_selected": {
-		"message": "ingenting valt"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB:s lägsta registrerade pris är <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Priset har setts $seen$ gånger, senast den $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -292,24 +260,6 @@
 	"inventory_sell_at_title": {
 		"message": "Lägg upp för försäljning för det högsta efterfrågade försäljningspris\n\nVisat pris är de pengar du får (utan avgifter)"
 	},
-	"widget_view_app": {
-		"message": "Visa app $id$ på SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Visa sub $id$ på SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
 	"options": {
 		"message": "Inställningar"
 	},
@@ -436,14 +386,36 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "Visa det lägsta registrerade priset på produktsidor"
+	},
+	"options_online_stats": {
+		"message": "Visa aktuella samtidiga spelare och maximala toppar på produktsidor"
+	},
+	"options_steamdb_last_update": {
+		"message": "Visa senaste uppdatering på produktsidor"
+	},
+	"options_button_app": {
+		"message": "Visa en knapp på produktsidor"
+	},
+	"options_button_pcgw": {
+		"message": "Visa PCGamingWiki knappen på produktsidor"
+	},
 	"options_button_sub": {
 		"message": "Visa en knapp på paketsidor"
+	},
+	"options_button_gamehub": {
+		"message": "Visa en knapp på samhälle hubbar"
 	},
 	"options_button_gamecards": {
 		"message": "Visa knapp för SteamDB och butik på sidan för samlarkort"
 	},
 	"options_link_subid": {
 		"message": "Visa SubID under varje köpalternativ"
+	},
+	"options_link_subid_widget": {
+		"message": "Visa SubID i inbäddade widgetar",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Länka varje paket på din licenssida"
@@ -513,11 +485,24 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Dölj banderollen för \"Öppna i Steam\""
 	},
+	"options_steamdb_rating": {
+		"message": "Visa SteamDB-betyg på produktsidor"
+	},
+	"options_enhancement_appicon": {
+		"message": "Visa produktikon på butiks och communitysidor",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "Ladda dolda prestationer och deras beskrivningar"
 	},
 	"options_spoiler_achievements": {
 		"message": "Dölj beskrivningar bakom en spoiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Stoppa bilder från att laddas på produktsidor"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Vissa utvecklare lägger in megabyte bilder i produktbeskrivningar som kan ta en stund att ladda, klicka på en bild för att ladda"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Stöd för $award$-parametern på profillänkar, delade workshoplänkar och skärmdumplänkar",

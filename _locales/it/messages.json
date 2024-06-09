@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Cerca"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Pacchetto $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Valutazione SteamDB:"
 	},
@@ -94,7 +64,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Online Stats"
+		"message": "Statistiche Online"
 	},
 	"app_stats_online_now": {
 		"message": "Online adesso:"
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Followers:"
-	},
-	"app_nothing_selected": {
-		"message": "non è stato selezionato nulla"
 	},
 	"app_lowest_price": {
 		"message": "Il prezzo più basso registrato di SteamDB è <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Prezzo visto in $seen$ volte, ultimo in $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Mette l'articolo al prezzo d'acquisto più alto tra quelli indicati\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
-	},
-	"widget_view_app": {
-		"message": "Vedi l'app $id$ su SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Vedi l'app $id$ su SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Opzioni"
@@ -538,11 +488,21 @@
 	"options_steamdb_rating": {
 		"message": "Mostra la valutazione do SteamDB sulle pagine dei prodotti"
 	},
+	"options_enhancement_appicon": {
+		"message": "Visualizza le icone dei prodotti sul negozio e sulle pagine della community",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "Carica gli obiettivi nascosti e le loro descrizioni"
 	},
 	"options_spoiler_achievements": {
 		"message": "Nascondi le descrizioni dietro un simbolo di spoiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Interrompi il caricamento delle immagini sulle pagine del prodotto"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Alcuni sviluppatori inseriscono immagini di grandi dimensioni nella descrizione dei prodotti che possono richiedere del tempo per caricarle, clicca su un'immagine per caricarla"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Supporta i parametri $award$ sul profilo e sui collegamenti di file condivisi",
@@ -554,6 +514,9 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Visualizza la quantità totale di premi rimanenti da ottenere nella pagina dei badge"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Aggiungi un pulsante per scoprire automaticamente la coda durante le vendite"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Migliora la pagina dei risultati globali"

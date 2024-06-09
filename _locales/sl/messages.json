@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Išči"
 	},
-	"id_app": {
-		"message": "$id$ Aplikacije",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "$id$ Paketa",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "$id$ Zbirke",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Ocena SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Sledilci:"
-	},
-	"app_nothing_selected": {
-		"message": "nič ni izbrano"
 	},
 	"app_lowest_price": {
 		"message": "Najnižja zabeležena cena SteamDB je <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Cena videna $seen$– krat, nazadnje $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Navede artikel za najvišjo navedeno ceno nakupa\n\nPrikazana cena je denar, ki ga prejmete (brez provizije)"
-	},
-	"widget_view_app": {
-		"message": "Oglejte si aplikacijo $id$ na SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Oglejte si sub $id$ na SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Možnosti"

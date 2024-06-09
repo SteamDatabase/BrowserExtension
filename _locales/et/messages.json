@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Otsi"
 	},
-	"id_app": {
-		"message": "Äpp $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Alam $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Kimp $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Hindamine:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Jälgijad:"
-	},
-	"app_nothing_selected": {
-		"message": "midagi pole valitud"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Hind märgatud $seen$ korda, viimati $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -195,15 +163,6 @@
 			"total": {
 				"content": "$2",
 				"example": "12"
-			}
-		}
-	},
-	"widget_view_app": {
-		"message": "Vaata äpp $id$ SteamDB-s",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
 			}
 		}
 	},

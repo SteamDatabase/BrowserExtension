@@ -36,36 +36,6 @@
 	"search": {
 		"message": "חיפוש"
 	},
-	"id_app": {
-		"message": "אפליקציה $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "תת אפליקציה $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "חבילה $id$#",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "דירוג SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "עוקבים:"
-	},
-	"app_nothing_selected": {
-		"message": "לא נבחר דבר"
 	},
 	"app_lowest_price": {
 		"message": "המחיר הנמוך ביותר שנרשם ב SteamDB הוא <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "המחיר נצפה $seen$ פעמים, אומת לאחרונה ב $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -222,6 +190,26 @@
 	"explore_finished": {
 		"message": "הגילוי נצפה."
 	},
+	"badges_idle_apps": {
+		"message": "אפלקיציות להפסיק: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "אפלקיציות להפסיק בדף זה: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"badges_idle_drops": {
 		"message": "דרופים שנותרו: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
@@ -271,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "מכניס את הפריט במחיר הגבוהה ביותר מממחיר השוק\n\nהמחיר המוצג הוא הכסף המתקבל (בלי עמלות)"
-	},
-	"widget_view_app": {
-		"message": "צפה באפליקציה $id$ ב SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "צפה בחבילה $id$ ב SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "הגדרות"
@@ -346,6 +316,9 @@
 	},
 	"options_website_explanation": {
 		"message": "הסבר"
+	},
+	"options_website_explanation1": {
+		"message": "כאשר האופציה הזו מופעלת, התוסף יבקש אי אלו מידע של המשתמש (רשימת משאלות, רשימת בעלות, רשימת מעקב, מוצרים שמתעלמים מהם, ומוצרים בעגלת הקניות) מ<a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">החנות של סטים</a> וישתמש בהם לישם דגשים על האתר."
 	},
 	"options_website_explanation2": {
 		"message": "עליך להיות מחובר לחנות על מנת שזה יעבוד."
@@ -450,8 +423,14 @@
 	"options_profile_calculator": {
 		"message": "הוסף לינק למחשבון לעמודי פרופיל"
 	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "העבר את בחירת המשחקים בדף המלאי לצד"
+	},
 	"options_link_inventory": {
 		"message": "קשר בין כל מתנה וקופון בתיק שלך ל SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "מצא נכון את ה-SubID של המתנה במלאי שלך"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "אל תעדכן את התיק שלך במכירת חפץ"
@@ -478,6 +457,9 @@
 	},
 	"options_github_explanation": {
 		"message": "צפה בהסבר ב GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "דכא הודעות \"העיסקה הזו נראת חשודה\" ו\"האם אתה בטוח שזו מתנה?\" בהתראות של החלפות עם משתמשים"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "הצג הודעות שגיאה ברורות, במקום מספרי השגיאה המסתורים של וואלו"
@@ -506,8 +488,29 @@
 	"options_steamdb_rating": {
 		"message": "הצג ציוני SteamDB על דפי המוצרים"
 	},
+	"options_enhancement_appicon": {
+		"message": "הצג לוגו של המוצר בדף החנות והקהילה של המוצר",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_hidden_achievements": {
+		"message": "טען הישגים מוסתרים ואת ההסבר שלהם"
+	},
 	"options_spoiler_achievements": {
 		"message": "הסתר תיאורים מאחורי אלמנט ספויילר"
+	},
+	"options_prevent_store_images": {
+		"message": "עצור טעינה של תמונות בדפי המוצרים"
+	},
+	"options_prevent_store_images_description": {
+		"message": "ישנם מפתחים אשר שמים תמונות גדולות בתיאור המוצר שיכול לקחת זמן לטעון, לחץ על התמונה לטעון"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "תמיכה ב$award$ קישור על פרופיל ותוכן משותף קהילתית",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
 	},
 	"options_builtin_card_drops": {
 		"message": "הצג סכום קלפים שנותרו לנפילה בעמוד הסיכות"

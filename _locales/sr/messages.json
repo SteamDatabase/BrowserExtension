@@ -26,42 +26,15 @@
 	"view_on_pcgamingwiki": {
 		"message": "Погледај на PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Лична достигнића"
+	},
 	"store_page": {
 		"message": "Страница продавнице",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Претрага"
-	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Пакет $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
 	},
 	"app_steamdb_rating": {
 		"message": "SteamDB оцена:"
@@ -104,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Пратиоци:"
-	},
-	"app_nothing_selected": {
-		"message": "ништа није изабрано"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB најмање забележена цена је <b>$price$</b>",
@@ -158,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Цена је виђена $seen$ пута, последњи пут $date$($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -249,8 +220,42 @@
 			}
 		}
 	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Картица преостале на овој страни: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"hidden_achievement": {
 		"message": "Скривена медаља: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Скривена достигнућа, пређи мишем да откријеш: "
+	},
+	"inventory_list_at": {
+		"message": "Објави за $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Продај за $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Објави артикал за најнижу продајну цјену\n\nПриказана цјена је новац који добијате (без трошкова)"
 	},
 	"options": {
 		"message": "Опције"

@@ -35,5 +35,65 @@
 	},
 	"search": {
 		"message": "खोजें"
+	},
+	"app_steamdb_rating": {
+		"message": "SteamDB दर-निर्धारण:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " STEAMDB दर-निर्धारण",
+		"description": "Visible on the mobile version"
+	},
+	"app_depots_update": {
+		"message": "आखिरी अपडेट:"
+	},
+	"app_depots_updated_short": {
+		"message": "अपडेट किया गया",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "ऑनलाइन आँकड़े"
+	},
+	"app_stats_online_now": {
+		"message": "अभी ऑनलाइन:"
+	},
+	"app_stats_peak_today": {
+		"message": "२४-घंटे मे उच्च:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "सब से उच्च:"
+	},
+	"app_stats_followers": {
+		"message": "समर्थक:"
+	},
+	"app_lowest_price": {
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> है",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर <b>$discount$</b> है",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"options": {
+		"message": "वरणाधिकार"
+	},
+	"options_header_enhancements": {
+		"message": "संवर्द्धनाऐ"
+	},
+	"options_website_explanation": {
+		"message": "स्पष्टीकरण"
 	}
 }

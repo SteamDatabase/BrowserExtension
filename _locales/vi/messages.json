@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Tìm kiếm"
 	},
-	"id_app": {
-		"message": "Ứng dụng $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Gói $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Gói $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Điểm số SteamDB:"
 	},
@@ -97,19 +67,16 @@
 		"message": "Thống kê trực tuyến"
 	},
 	"app_stats_online_now": {
-		"message": "Đang trong game:"
+		"message": "Đang trực tuyến:"
 	},
 	"app_stats_peak_today": {
-		"message": "Cao nhất trong 24h:"
+		"message": "Đỉnh hôm nay:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Cao nhất trong lịch sử:"
+		"message": "Đỉnh lịch sử:"
 	},
 	"app_stats_followers": {
 		"message": "Người theo dõi:"
-	},
-	"app_nothing_selected": {
-		"message": "chưa chọn"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Giá xuất hiện $seen$ lần, lần cuối vào ngày $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Đăng bán với giá đang được đặt mua cao nhất\n\nGiá hiển thị là số tiền bạn nhận được (chưa kèm phí)"
-	},
-	"widget_view_app": {
-		"message": "Xem ứng dụng $id$ trên SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Xem gói $id$ trên SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Cài đặt"
@@ -458,7 +408,7 @@
 		"message": "Hiển thị nút trên trang cộng đồng"
 	},
 	"options_button_gamecards": {
-		"message": "Hiển thị nút của SteamDB và cửa hàng trên trang thẻ của game"
+		"message": "Hiển thị các nút trang SteamDB và cửa hàng trên trang huy hiệu"
 	},
 	"options_link_subid": {
 		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
@@ -529,11 +479,11 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Ẩn nút \"Cài đặt Steam\" trên đầu trang",
+		"message": "Ẩn nút \"Cài đặt Steam\" ở đầu trang",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Ẩn banner \"Mở trong Steam\""
+		"message": "Ẩn biểu ngữ \"Mở trong Steam\""
 	},
 	"options_steamdb_rating": {
 		"message": "Hiển thị xếp hạng SteamDB trên trang sản phẩm"
@@ -569,12 +519,12 @@
 		"message": "Thêm một nút để tự động khám phá hàng chờ trong các đợt giảm giá"
 	},
 	"options_builtin_achievements_global": {
-		"message": "Cải thiện trang thành tích toàn cầu"
+		"message": "Cải thiện trang thành tựu toàn cầu"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Liên kết đến trang thành tích cá nhân"
+		"message": "Liên kết đến trang thành tựu cá nhân"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Thành tích bị khóa có biểu tượng khóa để dễ nhìn hơn"
+		"message": "Thêm biểu tượng ổ khóa vào thành tựu bị khóa để dễ nhìn hơn"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Lisää SteamDB-linkkejä ja ominaisuuksia Steamin kauppa- ja yhteisösivuille. Näyttää pelien alhaisimmat hinnat ja tilastot."
+		"message": "Lisää SteamDB-linkkejä ja ominaisuuksia Steamin kauppa- ja yhteisösivuille. Katso pelien alhaisimmat hinnat ja tilastot."
 	},
 	"steamdb_options": {
 		"message": "SteamDB-asetukset"
@@ -35,36 +35,6 @@
 	},
 	"search": {
 		"message": "Haku"
-	},
-	"id_app": {
-		"message": "Sovellustunnus $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Alatunnus $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Pakettitunnus $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
 	},
 	"app_steamdb_rating": {
 		"message": "SteamDB-arvostelu:"
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Seuraajat:"
-	},
-	"app_nothing_selected": {
-		"message": "mitään ei ole valittu"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB:n alin tilastoitu hinta on <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Hinta nähty $seen$ kertaa, viimeisimmin $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa jonka saat (ilman kuluja)"
-	},
-	"widget_view_app": {
-		"message": "Näytä sovellustunnus $id$ SteamDB:ssä",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Näytä alatunnus $id$ SteamDB:ssä",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Asetukset"

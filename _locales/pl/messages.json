@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Szukaj"
 	},
-	"id_app": {
-		"message": "Aplikacja $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Pakiet $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Zestaw $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Ocena SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Obserwujący:"
-	},
-	"app_nothing_selected": {
-		"message": "nic nie wybrano"
 	},
 	"app_lowest_price": {
 		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Cena zarejestrowana $seen$ razy, ostatni raz $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -287,28 +255,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Wystawia przedmiot po najniższej podanej cenie sprzedaży\n\nWyświetlona cena to kwota, którą otrzymasz (bez opłat)"
+		"message": "Wystawia przedmiot po najniższej podanej cenie sprzedaży\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
 	},
 	"inventory_sell_at_title": {
 		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
-	},
-	"widget_view_app": {
-		"message": "Zobacz aplikację $id$ na SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Wyświetl pakiet $id$ na SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Opcje"
@@ -317,7 +267,7 @@
 		"message": "👋 Dzięki za zainstalowanie rozszerzenia SteamDB!"
 	},
 	"options_welcome_description": {
-		"message": "Przejrzyj poniższe ustawienia i przełącz te, które preferujesz. Aby wrócić tutaj w przyszłości:"
+		"message": "Przejrzyj poniższe opcje i przełącz te, które preferujesz. Aby wrócić tutaj w przyszłości:"
 	},
 	"options_welcome_option1": {
 		"message": "Strona ustawień na SteamDB"
@@ -377,7 +327,7 @@
 		"message": "Dane są przechowywane lokalnie w twojej przeglądarce i nie są nigdzie wysyłane, nawet do serwerów SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Aby zapobiec nadmiernym zapytaniom do Sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
+		"message": "Aby zapobiec nadmiernym zapytaniom do sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
 	},
 	"options_website_highlight": {
 		"message": "Wyróżnij produkty posiadane i znajdujące się na liście życzeń na $domain$",
@@ -389,10 +339,10 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Lista życzeń, obserwowane i ignorowane produkty w sklepie Steam bezpośrednio ze SteamDB"
+		"message": "Dodawaj do listy życzeń, obserwuj i ignoruj produkty w sklepie Steam bezpośrednio ze SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Włącz skrypt odbierania darmowych pakietów</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Włącz skrypt do odbierania darmowych pakietów</a>"
 	},
 	"options_website_highlight3": {
 		"message": "Włącz dodatkowe filtrowanie na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stronie sprzedaży</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stronie zestawów</a>"
@@ -424,7 +374,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Kiedy opcja \"$options_steamdb_lowest_price$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$ z walutą (którą określa Steam), aby uzyskać cenę dla konkretnej gry.",
+		"message": "Kiedy opcja \"$options_steamdb_lowest_price$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$ z twoją walutą (którą określa Steam), aby uzyskać cenę konkretnej gry.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -437,10 +387,10 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Pokaż najtańszą zarejestrowaną cenę produktu na jego stronie"
+		"message": "Pokaż najniższą zarejestrowaną cenę produktu na jego stronie"
 	},
 	"options_online_stats": {
-		"message": "Wyświetl aktualną i najwyżej zarejestrowaną liczbę graczy na stronach produktu"
+		"message": "Wyświetl aktualną i największą zarejestrowaną liczbę graczy na stronach produktu"
 	},
 	"options_steamdb_last_update": {
 		"message": "Wyświetlaj ostatnią aktualizację na stronach produktu"
@@ -518,7 +468,7 @@
 		"message": "Pomiń stronę weryfikacji wieku"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Ustawia ciasteczka wieku oraz urodzin, aby pomijać pytanie o wiek"
+		"message": "Ustawia ciasteczka wieku oraz urodzin, aby pominąć pytanie o wiek"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Usuń filtrowanie \"Opuszczasz Steam\" z linków do zewnętrznych stron",
@@ -549,7 +499,7 @@
 		"message": "Ukryj opisy za spoilerami"
 	},
 	"options_prevent_store_images": {
-		"message": "Zatrzymaj ładowanie obrazów na sklepowych stronach produktu"
+		"message": "Zatrzymaj ładowanie obrazów na stronach produktu"
 	},
 	"options_prevent_store_images_description": {
 		"message": "Niektóre produkty zawierają w opisie obrazy, których załadowanie może zając trochę czasu. Kliknij obraz, aby go załadować"
@@ -566,7 +516,7 @@
 		"message": "Wyświetl całkowitą liczbę pozostałych do zdobycia kart na stronie odznak"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Dodaj przycisk, aby oszukać kolejkę odkryć podczas wyprzedaży"
+		"message": "Dodaj przycisk, aby automatycznie przejrzeć kolejkę odkryć podczas wyprzedaży"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Usprawnij stronę globalnych osiągnięć"

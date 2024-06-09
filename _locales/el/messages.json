@@ -36,36 +36,6 @@
 	"search": {
 		"message": "Αναζήτηση"
 	},
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Πακέτο $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "Βαθμολογία SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Ακόλουθοι:"
-	},
-	"app_nothing_selected": {
-		"message": "τίποτα δεν επιλέχθηκε"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB Η χαμηλότερη καταγεγραμμένη τιμή είναι <b>$price$</b>",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "Η τιμή εμφανίστηκε $seen$ φορές, διήρκεσε έως $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Τοποθετεί το αντικείμενο για την υψηλότερη τιμή πώλησης\n\nΗ τιμή που εμφανίζεται είναι τα χρήματα που λαμβάνετε (χωρίς τέλη)"
-	},
-	"widget_view_app": {
-		"message": "Προβολή $id$ της εφαρμογής στο SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "Προβολή $id$ της δευτερεύουσας εφαρμογής στο SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "Επιλογές"

@@ -36,36 +36,6 @@
 	"search": {
 		"message": "جستجو"
 	},
-	"id_app": {
-		"message": "شناسه محصول: $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "شناسه زیر مجموعه: $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "آیدی بسته:$id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
 	"app_steamdb_rating": {
 		"message": "امتیاز SteamDB:"
 	},
@@ -107,9 +77,6 @@
 	},
 	"app_stats_followers": {
 		"message": "دنبال کنندگان:"
-	},
-	"app_nothing_selected": {
-		"message": "هیچ چیز انتخاب نشده"
 	},
 	"app_lowest_price": {
 		"message": "کمترین قیمت ثبت شده در استیم دی بی <b>$price$</b> است",
@@ -161,6 +128,7 @@
 	},
 	"app_lowest_date_multiple": {
 		"message": "این قیمت $seen$ بار مشاهده شده است، آخرین بار در $date$ ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -291,24 +259,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "آیتم را برای بالاترین قیمت سفارش خرید فهرست شده لیست می کند\n\n قیمت نمایش داده شده پولی است که دریافت می کنید (بدون کارمزد)"
-	},
-	"widget_view_app": {
-		"message": "مشاهده app $id$ در SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "مشاهده sub $id$ در SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 	"options": {
 		"message": "تنظیمات"
