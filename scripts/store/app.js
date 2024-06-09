@@ -496,6 +496,37 @@ function DrawLowestPrice()
 
 	WriteLog( `Currency is "${currency}"` );
 
+	// Container
+	const container = document.getElementById( 'game_area_purchase' );
+
+	if( !container )
+	{
+		return;
+	}
+
+	const element = document.createElement( 'a' );
+	element.className = 'steamdb_prices';
+	element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+
+	const image = document.createElement( 'img' );
+	image.src = GetLocalResource( 'icons/white.svg' );
+	element.appendChild( image );
+
+	const top = document.createElement( 'div' );
+	top.className = 'steamdb_prices_top';
+	top.textContent = '…';
+
+	const bottom = document.createElement( 'div' );
+	bottom.className = 'steamdb_prices_bottom';
+	bottom.textContent = '…';
+
+	const textContainer = document.createElement( 'div' );
+	textContainer.appendChild( top );
+	textContainer.appendChild( bottom );
+	element.appendChild( textContainer );
+
+	container.insertAdjacentElement( 'afterbegin', element );
+
 	SendMessageToBackgroundScript( {
 		contentScriptQuery: 'GetAppPrice',
 		appid: GetCurrentAppID(),
@@ -513,13 +544,12 @@ function DrawLowestPrice()
 				WriteLog( 'GetAppPrice failed to load' );
 			}
 
+			element.remove();
+
 			return;
 		}
 
 		WriteLog( 'GetAppPrice loaded' );
-
-		const top = document.createElement( 'div' );
-		top.className = 'steamdb_prices_top';
 
 		// We trust the API, but this ensures safety
 		const escapeHtml = ( str ) =>
@@ -547,14 +577,11 @@ function DrawLowestPrice()
 		}
 
 		// Dates
-		const bottom = document.createElement( 'div' );
-		bottom.className = 'steamdb_prices_bottom';
-
 		const dateFormatter = new Intl.DateTimeFormat( undefined, { dateStyle: 'medium' } );
 		const lastOn = dateFormatter.format( response.data.t * 1000 );
 		const[ , relativeText ] = FormatRelativeDate( response.data.t );
 
-		if( response.data.c > 1 )
+		if( Number.isInteger( response.data.c ) && response.data.c > 1 )
 		{
 			bottom.innerHTML = _t( 'app_lowest_date_multiple', [
 				lastOn,
@@ -566,23 +593,6 @@ function DrawLowestPrice()
 		{
 			bottom.innerHTML = _t( 'app_lowest_date', [ lastOn, relativeText ] );
 		}
-
-		// Container
-		const element = document.createElement( 'a' );
-		element.className = 'steamdb_prices';
-		element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
-
-		const image = document.createElement( 'img' );
-		image.src = GetLocalResource( 'icons/white.svg' );
-		element.appendChild( image );
-
-		const textContainer = document.createElement( 'div' );
-		textContainer.appendChild( top );
-		textContainer.appendChild( bottom );
-		element.appendChild( textContainer );
-
-		const container = document.getElementById( 'game_area_purchase' );
-		container.insertAdjacentElement( 'afterbegin', element );
 	} );
 }
 
