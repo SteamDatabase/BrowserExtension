@@ -1,1 +1,39 @@
-{}
+{
+	"extension_description": {
+		"message": "SteamDB लिंक और नए विषेशताँऐ Steam स्टोर एवं स्टिम सम्प्रदाय पर जोड़े। देखे सबसे कम कीमत और आँकड़े।"
+	},
+	"steamdb_options": {
+		"message": "SteamDB वरणाधिकार"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB गणना-यंत्र"
+	},
+	"steamstatus": {
+		"message": "$domain$ पर देखें",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Steam पर प्रतीत होता है कि कुछ समय के लिए काम बंद हो गया है। "
+	},
+	"view_on_steamdb": {
+		"message": "SteamDB पर देखें"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "PCGamingWiki पर देखें"
+	},
+	"view_your_achievements": {
+		"message": "व्यक्तिगत निपुणता"
+	},
+	"store_page": {
+		"message": "स्टोर पृष्ठ",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "खोजें"
+	}
+}

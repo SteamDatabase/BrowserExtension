@@ -530,6 +530,9 @@
 	"options_builtin_card_drops": {
 		"message": "Visa totalt antal samlarkort som fortfarande kan släppas på märkessidan"
 	},
+	"options_builtin_queue_cheat": {
+		"message": "Lägg till en knapp för att automatiskt upptäcka kön under försäljning"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Förbättra sidan för globala prestationer"
 	},

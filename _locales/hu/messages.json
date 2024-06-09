@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Hozzáadja a SteamDB linkjeit és új funkcióit a Steam Áruházi és Közösségi oldalán. A legalacsonyabb játékárak és különböző statisztikák megtekinthetőek."
+		"message": "Hozzáadja A SteamDB linkjeit és új funkcióit a Steam Áruház és Közösség oldalaihoz. Megtekinthetőek a legalacsonyabb játékárak és különböző statisztikák."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Beállítások"
@@ -27,7 +27,7 @@
 		"message": "Megtekintés itt: PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Személyes teljesítmények"
+		"message": "Saját teljesítmények"
 	},
 	"store_page": {
 		"message": "Áruházi oldal",
@@ -97,7 +97,7 @@
 		"message": "Online statisztikák"
 	},
 	"app_stats_online_now": {
-		"message": "Jelenleg online:"
+		"message": "Jelenleg elérhető:"
 	},
 	"app_stats_peak_today": {
 		"message": "Napi legmagasabb:"
@@ -112,7 +112,7 @@
 		"message": "nincs kiválasztott elem"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB legkisebb rögzített ára <b>$price$</b>",
+		"message": "A SteamDB által ismert legkisebb ára <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -121,7 +121,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB legkisebb rögzített ára <b>$price$</b> <b>-$discount$%</b>",
+		"message": "A SteamDB által ismert legkisebb ára <b>$price$</b> <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -186,7 +186,7 @@
 		"message": "Új felfedezési várólista generálása, ez meghiúsulhat, ha a Steam nagy terhelés alatt van…"
 	},
 	"explore_exploring": {
-		"message": "Várólista felfedezése... Kérés $current$ az $total$",
+		"message": "Várólista felfedezése... Kérés: $current$ / $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -199,7 +199,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "#$current$ várolista elem törlése nem sikerült, öt másodperc múlva újra próbálás…",
+		"message": "#$current$ várolista elem törlése nem sikerült, újrapróbálás öt másodperc múlva…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -208,7 +208,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Nem sikerült átlépni az $current$. várólistaelemen többszöri próbálkozás után. Megpróbálhatod ismét később.",
+		"message": "#$current$ várólista elem törlése sikertelen többszöri próbálkozás után is. Később újra próbálhatja.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -314,7 +314,7 @@
 		"message": "Beállítások"
 	},
 	"options_welcome_title": {
-		"message": "👋 Köszönjük, hogy feltelepítetted a SteamDB bővítményt!"
+		"message": "👋 Köszönjük, hogy telepítetted a SteamDB bővítményt!"
 	},
 	"options_welcome_description": {
 		"message": "Tekintse át az alábbi lehetőségeket, és kapcsolja be a kívántakat. Hogy a jövőben visszatérhessen ide:"
@@ -368,16 +368,16 @@
 		"message": "Magyarázat"
 	},
 	"options_website_explanation1": {
-		"message": "Amikor ez az opció engedélyezve van, a kiegészítő felhasználói adatokat fog lekérdezni (kívánt, birtokolt, követett, mellőzött és a kosárban lévő termékekről) a <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam áruházból</a> és ezeket az adatokat fogja használni, hogy kiemelje őket az oldalon."
+		"message": "Amikor ez az opció engedélyezve van, a bővítmény felhasználói adatokat fog lekérdezni (kívánságlistán lévő, birtokolt, követett, mellőzött és a kosárban lévő termékekről) a <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam áruházból</a> és ezeket az adatokat fogja használni, hogy kiemelje őket az oldalon."
 	},
 	"options_website_explanation2": {
-		"message": "Ahhoz, hogy ez működjön, be kell lépned az áruházba."
+		"message": "Ez a szolgáltatás csak az áruházba bejelentkezve működik."
 	},
 	"options_website_explanation3": {
 		"message": "Minden a böngésződben van tárolva és nincs elküldve a SteamDB-nek."
 	},
 	"options_website_explanation4": {
-		"message": "A Steam Store-hoz intézett túlzott kérések elkerülése érdekében felhasználói adatai a böngésződ helyi tárhelyén tárolódnak."
+		"message": "A Steam Áruház túlzott terhelésének elkerülése érdekében felhasználói adataid a böngésződ helyi tárhelyén tárolódnak."
 	},
 	"options_website_highlight": {
 		"message": "A birtokolt és kívánságlistán szereplő termékek kiemelése a $domain$ oldalon",
@@ -424,7 +424,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Amikor a \"$options_steamdb_lowest_price$\" opció be van kapcsolva, a bővítmény biztonságos kérést küld a $domain$ számára az általad jelenleg használt pénznemmel (amit a Steam gondol annak), hogy megkapja a rögzített árát egy megadott játéknak.",
+		"message": "Amikor a \"$options_steamdb_lowest_price$\" opció be van kapcsolva, a bővítmény biztonságos kérést küld a $domain$ számára az általad jelenleg (Steam szerint) használt pénznemmel, hogy megkapja a SteamDB által feljegyzett legalacsonyabb árát a megadott játéknak.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -440,7 +440,7 @@
 		"message": "A legalacsonyabb rögzített ár megjelenítése a termékek oldalain"
 	},
 	"options_online_stats": {
-		"message": "Egyidejű játékosok és csúcs mennyiségű játékosok megjelenítése a termékek oldalán"
+		"message": "Jelenlegi egyidejű játékosok és csúcs mennyiségű játékosok megjelenítése a termékek oldalán"
 	},
 	"options_steamdb_last_update": {
 		"message": "A legújabb frissítés megjelenítése a termékek oldalán"
@@ -477,10 +477,10 @@
 		"message": "Játékválasztó áthelyezése oldalra a raktárakban"
 	},
 	"options_link_inventory": {
-		"message": "Minden ajándékot és kupont a leltáradban a SteamDB-hez kapcsolj"
+		"message": "Összes raktárban lévő ajándék és kupon SteamDB-hez kapcsolása"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Helyesen állapítsa meg az ajándék SubID-t a leltárban"
+		"message": "A raktárban lévő ajándékokhoz tartozó alazonosító (SubID) helyes meghatározása"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne frissüljön a raktár tárgyak eladásakor"
@@ -525,7 +525,7 @@
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "A Steam előfizetői szerződés automatikus elfogadása a Közösségi Piacon, a Raktárban és a termék aktiválása oldalakon",
+		"message": "A Steam előfizetői szerződés automatikus elfogadása a közösségi piacon, a raktárban és a termék aktiválása oldalakon",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
@@ -555,7 +555,7 @@
 		"message": "Néhány fejlesztő több megabájtnyi képet helyez el a termékeik leírásában, amelyek betöltése egy ideig eltarthat; kattints egy képre a betöltéséhez"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "$award$ paraméterek támogatása profil és megosztott fájl linkeken",
+		"message": "$award$ paraméterek támogatása a profil oldalon és megosztott fájl linkeken",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"

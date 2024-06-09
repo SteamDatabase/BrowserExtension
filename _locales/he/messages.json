@@ -266,6 +266,12 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "מכניס את הפריט במחיר הנמוך ביותר מממחיר השוק\n\nהמחיר המוצג הוא הכסף המתקבל (בלי עמלות)"
+	},
+	"inventory_sell_at_title": {
+		"message": "מכניס את הפריט במחיר הגבוהה ביותר מממחיר השוק\n\nהמחיר המוצג הוא הכסף המתקבל (בלי עמלות)"
+	},
 	"widget_view_app": {
 		"message": "צפה באפליקציה $id$ ב SteamDB",
 		"placeholders": {
@@ -289,6 +295,9 @@
 	},
 	"options_welcome_title": {
 		"message": "תודה שהתקנתם את התוסף SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "בדוק/י את האפשריות מתחת, והפעל/י את אלה שאת/ה רוצה. כדי לחזור לפה בעתיד:"
 	},
 	"options_welcome_option1": {
 		"message": "עמוד ההגדרות ב SteamDB"
@@ -347,8 +356,71 @@
 	"options_website_explanation4": {
 		"message": "על מנת לחסוך בכמות הבקשות הנשלחות לחנות סטים, פרטי המשתמש נשמרים מוטמנים בזיכרון הלוקאלי של הדפדפן."
 	},
+	"options_website_highlight": {
+		"message": "הדגש מוצרים ברשימת המעקב\\בעלות ב$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
 	"options_website_highlight1": {
 		"message": "הוסף מוצרים לרשימת המשאלות, מעקב או הסתרה בחנות סטים ישירות מ SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">הפעל את סקריפט הפעלת חבילות חינמיות</a>"
+	},
+	"options_website_highlight3": {
+		"message": "הפעל מסננים נוספים על <a href=\"https://steamdb.info/sales/\" target=\"_blank\">דפי מבצעים</a> ו<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">דפי חבילות</a>"
+	},
+	"options_extra_data": {
+		"message": "מידע נוסף שמיובא מ$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "כאשר האופציה $options_online_stats$ או $options_steamdb_last_update$ פעילה, התוסף יבצע בקשה מאובטחת ל$domain$ כדי להשיג את כמות השחקנים כרגע ואת עדכון המשחק האחרון.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "כאשר האופציה $options_steamdb_lowest_price$ מופעלת, התוסף יבצע בקשה מאובטחת ל$domain$ עם המטבע (עם מה שסטים חושבים שזה) כדי להשיג את המחיר הרשום בשביל המשחק הספציפי.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "הצג את המחיר הנמוך ביותר הרשום בדפי המוצרים"
+	},
+	"options_online_stats": {
+		"message": "הצג את כמות השחקנים כרגע, ובמקסימום בדפי המוצרים"
+	},
+	"options_steamdb_last_update": {
+		"message": "הצג עדכון מאגר אחרון על דפי המשחק"
 	},
 	"options_button_app": {
 		"message": "הצג כפתור בעמודי מוצרים"
@@ -371,6 +443,9 @@
 	"options_link_subid_widget": {
 		"message": "הצג את מזהה החבילה בווידג'ט של אפליקציות",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "קשר כל חבילה בדף הרשיונות שלך"
 	},
 	"options_profile_calculator": {
 		"message": "הוסף לינק למחשבון לעמודי פרופיל"
@@ -404,6 +479,9 @@
 	"options_github_explanation": {
 		"message": "צפה בהסבר ב GitHub"
 	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "הצג הודעות שגיאה ברורות, במקום מספרי השגיאה המסתורים של וואלו"
+	},
 	"options_enhancement_skip_agecheck": {
 		"message": "דלג על עמוד בדיקת גיל"
 	},
@@ -425,11 +503,17 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "הסתר את באנר \"פתח בסטים\""
 	},
+	"options_steamdb_rating": {
+		"message": "הצג ציוני SteamDB על דפי המוצרים"
+	},
 	"options_spoiler_achievements": {
 		"message": "הסתר תיאורים מאחורי אלמנט ספויילר"
 	},
 	"options_builtin_card_drops": {
 		"message": "הצג סכום קלפים שנותרו לנפילה בעמוד הסיכות"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "הוסף כפתור לעבור על תור אוטומטית בזמן ימי מבצעים/אירועים"
 	},
 	"options_builtin_achievements_global": {
 		"message": "שיפורים לעמוד ההישגים"

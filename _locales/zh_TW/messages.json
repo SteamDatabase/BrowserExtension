@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam 似乎遇到了停機時間。 "
+		"message": "Steam 似乎已離線。 "
 	},
 	"view_on_steamdb": {
 		"message": "在 SteamDB 上檢視"
@@ -67,7 +67,7 @@
 		}
 	},
 	"app_steamdb_rating": {
-		"message": "SteamDB 評分:"
+		"message": "SteamDB 評分："
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " STEAMDB 評分",
@@ -90,7 +90,7 @@
 		"message": "最後更新："
 	},
 	"app_depots_updated_short": {
-		"message": "已更新",
+		"message": "上次更新",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -121,7 +121,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB 最低記錄價格為 <b>$price$</b>，價格為 <b>-$discount$%</b>",
+		"message": "SteamDB 最低記錄價格為 <b>$price$</b>， <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -380,7 +380,7 @@
 		"message": "為了防止對 Steam 商店發出過多請求，用戶資料會將快取放在瀏覽器的本機端。"
 	},
 	"options_website_highlight": {
-		"message": "在$domain$標記已擁有和在願望清單上的產品",
+		"message": "在 $domain$ 上標記已擁有和在願望清單上的產品",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",

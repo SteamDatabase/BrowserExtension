@@ -26,6 +26,9 @@
 	"view_on_pcgamingwiki": {
 		"message": "Se på PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Personlige præsentationer"
+	},
 	"store_page": {
 		"message": "Butiks Side",
 		"description": "This translation should match how Steam translates it on community hubs"
@@ -433,14 +436,36 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "Vis den laveste registrerede pris på produkt sider"
+	},
+	"options_online_stats": {
+		"message": "Vis aktuelle samtidige spillere og maksimale peaks på produktsiden"
+	},
+	"options_steamdb_last_update": {
+		"message": "Vis seneste opdatering på produktsider"
+	},
+	"options_button_app": {
+		"message": "Vis en knap på produktsider"
+	},
+	"options_button_pcgw": {
+		"message": "Vis PCGamingWiki knappen på produktsider"
+	},
 	"options_button_sub": {
 		"message": "Vis en knap på pakkesider"
+	},
+	"options_button_gamehub": {
+		"message": "Vis en knap på fællesskabs hubs"
 	},
 	"options_button_gamecards": {
 		"message": "Vis SteamDB og gemme sideknapper på spilkortsiden"
 	},
 	"options_link_subid": {
 		"message": "Vis subID under hver købsmulighed"
+	},
+	"options_link_subid_widget": {
+		"message": "Vis SubID i integreret widgets",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Link hver pakke på din licensside"
@@ -510,11 +535,24 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skjul \"Åbn i Steam\" banneret"
 	},
+	"options_steamdb_rating": {
+		"message": "Vis SteamDB bedømmelser på produktsider"
+	},
+	"options_enhancement_appicon": {
+		"message": "Vis produkt ikon på butik og fællesskabssider",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "Indlæs skjulte præstationer og deres beskrivelser"
 	},
 	"options_spoiler_achievements": {
 		"message": "Skjul beskrivelser bag et spoiler-element"
+	},
+	"options_prevent_store_images": {
+		"message": "Stop billeder fra at blive indlæst på produktsider"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Nogle udviklere allokere megabytes af billeder i produkt beskrivelser, som kan tage et stykke tid til at indlæse, klik på et billede for at indlæse"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Støt $award$ parametre på profil og delte fil-links",
@@ -526,6 +564,9 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Vis det samlede antal resterende kort træk på badges side"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Tilføj en knap for automatisk opdagelse af køen under salg"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Forbedre siden for globale præstationer"

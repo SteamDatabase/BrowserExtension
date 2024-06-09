@@ -344,7 +344,7 @@
 		"message": "Đây là dự án <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">mã nguồn mở</a>, xin cảm ơn những người đã đóng góp!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Những ô bị khóa nghĩa là các tính năng được tích hợp sẵn."
+		"message": "* Những ô tối màu chỉ các tính năng được tích hợp sẵn."
 	},
 	"options_header_website": {
 		"message": "Trang web SteamDB"
@@ -480,7 +480,7 @@
 		"message": "Đính kèm liên kết tới SteamDB khi xem quà tặng và phiếu giảm giá trong kho đồ của bạn"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Hiện chính xác SubID của quà tặng trong kho của bạn"
+		"message": "Hiện chính xác SubID (mã gói) của quà tặng trong kho của bạn"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Không làm mới kho đồ khi bán một món"

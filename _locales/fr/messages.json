@@ -6,7 +6,7 @@
 		"message": "Options de SteamDB"
 	},
 	"steamdb_calculator": {
-		"message": "Calculatrice SteamDB"
+		"message": "Calculateur SteamDB"
 	},
 	"steamstatus": {
 		"message": "Jette un œil à $domain$",
@@ -94,7 +94,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Statistiques en ligne"
+		"message": "Statistique en-ligne"
 	},
 	"app_stats_online_now": {
 		"message": "En ligne :"
@@ -208,7 +208,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Échec de l'effacement de l'élément de la file d'attente #$current$ trop de fois. Vous pouvez réessayer plus tard.",
+		"message": "Échec de la suppression de l'article #$current$ trop de fois. Réessayez plus tard.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -217,7 +217,7 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Échec de la génération d'une nouvelle file d'attente, nouvelle tentative dans cinq secondes…"
+		"message": "Échec de la génération d'une nouvelle liste de découverte, nouvelle tentative dans cinq secondes…"
 	},
 	"explore_finished": {
 		"message": "Liste exploré."
@@ -287,10 +287,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Liste l'article pour le prix de vente le plus bas de la liste\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
+		"message": "Liste l'article pour le prix de vente le plus bas\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Liste les articles au prix de la plus haute commande d'achat.\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
+		"message": "Liste l'article pour le prix d'achat le plus élevé\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
 	},
 	"widget_view_app": {
 		"message": "Voir l'application $id$ sur SteamDB",
@@ -311,7 +311,7 @@
 		}
 	},
 	"options": {
-		"message": "Options"
+		"message": "Paramètres"
 	},
 	"options_welcome_title": {
 		"message": "👋 Merci d'avoir installé l'extension SteamDB !"
@@ -323,7 +323,7 @@
 		"message": "Page des paramètres sur SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Liste déroulante du compte client sur les pages Steam"
+		"message": "Liste déroulante du compte sur les pages Steam"
 	},
 	"options_welcome_option3": {
 		"message": "La page des extensions de votre navigateur"
@@ -395,7 +395,7 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Activer le script pour les packages gratuits</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Activer le filtrage supplémentaire sur <a href=\"https://steamdb.info/sales/\" target=\"_blank\">la page des ventes</a> et <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">la page des packs</a>"
+		"message": "Activer le filtrage supplémentaire sur <a href=\"https://steamdb.info/sales/\" target=\"_blank\">la page des soldes</a> et <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">la page des bundles</a>"
 	},
 	"options_extra_data": {
 		"message": "Données supplémentaires récupérées depuis $domain$",
@@ -407,7 +407,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Lorsque les options \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" sont activées, l'extension fera une requête sécurisée à $domain$ pour obtenir le nombre actuel de joueurs et la dernière mise à jour du jeu.",
+		"message": "Lorsque l'option \"$options_online_stats$\" ou \"$options_steamdb_last_update$\" est activée, l'extension fera une requête sécurisée à $domain$ pour obtenir le nombre actuel de joueurs et la dernière mise à jour du jeu.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -424,7 +424,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Lorsque l'option \"$options_steamdb_lowest_price$\" est activée, l'extension fera une requête sécurisée vers $domain$ avec votre devise (celle que Steam suppose être la vôtre) pour obtenir le prix enregistré pour un jeu spécifique.",
+		"message": "Lorsque l'option \"$options_steamdb_lowest_price$\" est activée, l'extension fera une requête sécurisée vers $domain$ avec votre monnaie (celle que Steam suppose être la vôtre) pour obtenir le prix enregistré pour un jeu spécifique.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -538,14 +538,21 @@
 	"options_steamdb_rating": {
 		"message": "Afficher la note SteamDB sur les pages du produit"
 	},
+	"options_enhancement_appicon": {
+		"message": "Afficher l'icône du produit sur les pages de la boutique et de la communauté",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
-		"message": "Charger les réalisations cachées et leurs descriptions"
+		"message": "Charger les succès cachés et leurs descriptions"
 	},
 	"options_spoiler_achievements": {
 		"message": "Masquer les descriptions derrière un élément spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Empêcher le chargement des images sur les pages du produit"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Certains développeurs utilisent des images de plusieurs mégas dans leurs descriptions de produit ce qui peut ralentir le chargement, cliquez sur ces images pour les charger"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Prise en charge des paramètres $award$ sur le profil et les liens de fichiers partagés",
@@ -558,13 +565,16 @@
 	"options_builtin_card_drops": {
 		"message": "Afficher le nombre total de cartes restantes sur la page des badges"
 	},
+	"options_builtin_queue_cheat": {
+		"message": "Ajouter un bouton pour explorer automatiquement la liste de découverte pendant les soldes"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Améliorer la page des succès mondiaux"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Lien vers votre propre page de succès"
+		"message": "Afficher un lien vers votre propre page de succès"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Les succès verrouillés ont une icône de verrou pour plus de visibilité"
+		"message": "Les succès verrouillés ont une icône de cadenas pour une meilleure lisibilité"
 	}
 }

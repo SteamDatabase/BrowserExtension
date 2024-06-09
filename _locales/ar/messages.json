@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "يبدو أن ستيم يعاني بعض الأعطال. "
+		"message": "يبدو أن Steam يعاني بعض الأعطال. "
 	},
 	"view_on_steamdb": {
 		"message": "عرض على SteamDB"
@@ -57,7 +57,7 @@
 		}
 	},
 	"id_bundle": {
-		"message": "حزمة $id$",
+		"message": "الحُزْمَة $id$",
 		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
@@ -100,7 +100,7 @@
 		"message": "متصل الآن:"
 	},
 	"app_stats_peak_today": {
-		"message": "الذروة على مدار 24 ساعة:"
+		"message": "ذروة 24 ساعة:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "الذروة الإجمالية:"
@@ -109,7 +109,7 @@
 		"message": "المتابِعون:"
 	},
 	"app_nothing_selected": {
-		"message": "لم يتم تحديد أي شيء"
+		"message": "إلغاء التحديد"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB أدنى سعر مسجل هو <b>$price$</b>",
@@ -147,7 +147,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "سعر شوهد بتاريخ $date$ ($relative$)",
+		"message": "السعر شوهد بتاريخ $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -199,7 +199,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "فشل مسح عنصر قائمة الانتظار #$current$، ستتم المحاولة مرة أخرى بعد خمس ثوانٍ…",
+		"message": "فشل مسح العنصر #$current$ من قائمة الانتظار، حاول مرة أخرى بعد خمس ثوانٍ…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -208,7 +208,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "فشل مسح عنصر قائمة الانتظار #$current$ محاولات كثيرة جداً. يمكنك إعادة المحاولة لاحقاً.",
+		"message": "فشل مسح العنصر #$current$ من قائمة الانتظار بعد محاولات كثيرة. يمكنك إعادة المحاولة لاحقاً.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -217,7 +217,7 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "فشل في إنشاء قائمة انتظار جديدة، ستتم المحاولة مرة أخرى بعد خمس ثوانٍ…"
+		"message": "فشل في إنشاء قائمة انتظار جديدة، حاول مرة أخرى بعد خمس ثوانٍ…"
 	},
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
@@ -233,7 +233,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "تطبيقات في حالة خمول على هذه الصفحة: $amount$",
+		"message": "تطبيقات في حالة الخمول على هذه الصفحة: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -266,7 +266,7 @@
 		"message": "الإنجازات المخفية: "
 	},
 	"hidden_achievement_hover": {
-		"message": "إنجاز مخفي، مرر الفأرة للكشف: "
+		"message": "إنجاز مخفي، مرر المؤشر للإظهار: "
 	},
 	"inventory_list_at": {
 		"message": "اعرض بسعر $price$",
@@ -287,7 +287,7 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "عَرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (دون رسوم)"
+		"message": "يعرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (بدون رسوم)"
 	},
 	"inventory_sell_at_title": {
 		"message": "عَرض العنصر بأعلى سعر شراء مطلوب\n\nالسعر المعروض هو المبلغ الذي تتلقاه (دون رسوم)"
@@ -462,6 +462,10 @@
 	},
 	"options_link_subid": {
 		"message": "عرض SubID تحت كل خيار شراء"
+	},
+	"options_link_subid_widget": {
+		"message": "عرض SubID في عناصر واجهة المستخدم في التطبيق",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "ربط كل حزمة على صفحة التراخيص الخاصة بك"

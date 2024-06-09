@@ -17,6 +17,9 @@
 	"view_on_pcgamingwiki": {
 		"message": "Vis på PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Personlic presentasjoner"
+	},
 	"store_page": {
 		"message": "Butikkside",
 		"description": "This translation should match how Steam translates it on community hubs"

@@ -1,12 +1,21 @@
 {
 	"extension_description": {
-		"message": "Pridáva odkazy na SteamDB a nové funkcie v obchode a komunite Steam. Pozrite si najnižšie ceny hier a štatistiky."
+		"message": "Pridáva SteamDB odkazy a nové funkcie v obchode služby Steam a ich komunite. Zobrazte najnižšie ceny a štatistiky hier."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Možnosti"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB Calculator"
+		"message": "SteamDB Kalkulátor"
+	},
+	"steamstatus": {
+		"message": "Skontrolujte na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
 	},
 	"steamstatus_downtime": {
 		"message": "Zdá sa, že Steam má nejaký výpadok. "
@@ -17,12 +26,15 @@
 	"view_on_pcgamingwiki": {
 		"message": "Pozrieť na PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Osobné Achievements"
+	},
 	"store_page": {
 		"message": "Stránka Obchodu",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
-		"message": "Hľadať"
+		"message": "Vyhľadať"
 	},
 	"id_app": {
 		"message": "App $id$",
@@ -45,7 +57,7 @@
 		}
 	},
 	"id_bundle": {
-		"message": "Balíček $id$",
+		"message": "Bundle $id$",
 		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
@@ -58,11 +70,11 @@
 		"message": "SteamDB Hodnotenie:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " HODNOTENIE STEAMDB",
+		"message": " STEAMDB HODNOTENIE",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ z $total$ recenzie sú pozitívne (všetky typy nákupov)",
+		"message": "$positive$ z $total$ recenzií sú pozitívne (všetky typy nákupov)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -75,26 +87,26 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Posledný Update:"
+		"message": "Posledná Aktualizácia:"
 	},
 	"app_depots_updated_short": {
 		"message": "Aktualizované",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Online štatistiky"
+		"message": "Online Štatistiky"
 	},
 	"app_stats_online_now": {
-		"message": "Práve online:"
+		"message": "Teraz online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-hour peak:"
+		"message": "24-hodinový vrchol:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "All-time peak:"
+		"message": "Vrchol všetkých čias:"
 	},
 	"app_stats_followers": {
-		"message": "Sledujúci:"
+		"message": "Sledovatelia:"
 	},
 	"app_nothing_selected": {
 		"message": "nič nie je vybrané"
@@ -148,7 +160,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Cena zaznamenaná $seen$-krát, naposledy $date$ ($relative$)",
+		"message": "Cena zaznamenaná $seen$-krát, naposledy zaznamenaná $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -165,13 +177,13 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Automatické objavovanie"
+		"message": "Auto-objavovanie"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automaticky zistite poradie a získajte kartu udalosti."
+		"message": "Automaticky objavte poradie a získajte event kartu."
 	},
 	"explore_generating": {
-		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
+		"message": "Generovanie nového objavovacieho poradia, môže zlyhať, ak je Steam pod vysokým zaťažením…"
 	},
 	"explore_exploring": {
 		"message": "Skúma sa poradie… Žiadosť $current$ z $total$",
@@ -186,18 +198,91 @@
 			}
 		}
 	},
+	"explore_failed_to_clear": {
+		"message": "Nepodarilo sa vymazať položku #$current$, skúste znova o päť sekúnd…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nepodarilo sa vymazať položku #$current$ príliš veľa krát. Neskôr môžete skúsiť znova.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Pokus o generovanie nového poradia zlyhal, opäť sa o to pokúsime o niekoľko sekúnd…"
+	},
+	"explore_finished": {
+		"message": "Poradia bolo preskúmané."
+	},
+	"badges_idle_apps": {
+		"message": "Aplikácie na nečinnosť: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplikácie na nečinnosť na tejto stránke: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Zostávajúce Drops: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Zostávajúce Drops na tejto stránke: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Skrytý achievement: "
+	},
 	"options": {
 		"message": "Možnosti"
 	},
 	"options_header_inventory": {
 		"message": "Inventár"
 	},
+	"options_button_sub": {
+		"message": "Zobrazovať tlačidlo na stránkach balíkov"
+	},
+	"options_link_subid": {
+		"message": "Zobrazovať SubID pod každou nákupnou voľbou"
+	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Odstraňuje filter odkazov „Opúšťate Steam“ z externých stránok",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Automaticky prijímate Predplatiteľskú Zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
+		"message": "Automaticky prijímate predplatiteľku zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	}
 }

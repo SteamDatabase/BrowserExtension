@@ -436,6 +436,15 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "แสดงราคาต่ำสุดที่บันทึกไว้บนหน้าแอป"
+	},
+	"options_online_stats": {
+		"message": "แสดงผู้เล่นพร้อมกันในปัจจุบันและจุดสูงสุดบนหน้าแอป"
+	},
+	"options_steamdb_last_update": {
+		"message": "แสดงการอัปเดตล่าสุดบนหน้าแอป"
+	},
 	"options_button_sub": {
 		"message": "แสดงปุ่มบนหน้าแพ็คเกจ"
 	},

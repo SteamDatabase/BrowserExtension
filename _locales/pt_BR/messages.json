@@ -67,14 +67,14 @@
 		}
 	},
 	"app_steamdb_rating": {
-		"message": "Classificação do SteamDB:"
+		"message": "Avaliação do SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " CLASSIFICAÇÃO DO STEAMDB",
+		"message": " AVALIAÇÃO DO STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ das $total$ análises de usuários deste jogo são positivas (inclui todas as formas de aquisição).",
+		"message": "$positive$ das $total$ análises de usuários deste produto são positivas (inclui todas as formas de aquisição).",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -287,10 +287,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Anuncia o ‘item’ conforme o anúncio mais baixo\n\nO preço exibido é o valor que você receberá (sem taxas)"
+		"message": "Anuncia o item pelo preço de venda mais baixo listado\n\nO preço exibido é o valor que você receberá (sem tarifas)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Anuncia o item com o maior preço de encomenda\n\nO preço exibido é o valor que você receberá (sem taxas)"
+		"message": "Anuncia o item pelo preço de encomenda mais alto listado\n\nO preço exibido é o valor que você receberá (sem tarifas)"
 	},
 	"widget_view_app": {
 		"message": "Ver aplicativo $id$ no SteamDB",
@@ -368,10 +368,10 @@
 		"message": "Explicação"
 	},
 	"options_website_explanation1": {
-		"message": "Quando esta opção é ativada, a extensão irá solicitar alguns dados de usuário (lista de desejos, possuídos, seguidos, produtos ignorados, e produtos no carrinho) da <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">loja Steam</a> e vai usá-los para aplicar destaques no site."
+		"message": "Quando esta opção estiver ativada, a extensão realizará uma requisição segura ao Steam para obter alguns <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">dados seus</a> (lista de desejos, produtos adquiridos, ignorados e no carrinho), a fim de destacar certas informações no site do SteamDB."
 	},
 	"options_website_explanation2": {
-		"message": "Para que isso funcione, você precisa estar logado na loja."
+		"message": "Você precisará iniciar a sessão na Loja Steam para que este recurso funcione."
 	},
 	"options_website_explanation3": {
 		"message": "Essa informação é armazenada inteiramente no seu navegador e nunca é enviada aos servidores do SteamDB."
@@ -436,8 +436,26 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "Exibir o menor preço registrado nas páginas dos produtos"
+	},
+	"options_online_stats": {
+		"message": "Exibir jogadores simultâneos e picos máximos nas páginas dos produtos"
+	},
+	"options_steamdb_last_update": {
+		"message": "Exibir a data da última atualização nas páginas dos produtos"
+	},
+	"options_button_app": {
+		"message": "Exibir um botão nas páginas dos produtos"
+	},
+	"options_button_pcgw": {
+		"message": "Exibir um botão para a PCGamingWiki nas páginas dos produtos"
+	},
 	"options_button_sub": {
 		"message": "Exibir um botão nas páginas de pacotes"
+	},
+	"options_button_gamehub": {
+		"message": "Exibir um botão nas centrais da comunidade"
 	},
 	"options_button_gamecards": {
 		"message": "Exibir botões para o SteamDB e para a página na loja na página de insígnias do jogo"
@@ -445,14 +463,18 @@
 	"options_link_subid": {
 		"message": "Exibir o ID do pacote (SubID) sob cada opção de compra"
 	},
+	"options_link_subid_widget": {
+		"message": "Exibir o ID do pacote (SubID) em widgets incorporados",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
 	"options_link_accountpage": {
 		"message": "Associar cada licença ao seu pacote correspondente na página de licenças"
 	},
 	"options_profile_calculator": {
-		"message": "Adicionar um link de calculadora nos perfis da comunidade"
+		"message": "Adicionar um link para a calculadora do SteamDB nos perfis da comunidade"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Mover seleção de jogo na página do inventário para o lado"
+		"message": "Afixar o menu de seleção de jogos à esquerda do inventário"
 	},
 	"options_link_inventory": {
 		"message": "Associar presentes e cupons no inventário às páginas relevantes no SteamDB"
@@ -513,11 +535,24 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar o banner \"Abrir no aplicativo\""
 	},
+	"options_steamdb_rating": {
+		"message": "Exibir avaliação do SteamDB nas páginas dos produtos"
+	},
+	"options_enhancement_appicon": {
+		"message": "Exibir o ícone do produto nas páginas da Comunidade e na loja",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "Carregar conquistas ocultas e suas descrições"
 	},
 	"options_spoiler_achievements": {
 		"message": "Ocultar as descrições usando um elemento de spoiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Impedir o carregamento de certas imagens nas páginas dos produtos"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Alguns desenvolvedores incluem imagens desnecessariamente grandes nas descrições dos produtos, o que pode atrasar o carregamento de páginas. Clique no ícone de foto para carregá-las."
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Suporte ao parâmetro $award$ em links de perfis e conteúdo criado pela comunidade",
@@ -529,6 +564,9 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Exibir o total de cartas disponíveis restantes na página de insígnias"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Adicionar um botão para explorar automaticamente a lista de descobrimento durante promoções temáticas"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de conquistas globais"

@@ -436,14 +436,36 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "Mostrar el precio más bajo registrado en las páginas de los productos"
+	},
+	"options_online_stats": {
+		"message": "Mostrar los jugadores activos actualmente y los picos máximos en las páginas de los productos"
+	},
+	"options_steamdb_last_update": {
+		"message": "Mostrar la última actualización en las páginas de productos"
+	},
+	"options_button_app": {
+		"message": "Mostrar un botón en las páginas de los productos"
+	},
+	"options_button_pcgw": {
+		"message": "Mostrar el botón PCGamingWiki en las páginas de los productos"
+	},
 	"options_button_sub": {
 		"message": "Mostrar un botón en las páginas de paquetes"
+	},
+	"options_button_gamehub": {
+		"message": "Mostrar un botón en los puntos de encuentro"
 	},
 	"options_button_gamecards": {
 		"message": "Mostrar botones de SteamDB y de la página de tienda en la página de cromo del juego"
 	},
 	"options_link_subid": {
 		"message": "Mostrar el id. de paquete (SubID) en cada opción de compra"
+	},
+	"options_link_subid_widget": {
+		"message": "Mostrar el id. de paquete (SubID) en los widgets de los productos",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "Vincula cada paquete en la página de licencias"
@@ -513,11 +535,24 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar el aviso «Abrir en Steam»"
 	},
+	"options_steamdb_rating": {
+		"message": "Mostrar la valoración de SteamDB en las páginas de los productos"
+	},
+	"options_enhancement_appicon": {
+		"message": "Mostrar el icono del producto en la página de la tienda y de la comunidad",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "Cargar logros ocultos y sus descripciones"
 	},
 	"options_spoiler_achievements": {
 		"message": "Ocultar descripciones tras un elemento spoiler"
+	},
+	"options_prevent_store_images": {
+		"message": "Detener la carga de imágenes en las páginas del producto"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Algunos desarrolladores ponen megabytes de imágenes en las descripciones de los productos, lo que puede tardar un tiempo en cargar. Haz clic en una imagen para cargarla"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Admitir parámetros de premio «$award$» en enlaces de perfiles y capturas, artwork o vídeos compartidos",
@@ -529,6 +564,9 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "Mostrar la cantidad total de cromos restantes en la página de insignias"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Añadir un botón para hacer trampa en la cola de descubrimiento durante las ofertas"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Mejorar la página de logros mundiales"

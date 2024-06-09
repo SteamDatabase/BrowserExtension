@@ -1,1 +1,580 @@
-{}
+{
+	"extension_description": {
+		"message": "Doda povezave SteamDB in nove funkcije v trgovini in skupnosti Steam. Oglejte si najnižje cene in statistiko iger."
+	},
+	"steamdb_options": {
+		"message": "SteamDB Možnosti"
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Kalkulator"
+	},
+	"steamstatus": {
+		"message": "Preveri na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
+	"steamstatus_downtime": {
+		"message": "Zdi se, da ima Steam nekaj izpadov. "
+	},
+	"view_on_steamdb": {
+		"message": "Poglej na SteamDB"
+	},
+	"view_on_pcgamingwiki": {
+		"message": "Poglej na PCGamingWiki"
+	},
+	"view_your_achievements": {
+		"message": "Osebni dosežki"
+	},
+	"store_page": {
+		"message": "Stran trgovine",
+		"description": "This translation should match how Steam translates it on community hubs"
+	},
+	"search": {
+		"message": "Išči"
+	},
+	"id_app": {
+		"message": "$id$ Aplikacije",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"id_sub": {
+		"message": "$id$ Paketa",
+		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "54029"
+			}
+		}
+	},
+	"id_bundle": {
+		"message": "$id$ Zbirke",
+		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "9846"
+			}
+		}
+	},
+	"app_steamdb_rating": {
+		"message": "Ocena SteamDB:"
+	},
+	"app_steamdb_rating_responsive": {
+		"message": " OCENA STEAMDB",
+		"description": "Visible on the mobile version"
+	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$positive$ od $total$ ocen je pozitivnih (vse vrste nakupov)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
+	"app_depots_update": {
+		"message": "Zadnja posodobitev:"
+	},
+	"app_depots_updated_short": {
+		"message": "Posodobljeno",
+		"description": "Visible on the mobile version"
+	},
+	"app_stats_online": {
+		"message": "Spletna statistika"
+	},
+	"app_stats_online_now": {
+		"message": "Trenutno igra:"
+	},
+	"app_stats_peak_today": {
+		"message": "24-urni vrhunec:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Vrhunec vseh časov:"
+	},
+	"app_stats_followers": {
+		"message": "Sledilci:"
+	},
+	"app_nothing_selected": {
+		"message": "nič ni izbrano"
+	},
+	"app_lowest_price": {
+		"message": "Najnižja zabeležena cena SteamDB je <b>$price$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Najnižja zabeležena cena SteamDB je <b>$price$</b> pri <b>-$discount$%</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "Najnižja zabeležena cena SteamDB je <b>$price$</b>, najnižja cena v zadnjih 2 letih pa <b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "Cena videna na $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Cena videna $seen$– krat, nazadnje $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Samodejno odkrij"
+	},
+	"explore_auto_discover_description": {
+		"message": "Samodejno odkrijte čakalno vrsto, da dobite kartico dogodka."
+	},
+	"explore_generating": {
+		"message": "Ustvarjanje nove čakalne vrste za odkrivanje, to lahko spodleti, če je Steam pod visoko obremenitvijo…"
+	},
+	"explore_exploring": {
+		"message": "Raziskovanje čakalne vrste... Zahteva $current$ od $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "Elementa čakalne vrste #$current$ ni bilo mogoče počistiti, znova poskusite čez pet sekund…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Prevečkrat ni uspelo počistiti elementa čakalne vrste #$current$. Poskusite lahko znova pozneje.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "Nove čakalne vrste ni bilo mogoče ustvariti, vnovičen poskus čez pet sekund…"
+	},
+	"explore_finished": {
+		"message": "Čakalna vrsta je bila raziskana."
+	},
+	"badges_idle_apps": {
+		"message": "Aplikacije v mirovanju: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Aplikacije v mirovanju na tej strani: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Preostali predmeti: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Preostali predmeti na tej strani: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"hidden_achievement": {
+		"message": "Skriti dosežek: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Skriti dosežek, miško čez njega, da ga razkrijete: "
+	},
+	"inventory_list_at": {
+		"message": "Objavi po $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Prodaj po $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Navede artikel po najnižji navedeni prodajni ceni\n\nPrikazana cena je denar, ki ga prejmete (brez provizije)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Navede artikel za najvišjo navedeno ceno nakupa\n\nPrikazana cena je denar, ki ga prejmete (brez provizije)"
+	},
+	"widget_view_app": {
+		"message": "Oglejte si aplikacijo $id$ na SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"widget_view_sub": {
+		"message": "Oglejte si sub $id$ na SteamDB",
+		"placeholders": {
+			"id": {
+				"content": "$1",
+				"example": "730"
+			}
+		}
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"options_welcome_title": {
+		"message": "👋 Hvala za namestitev razširitve SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Preglejte spodnje možnosti in izberite želene. Če se želite vrniti sem v prihodnosti:"
+	},
+	"options_welcome_option1": {
+		"message": "Stran z nastavitvami na SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Spustni meni računa na straneh Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Stran z dodatki vašega brskalnika"
+	},
+	"options_review": {
+		"message": "Pustite oceno za to razširitev"
+	},
+	"options_permissions_description": {
+		"message": "Ta razširitev zahteva dodatna dovoljenja za pravilno delovanje v SteamDB, Steam Store in Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Odobri dovoljenja"
+	},
+	"options_footer1": {
+		"message": "Ustvarjeno z 💙 od ljudi <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Je <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">odprtokodni projekt</a>, hvala vsem sodelujočim!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Onemogočena potrditvena polja označujejo vgrajene funkcije."
+	},
+	"options_header_website": {
+		"message": "Spletno mesto SteamDB"
+	},
+	"options_header_extra_data": {
+		"message": "Dodatni podatki"
+	},
+	"options_header_buttons_and_links": {
+		"message": "Gumbi in povezave"
+	},
+	"options_header_inventory": {
+		"message": "Inventar"
+	},
+	"options_header_trade_offers": {
+		"message": "Trgovske ponudbe"
+	},
+	"options_header_enhancements": {
+		"message": "Izboljšave"
+	},
+	"options_website_explanation": {
+		"message": "Obrazložitev"
+	},
+	"options_website_explanation1": {
+		"message": "Ko je ta možnost omogočena, bo razširitev zahtevala nekaj uporabniških podatkov (izdelki na seznamu želja, v lasti, spremljani, prezrti izdelki in izdelki v košarici) iz <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> in jih bo uporabil za uporabo poudarkov na spletnem mestu."
+	},
+	"options_website_explanation2": {
+		"message": "Da to deluje, morate biti prijavljeni v trgovino."
+	},
+	"options_website_explanation3": {
+		"message": "To je v celoti hranjeno v vašem brskalniku in ni nikoli poslano niti v zaledje SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Da bi preprečili prekomerne zahteve v Steam Store, so vaši uporabniški podatki predpomnjeni v lokalni shrambi vašega brskalnika."
+	},
+	"options_website_highlight": {
+		"message": "Označite lastne in želene izdelke na $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Dodajte na seznam želja, spremljajte in prezrite izdelke v trgovini Steam neposredno iz SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Omogoči skript brezplačnih paketov</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Omogočite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prodajni strani</a> in <a href=\"https://steamdb.info/bundles/\" cilju =\"_blank\">strani z zbirkami</a>"
+	},
+	"options_extra_data": {
+		"message": "Dodatni podatki, pridobljeni iz $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Ko sta omogočeni možnosti \"$options_online_stats$\" ali \"$options_steamdb_last_update$\", bo razširitev poslala varno zahtevo $domain$, da pridobi trenutno število igralcev in zadnjo posodobitev igre.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Ko je omogočena možnost »$options_steamdb_lowest_price$«, bo razširitev poslala varno zahtevo $domain$ z vašo valuto (s tisto, kar Steam misli, da je), da pridobi zabeleženo ceno za določeno igro.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Prikaži najnižjo zabeleženo ceno na straneh izdelkov"
+	},
+	"options_online_stats": {
+		"message": "Prikažite trenutne sočasne igralce in najvišje vrednosti na straneh izdelkov"
+	},
+	"options_steamdb_last_update": {
+		"message": "Prikaz zadnje posodobitve na straneh izdelkov"
+	},
+	"options_button_app": {
+		"message": "Prikažite gumb na straneh izdelkov"
+	},
+	"options_button_pcgw": {
+		"message": "Prikaži gumb PCGamingWiki na straneh izdelkov"
+	},
+	"options_button_sub": {
+		"message": "Prikažite gumb na straneh paketov"
+	},
+	"options_button_gamehub": {
+		"message": "Prikažite gumb v središčih skupnosti"
+	},
+	"options_button_gamecards": {
+		"message": "Prikaži gumbe SteamDB ter strani trgovine na strani z igralnimi kartami"
+	},
+	"options_link_subid": {
+		"message": "Prikaži SubID pod vsako možnostjo nakupa"
+	},
+	"options_link_subid_widget": {
+		"message": "Prikaži SubID v vdelanih pripomočkih",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Povežite vsak paket na vaši strani z licencami"
+	},
+	"options_profile_calculator": {
+		"message": "Dodajte povezavo do kalkulatorja na profile skupnosti"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Premakni izbiro igre na strani inventarja na stran"
+	},
+	"options_link_inventory": {
+		"message": "Vsako darilo in kupon v svojem inventarju povežite s SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Pravilno določite SubID darila v svojem inventarju"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Pri prodaji artikla ne osvežujte inventarja"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Dodajte gumbe za hitro prodajo"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Samodejno sprejmi hitro prodajo"
+	},
+	"options_display_market_price_others": {
+		"message": "Prikaži tržno ceno predmeta v inventarjih drugih uporabnikov"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Podpora za parametre $for_item$ in $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Oglejte si razlago na GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Utišajte \"ta trgovina se zdi sumljiva\" in \"ali ste prepričani, da je to darilo?\" opozorila o trgovski ponudbi"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Prikaži boljša sporočila o napakah namesto kriptičnih številk napak Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Preskoči stran za preverjanje starosti"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Nastavi, da piškotki o starosti in rojstnem dnevu vedno opravijo kontrolo"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Odstrani filter povezav »Zapuščate Steam« z zunanjih spletnih mest",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Sprejmite naročniško pogodbo na trgu, inventarju in samodejno aktivirajte ključne strani",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Skrij gumb »Namesti Steam« v glavi strani",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Skrij pasico »Odpri v Steamu«"
+	},
+	"options_steamdb_rating": {
+		"message": "Prikaži oceno SteamDB na straneh izdelkov"
+	},
+	"options_enhancement_appicon": {
+		"message": "Prikaz ikone izdelka na straneh trgovine in skupnosti",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_hidden_achievements": {
+		"message": "Naloži skrite dosežke in njihove opise"
+	},
+	"options_spoiler_achievements": {
+		"message": "Skrij opise za element spojlerja"
+	},
+	"options_prevent_store_images": {
+		"message": "Prepreči nalaganje slik na straneh izdelkov"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Nekateri razvijalci v opise izdelkov dodajo megabajte slik, kar lahko traja nekaj časa, da se naložijo, kliknite sliko za nalaganje"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Podprite parametre $award$ v profilu in povezavah datotek v skupni rabi",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Na strani z značkami prikažite skupno število preostalih značk"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Dodajte gumb za samodejno odkrivanje čakalne vrste med prodajo"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Izboljšaj stran z globalnimi dosežki"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Povezava do vaše strani z dosežki"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Zaklenjeni dosežki imajo ikono ključavnice za večjo vidnost"
+	}
+}

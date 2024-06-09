@@ -103,7 +103,7 @@
 		"message": "24시간 동안의 최고 접속량"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "역대 최고 접속량"
+		"message": "최고 동시접속자"
 	},
 	"app_stats_followers": {
 		"message": "팔로워"
@@ -184,5 +184,29 @@
 	},
 	"explore_generating": {
 		"message": "새로운 \"탐색 대기열\"을 생성하는 중입니다. \"Steam\"의 부하가 높으면 실패할 수 있습니다…"
+	},
+	"inventory_list_at": {
+		"message": "$price$에 등록",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "$price$에 팔기",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"options_welcome_title": {
+		"message": "👋 SteamDB 확장 프로그램을 설치해주셔서 감사합니다!"
+	},
+	"options_permissions_button": {
+		"message": "⚠️ 권한 부여"
 	}
 }

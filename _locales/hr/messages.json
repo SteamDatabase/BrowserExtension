@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Izgldea da Steam je trenutačno nedustupan. "
+		"message": "Čini se da Steam trenutno ima zastoje. "
 	},
 	"view_on_steamdb": {
 		"message": "Pogledaj na SteamDB-u"
@@ -103,16 +103,16 @@
 		"message": "24-Satni Vrhunac:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Vrhunac Svih Vremena:"
+		"message": "Svevremenski vrhunac:"
 	},
 	"app_stats_followers": {
-		"message": "Pratioci:"
+		"message": "Pratitelji:"
 	},
 	"app_nothing_selected": {
-		"message": "nije ništa izabrano"
+		"message": "ništa nije odabrano"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB-ova naj niža zapračena cijena je <b>$price$</b>",
+		"message": "Najniža zabilježena cijena na SteamDB-u je <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -121,7 +121,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB-ova naj niža zapračena cijene je <b>$price$</b> na <b>-$discount$%</b>",
+		"message": "Najniža zabilježena cijena na SteamDB-u je <b>$price$</b> uz popust od <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -134,7 +134,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Najniža SteamDB-ova rekordna cijena je <b>$price$</b>. U zadnje 2 godine iznosila je <b>$price_limited$</b>",
+		"message": "Najniža zabilježena cijena na SteamDB-u je <b>$price$</b> i najniža cijena u posljednje 2 godine je <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -147,7 +147,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Cijena viđena $date$ ($relative$)",
+		"message": "Cijena viđena na $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -160,7 +160,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Cijena viđena $seen$ puta, zadnji put $date$ ($relative$)",
+		"message": "Cijena viđena $seen$ puta, zadnji put na $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -177,16 +177,16 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Automatski Otkrij"
+		"message": "Automatsko otkrivanje"
 	},
 	"explore_auto_discover_description": {
-		"message": "Preskoči listu otkrivanja novih igrica, kako bi dobio event-karticu."
+		"message": "Automatski otkrij red čekanja za dobivanje kartice događaja."
 	},
 	"explore_generating": {
-		"message": "Generiram novu listu za otkrivanje novih igrica, može doći do greške ako je Steam pod visokim opterećenjem…"
+		"message": "Generiranje novog reda otkrivanja, ovo može ne uspjeti ako je Steam pod velikim opterećenjem…"
 	},
 	"explore_exploring": {
-		"message": "Otkrivanje Liste… Zahtjev $current$ od $total$",
+		"message": "Istraživanje reda čekanja… Zahtjev $current$ od $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -450,5 +450,131 @@
 	},
 	"options_button_pcgw": {
 		"message": "Prikažite gumb PCGamingWiki na stranicama proizvoda"
+	},
+	"options_button_sub": {
+		"message": "Prikažite gumb na stranicama paketa"
+	},
+	"options_button_gamehub": {
+		"message": "Prikažite gumb na zajedničkim čvorištima"
+	},
+	"options_button_gamecards": {
+		"message": "Prikažite gumbe SteamDB i stranice trgovine na stranici kartica igara"
+	},
+	"options_link_subid": {
+		"message": "Prikažite SubID ispod svake opcije kupnje"
+	},
+	"options_link_subid_widget": {
+		"message": "Prikažite SubID u ugrađenim widgetima",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Povežite svaki paket na svojoj stranici licenci"
+	},
+	"options_profile_calculator": {
+		"message": "Dodajte poveznicu na kalkulator na zajedničkim profilima"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Premjesti odabir igre na stranici inventara u stranu"
+	},
+	"options_link_inventory": {
+		"message": "Poveži svaki dar i kupon u svom inventaru sa SteamDB-om"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Ispravno odredi SubID poklona u svom inventaru"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Nemoj osvježavati inventar prilikom prodaje predmeta"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Dodaj gumbe za brzu prodaju"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automatski prihvati brzu prodaju"
+	},
+	"options_display_market_price_others": {
+		"message": "Prikaži tržišnu cijenu predmeta u inventarima drugih korisnika"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Podrži parametre $for_item$ i $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Pogledaj objašnjenje na GitHubu"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Potisni upozorenja \"ova razmjena izgleda sumnjivo\" i \"jeste li sigurni da je ovo dar?\" za ponude razmjene"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Prikaži bolje poruke o pogreškama umjesto Valveovih kriptičnih brojeva pogrešaka"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Preskoči stranicu za provjeru dobi"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Postavlja kolačiće za dob i rođendan tako da uvijek prolaze"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Ukloni filtar poveznica 'Napustate Steam' s vanjskih stranica",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Automatski prihvati Ugovor o pretplati na stranicama tržišta, inventara i aktivacije ključeva",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Sakrij gumb 'Instaliraj Steam' u zaglavlju",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Sakrij banner 'Otvori u Steamu'"
+	},
+	"options_steamdb_rating": {
+		"message": "Prikaži ocjenu SteamDB na stranicama proizvoda"
+	},
+	"options_enhancement_appicon": {
+		"message": "Prikaži ikonu proizvoda na stranicama trgovine i zajednice",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_hidden_achievements": {
+		"message": "Učitaj skrivene postignuća i njihove opise"
+	},
+	"options_spoiler_achievements": {
+		"message": "Sakrij opise iza elementa spojlera"
+	},
+	"options_prevent_store_images": {
+		"message": "Zaustavi učitavanje slika na stranicama proizvoda"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Neki developeri stavljaju megabajte slika u opise proizvoda, što može potrajati dok se učitaju. Kliknite na sliku za učitavanje"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Podržavajte $award$ parametre na profilima i poveznicama za dijeljenje datoteka",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Prikaži ukupan broj preostalih kartica na stranici znački"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Dodaj gumb za automatsko otkrivanje reda tijekom rasprodaja"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Poboljšaj stranicu globalnih postignuća"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Poveznica na vašu stranicu postignuća"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Zaključana postignuća imaju ikonu zaključavanja za bolju vidljivost"
 	}
 }

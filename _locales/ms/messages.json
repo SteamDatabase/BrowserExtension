@@ -109,7 +109,7 @@
 		"message": "Para Pengikut:"
 	},
 	"app_nothing_selected": {
-		"message": "Tiada yang Dipilih"
+		"message": "tiada yang dipilih"
 	},
 	"app_lowest_price": {
 		"message": "Rekod harga terendah SteamDB<b>$price$</b>",
@@ -335,7 +335,7 @@
 		"message": "Extension memerlukan permissions tambahan untuk berfungsi di SteamDB, Steam Store, dan Steam Community."
 	},
 	"options_permissions_button": {
-		"message": "⚠️ Grant permissions (Benarkan permissions)"
+		"message": "⚠️ Berikan kebenaran"
 	},
 	"options_footer1": {
 		"message": "Dicipta 💙 oleh warga <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -422,5 +422,119 @@
 				"description": "Uses translation for options_steamdb_last_update"
 			}
 		}
+	},
+	"options_extra_data_prices": {
+		"message": "Bila \"$options_steamdb_lowest_price$\" option adalah enabled, Extension akan melakukan permintaan keselamatan pada $domain$ dengan mngikut nilai mata wang (mengikut format Steam) untuk mendapatkan rekod harga untuk permainan tertentu.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Paparkan rekod harga terendah di product page"
+	},
+	"options_online_stats": {
+		"message": "Paparkan pemain semasa dan di waktu puncak pada product pages"
+	},
+	"options_steamdb_last_update": {
+		"message": "Paparkan kemask kini terbaru di product page"
+	},
+	"options_button_app": {
+		"message": "Paparkan button di product page"
+	},
+	"options_button_pcgw": {
+		"message": "Paparkan button PCGamingWiki di product page"
+	},
+	"options_button_sub": {
+		"message": "Paparkan button di package page"
+	},
+	"options_button_gamehub": {
+		"message": "Paparkan button di Ruangan Komuniti"
+	},
+	"options_button_gamecards": {
+		"message": "Paparkan button SteamDB dan store page di game cards page"
+	},
+	"options_link_subid": {
+		"message": "Paparkan SubID dibawah setiap option pembelian"
+	},
+	"options_link_subid_widget": {
+		"message": "Paparkan SubID dalam embed widgets",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Sambung setiap package pada licenses page anda"
+	},
+	"options_profile_calculator": {
+		"message": "Tambah link kalkulator pada Kominiti profil"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Gerakan permainan pilihan pada inventory page ke ruangan sisi"
+	},
+	"options_link_inventory": {
+		"message": "Sambung setiap gift dan coupon dalam inventory anda ke SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Memperbetulkan gift SubID dalam inventory anda"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Jangan refresh inventory ketika jual item"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Tambah Button Quick sell"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Terima Quick sell secara Automatik"
+	},
+	"options_display_market_price_others": {
+		"message": "Paparkan harga item market di Inventory penguna lain"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Support $for_item$ dan $my_item$ parameters",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Lihat penjelasan di GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Sekat \"perdagangan ini kelihatan mencurigakan\" dan \"adakah anda pasti ini adalah hadiah?\" isyarat tawaran perdagangan"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Paparkan mesej ralat yang lebih baik, bukannya nombor ralat samar Valve"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "Alih keluar penapis pautan \"Anda meninggalkan Steam\" daripada tapak luaran",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Terima Subscriber Agreement di market, inventory, dan activate key page secara automatik",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_steamdb_rating": {
+		"message": "Paparkan rating SteamDB pada halaman produk"
+	},
+	"options_prevent_store_images": {
+		"message": "Hentikan imej daripada dimuatkan pada halaman produk"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Sesetengah pembangun meletakkan megabyte imej dalam penerangan produk yang boleh mengambil sedikit masa untuk dimuatkan, klik pada imej untuk dimuatkan"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Paut ke halaman pencapaian anda sendiri"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Pencapaian berkunci mempunyai ikon kunci untuk lebih keterlihatan"
 	}
 }

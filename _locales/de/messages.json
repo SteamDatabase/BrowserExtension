@@ -389,7 +389,7 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Direkt über SteamDB Produkte aus dem Steam-Shop zur Wunschliste hinzufügen, folgen oder ignorieren"
+		"message": "Produkte im Steam-Shop direkt über SteamDB zur Wunschliste hinzufügen, folgen oder ignorieren"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Skript für kostenlose Pakete aktivieren</a>"

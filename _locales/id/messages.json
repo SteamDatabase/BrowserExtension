@@ -565,6 +565,9 @@
 	"options_builtin_card_drops": {
 		"message": "Menampilkan jumlah total kartu yang tersisa pada halaman lencana"
 	},
+	"options_builtin_queue_cheat": {
+		"message": "Tambah tombol untuk menjelajahi daftar temuanmu secara otomatis saat promo"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Tingkatkan halaman pencapaian global"
 	},

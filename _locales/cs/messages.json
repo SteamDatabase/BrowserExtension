@@ -9,7 +9,7 @@
 		"message": "SteamDB kalkulačka"
 	},
 	"steamstatus": {
-		"message": "Zkontrolujte $domain$",
+		"message": "Zkontrolujte na $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -368,7 +368,7 @@
 		"message": "Vysvětlení"
 	},
 	"options_website_explanation1": {
-		"message": "Pokud je tato možnost povolena, rozšíření bude vyžadovat některá uživatelská data (na seznamu přání, sledováno, ignorováno produkty), a produkty v košíku) z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> a budou tyto produkty používat pro zvýraznění na webu."
+		"message": "Pokud je tato možnost povolena, rozšíření bude vyžadovat některá uživatelská data (na seznamu přání, sledováno, ignorováno produkty), a produkty v košíku z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> a budou tyto produkty používat pro zvýraznění na webu."
 	},
 	"options_website_explanation2": {
 		"message": "Aby toto fungovalo, musíte být přihlášeni do obchodu."

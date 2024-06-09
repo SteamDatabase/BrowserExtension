@@ -47,7 +47,7 @@
 		}
 	},
 	"id_sub": {
-		"message": "Sub- $id$",
+		"message": "Sub $id$",
 		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
@@ -391,6 +391,9 @@
 	"options_website_highlight1": {
 		"message": "Wensenlijst, volg en negeer producten in de Steam winkel rechtstreeks vanuit SteamDB"
 	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Schakel het gratis packages script in</a>"
+	},
 	"options_website_highlight3": {
 		"message": "Extra filtering inschakelen op <a href=\"https://steamdb.info/sales/\" target=\"_blank\">verkooppagina</a> en <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundel pagina</a>"
 	},
@@ -420,20 +423,102 @@
 			}
 		}
 	},
+	"options_extra_data_prices": {
+		"message": "Wanneer de \"$options_steamdb_lowest_price$\" optie is ingeschakeld zal de extensie een veilig verzoek doen naar $domain$ met je valuta (met wat Steam denkt dat het is) om de prijs op te nemen voor een bepaald spel.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Toon de laagst geregistreerde prijs op productpagina's"
+	},
+	"options_online_stats": {
+		"message": "Toon huidige gelijktijdige spelers en max pieken op productpagina's"
 	},
 	"options_steamdb_last_update": {
 		"message": "Laatste update weergeven op productpagina's"
 	},
+	"options_button_app": {
+		"message": "Toon een knop op productpagina's"
+	},
+	"options_button_pcgw": {
+		"message": "Toon de PCGamingWiki knop op productpagina'a"
+	},
 	"options_button_sub": {
 		"message": "Een knop weergeven op pakketpagina's"
+	},
+	"options_button_gamehub": {
+		"message": "Toon een knop bij de community hubs"
+	},
+	"options_button_gamecards": {
+		"message": "Toon SteamDB en bewaar pagina knoppen op de gamecard pagina"
+	},
+	"options_link_subid": {
+		"message": "Toon sub-ID onder elke aankoopoptie"
+	},
+	"options_link_subid_widget": {
+		"message": "Sub-ID in gebedde widgets weergeven",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Koppel elk pakket aan uw licenties pagina"
 	},
 	"options_profile_calculator": {
 		"message": "Voeg een rekenmachine link toe aan community profielen"
 	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Verplaats spelselectie op inventarispagina naar de zijkant"
+	},
+	"options_link_inventory": {
+		"message": "Koppel alle cadeaus en cadeaubonnen in je inventaris aan SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Correct uitvinden van geschenk sub-ID in uw inventaris"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Vernieuw de inventaris niet bij verkoop van een item"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Snelle verkoopknoppen toevoegen"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Snelle verkoop automatisch accepteren"
+	},
+	"options_display_market_price_others": {
+		"message": "Toon artikel marktprijs in inventaris van andere gebruikers"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Ondersteuning voor $for_item$ en $my_item$ parameters",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
 	"options_github_explanation": {
 		"message": "Uitleg bekijken op GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Onderdruk \"deze handel lijkt verdacht\" en \"weet u zeker dat dit een geschenk is?\" handelsaanbod waarschuwingen"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Geef betere foutmeldingen weer in plaats van de cryptische foutnummers van Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Leeftijdscontrole pagina overslaan"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Zet leeftijds- en verjaardags-cookies op altijd passeren"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Verwijder \"Je verlaat Steam\" link filter voor externe websites",
@@ -442,5 +527,54 @@
 	"options_enhancement_market_ssa": {
 		"message": "Accepteer Abonneeovereenkomst op de markt, inventaris en activeer belangrijke pagina's automatisch",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "Verberg de \"Install Steam\" knop in de header",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Verberg \"Openen in Steam\" banner"
+	},
+	"options_steamdb_rating": {
+		"message": "Toon SteamDB beoordeling op productpagina's"
+	},
+	"options_enhancement_appicon": {
+		"message": "Geef product-icoon weer in winkel en op community pagina's",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_hidden_achievements": {
+		"message": "Verborgen prestaties en hun beschrijvingen laden"
+	},
+	"options_spoiler_achievements": {
+		"message": "Verberg beschrijvingen achter een spoiler element"
+	},
+	"options_prevent_store_images": {
+		"message": "Stop het laden van afbeeldingen op productpagina's"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Sommige ontwikkelaars plaatsen megabytes aan afbeeldingen in productomschrijvingen wat enige tijd kan duren om te laden, klik op een afbeelding om te laden"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "$award$ Parameters steunen op profiel en gedeelde bestand links",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_card_drops": {
+		"message": "Geef het totale aantal resterende kaart drops weer op de badges pagina"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Voeg een knop toe om automatisch de wachtrij te ontdekken tijdens de verkoop"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Verbeter de globale achievements pagina"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link naar je eigen achievements pagina"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Vergrendelde prestaties hebben een vergrendelings-icoon voor meer zichtbaarheid"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "SteamDB لینک و ویژگی های جدیدی به فروشگاه استیم و کامیونیتی اضافه می کند. پایین ترین قیمت های بازی و آمار را مشاهده کنید."
+		"message": "لینک های SteamDB و قابلیت های جدیدی را بر روی فروشگاه steam و community اضافه می کند. ارزان‌ترین قیمت و آمار های بازی را مشاهده کنید."
 	},
 	"steamdb_options": {
 		"message": "ویژگی های SteamDB"
@@ -27,7 +27,7 @@
 		"message": "مشاهده در PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "دستاورد های شخصی"
+		"message": "مشاهده دستاورد ها"
 	},
 	"store_page": {
 		"message": "صفحه فروشگاه",
@@ -37,7 +37,7 @@
 		"message": "جستجو"
 	},
 	"id_app": {
-		"message": "App $id$",
+		"message": "شناسه محصول: $id$",
 		"description": "Reference: https://partner.steamgames.com/doc/store/application",
 		"placeholders": {
 			"id": {
@@ -47,7 +47,7 @@
 		}
 	},
 	"id_sub": {
-		"message": "Sub $id$",
+		"message": "شناسه زیر مجموعه: $id$",
 		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
 		"placeholders": {
 			"id": {
@@ -57,7 +57,7 @@
 		}
 	},
 	"id_bundle": {
-		"message": "Bundle $id$",
+		"message": "آیدی بسته:$id$",
 		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
 		"placeholders": {
 			"id": {
@@ -90,20 +90,20 @@
 		"message": "آخرین بروزرسانی:"
 	},
 	"app_depots_updated_short": {
-		"message": "به روز شد",
+		"message": "بروز شد",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "آمار آنلاین"
+		"message": "آمار های آنلاین"
 	},
 	"app_stats_online_now": {
 		"message": "هم اکنون آنلاین:"
 	},
 	"app_stats_peak_today": {
-		"message": "اوج 24 ساعته:"
+		"message": "بیشینه در 24 ساعت:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "اوج تمام دوران:"
+		"message": "بیشینه ثبت شده:"
 	},
 	"app_stats_followers": {
 		"message": "دنبال کنندگان:"
@@ -290,7 +290,7 @@
 		"message": "محصول را برای کمترین قیمت خرید ثبت شده فهرست می کند\n\n قیمت نمایش داده شده پولی است که شما دریافت می کنید (بدون کارمزد)"
 	},
 	"inventory_sell_at_title": {
-		"message": "آیتم را برای بالاترین قیمت سفارش خرید فهرست شده لیست می کند\n\n قیمت نمایش داده شده پولی است که شما دریافت می کنید (بدون کارمزد)"
+		"message": "آیتم را برای بالاترین قیمت سفارش خرید فهرست شده لیست می کند\n\n قیمت نمایش داده شده پولی است که دریافت می کنید (بدون کارمزد)"
 	},
 	"widget_view_app": {
 		"message": "مشاهده app $id$ در SteamDB",
@@ -436,14 +436,36 @@
 			}
 		}
 	},
+	"options_steamdb_lowest_price": {
+		"message": "نمایش کمترین قیمت ثبت شده در صفحات بازی ها و برنامه ها"
+	},
+	"options_online_stats": {
+		"message": "نمایش تعداد بازیکن آنلاین و رکورد بیشترین مقدار بازیکن آنلاین بر روی صفحات محصول"
+	},
+	"options_steamdb_last_update": {
+		"message": "نمایش آخرین بروزرساتی برو روی صفحات محصول"
+	},
+	"options_button_app": {
+		"message": "نمایش دکمه بر روی صفحات محصول"
+	},
+	"options_button_pcgw": {
+		"message": "نمایش دکمه ی PCGamingWiki بر روی صفحات محصول"
+	},
 	"options_button_sub": {
 		"message": "نمایش یک دکمه در صفحات پکیج ها"
+	},
+	"options_button_gamehub": {
+		"message": "نمایش دکمه بر روی صفحات انجمن"
 	},
 	"options_button_gamecards": {
 		"message": "نمایش دکمه های SteamDB و صفحه فروشگاه در صفحات کارت های بازی ها"
 	},
 	"options_link_subid": {
 		"message": "نمایش SubID زیر هر یک از گزینه های خرید"
+	},
+	"options_link_subid_widget": {
+		"message": "نمایش SubID در ویجت های تعبیه شده",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
 		"message": "لینک کردن هر پکیج در صفحه لایسنس های خود"
@@ -513,11 +535,24 @@
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "مخفی کردن بنر \"Open in the Steam\""
 	},
+	"options_steamdb_rating": {
+		"message": "نمایش امتیاز SteamDB بر روی صفحات محصول"
+	},
+	"options_enhancement_appicon": {
+		"message": "نمایش آیکون محصول بر روی صفحات فروشگاه و انجمن",
+		"description": "The icon is displayed to the left of the game name"
+	},
 	"options_hidden_achievements": {
 		"message": "نمایش دستاوردهای مخفی و توضیحات شان"
 	},
 	"options_spoiler_achievements": {
 		"message": "مخفی کردن توضیحات پشت یک محافظ اسپویلر"
+	},
+	"options_prevent_store_images": {
+		"message": "متوقف کردن بارگذاری تصاویر بر روی صفحات محصول"
+	},
+	"options_prevent_store_images_description": {
+		"message": "بعضی از توسعه دهندگان در توضیحات محصولشان از تصاویر با حجم زیاد استقاده کردند که بارگذاری این تصاویر مقداری زمان می برد، برای بارگذاری شدن عکس بر روی آن کلیک کنید"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "پشتیبانی از پارامتر $award$ در لینک های shared file و لینک های پروفایل",
@@ -529,6 +564,9 @@
 	},
 	"options_builtin_card_drops": {
 		"message": "نمایش تعداد دراپ های کارت باقی‌مانده در صفحات Badges"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "افزودن دکمه برای نمایش صف اکتشافات در زمان حراج به صورت خودکار"
 	},
 	"options_builtin_achievements_global": {
 		"message": "بهبود صفحه دستاوردها"

@@ -146,6 +146,58 @@
 			}
 		}
 	},
+	"app_lowest_date": {
+		"message": "Hind nähtud $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "Hind märgatud $seen$ korda, viimati $date$ ($relative$)",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "Automaatselt-avasta"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automaatselt vaata mängud läbi et saada sündmuse kaart."
+	},
+	"explore_generating": {
+		"message": "Genereerin uut avastus järjekorda, see võib ebaõnnestuda kui Steam on suurema koormuse all…"
+	},
+	"explore_exploring": {
+		"message": "Avastan järjekorda… Päring $current$ $total$st",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
 	"widget_view_app": {
 		"message": "Vaata äpp $id$ SteamDB-s",
 		"placeholders": {
