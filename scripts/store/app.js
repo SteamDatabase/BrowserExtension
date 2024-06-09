@@ -129,30 +129,16 @@ else
 			let container = document.querySelectorAll( 'input[name="subid"]' );
 
 			let hasDropdowns = false;
-			let subid = 0;
-			let subidElement;
 
 			for( let element of container )
 			{
-				subid = element.value;
+				const subid = element.value;
 
 				element = element.parentElement.parentElement;
-
-				subidElement = document.createElement( 'span' );
-				subidElement.className = 'steamdb_subid';
-				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
-
-				const link = document.createElement( 'a' );
-				link.className = 'btn_black btn_small steamdb_link';
-				link.appendChild( subidElement );
 
 				// Is this a subscription selector?
 				if( subid.length > 0 )
 				{
-					subidElement.textContent = _t( 'id_sub', [ subid ] );
-					link.href = GetHomepage() + 'sub/' + subid + '/';
-					link.appendChild( subidElement );
-
 					if( element.className === 'game_purchase_action_bg' ) // series episode
 					{
 						element = element.parentElement;
@@ -164,17 +150,14 @@ else
 
 					if( element )
 					{
-						element.prepend( link );
+						InsertPurchaseBlockId( element, 'sub', subid );
 					}
 				}
 				else if( element.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
 				{
 					hasDropdowns = true;
 
-					subidElement.textContent = _t( 'app_nothing_selected' );
-					link.href = '#';
-
-					element.prepend( link );
+					InsertPurchaseBlockId( element, 'sub', 0 );
 				}
 			}
 
@@ -183,28 +166,14 @@ else
 
 			for( const element of container )
 			{
-				subid = element.getAttribute( 'onclick' ).match( /AddFreeLicense\(\s*(?<id>[0-9]+)/ );
+				const subid = element.getAttribute( 'onclick' ).match( /AddFreeLicense\(\s*(?<id>[0-9]+)/ );
 
 				if( !subid )
 				{
 					continue;
 				}
 
-				subid = subid.groups.id;
-
-				subidElement = document.createElement( 'span' );
-				subidElement.className = 'steamdb_subid';
-				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
-
-				const link = document.createElement( 'a' );
-				link.className = 'btn_black btn_small steamdb_link';
-				link.appendChild( subidElement );
-
-				subidElement.textContent = _t( 'id_sub', [ subid ] );
-				link.href = GetHomepage() + 'sub/' + subid + '/';
-				link.appendChild( subidElement );
-
-				element.closest( '.game_purchase_action' ).prepend( link );
+				InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'sub', subid.groups.id );
 			}
 
 			// Link appid in demo download banner
@@ -212,28 +181,15 @@ else
 
 			if( element )
 			{
-				subid = element.querySelector( '#demoGameBtn a' );
+				const demoGameBtn = element.querySelector( '#demoGameBtn a' );
 
-				if( subid )
+				if( demoGameBtn )
 				{
-					subid = subid.href.match( /\/install\/(?<id>[0-9]+)/ );
+					const appid = demoGameBtn.href.match( /\/install\/(?<id>[0-9]+)/ );
 
-					if( subid )
+					if( appid )
 					{
-						subid = subid.groups.id;
-
-						subidElement = document.createElement( 'span' );
-						subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
-
-						const link = document.createElement( 'a' );
-						link.className = 'btn_black btn_small steamdb_link';
-						link.appendChild( subidElement );
-
-						subidElement.textContent = _t( 'id_app', [ subid ] );
-						link.href = GetHomepage() + 'app/' + subid + '/';
-						link.appendChild( subidElement );
-
-						element.querySelector( '.game_purchase_action' ).prepend( link );
+						InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'app', appid.groups.id );
 					}
 				}
 			}
@@ -243,28 +199,15 @@ else
 
 			if( element )
 			{
-				subid = element.querySelector( '.game_purchase_action a' );
+				const playtestBtn = element.querySelector( '.game_purchase_action a' );
 
-				if( subid )
+				if( playtestBtn )
 				{
-					subid = subid.href.match( /\/run\/(?<id>[0-9]+)/ );
+					const appid = playtestBtn.href.match( /\/run\/(?<id>[0-9]+)/ );
 
-					if( subid )
+					if( appid )
 					{
-						subid = subid.groups.id;
-
-						subidElement = document.createElement( 'span' );
-						subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
-
-						const link = document.createElement( 'a' );
-						link.className = 'btn_black btn_small steamdb_link';
-						link.appendChild( subidElement );
-
-						subidElement.textContent = _t( 'id_app', [ subid ] );
-						link.href = GetHomepage() + 'app/' + subid + '/';
-						link.appendChild( subidElement );
-
-						element.querySelector( '.game_purchase_action' ).prepend( link );
+						InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'app', appid.groups.id );
 					}
 				}
 			}
@@ -272,24 +215,9 @@ else
 			// Bundles
 			container = document.querySelectorAll( 'input[name="bundleid"]' );
 
-			for( let element of container )
+			for( const element of container )
 			{
-				subid = element.value;
-
-				element = element.parentElement.parentElement;
-
-				subidElement = document.createElement( 'span' );
-				subidElement.dataset.tooltipText = _t( 'view_on_steamdb' );
-
-				const link = document.createElement( 'a' );
-				link.className = 'btn_black btn_small steamdb_link';
-				link.appendChild( subidElement );
-
-				subidElement.textContent = _t( 'id_bundle', [ subid ] );
-				link.href = GetHomepage() + 'bundle/' + subid + '/';
-				link.appendChild( subidElement );
-
-				element.querySelector( '.game_purchase_action' ).prepend( link );
+				InsertPurchaseBlockId( element.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', element.value );
 			}
 
 			// We have to inject our JS directly into the page to hook Steam's functionatily
@@ -300,7 +228,6 @@ else
 				element.type = 'text/javascript';
 				element.src = GetLocalResource( 'scripts/store/subscriptions.js' );
 				element.dataset.homepage = GetHomepage();
-				element.dataset.i18n = _t( 'id_sub', [ '%subid%' ] );
 
 				document.head.appendChild( element );
 			}
@@ -891,4 +818,37 @@ function FormatRelativeDate( date )
 	}
 
 	return[ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
+}
+
+function InsertPurchaseBlockId( element, type, id )
+{
+	const span = document.createElement( 'span' );
+	span.dataset.tooltipText = _t( 'view_on_steamdb' );
+
+	const hash = document.createElement( 'span' );
+	hash.style.fontWeight = 'bold';
+	hash.textContent = '# ';
+	span.append( hash );
+
+	const text = document.createElement( 'span' );
+	text.className = 'steamdb_link_id';
+	text.textContent = id.toString();
+	span.append( text );
+
+	const link = document.createElement( 'a' );
+	link.className = 'btn_black btn_tiny steamdb_link';
+	link.append( span );
+
+	if( id < 1 )
+	{
+		link.href = '#';
+		link.hidden = true;
+
+		element.insertBefore( link, element.querySelector( '.game_area_purchase_game_dropdown_right_panel' ) );
+	}
+	else
+	{
+		link.href = `${GetHomepage()}${type}/${id}/`;
+		element.prepend( link );
+	}
 }

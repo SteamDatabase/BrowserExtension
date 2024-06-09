@@ -39,37 +39,6 @@
 		"message": "Search"
 	},
 
-	"id_app": {
-		"message": "App $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"id_sub": {
-		"message": "Sub $id$",
-		"description": "Also known as Package. Reference: https://partner.steamgames.com/doc/store/application/packages",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "54029"
-			}
-		}
-	},
-	"id_bundle": {
-		"message": "Bundle $id$",
-		"description": "Reference: https://partner.steamgames.com/doc/store/application/bundles",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "9846"
-			}
-		}
-	},
-
 	"app_steamdb_rating": {
 		"message": "SteamDB Rating:"
 	},
@@ -111,9 +80,6 @@
 	},
 	"app_stats_followers": {
 		"message": "Followers:"
-	},
-	"app_nothing_selected": {
-		"message": "nothing selected"
 	},
 
 	"app_lowest_price": {
@@ -301,25 +267,6 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)"
-	},
-
-	"widget_view_app": {
-		"message": "View app $id$ on SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
-	},
-	"widget_view_sub": {
-		"message": "View sub $id$ on SteamDB",
-		"placeholders": {
-			"id": {
-				"content": "$1",
-				"example": "730"
-			}
-		}
 	},
 
 

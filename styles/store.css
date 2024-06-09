@@ -1,9 +1,10 @@
-a.steamdb_link {
-	color: #898a8c;
-}
-
 a.steamdb_link:hover {
 	text-decoration: underline;
+}
+
+.game_area_purchase_game a.steamdb_link,
+html.responsive .game_area_purchase_game a.steamdb_link {
+	color: #ebebeb !important;
 }
 
 .steamdb_error_link {
@@ -11,26 +12,43 @@ a.steamdb_link:hover {
 	text-align: center;
 }
 
-.game_purchase_action .steamdb_link {
-	float: left;
-	margin-top: 8px;
+.game_area_purchase_game .steamdb_link {
+	position: absolute;
+	left: 0;
+	top: 10px;
 }
 
-@media (min-width: 600px) {
-	.game_purchase_sub_dropdown .steamdb_link {
-		position: absolute;
-		bottom: -11px;
-		left: 16px;
-	}
+.game_area_purchase_game .steamdb_link[hidden] {
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.game_purchase_sub_dropdown .steamdb_link {
+	position: absolute;
+	top: unset;
+	bottom: -9px;
+	left: 16px;
 }
 
 @media (max-width: 500px) {
+	.game_purchase_sub_dropdown .steamdb_link {
+		position: relative;
+		top: unset;
+		bottom: unset;
+		left: unset;
+		margin-bottom: 20px;
+	}
+
 	html.responsive .game_purchase_action .steamdb_link {
-		float: none;
-		margin-top: 0;
-		align-self: center;
+		position: relative;
+		align-self: start;
 		margin-right: auto;
 	}
+}
+
+#widget .steamdb_link {
+	vertical-align: 6px;
+	margin-left: 10px;
 }
 
 .btn_steamdb .ico16 {
