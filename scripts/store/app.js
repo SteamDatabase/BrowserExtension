@@ -78,9 +78,17 @@ else
 			if( lastLinkBar )
 			{
 				const link = document.createElement( 'a' );
-				link.className = 'linkbar responsive_chevron_right';
+				link.className = 'linkbar';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
-				link.textContent = _t( 'view_on_steamdb' );
+
+				const image = document.createElement( 'img' );
+				image.src = GetLocalResource( 'icons/white.svg' );
+				link.append( image );
+
+				const span = document.createElement( 'span' );
+				span.className = 'social_account';
+				span.textContent = _t( 'view_on_steamdb' );
+				link.append( span );
 
 				lastLinkBar.insertAdjacentElement( 'afterend', link );
 			}
@@ -115,9 +123,17 @@ else
 			if( lastLinkBar )
 			{
 				const link = document.createElement( 'a' );
-				link.className = 'linkbar responsive_chevron_right';
+				link.className = 'linkbar';
 				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=SteamDB';
-				link.textContent = _t( 'view_on_pcgamingwiki' );
+
+				const image = document.createElement( 'img' );
+				image.src = GetLocalResource( 'icons/pcgamingwiki.svg' );
+				link.append( image );
+
+				const span = document.createElement( 'span' );
+				span.className = 'social_account';
+				span.textContent = _t( 'view_on_pcgamingwiki' );
+				link.append( span );
 
 				lastLinkBar.insertAdjacentElement( 'afterend', link );
 			}
