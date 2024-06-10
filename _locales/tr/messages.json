@@ -191,7 +191,7 @@
 		"message": "Kuyruk keşfedildi."
 	},
 	"badges_idle_apps": {
-		"message": "Kart düşürebilen uygulamalar: $amount$",
+		"message": "Kart düşürebilecek içerik: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +201,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Bu sayfadaki kart düşürebilen uygulamalar: $amount$",
+		"message": "Bu sayfada kart düşürebilecek içerik: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -221,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Bu sayfadaki düşebilecek kart sayısı: $amount$",
+		"message": "Bu sayfada düşürülebilecek kart sayısı: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {

@@ -64,7 +64,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Показатели количества игроков"
+		"message": "Статистика онлайна"
 	},
 	"app_stats_online_now": {
 		"message": "Сейчас онлайн:"

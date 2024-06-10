@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam ser ut til å opplever noe nedetid. "
+		"message": "Steam ser ut til å oppleve noe nedetid. "
 	},
 	"view_on_steamdb": {
 		"message": "Vis på SteamDB"
@@ -254,11 +254,17 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "Legger ut gjenstanden for laveste oppgitte salgspris\n\nVist pris er pengene du mottar (uten gebyrer)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Legger ut gjenstanden for høyeste oppgitte kjøpsprisspris\n\nVist pris er pengene du mottar (uten gebyrer)"
+	},
 	"options": {
 		"message": "Innstillinger"
 	},
 	"options_welcome_title": {
-		"message": "👋 Takk for at du installerte SteamDB utvidelsen!"
+		"message": "👋 Takk for at du installerte SteamDB-utvidelsen!"
 	},
 	"options_welcome_description": {
 		"message": "Gjennomgå innstillingene nedenfor og veksle de du foretrekker. For å komme tilbake hit i fremtiden:"
@@ -275,23 +281,26 @@
 	"options_review": {
 		"message": "Gi en anmeldelse av utvidelsen"
 	},
+	"options_permissions_description": {
+		"message": "Denne utvidelsen krever ytterligere tillatelser for å fungere riktig på SteamDB, Steam-butikken og Steam-fellesskapet."
+	},
 	"options_permissions_button": {
 		"message": "⚠️ Gi tillatelser"
 	},
 	"options_footer1": {
-		"message": "Laget med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> -folkene."
+		"message": "Laget med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>-folkene."
 	},
 	"options_footer2": {
-		"message": "Det er <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">åpen kildekode</a>, takket være alle bidragsytere!"
+		"message": "Det er <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">åpen kildekode</a>, takk til alle bidragsyterne!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Deaktiverte avmerkingsbokser indikerer innebygde funksjoner."
 	},
 	"options_header_website": {
-		"message": "SteamDB Nettside"
+		"message": "SteamDB-nettsted"
 	},
 	"options_header_extra_data": {
-		"message": "Extra data"
+		"message": "Ekstra data"
 	},
 	"options_header_buttons_and_links": {
 		"message": "Knapper og lenker"
@@ -316,6 +325,9 @@
 	},
 	"options_website_explanation3": {
 		"message": "Dette holdes helt i nettleseren din og sendes aldri, selv til SteamDBs backend."
+	},
+	"options_website_explanation4": {
+		"message": "For å forhindre overdrevene mengder forespørsler til Steam-butikken, bufres brukerdataene din i nettleserens lokale lagringsplass."
 	},
 	"options_website_highlight": {
 		"message": "Fremhev eide og ønskelistede produkter på $domain$",
@@ -387,6 +399,9 @@
 	"options_link_inventory": {
 		"message": "Koble sammen hver gave og kupong i lageret ditt til SteamDB"
 	},
+	"options_link_inventory_gift_subid": {
+		"message": "Finn ut av en gaves SubID i lageret ditt riktig"
+	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ikke oppdater lageret når en gjenstand selges"
 	},
@@ -413,6 +428,12 @@
 	"options_github_explanation": {
 		"message": "Se forklaring på GitHub"
 	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Skjul \"denne handelen virker mistenkelig\" og \"er du sikker på at dette er en gave? byttehandelsvarslinger"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Vis bedre feilmeldinger i stedet for Valves kryptiske feilnummer"
+	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Hopp over alderssjekk-siden"
 	},
@@ -428,7 +449,7 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Skjul \"Installer Steam\"-knapenp i toppteksten",
+		"message": "Skjul \"Installer Steam\"-knappen i toppteksten",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {

@@ -390,7 +390,7 @@
 		"message": "Afficher le prix le plus bas historique de cette application"
 	},
 	"options_online_stats": {
-		"message": "Afficher le nombre actuel et maximum sur les pages du produit"
+		"message": "Afficher le nombre actuel et maximum de joueurs sur les pages du produit"
 	},
 	"options_steamdb_last_update": {
 		"message": "Afficher la dernière mise à jour sur les pages du produit"
@@ -493,7 +493,7 @@
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
-		"message": "Charger les succès cachés et leurs descriptions"
+		"message": "Charger et afficher les succès cachés et leurs descriptions"
 	},
 	"options_spoiler_achievements": {
 		"message": "Masquer les descriptions derrière un élément spoiler"

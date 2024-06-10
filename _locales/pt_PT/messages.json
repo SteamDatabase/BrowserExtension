@@ -387,19 +387,19 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Exibir o menor preço registrado nas páginas dos produtos"
+		"message": "Mostrar o menor preço registado nas páginas das aplicações"
 	},
 	"options_online_stats": {
-		"message": "Exibir jogadores simultâneos atuais e picos máximos nas páginas do produto"
+		"message": "Mostra os jogadores em simultâneo atuais e os picos máximos nas páginas das aplicações"
 	},
 	"options_steamdb_last_update": {
-		"message": "Mostrar a última atualização nas páginas dos produtos"
+		"message": "Mostrar a última atualização nas páginas de produtos"
 	},
 	"options_button_app": {
-		"message": "Exibir um botão nas páginas do produto"
+		"message": "Mostrar um botão nas páginas de produtos"
 	},
 	"options_button_pcgw": {
-		"message": "Exibir botão PCGamingWiki nas páginas dos produtos"
+		"message": "Mostrar botão PCGamingWiki nas páginas de produtos"
 	},
 	"options_button_sub": {
 		"message": "Mostrar um botão nas páginas de pacotes"
@@ -414,7 +414,7 @@
 		"message": "Mostrar SubID sob cada opção de compra"
 	},
 	"options_link_subid_widget": {
-		"message": "Exibir SubID em widgets incorporados",
+		"message": "Mostrar SubID em widgets incorporados",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
@@ -486,7 +486,7 @@
 		"message": "Ocultar banner \"Abrir no Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Exibir avaliação do SteamDB nas páginas dos produtos"
+		"message": "Mostrar a avaliação do SteamDB nas páginas de produtos"
 	},
 	"options_enhancement_appicon": {
 		"message": "Exibir ícone do produto nas páginas da loja e da comunidade",
@@ -499,10 +499,10 @@
 		"message": "Ocultar descrições atrás de um elemento spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Desativar o carregamento de imagens nas páginas do produto"
+		"message": "Impedir o carregamento de imagens nas páginas de produtos"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Alguns desenvolvedores colocam imagens com megabytes de tamanho nas descrições dos produtos, o que pode levar um tempo para carregar. Clique em uma imagem para carregá-la"
+		"message": "Alguns programadores colocam megabytes de imagens nas descrições dos produtos o que pode demorar algum tempo a carregar, clica na imagem para a carregar"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Suportar parâmetros $award$ no perfil e hiperligações de ficheiros partilhados",
@@ -516,7 +516,7 @@
 		"message": "Mostrar a quantidade total de cartas restantes na página de medalhas"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Adiciona um botão para descobrir automaticamente a fila durante as promoções"
+		"message": "Adicionar um botão para automaticamente descobrir a fila durante as promoções"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de proezas globais"

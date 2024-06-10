@@ -257,8 +257,26 @@
 	"inventory_list_at_title": {
 		"message": "Објави артикал за најнижу продајну цјену\n\nПриказана цјена је новац који добијате (без трошкова)"
 	},
+	"inventory_sell_at_title": {
+		"message": "Објави артикал за најнижу продајну цену\n\nПриказана цена је новац који добијате (без трошкова)"
+	},
 	"options": {
 		"message": "Опције"
+	},
+	"options_welcome_title": {
+		"message": "Хвала за инсталирање SteamDB екстензије!"
+	},
+	"options_welcome_description": {
+		"message": "Прегледајте опције у наставку и укључите оне које желите. Да бисте се вратили овде у будућности:"
+	},
+	"options_welcome_option1": {
+		"message": "Страница подешавања на SteamDB-у"
+	},
+	"options_welcome_option2": {
+		"message": "Падајући мени налога на Steam страницама"
+	},
+	"options_welcome_option3": {
+		"message": "Страница додатака за ваш веб прегледач"
 	},
 	"options_header_inventory": {
 		"message": "Инвентар"

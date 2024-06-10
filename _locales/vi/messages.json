@@ -67,7 +67,7 @@
 		"message": "Thống kê trực tuyến"
 	},
 	"app_stats_online_now": {
-		"message": "Đang trực tuyến:"
+		"message": "Đang chơi:"
 	},
 	"app_stats_peak_today": {
 		"message": "Đỉnh hôm nay:"
@@ -234,7 +234,7 @@
 		"message": "Thành tựu bị ẩn: "
 	},
 	"hidden_achievement_hover": {
-		"message": "Đây là thành tựu ẩn, đưa chuột vào để xem: "
+		"message": "Đây là thành tựu ẩn, rê chuột vào để xem: "
 	},
 	"inventory_list_at": {
 		"message": "Đăng bán với giá: $price$",
@@ -246,7 +246,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Bán ngay với giá: $price$",
+		"message": "Bán ngay với mức giá: $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -418,7 +418,7 @@
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Đính kèm liên kết từng món trên trang sản phẩm sở hữu của bạn"
+		"message": "Đính kèm liên kết tới từng gói trên trang giấy phép"
 	},
 	"options_profile_calculator": {
 		"message": "Thêm liên kết tới máy tính trên hồ sơ người khác"

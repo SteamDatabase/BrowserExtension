@@ -273,7 +273,7 @@
 		"message": "Strona ustawień na SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Rozwijane menu przy nazwie konta na Steam"
+		"message": "Rozwijane menu konta na stronach Steam"
 	},
 	"options_welcome_option3": {
 		"message": "Strona rozszerzeń twojej przeglądarki"
@@ -312,7 +312,7 @@
 		"message": "Oferty wymiany"
 	},
 	"options_header_enhancements": {
-		"message": "Dodatkowe opcje"
+		"message": "Rozszerzenia"
 	},
 	"options_website_explanation": {
 		"message": "Wyjaśnienie"

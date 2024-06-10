@@ -87,6 +87,15 @@
 			}
 		}
 	},
+	"inventory_sell_at": {
+		"message": "$price$ पर बेचें",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
 	"options": {
 		"message": "वरणाधिकार"
 	},

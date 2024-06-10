@@ -153,6 +153,12 @@
 	"explore_generating": {
 		"message": "새로운 \"탐색 대기열\"을 생성하는 중입니다. \"Steam\"의 부하가 높으면 실패할 수 있습니다…"
 	},
+	"hidden_achievement": {
+		"message": "숨겨진 도전 과제: "
+	},
+	"hidden_achievement_hover": {
+		"message": "숨겨진 도전 과제, 마우스를 올려 확인하기: "
+	},
 	"inventory_list_at": {
 		"message": "$price$에 등록",
 		"placeholders": {
@@ -171,10 +177,97 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "가장 낮은 판매 가격순으로 정렬하기\n\n표시된 가격은 수수료 없이 받는 돈입니다"
+	},
+	"inventory_sell_at_title": {
+		"message": "가장 많은 구매 요청순으로 정렬하기\n\n표시된 가격은 수수료 없이 받는 돈입니다"
+	},
+	"options": {
+		"message": "옵션"
+	},
 	"options_welcome_title": {
 		"message": "👋 SteamDB 확장 프로그램을 설치해주셔서 감사합니다!"
 	},
+	"options_welcome_description": {
+		"message": "아래의 옵션을 확인하고 적용하고 싶은 항목을 선택하세요. 추후 이 옵션창으로 돌아오려면 아래의 장소에서 확인할 수 있습니다."
+	},
+	"options_welcome_option1": {
+		"message": "SteamDB 의 '설정'창"
+	},
+	"options_welcome_option2": {
+		"message": "Steam 계정 드롭다운 창"
+	},
+	"options_welcome_option3": {
+		"message": "당신의 브라우저 확장앱 관리창"
+	},
+	"options_review": {
+		"message": "이 확장앱에 대한 리뷰를 남겨주세요"
+	},
+	"options_permissions_description": {
+		"message": "이 확장앱은 SteamDB, Steam 상점, Steam 커뮤니티에서 정상적인 동작을 위해 추가적인 권한이 필요합니다."
+	},
 	"options_permissions_button": {
 		"message": "⚠️ 권한 부여"
+	},
+	"options_footer2": {
+		"message": "이건 <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">오픈 소스 입니다</a>. 모든 기여자 분들께 감사의 인사를 드립니다!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* 비활성화된 체크박스는 내장된 기능을 나타냅니다."
+	},
+	"options_header_website": {
+		"message": "SteamDB 웹사이트"
+	},
+	"options_header_extra_data": {
+		"message": "추가 데이터"
+	},
+	"options_header_buttons_and_links": {
+		"message": "버튼과 링크"
+	},
+	"options_header_inventory": {
+		"message": "인벤토리"
+	},
+	"options_header_trade_offers": {
+		"message": "거래 제안"
+	},
+	"options_website_explanation": {
+		"message": "설명"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "빠른 판매 버튼 추가"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "자동으로 빠른 판매 수락"
+	},
+	"options_github_explanation": {
+		"message": "GitHub 에서 설명 확인하기"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "나이 확인 페이지 건너뛰기"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "나이와 생일 쿠키를 설정하고 항상 건너뛰기"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "외부 사이트에서 “Steam 을 떠나는 중입니다” 링크 필터 제거",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "상점, 인벤토리에서 구독자 동의 수락 및 주요 페이지 자동 활성화",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "\"스팀 설치\" 버튼 숨기기",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_builtin_achievements_global": {
+		"message": "전체 도전 과제 페이지 향상"
+	},
+	"options_builtin_achievements_link": {
+		"message": "본인의 도전 과제 페이지로 바로가기"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "잠겨진 도전과제에 자물쇠 아이콘을 생성해 가시성 확보"
 	}
 }

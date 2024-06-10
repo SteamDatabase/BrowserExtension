@@ -424,13 +424,13 @@
 		"message": "הוסף לינק למחשבון לעמודי פרופיל"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "העבר את בחירת המשחקים בדף המלאי לצד"
+		"message": "הזז את בחירת המשחק בתיק לצד"
 	},
 	"options_link_inventory": {
 		"message": "קשר בין כל מתנה וקופון בתיק שלך ל SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "מצא נכון את ה-SubID של המתנה במלאי שלך"
+		"message": "זהה בצורה תקינה SubID מהתיק"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "אל תעדכן את התיק שלך במכירת חפץ"

@@ -151,7 +151,7 @@
 		"message": "Descobreix automàticament la cua per aconseguir una targeta d'esdeveniment."
 	},
 	"explore_generating": {
-		"message": "Generant una nova cua de descobriment, això pot fallar si Steam està sota una alta càrrega…"
+		"message": "Generant una nova cua de descobriment, això pot fallar si Steam té una càrrega elevada…"
 	},
 	"explore_exploring": {
 		"message": "Explorant la cua… Sol·licitud $current$ de $total$",
@@ -176,7 +176,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "No s'ha pogut esborrar l'ítem #$current$ de la cua molts cops. Pots provar un altre cop més endavant.",
+		"message": "Ha fallat la neteja de l'ítem #$current$ de la cua massa cops. Pots provar un altre cop més tard.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -237,7 +237,7 @@
 		"message": "Assoliments ocults, passa el ratolí per sobre per revelar: "
 	},
 	"inventory_list_at": {
-		"message": "Vendre a $price$",
+		"message": "Llistar a $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -258,7 +258,7 @@
 		"message": "Llista l'article pel preu de venda més baix\n\nEl preu mostrat són els diners que reps (sense comissions)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Llista l'article pel preu més alt de la comanda de compra\n\nEl preu mostrat són els diners que reps (sense comissions)"
+		"message": "Llista l'article pel preu de la comanda de compra més alt\n\nEl preu mostrat són els diners que reps (sense comissions)"
 	},
 	"options": {
 		"message": "Opcions"

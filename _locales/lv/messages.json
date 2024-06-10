@@ -26,6 +26,9 @@
 	"view_on_pcgamingwiki": {
 		"message": "Skatīt iekš PCGamingWiki"
 	},
+	"view_your_achievements": {
+		"message": "Personīgie sasniegumi"
+	},
 	"store_page": {
 		"message": "Veikala lapa",
 		"description": "This translation should match how Steam translates it on community hubs"
@@ -160,6 +163,12 @@
 	"explore_finished": {
 		"message": "Rinda ir izskatīta."
 	},
+	"hidden_achievement": {
+		"message": "Paslēpts sasniegums: "
+	},
+	"hidden_achievement_hover": {
+		"message": "Paslēpts sasniegums, virziet kursoru virs, lai to atklātu: "
+	},
 	"inventory_list_at": {
 		"message": "Izlikt par $price$",
 		"placeholders": {
@@ -184,6 +193,9 @@
 	"options_welcome_title": {
 		"message": "👋 Paldies, ka instalējāt SteamDB paplašinājumu!"
 	},
+	"options_welcome_option3": {
+		"message": "Jūsu pārlūka papildinājumu lapa"
+	},
 	"options_permissions_button": {
 		"message": "⚠️ Dot piekļuvi"
 	},
@@ -195,6 +207,9 @@
 	},
 	"options_header_buttons_and_links": {
 		"message": "Pogas un saites"
+	},
+	"options_header_inventory": {
+		"message": "Inventārs"
 	},
 	"options_header_trade_offers": {
 		"message": "Maiņas piedāvājumi"
@@ -216,6 +231,9 @@
 	},
 	"options_button_sub": {
 		"message": "Rādīt pogu paku lapās"
+	},
+	"options_profile_calculator": {
+		"message": "Pievienot kalkulātora saiti kopiena profilos"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "Pievienot ātrās pārdošanas pogas"
