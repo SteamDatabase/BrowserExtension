@@ -18,13 +18,13 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "يبدو أن Steam يعاني بعض الأعطال. "
+		"message": "يبدو أن ستيم يعاني بعض الأعطال. "
 	},
 	"view_on_steamdb": {
 		"message": "عرض على SteamDB"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "عرض على PCGamingWiki"
+		"message": "العرض على PCGamingWiki"
 	},
 	"view_your_achievements": {
 		"message": "الإنجازات الشخصية"

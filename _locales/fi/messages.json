@@ -285,7 +285,7 @@
 		"message": "Tämä laajennus vaatii lisäkäyttöoikeuksia toimiakseen oikein SteamDB:ssä, Steam-kaupassa ja -yhteisössä."
 	},
 	"options_permissions_button": {
-		"message": "⚠️ Myönnä käyttöoikeuksia"
+		"message": "⚠️ Myönnä käyttöoikeudet"
 	},
 	"options_footer1": {
 		"message": "Tehty 💙:lla <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB:n</a> porukan toimesta."

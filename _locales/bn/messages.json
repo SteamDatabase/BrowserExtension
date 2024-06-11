@@ -8,6 +8,15 @@
 	"steamdb_calculator": {
 		"message": "SteamDB ক্যালকুলেটর"
 	},
+	"steamstatus": {
+		"message": "Be $domain$ layi yaregagit’u",
+		"placeholders": {
+			"domain": {
+				"content": "steamstat.us",
+				"example": "steamstat.us"
+			}
+		}
+	},
 	"steamstatus_downtime": {
 		"message": "স্টিম বর্তমানে কিছু অনুপস্থিতি অনুভব করছে. "
 	},
@@ -16,6 +25,9 @@
 	},
 	"view_on_pcgamingwiki": {
 		"message": "PCGamingWiki তে দেখুন"
+	},
+	"view_your_achievements": {
+		"message": "Лични постижения"
 	},
 	"store_page": {
 		"message": "স্টোর পেজ",
@@ -72,6 +84,19 @@
 			"price": {
 				"content": "$1",
 				"example": "1,99€"
+			}
+		}
+	},
+	"app_lowest_price_discount": {
+		"message": "Ang pinakamababang naitalang presyo sa SteamDB ay <b>$price$</b> na may <b>-$discount$%</b> na bawas",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"discount": {
+				"content": "$2",
+				"example": "80"
 			}
 		}
 	},

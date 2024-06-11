@@ -88,7 +88,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，对应的折扣为 <b>-$discount$%</b>",
+		"message": "SteamDB 记录的历史最低价格为 <b>$price$</b>，折扣为 <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -436,7 +436,7 @@
 		"message": "上架物品时阻止库存页面刷新"
 	},
 	"options_enhancement_inventory_quick_sell": {
-		"message": "添加快速售出按钮"
+		"message": "添加快速出售按钮"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "自动接受快速售出"

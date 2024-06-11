@@ -276,13 +276,13 @@
 		"message": "Menu tarik-turun akun di halaman Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Halaman pengaya peramban Anda"
+		"message": "Halaman addon browser Anda"
 	},
 	"options_review": {
 		"message": "Tinggalkan ulasan untuk ekstensi ini"
 	},
 	"options_permissions_description": {
-		"message": "Ekstensi ini membutuhkan izin tambahan agar dapat berfungsi dengan baik di SteamDB, Steam Store, dan Steam Community."
+		"message": "Extension ini membutuhkan izin tambahan agar dapat berfungsi dengan baik di SteamDB, Steam Store, dan Steam Community."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Memberikan izin"
@@ -300,16 +300,16 @@
 		"message": "Situs web SteamDB"
 	},
 	"options_header_extra_data": {
-		"message": "Data extra"
+		"message": "Data tambahan"
 	},
 	"options_header_buttons_and_links": {
-		"message": "Tombol dan tautan"
+		"message": "Tombol dan link"
 	},
 	"options_header_inventory": {
-		"message": "Inventaris"
+		"message": "Inventory"
 	},
 	"options_header_trade_offers": {
-		"message": "Penawaran"
+		"message": "Permintaan tukar-menukar"
 	},
 	"options_header_enhancements": {
 		"message": "Peningkatan"
@@ -321,7 +321,7 @@
 		"message": "Jika opsi ini diaktifkan, ekstensi akan meminta beberapa data pengguna (produk yang diinginkan, dimiliki, diikuti, diabaikan, dan produk dalam keranjang) dari <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> dan akan menggunakannya untuk di highlight."
 	},
 	"options_website_explanation2": {
-		"message": "Anda harus log in di store terlebih dahulu agar ini dapat berfungsi."
+		"message": "Anda harus login di Steam terlebih dahulu agar ini dapat berfungsi."
 	},
 	"options_website_explanation3": {
 		"message": "Ini sepenuhnya terdapat di dalam browser anda dan tidak pernah dikirim ke pihak SteamDB."
@@ -483,7 +483,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Menyembunyikan spanduk “Buka di Steam”"
+		"message": "Menyembunyikan banner “Buka di Steam”"
 	},
 	"options_steamdb_rating": {
 		"message": "Tampilkan peringkat SteamDB dalam halaman produk"

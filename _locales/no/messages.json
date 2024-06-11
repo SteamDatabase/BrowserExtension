@@ -356,6 +356,36 @@
 			}
 		}
 	},
+	"options_extra_data_players": {
+		"message": "Når alternativet \"$options_online_stats$\" eller \"$options_steamdb_last_update$\" er aktivert, vil utvidelsen utføre en sikker forespørsel til $domain$ for å skaffe den nåværende mengden spillere og siste spilloppdatering.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Når alternativet \"$options_steamdb_lowest_price$\" er aktivert, vil utvidelsen utføre en sikker forespørsel til $domain$ med din valuta (med den Steam tror det er) for å få den registrerte prisen til et spesifikt spill.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Vis laveste registrerte pris på produktsider"
 	},

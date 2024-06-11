@@ -27,7 +27,7 @@
 		"message": "Pozrieť na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Osobné Achievements"
+		"message": "Osobné úspechy"
 	},
 	"store_page": {
 		"message": "Stránka Obchodu",
@@ -231,13 +231,28 @@
 		}
 	},
 	"hidden_achievement": {
-		"message": "Skrytý achievement: "
+		"message": "Skrytý úspech: "
+	},
+	"inventory_sell_at": {
+		"message": "Predaj za $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
 	},
 	"options": {
 		"message": "Možnosti"
 	},
 	"options_header_inventory": {
 		"message": "Inventár"
+	},
+	"options_header_enhancements": {
+		"message": "Vylepšenie"
+	},
+	"options_website_explanation": {
+		"message": "Vysvetlenie"
 	},
 	"options_button_sub": {
 		"message": "Zobrazovať tlačidlo na stránkach balíkov"
