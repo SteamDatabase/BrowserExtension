@@ -515,6 +515,9 @@
 	"options_builtin_card_drops": {
 		"message": "แสดงจำนวนการ์ดที่เหลือทั้งหมดบนหน้าตราสัญลักษณ์"
 	},
+	"options_builtin_queue_cheat": {
+		"message": "เพิ่มปุ่มเพื่อโกงคิวการค้นหาในระหว่างการขาย"
+	},
 	"options_builtin_achievements_global": {
 		"message": "ปรับปรุงหน้าความสำเร็จระดับโลก"
 	},

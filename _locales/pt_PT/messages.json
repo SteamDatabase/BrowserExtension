@@ -489,7 +489,7 @@
 		"message": "Mostrar a avaliação do SteamDB nas páginas de produtos"
 	},
 	"options_enhancement_appicon": {
-		"message": "Exibir ícone do produto nas páginas da loja e da comunidade",
+		"message": "Mostrar ícone de aplicação nas páginas da loja e da comunidade",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_hidden_achievements": {
@@ -499,7 +499,7 @@
 		"message": "Ocultar descrições atrás de um elemento spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Impedir o carregamento de imagens nas páginas de produtos"
+		"message": "Impedir o carregamento de imagens nas páginas da loja de aplicações"
 	},
 	"options_prevent_store_images_description": {
 		"message": "Alguns programadores colocam megabytes de imagens nas descrições dos produtos o que pode demorar algum tempo a carregar, clica na imagem para a carregar"

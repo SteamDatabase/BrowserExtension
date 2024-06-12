@@ -339,7 +339,7 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Добавляйте в список желаемого, отслеживайте и игнорируйте товары в магазине Steam прямо из SteamDB"
+		"message": "Добавлять в список желаемого, отслеживать и игнорировать товары в магазине Steam напрямую из SteamDB"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Включить скрипт бесплатных пакетов</a>"

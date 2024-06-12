@@ -27,7 +27,7 @@
 		"message": "Visualizza su PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Achievement Personali"
+		"message": "Obiettivi Personali"
 	},
 	"store_page": {
 		"message": "Pagina del negozio",
@@ -44,7 +44,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ delle recensioni $total$ sono positive (tutti i tipi di acquisto)",
+		"message": "$positive$ delle $total$ recensioni totali sono positive (tutti i tipi di acquisto)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -70,7 +70,7 @@
 		"message": "Online adesso:"
 	},
 	"app_stats_peak_today": {
-		"message": "picco di 24 ore:"
+		"message": "Picco delle ultime 24 ore:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Massimo storico:"
@@ -79,7 +79,7 @@
 		"message": "Followers:"
 	},
 	"app_lowest_price": {
-		"message": "Il prezzo più basso registrato di SteamDB è <b>$price$</b>",
+		"message": "Il prezzo più basso registrato da SteamDB è <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -88,7 +88,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Il prezzo più basso registrato di SteamDB è <b>$price$</b> a <b>-$discount$%</b>",
+		"message": "Il prezzo più basso registrato di SteamDB è di <b>$price$</b> a <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -101,7 +101,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Il prezzo più basso registrato di SteamDB è <b>$price$</b> e il basso di 2 anni è <b>$price_limited$</b>",
+		"message": "Il prezzo più basso registrato da SteamDB è di <b>$price$</b> e il più basso negli ultimi 2 anni è di <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -114,7 +114,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Prezzo visto in $date$ ($relative$)",
+		"message": "Prezzo visto il $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -127,7 +127,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Prezzo visto in $seen$ volte, ultimo in $date$ ($relative$)",
+		"message": "Prezzo visto $seen$ volte, ultima volta il $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -145,16 +145,16 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Auto-discover"
+		"message": "Scopri automaticamente"
 	},
 	"explore_auto_discover_description": {
-		"message": "Scopri automaticamente la coda per ottenere una carta evento."
+		"message": "Scopre automaticamente la coda per ottenere una carta evento."
 	},
 	"explore_generating": {
-		"message": "Generare una nuova coda di scoperta, questo può fallire se Steam è sotto alto carico…"
+		"message": "Generando una nuova coda di scoperta, questo può fallire se Steam è sotto alto carico…"
 	},
 	"explore_exploring": {
-		"message": "Esplorando la coda… Richiesti $current$ di $total$",
+		"message": "Esplorando la coda… Richiesta $current$ di $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -185,7 +185,7 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Impossibile generare la nuova coda, riprovare tra cinque secondi…"
+		"message": "Impossibile generare la nuova coda, riprovo tra cinque secondi…"
 	},
 	"explore_finished": {
 		"message": "La coda è stata esplorata."
@@ -221,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Premi rimasti su questa pagina: $amount$",
+		"message": "Premi rimanenti su questa pagina: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -237,7 +237,7 @@
 		"message": "Obiettivo nascosto, spostare il cursore del mouse sopra l'obiettivo per rivelarlo: "
 	},
 	"inventory_list_at": {
-		"message": "Elenca a $price$",
+		"message": "Vendi a $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -255,7 +255,7 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Mette l'articolo al prezzo di vendita più basso.\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
+		"message": "Vende l'articolo al prezzo di vendita più basso.\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
 	},
 	"inventory_sell_at_title": {
 		"message": "Mette l'articolo al prezzo d'acquisto più alto tra quelli indicati\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"

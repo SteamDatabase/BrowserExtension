@@ -233,6 +233,15 @@
 	"hidden_achievement": {
 		"message": "Skrytý úspech: "
 	},
+	"inventory_list_at": {
+		"message": "Predaj za $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
 	"inventory_sell_at": {
 		"message": "Predaj za $price$",
 		"placeholders": {
@@ -245,6 +254,9 @@
 	"options": {
 		"message": "Možnosti"
 	},
+	"options_header_extra_data": {
+		"message": "Ďalšie údaje"
+	},
 	"options_header_inventory": {
 		"message": "Inventár"
 	},
@@ -253,6 +265,15 @@
 	},
 	"options_website_explanation": {
 		"message": "Vysvetlenie"
+	},
+	"options_online_stats": {
+		"message": "Zobrazte pocet hráčov a dosiahnuté vrcholy na stránkach hier"
+	},
+	"options_button_app": {
+		"message": "Zobrazovať tlačidlo na stránkach balíkov"
+	},
+	"options_button_pcgw": {
+		"message": "Zobrazovať tlačidlo na stránkach balíkov"
 	},
 	"options_button_sub": {
 		"message": "Zobrazovať tlačidlo na stránkach balíkov"
@@ -267,5 +288,8 @@
 	"options_enhancement_market_ssa": {
 		"message": "Automaticky prijímate predplatiteľku zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_steamdb_rating": {
+		"message": "Zobrazovať tlačidlo na stránkach balíkov"
 	}
 }

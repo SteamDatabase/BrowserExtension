@@ -327,7 +327,7 @@
 		"message": "这些数据完全存储在您的浏览器中，不会被发送到 SteamDB。"
 	},
 	"options_website_explanation4": {
-		"message": "为了防止向 Steam 发送过多的请求，您的用户数据被存储在您浏览器的本地缓存中。"
+		"message": "为了避免向 Steam 发送过多的请求，您的用户数据被缓存在您浏览器的本地存储中。"
 	},
 	"options_website_highlight": {
 		"message": "在 $domain$ 上高亮显示您已拥有和在愿望单中的产品",

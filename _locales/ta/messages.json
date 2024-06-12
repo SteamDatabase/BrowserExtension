@@ -1,1 +1,11 @@
-{}
+{
+	"extension_description": {
+		"message": ""
+	},
+	"steamdb_options": {
+		"message": ""
+	},
+	"steamdb_calculator": {
+		"message": "SteamDB Calculator"
+	}
+}

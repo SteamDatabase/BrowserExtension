@@ -294,7 +294,7 @@
 		"message": "Ini adalah <a href=“https://github.com/SteamDatabase/BrowserExtension” target=“_blank”>sumber terbuka</a>, terima kasih kepada semua kontributor!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Checkboxes yang dinonaktifkan menunjukkan fitur bawaan."
+		"message": "* Kotak centang yang dinonaktifkan menunjukkan fitur bawaan."
 	},
 	"options_header_website": {
 		"message": "Situs web SteamDB"
@@ -303,10 +303,10 @@
 		"message": "Data tambahan"
 	},
 	"options_header_buttons_and_links": {
-		"message": "Tombol dan link"
+		"message": "Tombol dan tautan"
 	},
 	"options_header_inventory": {
-		"message": "Inventory"
+		"message": "Inventaris"
 	},
 	"options_header_trade_offers": {
 		"message": "Permintaan tukar-menukar"

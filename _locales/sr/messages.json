@@ -280,5 +280,18 @@
 	},
 	"options_header_inventory": {
 		"message": "Инвентар"
+	},
+	"options_header_enhancements": {
+		"message": "Повећање"
+	},
+	"options_website_explanation": {
+		"message": "Објашњење"
+	},
+	"options_online_stats": {
+		"message": "Прикажи тренутне играче и врхунце на странама игара"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "Аутомацки прихвати претплатнички уговор у продавници, инвенторију и активирај кључеве",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	}
 }

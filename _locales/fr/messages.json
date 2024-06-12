@@ -64,7 +64,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Statistique en-ligne"
+		"message": "Statistiques en ligne"
 	},
 	"app_stats_online_now": {
 		"message": "En ligne :"
@@ -73,7 +73,7 @@
 		"message": "Pic du jour :"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Pic de tout les temps :"
+		"message": "Plus haut pic atteint :"
 	},
 	"app_stats_followers": {
 		"message": "Abonnés :"
@@ -151,7 +151,7 @@
 		"message": "Explore automatiquement la liste de découverte pour obtenir une carte d'événement."
 	},
 	"explore_generating": {
-		"message": "Génération d'une nouvelle liste de découverte, ceci peut ne pas marcher si Steam est fortement utilisé…"
+		"message": "Génération d'une nouvelle liste de découverte, ceci peut ne pas marcher si Steam est fortement sollicité…"
 	},
 	"explore_exploring": {
 		"message": "Exploration de la liste de découverte... Requête $current$ sur $total$",
@@ -167,7 +167,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Impossible de réinitialiser la liste #$current$, nouvel essai dans 5 secondes…",
+		"message": "Impossible de supprimer l'élément #$current$ de la liste, nouvel essai dans 5 secondes…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -188,7 +188,7 @@
 		"message": "Échec de la génération d'une nouvelle liste de découverte, nouvelle tentative dans cinq secondes…"
 	},
 	"explore_finished": {
-		"message": "Liste exploré."
+		"message": "Liste explorée."
 	},
 	"badges_idle_apps": {
 		"message": "Applications à collecter : $amount$",
@@ -279,7 +279,7 @@
 		"message": "La page des extensions de votre navigateur"
 	},
 	"options_review": {
-		"message": "Laisser un avis pour cette extension"
+		"message": "Laisser un avis sur cette extension"
 	},
 	"options_permissions_description": {
 		"message": "Cette extension nécessite des permissions supplémentaires pour fonctionner correctement sur SteamDB, le magasin Steam et la communauté Steam."
@@ -387,7 +387,7 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Afficher le prix le plus bas historique de cette application"
+		"message": "Afficher le prix le plus bas historique sur les pages des produits"
 	},
 	"options_online_stats": {
 		"message": "Afficher le nombre actuel et maximum de joueurs sur les pages du produit"
@@ -430,7 +430,7 @@
 		"message": "Lier chaque cadeau et coupon de votre inventaire à SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Trouvez correctement le SubID du cadeau dans votre inventaire"
+		"message": "Retrouver le SubID d'un cadeau dans votre inventaire"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne pas actualiser l'inventaire lorsque vous vendez un objet"
@@ -439,7 +439,7 @@
 		"message": "Ajouter des boutons de vente rapide"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "Accepter automatiquement lors d'une vente rapide"
+		"message": "Accepter automatiquement les ventes rapides"
 	},
 	"options_display_market_price_others": {
 		"message": "Afficher le prix du marché des articles dans l'inventaire des autres utilisateurs"
@@ -468,14 +468,14 @@
 		"message": "Passer la page de vérification de l'âge"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Définit l'âge et la date d'anniversaire des cookies pour toujours passer"
+		"message": "Paramètre l'âge et la date d'anniversaire dans les cookies pour toujours passer"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Supprimer l'avertissement \"Vous quittez Steam\" lorsque vous cliquez sur un lien externe à Steam",
+		"message": "Supprimer l'avertissement \"Vous quittez Steam\" lorsque vous cliquez sur un lien externe",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Accepter le Contrat d'abonnement Steam sur le marché, l'inventaire et activer automatiquement les pages clés",
+		"message": "Accepter automatiquement les conditions d'utilisation de Steam sur le marché, l'inventaire et les pages d'activation de clés",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
@@ -486,7 +486,7 @@
 		"message": "Cacher la bannière \"Ouvrir dans la Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Afficher la note SteamDB sur les pages du produit"
+		"message": "Afficher la note SteamDB sur les pages de produits"
 	},
 	"options_enhancement_appicon": {
 		"message": "Afficher l'icône du produit sur les pages de la boutique et de la communauté",
@@ -499,7 +499,7 @@
 		"message": "Masquer les descriptions derrière un élément spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Empêcher le chargement des images sur les pages du produit"
+		"message": "Empêcher le chargement des images sur les pages de produits"
 	},
 	"options_prevent_store_images_description": {
 		"message": "Certains développeurs utilisent des images de plusieurs mégas dans leurs descriptions de produit ce qui peut ralentir le chargement, cliquez sur ces images pour les charger"

@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "يبدو أن ستيم يعاني بعض الأعطال. "
+		"message": "يبدو أن Steam يعاني بعض الأعطال. "
 	},
 	"view_on_steamdb": {
 		"message": "عرض على SteamDB"

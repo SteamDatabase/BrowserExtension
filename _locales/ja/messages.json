@@ -44,7 +44,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$ 件中 $positive$ 件のレビューが好評です (すべての購入タイプ)",
+		"message": "$total$ 件中 $positive$ 件のレビューが好評です (購入手段問わず)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -88,7 +88,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB 記録された最低価格は <b>$price$</b> で <b>-$discount$%</b>",
+		"message": "SteamDB で記録している最低価格は <b>-$discount$%</b> の <b>$price$</b> です",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -101,7 +101,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB 記録された最低価格は <b>$price$</b> で、過去 2 年間での最低価格は <b>$price_limited$</b>",
+		"message": "SteamDB で記録している最低価格は <b>$price$</b>、過去 2 年間での最低価格は <b>$price_limited$</b> です",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -148,7 +148,7 @@
 		"message": "自動検索"
 	},
 	"explore_auto_discover_description": {
-		"message": "イベントカードを取得するためにキューを自動的に発見します。"
+		"message": "自動的にキューを確認し、イベントカードを取得します。"
 	},
 	"explore_generating": {
 		"message": "ディスカバリーキューを生成中です。Steam に負荷がかかっている場合失敗する可能性があります..."

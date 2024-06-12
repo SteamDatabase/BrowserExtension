@@ -43,6 +43,19 @@
 		"message": " STEAMDB दर-निर्धारण",
 		"description": "Visible on the mobile version"
 	},
+	"app_steamdb_rating_tooltip": {
+		"message": "$total$ समीक्षाओं में से $positive$ सकारात्मक हैं (सभी प्रकार की खरीदारी)",
+		"placeholders": {
+			"positive": {
+				"content": "$1",
+				"example": "123,456"
+			},
+			"total": {
+				"content": "$2",
+				"example": "456,789"
+			}
+		}
+	},
 	"app_depots_update": {
 		"message": "आखिरी अपडेट:"
 	},
@@ -84,6 +97,19 @@
 			"discount": {
 				"content": "$2",
 				"example": "80"
+			}
+		}
+	},
+	"app_lowest_price_limited": {
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर है और 2 साल का न्यूनतम मूल्य <b>$price_limited$</b> है |",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
 			}
 		}
 	},

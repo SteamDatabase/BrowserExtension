@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "SteamDB 링크와 Steam 스토어 및 커뮤니티에 새로운 기능을 추가합니다. 최저 게임 가격 및 통계 보기."
+		"message": "SteamDB 링크와 새로운 기능을 Steam 스토어 및 커뮤니티에 추가합니다. 최저 게임 가격 및 통계 보기."
 	},
 	"steamdb_options": {
 		"message": "SteamDB 옵션"
@@ -153,6 +153,43 @@
 	"explore_generating": {
 		"message": "새로운 \"탐색 대기열\"을 생성하는 중입니다. \"Steam\"의 부하가 높으면 실패할 수 있습니다…"
 	},
+	"explore_exploring": {
+		"message": "대기열 탐색 중... $total$중 $current$ 요청",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "12"
+			}
+		}
+	},
+	"explore_failed_to_clear": {
+		"message": "대기열 아이템 #$current$을 지우는 데 실패하였습니다. 5초 뒤 다시 시도하세요...",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "너무 많이 대기열 아이템 #$current$을 지우는 데 실패하였습니다. 나중에 다시 시도하세요.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_generate": {
+		"message": "새로운 대기열을 생성하는 데 실패하였습니다. 5초 뒤 다시 시도하세요..."
+	},
+	"explore_finished": {
+		"message": "대기열이 탐색이 완료되었습니다."
+	},
 	"hidden_achievement": {
 		"message": "숨겨진 도전 과제: "
 	},
@@ -231,8 +268,17 @@
 	"options_header_trade_offers": {
 		"message": "거래 제안"
 	},
+	"options_header_enhancements": {
+		"message": "개선사항"
+	},
 	"options_website_explanation": {
 		"message": "설명"
+	},
+	"options_website_explanation1": {
+		"message": "이 옵션을 활성화 하면, <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 상점</a>에 일부 사용자 데이터(찜하기, 소유함, 팔로우, 제외하기 되거나 장바구니에 있는 아이템)를 요청하며 이를 현재 사이트에서 하이라이트 하는 데 사용합니다."
+	},
+	"options_online_stats": {
+		"message": "게임 페이지에서 동시 접속 플레이어 및 최고치 표시"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "빠른 판매 버튼 추가"

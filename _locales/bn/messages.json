@@ -100,6 +100,53 @@
 			}
 		}
 	},
+	"app_lowest_price_limited": {
+		"message": "স্টীম-ডিবিতে সর্বনিম্ন নথিভুক্ত মূল্য হলো <b>$price$</b> এবং ২ বছরের সর্বনিম্ন হলো<b>$price_limited$</b>",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "1,99€"
+			},
+			"price_limited": {
+				"content": "$2",
+				"example": "5,99€"
+			}
+		}
+	},
+	"app_lowest_date": {
+		"message": "$date$ তারিখে ($relative$) দেখা মূল্য",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			}
+		}
+	},
+	"app_lowest_date_multiple": {
+		"message": "দাম $seen$ বার দেখা গেছে, শেষবার $date$ তারিখে ($relative$)",
+		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "22 Aug 2018"
+			},
+			"relative": {
+				"content": "$2",
+				"example": "71 months ago"
+			},
+			"seen": {
+				"content": "$3",
+				"example": "15"
+			}
+		}
+	},
+	"explore_auto_discover": {
+		"message": "স্বয়ংক্রিয়-আবিষ্কার"
+	},
 	"options": {
 		"message": "অপশনসমূহ"
 	},
