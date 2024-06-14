@@ -3,7 +3,8 @@
 'use strict';
 
 const container = document.getElementById( 'error_box' );
-const numberFormatter = new Intl.NumberFormat( 'en-US' );
+const language = GetLanguage();
+const numberFormatter = new Intl.NumberFormat( language );
 
 if( container )
 {
@@ -520,7 +521,7 @@ function DrawLowestPrice()
 		}
 
 		// Dates
-		const dateFormatter = new Intl.DateTimeFormat( undefined, { dateStyle: 'medium' } );
+		const dateFormatter = new Intl.DateTimeFormat( language, { dateStyle: 'medium' } );
 		const lastOn = dateFormatter.format( response.data.t * 1000 );
 		const[ , relativeText ] = FormatRelativeDate( response.data.t );
 
@@ -741,7 +742,7 @@ function DrawOnlineStatsWidget( items )
 
 		if( items[ 'steamdb-last-update' ] && response.data.u )
 		{
-			const dateFormatter = new Intl.DateTimeFormat( undefined, { dateStyle: 'medium' } );
+			const dateFormatter = new Intl.DateTimeFormat( language, { dateStyle: 'medium' } );
 			const actualDateText = dateFormatter.format( new Date( response.data.u * 1000 ) );
 			const[ daysSinceLastUpdate, relativeText ] = FormatRelativeDate( response.data.u );
 
@@ -824,7 +825,7 @@ function FormatNumber( num )
 
 function FormatRelativeDate( date )
 {
-	const relativeDateFormatter = new Intl.RelativeTimeFormat( undefined, { numeric: 'auto' } );
+	const relativeDateFormatter = new Intl.RelativeTimeFormat( language, { numeric: 'auto' } );
 	const dayInSeconds = 24 * 60 * 60;
 	const daysSinceLastUpdate = Math.floor( ( ( Date.now() / 1000 ) - date ) / dayInSeconds );
 

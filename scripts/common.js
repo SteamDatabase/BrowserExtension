@@ -45,6 +45,22 @@ function _t( message, substitutions = [] )
 	}
 }
 
+function GetLanguage()
+{
+	if( typeof browser !== 'undefined' && typeof browser.i18n !== 'undefined' )
+	{
+		return browser.i18n.getUILanguage();
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.i18n !== 'undefined' )
+	{
+		return chrome.i18n.getUILanguage();
+	}
+	else
+	{
+		throw new Error( 'Did not find an API for i18n' );
+	}
+}
+
 function GetOption( items, callback )
 {
 	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )

@@ -11,11 +11,12 @@ extends: standard
 
 globals:
   _t: false
-  GetOption: false
   GetAppIDFromUrl: false
   GetCurrentAppID: false
   GetHomepage: false
+  GetLanguage: false
   GetLocalResource: false
+  GetOption: false
   SendMessageToBackgroundScript: false
   WriteLog: false
 
