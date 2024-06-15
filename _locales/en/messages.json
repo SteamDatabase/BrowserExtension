@@ -240,8 +240,33 @@
 	"hidden_achievement": {
 		"message": "Hidden achievement: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Hidden achievement, mouse over to reveal: "
+	"achievement_global_unlock": {
+		"message": "$percent$ of players have this achievement",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "UNLOCKED ACHIEVEMENTS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "LOCKED ACHIEVEMENTS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
 	},
 
 	"inventory_list_at": {
@@ -322,6 +347,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Trade Offers"
+	},
+	"options_header_achievements": {
+		"message": "Achievements"
 	},
 	"options_header_enhancements": {
 		"message": "Enhancements"
@@ -506,11 +534,17 @@
 		"message": "Display product icon on store and community pages",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Load hidden achievements and their descriptions"
+	"options_improve_achievements": {
+		"message": "Improve the personal achievements page"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Display global achievement unlock percentage"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernized design"
 	},
 	"options_spoiler_achievements": {
-		"message": "Hide descriptions behind a spoiler element"
+		"message": "Put hidden achievements behind a spoiler element"
 	},
 	"options_prevent_store_images": {
 		"message": "Stop images from loading on product pages"
@@ -536,9 +570,9 @@
 		"message": "Improve global achievements page"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Link to your own achievements page"
+		"message": "Link to personal achievements page"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Locked achievements have a lock icon for more visibility"
+		"message": "Display a lock icon for locked achivements"
 	}
 }

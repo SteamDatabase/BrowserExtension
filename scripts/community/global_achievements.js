@@ -1,7 +1,6 @@
 'use strict';
 
 GetOption( {
-	'hidden-achievements': true,
 	'spoiler-achievements': true,
 }, function( items )
 {
@@ -24,11 +23,6 @@ GetOption( {
 		document.querySelector( '#tabs' ).appendChild( tab );
 	}
 
-	if( !items[ 'hidden-achievements' ] )
-	{
-		return;
-	}
-
 	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
 
 	const appIdElement = document.querySelector( '.profile_small_header_additional .gameLogo a' );
@@ -46,6 +40,21 @@ GetOption( {
 	}
 
 	const appid = appidMatch.groups.id;
+
+	// SteamDB link
+	{
+		const tab = document.createElement( 'div' );
+		tab.className = 'tab steamdb_stats_tab';
+
+		const link = document.createElement( 'a' );
+		link.className = 'tabOn';
+		link.href = `${GetHomepage()}app/${appid}/stats/`;
+		link.textContent = 'SteamDB';
+
+		tab.appendChild( link );
+		document.querySelector( '#tabs' ).appendChild( tab );
+	}
+
 	const applicationConfigElement = document.getElementById( 'application_config' );
 
 	if( !applicationConfigElement )
@@ -97,24 +106,20 @@ GetOption( {
 
 					const parent = element.parentNode.querySelector( 'h5' );
 
+					const hiddenAchiev = document.createElement( 'i' );
+					hiddenAchiev.textContent = _t( 'hidden_achievement' );
+					parent.appendChild( hiddenAchiev );
+
 					if( spoilerAchievements )
 					{
 						const span = document.createElement( 'span' );
 						span.className = 'steamdb_achievement_spoiler';
 						span.appendChild( document.createTextNode( achievement.localized_desc ) );
 
-						const hiddenAchiev = document.createElement( 'i' );
-						hiddenAchiev.textContent = _t( 'hidden_achievement_hover' );
-
-						parent.appendChild( hiddenAchiev );
 						parent.appendChild( span );
 					}
 					else
 					{
-						const hiddenAchiev = document.createElement( 'i' );
-						hiddenAchiev.textContent = _t( 'hidden_achievement' );
-
-						parent.appendChild( hiddenAchiev );
 						parent.appendChild( document.createTextNode( achievement.localized_desc ) );
 					}
 

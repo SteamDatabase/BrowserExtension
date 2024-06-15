@@ -358,6 +358,7 @@
 			]
 		},
 		{
+			"run_at": "document_end",
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/stats*",
