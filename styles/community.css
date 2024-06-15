@@ -142,7 +142,10 @@ a.apphub_NumInApp:hover {
 .steamdb_achievements_list {
 	font-weight: 700;
 	color: #83868a;
-	margin-top: 15px;
+}
+
+.steamdb_achievements_list + .steamdb_achievements_list {
+	margin-top: 40px;
 }
 
 .steamdb_achievements_list > summary {
