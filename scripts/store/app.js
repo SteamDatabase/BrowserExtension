@@ -326,6 +326,9 @@ else
 
 	// Hide steamdb curator for steamdb extension users
 	HideCurator();
+
+	// Add a collapse button to the "already in library" block which hides the review block
+	AddCollapseButtonToAlreadyInLibraryBlock();
 }
 
 function DrawLowestPrice()
@@ -868,4 +871,62 @@ function InsertPurchaseBlockId( element, type, id )
 		link.href = `${GetHomepage()}${type}/${id}/`;
 		element.prepend( link );
 	}
+}
+
+function AddCollapseButtonToAlreadyInLibraryBlock()
+{
+	const alreadyInLibrary = document.querySelector( '.game_area_already_owned .already_in_library' );
+	const playStats = document.querySelector( '.game_area_play_stats' );
+
+	if( !alreadyInLibrary || !playStats )
+	{
+		return;
+	}
+
+	const isCollapsed = !!localStorage.getItem( 'steamdb_already_in_library_collapsed' );
+
+	if( isCollapsed )
+	{
+		playStats.hidden = true;
+	}
+
+	const link = document.createElement( 'a' );
+	link.classList.add( 'steamdb_already_in_library_link' );
+	link.href = `steam://nav/games/details/${GetCurrentAppID()}`;
+	link.textContent = alreadyInLibrary.textContent;
+	alreadyInLibrary.replaceChildren( link );
+
+	const arrow = document.createElement( 'div' );
+	arrow.className = 'graph_toggle_icon';
+	arrow.classList.add( isCollapsed ? 'down' : 'up' );
+	arrow.append( document.createTextNode( ' ' ) );
+
+	const button = document.createElement( 'button' );
+	button.type = 'button';
+	button.className = 'steamdb_already_in_library_collapse';
+	button.append( arrow );
+
+	button.addEventListener( 'click', ( e ) =>
+	{
+		e.preventDefault();
+
+		const hidden = !playStats.hidden;
+
+		playStats.hidden = hidden;
+
+		arrow.classList.toggle( 'down', hidden );
+		arrow.classList.toggle( 'up', !hidden );
+
+		if( hidden )
+		{
+			localStorage.setItem( 'steamdb_already_in_library_collapsed', '1' );
+		}
+		else
+		{
+			localStorage.removeItem( 'steamdb_already_in_library_collapsed' );
+		}
+	} );
+
+	alreadyInLibrary.insertAdjacentElement( 'afterend', button );
+	alreadyInLibrary.style.marginRight = `${button.getBoundingClientRect().width - 15}px`;
 }

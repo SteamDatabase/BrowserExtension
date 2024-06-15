@@ -560,6 +560,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Add a button to collapse the \"already in your library\" block"
+	},
 	"options_builtin_card_drops": {
 		"message": "Display total amount of card drops remaining on badges page"
 	},

@@ -188,6 +188,38 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	color: #fff !important;
 }
 
+.steamdb_already_in_library_link {
+	color: inherit;
+}
+
+.steamdb_already_in_library_link:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.steamdb_already_in_library_collapse {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	padding: 0 10px;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.steamdb_already_in_library_collapse:hover,
+.steamdb_already_in_library_collapse:focus {
+	background: hsl(73deg 94% 42% / 50%);
+}
+
+.steamdb_already_in_library_collapse > .graph_toggle_icon {
+	margin: 0;
+}
+
 /**
  * Fix for very long game names not overflowing correctly
  */
