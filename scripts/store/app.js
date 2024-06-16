@@ -21,6 +21,7 @@ else
 		'steamdb-rating': true,
 		'steamdb-last-update': true,
 		'enhancement-hide-mobile-app-button': false,
+		'collapse-already-in-library': false,
 	}, function( items )
 	{
 		if( ( items[ 'steamdb-last-update' ] || items[ 'online-stats' ] ) && !document.querySelector( '.game_area_dlc_bubble' ) )
@@ -319,6 +320,9 @@ else
 				}
 			}
 		}
+
+		// Add a collapse button to the "already in library" block which hides the review block
+		AddCollapseButtonToAlreadyInLibraryBlock( items );
 	} );
 
 	// Valve does not invalidate cache for follow button, so we catch it here
@@ -326,9 +330,6 @@ else
 
 	// Hide steamdb curator for steamdb extension users
 	HideCurator();
-
-	// Add a collapse button to the "already in library" block which hides the review block
-	AddCollapseButtonToAlreadyInLibraryBlock();
 }
 
 function DrawLowestPrice()
@@ -526,7 +527,7 @@ function DrawLowestPrice()
 		// Dates
 		const dateFormatter = new Intl.DateTimeFormat( language, { dateStyle: 'medium' } );
 		const lastOn = dateFormatter.format( response.data.t * 1000 );
-		const[ , relativeText ] = FormatRelativeDate( response.data.t );
+		const [ , relativeText ] = FormatRelativeDate( response.data.t );
 
 		if( Number.isInteger( response.data.c ) && response.data.c > 1 )
 		{
@@ -747,7 +748,7 @@ function DrawOnlineStatsWidget( items )
 		{
 			const dateFormatter = new Intl.DateTimeFormat( language, { dateStyle: 'medium' } );
 			const actualDateText = dateFormatter.format( new Date( response.data.u * 1000 ) );
-			const[ daysSinceLastUpdate, relativeText ] = FormatRelativeDate( response.data.u );
+			const [ daysSinceLastUpdate, relativeText ] = FormatRelativeDate( response.data.u );
 
 			const historyRelativeDate = document.createElement( 'span' );
 			historyRelativeDate.textContent = `(${relativeText})`;
@@ -834,10 +835,10 @@ function FormatRelativeDate( date )
 
 	if( daysSinceLastUpdate > 30 )
 	{
-		return[ daysSinceLastUpdate, relativeDateFormatter.format( -Math.round( daysSinceLastUpdate / 30 ), 'month' ) ];
+		return [ daysSinceLastUpdate, relativeDateFormatter.format( -Math.round( daysSinceLastUpdate / 30 ), 'month' ) ];
 	}
 
-	return[ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
+	return [ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
 }
 
 function InsertPurchaseBlockId( element, type, id )
@@ -873,7 +874,7 @@ function InsertPurchaseBlockId( element, type, id )
 	}
 }
 
-function AddCollapseButtonToAlreadyInLibraryBlock()
+function AddCollapseButtonToAlreadyInLibraryBlock( options )
 {
 	const alreadyInLibrary = document.querySelector( '.game_area_already_owned .already_in_library' );
 	const playStats = document.querySelector( '.game_area_play_stats' );
@@ -883,7 +884,7 @@ function AddCollapseButtonToAlreadyInLibraryBlock()
 		return;
 	}
 
-	const isCollapsed = !!localStorage.getItem( 'steamdb_already_in_library_collapsed' );
+	const isCollapsed = !!options[ 'collapse-already-in-library' ];
 
 	if( isCollapsed )
 	{
@@ -917,14 +918,7 @@ function AddCollapseButtonToAlreadyInLibraryBlock()
 		arrow.classList.toggle( 'down', hidden );
 		arrow.classList.toggle( 'up', !hidden );
 
-		if( hidden )
-		{
-			localStorage.setItem( 'steamdb_already_in_library_collapsed', '1' );
-		}
-		else
-		{
-			localStorage.removeItem( 'steamdb_already_in_library_collapsed' );
-		}
+		SetOption( 'collapse-already-in-library', hidden );
 	} );
 
 	alreadyInLibrary.insertAdjacentElement( 'afterend', button );

@@ -61,13 +61,6 @@
 		'clicked-star': null,
 	};
 
-	const SetOption = ( option, value ) =>
-	{
-		const chromepls = {}; chromepls[ option ] = value;
-
-		browserObject.storage.sync.set( chromepls );
-	};
-
 	const CheckboxChange = function( e )
 	{
 		if( !e.isTrusted )

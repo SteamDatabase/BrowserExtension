@@ -1,7 +1,24 @@
-/* exported _t, GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, WriteLog */
+/* exported _t, GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, SetOption, WriteLog */
 /* eslint-disable no-unused-vars */
 
 'use strict';
+
+// eslint-disable-next-line no-var
+var ExtensionApi = ( () =>
+{
+	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+	{
+		return browser;
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+	{
+		return chrome;
+	}
+	else
+	{
+		throw new Error( 'Did not find appropriate web extensions api' );
+	}
+} )();
 
 // exported variable needs to be `var`
 // eslint-disable-next-line no-var
@@ -26,7 +43,7 @@ function GetCurrentAppID()
 
 function GetHomepage()
 {
-	return'https://steamdb.info/';
+	return 'https://steamdb.info/';
 }
 
 function _t( message, substitutions = [] )
@@ -75,6 +92,14 @@ function GetOption( items, callback )
 	{
 		throw new Error( 'Did not find an API for storage' );
 	}
+}
+
+function SetOption( option, value )
+{
+	const obj = {};
+	obj[ option ] = value;
+
+	ExtensionApi.storage.sync.set( obj );
 }
 
 function GetLocalResource( res )

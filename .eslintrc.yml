@@ -18,6 +18,7 @@ globals:
   GetLocalResource: false
   GetOption: false
   SendMessageToBackgroundScript: false
+  SetOption: false
   WriteLog: false
 
 rules:
@@ -27,7 +28,7 @@ rules:
   comma-dangle: [error, always-multiline]
   computed-property-spacing: [error, always]
   indent: [error, tab, {SwitchCase: 1}]
-  keyword-spacing: [error, {before: false, after: false, overrides: {case: {after: true}}}]
+  keyword-spacing: [error, {before: false, after: false, overrides: {case: {after: true}, return: {after: true}, const: {after: true}, let: {after: true}, of: {before: true}, from: {before: true, after: true}}}]
   no-tabs: off
   no-trailing-spaces: [error]
   no-var: [error]
