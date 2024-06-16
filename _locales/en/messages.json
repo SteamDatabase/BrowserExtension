@@ -251,7 +251,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "UNLOCKED ACHIEVEMENTS: $count$",
+		"message": "EARNED ACHIEVEMENTS: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -576,6 +576,6 @@
 		"message": "Link to personal achievements page"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Display a lock icon for locked achivements"
+		"message": "Display a lock icon for locked achievements"
 	}
 }
