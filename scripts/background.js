@@ -55,6 +55,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
 		case 'GetApp': GetApp( request.appid, callback ); return true;
 		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
+		case 'GetAchievementsGroups': GetAchievementsGroups( request.appid, callback ); return true;
 		case 'StoreWishlistAdd': StoreWishlistAdd( request.appid, callback ); return true;
 		case 'StoreWishlistRemove': StoreWishlistRemove( request.appid, callback ); return true;
 		case 'StoreFollow': StoreFollow( request.appid, callback ); return true;
@@ -219,6 +220,28 @@ function GetAppPrice( { appid, currency }, callback )
 	params.set( 'currency', currency );
 
 	fetch( `https://steamdb.info/api/ExtensionAppPrice/?${params.toString()}`, {
+		headers: {
+			Accept: 'application/json',
+			'X-Requested-With': 'SteamDB',
+		},
+	} )
+		.then( GetJsonWithStatusCheck )
+		.then( callback )
+		.catch( ( error ) => callback( { success: false, error: error.message } ) );
+}
+
+function GetAchievementsGroups( appid, callback )
+{
+	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
+	{
+		callback( { success: false, error: 'Rate limited' } );
+		return;
+	}
+
+	const params = new URLSearchParams();
+	params.set( 'appid', parseInt( appid, 10 ) );
+
+	fetch( `https://steamdb.info/api/ExtensionGetAchievements/?${params.toString()}`, {
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',

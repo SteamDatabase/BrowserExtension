@@ -15,12 +15,12 @@ GetOption( {
 		tab.className = 'tab steamdb_stats_tab';
 
 		const link = document.createElement( 'a' );
-		link.className = 'tabOn';
+		link.className = 'tabOff';
 		link.href = `${currentUserUrl}${currentUserPath}?tab=achievements`;
 		link.textContent = _t( 'view_your_achievements' );
 
 		tab.appendChild( link );
-		document.querySelector( '#tabs' ).appendChild( tab );
+		document.querySelector( '#tabs' )?.appendChild( tab );
 	}
 
 	const spoilerAchievements = !!items[ 'spoiler-achievements' ];

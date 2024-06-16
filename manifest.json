@@ -43,7 +43,9 @@
 
 				"icons/white.svg",
 				"icons/pcgamingwiki.svg",
+				"icons/steamhunters.svg",
 				"icons/image.svg",
+				"icons/achievements_completed.svg",
 
 				"styles/appicon.css",
 				"styles/inventory-sidebar.css",
@@ -368,6 +370,10 @@
 			[
 				"scripts/common.js",
 				"scripts/community/profile_achievements.js"
+			],
+			"css":
+			[
+				"styles/achievements.css"
 			]
 		},
 		{
@@ -382,7 +388,8 @@
 			],
 			"css":
 			[
-				"styles/community.css"
+				"styles/community.css",
+				"styles/achievements.css"
 			]
 		},
 		{
