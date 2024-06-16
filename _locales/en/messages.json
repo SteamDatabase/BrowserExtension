@@ -25,6 +25,10 @@
 	"view_on_steamdb": {
 		"message": "View on SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "View on Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "View on PCGamingWiki"
 	},
@@ -271,6 +275,10 @@
 	"achievements_sort_by_time": {
 		"message": "Sort by time"
 	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Achievement groups are provided by Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 
 	"inventory_list_at": {
 		"message": "List at $price$",
@@ -431,6 +439,17 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "When the grouping option is enabled, the extension will do a secure request to $domain$ to get the achievement grouping data provided by Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+
 	"options_steamdb_lowest_price": {
 		"message": "Display the lowest recorded price on product pages"
 	},
@@ -545,6 +564,10 @@
 	},
 	"options_modernized_achievements": {
 		"message": "Modernized design"
+	},
+	"options_achievement_groups": {
+		"message": "Group achievements with data from Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
 		"message": "Put hidden achievements behind a spoiler element"
