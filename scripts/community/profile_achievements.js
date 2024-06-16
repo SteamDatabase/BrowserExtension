@@ -326,8 +326,15 @@ GetOption( {
 				}
 			}
 
-			details.append( unlockedAchievementsDetails );
-			details.append( lockedAchievementsDetails );
+			if( unlockedAchievementsDetails.childElementCount > 1 )
+			{
+				details.append( unlockedAchievementsDetails );
+			}
+
+			if( lockedAchievementsDetails.childElementCount > 1 )
+			{
+				details.append( lockedAchievementsDetails );
+			}
 
 			// Make the scrollbar stable so the page doesn't shift when collapsing all elements
 			document.documentElement.style.scrollbarGutter = 'stable';
