@@ -50,6 +50,11 @@ GetOption( {
 		document.querySelector( '#tabs' ).appendChild( tab );
 	}
 
+	if( oldContainer.classList.contains( 'compare_view' ) )
+	{
+		return;
+	}
+
 	const applicationConfigElement = document.getElementById( 'application_config' );
 
 	if( !applicationConfigElement )
