@@ -176,12 +176,14 @@ a.apphub_NumInApp:hover {
 	font-size: 16px;
 	font-weight: 500;
 	color: #dcdedf;
+	overflow-wrap: anywhere;
 }
 
 .steamdb_achievement h5 {
 	font-size: 12px;
 	font-weight: 400;
 	color: #b8bcbf;
+	overflow-wrap: anywhere;
 }
 
 .steamdb_achievement h6 {
