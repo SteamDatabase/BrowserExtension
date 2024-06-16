@@ -3,6 +3,7 @@
 - Display latest game update on game page
 - Add links to SteamDB across Steam sites
 - Add a link to PCGamingWiki
+- Modernize personal achievements page, group achievements by update and DLC
 - Quick sell buttons in inventory
 - Skip age check page on the store
 - Accept Subscriber Agreement on market, inventory, and activate key pages automatically
