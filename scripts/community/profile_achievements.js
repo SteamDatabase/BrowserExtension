@@ -148,7 +148,7 @@ GetOption( {
 
 					if( icon !== apiIcon )
 					{
-						console.error( 'Mismatching icon', icon, achievement );
+						WriteLog( 'Mismatching icon', icon, achievement );
 						continue;
 					}
 
@@ -174,7 +174,7 @@ GetOption( {
 
 				if( !foundAchievement )
 				{
-					console.error( 'Failed to find achievement', name, icon );
+					WriteLog( 'Failed to find achievement', name, icon );
 				}
 			}
 
@@ -515,7 +515,7 @@ GetOption( {
 					} )
 					.catch( e =>
 					{
-						console.error( e );
+						WriteLog( e );
 						alert( `Failed to sort achievements: ${e.message}` );
 					} );
 			}, { once: true } );
