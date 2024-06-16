@@ -1,4 +1,3 @@
-/* global chrome:false, browser:false */
 ( function()
 {
 	'use strict';
@@ -36,21 +35,6 @@
 	if( location.search.includes( 'welcome=1' ) )
 	{
 		document.getElementById( 'welcome' ).hidden = false;
-	}
-
-	let browserObject;
-
-	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
-	{
-		browserObject = browser;
-	}
-	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
-	{
-		browserObject = chrome;
-	}
-	else
-	{
-		throw new Error( 'Did not find an API for storage' );
 	}
 
 	let element;
@@ -99,7 +83,7 @@
 		}
 	} );
 
-	browserObject.storage.sync.onChanged.addListener( ( changes ) =>
+	ExtensionApi.storage.sync.onChanged.addListener( ( changes ) =>
 	{
 		const changedItems = Object.keys( changes );
 
@@ -128,7 +112,7 @@
 
 		try
 		{
-			browserObject.permissions.request( permissions ).catch( e =>
+			ExtensionApi.permissions.request( permissions ).catch( e =>
 			{
 				alert( `Failed to request permissions: ${e.message}` );
 			} );
@@ -139,14 +123,14 @@
 		}
 	} );
 
-	browserObject.permissions.onAdded.addListener( HideButtonIfAllPermissionsGranted );
-	browserObject.permissions.onRemoved.addListener( HideButtonIfAllPermissionsGranted );
+	ExtensionApi.permissions.onAdded.addListener( HideButtonIfAllPermissionsGranted );
+	ExtensionApi.permissions.onRemoved.addListener( HideButtonIfAllPermissionsGranted );
 
 	HideButtonIfAllPermissionsGranted();
 
 	function HideButtonIfAllPermissionsGranted()
 	{
-		browserObject.permissions.contains( permissions, ( result ) =>
+		ExtensionApi.permissions.contains( permissions, ( result ) =>
 		{
 			document.getElementById( 'permissions' ).hidden = result;
 			document.getElementById( 'star' ).hidden = starDismissed || !result;
@@ -155,15 +139,15 @@
 
 	let storeHref = null;
 
-	if( browserObject.runtime.id === 'kdbmhfkmnlmbkgbabkdealhhbfhlmmon' )
+	if( ExtensionApi.runtime.id === 'kdbmhfkmnlmbkgbabkdealhhbfhlmmon' )
 	{
 		storeHref = 'https://chromewebstore.google.com/detail/steamdb/kdbmhfkmnlmbkgbabkdealhhbfhlmmon?utm_source=Options';
 	}
-	else if( browserObject.runtime.id === 'hjknpdomhlodgaebegjopkmfafjpbblg' )
+	else if( ExtensionApi.runtime.id === 'hjknpdomhlodgaebegjopkmfafjpbblg' )
 	{
 		storeHref = 'https://microsoftedge.microsoft.com/addons/detail/steamdb/hjknpdomhlodgaebegjopkmfafjpbblg?utm_source=Options';
 	}
-	else if( browserObject.runtime.id === 'firefox-extension@steamdb.info' )
+	else if( ExtensionApi.runtime.id === 'firefox-extension@steamdb.info' )
 	{
 		storeHref = 'https://addons.mozilla.org/en-US/firefox/addon/steam-database/?utm_source=Options';
 	}

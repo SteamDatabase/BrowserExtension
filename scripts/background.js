@@ -1,45 +1,35 @@
-let runtimeObj;
 let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
 let migrated = false;
 let nextAllowedRequest = 0;
 
-if( typeof browser !== 'undefined' && typeof browser.runtime !== 'undefined' )
+/** @type {browser} ExtensionApi */
+const ExtensionApi = ( () =>
 {
-	runtimeObj = browser.runtime;
-}
-else if( typeof chrome !== 'undefined' && typeof chrome.runtime !== 'undefined' )
-{
-	runtimeObj = chrome.runtime;
-}
-else
-{
-	throw new Error( 'Did not find an API for runtime' );
-}
-
-runtimeObj.onStartup.addListener( MigrateOptionsToSync );
-
-runtimeObj.onInstalled.addListener( ( event ) =>
-{
-	if( event.reason === runtimeObj.OnInstalledReason.INSTALL )
+	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
 	{
-		if( typeof browser !== 'undefined' && typeof browser.tabs !== 'undefined' )
-		{
-			browser.tabs.create( {
-				url: browser.runtime.getURL( 'options/options.html' ) + '?welcome=1',
-			} );
-		}
-		else if( typeof chrome !== 'undefined' && typeof chrome.tabs !== 'undefined' )
-		{
-			chrome.tabs.create( {
-				url: chrome.runtime.getURL( 'options/options.html' ) + '?welcome=1',
-			} );
-		}
-		else
-		{
-			throw new Error( 'Did not find an API for tabs' );
-		}
+		return browser;
+	}
+	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
+	{
+		return chrome;
+	}
+	else
+	{
+		throw new Error( 'Did not find appropriate web extensions api' );
+	}
+} )();
+
+ExtensionApi.runtime.onStartup.addListener( MigrateOptionsToSync );
+
+ExtensionApi.runtime.onInstalled.addListener( ( event ) =>
+{
+	if( event.reason === ExtensionApi.runtime.OnInstalledReason.INSTALL )
+	{
+		ExtensionApi.tabs.create( {
+			url: ExtensionApi.runtime.getURL( 'options/options.html' ) + '?welcome=1',
+		} );
 	}
 	else
 	{
@@ -47,7 +37,7 @@ runtimeObj.onInstalled.addListener( ( event ) =>
 	}
 } );
 
-runtimeObj.onMessage.addListener( ( request, sender, callback ) =>
+ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 {
 	if( !sender || !sender.tab )
 	{
@@ -555,36 +545,15 @@ function GetStoreSessionID( isCheckout, callback )
 
 function GetLocalOption( items, callback )
 {
-	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
-	{
-		browser.storage.local.get( items ).then( callback );
-	}
-	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
-	{
-		chrome.storage.local.get( items ).then( callback );
-	}
-	else
-	{
-		throw new Error( 'Did not find an API for storage' );
-	}
+	ExtensionApi.storage.local.get( items ).then( callback );
 }
 
 function SetLocalOption( option, value )
 {
-	const chromepls = {}; chromepls[ option ] = value;
+	const obj = {};
+	obj[ option ] = value;
 
-	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
-	{
-		browser.storage.local.set( chromepls );
-	}
-	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
-	{
-		chrome.storage.local.set( chromepls );
-	}
-	else
-	{
-		throw new Error( 'Did not find an API for storage' );
-	}
+	ExtensionApi.storage.local.set( obj );
 }
 
 function MigrateOptionsToSync()
@@ -615,42 +584,14 @@ function MigrateOptionsToSync()
 
 		console.log( 'Migrating', count, 'settings to sync', items );
 
-		if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
+		ExtensionApi.storage.sync.set( items ).then( () =>
 		{
-			browser.storage.sync.set( items ).then( () =>
+			ExtensionApi.storage.local.clear().then( () =>
 			{
-				browser.storage.local.clear().then( () =>
-				{
-					SetLocalOption( 'migrated-to-sync', true );
-				} );
+				SetLocalOption( 'migrated-to-sync', true );
 			} );
-		}
-		else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
-		{
-			chrome.storage.sync.set( items, () =>
-			{
-				chrome.storage.local.clear( () =>
-				{
-					SetLocalOption( 'migrated-to-sync', true );
-				} );
-			} );
-		}
-		else
-		{
-			throw new Error( 'Did not find an API for storage' );
-		}
+		} );
 	};
 
-	if( typeof browser !== 'undefined' && typeof browser.storage !== 'undefined' )
-	{
-		browser.storage.local.get( null ).then( callback );
-	}
-	else if( typeof chrome !== 'undefined' && typeof chrome.storage !== 'undefined' )
-	{
-		chrome.storage.local.get( null ).then( callback );
-	}
-	else
-	{
-		throw new Error( 'Did not find an API for storage' );
-	}
+	ExtensionApi.storage.local.get( null ).then( callback );
 }
