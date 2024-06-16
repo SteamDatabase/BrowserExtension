@@ -198,6 +198,7 @@ a.apphub_NumInApp:hover {
 
 .steamdb_achievement_unlock {
 	margin-left: auto;
+	text-align: right;
 	font-size: 12px;
 	font-weight: 400;
 	color: #8b929a;

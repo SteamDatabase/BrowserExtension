@@ -317,6 +317,13 @@ GetOption( {
 					unlock.className = 'steamdb_achievement_unlock';
 					unlock.textContent = player.unlock;
 					element.append( unlock );
+
+					if( player.unlockTimestamp )
+					{
+						const relativeUnlock = document.createElement( 'div' );
+						relativeUnlock.textContent = FormatRelativeTime( Date.now() - player.unlockTimestamp );
+						unlock.append( relativeUnlock );
+					}
 				}
 				else if( player.progressText )
 				{
@@ -514,3 +521,34 @@ GetOption( {
 			}, { once: true } );
 		} );
 } );
+
+const relativeDateFormatter = new Intl.RelativeTimeFormat( GetLanguage(), { numeric: 'auto' } );
+
+function FormatRelativeTime( ms )
+{
+	const sec = ms / 1000;
+	const min = Math.round( sec / 60 );
+	const hr = Math.round( min / 60 );
+	const day = Math.round( hr / 24 );
+	const month = Math.round( day / 30 );
+	const year = Math.round( month / 12 );
+
+	if( min < 60 )
+	{
+		return relativeDateFormatter.format( -min, 'minute' );
+	}
+	else if( hr < 24 )
+	{
+		return relativeDateFormatter.format( -hr, 'hour' );
+	}
+	else if( day < 30 )
+	{
+		return relativeDateFormatter.format( -day, 'day' );
+	}
+	else if( month < 18 )
+	{
+		return relativeDateFormatter.format( -month, 'month' );
+	}
+
+	return relativeDateFormatter.format( -year, 'year' );
+}
