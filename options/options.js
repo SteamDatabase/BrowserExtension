@@ -19,6 +19,10 @@
 		{
 			msg = _t( token, [ _t( 'options_steamdb_lowest_price' ) ] );
 		}
+		else if( token === 'options_extra_data_achievement_groups' )
+		{
+			msg = _t( token, [ _t( 'options_achievement_groups' ) ] );
+		}
 		else
 		{
 			msg = _t( token );

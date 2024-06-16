@@ -440,12 +440,16 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "When the grouping option is enabled, the extension will do a secure request to $domain$ to get the achievement grouping data provided by Steam Hunters.",
+		"message": "When the \"$options_achievement_groups$\" option is enabled, the extension will do a secure request to $domain$ to do achievement grouping on personal achievements page with data provided by Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
 				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
