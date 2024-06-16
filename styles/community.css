@@ -157,6 +157,10 @@ a.apphub_NumInApp:hover {
 	color: #fff;
 }
 
+.steamdb_achievements_sort_button {
+	float: right;
+}
+
 .steamdb_achievement {
 	display: flex;
 	align-items: center;

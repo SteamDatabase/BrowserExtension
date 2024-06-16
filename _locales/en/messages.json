@@ -268,6 +268,9 @@
 			}
 		}
 	},
+	"achievements_sort_by_time": {
+		"message": "Sort by time"
+	},
 
 	"inventory_list_at": {
 		"message": "List at $price$",
