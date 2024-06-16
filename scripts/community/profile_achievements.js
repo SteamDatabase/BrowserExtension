@@ -427,7 +427,7 @@ GetOption( {
 				summaryGameLogo.append( summaryGameLogoImg );
 
 				const summaryName = document.createElement( 'h2' );
-				summaryName.textContent = update.dlcAppName || update.updateName;
+				summaryName.textContent = update.dlcAppName || update.updateName || 'Update';
 
 				if( update.dlcAppName && update.updateName )
 				{
