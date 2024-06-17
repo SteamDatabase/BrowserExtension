@@ -63,11 +63,6 @@ html {
 	display: flex;
 }
 
-.steamdb_achievements_group + .steamdb_achievements_group {
-	padding-top: 40px;
-	border-top: 1px solid #23262e;
-}
-
 .steamdb_achievements_title {
 	display: flex;
 	align-items: center;
@@ -76,21 +71,6 @@ html {
 	color: #fff;
 	margin-bottom: 15px;
 	overflow-wrap: anywhere;
-}
-
-.steamdb_achievements_arrow {
-	margin-left: auto;
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	border-bottom: 8px solid currentcolor;
-	color: #83868a;
-	cursor: pointer;
-}
-
-.steamdb_achievements_title:hover .steamdb_achievements_arrow {
-	color: #fff;
 }
 
 .steamdb_achievements_group .steamdb_achievements_game_logo_contain {
@@ -116,9 +96,24 @@ html {
 	height: 40px;
 }
 
-.steamdb_achievements_group[open] .steamdb_achievements_arrow {
-	border-bottom: none;
-	border-top: 8px solid currentcolor;
+.steamdb_fold_button {
+	margin-left: auto;
+	background: none;
+	border: none;
+	color: #83868a;
+	display: flex;
+	place-content: center;
+	cursor: pointer;
+	padding: 0;
+}
+
+.steamdb_fold_button:hover,
+.steamdb_fold_button:focus {
+	color: #1a9fff;
+}
+
+.steamdb_stats_extra_tabs .steamdb_fold_button {
+	margin-left: 30px;
 }
 
 .steamdb_achievements_list {
@@ -212,6 +207,13 @@ html {
 	overflow: hidden;
 }
 
+.achieveBar.steamdb_achievement_progressbar {
+	width: 100%;
+	padding: 0;
+	border: 0;
+}
+
+.achieveBar.steamdb_achievement_progressbar .achieveBarProgress,
 .steamdb_achievement_progressbar_inner {
 	height: 100%;
 	border-top-right-radius: 10px;

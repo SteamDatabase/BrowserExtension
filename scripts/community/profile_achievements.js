@@ -21,12 +21,15 @@ GetOption( {
 		return;
 	}
 
-	const appIdElement = document.querySelector( '.profile_small_header_additional .gameLogo a' );
+	const gameLogoElement = document.querySelector( '.profile_small_header_additional .gameLogo' );
+	const appIdElement = gameLogoElement.querySelector( 'a' );
 
 	if( !appIdElement )
 	{
 		return;
 	}
+
+	gameLogoElement.style.viewTransitionName = 'steamdb-gamelogo';
 
 	const appidMatch = appIdElement.href.match( /\/app\/(?<id>[0-9]+)/ );
 
@@ -81,6 +84,8 @@ GetOption( {
 		link.append( image );
 		extraTabs.append( link );
 	}
+
+	extraTabs.append( CreateFoldButton( true ) );
 
 	document.querySelector( '#tabs' ).append( extraTabs );
 
@@ -155,6 +160,56 @@ GetOption( {
 		{
 			ProcessGameAchievements( gameAchievements, [] );
 		} );
+	}
+
+	function ToggleDetailsElements( e, selector )
+	{
+		e.preventDefault();
+
+		let state = null;
+
+		for( const el of document.querySelector( '.steamdb_achievements_container' ).querySelectorAll( 'details' ) )
+		{
+			if( state === null )
+			{
+				state = !el.open;
+			}
+
+			el.open = state;
+		}
+	}
+
+	function OnToggleAllGamesClick( e )
+	{
+		ToggleDetailsElements( e, document.querySelector( '.steamdb_achievements_container' ) );
+	}
+
+	function OnToggleGameClick( e )
+	{
+		ToggleDetailsElements( e, this.closest( '.steamdb_achievements_group' ) );
+	}
+
+	function CreateFoldButton( isRoot )
+	{
+		const btn = document.createElement( 'button' );
+		btn.type = 'button';
+		btn.className = 'steamdb_fold_button';
+		btn.addEventListener( 'click', isRoot ? OnToggleAllGamesClick : OnToggleGameClick );
+
+		// https://lucide.dev/icons/fold-vertical
+		btn.innerHTML = `
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M12 22v-6"/>
+			<path d="M12 8V2"/>
+			<path d="M4 12H2"/>
+			<path d="M10 12H8"/>
+			<path d="M16 12h-2"/>
+			<path d="M22 12h-2"/>
+			<path d="m15 19-3-3-3 3"/>
+			<path d="m15 5-3 3-3-3"/>
+		</svg>`;
+
+		return btn;
 	}
 
 	function ProcessGameAchievements( response, achievementUpdates )
@@ -264,7 +319,7 @@ GetOption( {
 				} );
 
 				foundAchievement = true;
-				element.style.viewTransitionName = `achievement-${id}`;
+				element.style.viewTransitionName = `steamdb-achievement-${id}`;
 
 				break;
 			}
@@ -302,7 +357,7 @@ GetOption( {
 		{
 			const element = document.createElement( 'div' );
 			element.className = 'steamdb_achievement';
-			element.style.viewTransitionName = `achievement-${id}`;
+			element.style.viewTransitionName = `steamdb-achievement-${id}`;
 
 			const image = document.createElement( 'img' );
 			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlock ? achievement.icon : achievement.icon_gray}`;
@@ -404,13 +459,12 @@ GetOption( {
 				continue;
 			}
 
-			const details = document.createElement( 'details' );
+			const details = document.createElement( 'div' );
 			details.className = 'steamdb_achievements_group';
-			details.open = true;
 			newContainer.append( details );
 
 			{
-				const summary = document.createElement( 'summary' );
+				const summary = document.createElement( 'div' );
 				summary.className = 'steamdb_achievements_title';
 				details.append( summary );
 
@@ -420,6 +474,11 @@ GetOption( {
 				summaryGameLogo.className = 'steamdb_achievements_game_logo_contain';
 				summaryGameLogo.href = `https://store.steampowered.com/app/${dlcAppId}`;
 				summary.append( summaryGameLogo );
+
+				if( updateId === 0 )
+				{
+					summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
+				}
 
 				const summaryGameLogoImg = document.createElement( 'img' );
 				summaryGameLogoImg.className = 'steamdb_achievements_game_logo';
@@ -468,10 +527,7 @@ GetOption( {
 					summaryText.append( progress );
 				}
 
-				const summaryArrow = document.createElement( 'div' );
-				summaryArrow.className = 'steamdb_achievements_arrow';
-
-				summary.append( summaryArrow );
+				summary.append( CreateFoldButton() );
 			}
 
 			const lockedAchievementsDetails = document.createElement( 'details' );
@@ -563,6 +619,9 @@ GetOption( {
 		{
 			oldContainer.insertAdjacentElement( 'beforebegin', newContainer );
 			oldContainer.hidden = true;
+			gameLogoElement.hidden = true;
+
+			document.querySelector( '#topSummaryAchievements .achieveBar' )?.classList.add( 'steamdb_achievement_progressbar' );
 
 			// As we are completely redrawing the achievement list, sorting added by
 			// Augmented Steam won't work it, hide their sorting to prevent user confusion
