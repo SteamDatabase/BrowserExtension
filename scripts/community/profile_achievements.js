@@ -56,9 +56,10 @@ GetOption( {
 	}
 
 	// Steam Hunters link
-	{
-		const steamID = location.pathname.match( /^\/(?<url>(?:id|profiles)\/(?:[^\s/]+))\/?/ );
+	const steamID = location.pathname.match( /^\/(?<url>(?:id|profiles)\/(?:[^\s/]+))\/?/ );
 
+	if( steamID )
+	{
 		const link = document.createElement( 'a' );
 		link.href = `https://steamhunters.com/${steamID.groups.url}/apps/${appid}/achievements?utm_source=SteamDB`;
 		link.dataset.tooltipText = _t( 'view_on_steam_hunters' );

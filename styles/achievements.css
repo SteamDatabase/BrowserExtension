@@ -35,10 +35,6 @@ html {
 	filter: unset;
 }
 
-.tab.steamdb_stats_tab {
-	float: right;
-}
-
 .steamdb_stats_extra_tabs {
 	float: right;
 	display: flex;

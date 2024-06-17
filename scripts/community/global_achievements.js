@@ -41,19 +41,38 @@ GetOption( {
 
 	const appid = appidMatch.groups.id;
 
+	const extraTabs = document.createElement( 'div' );
+	extraTabs.className = 'steamdb_stats_extra_tabs';
+
+	// Steam Hunters link
+	{
+		const link = document.createElement( 'a' );
+		link.href = `https://steamhunters.com/apps/${appid}/achievements?utm_source=SteamDB`;
+		link.dataset.tooltipText = _t( 'view_on_steam_hunters' );
+
+		const image = document.createElement( 'img' );
+		image.className = 'steamdb_stats_tab_icon';
+		image.src = GetLocalResource( 'icons/steamhunters.svg' );
+		link.append( image );
+
+		extraTabs.append( link );
+	}
+
 	// SteamDB link
 	{
-		const tab = document.createElement( 'div' );
-		tab.className = 'tab steamdb_stats_tab';
-
 		const link = document.createElement( 'a' );
-		link.className = 'tabOn';
 		link.href = `${GetHomepage()}app/${appid}/stats/`;
-		link.textContent = 'SteamDB';
+		link.dataset.tooltipText = _t( 'view_on_steamdb' );
 
-		tab.appendChild( link );
-		document.querySelector( '#tabs' ).appendChild( tab );
+		const image = document.createElement( 'img' );
+		image.className = 'steamdb_stats_tab_icon';
+		image.src = GetLocalResource( 'icons/white.svg' );
+
+		link.append( image );
+		extraTabs.append( link );
 	}
+
+	document.querySelector( '#tabs' ).append( extraTabs );
 
 	const applicationConfigElement = document.getElementById( 'application_config' );
 
