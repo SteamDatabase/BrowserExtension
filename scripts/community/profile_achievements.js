@@ -475,15 +475,19 @@ GetOption( {
 				summaryGameLogo.href = `https://store.steampowered.com/app/${dlcAppId}`;
 				summary.append( summaryGameLogo );
 
+				const summaryGameLogoImg = document.createElement( 'img' );
+				summaryGameLogoImg.className = 'steamdb_achievements_game_logo';
+				summaryGameLogo.append( summaryGameLogoImg );
+
 				if( updateId === 0 )
 				{
 					summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
+					summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
 				}
-
-				const summaryGameLogoImg = document.createElement( 'img' );
-				summaryGameLogoImg.className = 'steamdb_achievements_game_logo';
-				summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/capsule_184x69.jpg`;
-				summaryGameLogo.append( summaryGameLogoImg );
+				else
+				{
+					summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/capsule_184x69.jpg`;
+				}
 
 				const summaryName = document.createElement( 'h2' );
 				summaryName.textContent = update.dlcAppName || update.updateName || 'Update';
