@@ -563,6 +563,10 @@ GetOption( {
 		{
 			oldContainer.insertAdjacentElement( 'beforebegin', newContainer );
 			oldContainer.hidden = true;
+
+			// As we are completely redrawing the achievement list, sorting added by
+			// Augmented Steam won't work it, hide their sorting to prevent user confusion
+			document.querySelector( '.es-sortbox' )?.setAttribute( 'hidden', true );
 		};
 
 		if( document.startViewTransition )
