@@ -1,4 +1,4 @@
 preserve_hierarchy: true
 files:
   - source: /assets/StoreReadme.txt
-    translation: /store_readme/%two_letters_code%.txt
+    translation: /store_readme/%language% (%two_letters_code%).txt
