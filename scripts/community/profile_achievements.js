@@ -168,7 +168,7 @@ GetOption( {
 
 		let state = null;
 
-		for( const el of document.querySelector( '.steamdb_achievements_container' ).querySelectorAll( 'details' ) )
+		for( const el of selector.querySelectorAll( 'details' ) )
 		{
 			if( state === null )
 			{
