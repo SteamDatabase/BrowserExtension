@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "ამატებს SteamDB-ს ლინკებს და ახალ ფუნქციებს Steam-ის მაღაზიასა და ქომუნითიში. ნახე უდაბლესი ფასები თამაშებზე და თამაშის მონაცემები."
+		"message": "ამატებს SteamDB-ს ლინკებს და ახალ ფუნქციებს Steam-ის მაღაზიასა და ქომუნითში. ნახე თამაშების უმცირესი ფასები და მათი მონაცემები."
 	},
 	"steamdb_options": {
 		"message": "SteamDB პარამეტრები"
@@ -60,7 +60,7 @@
 		"message": "ბოლი განახლება:"
 	},
 	"app_depots_updated_short": {
-		"message": "განახლება",
+		"message": "განახლებულია",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -79,7 +79,7 @@
 		"message": "ფოლოვერები:"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB-ზე ყველაზე დაბალი ჩაწერილი ფასი არის <b>$price$</b>",
+		"message": "SteamDB-ზე ყველაზე დაბალი დაფიქსირებული ფასი არის <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -88,7 +88,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB-ზე ყველაზე დაბალი ჩაწერილი ფასი არის <b>$price$</b> <b>$discount$</b>-ან ფასდაკლებაზე",
+		"message": "SteamDB-ზე ყველაზე დაბალი დაფიქსირებული ფასი არის <b>$price$</b> <b>$discount$</b>-ან ფასდაკლებაზე",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -101,7 +101,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB-ზე ყველაზე დაბალი ჩაწერილი ფასი არის <b>$price$</b> და ბოლო 2 წლის განმავლობაში ყველაზე დაბალი ფასი არის<b>$price_limited$</b>",
+		"message": "SteamDB-ზე ყველაზე დაბალი დაფიქსირებული ფასი არის <b>$price$</b> და ბოლო 2 წლის განმავლობაში ყველაზე დაბალი ფასია <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -114,7 +114,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "ფასი ჩაწერილია $date$ ($relative$)",
+		"message": "ფასი ნანახია $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -127,7 +127,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "ფასი ჩაწერილია $seen$- ჯერ, ბოლოს $date$ ($relative$)",
+		"message": "ფასი ნანახია $seen$- ჯერ, ბოლოს $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -151,7 +151,7 @@
 		"message": "ავტომატურად დაათვალიერე აღმოჩენის რიგი და აიღე ივენთ ქარდი."
 	},
 	"explore_generating": {
-		"message": "გენერირდება ახალი აღმოჩენის რიგი, ეს შეიძლება არ მოხდეს თუ Steam დიდი დატვირთვის ქვეშაა…"
+		"message": "იქმნება ახალი აღმოჩენის რიგი, ეს შეიძლება არ მოხდეს თუ Steam დიდი დატვირთვის ქვეშაა…"
 	},
 	"explore_exploring": {
 		"message": "მოწმდება რიგი... მოთხოვნა $current$ $total$-დან",
@@ -232,9 +232,6 @@
 	},
 	"hidden_achievement": {
 		"message": "დამალული მიღწევა: "
-	},
-	"hidden_achievement_hover": {
-		"message": "დამალული მიღწევა: გადაუსვი მაუსი რომ გამოაჩინო: "
 	},
 	"inventory_list_at": {
 		"message": "დადე მარკეტზე $price$-ად",
@@ -492,12 +489,6 @@
 		"message": "გამოაჩინე პროდუქტის სურათები მაღაზიის და ქომუნითის გვერდებზე",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "ჩატვირთე დამალული მიღწევები და მათი აღწერები"
-	},
-	"options_spoiler_achievements": {
-		"message": "დამალე აღწერები სპოილერის უკან"
-	},
 	"options_prevent_store_images": {
 		"message": "არ ჩატვირთო სურათები პროდუქტის გვერდებზე"
 	},
@@ -520,11 +511,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "გააუმჯობესე გლობალური მიღწევების გვერდი"
-	},
-	"options_builtin_achievements_link": {
-		"message": "მიაბი შენი მიღწევების გვერდი"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "დაბლოკილ მიღწევებს აქვთ ბოქლომის ნიშანი უფრო კარგად გამოსაჩენად"
 	}
 }

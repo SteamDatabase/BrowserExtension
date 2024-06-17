@@ -1,15 +1,15 @@
 {
 	"extension_description": {
-		"message": "在 Steam 商店和社群中加入 SteamDB 連結和新功能。查看最低遊戲價格和統計數據。"
+		"message": "在 Steam 商店和社群中加入 SteamDB 連結和新功能。查看最低遊戲價格和統計資料。"
 	},
 	"steamdb_options": {
 		"message": "SteamDB 選項"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB 計算機"
+		"message": "SteamDB 價值計算"
 	},
 	"steamstatus": {
-		"message": "前往$domain$查看",
+		"message": "前往 $domain$ 查看",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -44,7 +44,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$ 則評論中的 $positive$ 則為正面評價（所有購買類型）",
+		"message": "$total$ 則評論中的 $positive$ 則為正面評價 (所有購買類型)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -64,22 +64,22 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "線上統計"
+		"message": "在線統計"
 	},
 	"app_stats_online_now": {
-		"message": "線上玩家數："
+		"message": "在線玩家數："
 	},
 	"app_stats_peak_today": {
-		"message": "24小時高峰："
+		"message": "24小時內最高峰："
 	},
 	"app_stats_alL_time_peak": {
-		"message": "歷史最高點："
+		"message": "歷史峰值："
 	},
 	"app_stats_followers": {
-		"message": "關注者："
+		"message": "追蹤數："
 	},
 	"app_lowest_price": {
-		"message": "SteamDB 最低記錄價格為 <b>$price$</b>",
+		"message": "SteamDB 歷史最低價格為 <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -88,7 +88,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB 最低記錄價格為 <b>$price$</b>， <b>-$discount$%</b>",
+		"message": "SteamDB 歷史最低價格為 <b>$price$</b>/<b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -101,7 +101,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB 的最低記錄價格為 <b>$price$</b>，近2年最低價為 <b>$price_limited$</b>",
+		"message": "SteamDB 歷史最低價格為 <b>$price$</b>，近兩年最低價格為 <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -114,7 +114,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "此價格於 $date$ 出現（$relative$）",
+		"message": "此價格於 $date$ 出現 ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -127,7 +127,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "價格已出現 $seen$ 次，上次出現在 $date$（$relative$）",
+		"message": "價格已出現 $seen$ 次，上次出現在 $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -145,7 +145,7 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "自動探索"
+		"message": "自動探索佇列"
 	},
 	"explore_auto_discover_description": {
 		"message": "自動探索佇列以取得活動卡片。"
@@ -154,7 +154,7 @@
 		"message": "正在產生新的探索佇列，如果 Steam 處於高負載下可能會失敗..."
 	},
 	"explore_exploring": {
-		"message": "探索佇列... 請求 $current$ 共 $total$",
+		"message": "探索佇列中... 請求數 $current$/$total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -191,7 +191,7 @@
 		"message": "佇列已探索完成。"
 	},
 	"badges_idle_apps": {
-		"message": "閒置的應用程式：$amount$",
+		"message": "可掉落應用數： $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +201,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "此頁面上閒置的應用程式：$amount$",
+		"message": "此頁可掉落應用數： $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -231,10 +231,7 @@
 		}
 	},
 	"hidden_achievement": {
-		"message": "隱藏成就: "
-	},
-	"hidden_achievement_hover": {
-		"message": "隱藏成就，滑鼠懸停即可顯示： "
+		"message": "隱藏成就： "
 	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
@@ -255,10 +252,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "列出最低售價的商品\n顯示的價格是您收到的金額（不含服務費）"
+		"message": "列出最低售價的商品\n顯示的價格是您收到的金額 (不含服務費)"
 	},
 	"inventory_sell_at_title": {
-		"message": "列出最高購買訂單價格的項目\n顯示的價格是您收到的金額（不含服務費）"
+		"message": "列出最高購買訂單價格的項目\n顯示的價格是您收到的金額 (不含服務費)"
 	},
 	"options": {
 		"message": "選項"
@@ -276,7 +273,7 @@
 		"message": "Steam 頁面上的帳戶下拉選單"
 	},
 	"options_welcome_option3": {
-		"message": "您的瀏覽器的擴充插件頁面"
+		"message": "您的瀏覽器的擴充功能頁面"
 	},
 	"options_review": {
 		"message": "為這個擴充功能留下評論"
@@ -312,13 +309,13 @@
 		"message": "交易提案"
 	},
 	"options_header_enhancements": {
-		"message": "強化的功能"
+		"message": "增強功能"
 	},
 	"options_website_explanation": {
 		"message": "說明"
 	},
 	"options_website_explanation1": {
-		"message": "啟用此選項後，擴充功能將從 <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 商店</a> 請求一些使用著資料（願望清單、已擁有、關注中、已忽略的產品、即在購物車中的產品），以便在網站上突出顯示。"
+		"message": "啟用此選項後，擴充功能將從 <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 商店</a> 請求一些使用著資料 (願望清單、已擁有、關注中、已忽略的產品、即在購物車中的產品)，以便在網站上突出顯示。"
 	},
 	"options_website_explanation2": {
 		"message": "您必須在商店上登入才能使用。"
@@ -327,7 +324,7 @@
 		"message": "這些資料僅保存在您的瀏覽器中，並不會發送到 SteamDB 後端。"
 	},
 	"options_website_explanation4": {
-		"message": "為了防止對 Steam 商店發出過多請求，用戶資料會將快取放在瀏覽器的本機端。"
+		"message": "為了防止對 Steam 商店發出過多請求，用戶資料會將快取放在瀏覽器的本地儲存。"
 	},
 	"options_website_highlight": {
 		"message": "在 $domain$ 上標記已擁有和在願望清單上的產品",
@@ -342,10 +339,10 @@
 		"message": "直接從 SteamDB 中新增願望清單、追蹤並忽略 Steam 商店中的產品"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">啟用免費包腳本</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">啟用免費捆綁包腳本</a>"
 	},
 	"options_website_highlight3": {
-		"message": "在 <a href=\"https://steamdb.info/sales/\" target=\"_blank\">販售頁面</a> 和 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">組合包頁面</a> 中啟用額外的過濾器"
+		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">販售頁面</a>和<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆綁包頁面</a>中啟用額外的過濾器"
 	},
 	"options_extra_data": {
 		"message": "從 $domain$ 取得的額外資料",
@@ -357,7 +354,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "當啟用「$options_online_stats$」或「$options_steamdb_last_update$」選項時，擴充程式會向 $domain$ 傳送請求以取得在線玩家數和最近的更新日誌。",
+		"message": "當啟用「$options_online_stats$」或「$options_steamdb_last_update$」選項時，擴充套件會向 $domain$ 傳送請求以取得在線玩家數和最近的更新日誌。",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -374,7 +371,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "當 「$options_steamdb_lowest_price$」 選項啟用時，擴充功能將向 $domain$ 發出請求以取得特定遊戲在您使用的貨幣（與 Steam 的設定相同）的歷史最低價格。",
+		"message": "當 「$options_steamdb_lowest_price$」 選項啟用時，擴充功能將向 $domain$ 發出請求以取得特定遊戲在您使用的貨幣 (與 Steam 的設定相同) 的歷史最低價格。",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -402,7 +399,7 @@
 		"message": "在產品頁面上顯示 PCGamingWiki 按鈕"
 	},
 	"options_button_sub": {
-		"message": "在 App 頁面顯示按鈕"
+		"message": "在捆綁包頁面上顯示按鈕"
 	},
 	"options_button_gamehub": {
 		"message": "在社區顯示按鈕"
@@ -418,28 +415,28 @@
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "連結許可證頁面上的每個 App"
+		"message": "在授權頁面替每個套件增加連結"
 	},
 	"options_profile_calculator": {
-		"message": "在社群的個人資料上增加計算機連結"
+		"message": "在社群的個人資料上增加價值計算連結"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "將庫存頁面上的遊戲選擇移至一側"
+		"message": "將庫存頁面上的遊戲選擇移至側邊"
 	},
 	"options_link_inventory": {
-		"message": "將庫存中的每件禮物和優惠券連結到 SteamDB"
+		"message": "於庫存頁面的每個禮物和優惠券顯示 SteamDB 連結"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "正確找出庫存中的禮物 SubID"
+		"message": "於庫存頁面顯示禮物 SubID"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "出售物品時不要刷新庫存"
+		"message": "出售物品時不要刷新庫存頁面"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "加入快速出售按鈕"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "自動接受快速販賣"
+		"message": "自動接受快速出售"
 	},
 	"options_display_market_price_others": {
 		"message": "在其他人的物品庫中顯示物品市集價格"
@@ -459,7 +456,7 @@
 		"message": "參閱 GitHub 上的說明"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "禁止交易報價時「此交易看起來很可疑」 和 「您確定這是一份禮物嗎？」 的提醒。"
+		"message": "交易報價時禁止顯示「此交易看起來很可疑」 和 「您確定這是一份禮物嗎？」 的警示"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "顯示更好的錯誤訊息，而不是 Valve 神秘的錯誤號碼"
@@ -468,10 +465,10 @@
 		"message": "跳過年齡檢查"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "將年齡和生日 cookie 設定為始終略過"
+		"message": "將年齡和生日 cookies 設定為始終通過"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "關閉在前往外部網站時顯示的「您正要離開 Steam。 」警示",
+		"message": "關閉在前往外部網站時顯示的「您正要離開 Steam」警示",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
@@ -479,7 +476,7 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "隱藏標題中的「安裝 Steam」按鈕",
+		"message": "隱藏頂部的「安裝 Steam」按鈕",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
@@ -491,12 +488,6 @@
 	"options_enhancement_appicon": {
 		"message": "在商店及社群頁面上顯示產品圖示",
 		"description": "The icon is displayed to the left of the game name"
-	},
-	"options_hidden_achievements": {
-		"message": "載入隱藏的成就和成就敘述"
-	},
-	"options_spoiler_achievements": {
-		"message": "將描述隱藏在劇透元素後面"
 	},
 	"options_prevent_store_images": {
 		"message": "在產品頁面上停止讀取圖片"
@@ -520,11 +511,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "改進全球成就頁面"
-	},
-	"options_builtin_achievements_link": {
-		"message": "連結到自己的成就頁面"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "鎖定的成就用鎖定圖示來提高可見性"
 	}
 }

@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Lihat di SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Lihat di Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Lihat di PCGamingWiki"
 	},
@@ -44,7 +48,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ dari $total$ review adalah positif ( Semua jenis Pembelian)",
+		"message": "$positive$ dari $total$ review adalah positif (Semua jenis Pembelian)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -154,7 +158,7 @@
 		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
 	},
 	"explore_exploring": {
-		"message": "Menjelajah antrian… request $current$ dari $total$",
+		"message": "Menjelajahi antrian… request $current$ dari $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -233,8 +237,36 @@
 	"hidden_achievement": {
 		"message": "Pencapaian tersembunyi: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Pencapaian tersembunyi, arahkan mouse ke atas untuk mengungkapkannya: "
+	"achievement_global_unlock": {
+		"message": "$percent$ pemain mempunyai pencapaian ini",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "PENCAPAIAN YANG DIPEROLEH: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "PENCAPAIAN TERKUNCI: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Urutkan berdasarkan waktu"
 	},
 	"inventory_list_at": {
 		"message": "Daftarkan di $price$",
@@ -255,10 +287,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Daftarkan item dengan harga terendah\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa fees)"
+		"message": "Daftarkan item dengan harga terendah\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa pajak)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Daftarkan item dengan harga tertinggi\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa fees)"
+		"message": "Daftarkan item dengan harga tertinggi\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa pajak)"
 	},
 	"options": {
 		"message": "Pengaturan"
@@ -285,7 +317,7 @@
 		"message": "Extension ini membutuhkan izin tambahan agar dapat berfungsi dengan baik di SteamDB, Steam Store, dan Steam Community."
 	},
 	"options_permissions_button": {
-		"message": "⚠️ Memberikan izin"
+		"message": "⚠️ Berikan izin"
 	},
 	"options_footer1": {
 		"message": "Dibuat dengan 💙 oleh <a href=“https://steamdb.info” target=“_blank”>SteamDB</a>."
@@ -311,6 +343,9 @@
 	"options_header_trade_offers": {
 		"message": "Permintaan tukar-menukar"
 	},
+	"options_header_achievements": {
+		"message": "Pencapaian"
+	},
 	"options_header_enhancements": {
 		"message": "Peningkatan"
 	},
@@ -330,7 +365,7 @@
 		"message": "Untuk mencegah permintaan berlebihan ke Steam, data anda di-cache di penyimpanan lokal anda."
 	},
 	"options_website_highlight": {
-		"message": "Menandai produk yang sudah dimiliki dan yang diinginkan di $domain$",
+		"message": "Tandai produk yang sudah dimiliki dan yang diinginkan di $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -483,7 +518,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Menyembunyikan banner “Buka di Steam”"
+		"message": "Sembunyikan banner “Buka di Steam”"
 	},
 	"options_steamdb_rating": {
 		"message": "Tampilkan peringkat SteamDB dalam halaman produk"
@@ -492,11 +527,17 @@
 		"message": "Tampilkan ikon produk dalam halaman toko dan komunitas",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Memuat pencapaian tersembunyi dan deskripsinya"
+	"options_improve_achievements": {
+		"message": "Tingkatkan Halaman Pencapaian Global"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Tampilkan persetanse pencapaian global yang terbuka"
+	},
+	"options_modernized_achievements": {
+		"message": "Memperbarui Desain"
 	},
 	"options_spoiler_achievements": {
-		"message": "Menyembunyikan deskripsi di balik elemen spoiler"
+		"message": "Menempatkan pencapaian tersembunyi dibalik spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Hentikan pemuatan gambar di halaman produk"
@@ -512,6 +553,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Tambahkan tombol untuk menciutkan blok \"sudah ada di perpustakaan\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Menampilkan jumlah total kartu yang tersisa pada halaman lencana"
 	},
@@ -522,9 +566,9 @@
 		"message": "Tingkatkan halaman pencapaian global"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Tautan ke halaman pencapaian anda"
+		"message": "Tautan halaman pencapaian anda"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Pencapaian yang terkunci memiliki ikon kunci agar lebih mudah dilihat"
+		"message": "Tampilkan ikon gembok untuk pencapaian terkunci"
 	}
 }

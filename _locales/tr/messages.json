@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "SteamDB'de görüntüle"
 	},
+	"view_on_steam_hunters": {
+		"message": "Steam Hunters'da görüntüle",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "PCGamingWiki'de görüntüle"
 	},
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Gizli başarım: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Gizli başarımı görmek için fareyi üzerine getirin: "
+	"achievement_global_unlock": {
+		"message": "$percent$ oyuncu bu başarıma sahip",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "KAZANILMIŞ BAŞARIMLAR: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "KAZANILMAMIŞ BAŞARIMLAR: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Tarihe göre sırala"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Başarım grupları Steam Hunters tarafından sağlanmaktadır.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Satışa koy: $price$",
@@ -255,10 +291,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Listelenen en düşük satış fiyatı ile öğeyi listeler\n\nGösterilen fiyat alacağınız miktardır (komisyonsuz)"
+		"message": "Listelenen en düşük satış fiyatı ile öğeyi satışa koyar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Listelenen en yüksek sipariş fiyatına öğeyi listeler\n\nGösterilen fiyat alacağınız miktardır (komisyonsuz)"
+		"message": "Listelenen en yüksek sipariş fiyatına öğeyi satar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
 	},
 	"options": {
 		"message": "Ayarlar"
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Takas Teklifleri"
 	},
+	"options_header_achievements": {
+		"message": "Başarımlar"
+	},
 	"options_header_enhancements": {
 		"message": "Geliştirmeler"
 	},
@@ -321,13 +360,13 @@
 		"message": "Bu özellik etkinleştirildiğinde, uzantı <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam mağazanızdan</a> bazı kullanıcı verilerinizi (istek listeniz, sahip olduklarınız, takip ettikleriniz, yok saydıklarınız ve sepetinizdeki içerikler) isteyecek ve bunları sitede vurgu yapmak için kullanacaktır."
 	},
 	"options_website_explanation2": {
-		"message": "Bunun çalışabilmesi için mağazada oturum açmanız gerekiyor."
+		"message": "Bu özelliğin çalışabilmesi için mağazada oturum açmanız gerekiyor."
 	},
 	"options_website_explanation3": {
-		"message": "Veriler tamamen tarayıcınızda tutulur ve SteamDB veri tabanına asla gönderilmez."
+		"message": "Veriler tamamen tarayıcınızda saklanır ve asla SteamDB veri tabanına gönderilmez."
 	},
 	"options_website_explanation4": {
-		"message": "Steam Mağazası'na yönelik aşırı istekleri önlemek için kullanıcı verileriniz, tarayıcınızın yerel depolama alanındaki önbelleğe alınır."
+		"message": "Steam Mağazası'na yönelik aşırı istekleri önlemek amacıyla, kullanıcı verileriniz tarayıcınızın yerel depolama alanındaki önbelleğe alınır."
 	},
 	"options_website_highlight": {
 		"message": "Kütüphanemdeki ve istek listemdeki içerikleri $domain$'da vurgula",
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "\"$options_achievement_groups$\" özelliği etkinleştirildiğinde, uzantı Steam Hunters tarafından sağlanan verilerle kişisel başarımlar sayfasında başarım gruplandırması oluşturmak için $domain$'dan güvenli bir sorgulama yapacaktır.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Mağazaya ve topluluk sayafasına içeriklerin simgesini ekle",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Gizli başarımları ve açıklamalarını yükle"
+	"options_improve_achievements": {
+		"message": "Kişisel başarım sayfasını iyileştir"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Global başarım kazanma yüzdesini göster"
+	},
+	"options_modernized_achievements": {
+		"message": "Modern tasarım"
+	},
+	"options_achievement_groups": {
+		"message": "Steam Hunters verileriyle başarımları grupla",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Açıklamayı bulanıklaştır"
+		"message": "Gizli başarımları bulanıklaştır"
 	},
 	"options_prevent_store_images": {
 		"message": "Mağaza içeriğindeki resimlerin yüklenmesini durdur"
@@ -512,19 +575,22 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "\"Zaten kütüphanenizde\" kutucuğunu daraltmak için bir buton ekle"
+	},
 	"options_builtin_card_drops": {
 		"message": "Rozetler sayfasında kalan kart düşürme sayısını göster"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "İndirimler sırasında keşif kuyruğunuzu otomatik olarak tamamlamak için bir buton ekle"
+		"message": "Etkinlikli indirimler sırasında keşif kuyruğunu otomatik keşfetmeyi sağlayacak bir buton ekle"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Global başarımlar sayfasını iyileştir"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Kişisel başarımlar sayfasına bağlantı ekle"
+		"message": "Kişisel başarımlar sayfasına bir bağlantı ekle"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Kilitli başarımların daha iyi görünebilmesi için bu başarımlarda kilit simgesi yer almaktadır"
+		"message": "Kilitli başarımları kilit simgesi ile göster"
 	}
 }

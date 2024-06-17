@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Ver en SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Ver en Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Ver en PCGamingWiki"
 	},
@@ -70,7 +74,7 @@
 		"message": "En línea ahora:"
 	},
 	"app_stats_peak_today": {
-		"message": "Pico en 24 horas:"
+		"message": "Pico en las ult. 24 horas:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Pico histórico:"
@@ -101,7 +105,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "El precio más bajo registrado en SteamDB es de <b>$price$</b> y el mínimo en 2 años es de <b>$price_limited$</b>",
+		"message": "El precio más bajo registrado en SteamDB es de <b>$price$</b> y el más bajo de los últimos 2 años es de <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Logro oculto: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Logro oculto, mueve el mouse por encima para revelarlo: "
+	"achievement_global_unlock": {
+		"message": "$percent$ de los jugadores tienen este logro",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "LOGROS OBTENIDOS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "LOGROS BLOQUEADOS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Ordenar por fecha"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Los logros agrupados son proporcionados por Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Poner a la venta a $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Ofertas de Intercambio"
 	},
+	"options_header_achievements": {
+		"message": "Logros"
+	},
 	"options_header_enhancements": {
 		"message": "Mejoras"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Cuando la opción \"$options_achievement_groups$\" está activada, la extensión hará una petición segura a $domain$ para agrupar los logros en la página de logros personales con datos proporcionados por Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Mostrar el icono del producto en la página de la tienda y de la comunidad",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Cargar logros ocultos y sus descripciones"
+	"options_improve_achievements": {
+		"message": "Mejorar la página de logros personales"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Mostrar porcentaje de logros globales desbloqueados"
+	},
+	"options_modernized_achievements": {
+		"message": "Diseño modernizado"
+	},
+	"options_achievement_groups": {
+		"message": "Logros agrupados con datos de Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Ocultar descripciones detrás de un elemento spoiler"
+		"message": "Poner logros ocultos detras de un elemento de spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Detener la carga de imágenes en las páginas del producto"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Añadir un boton para cerrar el bloque de \"ya en tu biblioteca\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Mostrar la cantidad total de tarjetas restantes en la página de insignias"
 	},
@@ -522,9 +588,9 @@
 		"message": "Mejorar la página de logros mundiales"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Vincula a tu propia página de logros"
+		"message": "Vincular a la página de logros personales"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Los logros bloqueados tienen un icono de candado para mayor visibilidad"
+		"message": "Mostrar un icono de candado para logros no desbloqueados"
 	}
 }

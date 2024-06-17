@@ -1,15 +1,15 @@
 {
 	"extension_description": {
-		"message": "เพิ่มลิงก์ SteamDB และคุณสมบัติใหม่บนร้านค้า Steam และชุมชน ดูราคาและสถิติเกมที่ต่ำที่สุด"
+		"message": "เพิ่มลิงก์ SteamDB และคุณสมบัติใหม่บนร้านค้าและชุมชน Steam. ดูราคาเกมที่ต่ำที่สุดและสถิติ"
 	},
 	"steamdb_options": {
-		"message": "ตัวเลือก SteamDB"
+		"message": "ตั้งค่า SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "เครื่องคำนวณ SteamDB"
 	},
 	"steamstatus": {
-		"message": "ดูใน $domain$",
+		"message": "ดูบน $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "ดูเหมือนว่า Steam กำลังประสบปัญหาการหยุดทำงานอยู่บ้าง "
+		"message": "ดูเหมือนว่า Steam กำลังประสบปัญหาการหยุดการทำงาน "
 	},
 	"view_on_steamdb": {
 		"message": "ดูบน SteamDB"
@@ -40,7 +40,7 @@
 		"message": "คะแนน SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " เรตติ้ง STEAMDB",
+		"message": " คะแนน STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
@@ -70,10 +70,10 @@
 		"message": "ออนไลน์ขณะนี้:"
 	},
 	"app_stats_peak_today": {
-		"message": "การใช้งานสูงสุด 24 ชั่วโมง:"
+		"message": "ออนไลน์พร้อมกันสูงสุดใน 24 ชั่วโมง:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "การใช้งานสูงสุดตลอดเวลา:"
+		"message": "ออนไลน์พร้อมกันสูงสุดที่เคยมีมา:"
 	},
 	"app_stats_followers": {
 		"message": "ผู้ติดตาม:"
@@ -127,7 +127,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "ราคาที่เห็น $seen$ ครั้ง ล่าสุดเมื่อวันที่ $date$ ($relative$)",
+		"message": "ราคาที่เห็น $seen$ ครั้ง, เห็นล่าสุดเมื่อวันที่ $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -148,10 +148,10 @@
 		"message": "ค้นพบอัตโนมัติ"
 	},
 	"explore_auto_discover_description": {
-		"message": "ค้นหาคิวโดยอัตโนมัติเพื่อรับการ์ดกิจกรรม"
+		"message": "ค้นพบคิวโดยอัตโนมัติเพื่อรับการ์ดกิจกรรม"
 	},
 	"explore_generating": {
-		"message": "กำลังสร้างคิวการค้นพบใหม่ สิ่งนี้อาจล้มเหลวได้หาก Steam อยู่ภายใต้ภาระงานสูง..."
+		"message": "กำลังสร้างคิวการค้นพบใหม่, อาจล้มเหลวได้หาก Steam กำลังทำงานหนัก..."
 	},
 	"explore_exploring": {
 		"message": "กำลังสำรวจคิว... ร้องขอ $current$ จาก $total$",
@@ -167,7 +167,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "ไม่สามารถล้างรายการคิว #$current$ โปรดลองอีกครั้งในห้าวินาที...",
+		"message": "การล้างรายการคิว #$current$ ล้มเหลว, กำลังลองอีกครั้งในห้าวินาที...",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -176,7 +176,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "ไม่สามารถล้างรายการคิว #$current$ บ่อยเกินไป คุณสามารถลองใหม่อีกครั้งในภายหลัง",
+		"message": "การล้างรายการคิว #$current$ ล้มเหลวบ่อยเกินไป, คุณสามารถลองใหม่อีกครั้งในภายหลัง",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -185,7 +185,7 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "ไม่สามารถสร้างคิวใหม่ได้ โปรดลองอีกครั้งในห้าวินาที..."
+		"message": "การสร้างคิวใหม่ได้ล้มเหลว, กำลังลองอีกครั้งในห้าวินาที..."
 	},
 	"explore_finished": {
 		"message": "สำรวจคิวแล้ว"
@@ -232,9 +232,6 @@
 	},
 	"hidden_achievement": {
 		"message": "ความสำเร็จที่ซ่อนอยู่: "
-	},
-	"hidden_achievement_hover": {
-		"message": "ความสำเร็จที่ซ่อนอยู่ เลื่อนเมาส์เพื่อแสดง: "
 	},
 	"inventory_list_at": {
 		"message": "ตั้งราคาที่ $price$",
@@ -492,12 +489,6 @@
 		"message": "แสดงไอคอนแอพบนหน้าร้านค้า และ ชุมชน",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "โหลดความสำเร็จที่ซ่อนอยู่และคำอธิบาย"
-	},
-	"options_spoiler_achievements": {
-		"message": "ซ่อนคำอธิบายด้านหลังองค์ประกอบสปอยเลอร์"
-	},
 	"options_prevent_store_images": {
 		"message": "ปิดการโหลดภาพที่หน้าร้านค้า"
 	},
@@ -520,11 +511,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "ปรับปรุงหน้าความสำเร็จระดับโลก"
-	},
-	"options_builtin_achievements_link": {
-		"message": "เชื่อมโยงไปยังหน้าความสำเร็จของคุณ"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "ความสำเร็จที่ล็อคไว้จะมีไอคอนล็อคเพื่อให้มองเห็นได้มากขึ้น"
 	}
 }

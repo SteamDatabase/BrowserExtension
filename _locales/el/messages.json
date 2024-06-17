@@ -233,8 +233,36 @@
 	"hidden_achievement": {
 		"message": "Κρυφό επίτευγμα: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Κρυφό επίτευγμα, ποντίκι από πάνω για αποκάλυψη: "
+	"achievement_global_unlock": {
+		"message": "$percent$ των παικτών έχουν κερδίσει αυτό το επίτευγμα",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "ΚΕΡΔΙΣΜΕΝΑ ΕΠΙΤΕΥΓΜΑΤΑ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ΚΛΕΙΔΩΜΕΝΑ ΕΠΙΤΕΥΓΜΑΤΑ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Ταξινόμηση κατά ώρα"
 	},
 	"inventory_list_at": {
 		"message": "Λίστα από $price$",
@@ -310,6 +338,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Προσφορές Συναλλαγών"
+	},
+	"options_header_achievements": {
+		"message": "ΕΠΙΤΕΥΓΜΑΤΑ"
 	},
 	"options_header_enhancements": {
 		"message": "Βελτιώσεις"
@@ -492,11 +523,17 @@
 		"message": "Εμφάνιση εικονιδίων εφαρμογών στις σελίδες του καταστήματος και της κοινότητας",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Φόρτωση κρυφών επιτευγμάτων και περιγραφών"
+	"options_improve_achievements": {
+		"message": "Βελτίωση της σελίδας προσωπικών επιτευγμάτων"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Εμφάνιση ποσοστού ξεκλειδώματος παγκόσμιων επιτευγμάτων"
+	},
+	"options_modernized_achievements": {
+		"message": "Εκσυγχρονισμένο design"
 	},
 	"options_spoiler_achievements": {
-		"message": "Απόκρυψη περιγραφών πίσω από ένα στοιχείο spoiler"
+		"message": "Τοποθέτηση κρυφών επιτευγμάτων πίσω από στοιχείο spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Διακοπή των εικόνων από το να φορτώσουν στις σελίδες εφαρμογών"
@@ -512,6 +549,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Προσθήκη κουμπιού για τη διεύρυνση της επιλογής \"ήδη στη βιβλιοθήκη σου\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Εμφάνιση του συνολικού ποσού των καρτών που απομένουν στη σελίδα εμβλημάτων"
 	},
@@ -522,9 +562,9 @@
 		"message": "Βελτίωση της σελίδας παγκόσμιων επιτευγμάτων"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Σύνδεσμος στη σελίδα των επιτευγμάτων σας"
+		"message": "Σύνδεσμος στη σελίδα των προσωπικών επιτευγμάτων"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Τα κλειδωμένα επιτεύγματα έχουν ένα εικονίδιο κλειδαριάς για ευκολότερη προβολή"
+		"message": "Εμφάνιση εικονιδίου κλειδαριάς για κλειδωμένα επιτεύγματα"
 	}
 }

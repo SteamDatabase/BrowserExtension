@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Pogledaj na SteamDB-u"
 	},
+	"view_on_steam_hunters": {
+		"message": "Pogled na Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Pogledaj na PCGamingWiki-u"
 	},
@@ -57,10 +61,10 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Zdanji Update:"
+		"message": "Zadnje Ažuriranje:"
 	},
 	"app_depots_updated_short": {
-		"message": "Updajtovano",
+		"message": "Ažurirano",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -188,10 +192,10 @@
 		"message": "Nije uspjelo generiranje novog reda, pokušavam ponovno za pet sekundi…"
 	},
 	"explore_finished": {
-		"message": "Lista je pretražena."
+		"message": "Red je pretražen."
 	},
 	"badges_idle_apps": {
-		"message": "Programi s preostalim karticama: $amount$",
+		"message": "Aplikacije za mirovanje: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +205,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Aplikacije koje miruju na ovoj stranici: $amount$",
+		"message": "Aplikacije za mirovanje na ovoj stranici: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Skriveno Postignuće: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Skriveno postignuće, prijeđi mišem da otkriješ: "
+	"achievement_global_unlock": {
+		"message": "$percent$ igrača je otključalo ovo postignuće",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "PRIMLJENE POSTIGNUĆA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ZAKLJUČANA POSTIGNUĆA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Poredati po vremenu"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Grupe postignuća osiguravaju Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Popis po cijeni od $price$",
@@ -264,7 +300,7 @@
 		"message": "Opcije"
 	},
 	"options_welcome_title": {
-		"message": "Hvala vam na instalaciji SteamDB proširenja!"
+		"message": "👋 Hvala vam na instalaciji SteamDB proširenja!"
 	},
 	"options_welcome_description": {
 		"message": "Pregledajte opcije ispod i uključite one koje preferirate. Da biste se vratili ovdje u budućnosti:"
@@ -291,7 +327,7 @@
 		"message": "Izrađeno s 💙 od strane <a href='https://steamdb.info' target='_blank'>SteamDB</a> tima."
 	},
 	"options_footer2": {
-		"message": "To je <a href='https://github.com/SteamDatabase/BrowserExtension' target='_blank'>open source</a>, hvala svim suradnicima!"
+		"message": "<a href='https://github.com/SteamDatabase/BrowserExtension' target='_blank'>Otvorenog koda</a> je, hvala svim suradnicima!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Onemogućeni potvrdni okviri označavaju ugrađene značajke."
@@ -311,8 +347,11 @@
 	"options_header_trade_offers": {
 		"message": "Ponude za razmjenu"
 	},
+	"options_header_achievements": {
+		"message": "Postignuća"
+	},
 	"options_header_enhancements": {
-		"message": "Poboljšanje"
+		"message": "Poboljšanja"
 	},
 	"options_website_explanation": {
 		"message": "Objašnjenje"
@@ -339,13 +378,13 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "\"Dodajte na listu želja, pratite i ignorirajte proizvode u Steam trgovini izravno sa SteamDB-a"
+		"message": "Dodajte na listu želja, pratite i ignorirajte proizvode u Steam trgovini izravno sa SteamDB-a"
 	},
 	"options_website_highlight2": {
-		"message": "<a href='https://steamdb.info/freepackages/' target='_blank'>Omogućite skriptu za besplatne pakete</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Omogućite skriptu za besplatne pakete</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Omogućite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stranici s popustima</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stranici s paketima</a>"
+		"message": "Omogućite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stranici prodaje</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stranici s paketima</a>"
 	},
 	"options_extra_data": {
 		"message": "Dodatni podaci preuzeti s $domain$",
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kada je opcija \"$options_achievement_groups$\" omogućena, proširenje će uputiti siguran zahtjev $domain$ za grupiranje postignuća na stranici osobnih postignuća s podacima koje dostavlja Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Prikaži ikonu proizvoda na stranicama trgovine i zajednice",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Učitaj skrivene postignuća i njihove opise"
+	"options_improve_achievements": {
+		"message": "Poboljšaj stranicu osobnih postignuća"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Prikaži globalni postotak otključanih postignuća"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernizirani dizajn"
+	},
+	"options_achievement_groups": {
+		"message": "Grupirati postignuća sa podacima sa Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Sakrij opise iza elementa spojlera"
+		"message": "Stavi skrivena postignuća iza spojler elementa"
 	},
 	"options_prevent_store_images": {
 		"message": "Zaustavi učitavanje slika na stranicama proizvoda"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Dodati dugme za sažimanje bloka \"već u vašoj knjižnici\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Prikaži ukupan broj preostalih kartica na stranici znački"
 	},
@@ -522,9 +588,9 @@
 		"message": "Poboljšaj stranicu globalnih postignuća"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Poveznica na vašu stranicu postignuća"
+		"message": "Veza na stranicu osobnih postignuća"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Zaključana postignuća imaju ikonu zaključavanja za bolju vidljivost"
+		"message": "Prikazati ikonu lokota za zaključana postignuća"
 	}
 }

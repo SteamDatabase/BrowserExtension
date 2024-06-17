@@ -233,9 +233,6 @@
 	"hidden_achievement": {
 		"message": "Paslėptas pasiekimas: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Paslėptas pasiekimas, užveskite pelę, kad atskleistumėte: "
-	},
 	"inventory_list_at": {
 		"message": "Sąrašas su $price$",
 		"placeholders": {
@@ -492,12 +489,6 @@
 		"message": "Rodyti produkto piktogramą parduotuvės ir bendruomenės puslapiuose",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Pakrauti paslėptus pasiekimus ir jų aprašymus"
-	},
-	"options_spoiler_achievements": {
-		"message": "Paslėpti aprašymus už spoilerio elemento"
-	},
 	"options_prevent_store_images": {
 		"message": "Sustabdyti vaizdų krovimą produktų parduotuvės puslapiuose"
 	},
@@ -520,11 +511,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Patobulinkite pasaulio pasiekimų puslapį"
-	},
-	"options_builtin_achievements_link": {
-		"message": "Susieti su savo pasiekimų puslapiu"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "Užrakinti pasiekimai turi užrakto piktogramą, kad būtų geriau matomi"
 	}
 }

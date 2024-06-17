@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Auf SteamDB anzeigen"
 	},
+	"view_on_steam_hunters": {
+		"message": "Auf Steam Hunters anzeigen",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Auf PCGamingWiki anzeigen"
 	},
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Versteckte Errungenschaft: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Versteckte Errungenschaft. Zum Aufdecken Maus darüber bewegen: "
+	"achievement_global_unlock": {
+		"message": "$percent$ der Spieler haben diese Errungenschaft",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "FREIGESCHALTETE ERRUNGENSCHAFTEN: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "AUSSTEHENDE ERRUNGENSCHAFTEN: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Nach Zeit sortieren"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Errungenschaftsgruppen werden von Steam Hunters bereitgestellt.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Für $price$ einstellen",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Handelsangebote"
 	},
+	"options_header_achievements": {
+		"message": "Errungenschaften"
+	},
 	"options_header_enhancements": {
 		"message": "Verbesserungen"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Wenn die Einstellung „$options_achievement_groups$“ aktiviert ist, sendet die Erweiterung eine verschlüsselte Anfrage an $domain$, um die Errungenschaften auf der persönlichen Errungenschaftenseite mit Daten von Steam Hunters zu gruppieren.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Produktsymbol auf den Shopseiten und Communityhubs anzeigen",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Versteckte Errungenschaften und deren Beschreibungen abrufen"
+	"options_improve_achievements": {
+		"message": "Persönliche Errungenschaftenseite verbessern"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Globale Freischaltrate für Errungenschaften anzeigen"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernes Design"
+	},
+	"options_achievement_groups": {
+		"message": "Errungenschaftsgruppen mit Daten von Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Beschreibungen hinter einem Spoiler-Element verbergen"
+		"message": "Versteckte Errungenschaften als Spoiler markieren"
 	},
 	"options_prevent_store_images": {
 		"message": "Laden von Bildinhalten auf Produktseiten verhindern"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Button hinzufügen, um den „ist bereits in Ihrer Steam-Bibliothek“-Block auszublenden"
+	},
 	"options_builtin_card_drops": {
 		"message": "Gesamtzahl verbleibender Kartenfunde auf der Abzeichenseite anzeigen"
 	},
@@ -522,9 +588,9 @@
 		"message": "Seite für globale Errungenschaften verbessern"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Eigene Errungenschaften verlinken"
+		"message": "Persönliche Errungenschaftenseite verlinken"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Schlosssymbol zur besseren Übersicht bei ausstehenden Errungenschaften anzeigen"
+		"message": "Schlosssymbol bei ausstehenden Errungenschaften anzeigen"
 	}
 }

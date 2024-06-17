@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Tilføjer SteamDB links og nye funktioner i Steam-butikken og -fællesskabet. Se de laveste spilpriser og statistiker."
+		"message": "Tilføjer SteamDB links og nye funktioner i Steam-butikken og -fællesskabet. Se de laveste spilpriser og statistikker."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Indstillinger"
@@ -22,6 +22,10 @@
 	},
 	"view_on_steamdb": {
 		"message": "Se på SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Se på Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Se på PCGamingWiki"
@@ -233,8 +237,27 @@
 	"hidden_achievement": {
 		"message": "Skjult præstation: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Skjult præstation, musen over for at afsløre: "
+	"achievement_global_unlock": {
+		"message": "$percent$ af spillere har denne præstation",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "UOPNÅEDE PRESTATIONER: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sorter efter tid"
 	},
 	"inventory_list_at": {
 		"message": "Liste på $price$",
@@ -264,13 +287,13 @@
 		"message": "Indstillinger"
 	},
 	"options_welcome_title": {
-		"message": "👋 Tak for at installere SteamDB udvidelse!"
+		"message": "👋 Tak for at installere SteamDB udvidelsen!"
 	},
 	"options_welcome_description": {
-		"message": "Gennemgå mulighederne nedenfor og slå dem du foretrækker. For at komme tilbage hertil i fremtiden:"
+		"message": "Gennemgå mulighederne nedenfor og slå dem til du foretrækker. For at komme tilbage hertil i fremtiden:"
 	},
 	"options_welcome_option1": {
-		"message": "Indstillinger til SteamDB"
+		"message": "Indstillingssiden på SteamDB"
 	},
 	"options_welcome_option2": {
 		"message": "Konto dropdown på Steam sider"
@@ -310,6 +333,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Handelstilbud"
+	},
+	"options_header_achievements": {
+		"message": "Præstationer"
 	},
 	"options_header_enhancements": {
 		"message": "Forbedring"
@@ -492,11 +518,21 @@
 		"message": "Vis produkt ikon på butik og fællesskabssider",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Indlæs skjulte præstationer og deres beskrivelser"
+	"options_improve_achievements": {
+		"message": "Forbedre siden for personlige præstationer"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Vis den globale procentdel af opnåede præstationer"
+	},
+	"options_modernized_achievements": {
+		"message": "Moderniseret design"
+	},
+	"options_achievement_groups": {
+		"message": "Gruppe præstationer med data fra Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Skjul beskrivelser bag et spoiler-element"
+		"message": "Sæt skjulte præstationer bag et spoiler element"
 	},
 	"options_prevent_store_images": {
 		"message": "Stop billeder fra at blive indlæst på produktsider"
@@ -512,6 +548,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Tilføj en knap for at skjule \"allerede i dit bibliotek\"-blokken"
+	},
 	"options_builtin_card_drops": {
 		"message": "Vis det samlede antal resterende kort træk på badges side"
 	},
@@ -525,6 +564,6 @@
 		"message": "Link til din egen præstationsside"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Låste resultater har et låseikon for mere synlighed"
+		"message": "Vis et låseikon for låste præstationer"
 	}
 }

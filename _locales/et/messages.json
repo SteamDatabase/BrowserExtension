@@ -190,6 +190,26 @@
 	"explore_finished": {
 		"message": "Järjekord on avastatud."
 	},
+	"badges_idle_apps": {
+		"message": "$amount$ Järelejäänud saavutusi",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "$amount$ Rakendusi millest on võimalik saada auhindu sellel lehel",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"badges_idle_drops": {
 		"message": "$amount$ auhinda järel",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
@@ -210,17 +230,87 @@
 			}
 		}
 	},
+	"hidden_achievement": {
+		"message": "Peidetud saavutused: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$ inimestest omab seda saavutust",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "$count$ Mitte omantatud saavutused",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"inventory_list_at": {
+		"message": "Lisa kuulutusse hinnaga $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_at": {
+		"message": "Müüa $price$",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_list_at_title": {
+		"message": "Paneb toote müüki madalaima müüki pandud hinnaga\n\nMärgitud summa on see raha mis sa saad (ilma tasudeta)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Paneb toote müüki kõrgeima soovi hinnaga\n\nMärgitud hind on see raha mis sa saad (ilma tasudeta)"
+	},
 	"options": {
 		"message": "Sätted"
 	},
 	"options_welcome_title": {
 		"message": "👋 Tänud et laadisite alla SteamDB extensioni!"
 	},
+	"options_welcome_description": {
+		"message": "Vaata valikuid allpool ja klõpsa nendele mis sulle sobivad. Selleks, et saada siia tagasi tulevikus:"
+	},
+	"options_welcome_option1": {
+		"message": "Seadete lehekülg SteabDB"
+	},
+	"options_welcome_option2": {
+		"message": "Konto rippmenüü Steami lehel"
+	},
+	"options_welcome_option3": {
+		"message": "Sinu brauseri lisandmoodulite lehekülg"
+	},
+	"options_review": {
+		"message": "Jätta kommentaar selle lisandmooduli kohta"
+	},
+	"options_permissions_description": {
+		"message": "See lisandmoodul vajab ekstra ligipääsu selleks, et töötada korralikult lehekülgedel nagu SteamDB, Steam Store ja Steam Community."
+	},
 	"options_permissions_button": {
 		"message": "⚠️ Lubade andmine"
 	},
+	"options_footer1": {
+		"message": "Tehtud 💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteabDB</a> ja inimeste poolt."
+	},
 	"options_footer2": {
 		"message": "See on <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">vabavaraline</a>, tänu kõikidele panustajatele!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Väljalülitatud kastikesed märgistavad sisse ehitatud funktsioone."
 	},
 	"options_header_website": {
 		"message": "SteamDB Veebisait"
@@ -234,10 +324,143 @@
 	"options_header_inventory": {
 		"message": "Inventar"
 	},
+	"options_header_trade_offers": {
+		"message": "Kaubanduspakkumine"
+	},
+	"options_header_achievements": {
+		"message": "Auhinnad"
+	},
+	"options_header_enhancements": {
+		"message": "Täiustused"
+	},
 	"options_website_explanation": {
 		"message": "Selgitus"
 	},
 	"options_website_explanation1": {
 		"message": "Kui see valik on lubatud, laiendus küsib mõningaid kasutajaandmeid (soovitud, ostetud, jälgitavad, eiratud tooted ja tooted ostukorvis) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam'i poest</a> ja kasutab neid saidil esiletõstmiseks."
+	},
+	"options_website_explanation2": {
+		"message": "Te peate olema sisse logitud poodi selleks, et see töötaks."
+	},
+	"options_website_explanation3": {
+		"message": "See on hoitud täielikult sinu brauseril ja seda ei saadeta kunagi isegi SteamDB tagaosale."
+	},
+	"options_website_explanation4": {
+		"message": "Selleks, et vältida liikseid taotlusi Steami poe poolt, sinu kasutaja andmed salvestatake vahemällu sinu brauseri kohalikku mällu."
+	},
+	"options_website_highlight": {
+		"message": "Tõsta esile omandatud ja soovitud rakendused$domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Lisa soovinimekirja, jälgi, ja ignoreeri rakendusi Steam poes otse SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Luba tasuta rakenduste skript</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Luba ekstra filtreerimine <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> soodustuste leheküljel</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakendite leheküljel</a>"
+	},
+	"options_extra_data": {
+		"message": "Lisa andmed hangitud $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Kui \"$options_online_stats$\" või \"$options_steamdb_last_update$\" valikud in pealepandud, siis ekstentsioon teeb turvalise palve $domain$ selleks, et saada hetke seisuga mängus olevate inimeste arvu ja mängu viimase uuenduse.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kui $options_steamdb_lowest_price$ seade on lubatud, siis pikendus teeb turvalise küsitluse $domain$ sinu valitud valuutas (mis Steam arvab, et see on) selleks, et saada salvestatud hind sellele spetsiifilisele mängule.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Näita madalaimat salvestatud hinda rakenduse lehel"
+	},
+	"options_online_stats": {
+		"message": "Näita hetkel mängus olevaid inimesi ja maksimum arvu rakenduse lehel"
+	},
+	"options_steamdb_last_update": {
+		"message": "Näita viimast uuendust rakenduse lehel"
+	},
+	"options_button_app": {
+		"message": "Kuva nuppu rakenduse lehel"
+	},
+	"options_button_pcgw": {
+		"message": "Kuva PCGamingWiki nuppu rakenduse lehel"
+	},
+	"options_button_sub": {
+		"message": "Näita nuppu pakkide lehel"
+	},
+	"options_button_gamehub": {
+		"message": "Kuva nuppu kogukonna lehel"
+	},
+	"options_button_gamecards": {
+		"message": "Näita SteamDB ja Steam poe nuppu mängu kaardi lehel"
+	},
+	"options_link_subid": {
+		"message": "Näita SubID iga ostu all valik"
+	},
+	"options_link_subid_widget": {
+		"message": "Näita alam-id rakenduse seadmete all",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Ühenda iga pakk oma litsensi lehel"
+	},
+	"options_profile_calculator": {
+		"message": "Lisa kalkulaatori lehekülg kogukonna profiilidele"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Vea mängu valik invetoori lehel küljepeale"
+	},
+	"options_link_inventory": {
+		"message": "Ühenda iga kink ja kupong sinu invetooris SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Korrektselt uuri välja kingituse alam-id sinu inventooris"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Ära uuenda inventoori kui sa müüd asja"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Lisa kiirmüüki paneku nupp"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automaatselt aksepteeri kiirmüüke"
+	},
+	"options_display_market_price_others": {
+		"message": "Kuva asja poe hinda teiste kasutajate inventooris"
 	}
 }

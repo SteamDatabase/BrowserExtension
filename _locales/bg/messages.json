@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Вижте в SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Вижте в Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Вижте в PCGamingWiki"
 	},
@@ -57,10 +61,10 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Последна актуализация:"
+		"message": "Последно обновяване:"
 	},
 	"app_depots_updated_short": {
-		"message": "Актуализирано",
+		"message": "Обновено",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -70,10 +74,10 @@
 		"message": "Онлайн в момента:"
 	},
 	"app_stats_peak_today": {
-		"message": "Максимум за 24 ч:"
+		"message": "24-часов пик:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Mаксимум за всички времена:"
+		"message": "Пик за всички времена:"
 	},
 	"app_stats_followers": {
 		"message": "Последователи:"
@@ -154,7 +158,7 @@
 		"message": "Генериране на нова опашка, тази функция може да не работи, ако Steam е под голямо натоварване…"
 	},
 	"explore_exploring": {
-		"message": "Изследване на опашката... Искане $current$ от $total$",
+		"message": "Изследване на опашката... Заявка $current$ от $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -167,7 +171,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Неуспешно изчистване на елемент от опашката #$current$, ще бъде направен нов опит след пет секунди…",
+		"message": "Неуспешно изчистване на елемент от опашката #$current$, нов опит след пет секунди…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -185,13 +189,13 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Неуспешно генериране на нова опашка, моля опитайте отново след пет секунди…"
+		"message": "Неуспешно генериране на нова опашка, нов опит след пет секунди…"
 	},
 	"explore_finished": {
 		"message": "Опашката е разгледана."
 	},
 	"badges_idle_apps": {
-		"message": "Приложения на изчакване: $amount$",
+		"message": "Приложения с оставащи падания: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +205,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Приложения на изчакване на тази страница: $amount$",
+		"message": "Приложения с оставащи падания на тази страница: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -211,7 +215,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Оставащи ползи: $amount$",
+		"message": "Оставащи падания на карти: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -221,7 +225,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Ползи оставащи на тази страница: $amount$",
+		"message": "Оставащи падания на карти на тази страница: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Скрито постижение: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Скрито постижение, поставете курсора, за да го видите: "
+	"achievement_global_unlock": {
+		"message": "$percent$ от играчите имат това постижение",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "СПЕЧЕЛЕНИ ПОСТИЖЕНИЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ЗАКЛЮЧЕНИ ПОСТИЖЕНИЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Сортирай по време"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Групираните постижения са предоставени от Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Пускане за $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Оферти за търговия"
 	},
+	"options_header_achievements": {
+		"message": "Постижения"
+	},
 	"options_header_enhancements": {
 		"message": "Подобрения"
 	},
@@ -357,7 +396,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Когато \"$options_online_stats$\" и \"$options_steamdb_last_update$\" опции са избрани, приставката ще направи сигурно запитване към $domain$ за да получи текущия брой играчи и последни ъпдейти.",
+		"message": "Когато опцията „$options_online_stats$“ или „$options_steamdb_last_update$“ е включена, разширението ще направи защитена заявка към $domain$ за да получи текущия брой играчи и последното обновяване на играта.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -386,6 +425,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Когато опцията „$options_achievement_groups$“ е включена, разширението ще направи защитена заявка до $domain$ за групиране постиженията на страницата с лични постижения с данни, предоставени от Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Покажи най-ниската записана цена на страницата на приложенията"
 	},
@@ -393,7 +446,7 @@
 		"message": "Покажи текущи и максимални играчи на страницата на играта"
 	},
 	"options_steamdb_last_update": {
-		"message": "Показване на последеното обновяване в страницата на играта"
+		"message": "Показване на последното обновяване на страниците на продуктите"
 	},
 	"options_button_app": {
 		"message": "Показване на бутон в страници с пакети"
@@ -492,11 +545,21 @@
 		"message": "Показване на икони на приложенията на страниците на магазина и общността",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Покажи скритите постижения и техните описания"
+	"options_improve_achievements": {
+		"message": "Подобряване на страницата с лични постижения"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Покажи процента на играчите отключили постиженията"
+	},
+	"options_modernized_achievements": {
+		"message": "Модернизиран дизайн"
+	},
+	"options_achievement_groups": {
+		"message": "Групиране на постиженията с данни от Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Сриване на описанието за да не се развали изненадата"
+		"message": "Постави скрити постижения зад спойлер"
 	},
 	"options_prevent_store_images": {
 		"message": "Спира зареждането на изображения на страниците на игрите"
@@ -504,19 +567,30 @@
 	"options_prevent_store_images_description": {
 		"message": "Някои разработчици слагат в описанията на игрите по-тежки изображения, които може да се зареждат по-бавно. Щракнете върху дадено изображение, за да се зареди"
 	},
+	"options_enhancement_award_popup_url": {
+		"message": "Поддръжка $award$ параметри на връзки към профили и споделени файлове",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Добави бутон за свиване на блока „вече във вашата библиотека“"
+	},
 	"options_builtin_card_drops": {
 		"message": "Показване на общата сума на оставащите падащи карти на страницата със значки"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Добави бутон за да прескочиш discovery queue по време на разпродажби"
+		"message": "Добави бутон за да прескочиш опашката за откриване по време на разпродажби"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Подобрете страницата с глобални постижения"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Връзка към вашата страница с постижения"
+		"message": "Връзка към лични постижения"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Заключените постижения са отбелязани с катинар за по-добра видимост"
+		"message": "Показване на икона с ключалка за заключени постижения"
 	}
 }

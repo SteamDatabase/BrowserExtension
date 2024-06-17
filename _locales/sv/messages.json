@@ -23,11 +23,15 @@
 	"view_on_steamdb": {
 		"message": "Visa på SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Se på Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Visa på PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Personliga prestationer"
+		"message": "Dina prestationer"
 	},
 	"store_page": {
 		"message": "Butikssida",
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Dold prestation: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Dold prestation, hovra muspekaren över för att avslöja: "
+	"achievement_global_unlock": {
+		"message": "$percent$ av alla spelare har denna prestationen",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "Upplåsta prestationer: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "Låsta prestationer: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sortera efter tid"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Prestationsgrupper från Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Lägg upp för försäljning för $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Bytesförslag"
 	},
+	"options_header_achievements": {
+		"message": "Prestationer"
+	},
 	"options_header_enhancements": {
 		"message": "Förbättringar"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "När alternativet $options_achievement_groups$ är aktiverat kommer tillägget att skicka en säker förfrågan till $domain$ för att utföra prestationsgruppering på din personliga prestationssida med data som förses av Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Visa produktikon på butiks och communitysidor",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Ladda dolda prestationer och deras beskrivningar"
+	"options_improve_achievements": {
+		"message": "Förbättra din prestationssida"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Visa global upplåsningsprocent för prestationer"
+	},
+	"options_modernized_achievements": {
+		"message": "Modern design"
+	},
+	"options_achievement_groups": {
+		"message": "Prestationsgrupp med data från Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Dölj beskrivningar bakom en spoiler"
+		"message": "Lägg dolda prestationer bakom en spoilervarning"
 	},
 	"options_prevent_store_images": {
 		"message": "Stoppa bilder från att laddas på produktsidor"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Lägg till en knapp som minimerar \"finns redan i ditt bibliotek\" fältet"
+	},
 	"options_builtin_card_drops": {
 		"message": "Visa totalt antal samlarkort som fortfarande kan släppas på märkessidan"
 	},
@@ -522,9 +588,9 @@
 		"message": "Förbättra sidan för globala prestationer"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Lägg till länk till din egen prestationssida"
+		"message": "Länk till din egna prestationssida"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Lägg till en låsikon för prestationer för att förtydliga att de är låsta"
+		"message": "Visa en låsikon för låsta prestationer"
 	}
 }

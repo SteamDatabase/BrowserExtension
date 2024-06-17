@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Ver no SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Ver no Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Ver na PCGamingWiki"
 	},
@@ -88,7 +92,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Menor preço registrado no SteamDB: <b>$price$</b> (com <b>$discount$</b> de desconto)",
+		"message": "Menor preço registrado no SteamDB: <b>$price$</b> (com <b>$discount$%</b> de desconto)",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Conquista oculta: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Conquista oculta, passe o mouse para revelar: "
+	"achievement_global_unlock": {
+		"message": "Alcançada por $percent$ dos jogadores",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "CONQUISTAS ALCANÇADAS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "CONQUISTAS NÃO ALCANÇADAS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Ordenar por data"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Os grupos de conquistas são fornecidos pelo site Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Anunciar por $price$",
@@ -311,11 +347,14 @@
 	"options_header_trade_offers": {
 		"message": "Propostas de troca"
 	},
+	"options_header_achievements": {
+		"message": "Conquistas"
+	},
 	"options_header_enhancements": {
 		"message": "Melhorias"
 	},
 	"options_website_explanation": {
-		"message": "Explicação"
+		"message": "Descrição"
 	},
 	"options_website_explanation1": {
 		"message": "Quando esta opção estiver ativada, a extensão realizará uma requisição segura ao Steam para obter alguns <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">dados seus</a> (lista de desejos, produtos adquiridos, ignorados e no carrinho), a fim de destacar certas informações no site do SteamDB."
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Quando a opção \"$options_achievement_groups$\" estiver ativada, a extensão realizará uma requisição segura ao site $domain$ para agrupar conquistas na página conquistas de pessoais.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -456,7 +509,7 @@
 		}
 	},
 	"options_github_explanation": {
-		"message": "Ver explicação no GitHub"
+		"message": "Ver descrição no GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
 		"message": "Suprimir alertas de troca como \"esta troca parece suspeita\" e \"tem certeza de que isso é um presente?\""
@@ -492,11 +545,21 @@
 		"message": "Exibir o ícone do produto nas páginas da Comunidade e na loja",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Carregar conquistas ocultas e suas descrições"
+	"options_improve_achievements": {
+		"message": "Melhorar a página de conquistas pessoais"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Exibir a porcentagem de desbloqueio de conquistas globais"
+	},
+	"options_modernized_achievements": {
+		"message": "Design moderno"
+	},
+	"options_achievement_groups": {
+		"message": "Agrupar conquistas com dados do site Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Ocultar as descrições usando um elemento de spoiler"
+		"message": "Esconder conquistas ocultas usando um elemento de spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Impedir o carregamento de certas imagens nas páginas dos produtos"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Adicionar um botão para contrair a seção \"[Produto] já está na sua Biblioteca Steam\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Exibir o total de cartas disponíveis restantes na página de insígnias"
 	},
@@ -522,9 +588,9 @@
 		"message": "Melhorar a página de conquistas globais"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Adicionar um link para a sua página de conquistas pessoais"
+		"message": "Adicionar um link para a página de conquistas pessoais"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "As conquistas bloqueadas têm um ícone de cadeado para melhor visibilidade"
+		"message": "Exibir um ícone de cadeado em conquistas não alcançadas"
 	}
 }

@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Посмотреть на SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Посмотреть на Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Посмотреть на PCGamingWiki"
 	},
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Скрытое достижение: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Скрытое достижение, наведите курсор, чтобы раскрыть его: "
+	"achievement_global_unlock": {
+		"message": "Это достижение есть у $percent$ игроков",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "ПОЛУЧЕННЫЕ ДОСТИЖЕНИЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "НЕПОЛУЧЕННЫЕ ДОСТИЖЕНИЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Сортировать по времени"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Достижения сгруппированы по данным Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Выставить за $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Предложения обмена"
 	},
+	"options_header_achievements": {
+		"message": "Достижения"
+	},
 	"options_header_enhancements": {
 		"message": "Улучшения"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "При включённой функции «$options_achievement_groups$» расширение отправляет защищённый запрос на $domain$, чтобы получить данные о группировании достижений от Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Отображать значок товара на страницах магазина и сообщества",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Загружать скрытые достижения и их описания"
+	"options_improve_achievements": {
+		"message": "Улучшить страницу личных достижений"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Показывать процент игроков, получивших достижение"
+	},
+	"options_modernized_achievements": {
+		"message": "Улучшенный дизайн"
+	},
+	"options_achievement_groups": {
+		"message": "Группировать достижения по данным Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Скрывать описания под спойлер"
+		"message": "Поместить скрытые достижения под спойлер"
 	},
 	"options_prevent_store_images": {
 		"message": "Запретить загрузку изображений на страницах товаров"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Добавить кнопку для сворачивания блока \"Уже в вашей библиотеке\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Отображать общее количество оставшихся выпадений карточек на странице значков"
 	},
@@ -522,9 +588,9 @@
 		"message": "Улучшить страницу глобальных достижений"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Добавить ссылку на страницу ваших достижений"
+		"message": "Добавить ссылку на страницу личных достижений"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Заблокированные достижения имеют значок замка для большей наглядности"
+		"message": "Отображать значок замка для неполученных достижений"
 	}
 }

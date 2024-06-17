@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Voir sur SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Voir sur Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Voir sur PCGamingWiki"
 	},
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Succès caché : "
 	},
-	"hidden_achievement_hover": {
-		"message": "Succès caché, passez la souris dessus pour le voir : "
+	"achievement_global_unlock": {
+		"message": "$percent$ des joueurs ont ce succès",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "SUCCÈS OBTENUS : $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "SUCCÈS VERROUILLÉS : $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Trier par date"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Le regroupement des succès est fourni par Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Lister à $price$",
@@ -279,7 +315,7 @@
 		"message": "La page des extensions de votre navigateur"
 	},
 	"options_review": {
-		"message": "Laisser un avis sur cette extension"
+		"message": "Laisser un avis pour cette extension"
 	},
 	"options_permissions_description": {
 		"message": "Cette extension nécessite des permissions supplémentaires pour fonctionner correctement sur SteamDB, le magasin Steam et la communauté Steam."
@@ -310,6 +346,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Offres d'échange"
+	},
+	"options_header_achievements": {
+		"message": "Succès"
 	},
 	"options_header_enhancements": {
 		"message": "Améliorations"
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Lorsqu'elle est activée, l'option \"$options_achievement_groups$\" permet à l'extension d'effectuer une requête sécurisée vers $domain$ afin de regrouper les succès sur la page des succès personnels avec les données fournies par Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -468,7 +521,7 @@
 		"message": "Passer la page de vérification de l'âge"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Paramètre l'âge et la date d'anniversaire dans les cookies pour toujours passer"
+		"message": "Définit l'âge et la date d'anniversaire des cookies pour toujours passer"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Supprimer l'avertissement \"Vous quittez Steam\" lorsque vous cliquez sur un lien externe",
@@ -492,11 +545,21 @@
 		"message": "Afficher l'icône du produit sur les pages de la boutique et de la communauté",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Charger et afficher les succès cachés et leurs descriptions"
+	"options_improve_achievements": {
+		"message": "Améliorer la page de succès personnel"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Afficher le taux global de succès débloqué"
+	},
+	"options_modernized_achievements": {
+		"message": "Design modernisé"
+	},
+	"options_achievement_groups": {
+		"message": "Regrouper les succès avec les données de Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Masquer les descriptions derrière un élément spoiler"
+		"message": "Mettre les succès cachés derrière une balise spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Empêcher le chargement des images sur les pages de produits"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Ajouter un bouton pour réduire le bloc \"déjà dans votre bibliothèque\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Afficher le nombre total de cartes restantes sur la page des badges"
 	},
@@ -522,9 +588,9 @@
 		"message": "Améliorer la page des succès mondiaux"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Afficher un lien vers votre propre page de succès"
+		"message": "Afficher un lien vers votre page de succès personnelle"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Les succès verrouillés ont une icône de cadenas pour une meilleure lisibilité"
+		"message": "Afficher un cadenas sur les succès verrouillés"
 	}
 }

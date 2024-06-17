@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Переглянути на SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Переглянути на Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Переглянути на PCGamingWiki"
 	},
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Приховане досягнення: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Приховане досягнення, наведіть вказівник для розкриття: "
+	"achievement_global_unlock": {
+		"message": "$percent$ гравців мають це досягнення",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "ЗДОБУТІ ДОСЯГНЕННЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "НЕЗДОБУТІ ДОСЯГНЕННЯ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Сортувати за часом"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Групи досягнень надані Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Виставити за $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Пропозиції обміну"
 	},
+	"options_header_achievements": {
+		"message": "Досягнення"
+	},
 	"options_header_enhancements": {
 		"message": "Поліпшення"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Коли налаштування \"$options_achievement_groups$\" активоване, розширення робитиме захищений запит до $domain$, щоб зробити групування досягнень на персональній сторінці досягнень за даними від Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Показувати логотип продукту на сторінках крамниці та спільноти",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Завантажувати приховані досягнення та їх опис"
+	"options_improve_achievements": {
+		"message": "Поліпшити сторінку особистих досягнень"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Показувати глобальний відсоток розблокування досягнень"
+	},
+	"options_modernized_achievements": {
+		"message": "Модернізований дизайн"
+	},
+	"options_achievement_groups": {
+		"message": "Групувати досягнення з даними від Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Приховати описи за елементом спойлера"
+		"message": "Розмістити приховані досягнення за елементом спойлеру"
 	},
 	"options_prevent_store_images": {
 		"message": "Зупиняти завантаження зображень на сторінках продуктів у крамниці"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Додати кнопку для згортання блоку \"уже є у вашій бібліотеці\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Показувати загальну кількість карток котрі ще здатні випасти на сторінці значків"
 	},
@@ -522,9 +588,9 @@
 		"message": "Поліпшити сторінку глобальних досягнень"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Додати посилання на власну сторінку досягнень"
+		"message": "Посилання на сторінку особистих досягнень"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Заблоковані досягнення матимуть значок замку для наочності"
+		"message": "Показувати значок замка на заблокованих досягненнях"
 	}
 }

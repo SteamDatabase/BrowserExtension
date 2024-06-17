@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Pievieno SteamDB saites un jaunas funkcijas Steam veikalam kā arī kopienai. Skatīt zemākās spēļu cenas un statistiku."
+		"message": "Pievieno SteamDB linkus un jaunas funkcijas Steam veikalam un kopienai. Skatīt zemākās spēļu cenas un statistiku."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Opcijas"
@@ -22,6 +22,10 @@
 	},
 	"view_on_steamdb": {
 		"message": "Skatīt iekš SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Skatīt iekš Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Skatīt iekš PCGamingWiki"
@@ -144,6 +148,15 @@
 			}
 		}
 	},
+	"explore_auto_discover": {
+		"message": "Automātiskā atklāšana"
+	},
+	"explore_auto_discover_description": {
+		"message": "Automātiski atklājiet rindu, lai iegūtu spēļu karti."
+	},
+	"explore_generating": {
+		"message": "Tiek ģenerēta jauna atklāšanas rinda, šis var neizdoties, ja Steam ir pārslogots…"
+	},
 	"explore_exploring": {
 		"message": "Rinda tiek izskatīta… Pieprasījums nr. $current$ no $total$",
 		"placeholders": {
@@ -157,17 +170,107 @@
 			}
 		}
 	},
+	"explore_failed_to_clear": {
+		"message": "Neizdevās attīrīt rindas vienumu #$current$, atkārtots mēģinājums pēc piecām sekundēm…",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Pārāk bieži neizdevās attīrīt rindas vienumu #$current$. Jūs varat vēlreiz mēģināt vēlāk.",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"explore_failed_to_generate": {
 		"message": "Neizdevās radīt jaunu rindu, atkārtots mēģinājums pēc piecām sekundēm…"
 	},
 	"explore_finished": {
 		"message": "Rinda ir izskatīta."
 	},
+	"badges_idle_apps": {
+		"message": "Spēles ar kārtīm: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "Spēles ar kārtīm šajā lapā: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops": {
+		"message": "Atlikušās kārtis: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "Atlikušās kārtis šajā lapā: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"hidden_achievement": {
 		"message": "Paslēpts sasniegums: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Paslēpts sasniegums, virziet kursoru virs, lai to atklātu: "
+	"achievement_global_unlock": {
+		"message": "$percent$ no spēlētājiem ir ieguvuši šo sasniegumu",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "IEGŪTI SASNIEGUMI: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "NEIEGŪTI SASNIEGUMI: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Kārtot pēc laika"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Sasniegumu grupas nodrošina Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Izlikt par $price$",
@@ -187,17 +290,47 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "Izveido sludinājumu vienumam ar zemāko pieejamo pārdošanas cenu\n\nNorādīta cena parāda, cik naudu tu saņem (bez papildus izmaksām)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Izveido sludinājumu vienumam ar augstāko pieejamo pirkšanas cenu\n\nNorādīta cena parāda, cik naudu tu saņem (bez papildus izmaksām)"
+	},
 	"options": {
 		"message": "Iestatījumi"
 	},
 	"options_welcome_title": {
 		"message": "👋 Paldies, ka instalējāt SteamDB paplašinājumu!"
 	},
+	"options_welcome_description": {
+		"message": "Parbaudiet zemāk redzamās opcijas un iespējojiet tās, kuras Jūs vēlaties. Lai nākotnē atgrieztos uz šejieni:"
+	},
+	"options_welcome_option1": {
+		"message": "Iestatījumu lapa uz SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Konta nolaižamā izvēle Steam lapās"
+	},
 	"options_welcome_option3": {
 		"message": "Jūsu pārlūka papildinājumu lapa"
 	},
+	"options_review": {
+		"message": "Atstājiet atsauksmi šim pārlūkprogrammas paplašinājumam"
+	},
+	"options_permissions_description": {
+		"message": "Šim pārlūkprogrammas paplašinājumam ir nepieciešamas papildus tiesības, lai pareizi strādātu uz SteamDB, Steam veikala un Steam kopienas lapām."
+	},
 	"options_permissions_button": {
 		"message": "⚠️ Dot piekļuvi"
+	},
+	"options_footer1": {
+		"message": "Veidots ar 💙 no <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> komandas."
+	},
+	"options_footer2": {
+		"message": "Tas ir <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">atvērtā koda avots</a>, paldies visiem iegūldītājiem!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Atspējotās izvēles rūtiņas norāda uz iebūvēām funkcijām."
 	},
 	"options_header_website": {
 		"message": "SteamDB mājaslapa"
@@ -214,11 +347,44 @@
 	"options_header_trade_offers": {
 		"message": "Maiņas piedāvājumi"
 	},
+	"options_header_achievements": {
+		"message": "Sasniegumi"
+	},
 	"options_header_enhancements": {
 		"message": "Uzlabojumi"
 	},
 	"options_website_explanation": {
 		"message": "Skaidrojums"
+	},
+	"options_website_explanation1": {
+		"message": "Kad šī opcija ir iespējota, šis pārlūkprogrammas paplašinājums pieprasīs dažus lietotāja datus (vēlmju saraksts, kā arī piederošie, sekotie un ignorētie produkti, iepirkumu grozs) no <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam veikala</a> un tos izmantos, lai lapā izceltu informāciju."
+	},
+	"options_website_explanation2": {
+		"message": "Jums jābūt pieslēgtam veikalā, lai šis darbotos."
+	},
+	"options_website_explanation3": {
+		"message": "Šis paliek pilnībā Jūsu pārlūkprogrammā un nekad netiek sūtīts uz SteamDB gala."
+	},
+	"options_website_explanation4": {
+		"message": "Lai novērstu pārmērīgus pieprasījumus Steam veikalam, Jūsu lietotāja dati tiek saglabāti jūsu pārlūkprogrammas lokālajā atmiņā."
+	},
+	"options_website_highlight": {
+		"message": "Izcelt Jums piederošos un vēlmju sarakstā pievienotos produktus uz $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Pievienot vēlmju sarakstam, sekot un atfiltrēt produktus Steam veikalā no skata tieši no SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Iespējot brīvo paku skriptu</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Iespējot papildus filtrēšanu uz <a href=\"https://steamdb.info/sales/\" target=\"_blank\">izpārdošanas lapas</a> un <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakotņu lapas</a>"
 	},
 	"options_extra_data": {
 		"message": "Papildus dati ņemti no $domain$",
@@ -229,11 +395,98 @@
 			}
 		}
 	},
+	"options_extra_data_players": {
+		"message": "Kad \"$options_online_stats$\" vai \"$options_steamdb_last_update$\" opcija ir iespējota, šis paplašinājums veiks drošu pieprasījumu uz $domain$, lai iegūtu tajā brīdi aktīvo spēlētāju sakitu un pēdējo spēles atjaunināšanu.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Kad \"$options_steamdb_lowest_price$\" opcija ir iespējota, šis paplašinājums veiks drošu pieprasījumu uz $domain$ ar Jūsu valūtu (ar to, kura Steam domā ir pareizā), lai iegūtu reģistrētu cenu priekš noteiktas spēles.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kad \"$options_achievement_groups$\" opcija ir iespējota, šis paplašinājums veiks drošu pieprasījumu uz $domain$, lai veiktu sasniegumu grupēšanu personīgo sasniegumu lapā ar datiem, kurus nodrošina Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Parādīt visa laika zemāko reģistrēto cenu produktu lapās"
+	},
+	"options_online_stats": {
+		"message": "Parādīt tajā brīdi aktīvo spēlētāju skaitu, kā arī augstāko sasniegto spēlētāju skaitu uz produktu lapām"
+	},
+	"options_steamdb_last_update": {
+		"message": "Parādīt pēdējo atjauninājumu produktu lapās"
+	},
+	"options_button_app": {
+		"message": "Parādīt pogu produktu lapās"
+	},
+	"options_button_pcgw": {
+		"message": "Parādīt PCGamingWiki pogu produktu lapās"
+	},
 	"options_button_sub": {
 		"message": "Rādīt pogu paku lapās"
 	},
+	"options_button_gamehub": {
+		"message": "Parādīt pogu kopienas centrā"
+	},
+	"options_button_gamecards": {
+		"message": "Parādīt SteamDB un veikala lapas pogas spēļu karšu lapā"
+	},
+	"options_link_subid": {
+		"message": "Parādīt SubID zem katras pirkšanas opcijas"
+	},
+	"options_link_subid_widget": {
+		"message": "Parādīt SubID logrīkos",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Saite uz katru paku Jūsu licenšu lapā"
+	},
 	"options_profile_calculator": {
 		"message": "Pievienot kalkulātora saiti kopiena profilos"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Pārbīdīt spēles izvēli inventāra lapā uz malu"
+	},
+	"options_link_inventory": {
+		"message": "Savienot katru dāvanu un kuponu Jūsu inventārā ar SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Pareizi norādīt dāvanas SubID Jūsu inventārā"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Nepārlādēt inventāra lapu kad pārdodat vienumu"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "Pievienot ātrās pārdošanas pogas"
@@ -241,8 +494,25 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automātiski apstiprināt ātro pārdošanu"
 	},
+	"options_display_market_price_others": {
+		"message": "Parādīt vienuma cenu tirgū, kad apskata citu lietotāju inventāru"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Atbalstīt $for_item$ un $my_item$ parametrus",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
 	"options_github_explanation": {
 		"message": "Skatīt skaidrojumu GitHub"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Izlaist \"šī apmaiņa šķiet aizdomīga\" un \"vai Jūs esat pārliecināts/a, ka šī ir davana?\" apmaiņas piedāvājumu brīdinājumus"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Rādīt labākus kļūdu paziņojumus, nevis kriptiskos Valve kļūdu kodus"
@@ -257,8 +527,70 @@
 		"message": "Noņem \"Jūs pametat Steam\" saišu filtru no ārējām lapām",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
+	"options_enhancement_market_ssa": {
+		"message": "Automātiski pieņemt abonēšanas līgumu tirgū, inventārā un atslēgu aktivizēšanas lapās",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Paslēpt \"Install Steam\" pogu galvenē",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Paslēpt \"Atvert vietnē Steam\" ziņu"
+	},
+	"options_steamdb_rating": {
+		"message": "Parādīt SteamDB vērtējumu produktu lapās"
+	},
+	"options_enhancement_appicon": {
+		"message": "Parādit produkta ikonu veikala un kopienu lapās",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Uzlabot personīgo sasniegumu lapu"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Parādīt globālo sasniegumu iegūšanas procentus"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernizēts dizains"
+	},
+	"options_achievement_groups": {
+		"message": "Grupē sasniegumus ar datiem no Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Uzlikt slēptus sasniegumus aiz spoiler elementa"
+	},
+	"options_prevent_store_images": {
+		"message": "Neļaut attēliem ielādēties produktu lapās"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Spēļu aprakstos dažreiz ir ievietoti vairāku megabaitu lieli attēli, kas var lēni ielādēties, uzklikšķiniet uz attēlu, lai to ielādētu"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Atbalstīt $award$ parametrus uz profila un padalītu failu saitēm",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Pievienot pogu, lai samazinātu “jau atrodas Jūsu bibliotēkā” bloku"
+	},
+	"options_builtin_card_drops": {
+		"message": "Parādīt kopējo atlikošo kāršu skaitu žetonu lapā"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Pievienot pogu, ar kuru automātiski iziet cauri atklāšanas rindai, kad veikalā notiek izpārdošana"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Uzlabot globālo sasniegumu lapu"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Saite uz personīgo sasniegumu lapu"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Parādīt slēdzenes ikonu priekš neiegūtiem sasniegumiem"
 	}
 }

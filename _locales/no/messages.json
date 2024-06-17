@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Vis på SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Vis på Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Vis på PCGamingWiki"
 	},
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Skjult prestasjon: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Skjult prestasjon, hold musen over for å avsløre: "
+	"achievement_global_unlock": {
+		"message": "$percent$ av spillere har denne prestasjonen",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "TJENTE PRESTASJONER: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "UOPPNÅDDE PRESTASJONER: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sorter etter tid"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Prestasjonsgrupper er skaffet av Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Legg ut for $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Tilbud om byttehandel"
 	},
+	"options_header_achievements": {
+		"message": "Prestasjoner"
+	},
 	"options_header_enhancements": {
 		"message": "Forbedringer"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Når $options_achievement_groups$-innstillingen er aktivert, vil utvidelsen sende en sikker forespørsel til $domain$ for å gruppere prestasjoner på den personlige prestasjonssiden med data skaffet av Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Vis produktikon på butikk og samfunnssider",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Last skjulte prestasjoner og beskrivelsene deres"
+	"options_improve_achievements": {
+		"message": "Forbedre personlig prestasjonsside"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Vis prosent av globale prestasjonsoppnåelser"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernisert design"
+	},
+	"options_achievement_groups": {
+		"message": "Grupper prestasjoner med data fra Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Skjul beskrivelser bak et spoiler-element"
+		"message": "Legg skjulte prestasjoner bak et spoiler-element"
 	},
 	"options_prevent_store_images": {
 		"message": "Stopp bilder fra å laste på produktsider"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Legg til en knapp for å skjule \"allerede i biblioteket\"-blokken"
+	},
 	"options_builtin_card_drops": {
 		"message": "Vis det totale antallet av kort-slipp som gjenstår på merkesiden"
 	},
@@ -522,9 +588,9 @@
 		"message": "Forbedre global prestasjonsside"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Lenke til din egen prestasjonside"
+		"message": "Lenke til personlig prestasjonsside"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Låste prestasjoner har et låseikon for mer synlighet"
+		"message": "Vis et låseikon for låste prestasjoner"
 	}
 }

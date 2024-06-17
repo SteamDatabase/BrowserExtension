@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Zobacz na SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Zobacz na Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Zobacz na PCGamingWiki"
 	},
@@ -30,7 +34,7 @@
 		"message": "Osobiste osiągnięcia"
 	},
 	"store_page": {
-		"message": "Strona sklepu",
+		"message": "Strona w sklepie",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
@@ -70,10 +74,10 @@
 		"message": "Aktualnie online:"
 	},
 	"app_stats_peak_today": {
-		"message": "Rekord z 24 godzin:"
+		"message": "24-godzinny max. graczy:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Najwyższy rekord w historii:"
+		"message": "Rekord aktywnych graczy:"
 	},
 	"app_stats_followers": {
 		"message": "Obserwujący:"
@@ -114,7 +118,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Cena zarejestrowana $date$ ($relative$)",
+		"message": "Cena z dnia $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -151,7 +155,7 @@
 		"message": "Automatycznie odkryj kolejkę, aby otrzymać kartę wydarzenia."
 	},
 	"explore_generating": {
-		"message": "Generowanie nowej kolejki odkryć może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
+		"message": "Generowanie nowej kolejki odkryć, to może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
 	},
 	"explore_exploring": {
 		"message": "Przeglądanie kolejki… Żądanie $current$ z $total$",
@@ -221,7 +225,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Karty do zdobycia na tej stronie: $amount$",
+		"message": "Pozostałe dropy na tej stronie: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Ukryte osiągnięcie: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Ukryte osiągnięcie, najedź myszką, aby je ujawnić: "
+	"achievement_global_unlock": {
+		"message": "$percent$ graczy odblokowało to osiągnięcie",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "ODBLOKOWANE OSIĄGNIĘCIA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ZABLOKOWANE OSIĄGNIĘCIA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sortuj według czasu"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Grupy osiągnięć są dostarczane przez Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Wystaw za $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Oferty wymiany"
 	},
+	"options_header_achievements": {
+		"message": "Osiągnięcia"
+	},
 	"options_header_enhancements": {
 		"message": "Rozszerzenia"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kiedy opcja \"$options_achievement_groups$\" jest włączona, rozszerzenie wyśle bezpieczne zapytanie do $domain$, aby pogrupować osiągnięcia na stronie osiągnięć osobistych danymi dostarczonymi przez Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Wyświetlaj ikonę produkty na stronach sklepu i społeczności",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Załaduj ukryte osiągnięcia i ich opisy"
+	"options_improve_achievements": {
+		"message": "Usprawnij stronę swoich osiągnięć"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Wyświetl procent odblokowań osiągnięć globalnych"
+	},
+	"options_modernized_achievements": {
+		"message": "Nowoczesny wygląd"
+	},
+	"options_achievement_groups": {
+		"message": "Grupuj osiągnięcia danymi od Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Ukryj opisy za spoilerami"
+		"message": "Oznacz ukryte osiągnięcia jako spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Zatrzymaj ładowanie obrazów na stronach produktu"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Dodaj przycisk, aby zwinąć blok \"już w twojej bibliotece\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Wyświetl całkowitą liczbę pozostałych do zdobycia kart na stronie odznak"
 	},
@@ -525,6 +591,6 @@
 		"message": "Link do twojej strony z osiągnięciami"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Zablokowane osiągnięcia mają ikonę blokady dla lepszej widoczności"
+		"message": "Wyświetl ikonę blokady dla zablokowanych osiągnięć"
 	}
 }

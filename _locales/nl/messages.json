@@ -40,11 +40,11 @@
 		"message": "SteamDB Beoordeling:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB WAARDERING",
+		"message": " STEAMDB BEOORDELING",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ van de $total$ beoordelingen zijn positief (alle aankoopsoorten)",
+		"message": "$positive$ van de $total$ beoordelingen zijn positief (alle aankooptypen)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -57,7 +57,7 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Laatste Wijziging:"
+		"message": "Laatste Update:"
 	},
 	"app_depots_updated_short": {
 		"message": "Bijgewerkt",
@@ -73,13 +73,13 @@
 		"message": "24 uur piek:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Hoogtepunt:"
+		"message": "Hoogtepunt van alle tijden:"
 	},
 	"app_stats_followers": {
 		"message": "Volgers:"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB laagst opgenomen prijs is <b>$price$</b>",
+		"message": "SteamDB laagste gekende prijs is <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -88,7 +88,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB laagst opgenomen prijs is <b>$price$</b> voor <b>-$discount$%</b>",
+		"message": "SteamDB laagste gekende prijs is <b>$price$</b> voor <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -101,7 +101,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB laagste opgenomen prijs is <b>$price$</b> en 2 jaar laagtepunt is <b>$price_limited$</b>",
+		"message": "SteamDB laagste gekende prijs is <b>$price$</b> en 2 jaar laagtepunt is <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -114,7 +114,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Prijs gezien op $date$ ($relative$)",
+		"message": "Prijs als gezien op $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -148,7 +148,7 @@
 		"message": "Automatisch ontdekken"
 	},
 	"explore_auto_discover_description": {
-		"message": "Ontdek wachtrij automatisch om een event kaart te ontvangen."
+		"message": "Ontdek wachtrij automatisch om een activiteiten kaart te ontvangen."
 	},
 	"explore_generating": {
 		"message": "Een nieuwe ontdekkingswachtrij aan het genereren, dit kan mislukken als Steam onder hoge druk staat…"
@@ -167,7 +167,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Wissen van wachtrij artikel #$current$ mislukt, opnieuw proberen in 5 seconden…",
+		"message": "Wissen van wachtrij artikel #$current$ is mislukt, opnieuw proberen in 5 seconden…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -188,10 +188,10 @@
 		"message": "Nieuwe wachtrij genereren mislukt, opnieuw proberen in 5 seconden…"
 	},
 	"explore_finished": {
-		"message": "Wachtrij is verkend."
+		"message": "Wachtrij is bekeken."
 	},
 	"badges_idle_apps": {
-		"message": "Apps om te inactief te krijgen: $amount$",
+		"message": "Inactieve apps: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -211,7 +211,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Resterende kaarten: $amount$",
+		"message": "Resterende beloningen: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -221,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Resterende kaarten op deze pagina: $amount$",
+		"message": "Resterende beloningen op deze pagina: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -233,11 +233,20 @@
 	"hidden_achievement": {
 		"message": "Verborgen prestatie: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Verborgen prestatie, doe je muis erover om te onthullen: "
+	"achievements_locked_count": {
+		"message": "VERGRENDELDE PRESTATIES: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Sorteren op tijd"
 	},
 	"inventory_list_at": {
-		"message": "Vermeld voor: $price$",
+		"message": "Op de markt zetten voor: $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -273,7 +282,7 @@
 		"message": "De instellingenpagina op SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Je \"Account\" dropdown op de Steam pagina's"
+		"message": "Je \"Account\" dropdown menu op de Steam pagina's"
 	},
 	"options_welcome_option3": {
 		"message": "De add-on pagina van je browser"
@@ -311,6 +320,9 @@
 	"options_header_trade_offers": {
 		"message": "Ruilaanbiedingen"
 	},
+	"options_header_achievements": {
+		"message": "Prestaties"
+	},
 	"options_header_enhancements": {
 		"message": "Verbeteringen"
 	},
@@ -330,7 +342,7 @@
 		"message": "Om overtollige aanvragen te voorkomen naar de Steam Store, wordt je gebruikersdata opgeslagen in de lokale opslag van de browser."
 	},
 	"options_website_highlight": {
-		"message": "Mankeer eigen en wenslijst producten op $domain$",
+		"message": "Markeer eigen en gewenste producten op $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -383,6 +395,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Wanneer de optie \"$options_achievement_groups$\" is ingeschakeld, zal de extensie een veilig verzoek sturen naar $domain$ om prestaties te groeperen op de persoonlijke prestatiepagina met gegevens die worden geleverd door Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,17 +518,11 @@
 		"message": "Geef product-icoon weer in winkel en op community pagina's",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Verborgen prestaties en hun beschrijvingen laden"
-	},
-	"options_spoiler_achievements": {
-		"message": "Verberg beschrijvingen achter een spoiler element"
-	},
 	"options_prevent_store_images": {
 		"message": "Stop het laden van afbeeldingen op productpagina's"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Sommige ontwikkelaars plaatsen megabytes aan afbeeldingen in productomschrijvingen wat enige tijd kan duren om te laden, klik op een afbeelding om te laden"
+		"message": "Sommige ontwikkelaars plaatsen megabytes aan afbeeldingen in productomschrijvingen het kan een tijdje duren om te laden, klik op een afbeelding om te laden"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "$award$ Parameters steunen op profiel en gedeelde bestand links",
@@ -520,11 +540,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Verbeter de globale achievements pagina"
-	},
-	"options_builtin_achievements_link": {
-		"message": "Link naar je eigen achievements pagina"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "Vergrendelde prestaties hebben een vergrendelings-icoon voor meer zichtbaarheid"
 	}
 }

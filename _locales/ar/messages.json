@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات الألعاب."
+		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات اللعبة."
 	},
 	"steamdb_options": {
 		"message": "خيارات SteamDB"
@@ -23,8 +23,12 @@
 	"view_on_steamdb": {
 		"message": "عرض على SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "عرض على Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
-		"message": "العرض على PCGamingWiki"
+		"message": "عرض على PCGamingWiki"
 	},
 	"view_your_achievements": {
 		"message": "الإنجازات الشخصية"
@@ -60,7 +64,7 @@
 		"message": "آخر تحديث:"
 	},
 	"app_depots_updated_short": {
-		"message": "محدث",
+		"message": "تاريخ التحديث",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -70,7 +74,7 @@
 		"message": "متصل الآن:"
 	},
 	"app_stats_peak_today": {
-		"message": "ذروة 24 ساعة:"
+		"message": "الذروة على مدار 24 ساعة:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "الذروة الإجمالية:"
@@ -79,7 +83,7 @@
 		"message": "المتابِعون:"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB أدنى سعر مسجل هو <b>$price$</b>",
+		"message": "SteamDB أدنى سعر متاح هو <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -233,11 +237,43 @@
 	"hidden_achievement": {
 		"message": "الإنجازات المخفية: "
 	},
-	"hidden_achievement_hover": {
-		"message": "إنجاز مخفي، مرر المؤشر للإظهار: "
+	"achievement_global_unlock": {
+		"message": "$percent$ من اللاعبين لديهم هذا الإنجاز",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "الإنجازات المفتوحة: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "الإنجازات المغلقة: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "ترتيب حسب الوقت"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "مجموعات الإنجازات متوفرة عن طريق Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
-		"message": "اعرض بسعر $price$",
+		"message": "إعرض بسعر $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -255,7 +291,7 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "يعرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (بدون رسوم)"
+		"message": "عَرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (دون رسوم)"
 	},
 	"inventory_sell_at_title": {
 		"message": "عَرض العنصر بأعلى سعر شراء مطلوب\n\nالسعر المعروض هو المبلغ الذي تتلقاه (دون رسوم)"
@@ -279,7 +315,7 @@
 		"message": "صفحة الإضافات في متصفحك"
 	},
 	"options_review": {
-		"message": "اترك تعليقًا على هذا الامتداد"
+		"message": "أترك تعليقًا على هذه الإضافة"
 	},
 	"options_permissions_description": {
 		"message": "هذه الأضافة تتطلب أذونات إضافية للعمل بشكل صحيح على SteamDB و Steam Store، و Steam Community."
@@ -294,7 +330,7 @@
 		"message": "إنه <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">مفتوح المصدر</a>، شكراً لكل المساهمين!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* تعطيل خانات الاختيار تشير إلى ميزات مدمجة."
+		"message": "* اختيارات معطلة تشير إلى ميزات مدمجة."
 	},
 	"options_header_website": {
 		"message": "موقع SteamDB"
@@ -310,6 +346,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "عروض المبادلة"
+	},
+	"options_header_achievements": {
+		"message": "الإنجازات"
 	},
 	"options_header_enhancements": {
 		"message": "التحسينات"
@@ -386,8 +425,22 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "عندما يتم تفعيل خيار \"$options_achievement_groups$\"، الإضافة سوف تقدم طلباً آمناً إلى $domain$ للقيام بتجميع الإنجازات في صفحة الإنجازات الشخصية مع البيانات المقدمة من Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
-		"message": "عرض اقل سعر مسجل على صفحات التطبيق"
+		"message": "عرض أقل سعر مسجل على صفحات المنتج"
 	},
 	"options_online_stats": {
 		"message": "عرض عدد اللاعبين الحاليين وأعلى عدد لاعبين تم تسجيله على صفحات المنتج"
@@ -462,7 +515,7 @@
 		"message": "إيقاف \"تبدو هذه التجارة مشبوهة\" و \"هل أنت متأكد أن هذه هدية؟\" تنبيهات المبادلة"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "عرض رسائل الخطأ بشكل أفضل بدلاً من أرقام الأخطاء الغامضة من Valve"
+		"message": "عرض رسائل الأخطاء بشكل أفضل, بدلاً من أرقام الأخطاء المشفرة من Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "تخطي صفحة التحقق من العمر"
@@ -492,11 +545,21 @@
 		"message": "عرض أيقونة المنتج على صفحات المتجر والمجتمع",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "تحميل الإنجازات المخفية وأوصافها"
+	"options_improve_achievements": {
+		"message": "تحسين صفحة الإنجازات الشخصية"
+	},
+	"options_achievements_global_unlock": {
+		"message": "عرض نسبة فتح الإنجازات العامة"
+	},
+	"options_modernized_achievements": {
+		"message": "تصميم حديث"
+	},
+	"options_achievement_groups": {
+		"message": "تجميع الإنجازات مع البيانات من Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "إخفاء الأوصاف خلف عنصر الحاشي"
+		"message": "وضع الإنجازات المخفية وراء عنصر حرق أحداث"
 	},
 	"options_prevent_store_images": {
 		"message": "إيقاف الصور من التحميل على صفحات المنتج"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "أضف زر لطي قسم \"يوجد في مكتبتك\""
+	},
 	"options_builtin_card_drops": {
 		"message": "عرض المبلغ الإجمالي لإسقاط البطاقات المتبقية على صفحة الشارات"
 	},
@@ -522,9 +588,9 @@
 		"message": "تحسين صفحة الإنجازات العالمية"
 	},
 	"options_builtin_achievements_link": {
-		"message": "رابط إلى صفحة الإنجازات الخاصة بك"
+		"message": "الربط بصفحة الإنجازات الخاصة بك"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "تحتوي الإنجازات المقفلة على أيقونة قفل لمزيد من الرؤية"
+		"message": "عرض أيقونة قُفْل للإنجازات المغلقة"
 	}
 }

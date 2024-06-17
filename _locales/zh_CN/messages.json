@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "在 SteamDB 上查看"
 	},
+	"view_on_steam_hunters": {
+		"message": "在 Steam Hunters 上查看",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "在 PCGamingWiki 上查看"
 	},
@@ -40,7 +44,7 @@
 		"message": "SteamDB 好评率："
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " SteamDB 好评率",
+		"message": " SteamDB 评分",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
@@ -148,7 +152,7 @@
 		"message": "自动探索队列"
 	},
 	"explore_auto_discover_description": {
-		"message": "自动探索队列，以获取一张活动卡牌"
+		"message": "自动探索队列以获取一张活动卡牌"
 	},
 	"explore_generating": {
 		"message": "正在生成新的探索队列（Steam 负载较高时可能会失败）..."
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "隐藏成就: "
 	},
-	"hidden_achievement_hover": {
-		"message": "隐藏成就，鼠标悬停查看： "
+	"achievement_global_unlock": {
+		"message": "$percent$ 的玩家拥有此成就",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "已获得成就数：$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "未解锁的成就：$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "按成就解锁时间顺序"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "由 Steam Hunters 提供成就组",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "交易报价"
 	},
+	"options_header_achievements": {
+		"message": "成就"
+	},
 	"options_header_enhancements": {
 		"message": "增强功能"
 	},
@@ -386,6 +425,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "当“$options_achievement_groups$”启用时，拓展将会向 $domain$ 发送安全的请求，利用 Steam Hunters 的数据对个人成就进行分组",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "在产品页面显示历史最低价格"
 	},
@@ -418,7 +471,7 @@
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "在您的许可页面上链接每个游戏包"
+		"message": "在您的许可页面上显示每条许可的 SteamDB 链接"
 	},
 	"options_profile_calculator": {
 		"message": "在个人资料页面上添加账号价值计算链接"
@@ -427,7 +480,7 @@
 		"message": "将库存页面上的游戏筛选栏移到侧边"
 	},
 	"options_link_inventory": {
-		"message": "将您的库存中的每个礼物和优惠券关联到 SteamDB"
+		"message": "显示您库存中礼物和优惠券的 SteamDB 链接"
 	},
 	"options_link_inventory_gift_subid": {
 		"message": "在库存中显示礼物的 SubID"
@@ -492,11 +545,21 @@
 		"message": "在商店与社区页面显示产品图标",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "加载隐藏成就及其说明"
+	"options_improve_achievements": {
+		"message": "改进个人成就页面"
+	},
+	"options_achievements_global_unlock": {
+		"message": "显示全球成就解锁率"
+	},
+	"options_modernized_achievements": {
+		"message": "使用现代化设计"
+	},
+	"options_achievement_groups": {
+		"message": "使用来自 Steam Hunters 的数据分组成就",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "通过防剧透文本元素隐藏描述"
+		"message": "将隐藏成就置于防剧透元素后"
 	},
 	"options_prevent_store_images": {
 		"message": "在产品页面阻止图像加载"
@@ -512,19 +575,22 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "添加折叠“已在您的库中”区域的按钮"
+	},
 	"options_builtin_card_drops": {
 		"message": "在徽章页面显示剩余可掉落卡片总数量"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "在特卖期间添加一个按钮以自动完成探索队列"
+		"message": "在特卖期间启用“自动探索队列”按钮"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改善全球成就统计页面"
 	},
 	"options_builtin_achievements_link": {
-		"message": "添加您的个人成就统计页面的链接"
+		"message": "添加跳转到个人成就页面的链接"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "给未解锁的成就添加一个锁定图标以提高辨识度"
+		"message": "未获取的成就显示锁定图标"
 	}
 }

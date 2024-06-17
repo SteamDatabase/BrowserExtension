@@ -233,8 +233,15 @@
 	"hidden_achievement": {
 		"message": "隠し実績: "
 	},
-	"hidden_achievement_hover": {
-		"message": "隠し実績。マウスオーバーで表示: "
+	"achievement_global_unlock": {
+		"message": "$percent$ のプレイヤーがこの実績を持っています",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
 	},
 	"inventory_list_at": {
 		"message": "$price$ で出品",
@@ -311,6 +318,9 @@
 	"options_header_trade_offers": {
 		"message": "トレードオファー"
 	},
+	"options_header_achievements": {
+		"message": "実績"
+	},
 	"options_header_enhancements": {
 		"message": "機能強化"
 	},
@@ -370,19 +380,6 @@
 			"options_steamdb_last_update": {
 				"content": "$2",
 				"description": "Uses translation for options_steamdb_last_update"
-			}
-		}
-	},
-	"options_extra_data_prices": {
-		"message": "「$options_steamdb_lowest_price$」のオプションが有効の時、あなたの Steam アカウントでお使いの通貨から、ゲームの最低価格を$domain$より安全に取得して表示します。",
-		"placeholders": {
-			"domain": {
-				"content": "steamdb.info",
-				"example": "steamdb.info"
-			},
-			"options_steamdb_lowest_price": {
-				"content": "$1",
-				"description": "Uses translation for options_steamdb_lowest_price"
 			}
 		}
 	},
@@ -492,12 +489,6 @@
 		"message": "ストアとコミュニティページで製品アイコンを表示する",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "隠し実績とその説明を読み込む"
-	},
-	"options_spoiler_achievements": {
-		"message": "ネタバレ要素で説明を隠す"
-	},
 	"options_prevent_store_images": {
 		"message": "製品ページで画像の読み込みを停止する"
 	},
@@ -520,11 +511,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "グローバル実績ページの改善"
-	},
-	"options_builtin_achievements_link": {
-		"message": "自分の実績ページへのリンク"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "ロックされた実績にはロックアイコンを表示"
 	}
 }

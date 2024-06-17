@@ -18,10 +18,14 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steamissä näyttä olevan toimintahäiriöitä. "
+		"message": "Steamissä näyttää olevan toimintahäiriöitä. "
 	},
 	"view_on_steamdb": {
 		"message": "Näytä SteamDB:ssä"
+	},
+	"view_on_steam_hunters": {
+		"message": "Näytä Steam Hunters -sivustolla",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Näytä PCGamingWikissä"
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Piilotettu saavutus: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Piilotettu saavutus, osoita hiirellä paljastaaksesi: "
+	"achievement_global_unlock": {
+		"message": "$percent$ pelaajista ovat saaneet tämän saavutuksen",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "AVATUT SAAVUTUKSET: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "LUKITUT SAAVUTUKSET: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Lajittele ajan mukaan"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Saavutusryhmät tarjoaa Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Listaa hintaan $price$",
@@ -311,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "Vaihtotarjoukset"
 	},
+	"options_header_achievements": {
+		"message": "Saavutukset"
+	},
 	"options_header_enhancements": {
 		"message": "Parannukset"
 	},
@@ -383,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kun \"$options_achievement_groups$\" asetus on päällä, laajennus tekee suojatun pyynnön $domain$ :lle tehdäkseen saavutus ryhmityksen henkilökohtaiselle saavutus sivulle Steam Huntersin tarjoamalla tiedoilla.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -492,11 +545,21 @@
 		"message": "Näytä tuotteen kuvake kauppa- ja yhteisösivuilla",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Lataa piilotetut saavutukset ja niiden kuvaukset"
+	"options_improve_achievements": {
+		"message": "Paranna henkilökohtaiset saavutukset -sivua"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Näytä maailmanlaajuisten saavutusten avausprosentti"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernisoitu muotoilu"
+	},
+	"options_achievement_groups": {
+		"message": "Ryhmä saavutukset Steam huntersin tiedoilla",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Piilota kuvaukset spoilerielementin taakse"
+		"message": "Laita piilotetut saavutukset spoiler-elementin taaakse"
 	},
 	"options_prevent_store_images": {
 		"message": "Estä kuvien lataaminen kauppasivuilla"
@@ -512,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Lisää painike sulkeaksesi \"jo kirjastossa\" lohkon"
+	},
 	"options_builtin_card_drops": {
 		"message": "Näytä jäljellä olevien korttilöytöjen määrä merkit -sivulla"
 	},
@@ -522,9 +588,9 @@
 		"message": "Paranna maailmanlaajuiset saavutukset -sivua"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Linkitä omalle saavutukset -sivulle"
+		"message": "Linkki henkilökohtaisiin saavutuksiin"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Lukituilla saavutuksilla on lukituskuvake lisänäkyvyyttä varten"
+		"message": "Näytä lukituskuvake lukituille saavutuksille"
 	}
 }

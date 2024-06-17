@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "SteamDB 링크와 새로운 기능을 Steam 스토어 및 커뮤니티에 추가합니다. 최저 게임 가격 및 통계 보기."
+		"message": "SteamDB 링크와 새로운 기능을 Steam 스토어 및 커뮤니티에 추가해 최저 게임 가격 및 통계를 볼 수 있습니다."
 	},
 	"steamdb_options": {
 		"message": "SteamDB 옵션"
@@ -30,7 +30,7 @@
 		"message": "개인 성과"
 	},
 	"store_page": {
-		"message": "스토어 페이지",
+		"message": "상점 페이지",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
@@ -60,7 +60,7 @@
 		"message": "마지막 업데이트:"
 	},
 	"app_depots_updated_short": {
-		"message": "업데이트",
+		"message": "업데이트됨",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -193,8 +193,8 @@
 	"hidden_achievement": {
 		"message": "숨겨진 도전 과제: "
 	},
-	"hidden_achievement_hover": {
-		"message": "숨겨진 도전 과제, 마우스를 올려 확인하기: "
+	"achievements_sort_by_time": {
+		"message": "시간순으로 정렬"
 	},
 	"inventory_list_at": {
 		"message": "$price$에 등록",
@@ -247,6 +247,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ 권한 부여"
 	},
+	"options_footer1": {
+		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> 친구들이 💙과 함께 만들었습니다."
+	},
 	"options_footer2": {
 		"message": "이건 <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">오픈 소스 입니다</a>. 모든 기여자 분들께 감사의 인사를 드립니다!"
 	},
@@ -268,6 +271,9 @@
 	"options_header_trade_offers": {
 		"message": "거래 제안"
 	},
+	"options_header_achievements": {
+		"message": "도전과제"
+	},
 	"options_header_enhancements": {
 		"message": "개선사항"
 	},
@@ -277,8 +283,50 @@
 	"options_website_explanation1": {
 		"message": "이 옵션을 활성화 하면, <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam 상점</a>에 일부 사용자 데이터(찜하기, 소유함, 팔로우, 제외하기 되거나 장바구니에 있는 아이템)를 요청하며 이를 현재 사이트에서 하이라이트 하는 데 사용합니다."
 	},
+	"options_website_explanation2": {
+		"message": "이 설정이 작동하려면 상점에 로그인되어 있어야합니다."
+	},
+	"options_website_explanation3": {
+		"message": "이 정보는 오직 브라우저에만 저장되며, 절대 SteamDB 백엔드로 전송되지 않습니다."
+	},
+	"options_website_explanation4": {
+		"message": "Steam 상점에 과도한 요청 전송을 막기 위해, 귀하의 정보는 브라우저의 로컬 스토리지에 캐시되어 있습니다."
+	},
+	"options_website_highlight": {
+		"message": "$domain$에서 소유하거나 찜한 제품을 강조합니다",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "SteamDB 에서 Steam 상점의 제품을 직접 위시리스트에 추가, 팔로우, 무시할 수 있습니다."
+	},
+	"options_steamdb_lowest_price": {
+		"message": "제품 페이지에 기록된 최저가를 표시합니다"
+	},
 	"options_online_stats": {
 		"message": "게임 페이지에서 동시 접속 플레이어 및 최고치 표시"
+	},
+	"options_steamdb_last_update": {
+		"message": "제품 페이지에서 최근 업데이트를 표시합니다."
+	},
+	"options_button_app": {
+		"message": "제품 페이지에서 버튼을 표시합니다"
+	},
+	"options_button_pcgw": {
+		"message": "제품 페이지에서 PCGamingWiki 버튼을 표시합니다"
+	},
+	"options_button_gamehub": {
+		"message": "커뮤니티 허브에서 버튼을 표시합니다"
+	},
+	"options_profile_calculator": {
+		"message": "커뮤니티 프로필에 계산기 주소를 추가합니다"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "아이템을 판매할 때 보관함을 새로고침하지 않습니다"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "빠른 판매 버튼 추가"
@@ -286,8 +334,14 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "자동으로 빠른 판매 수락"
 	},
+	"options_display_market_price_others": {
+		"message": "다른 사용자의 보관함에 상점 가격을 표시합니다"
+	},
 	"options_github_explanation": {
 		"message": "GitHub 에서 설명 확인하기"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Valve의 암호화된 오류 숫자들 대신, 더 나은 오류 문구들을 표시"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "나이 확인 페이지 건너뛰기"
@@ -307,13 +361,20 @@
 		"message": "\"스팀 설치\" 버튼 숨기기",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "\"Steam 에서 열기\" 배너를 숨깁니다."
+	},
+	"options_steamdb_rating": {
+		"message": "SteamDB 평가를 제품 페이지에 표시합니다."
+	},
+	"options_enhancement_appicon": {
+		"message": "상점과 커뮤니티 페이지에서 제품 아이콘을 표시합니다.",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_prevent_store_images": {
+		"message": "제품 페이지에 이미지를 불러오지 않도록 합니다"
+	},
 	"options_builtin_achievements_global": {
 		"message": "전체 도전 과제 페이지 향상"
-	},
-	"options_builtin_achievements_link": {
-		"message": "본인의 도전 과제 페이지로 바로가기"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "잠겨진 도전과제에 자물쇠 아이콘을 생성해 가시성 확보"
 	}
 }

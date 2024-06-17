@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Doda povezave SteamDB in nove funkcije v trgovini in skupnosti Steam. Oglejte si najnižje cene in statistiko iger."
+		"message": "Doda SteamDB hiperpovezave in nove funkcije v trgovini in skupnosti Steam. Oglejte si najnižje cene in statistiko iger."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Možnosti"
@@ -70,10 +70,10 @@
 		"message": "Trenutno igra:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-urni vrhunec:"
+		"message": "24-urni vrh:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Vrhunec vseh časov:"
+		"message": "Vrh vseh časov:"
 	},
 	"app_stats_followers": {
 		"message": "Sledilci:"
@@ -221,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Preostali predmeti na tej strani: $amount$",
+		"message": "Preostali padec kartic na tej strani: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -233,9 +233,6 @@
 	"hidden_achievement": {
 		"message": "Skriti dosežek: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Skriti dosežek, miško čez njega, da ga razkrijete: "
-	},
 	"inventory_list_at": {
 		"message": "Objavi po $price$",
 		"placeholders": {
@@ -246,7 +243,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Prodaj po $price$",
+		"message": "Prodaj pri $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -282,13 +279,13 @@
 		"message": "Pustite oceno za to razširitev"
 	},
 	"options_permissions_description": {
-		"message": "Ta razširitev zahteva dodatna dovoljenja za pravilno delovanje v SteamDB, Steam Store in Steam Community."
+		"message": "Ta razširitev zahteva dodatna dovoljenja za pravilno delovanje na SteamDB, Steam trgovina in Steam skupnost."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Odobri dovoljenja"
 	},
 	"options_footer1": {
-		"message": "Ustvarjeno z 💙 od ljudi <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+		"message": "Ustvarjeno z 💙 od <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> osebja."
 	},
 	"options_footer2": {
 		"message": "Je <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">odprtokodni projekt</a>, hvala vsem sodelujočim!"
@@ -321,13 +318,13 @@
 		"message": "Ko je ta možnost omogočena, bo razširitev zahtevala nekaj uporabniških podatkov (izdelki na seznamu želja, v lasti, spremljani, prezrti izdelki in izdelki v košarici) iz <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> in jih bo uporabil za uporabo poudarkov na spletnem mestu."
 	},
 	"options_website_explanation2": {
-		"message": "Da to deluje, morate biti prijavljeni v trgovino."
+		"message": "Morate biti prijavljeni za pravilno delovanje trgovine."
 	},
 	"options_website_explanation3": {
 		"message": "To je v celoti hranjeno v vašem brskalniku in ni nikoli poslano niti v zaledje SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Da bi preprečili prekomerne zahteve v Steam Store, so vaši uporabniški podatki predpomnjeni v lokalni shrambi vašega brskalnika."
+		"message": "Da bi preprečili prekomerne zahteve v Steam trgovino, so vaši uporabniški podatki predpomnjeni v lokalni shrambi vašega brskalnika."
 	},
 	"options_website_highlight": {
 		"message": "Označite lastne in želene izdelke na $domain$",
@@ -348,7 +345,7 @@
 		"message": "Omogočite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prodajni strani</a> in <a href=\"https://steamdb.info/bundles/\" cilju =\"_blank\">strani z zbirkami</a>"
 	},
 	"options_extra_data": {
-		"message": "Dodatni podatki, pridobljeni iz $domain$",
+		"message": "Dodatni podatki pridobljeni iz $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -357,7 +354,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Ko sta omogočeni možnosti \"$options_online_stats$\" ali \"$options_steamdb_last_update$\", bo razširitev poslala varno zahtevo $domain$, da pridobi trenutno število igralcev in zadnjo posodobitev igre.",
+		"message": "Ko sta omogočeni možnosti \"$options_online_stats$\" ali \"$options_steamdb_last_update$\", bo razširitev poslala varno zahtevo na $domain$, da pridobi trenutno število igralcev in zadnjo posodobitev igre.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -374,7 +371,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Ko je omogočena možnost »$options_steamdb_lowest_price$«, bo razširitev poslala varno zahtevo $domain$ z vašo valuto (s tisto, kar Steam misli, da je), da pridobi zabeleženo ceno za določeno igro.",
+		"message": "Ko je omogočena možnost »$options_steamdb_lowest_price$«, bo razširitev poslala varno zahtevo na $domain$ z vašo valuto (s tisto, kar Steam misli, da je), da pridobi zabeleženo ceno za določeno igro.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -424,19 +421,19 @@
 		"message": "Dodajte povezavo do kalkulatorja na profile skupnosti"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Premakni izbiro igre na strani inventarja na stran"
+		"message": "Premakni izbiro iger na strani inventarja vstran"
 	},
 	"options_link_inventory": {
 		"message": "Vsako darilo in kupon v svojem inventarju povežite s SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Pravilno določite SubID darila v svojem inventarju"
+		"message": "Pravilna določitev SubID darila v svojem inventarju"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Pri prodaji artikla ne osvežujte inventarja"
 	},
 	"options_enhancement_inventory_quick_sell": {
-		"message": "Dodajte gumbe za hitro prodajo"
+		"message": "Dodaj gumbe za hitro prodajo"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Samodejno sprejmi hitro prodajo"
@@ -456,19 +453,19 @@
 		}
 	},
 	"options_github_explanation": {
-		"message": "Oglejte si razlago na GitHub"
+		"message": "Oglejte si razlago na GitHub-u"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
 		"message": "Utišajte \"ta trgovina se zdi sumljiva\" in \"ali ste prepričani, da je to darilo?\" opozorila o trgovski ponudbi"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Prikaži boljša sporočila o napakah namesto kriptičnih številk napak Valve"
+		"message": "Prikaži preprostejše napake namesto kriptičnih številk napak od Valve-a"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Preskoči stran za preverjanje starosti"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Nastavi, da piškotki o starosti in rojstnem dnevu vedno opravijo kontrolo"
+		"message": "Nastavi, da piškotki o starosti in rojstnem dnevu vedno izpolnjuje preverjanje"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Odstrani filter povezav »Zapuščate Steam« z zunanjih spletnih mest",
@@ -492,12 +489,6 @@
 		"message": "Prikaz ikone izdelka na straneh trgovine in skupnosti",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Naloži skrite dosežke in njihove opise"
-	},
-	"options_spoiler_achievements": {
-		"message": "Skrij opise za element spojlerja"
-	},
 	"options_prevent_store_images": {
 		"message": "Prepreči nalaganje slik na straneh izdelkov"
 	},
@@ -513,18 +504,12 @@
 		}
 	},
 	"options_builtin_card_drops": {
-		"message": "Na strani z značkami prikažite skupno število preostalih značk"
+		"message": "Na strani z značkami prikažite skupno število preostalih padcev kartic"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Dodajte gumb za samodejno odkrivanje čakalne vrste med prodajo"
+		"message": "Dodajte gumb za samodejno odkrivanje čakalne vrste med razprodajo"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Izboljšaj stran z globalnimi dosežki"
-	},
-	"options_builtin_achievements_link": {
-		"message": "Povezava do vaše strani z dosežki"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "Zaklenjeni dosežki imajo ikono ključavnice za večjo vidnost"
 	}
 }

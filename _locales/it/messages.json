@@ -23,11 +23,15 @@
 	"view_on_steamdb": {
 		"message": "Visualizza su SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Visualizza su Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Visualizza su PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Obiettivi Personali"
+		"message": "Achievement Personali"
 	},
 	"store_page": {
 		"message": "Pagina del negozio",
@@ -233,8 +237,40 @@
 	"hidden_achievement": {
 		"message": "Obiettivo nascosto: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Obiettivo nascosto, spostare il cursore del mouse sopra l'obiettivo per rivelarlo: "
+	"achievement_global_unlock": {
+		"message": "$percent$ di giocatori hanno questo achievement",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "ACHIEVEMENT GUADAGNATO:$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ACHIEVEMENT BLOCCATI:$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Ordina per tempo di sblocco"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "I gruppi di achievement sono forniti da Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Vendi a $price$",
@@ -386,6 +422,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Quando l'opzione \"$options_achievement_groups$\" è abilitata, l'estensione farà una richiesta sicura a $domain$ per effettuare il raggruppamento di achievement sulla pagina di achievement personali con i dati forniti da Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Mostra il prezzo più basso registrato sulle pagine del prodotto"
 	},
@@ -492,11 +542,11 @@
 		"message": "Visualizza le icone dei prodotti sul negozio e sulle pagine della community",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Carica gli obiettivi nascosti e le loro descrizioni"
+	"options_improve_achievements": {
+		"message": "Migliora la pagina degli achievement personali"
 	},
-	"options_spoiler_achievements": {
-		"message": "Nascondi le descrizioni dietro un simbolo di spoiler"
+	"options_achievements_global_unlock": {
+		"message": "Visualizza la percentuale di sblocco globale dell'achievement"
 	},
 	"options_prevent_store_images": {
 		"message": "Interrompi il caricamento delle immagini sulle pagine del prodotto"
@@ -512,6 +562,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Aggiungi un pulsante per comprimere il blocco \"già nella tua libreria\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Visualizza la quantità totale di premi rimanenti da ottenere nella pagina dei badge"
 	},
@@ -522,9 +575,9 @@
 		"message": "Migliora la pagina dei risultati globali"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Collega alla pagina dei tuoi obiettivi"
+		"message": "Collegamento alla pagina di achievement personale"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Gli obiettivi bloccati hanno l'icona di un lucchetto per una maggiore visibilità"
+		"message": "Mostra l'icona di un lucchetto per gli achievement bloccati"
 	}
 }

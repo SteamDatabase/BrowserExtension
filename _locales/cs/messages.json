@@ -9,7 +9,7 @@
 		"message": "SteamDB kalkulačka"
 	},
 	"steamstatus": {
-		"message": "Zkontrolujte na $domain$",
+		"message": "Zkontrolovat na $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -27,7 +27,7 @@
 		"message": "Zobrazit na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Osobní úspěchy"
+		"message": "Osobní achievementy"
 	},
 	"store_page": {
 		"message": "Obchod",
@@ -70,7 +70,7 @@
 		"message": "Právě online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24hodinový maximum:"
+		"message": "24hodinový vrchol:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Celkový rekord:"
@@ -151,7 +151,7 @@
 		"message": "Automaticky objevte frontu pro získání karty událostí."
 	},
 	"explore_generating": {
-		"message": "Generování nové fronty na objevení, může selhat, pokud je Steam pod vysokým zatížením…"
+		"message": "Vytvoření nové fronty doporučení může selhat, pokud je Steam vysoce zatížen…"
 	},
 	"explore_exploring": {
 		"message": "Prozkoumávání fronty… Žádost $current$ z $total$",
@@ -233,8 +233,24 @@
 	"hidden_achievement": {
 		"message": "Skrytý achievement: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Skrytý achievement, najeďte myší pro odhalení: "
+	"achievement_global_unlock": {
+		"message": "Tento achievement odemnknulo $percent$ hráčů",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "UZAMČENÉ ACHIEVEMENTY: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
 	},
 	"inventory_list_at": {
 		"message": "Prodat za $price$",
@@ -264,7 +280,7 @@
 		"message": "Možnosti"
 	},
 	"options_welcome_title": {
-		"message": "👋 Děkujeme za instalaci SteamDB rozšíření!"
+		"message": "👋 Děkujeme za instalaci rozšíření SteamDB!"
 	},
 	"options_welcome_description": {
 		"message": "Prohlédněte si níže uvedené možnosti a zapněte ty, které chcete. Chcete-li se vrátit sem do budoucna:"
@@ -276,7 +292,7 @@
 		"message": "Rozbalovací seznam účtu na stránkách Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Stránka doplňků vašeho prohlížeče"
+		"message": "Vaše stránka doplňků prohlížeče"
 	},
 	"options_review": {
 		"message": "Zanechat recenzi pro toto rozšíření"
@@ -310,6 +326,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Obchodní nabídky"
+	},
+	"options_header_achievements": {
+		"message": "Achievementy"
 	},
 	"options_header_enhancements": {
 		"message": "Rozšíření"
@@ -492,11 +511,17 @@
 		"message": "Zobrazit ikony produktů v obchodě a komunitní stránce",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Načíst skryté achievementy a jejich popisky"
+	"options_improve_achievements": {
+		"message": "Zlepšit stránku osobních achievementů"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Zobrazit procento odemčení globálního achievementu"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernizovaný design"
 	},
 	"options_spoiler_achievements": {
-		"message": "Skrýt popisky za prvkem spoileru"
+		"message": "Dát skryté achievementy za prvek spoileru"
 	},
 	"options_prevent_store_images": {
 		"message": "Zastavit načítání obrázků na stránce obchodu s produkty"
@@ -522,9 +547,9 @@
 		"message": "Zlepšit stránku globálních achievementů"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Odkaz na vaši vlastní stránku s achievementy"
+		"message": "Odkaz na stránku s osobními achievementy"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Uzamčené achievementy mají ikonu zámku pro větší viditelnost"
+		"message": "Zobrazit ikonu zámku pro uzamčené achievementy"
 	}
 }

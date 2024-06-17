@@ -37,7 +37,7 @@
 		"message": "Tìm kiếm"
 	},
 	"app_steamdb_rating": {
-		"message": "Điểm số SteamDB:"
+		"message": "Xếp hạng SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
 		"message": " ĐIỂM SỐ STEAMDB",
@@ -73,7 +73,7 @@
 		"message": "Đỉnh hôm nay:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Đỉnh lịch sử:"
+		"message": "Cao điểm toàn thời gian:"
 	},
 	"app_stats_followers": {
 		"message": "Người theo dõi:"
@@ -233,8 +233,36 @@
 	"hidden_achievement": {
 		"message": "Thành tựu bị ẩn: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Đây là thành tựu ẩn, rê chuột vào để xem: "
+	"achievement_global_unlock": {
+		"message": "$percent$ người chơi đã mở khóa thành tựu này",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "THÀNH TỰU ĐÃ ĐẠT ĐƯỢC: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "THÀNH TỰU CHƯA MỞ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": ""
 	},
 	"inventory_list_at": {
 		"message": "Đăng bán với giá: $price$",
@@ -310,6 +338,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Yêu cầu trao đổi"
+	},
+	"options_header_achievements": {
+		"message": "Thành Tựu"
 	},
 	"options_header_enhancements": {
 		"message": "Cải thiện"
@@ -408,7 +439,7 @@
 		"message": "Hiển thị nút trên trang cộng đồng"
 	},
 	"options_button_gamecards": {
-		"message": "Hiển thị các nút trang SteamDB và cửa hàng trên trang huy hiệu"
+		"message": "Hiển thị nút của SteamDB và cửa hàng trên trang thẻ của game"
 	},
 	"options_link_subid": {
 		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
@@ -492,11 +523,11 @@
 		"message": "Hiển thị biểu tượng ứng dụng trên các trang cửa hàng và cộng đồng",
 		"description": "The icon is displayed to the left of the game name"
 	},
-	"options_hidden_achievements": {
-		"message": "Tải những thành tựu ẩn và mô tả của chúng"
+	"options_improve_achievements": {
+		"message": "Cải thiện trang thành tích cá nhân"
 	},
-	"options_spoiler_achievements": {
-		"message": "Ẩn mô tả thành tựu bằng yếu tố bôi đen"
+	"options_achievements_global_unlock": {
+		"message": "Hiển thị tỷ lệ mở khóa thành tích global"
 	},
 	"options_prevent_store_images": {
 		"message": "Dừng tải hình ảnh trên các trang sản phẩm"
@@ -520,11 +551,5 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Cải thiện trang thành tựu toàn cầu"
-	},
-	"options_builtin_achievements_link": {
-		"message": "Liên kết đến trang thành tựu cá nhân"
-	},
-	"options_builtin_achievements_locked": {
-		"message": "Thêm biểu tượng ổ khóa vào thành tựu bị khóa để dễ nhìn hơn"
 	}
 }

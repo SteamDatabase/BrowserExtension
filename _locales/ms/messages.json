@@ -9,7 +9,7 @@
 		"message": "Kalkulator SteamDB"
 	},
 	"steamstatus": {
-		"message": "Periksa di $domain$",
+		"message": "Semak di $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -18,10 +18,14 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam sedang mengalami masalah ketidakfungsian. "
+		"message": "Steam sedang mengalami gangguan. "
 	},
 	"view_on_steamdb": {
 		"message": "Lihat di SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Papar di Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Lihat di PCGamingWiki"
@@ -30,7 +34,7 @@
 		"message": "Pencapaian peribadi"
 	},
 	"store_page": {
-		"message": "Halaman Store",
+		"message": "Halaman Kedai",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
@@ -40,11 +44,11 @@
 		"message": "Penilaian SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " Penilaian STEAMDB",
+		"message": " PENILAIAN STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ daripada $total$ kritikan adalah positif (Keseluruhan jenis pembelian)",
+		"message": "$positive$ dari $total$ ulasan adalah positif (semua jenis pembelian)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -57,29 +61,29 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Kemas Kini Terakhir:"
+		"message": "Kemaskini Terakhir:"
 	},
 	"app_depots_updated_short": {
-		"message": "Telah Dikemas Kini",
+		"message": "Dikemaskini",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Status Online"
+		"message": "Status Atas Talian"
 	},
 	"app_stats_online_now": {
-		"message": "Online Ketika Ini:"
+		"message": "Atas Talian ketika ini:"
 	},
 	"app_stats_peak_today": {
-		"message": "Puncak Dalam 24 Jam:"
+		"message": "Puncak dalam 24 jam:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Puncak Keseluruhan Masa:"
 	},
 	"app_stats_followers": {
-		"message": "Para Pengikut:"
+		"message": "Pengikut:"
 	},
 	"app_lowest_price": {
-		"message": "Rekod harga terendah SteamDB<b>$price$</b>",
+		"message": "Rekod harga terendah SteamDB adalah <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -88,7 +92,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Rekod harga terendah SteamDB<b>$price$</b>pada<b>-$discount$%</b>",
+		"message": "Rekod harga terendah SteamDB adalah <b>$price$</b>pada<b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -101,7 +105,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Rekod harga terendah SteamDB<b>$price$</b> dan 2 Tahun terendah <b>$price_limited$</b>",
+		"message": "Rekod harga terendah SteamDB adalah <b>$price$</b> dan 2 tahun terendah adalah <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -127,7 +131,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Harga dilihat $seen$ kali, pada $date$ ($relative$)",
+		"message": "Harga dilihat $seen$ kali, terakhir pada pada $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -145,16 +149,16 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Auto-discover"
+		"message": "Auto Teroka"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automatik Discover Queue untuk mendapat Event Card."
+		"message": "Auto teroka Senarai untuk mendapat Kad Peristiwa."
 	},
 	"explore_generating": {
-		"message": "Menjana Discover Queue yang baru, Ini berkemungkinan akan Gagal jika Steam keadaan High Load…"
+		"message": "Menjana Senarai Auto Teroka yang baru, ini mungkin gagal jika Steam dalam keadaan beban yang tinggi…"
 	},
 	"explore_exploring": {
-		"message": "Teroka Queue… menjana $current$ dari $total$",
+		"message": "Meneroka senarai… Permintaan $current$ dari $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -167,7 +171,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Gagal untuk mengosongkan Queue item #$current$, Cuba lagi selepas 5 saat…",
+		"message": "Gagal untuk mengosongkan senarai item #$current$, mencuba semula dalam lima saat…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -176,7 +180,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Gagal untuk mengosongkan Queue item #$current$ berulang banyak kali, Anda boleh cuba lagi kemudian.",
+		"message": "Gagal untuk mengosongkan senarai item #$current$ berulang kali, Anda boleh mencuba semula nanti.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -185,13 +189,13 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Gagal untuk menjana Queue baharu, Cuba lagi selepas 5 saat…"
+		"message": "Gagal untuk menjana senarai baharu, mencuba semula dalam lima saat…"
 	},
 	"explore_finished": {
-		"message": "Queue Telah di Teroka."
+		"message": "Senarai telah diteroka."
 	},
 	"badges_idle_apps": {
-		"message": "Apps untuk dihentikan: $amount$",
+		"message": "Aplikasi untuk dibiarkan: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +205,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Apps untuk dihentikan dalam page ini: $amount$",
+		"message": "Aplikasi untuk dibiarkan dalam halaman ini: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -211,7 +215,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Drops yang tinggal: $amount$",
+		"message": "Ganjaran tertinggal: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -221,7 +225,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Drops yang tinggal dalam page ini: $amount$",
+		"message": "Ganjaran tertinggal dalam halaman ini: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -231,13 +235,45 @@
 		}
 	},
 	"hidden_achievement": {
-		"message": "Achievement tersembunyi: "
+		"message": "Pencapaian tersembunyi: "
 	},
-	"hidden_achievement_hover": {
-		"message": "Achievement tersembunyi, gerak mouse berikut untuk melihat: "
+	"achievement_global_unlock": {
+		"message": "$percent$ pemain mempunyai pencapaian ini",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "PENCAPAIAN DITERIMA: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "PENCAPAIAN TERKUNCI: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Susun mengikut masa"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Kumpulan pencapaian disediakan oleh Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
-		"message": "Disenarai pada $price$",
+		"message": "Senarai pada $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -246,7 +282,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Dijual pada $price$",
+		"message": "Jual pada $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -255,61 +291,64 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Senaraikan item untuk harga jualan yang tersenarai terendah\n\nTunjuk harga Money anda terima (tanpa fees)"
+		"message": "Senaraikan item untuk harga jualan yang terendah tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Senaraikan item untuk harga jualan yang tersenarai tertinggi\n\nTunjuk harga Money anda terima (tanpa fees)"
+		"message": "Senaraikan item untuk harga jualan yang tertinggi tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
 	},
 	"options": {
-		"message": "Options"
+		"message": "Pilihan"
 	},
 	"options_welcome_title": {
-		"message": "👋 Terima kasih kerana Install SteamDB extension!"
+		"message": "👋 Terima kasih kerana memasang sambungan SteamDB!"
 	},
 	"options_welcome_description": {
-		"message": "Lihat pilihan berikut and tekan salah satu toggle yang anda pilih. Untuk kembali kesini pada akan datang:"
+		"message": "Semak pilihan di bawah dan aktifkan yang mana anda mahu. Untuk kembali ke sini pada akan datang:"
 	},
 	"options_welcome_option1": {
-		"message": "Setting Page di SteamDB"
+		"message": "Halaman Pilihan di SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "“Account” drop-down di Steam page"
+		"message": "Menu juntai bawah “Akaun” di Halaman Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Browser's addons page anda"
+		"message": "Halaman tambahan pelayar anda"
 	},
 	"options_review": {
-		"message": "Tinggalkan Review anda untuk extension ini"
+		"message": "Tinggal ulasan anda untuk tambahan ini"
 	},
 	"options_permissions_description": {
-		"message": "Extension memerlukan permissions tambahan untuk berfungsi di SteamDB, Steam Store, dan Steam Community."
+		"message": "Sambungan ini memerlukan kebenaran tambahan untuk berfungsi dengan betul di SteamDB, Kedai Steam, dan Komuniti Steam."
 	},
 	"options_permissions_button": {
-		"message": "⚠️ Berikan kebenaran"
+		"message": "⚠️ Beri kebenaran"
 	},
 	"options_footer1": {
-		"message": "Dicipta 💙 oleh warga <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+		"message": "Dicipta dengan 💙 oleh warga <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "Ini adalah <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, Terima kasih kepada yang membantu!"
+		"message": "Ianya <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">sumber terbuka</a>, terima kasih kepada semua penyumbang!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Pada checkboxes menunjukkan built-in features."
+		"message": "* Kotak semak dinyahkan menandakan fungsi siap terbina."
 	},
 	"options_header_website": {
-		"message": "SteamDB Website"
+		"message": "Laman Sesawang SteamDB"
 	},
 	"options_header_extra_data": {
-		"message": "Data Tambahan"
+		"message": "Data tambahan"
 	},
 	"options_header_buttons_and_links": {
-		"message": "Buttons dan links"
+		"message": "Butang dan pautan"
 	},
 	"options_header_inventory": {
-		"message": "Inventory"
+		"message": "Inventori"
 	},
 	"options_header_trade_offers": {
-		"message": "Trade Offers"
+		"message": "Tawaran Dagang"
+	},
+	"options_header_achievements": {
+		"message": "Pencapaian"
 	},
 	"options_header_enhancements": {
 		"message": "Penambahbaikan"
@@ -318,19 +357,19 @@
 		"message": "Penjelasan"
 	},
 	"options_website_explanation1": {
-		"message": "Jika option ini dipilih, extansion akan meminta beberapa data pengguna (Senarai Diingini, Dimiliki, Mengikuti, Produk Diabaikan, dan produk dalam troli) dari <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> dan akan menggunakan ini untuk highlights di site ini."
+		"message": "Jika pilihan ini diaktifkan, sambungan akan meminta beberapa data pengguna (senarai diingini, dimiliki,diikuti, produk diabaikan, dan produk dalam troli) dari <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Kedai Steam</a> dan akan menggunakannya untuk membuat penanda di halaman."
 	},
 	"options_website_explanation2": {
-		"message": "Anda perlu Log in pada store untuk ini berfungsi."
+		"message": "Anda perlu log masuk pada kedai untuk ianya berfungsi."
 	},
 	"options_website_explanation3": {
-		"message": "Ini terkandung sepenuhnya dalam Browser anda dan Tidak akan dihantar walaupun pada SteamDB backend."
+		"message": "Ini terkandung sepenuhnya dalam pelayar anda dan tidak pernah akan dihantar walaupun ke sistem di sebalik SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Untuk mengelakkan permintaan tinggi kepada Steam Store, data pengguna anda di cache dalam simpanan Browser Pc anda."
+		"message": "Untuk mengelakkan permintaan terlampau ke Kedai Steam, data pengguna anda disimpan dalam cache pelayar tempatan anda."
 	},
 	"options_website_highlight": {
-		"message": "Highlight Dimiki and Senarai Diingini di $domain$",
+		"message": "Tanda dimiki and senarai diingini di $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -339,16 +378,16 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Senarai Diingini, Mengikuti, dan Produk Diabaikan di Steam store secara terus dari SteamDB"
+		"message": "Senarai diingini, diikuti, dan produk diabaikan di kedai Steam secara terus dari SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Enable Skrip Pakej Percuma</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Aktifkan skrip pakej percuma</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Enable penapisan tambahan pada <a href=\"https://steamdb.info/sales/\" target=\"_blank\">sales page</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundles page</a>"
+		"message": "Aktifkan penapisan tambahan di <a href=\"https://steamdb.info/sales/\" target=\"_blank\">halaman jualan</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">halaman berkas</a>"
 	},
 	"options_extra_data": {
-		"message": "Ambil Data Tambahan dari $domain$",
+		"message": "Data tambahan diambil dari $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -357,7 +396,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Bila \"$options_online_stats$\" or \"$options_steamdb_last_update$\" option adalah enabled, Extension akan melakukan permintaan keselamatan pada $domain$ untuk mendapatkan jumlah pemain semasa dan kemas kini game terbaharu.",
+		"message": "Bila pilihan \"$options_online_stats$\" atau \"$options_steamdb_last_update$\" diaktifkan, sambungan akan melakukan permintaan selamat ke $domain$ untuk mendapatkan jumlah pemain semasa dan kemaskini permainan terakhir.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -374,7 +413,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Bila \"$options_steamdb_lowest_price$\" option adalah enabled, Extension akan melakukan permintaan keselamatan pada $domain$ dengan mngikut nilai mata wang (mengikut format Steam) untuk mendapatkan rekod harga untuk permainan tertentu.",
+		"message": "Bila pilihan \"$options_steamdb_lowest_price$\" diaktifkan, sambungan akan melakukan permintaan selamat ke $domain$ dengan matawang anda (mengikuti format Steam) untuk mendapatkan rekod harga untuk permainan tertentu.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -386,66 +425,80 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Bila pilihan \"$options_achievement_groups$\" diaktifkan, sambungan akan melakukan permintaan selamat ke $domain$ untuk mengumpulkan pencapaian di halaman pencapaian peribadi dengan data yang disediakan oleh Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
-		"message": "Paparkan rekod harga terendah di product page"
+		"message": "Papar rekod harga terendah di halaman produk"
 	},
 	"options_online_stats": {
-		"message": "Paparkan pemain semasa dan di waktu puncak pada product pages"
+		"message": "Papar pemain semasa dan puncak maksimum di halaman produk"
 	},
 	"options_steamdb_last_update": {
-		"message": "Paparkan kemask kini terbaru di product page"
+		"message": "Papar kemaskini terakhir di halaman produk"
 	},
 	"options_button_app": {
-		"message": "Paparkan button di product page"
+		"message": "Papar butang dihalaman produk"
 	},
 	"options_button_pcgw": {
-		"message": "Paparkan button PCGamingWiki di product page"
+		"message": "Papar butang PCGamingWiki di halaman produk"
 	},
 	"options_button_sub": {
-		"message": "Paparkan button di package page"
+		"message": "Papar butang di halaman pakej"
 	},
 	"options_button_gamehub": {
-		"message": "Paparkan button di Ruangan Komuniti"
+		"message": "Papar butang di Hab Komuniti"
 	},
 	"options_button_gamecards": {
-		"message": "Paparkan button SteamDB dan store page di game cards page"
+		"message": "Papar butang SteamDB dan butang halaman kedai di halaman kad permainan"
 	},
 	"options_link_subid": {
-		"message": "Paparkan SubID dibawah setiap option pembelian"
+		"message": "Papar SubID di bawah setiap pilihan pembelian"
 	},
 	"options_link_subid_widget": {
-		"message": "Paparkan SubID dalam embed widgets",
+		"message": "Papar SubID dalam widget terbenam",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Sambung setiap package pada licenses page anda"
+		"message": "Sambung setiap pakej di halaman lesen anda"
 	},
 	"options_profile_calculator": {
-		"message": "Tambah link kalkulator pada Kominiti profil"
+		"message": "Tambah pautan kalkulator di profil komuniti"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Gerakan permainan pilihan pada inventory page ke ruangan sisi"
+		"message": "Pindah pilihan permainan di halaman inventori ke sisi"
 	},
 	"options_link_inventory": {
-		"message": "Sambung setiap gift dan coupon dalam inventory anda ke SteamDB"
+		"message": "Sambung setiap hadiah dan kupon dalam inventori anda ke SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Memperbetulkan gift SubID dalam inventory anda"
+		"message": "Memperbetulkan SubID hadiah dalam inventori anda"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "Jangan refresh inventory ketika jual item"
+		"message": "Jangan memuatkan semula inventori semasa menjual item"
 	},
 	"options_enhancement_inventory_quick_sell": {
-		"message": "Tambah Button Quick sell"
+		"message": "Tambah butang jual cepat"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "Terima Quick sell secara Automatik"
+		"message": "Terima jual cepat secara automatik"
 	},
 	"options_display_market_price_others": {
-		"message": "Paparkan harga item market di Inventory penguna lain"
+		"message": "Papar harga pasaran item dalam inventori pengguna lain"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Support $for_item$ dan $my_item$ parameters",
+		"message": "Sokong parameter $for_item$ dan $my_item$",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -459,51 +512,85 @@
 		"message": "Lihat penjelasan di GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Sekat \"perdagangan ini kelihatan mencurigakan\" dan \"adakah anda pasti ini adalah hadiah?\" isyarat tawaran perdagangan"
+		"message": "Sekat amaran tawaran perdagangan \"perdagangan ini nampak mencurigakan\" dan \"adakah anda pasti ini adalah hadiah?\""
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Paparkan mesej ralat yang lebih baik, bukannya nombor ralat samar Valve"
+		"message": "Papar mesej ralat yang lebih baik, dari nombor ralat samar Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Langkau halaman semakan umur"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Menetapkan kuki umur dan tarikh lahir kepada lulus sentiasa"
+		"message": "Tetap kuki umur dan tarikh lahir untuk sentiasa lulus"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Alih keluar penapis pautan \"Anda meninggalkan Steam\" daripada tapak luaran",
+		"message": "Buang penapis pautan \"Anda akan meninggalkan Steam\" dari halaman luaran",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Terima Subscriber Agreement di market, inventory, dan activate key page secara automatik",
+		"message": "Terima Perjanjian Pelanggan di pasaran, inventori, dan halaman aktifkan kunci secara automatik",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Sembunyi butang \"Pasang Steam\" pada rentangan",
+		"message": "Sembunyi butang \"Pasang Steam\" di kepala halaman",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Sembunyi rentangan \"Buka di dalam Steam\""
+		"message": "Sembunyi sepanduk \"Buka di dalam Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Paparkan rating SteamDB pada halaman produk"
+		"message": "Papar rating SteamDB di halaman produk"
+	},
+	"options_enhancement_appicon": {
+		"message": "Papar ikon produk di halaman kedai dan komuniti",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Menambahbaik halaman pencapaian peribadi"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Papar peratusan pencapaian global dicapai"
+	},
+	"options_modernized_achievements": {
+		"message": "Reka bentuk moden"
+	},
+	"options_achievement_groups": {
+		"message": "Kumpul pencapaian dengan data dari Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Letak pencapaian tersembunyi di sebalik elemen spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Hentikan imej daripada dimuatkan pada halaman produk"
+		"message": "Henti imej dari dimuatkan di halaman produk"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Sesetengah pembangun meletakkan megabyte imej dalam penerangan produk yang boleh mengambil sedikit masa untuk dimuatkan, klik pada imej untuk dimuatkan"
+		"message": "Sesetengah pemaju meletakkan beberapa megabyte imej dalam penerangan produk yang boleh mengambil sedikit masa untuk dimuatkan, klik pada imej untuk memuat"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Sokong parameter $award$ di pautan profil dan fail dikongsi",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Tambah butang untuk meruntuh blok \"sudah dalam simpanan anda\""
 	},
 	"options_builtin_card_drops": {
-		"message": "Papar jumlah baki 'card drops' pada halaman lencana"
+		"message": "Papar jumlah ganjaran kad tertinggal di halaman lencana"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Tambah butang untuk meneroka senarai secara automatik semasa jualan"
 	},
 	"options_builtin_achievements_global": {
-		"message": "Menambah baik paparan pencapaian global"
+		"message": "Menambahbaik halaman pencapaian global"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Paut ke halaman pencapaian anda sendiri"
+		"message": "Pautan ke halaman pencapaian peribadi"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Pencapaian berkunci mempunyai ikon kunci untuk lebih keterlihatan"
+		"message": "Papar ikon kunci untuk pencapaian terkunci"
 	}
 }
