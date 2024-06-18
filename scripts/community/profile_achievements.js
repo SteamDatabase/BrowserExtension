@@ -327,7 +327,11 @@ GetOption( {
 				} );
 
 				foundAchievement = true;
-				element.style.viewTransitionName = `steamdb-achievement-${id}`;
+
+				if( id < 100 )
+				{
+					element.style.viewTransitionName = `steamdb-achievement-${id}`;
+				}
 
 				break;
 			}
@@ -365,7 +369,11 @@ GetOption( {
 		{
 			const element = document.createElement( 'div' );
 			element.className = 'steamdb_achievement';
-			element.style.viewTransitionName = `steamdb-achievement-${id}`;
+
+			if( id < 100 )
+			{
+				element.style.viewTransitionName = `steamdb-achievement-${id}`;
+			}
 
 			const image = document.createElement( 'img' );
 			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlock ? achievement.icon : achievement.icon_gray}`;
