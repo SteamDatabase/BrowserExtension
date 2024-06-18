@@ -276,7 +276,7 @@
 		"message": "Sort by time"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Achievement groups are provided by Steam Hunters.",
+		"message": "Achievement groups are provided by Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 
