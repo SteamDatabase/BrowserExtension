@@ -218,25 +218,31 @@ html {
 	width: 0%;
 }
 
-.steamdb_achievement_updates_disclaimer {
+.steamdb_achievement_groups_disclaimer {
 	display: flex;
 	gap: 8px;
 	align-items: center;
+	justify-content: center;
 	font-style: italic;
 	margin-left: 16px;
 	margin-top: 100px;
 }
 
-.steamdb_achievement_updates_disclaimer > img {
+
+.steamdb_achievement_groups_disclaimer:not(:hover) img {
+	filter: grayscale(1) brightness(0.5);
+}
+
+.steamdb_achievement_groups_disclaimer > img {
 	width: 32px;
 	height: 32px;
 }
 
-.steamdb_achievement_updates_disclaimer > a {
+.steamdb_achievement_groups_disclaimer > a {
 	color: inherit;
 }
 
-.steamdb_achievement_updates_disclaimer > a:hover {
+.steamdb_achievement_groups_disclaimer > a:hover {
 	text-decoration: underline;
 }
 

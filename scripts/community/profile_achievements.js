@@ -639,9 +639,15 @@ GetOption( {
 		if( achievementUpdates.length > 1 )
 		{
 			const disclaimer = document.createElement( 'div' );
-			disclaimer.className = 'steamdb_achievement_updates_disclaimer';
+			disclaimer.className = 'steamdb_achievement_groups_disclaimer';
 
-			const image = document.createElement( 'img' );
+			let image = document.createElement( 'img' );
+			image.src = GetLocalResource( 'icons/white.svg' );
+			disclaimer.append( image );
+
+			disclaimer.append( document.createTextNode( ' + ' ) );
+
+			image = document.createElement( 'img' );
 			image.src = GetLocalResource( 'icons/steamhunters.svg' );
 			disclaimer.append( image );
 
