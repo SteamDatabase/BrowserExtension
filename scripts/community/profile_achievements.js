@@ -221,7 +221,7 @@ GetOption( {
 		}
 
 		achievementUpdates.unshift( {
-			updateName: document.title.match( /^.+? :: (?<name>.+) :: / )?.groups.name || 'Base Game',
+			name: document.title.match( /^.+? :: (?<name>.+) :: / )?.groups.name || 'Base Game',
 			achievementApiNames: [],
 		} );
 
@@ -491,13 +491,13 @@ GetOption( {
 				}
 
 				const summaryName = document.createElement( 'h2' );
-				summaryName.textContent = update.dlcAppName || update.updateName || 'Update';
+				summaryName.textContent = update.dlcAppName || update.name || 'Update';
 
-				if( update.dlcAppName && update.updateName )
+				if( update.dlcAppName && update.name )
 				{
 					const summaryName2 = document.createElement( 'span' );
 					summaryName2.className = 'steamdb_achievements_update_name';
-					summaryName2.textContent = ` — ${update.updateName}`;
+					summaryName2.textContent = ` — ${update.name}`;
 					summaryName.append( summaryName2 );
 				}
 
