@@ -167,15 +167,22 @@ GetOption( {
 	{
 		e.preventDefault();
 
-		let state = null;
+		const elements = selector.querySelectorAll( 'details' );
+		let state = true;
 
-		for( const el of selector.querySelectorAll( 'details' ) )
+		// Figure out if any of the elements are currently open
+		// If at least one is open, we will close all of them
+		for( const el of elements )
 		{
-			if( state === null )
+			if( el.open )
 			{
-				state = !el.open;
+				state = false;
+				break;
 			}
+		}
 
+		for( const el of elements )
+		{
 			el.open = state;
 		}
 	}
