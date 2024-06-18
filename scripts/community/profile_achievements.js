@@ -249,6 +249,7 @@ GetOption( {
 
 		const oldAchievementRows = document.querySelectorAll( '.achieveRow' );
 		const seenAchievements = new Set();
+		const alreadyMatchedAchievements = new Set();
 		const achievements = response.response.achievements;
 
 		const AddAchievementData = ( id, domId, achievement, player ) =>
@@ -271,6 +272,8 @@ GetOption( {
 				update.earned++;
 			}
 		};
+
+		let badAchievementsLogged = 10;
 
 		// Match all achievements on the page to API data
 		for( let domId = 0; domId < oldAchievementRows.length; domId++ )
@@ -303,6 +306,11 @@ GetOption( {
 
 			for( let id = 0; id < achievements.length; id++ )
 			{
+				if( alreadyMatchedAchievements.has( id ) )
+				{
+					continue;
+				}
+
 				const achievement = achievements[ id ];
 
 				if( name !== achievement.localized_name )
@@ -314,10 +322,15 @@ GetOption( {
 
 				if( icon !== apiIcon )
 				{
-					WriteLog( 'Mismatching icon', icon, achievement );
+					if( badAchievementsLogged-- > 0 )
+					{
+						WriteLog( 'Mismatching icon', icon, achievement );
+					}
+
 					continue;
 				}
 
+				alreadyMatchedAchievements.add( id );
 				seenAchievements.add( achievement.internal_name );
 
 				AddAchievementData( id, domId, achievement, {
@@ -336,7 +349,7 @@ GetOption( {
 				break;
 			}
 
-			if( !foundAchievement )
+			if( !foundAchievement && badAchievementsLogged-- > 0 )
 			{
 				WriteLog( 'Failed to find achievement', name, icon );
 			}
