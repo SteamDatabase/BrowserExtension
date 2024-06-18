@@ -152,7 +152,7 @@ GetOption( {
 			gameAchievementsFetch.then( ( gameAchievements ) =>
 			{
 				ProcessGameAchievements( gameAchievements, response.data );
-			} );
+			} ).catch( e => console.error( '[SteamDB]', e ) );
 		} );
 	}
 	else
@@ -160,14 +160,19 @@ GetOption( {
 		gameAchievementsFetch.then( ( gameAchievements ) =>
 		{
 			ProcessGameAchievements( gameAchievements, [] );
-		} );
+		} ).catch( e => console.error( '[SteamDB]', e ) );
 	}
 
-	function ToggleDetailsElements( e, selector )
+	function ToggleDetailsElements( e, parent )
 	{
 		e.preventDefault();
 
-		const elements = selector.querySelectorAll( 'details' );
+		if( !parent )
+		{
+			return;
+		}
+
+		const elements = parent.querySelectorAll( 'details' );
 		let state = true;
 
 		// Figure out if any of the elements are currently open
