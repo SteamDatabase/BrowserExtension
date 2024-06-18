@@ -253,9 +253,7 @@ GetOption( {
 		}
 
 		const oldAchievementRows = document.querySelectorAll( '.achieveRow' );
-		const seenAchievements = new Set();
-		const alreadyMatchedAchievements = new Set();
-		const achievements = response.response.achievements;
+		const achievements = new Map( response.response.achievements.map( ( value, index ) => [ index, value ] ) );
 
 		const AddAchievementData = ( id, domId, achievement, player ) =>
 		{
@@ -309,15 +307,8 @@ GetOption( {
 
 			let foundAchievement = false;
 
-			for( let id = 0; id < achievements.length; id++ )
+			for( const [ id, achievement ] of achievements.entries() )
 			{
-				if( alreadyMatchedAchievements.has( id ) )
-				{
-					continue;
-				}
-
-				const achievement = achievements[ id ];
-
 				if( name !== achievement.localized_name )
 				{
 					continue;
@@ -335,9 +326,6 @@ GetOption( {
 					continue;
 				}
 
-				alreadyMatchedAchievements.add( id );
-				seenAchievements.add( achievement.internal_name );
-
 				AddAchievementData( id, domId, achievement, {
 					unlock,
 					progressText,
@@ -351,6 +339,8 @@ GetOption( {
 					element.style.viewTransitionName = `steamdb-achievement-${id}`;
 				}
 
+				achievements.delete( id );
+
 				break;
 			}
 
@@ -361,15 +351,8 @@ GetOption( {
 		}
 
 		// Add hidden achievements
-		for( let id = 0; id < achievements.length; id++ )
+		for( const [ id, achievement ] of achievements.entries() )
 		{
-			const achievement = achievements[ id ];
-
-			if( seenAchievements.has( achievement.internal_name ) )
-			{
-				continue;
-			}
-
 			AddAchievementData( id, null, achievement, {
 				unlock: null,
 				progressText: null,

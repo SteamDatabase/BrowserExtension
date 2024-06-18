@@ -229,13 +229,13 @@ html {
 }
 
 
-.steamdb_achievement_groups_disclaimer:not(:hover) img {
-	filter: grayscale(1) brightness(0.5);
-}
-
 .steamdb_achievement_groups_disclaimer > img {
 	width: 32px;
 	height: 32px;
+}
+
+.steamdb_achievement_groups_disclaimer:not(:hover) img {
+	filter: grayscale(1) brightness(0.5);
 }
 
 .steamdb_achievement_groups_disclaimer > a {
