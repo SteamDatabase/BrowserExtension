@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "ดูบน SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "ดูบน Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "ดูบน PCGamingWiki"
 	},
@@ -233,6 +237,41 @@
 	"hidden_achievement": {
 		"message": "ความสำเร็จที่ซ่อนอยู่: "
 	},
+	"achievement_global_unlock": {
+		"message": "มีผู้เล่น $percent$ ปลดล็อกความสำเร็จนี้แล้ว",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "ความสำเร็จที่ปลดแล้ว: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ความสำเร็จที่ล็อกอยู่: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "เรียงตามเวลา"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "กลุ่มของความสำเร็จ ให้ข้อมูลโดย Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "ตั้งราคาที่ $price$",
 		"placeholders": {
@@ -308,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "ข้อเสนอทางการค้า"
 	},
+	"options_header_achievements": {
+		"message": "ความสำเร็จ"
+	},
 	"options_header_enhancements": {
 		"message": "การเพิ่มประสิทธิภาพ"
 	},
@@ -380,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "เมื่อตัวเลือก \"$options_achievement_groups$\" เปิดอยู่ ส่วนขยายจะส่งคำขอไปยัง $domain$ เพื่อจัดกลุ่มความสำเร็จบนหน้าความสำเร็จส่วนบุคคลด้วยข้อมูลจาก Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -489,6 +545,22 @@
 		"message": "แสดงไอคอนแอพบนหน้าร้านค้า และ ชุมชน",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "ปรับปรุงหน้าความสำเร็จส่วนบุคคล"
+	},
+	"options_achievements_global_unlock": {
+		"message": "แสดงร้อยละของการปลดล็อกความสำเร็จระดับโลก"
+	},
+	"options_modernized_achievements": {
+		"message": "การออกแบบที่ทันสมัย"
+	},
+	"options_achievement_groups": {
+		"message": "จัดกลุ่มความสำเร็จด้วยข้อมูลจาก Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "นำความสำเร็จที่ซ่อนไว้ไปไว้หลังสปอยเลอร์"
+	},
 	"options_prevent_store_images": {
 		"message": "ปิดการโหลดภาพที่หน้าร้านค้า"
 	},
@@ -503,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "เพิ่มปุ่มเพื่อยุบกล่อง \"มีอยู่ในคลังแล้ว\""
+	},
 	"options_builtin_card_drops": {
 		"message": "แสดงจำนวนการ์ดที่เหลือทั้งหมดบนหน้าตราสัญลักษณ์"
 	},
@@ -511,5 +586,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "ปรับปรุงหน้าความสำเร็จระดับโลก"
+	},
+	"options_builtin_achievements_link": {
+		"message": "ลิงค์ไปยังหน้าความสำเร็จส่วนบุคคล"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "แสดงไอคอนล็อกสำหรับความสำเร็จที่ล็อกอยู่"
 	}
 }

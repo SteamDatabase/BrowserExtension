@@ -247,6 +247,15 @@
 			}
 		}
 	},
+	"achievements_unlocked_count": {
+		"message": "OPNÅEDE PRÆSTATIONER: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
 	"achievements_locked_count": {
 		"message": "UOPNÅEDE PRESTATIONER: $count$",
 		"placeholders": {

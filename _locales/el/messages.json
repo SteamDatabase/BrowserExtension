@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Προβολή στο SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Προβολή στο Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Προβολή στο PCGamingWiki"
 	},
@@ -264,6 +268,10 @@
 	"achievements_sort_by_time": {
 		"message": "Ταξινόμηση κατά ώρα"
 	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Οι ομάδες επιτευγμάτων παρέχονται από το Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "Λίστα από $price$",
 		"placeholders": {
@@ -417,6 +425,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Όταν είναι ενεργοποιημένη η επιλογή \"$options_achievement_groups$\", η επέκταση θα κάνει ένα ασφαλές αίτημα προς $domain$ για να κάνει ομαδοποίηση επιτευγμάτων στη σελίδα προσωπικών επιτευγμάτων με τα δεδομένα που παρέχονται από το Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Εμφάνιση της χαμηλότερης καταγεγραμμένης τιμής στις σελίδες εφαρμογών"
 	},
@@ -531,6 +553,10 @@
 	},
 	"options_modernized_achievements": {
 		"message": "Εκσυγχρονισμένο design"
+	},
+	"options_achievement_groups": {
+		"message": "Ομαδικά επιτεύγματα με δεδομένα από Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
 		"message": "Τοποθέτηση κρυφών επιτευγμάτων πίσω από στοιχείο spoiler"

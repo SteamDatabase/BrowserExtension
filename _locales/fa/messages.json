@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "مشاهده در SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "نمایش در Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "مشاهده در PCGamingWiki"
 	},
@@ -233,6 +237,41 @@
 	"hidden_achievement": {
 		"message": "دستاورد مخفی: "
 	},
+	"achievement_global_unlock": {
+		"message": "$percent$ از بازیکن ها این دستاورد را دارند",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "دستاورد های به دست آمده: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "دستاورد های باز نشده: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "مرتب‌سازی براساس زمان"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "دسته‌بندی دستاوردها توسط Steam Hunters تهیه شده است.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "درخواست خرید در $price$",
 		"placeholders": {
@@ -308,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "درخواست های ترید"
 	},
+	"options_header_achievements": {
+		"message": "دستاورد ها"
+	},
 	"options_header_enhancements": {
 		"message": "بهبودها"
 	},
@@ -380,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "وقتی که گزینه \"$options_achievement_groups$\" فعال است، افزونه یک درخواست امن به $domain$ ارسال میکند تا دستاورد های شخصی را بر اساس داده های ارائه شده Steam Hunters گروه بندی کند.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -489,6 +545,22 @@
 		"message": "نمایش آیکون محصول بر روی صفحات فروشگاه و انجمن",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "بهبود صفحه دستاوردهای شخصی"
+	},
+	"options_achievements_global_unlock": {
+		"message": "نمایش درصد دستاورد های باز شده در کل"
+	},
+	"options_modernized_achievements": {
+		"message": "قالب جدید"
+	},
+	"options_achievement_groups": {
+		"message": "دسته بندی دستاورد ها براساس داده های Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "قرار دادن دستاورد های پنهان پشت اسپویلر"
+	},
 	"options_prevent_store_images": {
 		"message": "متوقف کردن بارگذاری تصاویر بر روی صفحات محصول"
 	},
@@ -503,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "افزودن یک دکمه برای جمع کردن بلوک \"در حال حاضر در library شماست\""
+	},
 	"options_builtin_card_drops": {
 		"message": "نمایش تعداد دراپ های کارت باقی‌مانده در صفحات Badges"
 	},
@@ -511,5 +586,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "بهبود صفحه دستاوردها"
+	},
+	"options_builtin_achievements_link": {
+		"message": "اتصال به صفحه دستاورد های شخصی"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "نمایش آیکون قفل برای دستاورد های قفل شده"
 	}
 }

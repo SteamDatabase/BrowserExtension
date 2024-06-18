@@ -318,7 +318,7 @@
 		"message": "أترك تعليقًا على هذه الإضافة"
 	},
 	"options_permissions_description": {
-		"message": "هذه الأضافة تتطلب أذونات إضافية للعمل بشكل صحيح على SteamDB و Steam Store، و Steam Community."
+		"message": "هذه الإضافة تتطلب أذونات إضافية للعمل بشكل صحيح على SteamDB و Steam Store، و Steam Community."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ منح الصلاحيات"
@@ -330,7 +330,7 @@
 		"message": "إنه <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">مفتوح المصدر</a>، شكراً لكل المساهمين!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* اختيارات معطلة تشير إلى ميزات مدمجة."
+		"message": "* الاختيارات المعطلة تشير إلى ميزات مدمجة."
 	},
 	"options_header_website": {
 		"message": "موقع SteamDB"
@@ -357,19 +357,19 @@
 		"message": "الشرح"
 	},
 	"options_website_explanation1": {
-		"message": "عند تفعيل هذا الخيار، سيطلب الملحق بعض من بيانات المستخدم (قائمة الأمنيات، المملوكة، المتابعة، المنتجات المتجاهله، والمنتجات في عربة التسوق) من <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> وسوف يتم استخدام هذه البيانات لأضافة highlights على الموقع."
+		"message": "عند تفعيل هذا الخيار، ستطلب الإضافة بعض من بيانات المستخدم (قائمة الأمنيات، المملوكة، المتابعة، المنتجات المتجاهله، والمنتجات في عربة التسوق) من <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> وسوف يتم استخدام هذه البيانات لأضافة highlights على الموقع."
 	},
 	"options_website_explanation2": {
 		"message": "يجب عليك تسجيل الدخول في المتجر من أجل أن يعمل هذا."
 	},
 	"options_website_explanation3": {
-		"message": "هذا موجود بالكامل داخل المتصفح الخاص بك ولن يتم إرساله إلى الواجهة الخلفية SteamDB."
+		"message": "هذا موجود بالكامل داخل المتصفح الخاص بك ولن يتم إرساله إلى الواجهة الخلفية لـ SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "لمنع الطلبات الزائدة على متجر تسيم، يتم تخزين بيانات المستخدم الخاص بك في التخزين المحلي لمتصفحك."
+		"message": "لمنع الطلبات الزائدة على متجر Steam، يتم تخزين بيانات المستخدم الخاص بك في التخزين المحلي لمتصفحك."
 	},
 	"options_website_highlight": {
-		"message": "تسليط الضوء على المنتجات المملوكة والمتمنية على $domain$",
+		"message": "إبراز المنتجات المملوكة والمتمنية على $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -381,10 +381,10 @@
 		"message": "قائمة الرغبات، متابعة، وتجاهل المنتجات على متجر Steam مباشرة من SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">فعل البرنامج النصي للحزم المجانية</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">تفعيل البرنامج النصي للحزم المجانية</a>"
 	},
 	"options_website_highlight3": {
-		"message": "تفعيل التصفية الإضافية على صفحة التخفيضات<a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">حزم الصفحة</a>"
+		"message": "تفعيل التصفية الإضافية على <a href=\"https://steamdb.info/sales/\" target=\"_blank\">صفحة التخفيضات</a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">صفحة الحزم</a>"
 	},
 	"options_extra_data": {
 		"message": "بيانات إضافية تم جلبها من $domain$",
@@ -396,7 +396,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "عندما يتم تمكين خيار \"$options_online_stats$أو \"$options_steamdb_last_update$\"، التمديد سيقوم بطلب آمن لـ $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
+		"message": "عندما يتم تفعيل خيار \"$options_online_stats$أو \"$options_steamdb_last_update$\"، ستقوم الإضافة بإجراء طلب آمن إلى $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -413,7 +413,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "عندما يتم تمكين خيار \"$options_steamdb_lowest_price$\" ، سيؤدي التحديد إلى طلب آمن لـ $domain$ بعملتك (مع ما يعتقد Steam أنها موجودة) للحصول على السعر المسجل للعبة معينة.",
+		"message": "عندما يتم تفعيل خيار \"$options_steamdb_lowest_price$\" ، ستقوم الإضافة بإجراء طلب آمن إلى $domain$ بعملتك (مع ما يعتقد Steam أنها موجودة) للحصول على السعر المسجل للعبة معينة.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -498,7 +498,7 @@
 		"message": "عرض سعر السوق للعنصر في مخزونات المستخدمين الآخرين"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "دعم $for_item$ و $my_item$ المعلمات",
+		"message": "دعم المعلمات $for_item$ و $my_item$",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -512,7 +512,7 @@
 		"message": "رؤية الشرح على GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "إيقاف \"تبدو هذه التجارة مشبوهة\" و \"هل أنت متأكد أن هذه هدية؟\" تنبيهات المبادلة"
+		"message": "إيقاف تنبيهات المبادلة \"تبدو هذه التجارة مشبوهة\" و \"هل أنت متأكد أن هذه هدية؟\""
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "عرض رسائل الأخطاء بشكل أفضل, بدلاً من أرقام الأخطاء المشفرة من Valve"
@@ -532,11 +532,11 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "إخفاء زر ”تثبيت Steam“ في الرأس",
+		"message": "إخفاء زر \"تثبيت الشاشة\" في رأس الصفحة",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "إخفاء شعار ”فتح في البخار“"
+		"message": "إخفاء شعار ”فتح في Steam“"
 	},
 	"options_steamdb_rating": {
 		"message": "عرض تقييم SteamDB في صفحات المنتج"
@@ -549,7 +549,7 @@
 		"message": "تحسين صفحة الإنجازات الشخصية"
 	},
 	"options_achievements_global_unlock": {
-		"message": "عرض نسبة فتح الإنجازات العامة"
+		"message": "عرض نسبة فتح الإنجازات العالمية"
 	},
 	"options_modernized_achievements": {
 		"message": "تصميم حديث"

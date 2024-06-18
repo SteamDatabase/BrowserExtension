@@ -83,7 +83,7 @@
 		"message": "Підписники:"
 	},
 	"app_lowest_price": {
-		"message": "Найнижча зафіксована ціна на SteamDB — <b>$price$</b>",
+		"message": "Найнижча зафіксована ціна на SteamDB - <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -92,7 +92,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Найнижча зафіксована ціна на SteamDB — <b>$price$</b> зі знижкою <b>-$discount$%</b>",
+		"message": "Найнижча зафіксована ціна на SteamDB - <b>$price$</b> зі знижкою <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -105,7 +105,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Найнижча зафіксована ціна на SteamDB — <b>$price$</b>. Мінімум за 2 роки — <b>$price_limited$</b>",
+		"message": "Найнижча зафіксована ціна на SteamDB - <b>$price$</b>. Мінімум за 2 роки - <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -291,10 +291,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Виставляє товар за найнижчою ринковою ціною\n\nПоказана ціна — це сума, яку ви отримаєте (без врахування комісій)"
+		"message": "Виставляє товар за найнижчою ринковою ціною\n\nПоказана ціна - це сума, яку ви отримаєте (без врахування комісій)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Виставляє товар за найвищою ціною із запитів на купівлю\n\nПоказана ціна — це сума, яку ви отримаєте (без врахування комісій)"
+		"message": "Виставляє товар за найвищою ціною із запитів на купівлю\n\nПоказана ціна - це сума, яку ви отримаєте (без врахування комісій)"
 	},
 	"options": {
 		"message": "Параметри"
@@ -555,7 +555,7 @@
 		"message": "Модернізований дизайн"
 	},
 	"options_achievement_groups": {
-		"message": "Групувати досягнення з даними від Steam Hunters",
+		"message": "Групувати досягнення за даними від Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {

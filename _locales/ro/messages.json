@@ -31,7 +31,7 @@
 		"message": "Vezi pe PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Realizări personale"
+		"message": "Realizările proprii"
 	},
 	"store_page": {
 		"message": "Pagina magazinului",
@@ -235,10 +235,10 @@
 		}
 	},
 	"hidden_achievement": {
-		"message": "Achievement-uri ascunse: "
+		"message": "Realizare ascunsă: "
 	},
 	"achievement_global_unlock": {
-		"message": "$percent$ jucători au această realizare",
+		"message": "$percent$ dintre jucători au această realizare",
 		"description": "Do not add percent symbol, it will be formatted automatically",
 		"placeholders": {
 			"percent": {
@@ -248,7 +248,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "Achievement-uri obținute: $count$",
+		"message": "Realizări obținute: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -257,7 +257,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "Achievement-uri blocate: $count$",
+		"message": "Realizări blocate: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -269,7 +269,7 @@
 		"message": "Sortează după timp"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Grupurile de achievement -uri sunt furnizate de Steam Hunters.",
+		"message": "Grupurile de realizări sunt furnizate de Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Când este activată opțiunea \"$options_achievement_groups$\", extensia va face o solicitare securizată către $domain$ pentru a grupa pe pagina de achievement-uri personale cu datele furnizate de Steam Hunters.",
+		"message": "Când este activată opțiunea \"$options_achievement_groups$\", extensia va face o solicitare securizată către $domain$ pentru a grupa pe pagina de realizări personale cu datele furnizate de Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -546,20 +546,20 @@
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "Îmbunătățește pagina personală a achievementelor"
+		"message": "Îmbunătățește pagina de realizările proprii"
 	},
 	"options_achievements_global_unlock": {
-		"message": "Afişează procentajul total de deblocare achievementelor"
+		"message": "Afișează procentul de deblocare a realizării globale"
 	},
 	"options_modernized_achievements": {
 		"message": "Design modernizat"
 	},
 	"options_achievement_groups": {
-		"message": "Achievementelor ale grupului cu date de la Steam Hunters",
+		"message": "Realizările grupului cu datele de la Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Pune achievementelor ascunse în spatele unui element de indiciu"
+		"message": "Pune realizările ascunse în spatele unui element de indiciu"
 	},
 	"options_prevent_store_images": {
 		"message": "Oprește imaginile să se încarce pe pagina produsului"
@@ -588,9 +588,9 @@
 		"message": "Îmbunătățește pagina de realizări globale"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Link-ul către pagina de achievementelor personale"
+		"message": "Link-ul către pagina de realizările proprii"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Afişează o pictogramă de blocare pentru achievementelor blocate"
+		"message": "Afişează o pictogramă de blocare pentru realizărilor blocate"
 	}
 }

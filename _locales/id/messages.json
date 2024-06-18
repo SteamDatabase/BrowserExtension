@@ -268,6 +268,10 @@
 	"achievements_sort_by_time": {
 		"message": "Urutkan berdasarkan waktu"
 	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Kelompok pencapaian disediakan oleh Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "Daftarkan di $price$",
 		"placeholders": {
@@ -323,7 +327,7 @@
 		"message": "Dibuat dengan 💙 oleh <a href=“https://steamdb.info” target=“_blank”>SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "Ini adalah <a href=“https://github.com/SteamDatabase/BrowserExtension” target=“_blank”>sumber terbuka</a>, terima kasih kepada semua kontributor!"
+		"message": "Ini adalah <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">sumber terbuka</a>, terima kasih kepada semua kontributor!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Kotak centang yang dinonaktifkan menunjukkan fitur bawaan."
@@ -418,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Ketika opsi $options_achievement_groups$ di aktifkan, ekstensi akan melakukan permintaan aman ke $domain$ untuk melakukan pengelompokan pencapaian di halaman pencapaian pribadi anda dengan data yang disediakan oleh Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -535,6 +553,10 @@
 	},
 	"options_modernized_achievements": {
 		"message": "Memperbarui Desain"
+	},
+	"options_achievement_groups": {
+		"message": "Kelompokkan pencapaian dengan data dari Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
 		"message": "Menempatkan pencapaian tersembunyi dibalik spoiler"

@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "ნახე SteamDB-ზე"
 	},
+	"view_on_steam_hunters": {
+		"message": "Steam Hunters -ზე ნახვა",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "ნახე PCGamingWiki-ზე"
 	},
@@ -233,6 +237,41 @@
 	"hidden_achievement": {
 		"message": "დამალული მიღწევა: "
 	},
+	"achievement_global_unlock": {
+		"message": "მოთამაშეების $percent$ -ს აქვს ეს ჯილდო",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "მიღწეული ჯილდოები: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "ჩაკეტილი ჯილდოები: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "სორტირება დროის მიხედვით"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "ჯილდოების ჯგუფები არის წარმოდგენილი Steam Hunters -ის მიერ.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "დადე მარკეტზე $price$-ად",
 		"placeholders": {
@@ -308,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "ტრეიდის შემოთავაზებები"
 	},
+	"options_header_achievements": {
+		"message": "ჯილდოები"
+	},
 	"options_header_enhancements": {
 		"message": "ენჰანსმენტები"
 	},
@@ -380,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "როდესაც \"$options_achievement_groups$\" ოფცია არის ჩართული, გაფართოება გააკეთებს დაცულ მოთხოვნას $domain$ -ზე რომ გააკეთოს ჯილდოების დაჯგუფება პირადი ჯილდოების გვერდზე ინფორმაციით რომელიც წარმოდგენილია Steam Hunters -ის მიერ.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -489,6 +545,22 @@
 		"message": "გამოაჩინე პროდუქტის სურათები მაღაზიის და ქომუნითის გვერდებზე",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "გააუმჯობესე პირადი ჯილდოების გვერდი"
+	},
+	"options_achievements_global_unlock": {
+		"message": "გლობალური ჯილდოების განბლოკვის პროცენტების ჩვენება"
+	},
+	"options_modernized_achievements": {
+		"message": "მოდერნიზებული დიზაინი"
+	},
+	"options_achievement_groups": {
+		"message": "დააჯგუფე ჯილდოები Steam Hunters -ის მონაცემებით",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "ფარული ჯილდოების სპოილერის ელემენტის უკან მოთავსება"
+	},
 	"options_prevent_store_images": {
 		"message": "არ ჩატვირთო სურათები პროდუქტის გვერდებზე"
 	},
@@ -503,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "დაამატეთ ღილაკი \"უკვე თქვენს ბიბლიოთეკაშია\"-ის ბლოკის დასაკეცად"
+	},
 	"options_builtin_card_drops": {
 		"message": "გამოაჩინე დროპებისა და დარჩენილი ბედჯების რაოდენობა"
 	},
@@ -511,5 +586,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "გააუმჯობესე გლობალური მიღწევების გვერდი"
+	},
+	"options_builtin_achievements_link": {
+		"message": "პირადი ჯილდოების გვერდის მიბმა"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "ლუქის სურათის ჩვენება ჩაკეთილ ჯილდოებზე"
 	}
 }

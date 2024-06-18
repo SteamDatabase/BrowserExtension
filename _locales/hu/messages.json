@@ -131,7 +131,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Ez az ár $seen$ alkalommal fordult elő, legutóbb $relative$ ($date$)",
+		"message": "Ez az ár $seen$ esetben fordult elő, utoljára $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -267,6 +267,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "Rendezés idő szerint"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Teljesítménycsoportok a Steam Hunters által biztosítva.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Meghirdetés $price$ áron",
@@ -421,6 +425,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Ha a \"$options_achievement_groups$\" beállítás engedélyezve van, a bővítmény egy biztonságosan lekéri a $domain$ oldalról a teljesítmény csoportosításokat, amelyeket a Steam Hungers biztosít.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "A legalacsonyabb rögzített ár megjelenítése a termékek oldalain"
 	},
@@ -491,22 +509,22 @@
 		}
 	},
 	"options_github_explanation": {
-		"message": "Magyarázat megtekintése a GitHubon"
+		"message": "Magyarázat megtekintése a GitHub-on"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "„Ez a kereskedés gyanúsnak tűnik” és „Biztos, hogy ez egy ajándék?” kereskedelmi ajánlat riasztások elnyomása"
+		"message": "„Ez a vétel gyanúsnak tűnik” és „Biztos, hogy ez egy ajándék?” riasztások eltüntetése"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Jobb hibaüzenetek megjelenítése a Valve rejtélyes hibakódjai helyett"
 	},
 	"options_enhancement_skip_agecheck": {
-		"message": "Korosztály-ellenőrzés átugrása"
+		"message": "Életkor ellenőrzés átugrása"
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Kor és születésnap sütik beállítása a szűrő kihagyásáért"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Eltűntetni az \"Ezzel elhagyod a Steamet\" link filtert külső oldalakról",
+		"message": "\"Ezzel elhagyod a Steamet\" figyelmeztetés eltüntetése",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
@@ -527,8 +545,21 @@
 		"message": "Termékikonok megjelenítése az áruházi és közösségi oldalakon",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "Saját játékteljesítmények oldal feljavítása"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Feloldott globális statisztikai százalék mutatása"
+	},
 	"options_modernized_achievements": {
 		"message": "Modern felület"
+	},
+	"options_achievement_groups": {
+		"message": "Teljesítmények csoportosítása a Steam Hunters adatok alapján",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Rejtett teljesítmények spoiler elem mögé helyezése"
 	},
 	"options_prevent_store_images": {
 		"message": "Képek betöltésének mellőzése a termékek oldalain"
@@ -557,6 +588,6 @@
 		"message": "Hivatkozás a saját teljesítményeid oldalára"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Lakat megjelenítése fel nem oldott teljesítményeknél"
+		"message": "Lakat megjelenítése a zárolt teljesítményeknél"
 	}
 }

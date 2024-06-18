@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "在 SteamDB 上檢視"
 	},
+	"view_on_steam_hunters": {
+		"message": "在 Steam Hunters 上檢視",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "在 PCGamingWiki 上檢視"
 	},
@@ -233,6 +237,41 @@
 	"hidden_achievement": {
 		"message": "隱藏成就： "
 	},
+	"achievement_global_unlock": {
+		"message": "$percent$ 的玩家擁有這項成就",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "已取得成就：$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "未取得成就：$count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "按時間排序"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "成就分類由 Steam Hunters 提供。",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
 		"placeholders": {
@@ -308,6 +347,9 @@
 	"options_header_trade_offers": {
 		"message": "交易提案"
 	},
+	"options_header_achievements": {
+		"message": "成就"
+	},
 	"options_header_enhancements": {
 		"message": "增強功能"
 	},
@@ -380,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "當啟用「$options_achievement_groups$」選項時，擴充功能將向 $domain$ 發出安全的請求，從而使用 Steam Hunters 提供的資料在個人成就頁面上進行成就分組。",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -489,6 +545,22 @@
 		"message": "在商店及社群頁面上顯示產品圖示",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "改進個人成就頁面"
+	},
+	"options_achievements_global_unlock": {
+		"message": "顯示全球成就取得比率"
+	},
+	"options_modernized_achievements": {
+		"message": "啟用簡約風格"
+	},
+	"options_achievement_groups": {
+		"message": "使用 Steam Hunters 提供資料進行成就分組",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "隱藏成就置於劇透元素後"
+	},
 	"options_prevent_store_images": {
 		"message": "在產品頁面上停止讀取圖片"
 	},
@@ -503,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "添加按鈕以摺疊「已在收藏庫中」的區塊"
+	},
 	"options_builtin_card_drops": {
 		"message": "在徽章頁面上顯示剩餘的可掉落卡片總數"
 	},
@@ -511,5 +586,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "改進全球成就頁面"
+	},
+	"options_builtin_achievements_link": {
+		"message": "連結至個人成就頁面"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "替鎖定的成就顯示鎖定圖示"
 	}
 }

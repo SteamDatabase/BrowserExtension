@@ -152,10 +152,10 @@
 		"message": "Automātiskā atklāšana"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automātiski atklājiet rindu, lai iegūtu spēļu karti."
+		"message": "Automātiski atklājiet Discovery Queue, lai iegūtu spēļu karti."
 	},
 	"explore_generating": {
-		"message": "Tiek ģenerēta jauna atklāšanas rinda, šis var neizdoties, ja Steam ir pārslogots…"
+		"message": "Tiek ģenerēta jauna Discovery Queue, šis var neizdoties, ja Steam ir pārslogots…"
 	},
 	"explore_exploring": {
 		"message": "Rinda tiek izskatīta… Pieprasījums nr. $current$ no $total$",
@@ -582,7 +582,7 @@
 		"message": "Parādīt kopējo atlikošo kāršu skaitu žetonu lapā"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Pievienot pogu, ar kuru automātiski iziet cauri atklāšanas rindai, kad veikalā notiek izpārdošana"
+		"message": "Pievienot pogu, ar kuru automātiski iziet cauri Discovery Queue, kad veikalā notiek izpārdošana"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Uzlabot globālo sasniegumu lapu"

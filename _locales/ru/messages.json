@@ -269,7 +269,7 @@
 		"message": "Сортировать по времени"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Достижения сгруппированы по данным Steam Hunters.",
+		"message": "Группы достижений предоставлены Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -528,7 +528,7 @@
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Автоматически принимать Соглашение подписчика Steam на торговой площадке, в инвентаре, и на странице активации ключей",
+		"message": "Автоматически принимать Соглашение подписчика Steam на Торговой площадке, в инвентаре и на странице активации ключей",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {

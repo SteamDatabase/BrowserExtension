@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "SteamDB তে দেখুন"
 	},
+	"view_on_steam_hunters": {
+		"message": "Steam Hunters-এ দেখুন​",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "PCGamingWiki তে দেখুন"
 	},
@@ -264,6 +268,10 @@
 	"achievements_sort_by_time": {
 		"message": "সময় অনুসারে সাজান"
 	},
+	"achievements_groups_by_steamhunters": {
+		"message": "কৃতিত্ব সমষ্টিগুলি Steam Hunters দ্বারা প্রদত্ত​।",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "$price$ মূল্যে নথিভুক্ত​ করুন​",
 		"placeholders": {
@@ -414,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "\"$options_achievement_groups$\" অপ্শনটি সক্রিয় থাকলে এক্সটেন্শনটি $domain$-কে একটি নিরাপদ অনুরোধ করবে, Steam Hunters-এর তথ্য দিয়ে ব্যক্তিগত কৃতিত্বের পৃষ্ঠায় কৃতিত্বের সমষ্টিকরণের জন্যে।",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},

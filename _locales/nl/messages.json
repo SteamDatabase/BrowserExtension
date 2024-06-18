@@ -3,7 +3,7 @@
 		"message": "Voegt SteamDB links en nieuwe functies toe aan de Steam winkel en community. Bekijk de laagste spel prijzen en statistieken."
 	},
 	"steamdb_options": {
-		"message": "SteamDB opties"
+		"message": "SteamDB Opties"
 	},
 	"steamdb_calculator": {
 		"message": "SteamDB rekenmachine"
@@ -22,6 +22,10 @@
 	},
 	"view_on_steamdb": {
 		"message": "Bekijk op SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Bekijk op Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Bekijk op PCGamingWiki"
@@ -64,7 +68,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Online-statistieken"
+		"message": "Online Statistieken"
 	},
 	"app_stats_online_now": {
 		"message": "Nu online:"
@@ -79,7 +83,7 @@
 		"message": "Volgers:"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB laagste gekende prijs is <b>$price$</b>",
+		"message": "SteamDB laagst gekende prijs is <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -114,7 +118,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Prijs als gezien op $date$ ($relative$)",
+		"message": "Prijs gezien op $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -148,13 +152,13 @@
 		"message": "Automatisch ontdekken"
 	},
 	"explore_auto_discover_description": {
-		"message": "Ontdek wachtrij automatisch om een activiteiten kaart te ontvangen."
+		"message": "Ontdek automatisch de wachtrij om een evenementenkaart te krijgen."
 	},
 	"explore_generating": {
 		"message": "Een nieuwe ontdekkingswachtrij aan het genereren, dit kan mislukken als Steam onder hoge druk staat…"
 	},
 	"explore_exploring": {
-		"message": "Wachtrij aan het ontdekken... Verzoek $current$ van $total$",
+		"message": "De wachtrij verkennen… Verzoek $current$ van $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -167,7 +171,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Wissen van wachtrij artikel #$current$ is mislukt, opnieuw proberen in 5 seconden…",
+		"message": "Niet gelukt om wachtrij-item #$current$ te wissen, probeer het over vijf seconden opnieuw…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -176,7 +180,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Te vaak mislukt op wachtrij artikel #$current$ te wissen. Je kunt het later opnieuw proberen.",
+		"message": "Wachtrij artikel #$current$ te vaak gefaald met wissen. Je kunt het later opnieuw proberen.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -185,13 +189,13 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Nieuwe wachtrij genereren mislukt, opnieuw proberen in 5 seconden…"
+		"message": "Het genereren van de nieuwe wachtrij is mislukt, probeer het over vijf seconden opnieuw…"
 	},
 	"explore_finished": {
-		"message": "Wachtrij is bekeken."
+		"message": "Wachtrij is verkend."
 	},
 	"badges_idle_apps": {
-		"message": "Inactieve apps: $amount$",
+		"message": "Apps om stil te zetten: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -233,6 +237,25 @@
 	"hidden_achievement": {
 		"message": "Verborgen prestatie: "
 	},
+	"achievement_global_unlock": {
+		"message": "$percent$ van de spelers heeft deze prestatie",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "BEHAALDE PRESTATIES: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
 	"achievements_locked_count": {
 		"message": "VERGRENDELDE PRESTATIES: $count$",
 		"placeholders": {
@@ -244,6 +267,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "Sorteren op tijd"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Prestatiegroepen worden geleverd door Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Op de markt zetten voor: $price$",
@@ -518,6 +545,22 @@
 		"message": "Geef product-icoon weer in winkel en op community pagina's",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "Verbeter de persoonlijke prestatiepagina"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Toon het wereldwijde prestatie ontgrendelingspercentage"
+	},
+	"options_modernized_achievements": {
+		"message": "Gemoderniseerd ontwerp"
+	},
+	"options_achievement_groups": {
+		"message": "Groepeer prestaties met gegevens van Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Verberg verborgen prestaties achter een spoiler element"
+	},
 	"options_prevent_store_images": {
 		"message": "Stop het laden van afbeeldingen op productpagina's"
 	},
@@ -532,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Voeg een knop toe om het blok \"al in je bibliotheek\" in te klappen"
+	},
 	"options_builtin_card_drops": {
 		"message": "Geef het totale aantal resterende kaart drops weer op de badges pagina"
 	},
@@ -540,5 +586,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Verbeter de globale achievements pagina"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link naar persoonlijke prestatiepagina"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Toon een slotpictogram voor vergrendelde prestaties"
 	}
 }

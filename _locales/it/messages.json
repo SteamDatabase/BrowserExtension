@@ -152,10 +152,10 @@
 		"message": "Scopri automaticamente"
 	},
 	"explore_auto_discover_description": {
-		"message": "Scopre automaticamente la coda per ottenere una carta evento."
+		"message": "Scopri automaticamente la coda per ottenere una carta evento."
 	},
 	"explore_generating": {
-		"message": "Generando una nuova coda di scoperta, questo può fallire se Steam è sotto alto carico…"
+		"message": "Generazione nuova coda di scoperta, questo può fallire se Steam è sotto carico elevato…"
 	},
 	"explore_exploring": {
 		"message": "Esplorando la coda… Richiesta $current$ di $total$",
@@ -171,7 +171,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Impossibile cancellare l'elemento in coda #$current$, nuovo tentativo tra cinque secondi…",
+		"message": "Impossibile cancellare l'elemento in coda #$current$, riprova tra cinque secondi…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -180,7 +180,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Impossibile cancellare l'elemento in coda #$current$, troppi elementi. Riprova tra un po'.",
+		"message": "Impossibile cancellare troppe volte l'elemento della coda #$current$. Puoi riprovare più tardi.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -238,7 +238,7 @@
 		"message": "Obiettivo nascosto: "
 	},
 	"achievement_global_unlock": {
-		"message": "$percent$ di giocatori hanno questo achievement",
+		"message": "$percent$ dei giocatori hanno raggiunto questo obiettivo",
 		"description": "Do not add percent symbol, it will be formatted automatically",
 		"placeholders": {
 			"percent": {
@@ -248,7 +248,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "ACHIEVEMENT GUADAGNATO:$count$",
+		"message": "OBIETTIVI RAGGIUNTI: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -257,7 +257,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "ACHIEVEMENT BLOCCATI:$count$",
+		"message": "OBIETTIVI BLOCCATI:$count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -266,14 +266,14 @@
 		}
 	},
 	"achievements_sort_by_time": {
-		"message": "Ordina per tempo di sblocco"
+		"message": "Ordina per data"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "I gruppi di achievement sono forniti da Steam Hunters.",
+		"message": "I gruppi di obiettivi sono forniti da Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
-		"message": "Vendi a $price$",
+		"message": "Elenca a $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -291,28 +291,28 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Vende l'articolo al prezzo di vendita più basso.\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
+		"message": "Elenca l'articolo al prezzo di vendita più basso\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Mette l'articolo al prezzo d'acquisto più alto tra quelli indicati\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
+		"message": "Elenca l'articolo al prezzo d'acquisto più alto\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
 	},
 	"options": {
 		"message": "Opzioni"
 	},
 	"options_welcome_title": {
-		"message": "Grazie per aver installato l'estensione SteamDB!"
+		"message": "👋 Grazie per aver installato l'estensione SteamDB!"
 	},
 	"options_welcome_description": {
 		"message": "Rivedi le opzioni qui sotto e attiva quelle che preferisci. Per tornare qui in futuro:"
 	},
 	"options_welcome_option1": {
-		"message": "Pagina delle impostazioni su SteamDB"
+		"message": "Pagina delle impostazioni di SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Menu a tendina dell'account sulle pagine Steam"
+		"message": "Menu a discesa delle pagine Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Pagina componenti aggiuntivi del tuo browser"
+		"message": "Pagina \"Estensioni\" del tuo browser"
 	},
 	"options_review": {
 		"message": "Lascia una recensione per questa estensione"
@@ -321,10 +321,10 @@
 		"message": "Questa estensione richiede ulteriori autorizzazioni per funzionare correttamente su SteamDB, Steam Store, e Steam Community."
 	},
 	"options_permissions_button": {
-		"message": "Concedi i permessi"
+		"message": "⚠️ Concedi le autorizzazioni"
 	},
 	"options_footer1": {
-		"message": "Realizzato con 💙 da persone di <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+		"message": "Realizzato con 💙 da gente di <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
 		"message": "È <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, grazie a tutti i contributori!"
@@ -345,7 +345,10 @@
 		"message": "Inventario"
 	},
 	"options_header_trade_offers": {
-		"message": "Offerta di Scambio"
+		"message": "Offerte di Scambio"
+	},
+	"options_header_achievements": {
+		"message": "Obiettivi"
 	},
 	"options_header_enhancements": {
 		"message": "Miglioramenti"
@@ -354,19 +357,19 @@
 		"message": "Spiegazione"
 	},
 	"options_website_explanation1": {
-		"message": "Quando questa opzione è abilitata, l'estensione richiederà alcuni dati dell'utente (wishlisted, owned, followed, ignored products, e prodotti nel carrello) dal <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> e li utilizzerà per applicare i punti salienti sul sito."
+		"message": "Quando questa opzione è abilitata, l'estensione richiederà alcuni dati dell'utente (lista dei desideri, acquistati, seguiti, prodotti ignorati, e prodotti nel carrello) dallo <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> e li utilizzerà per applicare i punti salienti sul sito."
 	},
 	"options_website_explanation2": {
 		"message": "Devi essere registrato sul sito perché questo funzioni."
 	},
 	"options_website_explanation3": {
-		"message": "Questo è contenuto interamente all'interno del browser e non viene mai inviato nemmeno al backend di SteamDB."
+		"message": "Questo è contenuto interamente all'interno del browser e non viene mai inviato anche al backend SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Per evitare richieste eccessive al negozio di Steam, i dati utente vengono memorizzati nella cache nella memoria locale del browser."
+		"message": "Per evitare richieste eccessive allo Steam Store, i dati degli utenti vengono memorizzati nella cache locale del browser."
 	},
 	"options_website_highlight": {
-		"message": "Evidenzia i prodotti posseduti e desiderati $domain$",
+		"message": "Evidenzia i prodotti acquistati e desiderati $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -375,13 +378,13 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Lista dei desideri, segui e ignora i prodotti sul negozio Steam direttamente da SteamDB"
+		"message": "Lista dei desideri, segui e ignora i prodotti sullo Steam Store direttamente da SteamDB"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Abilita il pacchetto script gratuito</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Abilita filtraggio extra sulla pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">di vendita</a> e <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundle</a>"
+		"message": "Abilita filtraggio extra sulla pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">di vendita</a> e <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> la pagina dei pacchetti</a>"
 	},
 	"options_extra_data": {
 		"message": "Dati aggiuntivi recuperati da $domain$",
@@ -547,6 +550,16 @@
 	},
 	"options_achievements_global_unlock": {
 		"message": "Visualizza la percentuale di sblocco globale dell'achievement"
+	},
+	"options_modernized_achievements": {
+		"message": "Design moderno"
+	},
+	"options_achievement_groups": {
+		"message": "Risultati di gruppo con i dati di Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Contrassegna gli obiettivi come elemento spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Interrompi il caricamento delle immagini sulle pagine del prodotto"

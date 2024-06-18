@@ -68,10 +68,10 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Estadísticas en línea"
+		"message": "Estadísticas de jugadores"
 	},
 	"app_stats_online_now": {
-		"message": "En línea ahora:"
+		"message": "Jugando:"
 	},
 	"app_stats_peak_today": {
 		"message": "Pico en las ult. 24 horas:"
@@ -269,7 +269,7 @@
 		"message": "Ordenar por fecha"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Los grupos de logros son proporcionados por Steam Hunters.",
+		"message": "Los logros agrupados son proporcionados por Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Cuando la opción $options_achievement_groups$ está habilitada, la extensión hará una petición segura a $domain$ para agrupar los logros en la página de logros personales con datos proporcionados por Steam Hunters.",
+		"message": "Cuando la opción «$options_achievement_groups$» está activada, la extensión hará una petición segura a $domain$ para agrupar los logros en la página de logros personales con datos proporcionados por Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -549,17 +549,17 @@
 		"message": "Mejorar la página de logros personales"
 	},
 	"options_achievements_global_unlock": {
-		"message": "Mostrar el porcentaje global de desbloqueo de logros"
+		"message": "Mostrar el porcentaje de logros globales desbloqueados"
 	},
 	"options_modernized_achievements": {
 		"message": "Diseño moderno"
 	},
 	"options_achievement_groups": {
-		"message": "Logros agrupados con datos de Steam Hunters",
+		"message": "Agrupar logros con datos de Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Poner logros ocultos detrás de un elemento spoiler"
+		"message": "Poner los logros ocultos detrás de un elemento de spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Detener la carga de imágenes en las páginas del producto"
@@ -576,7 +576,7 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "Añadir un botón para ocultar el recuadro \"Ya en tu biblioteca\""
+		"message": "Añadir un botón para ocultar el recuadro «Ya en tu biblioteca»"
 	},
 	"options_builtin_card_drops": {
 		"message": "Mostrar la cantidad total de cromos restantes en la página de insignias"
@@ -588,7 +588,7 @@
 		"message": "Mejorar la página de logros mundiales"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Enlace a la página de logros personales"
+		"message": "Vincular a la página de logros personales"
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Mostrar un icono de candado en los logros sin desbloquear"

@@ -221,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Sellel lehel on: $amount$ jäänud auhinda.",
+		"message": "Sellel lehel on: $amount$ jäänud auhinda",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {

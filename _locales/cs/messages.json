@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Zobrazit na SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Zobrazit na Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Zobrazit na PCGamingWiki"
 	},
@@ -243,6 +247,15 @@
 			}
 		}
 	},
+	"achievements_unlocked_count": {
+		"message": "ZÍSKANÉ ACHIEVEMENTY: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
 	"achievements_locked_count": {
 		"message": "UZAMČENÉ ACHIEVEMENTY: $count$",
 		"placeholders": {
@@ -251,6 +264,13 @@
 				"example": "69"
 			}
 		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Seřadit podle času"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Skupiny úspěchů poskytují Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Prodat za $price$",
@@ -405,6 +425,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Pokud je volba \"$options_achievement_groups$\" povolena, rozšíření provede bezpečný požadavek na $domain$, aby bylo provedeno seskupení úspěchů na stránce s údaji poskytnutými Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Zobrazit nejnižší zaznamenanou cenu na stránce s aplikacemi"
 	},
@@ -520,6 +554,10 @@
 	"options_modernized_achievements": {
 		"message": "Modernizovaný design"
 	},
+	"options_achievement_groups": {
+		"message": "Seskupit úspěchy s daty z Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"options_spoiler_achievements": {
 		"message": "Dát skryté achievementy za prvek spoileru"
 	},
@@ -536,6 +574,9 @@
 				"content": "<code>award</code>"
 			}
 		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Přidat tlačítko, abyste sbalili blok \"již v knihovně\""
 	},
 	"options_builtin_card_drops": {
 		"message": "Zobrazit celkový počet zbývajících karetních dropů na stránce s odznaky"

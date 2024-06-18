@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Veure a SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "Veure a Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Veure a PCGamingWiki"
 	},
@@ -243,6 +247,15 @@
 			}
 		}
 	},
+	"achievements_unlocked_count": {
+		"message": "ASSOLIMENTS ACONSEGUITS: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
 	"achievements_locked_count": {
 		"message": "ASSOLIMENTS BLOQUEJATS: $count$",
 		"placeholders": {
@@ -251,6 +264,13 @@
 				"example": "69"
 			}
 		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Ordena per temps"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Els grups d'assoliments els proporcionen Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Llistar a $price$",
@@ -405,6 +425,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Quan l'opció de \"$options_achievement_groups$\" és activa, l'extensió farà una sol·licitud segura a $domain$ per obtenir els grups d'assoliments a la teva pàgina d'assoliments amb les dades proporcionades per Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Mostra el preu més baix enregistrat a les pàgines del producte"
 	},
@@ -520,6 +554,10 @@
 	"options_modernized_achievements": {
 		"message": "Disseny modernitzat"
 	},
+	"options_achievement_groups": {
+		"message": "Agrupa els assoliments amb les dades de Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"options_spoiler_achievements": {
 		"message": "Posa els assoliments amagats darrere d'un element d'espòiler"
 	},
@@ -551,5 +589,8 @@
 	},
 	"options_builtin_achievements_link": {
 		"message": "Enllaç a la teva pàgina d'assoliments"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Mostra la icona d'un pany per als assoliments bloquejats"
 	}
 }

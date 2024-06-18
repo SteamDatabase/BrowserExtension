@@ -269,7 +269,7 @@
 		"message": "按成就解锁时间顺序"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "由 Steam Hunters 提供成就组",
+		"message": "成就分组信息由 Steam Hunters 提供。",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "当“$options_achievement_groups$”启用时，拓展将会向 $domain$ 发送安全的请求，利用 Steam Hunters 的数据对个人成就进行分组",
+		"message": "启用“$options_achievement_groups$”时，扩展程序会向 $domain$ 发送安全请求，来利用 Steam Hunters 提供的数据对个人成就页面的成就进行分组。",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
