@@ -764,7 +764,7 @@ function InitAchievements( items, isPersonal )
 
 				oldAchievementRows[ 0 ].insertAdjacentElement( 'beforebegin', newContainer );
 
-				document.querySelector( '#compareAvatar' )?.setAttribute( 'hidden', true );
+				document.getElementById( 'mainContents' ).classList.add( 'steamdb_global_achievements_page' );
 			}
 
 			gameLogoElement.hidden = true;

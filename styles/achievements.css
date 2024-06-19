@@ -22,6 +22,18 @@ html {
 	top: 22px;
 }
 
+.steamdb_global_achievements_page {
+	padding: 0 !important;
+}
+
+.steamdb_global_achievements_page #compareAvatar {
+	display: none;
+}
+
+.steamdb_global_achievements_page #headerContent {
+	margin-left: 0;
+}
+
 .steamdb_achievement_spoiler {
 	filter: brightness(3) blur(6px);
 }
