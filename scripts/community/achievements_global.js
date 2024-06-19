@@ -6,9 +6,9 @@ DoAchievements( false );
 
 {
 	const currentUser = document.querySelector( '#global_actions .user_avatar' );
-	const currentUserPath = window.location.pathname.match( /^\/stats\/\w+/ );
+	const currentUserPath = location.pathname.split( '/' );
 
-	if( currentUser && currentUserPath )
+	if( currentUser && currentUserPath[ 1 ] === 'stats' )
 	{
 		const currentUserUrl = currentUser.href.replace( /\/$/, '' );
 
@@ -17,7 +17,7 @@ DoAchievements( false );
 
 		const link = document.createElement( 'a' );
 		link.className = 'tabOff';
-		link.href = `${currentUserUrl}${currentUserPath}?tab=achievements`;
+		link.href = `${currentUserUrl}/stats/${currentUserPath[ 2 ]}?tab=achievements`;
 		link.textContent = _t( 'view_your_achievements' );
 
 		tab.appendChild( link );
