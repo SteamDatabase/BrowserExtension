@@ -734,7 +734,7 @@ function InitAchievements( items, isPersonal )
 			image.src = GetLocalResource( 'icons/white.svg' );
 			disclaimer.append( image );
 
-			disclaimer.append( document.createTextNode( ' + ' ) );
+			disclaimer.append( document.createTextNode( ' × ' ) );
 
 			image = document.createElement( 'img' );
 			image.src = GetLocalResource( 'icons/steamhunters.svg' );
