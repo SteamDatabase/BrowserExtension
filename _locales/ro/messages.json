@@ -74,10 +74,10 @@
 		"message": "Online acum:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-ore:"
+		"message": "Record 24-ore:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Total:"
+		"message": "Record tot timpul:"
 	},
 	"app_stats_followers": {
 		"message": "Urmăritori:"
@@ -118,7 +118,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Preț este văzută pe $date$ ($relative$)",
+		"message": "Preț este văzut pe $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -171,7 +171,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Nu s-a reușit ștergerea cozii elementului #$current$, încercând din nou în cinci secunde…",
+		"message": "Nu s-a reușit ștergerea cozii elementului #$current$, încercăm din nou în cinci secunde…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -282,7 +282,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Vânzare la $price$",
+		"message": "Vinde la $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -291,7 +291,7 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Listează articolul pentru cel mai mic preț de vânzare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"
+		"message": "Listează articolul pentru cel mai mic preț de vânzare listat\n\nPrețul afișat este suma pe care o primești (fără comisioane)"
 	},
 	"inventory_sell_at_title": {
 		"message": "Listează articolul pentru cel mai mare preț al ordinului de cumpărare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"

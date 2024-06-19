@@ -105,7 +105,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "El precio más bajo registrado en SteamDB es de <b>$price$</b> y el más bajo de los últimos 2 años es de <b>$price_limited$</b>",
+		"message": "El precio más bajo registrado en SteamDB es de <b>$price$</b> y el más bajo en los últimos 2 años es de <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -248,7 +248,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "LOGROS OBTENIDOS: $count$",
+		"message": "LOGROS DESBLOQUEADOS: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -257,7 +257,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "LOGROS BLOQUEADOS: $count$",
+		"message": "LOGROS SIN DESBLOQUEAR: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -269,7 +269,7 @@
 		"message": "Ordenar por fecha"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Los logros agrupados son proporcionados por Steam Hunters.",
+		"message": "Los grupos de logros son proporcionados por Steam Hunters a través de SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

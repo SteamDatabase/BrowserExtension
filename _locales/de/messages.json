@@ -269,7 +269,7 @@
 		"message": "Nach Zeit sortieren"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Errungenschaftsgruppen werden von Steam Hunters bereitgestellt.",
+		"message": "Errungenschaftsgruppen werden von Steam Hunters über SteamDB bereitgestellt.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

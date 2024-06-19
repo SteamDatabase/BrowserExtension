@@ -269,7 +269,7 @@
 		"message": "ترتيب حسب الوقت"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "مجموعات الإنجازات متوفرة عن طريق Steam Hunters.",
+		"message": "مجموعات الإنجازات متوفرة من قبل Steam Hunters عن طريق SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

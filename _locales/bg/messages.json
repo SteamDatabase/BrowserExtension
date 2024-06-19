@@ -269,7 +269,7 @@
 		"message": "Сортирай по време"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Групираните постижения са предоставени от Steam Hunters.",
+		"message": "Групираните постижения са предоставени от Steam Hunters чрез SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -294,7 +294,7 @@
 		"message": "Пускане на артикула за най-ниската посочена продажна цена\n\nПоказаната цена са парите, които получавате (без такси)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Пускане на артикула за най-високата посочена продажна цена\n\nПоказаната цена са парите, които получавате (без такси)"
+		"message": "Продаване на артикула за най-високата заявена цена за купуване\n\nПоказаната цена са парите, които получавате (без такси)"
 	},
 	"options": {
 		"message": "Опции"

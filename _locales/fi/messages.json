@@ -273,7 +273,7 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
-		"message": "Listaa hintaan $price$",
+		"message": "Aseta myyntiin hintaan $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -291,22 +291,22 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Listaa tavaran alimpaan listattuun myyntihintaan\n\nNäytetty hinta on summa jonka saat (ilman kuluja)"
+		"message": "Asettaa tavaran myyntiin alimpaan listattuun hintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa jonka saat (ilman kuluja)"
+		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
 	},
 	"options": {
 		"message": "Asetukset"
 	},
 	"options_welcome_title": {
-		"message": "👋 Kiitos kun asensit SteamDB-laajennuksen!"
+		"message": "👋 Kiitos, kun asensit SteamDB-laajennuksen!"
 	},
 	"options_welcome_description": {
-		"message": "Tutustu alla oleviin vaihtoehtoihin ja vaihda haluamasi vaihtoehdot. Löydät tälle sivulle uudestaan seuraavilla keinoilla:"
+		"message": "Tutustu alla oleviin asetuksiin ja muuta haluamiasi asetuksia. Löydät tälle sivulle uudestaan seuraavilla keinoilla:"
 	},
 	"options_welcome_option1": {
-		"message": "SteamDB:n asetussivu"
+		"message": "SteamDB:n asetukset"
 	},
 	"options_welcome_option2": {
 		"message": "Steam-sivujen tilin pudotusvalikko"
@@ -357,7 +357,7 @@
 		"message": "Selitys"
 	},
 	"options_website_explanation1": {
-		"message": "Kun tämä asetus on käytössä, laajennus pyyntää joitakin käyttäjän tietoja (toivelista, omistetut, seuratut, ohitetut ja ostokorin tuotteet) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam storesta</a> ja käyttää näitä tuotteiden korostamiseen sivulla."
+		"message": "Kun tämä asetus on käytössä, laajennus pyytää joitakin käyttäjätietoja (toivelista, omistetut, seuratut, ohitetut ja ostokorin tuotteet) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam-kaupasta</a> ja käyttää näitä tuotteiden korostamiseen sivulla."
 	},
 	"options_website_explanation2": {
 		"message": "Sinun täytyy olla kirjautuneena kauppaan, jotta tämä toimii."
@@ -369,7 +369,7 @@
 		"message": "Estääksemme liialliset pyynnöt Steam-kauppaan, käyttäjätietosi tallennetaan selaimesi välimuistiin."
 	},
 	"options_website_highlight": {
-		"message": "Korosta omistetut ja toivotut tuotteet $domain$:ssa",
+		"message": "Korosta omistetut ja wishlistatut tuotteet $domain$:ssa",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -396,7 +396,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Kun \"$options_online_stats$\" tai \"$options_steamdb_last_update$\" ovat käytössä, laajennus tekee salatun pyynnön $domain$:on saadakseen tämänhetkisen pelaajaluvun ja viimeisimmän pelin päivityksen.",
+		"message": "Kun \"$options_online_stats$\" tai \"$options_steamdb_last_update$\" on käytössä, laajennus tekee salatun pyynnön $domain$:on saadakseen tämänhetkisen pelaajaluvun ja viimeisimmän pelin päivityksen.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Kun \"$options_achievement_groups$\" asetus on päällä, laajennus tekee suojatun pyynnön $domain$ :lle tehdäkseen saavutus ryhmityksen henkilökohtaiselle saavutus sivulle Steam Huntersin tarjoamalla tiedoilla.",
+		"message": "Kun \"$options_achievement_groups$\" asetus on päällä, laajennus tekee suojatun pyynnön $domain$ :lle tehdäkseen saavutusryhmityksen henkilökohtaiselle saavutussivulle Steam Huntersin tarjoamalla tiedoilla.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -452,7 +452,7 @@
 		"message": "Näytä painike kauppasivuilla"
 	},
 	"options_button_pcgw": {
-		"message": "Näytä PCGamingWiki painike kauppasivuilla"
+		"message": "Näytä PCGamingWiki -painike kauppasivuilla"
 	},
 	"options_button_sub": {
 		"message": "Näytä painike pakettisivuilla"
@@ -461,7 +461,7 @@
 		"message": "Näytä painike yhteisökeskuksissa"
 	},
 	"options_button_gamecards": {
-		"message": "Näytä SteamDB ja kauppasivu painikkeet keräilykorttisivulla"
+		"message": "Näytä SteamDB ja kauppasivu -painikkeet keräilykorttisivulla"
 	},
 	"options_link_subid": {
 		"message": "Näytä SubID jokaisen ostovaihtoedon alla"
@@ -471,16 +471,16 @@
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Linkitä paketit käyttöoikeudet -sivullasi"
+		"message": "Linkitä paketit käyttöoikeudet-sivullasi"
 	},
 	"options_profile_calculator": {
 		"message": "Lisää laskimen linkki käyttäjäprofiileihin"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Siirrä pelien valinta tavaraluettelon viereen"
+		"message": "Siirrä pelin valinta tavaraluettelosivulla sivuun"
 	},
 	"options_link_inventory": {
-		"message": "Linkitä lahjoista ja kupongeista tavaraluettelossasi SteamDB:hen"
+		"message": "Linkitä jokainen lahja ja kuponki tavaraluettelossasi SteamDB:hen"
 	},
 	"options_link_inventory_gift_subid": {
 		"message": "Selvitä lahjan SubID tavaraluettelossasi"
@@ -498,7 +498,7 @@
 		"message": "Näytä tavaroiden kauppahinta muiden käyttäjien tavaraluetteloissa"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Tue $for_item$ ja $my_item$ parametrejä",
+		"message": "Tue $for_item$ ja $my_item$ parametreja",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -512,13 +512,13 @@
 		"message": "Katso selitys GitHubissa"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Estä \"tämä vaihto näyttää epäillyttävältä\" ja \"oletko varma että tämä on lahja?\" vaihtotarjouksien varoitukset"
+		"message": "Estä \"tämä vaihto näyttää epäilyttävältä\" ja \"oletko varma, että tämä on lahja?\" vaihtotarjouksien varoitukset"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Näytä parempia virheviestejä Valven kryptisten virhenumeroiden sijaan"
 	},
 	"options_enhancement_skip_agecheck": {
-		"message": "Ohita iän tarkistussivu"
+		"message": "Ohita iäntarkistussivu"
 	},
 	"options_enhancement_skip_agecheck_description": {
 		"message": "Asettaa iän ja syntymäpäivän evästeet aina läpäiseväksi"
@@ -539,10 +539,10 @@
 		"message": "Piilota \"Avaa Steamissa\" banneri"
 	},
 	"options_steamdb_rating": {
-		"message": "Näytä SteamDB arvostelut kauppasivuilla"
+		"message": "Näytä SteamDB arvostelut tuotesivuilla"
 	},
 	"options_enhancement_appicon": {
-		"message": "Näytä tuotteen kuvake kauppa- ja yhteisösivuilla",
+		"message": "Näytä tuotekuvake kauppa- ja yhteisösivuilla",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
@@ -552,10 +552,10 @@
 		"message": "Näytä maailmanlaajuisten saavutusten avausprosentti"
 	},
 	"options_modernized_achievements": {
-		"message": "Modernisoitu muotoilu"
+		"message": "Modernisoitu tyyli"
 	},
 	"options_achievement_groups": {
-		"message": "Ryhmä saavutukset Steam huntersin tiedoilla",
+		"message": "Ryhmitä saavutukset Steam Huntersin tietoihin",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
@@ -565,7 +565,7 @@
 		"message": "Estä kuvien lataaminen kauppasivuilla"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Jotkut kehittäjät laittavat megatavujen edestä kuvia pelien kuvauksiin, joissa saattaa kestää pitkään ladata. Klikkaa kuvaa ladataksesi sen"
+		"message": "Jotkut kehittäjät laittavat megatavujen edestä kuvia pelien kuvauksiin, joiden lataus saatta kestää pitkään. Klikkaa kuvaa ladataksesi"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Tue $award$ parametriä profiileissa ja jaetuissa tiedostolinkeissä",
@@ -576,10 +576,10 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "Lisää painike sulkeaksesi \"jo kirjastossa\" lohkon"
+		"message": "Lisää painike sulkeaksesi \"kirjastossa\" -lohkon"
 	},
 	"options_builtin_card_drops": {
-		"message": "Näytä jäljellä olevien korttilöytöjen määrä merkit -sivulla"
+		"message": "Näytä jäljellä olevien korttilöytöjen määrä kunniamerkit-sivulla"
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Lisää painike löytöjonon automatisoimiseen alennusten aikana"

@@ -266,10 +266,10 @@
 		}
 	},
 	"achievements_sort_by_time": {
-		"message": ""
+		"message": "Sắp xếp theo thời gian"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Nhóm các thành tựu được cung cấp bởi Steam Hunters.",
+		"message": "Dữ liệu dùng gộp nhóm thành tựu được cung cấp bởi Steam Hunters thông qua SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -348,7 +348,7 @@
 		"message": "Yêu cầu trao đổi"
 	},
 	"options_header_achievements": {
-		"message": "Thành Tựu"
+		"message": "Thành tựu"
 	},
 	"options_header_enhancements": {
 		"message": "Cải thiện"
@@ -413,7 +413,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Khi tùy chọn \"$options_steamdb_lowest_price$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ kèm đơn vị tiền của bạn (theo thông tin được Steam giả định) để hiển thị giá được ghi nhận cho trò chơi nhất định.",
+		"message": "Khi tùy chọn \"$options_steamdb_lowest_price$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ kèm đơn vị tiền của bạn (theo thông tin được Steam xác định) để hiển thị giá được ghi nhận cho trò chơi nhất định.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -422,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Khi tùy chọn \"$options_achievement_groups$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để gộp nhóm thành tựu trên trang thành tựu cá nhân bằng dữ liệu cung cấp bởi Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -532,13 +546,20 @@
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "Cải thiện trang thành tích cá nhân"
+		"message": "Cải thiện trang thành tựu cá nhân"
 	},
 	"options_achievements_global_unlock": {
 		"message": "Hiển thị tỷ lệ mở khóa thành tích global"
 	},
 	"options_modernized_achievements": {
 		"message": "Thiết kế hiện đại"
+	},
+	"options_achievement_groups": {
+		"message": "Gộp nhóm thành tựu bằng dữ liệu từ Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Đem thành tựu bị ẩn xuống bên dưới lớp phủ tiết lộ nội dung"
 	},
 	"options_prevent_store_images": {
 		"message": "Dừng tải hình ảnh trên các trang sản phẩm"
@@ -554,6 +575,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Thêm nút thu gọn biểu ngữ \"đã ở trong thư viện\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Hiển thị tổng số lượng thẻ rơi còn lại trên trang huy hiệu"
 	},
@@ -562,6 +586,9 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Cải thiện trang thành tựu toàn cầu"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Liên kết đến trang thành tựu cá nhân"
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Hiển thị icon khóa cho những thành tựu chưa mở khóa"

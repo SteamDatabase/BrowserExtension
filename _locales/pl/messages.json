@@ -74,7 +74,7 @@
 		"message": "Aktualnie online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-godzinny max. graczy:"
+		"message": "24-godzinny rekord:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Rekord aktywnych graczy:"
@@ -105,7 +105,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Najniższa zarejestrowana cena przez SteamDB to <b>$price$</b>, a w ciągu ostatnich dwóch lat <b>$price_limited$</b>",
+		"message": "Najniższa cena zarejestrowana przez SteamDB to <b>$price$</b>, a w ciągu ostatnich dwóch lat <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -225,7 +225,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Pozostałe dropy na tej stronie: $amount$",
+		"message": "Karty do zdobycia na tej stronie: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -269,7 +269,7 @@
 		"message": "Sortuj według czasu"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Grupy osiągnięć są dostarczane przez Steam Hunters.",
+		"message": "Grupy Osiągnięć są dostarczane przez Steam Hunters za pośrednictwem SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Kiedy opcja \"$options_achievement_groups$\" jest włączona, rozszerzenie wyśle bezpieczne zapytanie do $domain$, aby pogrupować osiągnięcia na stronie osiągnięć osobistych danymi dostarczonymi przez Steam Hunters.",
+		"message": "Kiedy opcja \"$options_achievement_groups$\" jest włączona, rozszerzenie wyśle bezpieczne żądanie do $domain$, aby pogrupować osiągnięcia na stronie osiągnięć osobistych według danych dostarczonych przez Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -446,28 +446,28 @@
 		"message": "Wyświetl aktualną i największą zarejestrowaną liczbę graczy na stronach produktu"
 	},
 	"options_steamdb_last_update": {
-		"message": "Wyświetlaj ostatnią aktualizację na stronach produktu"
+		"message": "Wyświetl ostatnią aktualizację na stronach produktów"
 	},
 	"options_button_app": {
-		"message": "Wyświetlaj przycisk na stronach produktu"
+		"message": "Wyświetl przycisk na stronach produktów"
 	},
 	"options_button_pcgw": {
-		"message": "Wyświetlaj przycisk PCGamingWiki na stronach produktu"
+		"message": "Wyświetl przycisk PCGamingWiki na stronach produktów"
 	},
 	"options_button_sub": {
-		"message": "Wyświetlaj przycisk na stronach paczek"
+		"message": "Wyświetl przycisk na stronach paczek"
 	},
 	"options_button_gamehub": {
-		"message": "Wyświetlaj przycisk w centrach gier"
+		"message": "Wyświetl przycisk w centrach społeczności"
 	},
 	"options_button_gamecards": {
-		"message": "Wyświetlaj przyciski do SteamDB i strony w sklepie na stronach kart"
+		"message": "Wyświetl przyciski SteamDB i strony w sklepie na stronach kart"
 	},
 	"options_link_subid": {
-		"message": "Wyświetlaj SubID pod każdą opcją zakupu"
+		"message": "Wyświetl SubID pod każdą opcją zakupu"
 	},
 	"options_link_subid_widget": {
-		"message": "Wyświetlaj SubID w osadzonych widżetach",
+		"message": "Wyświetl SubID w osadzonych widżetach",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
@@ -477,10 +477,10 @@
 		"message": "Dodaj link do kalkulatora na profilach społecznościowych"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Przenieś listę wyboru gier w ekwipunku na bok"
+		"message": "Przesuń listę wyboru gier na stronie ekwipunku na bok"
 	},
 	"options_link_inventory": {
-		"message": "Linkuj każdy prezent i kupon w twoim ekwipunku do SteamDB"
+		"message": "Połącz każdy prezent i kupon w twoim ekwipunku z SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
 		"message": "Prawidłowo określ SubID prezentu w ekwipunku"
@@ -515,13 +515,13 @@
 		"message": "Zignoruj powiadomienia \"ta oferta wydaje się podejrzana\" oraz \"czy jesteś pewien, że jest to prezent?\" w ofertach wymiany"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Wyświetlaj lepsze komunikaty o błędach, zamiast niezrozumiałych numerów błędów od Valve"
+		"message": "Wyświetlaj lepsze komunikaty o błędach, zamiast niezrozumiałych numerów błędów Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Pomiń stronę weryfikacji wieku"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Ustawia ciasteczka wieku oraz urodzin, aby pominąć pytanie o wiek"
+		"message": "Ustaw wymagane ciasteczka, aby pominąć pytanie o wiek"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Usuń filtrowanie \"Opuszczasz Steam\" z linków do zewnętrznych stron",
@@ -539,36 +539,36 @@
 		"message": "Schowaj baner \"Otwórz w Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Wyświetlaj ocenę SteamDB na stronach produktu"
+		"message": "Wyświetlaj ocenę SteamDB na stronach produktów"
 	},
 	"options_enhancement_appicon": {
 		"message": "Wyświetlaj ikonę produkty na stronach sklepu i społeczności",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "Usprawnij stronę swoich osiągnięć"
+		"message": "Ulepsz stronę osiągnięć osobistych"
 	},
 	"options_achievements_global_unlock": {
-		"message": "Wyświetl procent odblokowań osiągnięć globalnych"
+		"message": "Wyświetl globalny procent odblokowania osiągnięć"
 	},
 	"options_modernized_achievements": {
-		"message": "Nowoczesny wygląd"
+		"message": "Zmodernizowany wygląd"
 	},
 	"options_achievement_groups": {
-		"message": "Grupuj osiągnięcia danymi od Steam Hunters",
+		"message": "Grupuj osiągnięcia według danych od Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Oznacz ukryte osiągnięcia jako spoiler"
+		"message": "Umieść ukryte osiągnięcia za elementem spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Zatrzymaj ładowanie obrazów na stronach produktu"
+		"message": "Zatrzymaj ładowanie obrazów na stronach produktów"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Niektóre produkty zawierają w opisie obrazy, których załadowanie może zając trochę czasu. Kliknij obraz, aby go załadować"
+		"message": "Niektórzy deweloperzy umieszczają megabajty obrazów w opisach produktów, których ładowanie może zająć trochę czasu. Kliknij obraz, aby go załadować"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Obsługa parametru $award$ na linkach do profilu i udostępnionych plików",
+		"message": "Wsparcie parametru $award$ na linkach do profilów i udostępnionych plików",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"
@@ -585,10 +585,10 @@
 		"message": "Dodaj przycisk, aby automatycznie przejrzeć kolejkę odkryć podczas wyprzedaży"
 	},
 	"options_builtin_achievements_global": {
-		"message": "Usprawnij stronę globalnych osiągnięć"
+		"message": "Ulepsz stronę globalnych osiągnięć"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Link do twojej strony z osiągnięciami"
+		"message": "Link do strony osiągnięć osobistych"
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Wyświetl ikonę blokady dla zablokowanych osiągnięć"

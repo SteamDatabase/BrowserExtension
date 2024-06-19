@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "SteamDB 에서 보기"
 	},
+	"view_on_steam_hunters": {
+		"message": "Steam Hunters에서 보기",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "PCGamingWiki 에서 보기"
 	},
@@ -190,8 +194,56 @@
 	"explore_finished": {
 		"message": "대기열이 탐색이 완료되었습니다."
 	},
+	"badges_idle_drops": {
+		"message": "남은 카드: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_drops_on_this_page": {
+		"message": "이 페이지에 남은 카드: $amount$",
+		"description": "Shown on your badges page, can also be translated as cards remaining",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"hidden_achievement": {
 		"message": "숨겨진 도전 과제: "
+	},
+	"achievement_global_unlock": {
+		"message": "$percent$의 플레이어가 이 도전 과제를 달성했습니다.",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "획득한 도전 과제: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "잠긴 도전 과제: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
 	},
 	"achievements_sort_by_time": {
 		"message": "시간순으로 정렬"
@@ -304,6 +356,52 @@
 	"options_website_highlight1": {
 		"message": "SteamDB 에서 Steam 상점의 제품을 직접 위시리스트에 추가, 팔로우, 무시할 수 있습니다."
 	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">무료 패키지 스크립트 활성화</a>"
+	},
+	"options_website_highlight3": {
+		"message": "추가 필터링 활성화 <a href=\"https://steamdb.info/sales/\" target=\"_blank\">판매 페이지</a> 및 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">번들 페이지</a>"
+	},
+	"options_extra_data": {
+		"message": "$domain$에서 가져온 추가 데이터",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "\"$options_online_stats$\" 또는 \"$options_steamdb_last_update$\" 옵션이 활성화되면, 확장 프로그램은 $domain$에 보안 요청을 수행하여 현재 플레이어 수와 마지막 게임 업데이트를 가져옵니다.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "\"$options_achievement_groups$\" 옵션이 활성화되면, 확장 프로그램은 Steam Hunters가 제공한 데이터를 사용하여 개인 도전 과제 페이지에서 도전 과제 그룹화를 수행하도록 $domain$에 보안 요청을 수행합니다.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "제품 페이지에 기록된 최저가를 표시합니다"
 	},
@@ -319,11 +417,23 @@
 	"options_button_pcgw": {
 		"message": "제품 페이지에서 PCGamingWiki 버튼을 표시합니다"
 	},
+	"options_button_sub": {
+		"message": "패키지 페이지에 버튼 표시"
+	},
 	"options_button_gamehub": {
 		"message": "커뮤니티 허브에서 버튼을 표시합니다"
 	},
+	"options_button_gamecards": {
+		"message": "게임 카드 페이지에 SteamDB 및 상점 페이지 버튼 표시"
+	},
+	"options_link_subid": {
+		"message": "각 구매 옵션 아래에 SubID 표시"
+	},
 	"options_profile_calculator": {
 		"message": "커뮤니티 프로필에 계산기 주소를 추가합니다"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "보관함 페이지의 게임 선택을 옆으로 이동"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "아이템을 판매할 때 보관함을 새로고침하지 않습니다"

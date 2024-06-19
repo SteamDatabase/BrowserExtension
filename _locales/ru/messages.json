@@ -269,7 +269,7 @@
 		"message": "Сортировать по времени"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Группы достижений предоставлены Steam Hunters.",
+		"message": "Группы достижений предоставлены Steam Hunters через SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

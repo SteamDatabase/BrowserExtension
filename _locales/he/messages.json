@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "הצג ב-SteamDB"
 	},
+	"view_on_steam_hunters": {
+		"message": "ראה ב-Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "הצג ב-PCGamingWiki"
 	},
@@ -233,6 +237,19 @@
 	"hidden_achievement": {
 		"message": "הישגים מוסתרים: "
 	},
+	"achievement_global_unlock": {
+		"message": "ל-$percent$ מהשחקנים יש הישג זה",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "מיין לפי זמן"
+	},
 	"inventory_list_at": {
 		"message": "פרסם במחיר $price$",
 		"placeholders": {
@@ -307,6 +324,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "הצעות החלפה"
+	},
+	"options_header_achievements": {
+		"message": "הישגים"
 	},
 	"options_header_enhancements": {
 		"message": "שידרוגים נוספים"
@@ -489,6 +509,9 @@
 		"message": "הצג לוגו של המוצר בדף החנות והקהילה של המוצר",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_modernized_achievements": {
+		"message": "עיצוב חדשני"
+	},
 	"options_prevent_store_images": {
 		"message": "עצור טעינה של תמונות בדפי המוצרים"
 	},
@@ -511,5 +534,8 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "שיפורים לעמוד ההישגים"
+	},
+	"options_builtin_achievements_link": {
+		"message": "קישור לעמוד ההישגים האישיים"
 	}
 }

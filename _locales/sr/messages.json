@@ -243,6 +243,15 @@
 			}
 		}
 	},
+	"achievements_unlocked_count": {
+		"message": "ОСТВАРЕНА ДОСТИГНУЋА: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
 	"achievements_locked_count": {
 		"message": "ЗАКЉУЧАНА ДОСТИГНУЋА: $count$",
 		"placeholders": {
@@ -251,6 +260,13 @@
 				"example": "69"
 			}
 		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Поређај према времену"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Групе достигнућа обезбеђују Steam Hunters преко SteamDB-а.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Објави за $price$",
@@ -405,6 +421,20 @@
 			}
 		}
 	},
+	"options_extra_data_achievement_groups": {
+		"message": "Када је опција „$options_achievement_groups$“ омогућена, проширење ће послати безбедни захтев за $domain$ да изврши груписање достигнућа на страници личних достигнућа са подацима које обезбеђује Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "Прикажи најнижу снимљену цену на страницама производа"
 	},
@@ -520,6 +550,10 @@
 	"options_modernized_achievements": {
 		"message": "Модернизован дизајн"
 	},
+	"options_achievement_groups": {
+		"message": "Групна достигнућа са подацима из Steam Hunters-а",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"options_spoiler_achievements": {
 		"message": "Стави скривена достигнућа иза спојлер елемента"
 	},
@@ -537,6 +571,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Додајте дугме да бисте скупили блок „већ у вашој библиотеци“"
+	},
 	"options_builtin_card_drops": {
 		"message": "Прикажи укупан број преосталих картица на страници беџева"
 	},
@@ -548,5 +585,8 @@
 	},
 	"options_builtin_achievements_link": {
 		"message": "Вежи ка личној страници достигнућа"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Прикажите икону закључавања за закључана достигнућа"
 	}
 }

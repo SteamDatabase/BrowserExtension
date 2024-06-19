@@ -269,7 +269,7 @@
 		"message": "Trier par date"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Le regroupement des succès est fourni par Steam Hunters.",
+		"message": "Les groupes de succès sont fournis par Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

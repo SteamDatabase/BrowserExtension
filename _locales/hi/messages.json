@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "SteamDB पर देखें"
 	},
+	"view_on_steam_hunters": {
+		"message": "स्टीम हंटर्स पर देखें",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "PCGamingWiki पर देखें"
 	},
@@ -189,6 +193,16 @@
 	},
 	"explore_finished": {
 		"message": "कतार की खोज हो चुकी है।"
+	},
+	"badges_idle_apps": {
+		"message": "ड्रॉप्स वाले ऐप्स: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
 	},
 	"badges_idle_drops": {
 		"message": "शेष ड्रॉप: $amount$",

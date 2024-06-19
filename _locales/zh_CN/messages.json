@@ -257,7 +257,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "未解锁的成就：$count$",
+		"message": "未解锁的成就数：$count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",

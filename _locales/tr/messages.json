@@ -269,7 +269,7 @@
 		"message": "Tarihe göre sırala"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Başarım grupları Steam Hunters tarafından sağlanmaktadır.",
+		"message": "Başarım gruplandırmaları Steam Hunters tarafından SteamDB aracılığıyla sağlanmaktadır.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

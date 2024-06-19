@@ -269,7 +269,7 @@
 		"message": "Ordenar por data"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Os grupos de conquistas são fornecidos pelo site Steam Hunters.",
+		"message": "Os grupos de conquistas são fornecidos pelos Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
