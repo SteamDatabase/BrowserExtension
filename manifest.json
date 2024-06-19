@@ -369,7 +369,8 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/community/profile_achievements.js"
+				"scripts/community/achievements.js",
+				"scripts/community/achievements_profile.js"
 			],
 			"css":
 			[
@@ -384,7 +385,8 @@
 			"js":
 			[
 				"scripts/common.js",
-				"scripts/community/global_achievements.js"
+				"scripts/community/achievements.js",
+				"scripts/community/achievements_global.js"
 			],
 			"css":
 			[

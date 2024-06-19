@@ -1,11 +1,21 @@
+/* exported DoAchievements */
 'use strict';
 
-GetOption( {
-	'improve-achievements': true,
-	'spoiler-achievements': true,
-	'achievements-group-updates': true,
-	'achievements-global-unlock': true,
-}, function( items )
+// eslint-disable-next-line no-unused-vars
+function DoAchievements( isPersonal )
+{
+	GetOption( {
+		'improve-achievements': true,
+		'spoiler-achievements': true,
+		'achievements-group-updates': true,
+		'achievements-global-unlock': true,
+	}, ( items ) =>
+	{
+		InitAchievements( items, isPersonal );
+	} );
+}
+
+function InitAchievements( items, isPersonal )
 {
 	if( !items[ 'improve-achievements' ] )
 	{
@@ -16,7 +26,7 @@ GetOption( {
 	const showGlobalUnlock = !!items[ 'achievements-global-unlock' ];
 	const oldContainer = document.getElementById( 'personalAchieve' );
 
-	if( !oldContainer )
+	if( isPersonal && !oldContainer )
 	{
 		return;
 	}
@@ -43,9 +53,12 @@ GetOption( {
 	const extraTabs = document.createElement( 'div' );
 	extraTabs.className = 'steamdb_stats_extra_tabs';
 
-	const sortButton = document.createElement( 'button' );
+	let sortButton = null;
 
+	if( isPersonal )
 	{
+		sortButton = document.createElement( 'button' );
+
 		sortButton.type = 'button';
 		sortButton.className = 'btn_grey_black btn_small_thin steamdb_achievements_sort_button';
 
@@ -58,11 +71,19 @@ GetOption( {
 	// Steam Hunters link
 	const steamID = location.pathname.match( /^\/(?<url>(?:id|profiles)\/(?:[^\s/]+))\/?/ );
 
-	if( steamID )
+	if( steamID || !isPersonal )
 	{
 		const link = document.createElement( 'a' );
-		link.href = `https://steamhunters.com/${steamID.groups.url}/apps/${appid}/achievements?utm_source=SteamDB`;
 		link.dataset.tooltipText = _t( 'view_on_steam_hunters' );
+
+		if( steamID )
+		{
+			link.href = `https://steamhunters.com/${steamID.groups.url}/apps/${appid}/achievements?utm_source=SteamDB`;
+		}
+		else
+		{
+			link.href = `https://steamhunters.com/apps/${appid}/achievements?utm_source=SteamDB`;
+		}
 
 		const image = document.createElement( 'img' );
 		image.className = 'steamdb_stats_tab_icon';
@@ -90,7 +111,7 @@ GetOption( {
 
 	document.querySelector( '#tabs' ).append( extraTabs );
 
-	if( oldContainer.classList.contains( 'compare_view' ) )
+	if( isPersonal && oldContainer.classList.contains( 'compare_view' ) )
 	{
 		return;
 	}
@@ -294,10 +315,19 @@ GetOption( {
 			const icon = iconSlash > 0 ? image.src.substring( iconSlash + 1 ) : null;
 
 			const name = element.querySelector( '.achieveTxt > h3' ).textContent;
-			const unlock = element.querySelector( '.achieveUnlockTime' )?.textContent.trim();
 			const progress = element.querySelector( '.achievementProgressBar' );
 			let progressText = null;
 			let progressWidth = null;
+			let unlock;
+
+			if( isPersonal )
+			{
+				unlock = element.querySelector( '.achieveUnlockTime' )?.textContent.trim();
+			}
+			else
+			{
+				unlock = element.classList.contains( 'unlocked' );
+			}
 
 			if( progress )
 			{
@@ -377,13 +407,12 @@ GetOption( {
 			}
 
 			const image = document.createElement( 'img' );
-			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlock ? achievement.icon : achievement.icon_gray}`;
+			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${!isPersonal || player.unlock ? achievement.icon : achievement.icon_gray}`;
 			image.className = 'steamdb_achievement_image';
 			image.loading = 'lazy';
 			element.append( image );
 
 			const nameContainer = document.createElement( 'div' );
-			nameContainer.className = '';
 			element.append( nameContainer );
 
 			const name = document.createElement( 'h3' );
@@ -405,9 +434,13 @@ GetOption( {
 
 				if( spoilerAchievements )
 				{
-					image.classList.add( 'steamdb_achievement_spoiler' );
-					name.classList.add( 'steamdb_achievement_spoiler' );
 					desc.classList.add( 'steamdb_achievement_spoiler' );
+
+					if( isPersonal )
+					{
+						image.classList.add( 'steamdb_achievement_spoiler' );
+						name.classList.add( 'steamdb_achievement_spoiler' );
+					}
 				}
 			}
 			else
@@ -415,6 +448,39 @@ GetOption( {
 				const desc = document.createElement( 'h5' );
 				desc.textContent = achievement.localized_desc;
 				nameContainer.append( desc );
+			}
+
+			if( !isPersonal )
+			{
+				const unlock = document.createElement( 'div' );
+				unlock.className = 'steamdb_achievement_unlock_global';
+				unlock.textContent = percentFormatter.format( achievement.global_unlock );
+				element.append( unlock );
+
+				const checkmark = document.createElement( 'div' );
+				checkmark.className = 'steamdb_achievement_checkmark';
+				element.prepend( checkmark );
+
+				if( player.unlock )
+				{
+					checkmark.innerHTML = `
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+							<path d="M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z"/>
+						</svg>
+					`;
+
+					if( achievement.global_unlock < 0.1 )
+					{
+						image.classList.add( 'steamdb_achievement_image_glow' );
+					}
+				}
+
+				const overlay = document.createElement( 'div' );
+				overlay.className = 'steamdb_achievement_global_progress_overlay';
+				overlay.style.width = `${Math.round( achievement.global_unlock * 100 )}%`;
+				element.append( overlay );
+
+				return element;
 			}
 
 			if( showGlobalUnlock )
@@ -476,14 +542,14 @@ GetOption( {
 				continue;
 			}
 
-			const details = document.createElement( 'div' );
-			details.className = 'steamdb_achievements_group';
-			newContainer.append( details );
+			const gameGroup = document.createElement( 'div' );
+			gameGroup.className = 'steamdb_achievements_group';
+			newContainer.append( gameGroup );
 
 			{
 				const summary = document.createElement( 'div' );
 				summary.className = 'steamdb_achievements_title';
-				details.append( summary );
+				gameGroup.append( summary );
 
 				const dlcAppId = update.dlcAppId || appid;
 
@@ -506,7 +572,8 @@ GetOption( {
 					summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/capsule_184x69.jpg`;
 				}
 
-				const summaryName = document.createElement( 'h2' );
+				const summaryName = document.createElement( 'div' );
+				summaryName.className = 'steamdb_achievements_game_name';
 				summaryName.textContent = update.dlcAppName || update.name || 'Update';
 
 				if( update.dlcAppName && update.name )
@@ -551,71 +618,110 @@ GetOption( {
 				summary.append( CreateFoldButton() );
 			}
 
-			const lockedAchievementsDetails = document.createElement( 'details' );
-			const unlockedAchievementsDetails = document.createElement( 'details' );
-
-			update.earnedDetailsElement = unlockedAchievementsDetails;
-
+			if( isPersonal )
 			{
-				const unlockedAchievementsSummary = document.createElement( 'summary' );
-				unlockedAchievementsSummary.textContent = _t( 'achievements_unlocked_count', [ update.earned.toString() ] );
-				unlockedAchievementsDetails.className = 'steamdb_achievements_list';
-				unlockedAchievementsDetails.open = true;
-				unlockedAchievementsDetails.append( unlockedAchievementsSummary );
+				const lockedAchievementsDetails = document.createElement( 'details' );
+				const unlockedAchievementsDetails = document.createElement( 'details' );
 
-				const lockedAchievementsSummary = document.createElement( 'summary' );
-				lockedAchievementsSummary.textContent = _t( 'achievements_locked_count', [ ( update.achievementData.length - update.earned ).toString() ] );
-				lockedAchievementsDetails.className = 'steamdb_achievements_list';
-				lockedAchievementsDetails.open = true;
-				lockedAchievementsDetails.append( lockedAchievementsSummary );
+				update.earnedDetailsElement = unlockedAchievementsDetails;
+
+				{
+					const unlockedAchievementsSummary = document.createElement( 'summary' );
+					unlockedAchievementsSummary.textContent = _t( 'achievements_unlocked_count', [ update.earned.toString() ] );
+					unlockedAchievementsDetails.className = 'steamdb_achievements_list';
+					unlockedAchievementsDetails.open = true;
+					unlockedAchievementsDetails.append( unlockedAchievementsSummary );
+
+					const lockedAchievementsSummary = document.createElement( 'summary' );
+					lockedAchievementsSummary.textContent = _t( 'achievements_locked_count', [ ( update.achievementData.length - update.earned ).toString() ] );
+					lockedAchievementsDetails.className = 'steamdb_achievements_list';
+					lockedAchievementsDetails.open = true;
+					lockedAchievementsDetails.append( lockedAchievementsSummary );
+				}
+
+				// Sort by unlock state, global unlock percentage, id
+				update.achievementData.sort( ( a, b ) =>
+				{
+					const aUnlocked = !!a.player.unlock;
+					const bUnlocked = !!b.player.unlock;
+
+					if( aUnlocked !== bUnlocked )
+					{
+						return bUnlocked ? 1 : -1;
+					}
+
+					if( b.achievement.player_percent_unlocked === a.achievement.player_percent_unlocked )
+					{
+						return a.id - b.id;
+					}
+
+					return b.achievement.global_unlock > a.achievement.global_unlock ? 1 : -1;
+				} );
+
+				for( const achievement of update.achievementData )
+				{
+					if( achievement.update !== updateId )
+					{
+						continue;
+					}
+
+					const element = CreateAchievementRow( achievement );
+
+					if( achievement.player.unlock )
+					{
+						unlockedAchievementsDetails.append( element );
+					}
+					else
+					{
+						lockedAchievementsDetails.append( element );
+					}
+				}
+
+				if( unlockedAchievementsDetails.childElementCount > 1 )
+				{
+					gameGroup.append( unlockedAchievementsDetails );
+				}
+
+				if( lockedAchievementsDetails.childElementCount > 1 )
+				{
+					gameGroup.append( lockedAchievementsDetails );
+				}
 			}
-
-			// Sort by unlock state, global unlock percentage, id
-			update.achievementData.sort( ( a, b ) =>
+			else
 			{
-				const aUnlocked = !!a.player.unlock;
-				const bUnlocked = !!b.player.unlock;
+				const globalAchievementsContainer = document.createElement( 'details' );
+				globalAchievementsContainer.open = true;
 
-				if( aUnlocked !== bUnlocked )
+				const globalAchievementsSummary = document.createElement( 'summary' );
+				globalAchievementsSummary.setAttribute( 'hidden', true );
+				globalAchievementsContainer.append( globalAchievementsSummary );
+
+				// Sort by global unlock rate
+				update.achievementData.sort( ( a, b ) =>
 				{
-					return bUnlocked ? 1 : -1;
+					if( b.achievement.player_percent_unlocked === a.achievement.player_percent_unlocked )
+					{
+						return a.id - b.id;
+					}
+
+					return b.achievement.global_unlock > a.achievement.global_unlock ? 1 : -1;
+				} );
+
+				for( const achievement of update.achievementData )
+				{
+					if( achievement.update !== updateId )
+					{
+						continue;
+					}
+
+					const element = CreateAchievementRow( achievement );
+					globalAchievementsContainer.append( element );
 				}
 
-				if( b.achievement.player_percent_unlocked === a.achievement.player_percent_unlocked )
+				if( globalAchievementsContainer.childElementCount > 0 )
 				{
-					return a.id - b.id;
+					gameGroup.append( globalAchievementsContainer );
 				}
-
-				return b.achievement.global_unlock > a.achievement.global_unlock ? 1 : -1;
-			} );
-
-			for( const achievement of update.achievementData )
-			{
-				if( achievement.update !== updateId )
-				{
-					continue;
-				}
-
-				const element = CreateAchievementRow( achievement );
-
-				if( achievement.player.unlock )
-				{
-					unlockedAchievementsDetails.append( element );
-				}
-				else
-				{
-					lockedAchievementsDetails.append( element );
-				}
-			}
-
-			if( unlockedAchievementsDetails.childElementCount > 1 )
-			{
-				details.append( unlockedAchievementsDetails );
-			}
-
-			if( lockedAchievementsDetails.childElementCount > 1 )
-			{
-				details.append( lockedAchievementsDetails );
 			}
 		}
 
@@ -644,8 +750,23 @@ GetOption( {
 
 		const ReplaceAchievements = () =>
 		{
-			oldContainer.insertAdjacentElement( 'beforebegin', newContainer );
-			oldContainer.hidden = true;
+			if( isPersonal )
+			{
+				oldContainer.insertAdjacentElement( 'beforebegin', newContainer );
+				oldContainer.hidden = true;
+			}
+			else
+			{
+				for( const el of oldAchievementRows )
+				{
+					el.hidden = true;
+				}
+
+				oldAchievementRows[ 0 ].insertAdjacentElement( 'beforebegin', newContainer );
+
+				document.querySelector( '#compareAvatar' )?.setAttribute( 'hidden', true );
+			}
+
 			gameLogoElement.hidden = true;
 
 			document.querySelector( '#topSummaryAchievements .achieveBar' )?.classList.add( 'steamdb_achievement_progressbar' );
@@ -664,158 +785,12 @@ GetOption( {
 			ReplaceAchievements();
 		}
 
-		sortButton.addEventListener( 'click', ( e ) =>
+		if( sortButton )
 		{
-			e.preventDefault();
-
-			sortButton.setAttribute( 'disabled', true );
-
-			// Request the same page in finnish because it has an easier date format to parse
-			const url = new URL( window.location );
-			url.searchParams.set( 'l', 'finnish' );
-
-			fetch( url, {
-				headers: {
-					Accept: 'text/html',
-					'X-Requested-With': 'SteamDB',
-				},
-			} )
-				.then( response => response.text() )
-				.then( text =>
-				{
-					const parser = new DOMParser();
-					const htmlDocument = parser.parseFromString( text, 'text/html' );
-					const otherAchievementRows = htmlDocument.querySelectorAll( '#personalAchieve .achieveRow' );
-
-					if( otherAchievementRows.length !== oldAchievementRows.length )
-					{
-						throw new Error( 'Mismatching amount of achievements' );
-					}
-
-					const currentYear = new Date().getFullYear();
-
-					const achievementDataMap = [];
-
-					for( const update of achievementUpdates )
-					{
-						for( const achievement of update.achievementData )
-						{
-							if( achievement.domId === null )
-							{
-								continue;
-							}
-
-							achievementDataMap[ achievement.domId ] = achievement;
-						}
-					}
-
-					const unlockedAchievementsPerUpdate = [];
-
-					for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
-					{
-						unlockedAchievementsPerUpdate[ updateId ] = [];
-					}
-
-					// Assume the achievements are in the same order
-					for( let id = 0; id < otherAchievementRows.length; id++ )
-					{
-						const otherAchievement = otherAchievementRows[ id ];
-						const oldAchievement = oldAchievementRows[ id ];
-
-						const otherImage = otherAchievement.querySelector( '.achieveImgHolder > img' );
-						const oldImage = oldAchievement.querySelector( '.achieveImgHolder > img' );
-
-						if( !otherImage || !oldImage )
-						{
-							continue;
-						}
-
-						// Verify that we are seeing the same achievements by their image at least
-						if( otherImage.src !== oldImage.src )
-						{
-							throw new Error( 'Mismatching achievement icon' );
-						}
-
-						const unlock = otherAchievement.querySelector( '.achieveUnlockTime' )?.textContent.trim();
-
-						if( !unlock )
-						{
-							continue;
-						}
-
-						const parsedTime = unlock.match( /Avattu (?<day>[0-9]+)\.(?<month>[0-9]+)\.(?<year>[0-9]+)? klo (?<hour>[0-9]+)\.(?<minute>[0-9]+)/ );
-
-						if( !parsedTime )
-						{
-							throw new Error( 'Failed to parse unlock time' );
-						}
-
-						const c = parsedTime.groups;
-						const date = new Date( c.year || currentYear, c.month - 1, c.day, c.hour, c.minute, 0, 0 );
-
-						const achievement = achievementDataMap[ id ];
-						achievement.player.unlockTimestamp = date.getTime();
-						unlockedAchievementsPerUpdate[ achievement.update ].push( achievement );
-					}
-
-					// Redraw earned achievements block with new sorting
-					const RedrawSortedAchievements = () =>
-					{
-						sortButton.remove();
-
-						for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
-						{
-							const update = achievementUpdates[ updateId ];
-							const unlockedAchievements = unlockedAchievementsPerUpdate[ updateId ];
-
-							if( !update.earnedDetailsElement )
-							{
-								continue;
-							}
-
-							while( update.earnedDetailsElement.lastElementChild.tagName !== 'SUMMARY' )
-							{
-								update.earnedDetailsElement.lastElementChild.remove();
-							}
-
-							unlockedAchievements.sort( ( a, b ) =>
-							{
-								const aTime = a.player.unlockTimestamp;
-								const bTime = b.player.unlockTimestamp;
-
-								if( aTime === bTime )
-								{
-									return a.id - b.id;
-								}
-
-								return bTime > aTime ? 1 : -1;
-							} );
-
-							for( const achievement of unlockedAchievements )
-							{
-								const element = CreateAchievementRow( achievement );
-								update.earnedDetailsElement.append( element );
-							}
-						}
-					};
-
-					if( document.startViewTransition )
-					{
-						document.startViewTransition( RedrawSortedAchievements );
-					}
-					else
-					{
-						RedrawSortedAchievements();
-					}
-				} )
-				.catch( e =>
-				{
-					WriteLog( e );
-					alert( `Failed to sort achievements: ${e.message}` );
-				} );
-		}, { once: true } );
+			HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow );
+		}
 	}
-} );
+}
 
 const relativeDateFormatter = new Intl.RelativeTimeFormat( GetLanguage(), { numeric: 'auto' } );
 
@@ -846,4 +821,158 @@ function FormatRelativeTime( ms )
 	}
 
 	return relativeDateFormatter.format( -year, 'year' );
+}
+
+function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow )
+{
+	sortButton.addEventListener( 'click', ( e ) =>
+	{
+		e.preventDefault();
+
+		sortButton.setAttribute( 'disabled', true );
+
+		// Request the same page in finnish because it has an easier date format to parse
+		const url = new URL( window.location );
+		url.searchParams.set( 'l', 'finnish' );
+
+		fetch( url, {
+			headers: {
+				Accept: 'text/html',
+				'X-Requested-With': 'SteamDB',
+			},
+		} )
+			.then( response => response.text() )
+			.then( text =>
+			{
+				const parser = new DOMParser();
+				const htmlDocument = parser.parseFromString( text, 'text/html' );
+				const otherAchievementRows = htmlDocument.querySelectorAll( '#personalAchieve .achieveRow' );
+
+				if( otherAchievementRows.length !== oldAchievementRows.length )
+				{
+					throw new Error( 'Mismatching amount of achievements' );
+				}
+
+				const currentYear = new Date().getFullYear();
+
+				const achievementDataMap = [];
+
+				for( const update of achievementUpdates )
+				{
+					for( const achievement of update.achievementData )
+					{
+						if( achievement.domId === null )
+						{
+							continue;
+						}
+
+						achievementDataMap[ achievement.domId ] = achievement;
+					}
+				}
+
+				const unlockedAchievementsPerUpdate = [];
+
+				for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
+				{
+					unlockedAchievementsPerUpdate[ updateId ] = [];
+				}
+
+				// Assume the achievements are in the same order
+				for( let id = 0; id < otherAchievementRows.length; id++ )
+				{
+					const otherAchievement = otherAchievementRows[ id ];
+					const oldAchievement = oldAchievementRows[ id ];
+
+					const otherImage = otherAchievement.querySelector( '.achieveImgHolder > img' );
+					const oldImage = oldAchievement.querySelector( '.achieveImgHolder > img' );
+
+					if( !otherImage || !oldImage )
+					{
+						continue;
+					}
+
+					// Verify that we are seeing the same achievements by their image at least
+					if( otherImage.src !== oldImage.src )
+					{
+						throw new Error( 'Mismatching achievement icon' );
+					}
+
+					const unlock = otherAchievement.querySelector( '.achieveUnlockTime' )?.textContent.trim();
+
+					if( !unlock )
+					{
+						continue;
+					}
+
+					const parsedTime = unlock.match( /Avattu (?<day>[0-9]+)\.(?<month>[0-9]+)\.(?<year>[0-9]+)? klo (?<hour>[0-9]+)\.(?<minute>[0-9]+)/ );
+
+					if( !parsedTime )
+					{
+						throw new Error( 'Failed to parse unlock time' );
+					}
+
+					const c = parsedTime.groups;
+					const date = new Date( c.year || currentYear, c.month - 1, c.day, c.hour, c.minute, 0, 0 );
+
+					const achievement = achievementDataMap[ id ];
+					achievement.player.unlockTimestamp = date.getTime();
+					unlockedAchievementsPerUpdate[ achievement.update ].push( achievement );
+				}
+
+				// Redraw earned achievements block with new sorting
+				const RedrawSortedAchievements = () =>
+				{
+					sortButton.remove();
+
+					for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
+					{
+						const update = achievementUpdates[ updateId ];
+						const unlockedAchievements = unlockedAchievementsPerUpdate[ updateId ];
+
+						if( !update.earnedDetailsElement )
+						{
+							continue;
+						}
+
+						while( update.earnedDetailsElement.lastElementChild.tagName !== 'SUMMARY' )
+						{
+							update.earnedDetailsElement.lastElementChild.remove();
+						}
+
+						unlockedAchievements.sort( ( a, b ) =>
+						{
+							const aTime = a.player.unlockTimestamp;
+							const bTime = b.player.unlockTimestamp;
+
+							if( aTime === bTime )
+							{
+								return a.id - b.id;
+							}
+
+							return bTime > aTime ? 1 : -1;
+						} );
+
+						for( const achievement of unlockedAchievements )
+						{
+							const element = CreateAchievementRow( achievement );
+							update.earnedDetailsElement.append( element );
+						}
+					}
+				};
+
+				if( document.startViewTransition )
+				{
+					document.startViewTransition( RedrawSortedAchievements );
+				}
+				else
+				{
+					RedrawSortedAchievements();
+				}
+			} )
+			.catch( e =>
+			{
+				WriteLog( e );
+				alert( `Failed to sort achievements: ${e.message}` );
+			} );
+	}, { once: true } );
 }
