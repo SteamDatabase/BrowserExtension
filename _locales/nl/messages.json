@@ -269,7 +269,7 @@
 		"message": "Sorteren op tijd"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Prestatiegroepen worden geleverd door Steam Hunters.",
+		"message": "Prestatiegroepen worden geleverd door Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
