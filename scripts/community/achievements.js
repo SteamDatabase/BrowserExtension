@@ -116,6 +116,12 @@ function InitAchievements( items, isPersonal )
 		return;
 	}
 
+	// Some games like TF2 and CS:S have achievement groups, so skip if it's filtered
+	if( !isPersonal && document.querySelector( 'select[name="group"]' )?.value !== 'all' )
+	{
+		return;
+	}
+
 	const applicationConfig = ParseApplicationConfig();
 
 	if( !applicationConfig.LANGUAGE )
