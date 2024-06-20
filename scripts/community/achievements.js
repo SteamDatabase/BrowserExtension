@@ -111,15 +111,22 @@ function InitAchievements( items, isPersonal )
 
 	document.querySelector( '#tabs' ).append( extraTabs );
 
-	if( isPersonal && oldContainer.classList.contains( 'compare_view' ) )
+	if( isPersonal )
 	{
-		return;
+		if( oldContainer.classList.contains( 'compare_view' ) )
+		{
+			return;
+		}
 	}
-
-	// Some games like TF2 and CS:S have achievement groups, so skip if it's filtered
-	if( !isPersonal && document.querySelector( 'select[name="group"]' )?.value !== 'all' )
+	else
 	{
-		return;
+		// Some games like TF2 and CS:S have achievement groups, so skip if it's filtered
+		const groupSelector = document.querySelector( '#headerContent select[name="group"]' );
+
+		if( groupSelector && groupSelector.value !== 'all' )
+		{
+			return;
+		}
 	}
 
 	const applicationConfig = ParseApplicationConfig();
