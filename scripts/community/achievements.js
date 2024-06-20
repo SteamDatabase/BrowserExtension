@@ -116,28 +116,28 @@ function InitAchievements( items, isPersonal )
 		return;
 	}
 
-	const applicationConfigElement = document.getElementById( 'application_config' );
+	const applicationConfig = ParseApplicationConfig();
 
-	if( !applicationConfigElement )
+	if( !applicationConfig.LANGUAGE )
 	{
+		WriteLog( 'Failed to find language' );
 		return;
 	}
-
-	const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
-
-	if( !accessToken )
-	{
-		return;
-	}
-
-	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
 
 	const params = new URLSearchParams();
 	params.set( 'format', 'json' );
-	params.set( 'access_token', accessToken );
+
+	if( applicationConfig.WEBAPI_ACCESS_TOKEN )
+	{
+		params.set( 'access_token', applicationConfig.WEBAPI_ACCESS_TOKEN );
+	}
+
 	params.set( 'appid', appid );
 	params.set( 'language', applicationConfig.LANGUAGE );
-	params.set( 'x_requested_with', 'SteamDB' ); // Request header field x-requested-with is not allowed by Access-Control-Allow-Headers in preflight response.
+
+	// Request header field x-requested-with is not allowed
+	// by Access-Control-Allow-Headers in preflight response.
+	params.set( 'x_requested_with', 'SteamDB' );
 
 	const gameAchievementsFetch = fetch( `${applicationConfig.WEBAPI_BASE_URL}IPlayerService/GetGameAchievements/v1/?${params.toString()}` )
 		.then( ( response ) => response.json() );
@@ -790,6 +790,64 @@ function InitAchievements( items, isPersonal )
 			HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow );
 		}
 	}
+}
+
+function ParseApplicationConfig()
+{
+	const applicationConfigElement = document.getElementById( 'application_config' );
+
+	if( applicationConfigElement )
+	{
+		const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+		const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
+
+		if( accessToken )
+		{
+			applicationConfig.WEBAPI_ACCESS_TOKEN = accessToken;
+		}
+
+		return applicationConfig;
+	}
+
+	// Application config does not exist if user is logged out, so we have to reconstruct the data
+	const applicationConfig =
+	{
+		WEBAPI_BASE_URL: 'https://api.steampowered.com/',
+	};
+
+	for( const script of document.querySelectorAll( 'script[src]' ) )
+	{
+		const scriptLanguage = new URL( script.src ).searchParams.get( 'l' );
+
+		if( scriptLanguage )
+		{
+			applicationConfig.LANGUAGE = scriptLanguage;
+			break;
+		}
+	}
+
+	// Game logo cdn
+	const gameLogoUrl = document.querySelector( '.profile_small_header_additional .gameLogo img' ).src;
+	const gameLogoUrlAppsIndex = gameLogoUrl.lastIndexOf( '/apps/' );
+
+	if( gameLogoUrlAppsIndex > 0 )
+	{
+		applicationConfig.STORE_ICON_BASE_URL = gameLogoUrl.substring( 0, gameLogoUrlAppsIndex + '/apps/'.length );
+	}
+
+	// Media cdn
+	for( const image of document.querySelectorAll( '.achieveImgHolder > img' ) )
+	{
+		const index = image.src.lastIndexOf( '/images/apps/' );
+
+		if( index > 0 )
+		{
+			applicationConfig.MEDIA_CDN_COMMUNITY_URL = image.src.substring( 0, index + 1 );
+			break;
+		}
+	}
+
+	return applicationConfig;
 }
 
 const relativeDateFormatter = new Intl.RelativeTimeFormat( GetLanguage(), { numeric: 'auto' } );

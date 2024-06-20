@@ -278,10 +278,6 @@ html {
 	margin-top: 100px;
 }
 
-.steamdb_achievement_groups_disclaimer > a {
-	font-style: italic;
-}
-
 .steamdb_achievement_groups_disclaimer > img {
 	width: 32px;
 	height: 32px;
@@ -292,6 +288,7 @@ html {
 }
 
 .steamdb_achievement_groups_disclaimer > a {
+	font-style: italic;
 	color: inherit;
 }
 
