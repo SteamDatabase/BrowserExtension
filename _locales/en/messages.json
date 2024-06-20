@@ -551,7 +551,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Hide \"Open in the Steam\" banner"
+		"message": "Hide \"Open in Steam\" banner"
 	},
 	"options_steamdb_rating": {
 		"message": "Display SteamDB rating on product pages"
