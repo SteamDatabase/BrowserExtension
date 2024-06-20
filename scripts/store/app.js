@@ -740,7 +740,8 @@ function DrawOnlineStatsWidget( items )
 			}
 			else
 			{
-				followers.parentNode.remove();
+				followers.previousElementSibling.remove();
+				followers.remove();
 			}
 		}
 
