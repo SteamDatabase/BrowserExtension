@@ -344,7 +344,7 @@ function InitAchievements( items, isPersonal )
 					continue;
 				}
 
-				const apiIcon = unlock ? achievement.icon : achievement.icon_gray;
+				const apiIcon = unlock || !isPersonal ? achievement.icon : achievement.icon_gray;
 
 				if( icon !== apiIcon )
 				{
