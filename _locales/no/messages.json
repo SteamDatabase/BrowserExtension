@@ -269,7 +269,7 @@
 		"message": "Sorter etter tid"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Prestasjonsgrupper er skaffet av Steam Hunters.",
+		"message": "Prestasjonsgrupper er skaffet av Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

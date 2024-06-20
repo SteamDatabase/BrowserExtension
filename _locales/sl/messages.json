@@ -211,7 +211,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Preostali predmeti: $amount$",
+		"message": "Preostali padec kartic: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -221,7 +221,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Preostali padec kartic na tej strani: $amount$",
+		"message": "Preostali padec kart na tej strani: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -234,7 +234,7 @@
 		"message": "Skriti dosežek: "
 	},
 	"inventory_list_at": {
-		"message": "Objavi po $price$",
+		"message": "Objavi pri $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -327,7 +327,7 @@
 		"message": "Da bi preprečili prekomerne zahteve v Steam trgovino, so vaši uporabniški podatki predpomnjeni v lokalni shrambi vašega brskalnika."
 	},
 	"options_website_highlight": {
-		"message": "Označite lastne in želene izdelke na $domain$",
+		"message": "Označi lastne in želene izdelke na $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -387,22 +387,22 @@
 		"message": "Prikaži najnižjo zabeleženo ceno na straneh izdelkov"
 	},
 	"options_online_stats": {
-		"message": "Prikažite trenutne sočasne igralce in najvišje vrednosti na straneh izdelkov"
+		"message": "Prikaži trenutne sočasne igralce in najvišje vrednosti na straneh izdelkov"
 	},
 	"options_steamdb_last_update": {
-		"message": "Prikaz zadnje posodobitve na straneh izdelkov"
+		"message": "Prikaži zadnje posodobitve na straneh izdelkov"
 	},
 	"options_button_app": {
-		"message": "Prikažite gumb na straneh izdelkov"
+		"message": "Prikaži gumb na straneh izdelkov"
 	},
 	"options_button_pcgw": {
 		"message": "Prikaži gumb PCGamingWiki na straneh izdelkov"
 	},
 	"options_button_sub": {
-		"message": "Prikažite gumb na straneh paketov"
+		"message": "Prikaži gumb na straneh paketov"
 	},
 	"options_button_gamehub": {
-		"message": "Prikažite gumb v središčih skupnosti"
+		"message": "Prikaži gumb v središčih skupnosti"
 	},
 	"options_button_gamecards": {
 		"message": "Prikaži gumbe SteamDB ter strani trgovine na strani z igralnimi kartami"
@@ -504,7 +504,7 @@
 		}
 	},
 	"options_builtin_card_drops": {
-		"message": "Na strani z značkami prikažite skupno število preostalih padcev kartic"
+		"message": "Na strani z značkami prikažite skupno število preostalih padcev kart"
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Dodajte gumb za samodejno odkrivanje čakalne vrste med razprodajo"

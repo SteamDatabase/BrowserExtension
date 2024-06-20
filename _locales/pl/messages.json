@@ -74,7 +74,7 @@
 		"message": "Aktualnie online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-godzinny rekord:"
+		"message": "24-godzinny max. graczy:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Rekord aktywnych graczy:"
@@ -536,7 +536,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Schowaj baner \"Otwórz w Steam\""
+		"message": "Ukryj baner \"Otwórz w Steam\""
 	},
 	"options_steamdb_rating": {
 		"message": "Wyświetlaj ocenę SteamDB na stronach produktów"

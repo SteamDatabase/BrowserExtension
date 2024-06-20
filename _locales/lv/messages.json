@@ -269,7 +269,7 @@
 		"message": "Kārtot pēc laika"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Sasniegumu grupas nodrošina Steam Hunters.",
+		"message": "Sasniegumu grupas nodrošina Steam Hunters caur SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

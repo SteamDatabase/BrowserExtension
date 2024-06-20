@@ -269,7 +269,7 @@
 		"message": "เรียงตามเวลา"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "กลุ่มของความสำเร็จ ให้ข้อมูลโดย Steam Hunters",
+		"message": "กลุ่มของความสำเร็จ ให้ข้อมูลโดย Steam Hunters ผ่าน SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

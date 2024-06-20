@@ -268,10 +268,6 @@
 	"achievements_sort_by_time": {
 		"message": "Ταξινόμηση κατά ώρα"
 	},
-	"achievements_groups_by_steamhunters": {
-		"message": "Οι ομάδες επιτευγμάτων παρέχονται από το Steam Hunters.",
-		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
-	},
 	"inventory_list_at": {
 		"message": "Λίστα από $price$",
 		"placeholders": {

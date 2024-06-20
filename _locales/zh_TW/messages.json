@@ -269,7 +269,7 @@
 		"message": "按時間排序"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "成就分類由 Steam Hunters 提供。",
+		"message": "成就分類由 Steam Hunters 透過 SteamDB 提供。",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "當啟用「$options_achievement_groups$」選項時，擴充功能將向 $domain$ 發出安全的請求，從而使用 Steam Hunters 提供的資料在個人成就頁面上進行成就分組。",
+		"message": "當啟用「$options_achievement_groups$」選項時，擴充功能將向 $domain$ 發出安全請求，從而使 Steam Hunters 提供的資料在個人成就頁面上進行成就分組。",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -591,6 +591,6 @@
 		"message": "連結至個人成就頁面"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "替鎖定的成就顯示鎖定圖示"
+		"message": "顯示未取得成就鎖定圖示"
 	}
 }

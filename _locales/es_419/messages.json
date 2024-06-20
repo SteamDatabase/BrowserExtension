@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Agrega enlaces a SteamDB y nuevas funciones en la tienda y la comunidad de Steam. Consulta los precios más bajos y las estadísticas de los juegos."
+		"message": "Agrega enlaces a SteamDB y nuevas funciones en el sitio web de Steam. Consulta los más precios bajos y estadísticas de los juegos."
 	},
 	"steamdb_options": {
 		"message": "Opciones de SteamDB"
@@ -336,7 +336,7 @@
 		"message": "Sitio web de SteamDB"
 	},
 	"options_header_extra_data": {
-		"message": "Información extra"
+		"message": "Datos adicionales"
 	},
 	"options_header_buttons_and_links": {
 		"message": "Botones y enlaces"
@@ -378,7 +378,7 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Agregar a tu lista de deseados, seguir e ignorar productos en la tienda de Steam directamente desde SteamDB"
+		"message": "Agregar a tu lista de deseados, seguir e ignorar productos de la tienda de Steam directamente desde SteamDB"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Activa el script de paquetes gratuitos.</a>"
@@ -552,17 +552,17 @@
 		"message": "Mostrar el porcentaje de logros globales desbloqueados"
 	},
 	"options_modernized_achievements": {
-		"message": "Diseño modernizado"
+		"message": "Modernizar el diseño"
 	},
 	"options_achievement_groups": {
 		"message": "Agrupar logros con datos de Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Poner los logros ocultos detrás de un elemento de spoiler"
+		"message": "Colocar los logros ocultos detrás de un elemento spoiler"
 	},
 	"options_prevent_store_images": {
-		"message": "Detener la carga de imágenes en las páginas del producto"
+		"message": "Impedir que las imágenes se carguen en las páginas de los productos"
 	},
 	"options_prevent_store_images_description": {
 		"message": "Algunos desarrolladores ponen megabytes de imágenes en las descripciones de los productos, lo que puede tardar un tiempo en cargar. Haz clic en una imagen para cargarla."

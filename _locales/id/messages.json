@@ -312,13 +312,13 @@
 		"message": "Menu tarik-turun akun di halaman Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Halaman addon browser Anda"
+		"message": "Halaman pengaya peramban Anda"
 	},
 	"options_review": {
 		"message": "Tinggalkan ulasan untuk ekstensi ini"
 	},
 	"options_permissions_description": {
-		"message": "Extension ini membutuhkan izin tambahan agar dapat berfungsi dengan baik di SteamDB, Steam Store, dan Steam Community."
+		"message": "Ekstensi ini membutuhkan izin tambahan agar dapat berfungsi dengan baik di SteamDB, Steam Store, dan Steam Community."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Berikan izin"

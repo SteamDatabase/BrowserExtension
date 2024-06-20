@@ -61,7 +61,7 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Последно обновяване:"
+		"message": "Последно обновление:"
 	},
 	"app_depots_updated_short": {
 		"message": "Обновено",
@@ -396,7 +396,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Когато опцията „$options_online_stats$“ или „$options_steamdb_last_update$“ е активирана, разширението ще направи защитена заявка към $domain$ за да получи текущия брой играчи и последно обновяване на играта.",
+		"message": "Когато опцията „$options_online_stats$“ или „$options_steamdb_last_update$“ е активирана, разширението ще направи защитена заявка към $domain$ за да получи текущия брой играчи и последното обновление на играта.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -446,35 +446,35 @@
 		"message": "Покажи текущ и пиков брой играчи на продуктовата страница"
 	},
 	"options_steamdb_last_update": {
-		"message": "Покажи последно обновяване на продуктовата страница"
+		"message": "Покажи последно обновление на продуктовата страница"
 	},
 	"options_button_app": {
-		"message": "Показване на бутон на продуктовата страница"
+		"message": "Покажи бутон на продуктовата страница"
 	},
 	"options_button_pcgw": {
-		"message": "Показване на бутон за PCGamingWiki на продуктовата страница"
+		"message": "Покажи бутон за PCGamingWiki на продуктовата страница"
 	},
 	"options_button_sub": {
-		"message": "Показване на бутон в страници на комплекти"
+		"message": "Покажи бутон на страници на комплекти/пакети"
 	},
 	"options_button_gamehub": {
-		"message": "Показване на бутон в страници на общности"
+		"message": "Покажи бутон на страници на общности"
 	},
 	"options_button_gamecards": {
-		"message": "Показване на бутони SteamDB и страница в магазина на страницата за напредък на значка"
+		"message": "Покажи бутони SteamDB и „Страница в магазина“ на страницата за напредък на значка"
 	},
 	"options_link_subid": {
-		"message": "Показване на SubID под всяка опция за покупка"
+		"message": "Покажи SubID под всяка опция за покупка"
 	},
 	"options_link_subid_widget": {
-		"message": "Показване на SubID в притурки на продукти",
+		"message": "Покажи SubID в притурки на продукти",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Добавяне на връзки към пакети на страницата с лицензи"
+		"message": "Добави връзки към пакети на страницата с лицензи"
 	},
 	"options_profile_calculator": {
-		"message": "Добавяне на връзка към калкулатор в обществени профили"
+		"message": "Добави връзка към калкулатор в обществени профили"
 	},
 	"options_enhancement_inventory_sidebar": {
 		"message": "Премести избора на игра в инвентара да е отстрани"

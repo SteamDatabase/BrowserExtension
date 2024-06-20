@@ -269,7 +269,7 @@
 		"message": "সময় অনুসারে সাজান"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "কৃতিত্ব সমষ্টিগুলি Steam Hunters দ্বারা প্রদত্ত​।",
+		"message": "কৃতিত্ব সমষ্টিগুলি স্টীম​-ডিবি-র মাধ্যমে Steam Hunters দ্বারা প্রদত্ত​।",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -507,5 +507,24 @@
 				"content": "<code>my_item</code>"
 			}
 		}
+	},
+	"options_github_explanation": {
+		"message": "গিটহাব-এ ব্যাখ্যা দেখুন"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "\"এই বাণিজ্যটি সন্দেহজনক দেখতে লাগছে\" এবং \"আপনি কি নিশ্চিত যে এটি একটি উপহার?\" বাণিজ্য প্রস্তাব সতর্কবার্তাগুলি নিবারিত হবে"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Valve-এর রহস্যপূর্ণ ত্রুটি-সংখ্যার থেকে আরো ভালো ত্রুটি-বার্তা প্রদর্শিত হবে"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "ব​য়স পরীক্ষার পৃষ্ঠা এড়িয়ে যাবে"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "সর্বদা পাশ হওয়ার মতো বয়স এবং জন্মদিনের কুকিজ় তৈরি করে"
+	},
+	"options_enhancement_no_linkfilter": {
+		"message": "বাহ্যিক সাইট থেকে \"আপনি স্টীম ছেরে বেড়োচ্ছেন\" লিঙ্ক ফিল্টার সরিয়ে দেবে",
+		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	}
 }

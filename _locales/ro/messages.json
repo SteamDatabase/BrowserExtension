@@ -269,7 +269,7 @@
 		"message": "Sortează după timp"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Grupurile de realizări sunt furnizate de Steam Hunters.",
+		"message": "Grupurile de realizări sunt furnizate de Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -282,7 +282,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Vinde la $price$",
+		"message": "Vinde cu $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",

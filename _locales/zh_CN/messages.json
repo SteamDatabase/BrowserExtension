@@ -248,7 +248,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "已获得成就数：$count$",
+		"message": "已解锁成就数：$count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -266,7 +266,7 @@
 		}
 	},
 	"achievements_sort_by_time": {
-		"message": "按成就解锁时间顺序"
+		"message": "按解锁时间顺序"
 	},
 	"achievements_groups_by_steamhunters": {
 		"message": "成就分组信息由 Steam Hunters 通过 SteamDB 提供。",
@@ -559,7 +559,7 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "将隐藏成就置于防剧透元素下"
+		"message": "对隐藏成就启用防剧透元素"
 	},
 	"options_prevent_store_images": {
 		"message": "在产品页面阻止图像加载"
@@ -576,7 +576,7 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "添加折叠“已在您的库中”区域的按钮"
+		"message": "添加一个按钮，可折叠商店页面中“您的Steam库中已有此游戏”的模块"
 	},
 	"options_builtin_card_drops": {
 		"message": "在徽章页面显示剩余可掉落卡片总数量"
@@ -591,6 +591,6 @@
 		"message": "添加跳转到个人成就页面的链接"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "未获取的成就显示锁定图标"
+		"message": "在未解锁的成就旁显示锁定图标"
 	}
 }

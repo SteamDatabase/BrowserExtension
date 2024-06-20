@@ -24,7 +24,7 @@
 		"message": "Pogledaj na SteamDB-u"
 	},
 	"view_on_steam_hunters": {
-		"message": "Pogled na Steam Hunters",
+		"message": "Pogledaj na Steam Hunters-u",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
@@ -248,7 +248,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "PRIMLJENE POSTIGNUĆA: $count$",
+		"message": "OSTVARENA POSTIGNUĆA: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -266,10 +266,10 @@
 		}
 	},
 	"achievements_sort_by_time": {
-		"message": "Poredati po vremenu"
+		"message": "Poređaj po vremenu"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Grupe postignuća osiguravaju Steam Hunters.",
+		"message": "Grupe postignuća osiguravaju Steam Hunters preko SteamDB-a.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -576,7 +576,7 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "Dodati dugme za sažimanje bloka \"već u vašoj knjižnici\""
+		"message": "Dodati dugme za sažimanje bloka \"već u vašoj biblioteci\""
 	},
 	"options_builtin_card_drops": {
 		"message": "Prikaži ukupan broj preostalih kartica na stranici znački"

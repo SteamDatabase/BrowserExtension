@@ -268,6 +268,10 @@
 	"achievements_sort_by_time": {
 		"message": "Sorter efter tid"
 	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Præstationsgrupper leveres af Steam Hunters via SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "Liste på $price$",
 		"placeholders": {
@@ -418,6 +422,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Når \"$options_achievement_groups$\"-indstillingen er aktiveret, vil udvidelsen udføre en sikker anmodning til $domain$ om at lave præstation gruppering på personlige præstationer side med data leveret af Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},

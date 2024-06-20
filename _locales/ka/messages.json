@@ -268,10 +268,6 @@
 	"achievements_sort_by_time": {
 		"message": "სორტირება დროის მიხედვით"
 	},
-	"achievements_groups_by_steamhunters": {
-		"message": "ჯილდოების ჯგუფები არის წარმოდგენილი Steam Hunters -ის მიერ.",
-		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
-	},
 	"inventory_list_at": {
 		"message": "დადე მარკეტზე $price$-ად",
 		"placeholders": {

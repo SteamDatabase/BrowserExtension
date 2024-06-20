@@ -268,10 +268,6 @@
 	"achievements_sort_by_time": {
 		"message": "Lajittele ajan mukaan"
 	},
-	"achievements_groups_by_steamhunters": {
-		"message": "Saavutusryhmät tarjoaa Steam Hunters.",
-		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
-	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",
 		"placeholders": {

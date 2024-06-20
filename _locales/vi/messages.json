@@ -248,7 +248,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "THÀNH TỰU ĐÃ ĐẠT ĐƯỢC: $count$",
+		"message": "THÀNH TỰU ĐÃ MỞ KHÓA: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -257,7 +257,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "THÀNH TỰU CHƯA MỞ: $count$",
+		"message": "THÀNH TỰU CHƯA MỞ KHÓA: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -549,10 +549,10 @@
 		"message": "Cải thiện trang thành tựu cá nhân"
 	},
 	"options_achievements_global_unlock": {
-		"message": "Hiển thị tỷ lệ mở khóa thành tích global"
+		"message": "Hiển thị tỷ lệ mở khóa thành tựu toàn cầu"
 	},
 	"options_modernized_achievements": {
-		"message": "Thiết kế hiện đại"
+		"message": "Thiết kế hiện đại hóa"
 	},
 	"options_achievement_groups": {
 		"message": "Gộp nhóm thành tựu bằng dữ liệu từ Steam Hunters",
@@ -591,6 +591,6 @@
 		"message": "Liên kết đến trang thành tựu cá nhân"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Hiển thị icon khóa cho những thành tựu chưa mở khóa"
+		"message": "Hiển thị biểu tượng ổ khóa cho các thành tựu chưa mở khóa"
 	}
 }

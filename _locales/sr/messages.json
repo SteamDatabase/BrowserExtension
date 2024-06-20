@@ -23,6 +23,10 @@
 	"view_on_steamdb": {
 		"message": "Погледај на SteamDB-у"
 	},
+	"view_on_steam_hunters": {
+		"message": "Погледај на Steam Hunters-у",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"view_on_pcgamingwiki": {
 		"message": "Погледај на PCGamingWiki-у"
 	},
@@ -422,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Када је опција „$options_achievement_groups$“ омогућена, проширење ће послати безбедни захтев за $domain$ да изврши груписање достигнућа на страници личних достигнућа са подацима које обезбеђује Steam Hunters.",
+		"message": "Када је опција \"$options_achievement_groups$“ омогућена, екстензија ће послати безбедни захтев за $domain$ да изврши груписање достигнућа на страници личних достигнућа са подацима које обезбеђује Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {

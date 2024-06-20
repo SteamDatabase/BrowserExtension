@@ -268,10 +268,6 @@
 	"achievements_sort_by_time": {
 		"message": "Ordena per temps"
 	},
-	"achievements_groups_by_steamhunters": {
-		"message": "Els grups d'assoliments els proporcionen Steam Hunters.",
-		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
-	},
 	"inventory_list_at": {
 		"message": "Llistar a $price$",
 		"placeholders": {

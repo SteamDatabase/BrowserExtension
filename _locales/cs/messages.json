@@ -269,7 +269,7 @@
 		"message": "Seřadit podle času"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Skupiny úspěchů poskytují Steam Hunters.",
+		"message": "Skupiny úspěchů poskytuje služba Steam Hunters prostřednictvím služby SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {

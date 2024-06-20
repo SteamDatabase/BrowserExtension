@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Diese Erweiterung ergänzt den Steam-Shop sowie die Steam-Community um weitere Funktionen und fügt SteamDB-Verlinkungen hinzu. Zudem können Statistiken und die niedrigsten aufgezeichneten Preise angezeigt werden."
+		"message": "Ergänzt den Steam-Shop und die Steam-Community um neue Funktionen, SteamDB-Verlinkungen und Statistiken wie die niedrigsten Preise."
 	},
 	"steamdb_options": {
 		"message": "SteamDB-Einstellungen"
