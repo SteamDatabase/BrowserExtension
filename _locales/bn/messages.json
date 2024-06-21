@@ -1,12 +1,12 @@
 {
 	"extension_description": {
-		"message": "স্টীম​ স্টোর এবং কমিউনিটিতে স্টীম-ডিবি লিঙ্ক এবং নতুন বৈশিষ্ট্য যোগ করে। নিম্নতম গেম মূল্য এবং পরিসংখ্যান দেখুন।"
+		"message": "Steam​ স্টোর এবং কমিউনিটিতে SteamDB লিঙ্ক ও নতুন বৈশিষ্ট্য যোগ করে। নিম্নতম গেম মূল্য এবং পরিসংখ্যান দেখুন।"
 	},
 	"steamdb_options": {
-		"message": "স্টীম-ডিবি অপশনসমূহ"
+		"message": "SteamDB অপশনসমূহ"
 	},
 	"steamdb_calculator": {
-		"message": "স্টীম-ডিবি ক্যালকুলেটর"
+		"message": "SteamDB ক্যালকুলেটর"
 	},
 	"steamstatus": {
 		"message": "$domain$-এ দেখুন​",
@@ -18,7 +18,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "স্টিম বর্তমানে কিছু অনুপস্থিতি অনুভব করছে. "
+		"message": "Steam​ বর্তমানে কিছু অনুপস্থিতি অনুভব করছে। "
 	},
 	"view_on_steamdb": {
 		"message": "SteamDB তে দেখুন"
@@ -31,10 +31,10 @@
 		"message": "PCGamingWiki তে দেখুন"
 	},
 	"view_your_achievements": {
-		"message": "Лични постижения"
+		"message": "ব্যক্তিগত কৃতিত্ব"
 	},
 	"store_page": {
-		"message": "স্টোর পেজ",
+		"message": "স্টোর পৃষ্ঠা",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
@@ -524,7 +524,61 @@
 		"message": "সর্বদা পাশ হওয়ার মতো বয়স এবং জন্মদিনের কুকিজ় তৈরি করে"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "বাহ্যিক সাইট থেকে \"আপনি স্টীম ছেরে বেড়োচ্ছেন\" লিঙ্ক ফিল্টার সরিয়ে দেবে",
+		"message": "বাহ্যিক সাইট থেকে \"আপনি স্টীম ছেড়ে বেড়োচ্ছেন\" লিঙ্ক ফিল্টার সরিয়ে দেবে",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+	},
+	"options_enhancement_market_ssa": {
+		"message": "স্বয়ংক্রিয় ভাবে গ্রাহক চুক্তি স্বীকার করা হবে মার্কেট​, দ্রব্যতালিকা ও চাবি সক্রিয়করণ-এর পৃষ্ঠাগুলিতে",
+		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_hide_install_button": {
+		"message": "হেডারে \"Install Steam\" বোতামটি অদৃশ্য​ থাকবে",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "ব্যানারে \"Open in Steam\" বোতামটি অদৃশ্য​ থাকবে"
+	},
+	"options_steamdb_rating": {
+		"message": "দ্রব্যের পৃষ্ঠাগুলিতে SteamDB রেটিং দেখাবে"
+	},
+	"options_enhancement_appicon": {
+		"message": "দ্রব্যের আইকন দেখাবে স্টোর ও কমিউনিটি পৃষ্ঠায়",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "ব্যক্তিগত কৃতিত্ব​-এর পৃষ্ঠাটি আরো উন্নত করবে"
+	},
+	"options_achievements_global_unlock": {
+		"message": "বিশ্বব্যাপী কৃতিত্ব উদ্ঘাটনের শতাংশ দেখাবে"
+	},
+	"options_modernized_achievements": {
+		"message": "ডিজ়াইন আধুনিকীকৃত করবে"
+	},
+	"options_achievement_groups": {
+		"message": "Steam Hunters-এর থেকে তথ্যের সাথে কৃতিত্বগুলি দলবদ্ধ হবে",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "গোপন কৃতিত্বগুলি একটি স্প​য়লার এলিমেন্টের পেছনে থাকবে"
+	},
+	"options_prevent_store_images": {
+		"message": "দ্রব্যের পৃষ্ঠায় ছবি লোড হবে না"
+	},
+	"options_prevent_store_images_description": {
+		"message": "কিছু ডেভেলপার দ্রব্যের বিবরণে অনেক মেগাবাইট-এর ছবি দেয়, যা লোড হতে একটু সময় নিতে পারে, একটি ছবিতে ক্লিক করুন লোড করার জন্যে"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "প্রফাইলে এবং শেয়ার করা ফাইলের লিঙ্কে $award$ স্থিতিমাপগুলি সমর্থিত হবে",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_achievements_global": {
+		"message": "ব্যক্তিগত কৃতিত্ব​-এর পৃষ্ঠাটি আরো উন্নত করবে"
+	},
+	"options_builtin_achievements_link": {
+		"message": "ব্যক্তিগত কৃতিত্ব​-এর পৃষ্ঠার লিঙ্ক দেখাবে"
 	}
 }

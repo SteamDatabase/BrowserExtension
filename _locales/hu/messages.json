@@ -24,7 +24,7 @@
 		"message": "Megtekintés a SteamDB-n"
 	},
 	"view_on_steam_hunters": {
-		"message": "Megtekintés a Steam Hunters-en",
+		"message": "Megtekintés a Steam Hunters-ön",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
@@ -238,7 +238,7 @@
 		"message": "Rejtett teljesítmény: "
 	},
 	"achievement_global_unlock": {
-		"message": "A játékosok $percent$-nak van meg ez a teljesítmény",
+		"message": "A játékosok $percent$-ának van meg ez a teljesítmény",
 		"description": "Do not add percent symbol, it will be formatted automatically",
 		"placeholders": {
 			"percent": {
@@ -425,20 +425,6 @@
 			}
 		}
 	},
-	"options_extra_data_achievement_groups": {
-		"message": "Ha a \"$options_achievement_groups$\" beállítás engedélyezve van, a bővítmény egy biztonságosan lekéri a $domain$ oldalról a teljesítmény csoportosításokat, amelyeket a Steam Hungers biztosít.",
-		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
-		"placeholders": {
-			"domain": {
-				"content": "steamdb.info",
-				"example": "steamdb.info"
-			},
-			"options_achievement_groups": {
-				"content": "$1",
-				"description": "Uses translation for options_achievement_groups"
-			}
-		}
-	},
 	"options_steamdb_lowest_price": {
 		"message": "A legalacsonyabb rögzített ár megjelenítése a termékek oldalain"
 	},
@@ -509,10 +495,7 @@
 		}
 	},
 	"options_github_explanation": {
-		"message": "Magyarázat megtekintése a GitHub-on"
-	},
-	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "„Ez a vétel gyanúsnak tűnik” és „Biztos, hogy ez egy ajándék?” riasztások eltüntetése"
+		"message": "Magyarázat megtekintése a GitHubon"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Jobb hibaüzenetek megjelenítése a Valve rejtélyes hibakódjai helyett"
@@ -532,11 +515,8 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "„Steam telepítése” gomb elrejtése a fejlécen",
+		"message": "„Steam telepítése” gomb elrejtése a fejlécről",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
-	},
-	"options_enhancement_hide_mobile_app_button": {
-		"message": "„Megnyitás a Steamben” figyelmeztetés elrejtése"
 	},
 	"options_steamdb_rating": {
 		"message": "SteamDB értékelések megjelenítése a termékoldalakon"
@@ -552,7 +532,7 @@
 		"message": "Feloldott globális statisztikai százalék mutatása"
 	},
 	"options_modernized_achievements": {
-		"message": "Modern felület"
+		"message": "Modernebb megjelenés"
 	},
 	"options_achievement_groups": {
 		"message": "Teljesítmények csoportosítása a Steam Hunters adatok alapján",

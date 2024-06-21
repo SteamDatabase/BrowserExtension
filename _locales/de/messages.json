@@ -92,7 +92,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b> (<b>-$discount$ %)</b>",
+		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b> (<b>-$discount$ %</b>)",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -363,7 +363,7 @@
 		"message": "Du musst im Shop angemeldet sein, damit dies funktioniert."
 	},
 	"options_website_explanation3": {
-		"message": "Dies ist nur auf deinem Browser gespeichert und wird nicht an SteamDB gesendet."
+		"message": "Die Daten werden nur in deinem Browser verarbeitet und sie werden auch nicht an SteamDB gesendet."
 	},
 	"options_website_explanation4": {
 		"message": "Um übermäßige Anfragen an den Steam-Shop zu vermeiden, werden deine Benutzerdaten im lokalen Speicher deines Browsers zwischengespeichert."
@@ -512,7 +512,7 @@
 		"message": "Erklärungen auf GitHub anzeigen"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Unterdrücken der Warnungen „Dieser Handel erscheint verdächtig“ und „Sind Sie sicher, dass dies ein Geschenk ist?“"
+		"message": "Warnungen „Dieser Handel erscheint verdächtig“ und „Sind Sie sicher, dass dies ein Geschenk ist?“ unterdrücken"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Vereinfachte Fehlermeldungen statt kryptische Fehlercodes von Valve anzeigen"
@@ -555,7 +555,7 @@
 		"message": "Modernes Design"
 	},
 	"options_achievement_groups": {
-		"message": "Errungenschaftsgruppen mit Daten von Steam Hunters",
+		"message": "Errungenschaften mit Daten von Steam Hunters gruppieren",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
@@ -576,7 +576,7 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "Button hinzufügen, um den „ist bereits in Ihrer Steam-Bibliothek“-Block auszublenden"
+		"message": "Button zum Einklappen des „ist bereits in Ihrer Steam-Bibliothek“-Abschnitts hinzufügen"
 	},
 	"options_builtin_card_drops": {
 		"message": "Gesamtzahl verbleibender Kartenfunde auf der Abzeichenseite anzeigen"

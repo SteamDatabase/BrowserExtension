@@ -269,7 +269,7 @@
 		"message": "Ordenar por data"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Os grupos de conquistas são fornecidos pelos Steam Hunters via SteamDB.",
+		"message": "Os grupos de conquistas são fornecidos pelo site Steam Hunters, através do SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -327,7 +327,7 @@
 		"message": "Feito com 💙 pelo pessoal do <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "É de <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">código aberto</a>, obrigado a todos os contribuidores!"
+		"message": "É um projeto de <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">código aberto</a>. Agradecemos a todos os contribuidores!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* As caixas de seleção desativadas indicam recursos integrados."
@@ -426,7 +426,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Quando a opção \"$options_achievement_groups$\" estiver ativada, a extensão realizará uma requisição segura ao site $domain$ para agrupar conquistas na página conquistas de pessoais.",
+		"message": "Quando a opção \"$options_achievement_groups$\" estiver ativada, a extensão realizará uma requisição segura ao site $domain$ para agrupar conquistas na página conquistas de pessoais com dados do site Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -509,7 +509,7 @@
 		}
 	},
 	"options_github_explanation": {
-		"message": "Ver descrição no GitHub"
+		"message": "Ver descrição no GitHub (em inglês)"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
 		"message": "Suprimir alertas de troca como \"esta troca parece suspeita\" e \"tem certeza de que isso é um presente?\""
