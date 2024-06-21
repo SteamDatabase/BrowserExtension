@@ -109,7 +109,15 @@ function InitAchievements( items, isPersonal )
 
 	extraTabs.append( CreateFoldButton( true ) );
 
-	document.querySelector( '#tabs' ).append( extraTabs );
+	if( window.innerWidth < 600 )
+	{
+		extraTabs.classList.add( 'steamdb_stats_extra_tabs_mobile' );
+		document.querySelector( '#subtabs' ).insertAdjacentElement( 'afterend', extraTabs );
+	}
+	else
+	{
+		document.querySelector( '#tabs' ).append( extraTabs );
+	}
 
 	if( isPersonal )
 	{
@@ -607,6 +615,7 @@ function InitAchievements( items, isPersonal )
 				}
 
 				const summaryText = document.createElement( 'div' );
+				summaryText.className = 'steamdb_achievements_name_container';
 				summaryText.append( summaryName );
 				summary.append( summaryText );
 

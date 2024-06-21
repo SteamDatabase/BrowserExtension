@@ -53,6 +53,11 @@ html {
 	gap: 12px;
 }
 
+.steamdb_stats_extra_tabs_mobile {
+	float: unset;
+	margin-bottom: 20px;
+}
+
 .steamdb_stats_extra_tabs > a {
 	display: flex;
 }
@@ -73,7 +78,6 @@ html {
 .steamdb_achievements_title {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
 	gap: 15px;
 	color: #fff;
 	margin-bottom: 15px;
@@ -126,6 +130,10 @@ html {
 
 .steamdb_stats_extra_tabs .steamdb_fold_button {
 	margin-left: 30px;
+}
+
+.steamdb_stats_extra_tabs_mobile .steamdb_fold_button {
+	margin-left: auto;
 }
 
 .steamdb_achievements_list {
@@ -297,6 +305,15 @@ html {
 }
 
 @media (max-width: 600px) {
+	.steamdb_achievements_title {
+		flex-flow: row wrap;
+	}
+
+	.steamdb_achievements_name_container {
+		order: 2;
+		flex-basis: 100%;
+	}
+
 	.steamdb_achievement_progressbar {
 		max-width: 200px;
 		width: 100%;
