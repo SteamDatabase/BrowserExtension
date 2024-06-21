@@ -21,6 +21,7 @@
 	const originalPopulateActions = window.PopulateActions;
 	let hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
 	const originalPopulateMarketActions = window.PopulateMarketActions;
+	const currencyCode = window.GetCurrencyCode( window.g_rgWalletInfo.wallet_currency );
 
 	const dummySellEvent =
 	{
@@ -30,11 +31,11 @@
 		},
 	};
 
-	const quickSellButton = function( )
+	const OnQuickSellButtonClick = function( )
 	{
 		window.SellCurrentSelection();
 
-		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price;
+		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price / 100;
 		document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
 
 		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
@@ -45,6 +46,9 @@
 			window.SellItemDialog.OnConfirmationAccept( dummySellEvent );
 		}
 	};
+
+	const FormatCurrency = ( valueInCents ) =>
+		window.v_currencyformat( valueInCents, currencyCode, window.g_rgWalletInfo.wallet_country );
 
 	if( document.body.dataset.steamdbNoSellReload )
 	{
@@ -89,7 +93,7 @@
 	{
 		const originalBuildHover = window.BuildHover;
 
-		window.BuildHover = function( prefix, item, owner )
+		window.BuildHover = function()
 		{
 			document.querySelector( '.steamdb_quick_sell' )?.remove();
 
@@ -119,7 +123,7 @@
 			buttons.className = 'steamdb_quick_sell';
 
 			const listNowText = document.createElement( 'span' );
-			listNowText.textContent = i18n.inventory_list_at.replace( '%price%', '…' );
+			listNowText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( 0 ) );
 
 			const listNow = document.createElement( 'a' );
 			listNow.title = i18n.inventory_list_at_title;
@@ -129,7 +133,7 @@
 			listNow.appendChild( listNowText );
 
 			const sellNowText = document.createElement( 'span' );
-			sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', '…' );
+			sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', FormatCurrency( 0 ) );
 
 			const sellNow = document.createElement( 'a' );
 			sellNow.title = i18n.inventory_sell_at_title;
@@ -222,13 +226,13 @@
 					if( data.lowest_sell_order )
 					{
 						const listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
-						const listNowPrice = ( data.lowest_sell_order - listNowFee.fees ) / 100;
+						const listNowPrice = data.lowest_sell_order - listNowFee.fees;
 
 						listNow.style.removeProperty( 'opacity' );
 						listNow.style.removeProperty( 'display' );
 						listNow.dataset.price = listNowPrice;
-						listNow.addEventListener( 'click', quickSellButton );
-						listNowText.textContent = i18n.inventory_list_at.replace( '%price%', data.price_prefix + listNowPrice + data.price_suffix );
+						listNow.addEventListener( 'click', OnQuickSellButtonClick );
+						listNowText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( listNowPrice ) );
 					}
 					else
 					{
@@ -238,13 +242,13 @@
 					if( data.highest_buy_order )
 					{
 						const sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
-						const sellNowPrice = ( data.highest_buy_order - sellNowFee.fees ) / 100;
+						const sellNowPrice = data.highest_buy_order - sellNowFee.fees;
 
 						sellNow.style.removeProperty( 'opacity' );
 						sellNow.style.removeProperty( 'display' );
 						sellNow.dataset.price = sellNowPrice;
-						sellNow.addEventListener( 'click', quickSellButton );
-						sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', data.price_prefix + sellNowPrice + data.price_suffix );
+						sellNow.addEventListener( 'click', OnQuickSellButtonClick );
+						sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', FormatCurrency( sellNowPrice ) );
 					}
 					else
 					{
