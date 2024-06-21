@@ -130,6 +130,7 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	color: #c6d4df;
 	display: flex;
+	gap: 10px;
 }
 
 .steamdb_prices_bottom {
@@ -142,7 +143,6 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	align-self: center;
 	width: 32px;
 	height: 32px;
-	padding-right: 10px;
 	opacity: 0.5;
 	transition: opacity 0.1s ease-in-out;
 }
@@ -162,6 +162,7 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 .steamdb_prices_top b {
 	font-weight: bold;
 	color: #a3cf06;
+	unicode-bidi: plaintext;
 }
 
 .steamdb_rating.steamdb_rating_good {

@@ -116,6 +116,7 @@ header svg {
 #localization {
 	background-color: #16161d;
 	color: #888;
+	direction: ltr;
 }
 
 #localization .container {

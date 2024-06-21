@@ -455,6 +455,7 @@ function DrawLowestPrice()
 	const element = document.createElement( 'a' );
 	element.className = 'steamdb_prices';
 	element.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
+	element.dir = _t( '@@bidi_dir' );
 
 	const image = document.createElement( 'img' );
 	image.src = GetLocalResource( 'icons/white.svg' );
@@ -580,6 +581,7 @@ function DrawOnlineStatsWidget( items )
 
 		const grid = document.createElement( 'div' );
 		grid.className = 'steamdb_stats_grid';
+		grid.dir = _t( '@@bidi_dir' );
 
 		blockInner.append( grid );
 		blockInner.append( link );
