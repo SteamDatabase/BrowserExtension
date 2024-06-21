@@ -85,6 +85,18 @@
 		};
 	}
 
+	if( hasQuickSellEnabled )
+	{
+		const originalBuildHover = window.BuildHover;
+
+		window.BuildHover = function( prefix, item, owner )
+		{
+			document.querySelector( '.steamdb_quick_sell' )?.remove();
+
+			originalBuildHover.apply( this, arguments );
+		};
+	}
+
 	window.PopulateMarketActions = function( elActions, item )
 	{
 		const realIsTrading = window.g_bIsTrading;
@@ -112,7 +124,7 @@
 			const listNow = document.createElement( 'a' );
 			listNow.title = i18n.inventory_list_at_title;
 			listNow.href = 'javascript:void(0)';
-			listNow.className = 'btn_small btn_blue_white_innerfade';
+			listNow.className = 'btn_small btn_darkblue_white_innerfade';
 			listNow.style.opacity = 0.5;
 			listNow.appendChild( listNowText );
 
@@ -122,7 +134,7 @@
 			const sellNow = document.createElement( 'a' );
 			sellNow.title = i18n.inventory_sell_at_title;
 			sellNow.href = 'javascript:void(0)';
-			sellNow.className = 'btn_small btn_blue_white_innerfade';
+			sellNow.className = 'btn_small btn_darkblue_white_innerfade';
 			sellNow.style.opacity = 0.5;
 			sellNow.appendChild( sellNowText );
 
@@ -130,7 +142,7 @@
 			buttons.appendChild( document.createTextNode( ' ' ) );
 			buttons.appendChild( sellNow );
 
-			elActions.appendChild( buttons );
+			elActions.insertAdjacentElement( 'afterend', buttons );
 
 			const xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function()

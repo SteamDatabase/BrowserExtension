@@ -31,11 +31,10 @@
 }
 
 .steamdb_quick_sell {
-	float: right;
-}
-
-.steamdb_quick_sell .btn_small > span {
-	padding: 0 6px;
-	height: 22px;
-	line-height: 22px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 10px;
+	padding-bottom: 8px;
+	background: #161920;
 }
