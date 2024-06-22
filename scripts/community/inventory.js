@@ -164,8 +164,7 @@
 						hasQuickSellEnabled = false;
 					}
 
-					sellNow.style.display = 'none';
-					listNow.style.display = 'none';
+					buttons.remove();
 
 					return;
 				}
@@ -176,8 +175,7 @@
 
 				if( !commodityID )
 				{
-					sellNow.style.display = 'none';
-					listNow.style.display = 'none';
+					buttons.remove();
 
 					return;
 				}
@@ -205,8 +203,7 @@
 							hasQuickSellEnabled = false;
 						}
 
-						listNow.style.display = 'none';
-						sellNow.style.display = 'none';
+						buttons.remove();
 
 						return;
 					}
@@ -215,8 +212,7 @@
 
 					if( !data.success )
 					{
-						listNow.style.display = 'none';
-						sellNow.style.display = 'none';
+						buttons.remove();
 
 						return;
 					}
@@ -229,14 +225,13 @@
 						const listNowPrice = data.lowest_sell_order - listNowFee.fees;
 
 						listNow.style.removeProperty( 'opacity' );
-						listNow.style.removeProperty( 'display' );
 						listNow.dataset.price = listNowPrice;
 						listNow.addEventListener( 'click', OnQuickSellButtonClick );
 						listNowText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( listNowPrice ) );
 					}
 					else
 					{
-						listNow.style.display = 'none';
+						listNow.remove();
 					}
 
 					if( data.highest_buy_order )
@@ -245,14 +240,13 @@
 						const sellNowPrice = data.highest_buy_order - sellNowFee.fees;
 
 						sellNow.style.removeProperty( 'opacity' );
-						sellNow.style.removeProperty( 'display' );
 						sellNow.dataset.price = sellNowPrice;
 						sellNow.addEventListener( 'click', OnQuickSellButtonClick );
 						sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', FormatCurrency( sellNowPrice ) );
 					}
 					else
 					{
-						sellNow.style.display = 'none';
+						sellNow.remove();
 					}
 				};
 				xhrHistogram.open( 'GET', '/market/itemordershistogram?' + histogramParams.toString(), true );
