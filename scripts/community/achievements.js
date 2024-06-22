@@ -32,6 +32,12 @@ function InitAchievements( items, isPersonal )
 	}
 
 	const gameLogoElement = document.querySelector( '.profile_small_header_additional .gameLogo' );
+
+	if( !gameLogoElement )
+	{
+		return;
+	}
+
 	const appIdElement = gameLogoElement.querySelector( 'a' );
 
 	if( !appIdElement )
