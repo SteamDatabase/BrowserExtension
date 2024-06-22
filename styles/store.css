@@ -103,6 +103,10 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	padding-bottom: 13px;
 }
 
+.steamdb_last_update .date {
+	unicode-bidi: plaintext;
+}
+
 .glance_ctn .release_date + .steamdb_last_update {
 	margin-top: -13px;
 }
