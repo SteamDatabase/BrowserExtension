@@ -51,15 +51,13 @@ GetOption( {
 		url += `?player=${steamID}`;
 	}
 
-	let image, element;
-
 	if( container )
 	{
-		image = document.createElement( 'img' );
+		const image = document.createElement( 'img' );
 		image.className = 'steamdb_popup_icon';
 		image.src = GetLocalResource( 'icons/white.svg' );
 
-		element = document.createElement( 'a' );
+		const element = document.createElement( 'a' );
 		element.href = url;
 		element.className = 'popup_menu_item';
 		element.appendChild( image );
@@ -73,18 +71,17 @@ GetOption( {
 
 		if( container )
 		{
-			const text = document.createElement( 'span' );
-
-			image = document.createElement( 'img' );
+			const image = document.createElement( 'img' );
 			image.src = GetLocalResource( 'icons/white.svg' );
 			image.className = 'steamdb_self_profile';
 
+			const text = document.createElement( 'span' );
+			text.dataset.tooltipText = _t( 'steamdb_calculator' );
 			text.appendChild( image );
 
-			element = document.createElement( 'a' );
+			const element = document.createElement( 'a' );
 			element.className = 'btn_profile_action btn_medium';
 			element.href = url;
-			element.title = _t( 'steamdb_calculator' );
 			element.appendChild( text );
 
 			container.appendChild( element );
