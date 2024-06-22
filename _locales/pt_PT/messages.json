@@ -269,7 +269,7 @@
 		"message": "Ordenar por data"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Os grupos de proezas são fornecidos pelo Steam Hunters.",
+		"message": "Os grupos de proezas são fornecidos pelo Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -536,7 +536,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Ocultar banner \"Abrir no Steam\""
+		"message": "Esconder a faixa \"Abrir no Steam\""
 	},
 	"options_steamdb_rating": {
 		"message": "Mostrar a avaliação do SteamDB nas páginas de produtos"

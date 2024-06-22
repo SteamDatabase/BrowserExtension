@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Ergänzt den Steam-Shop und die Steam-Community um neue Funktionen, SteamDB-Verlinkungen und Statistiken wie die niedrigsten Preise."
+		"message": "Ergänzt den Steam-Shop und die Steam-Community um neue Funktionen, SteamDB-Verlinkungen, Tiefstpreise und weitere Statistiken."
 	},
 	"steamdb_options": {
 		"message": "SteamDB-Einstellungen"
@@ -83,7 +83,7 @@
 		"message": "Follower:"
 	},
 	"app_lowest_price": {
-		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b>",
+		"message": "Aufgezeichneter SteamDB-Tiefstpreis: <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -92,7 +92,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b> (<b>-$discount$ %</b>)",
+		"message": "Aufgezeichneter SteamDB-Tiefstpreis: <b>$price$</b> (<b>-$discount$ %</b>)",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -105,7 +105,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Niedrigster von SteamDB aufgezeichneter Preis ist <b>$price$</b>. Der niedrigste Preis der letzten zwei Jahre war <b>$price_limited$</b>",
+		"message": "Aufgezeichneter SteamDB-Tiefstpreis: <b>$price$</b> (<b>$price_limited$</b> in den letzten 2 Jahren)",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -330,7 +330,7 @@
 		"message": "Diese Software ist <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">quelloffen</a>. Danke an alle Mitwirkenden!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Deaktivierte Kontrollkästchen deuten eingebaute Funktionen an."
+		"message": "* Deaktivierte Kontrollkästchen kennzeichnen eingebaute Funktionen."
 	},
 	"options_header_website": {
 		"message": "SteamDB-Website"
@@ -440,7 +440,7 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Den niedrigsten Preis auf Produktseiten anzeigen"
+		"message": "Aufgezeichneten Tiefstpreis auf Produktseiten anzeigen"
 	},
 	"options_online_stats": {
 		"message": "Aktuelle Spielerzahlen und Höchstwerte auf Spielseiten anzeigen"
