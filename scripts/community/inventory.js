@@ -472,6 +472,7 @@
 				if( value )
 				{
 					callback( value );
+					return;
 				}
 
 				const xhr = new XMLHttpRequest();
