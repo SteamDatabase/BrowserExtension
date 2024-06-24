@@ -287,13 +287,12 @@ else
 				subtitle.textContent = _t( 'app_steamdb_rating' );
 
 				const summary = document.createElement( 'div' );
-				summary.className = `summary column steamdb_rating steamdb_rating_${ratingClass}`;
-				summary.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
+				summary.className = 'summary column';
 
 				const link = document.createElement( 'a' );
-				link.className = 'responsive_hidden';
-				link.href = 'https://steamdb.info/blog/steamdb-rating/';
-				link.textContent = '(?)';
+				link.className = `steamdb_rating steamdb_rating_${ratingClass}`;
+				link.href = `${GetHomepage()}app/${GetCurrentAppID()}/charts/#reviews`;
+				link.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
 				summary.appendChild( link );
 
 				const responsiveText = document.createElement( 'span' );

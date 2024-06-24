@@ -169,28 +169,24 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	unicode-bidi: plaintext;
 }
 
-.steamdb_rating.steamdb_rating_good {
-	color: #6c3;
+a.steamdb_rating.steamdb_rating_good {
+	color: #6c3 !important;
 }
 
-.steamdb_rating.steamdb_rating_average {
-	color: #fc3;
+a.steamdb_rating.steamdb_rating_average {
+	color: #fc3 !important;
 }
 
-.steamdb_rating.steamdb_rating_poor {
-	color: #e60;
+a.steamdb_rating.steamdb_rating_poor {
+	color: #e60 !important;
 }
 
-.steamdb_rating.steamdb_rating_white {
-	color: #aaa;
+a.steamdb_rating.steamdb_rating_white {
+	color: #aaa !important;
 }
 
-.steamdb_rating a {
-	color: #556772 !important;
-}
-
-.steamdb_rating a:hover {
-	color: #fff !important;
+a.steamdb_rating:hover {
+	color: #fff;
 }
 
 .steamdb_already_in_library_link {
