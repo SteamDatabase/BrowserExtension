@@ -148,31 +148,8 @@
 
 			elActions.insertAdjacentElement( 'afterend', buttons );
 
-			const xhr = new XMLHttpRequest();
-			xhr.onreadystatechange = function()
+			GetMarketItemNameId( item, ( commodityID ) =>
 			{
-				if( xhr.readyState !== 4 )
-				{
-					return;
-				}
-
-				if( xhr.status !== 200 )
-				{
-					if( xhr.status === 429 )
-					{
-						// If user is currently rate limited by Steam market, just disable the buttons
-						hasQuickSellEnabled = false;
-					}
-
-					buttons.remove();
-
-					return;
-				}
-
-				let data = xhr.response;
-
-				const commodityID = data.match( /Market_LoadOrderSpread\(\s?(\d+)\s?\);/ );
-
 				if( !commodityID )
 				{
 					buttons.remove();
@@ -184,7 +161,7 @@
 				histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
 				histogramParams.set( 'language', 'english' );
 				histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
-				histogramParams.set( 'item_nameid', commodityID[ 1 ] );
+				histogramParams.set( 'item_nameid', commodityID );
 				histogramParams.set( 'two_factor', '0' );
 
 				const xhrHistogram = new XMLHttpRequest();
@@ -208,7 +185,7 @@
 						return;
 					}
 
-					data = xhrHistogram.response;
+					const data = xhrHistogram.response;
 
 					if( !data.success )
 					{
@@ -253,10 +230,7 @@
 				xhrHistogram.setRequestHeader( 'X-Requested-With', 'SteamDB' );
 				xhrHistogram.responseType = 'json';
 				xhrHistogram.send();
-			};
-			xhr.open( 'GET', '/market/listings/' + item.description.appid + '/' + encodeURIComponent( window.GetMarketHashName( item.description ) ), true );
-			xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
-			xhr.send();
+			} );
 		}
 	};
 
@@ -485,4 +459,114 @@
 			}
 		}
 	};
+
+	function GetMarketItemNameId( item, callback )
+	{
+		const appid = item.description.appid;
+		const marketHashName = encodeURIComponent( window.GetMarketHashName( item.description ) );
+		const cacheKey = `${appid}_${marketHashName}`;
+
+		GetCachedItemId( cacheKey )
+			.then( ( value ) =>
+			{
+				if( value )
+				{
+					callback( value );
+				}
+
+				const xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function()
+				{
+					if( xhr.readyState !== 4 )
+					{
+						return;
+					}
+
+					if( xhr.status !== 200 )
+					{
+						if( xhr.status === 429 )
+						{
+							// If user is currently rate limited by Steam market, just disable the buttons
+							hasQuickSellEnabled = false;
+						}
+
+						callback( null );
+						return;
+					}
+
+					const data = xhr.response;
+
+					const commodityID = data.match( /Market_LoadOrderSpread\(\s?(?<id>\d+)\s?\);/ );
+
+					if( !commodityID )
+					{
+						callback( null );
+						return;
+					}
+
+					SetCachedItemId( cacheKey, commodityID.groups.id )
+						.then( () =>
+						{
+							callback( commodityID.groups.id );
+						} )
+						.catch( ( err ) =>
+						{
+							console.error( '[SteamDB] DB set fail', err );
+
+							callback( commodityID.groups.id );
+						} );
+				};
+				xhr.open( 'GET', `/market/listings/${appid}/${marketHashName}`, true );
+				xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
+				xhr.send();
+			} )
+			.catch( ( err ) =>
+			{
+				console.error( '[SteamDB] DB get fail', err );
+
+				callback( null );
+			} );
+	}
+
+	/**
+	 * IndexedDB. Ref: https://github.com/jakearchibald/idb-keyval
+	 */
+	const itemDatabase = CreateItemStore( 'steamdb_extension', 'itemid_name_cache' );
+
+	function PromisifyDbRequest( request )
+	{
+		return new Promise( ( resolve, reject ) =>
+		{
+			request.oncomplete = request.onsuccess = () => resolve( request.result );
+			request.onabort = request.onerror = () => reject( request.error );
+		} );
+	}
+
+	function CreateItemStore( dbName, storeName )
+	{
+		const request = indexedDB.open( dbName );
+		request.onupgradeneeded = () => request.result.createObjectStore( storeName );
+		const dbp = PromisifyDbRequest( request );
+		return ( txMode, callback ) => dbp.then( ( db ) => callback( db.transaction( storeName, txMode ).objectStore( storeName ) ) );
+	}
+
+	/**
+	 * Get a value by its key.
+	 */
+	function GetCachedItemId( key )
+	{
+		return itemDatabase( 'readonly', ( store ) => PromisifyDbRequest( store.get( key ) ) );
+	}
+
+	/**
+	 * Set a value with a key.
+	 */
+	function SetCachedItemId( key, value )
+	{
+		return itemDatabase( 'readwrite', ( store ) =>
+		{
+			store.put( value, key );
+			return PromisifyDbRequest( store.transaction );
+		} );
+	}
 }() );
