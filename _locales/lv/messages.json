@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Pievieno SteamDB linkus un jaunas funkcijas Steam veikalam un kopienai. Skatīt zemākās spēļu cenas un statistiku."
+		"message": "Pievieno SteamDB linkus un jaunas funkcijas Steam veikalam un kopienai. Skatīt zemākās spēļu cenas un statistiku.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Opcijas"

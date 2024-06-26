@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Dodaje SteamDB Linkove i nova svosjtva na Steam Prodavnicu i zajednici. Provjeri najniže cijene i statistike."
+		"message": "Dodaje SteamDB Linkove i nova svosjtva na Steam Prodavnicu i zajednici. Provjeri najniže cijene i statistike.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Postavke"

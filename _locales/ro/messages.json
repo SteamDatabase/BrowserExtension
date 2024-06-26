@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Adaugă link-uri SteamDB și funcții noi în magazinul Steam și comunitate. Vezi cele mai mici prețuri de joc și statistici."
+		"message": "Adaugă link-uri SteamDB și funcții noi în magazinul Steam și comunitate. Vezi cele mai mici prețuri de joc și statistici.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Opțiuni SteamDB"
@@ -9,7 +10,7 @@
 		"message": "Calculator SteamDB"
 	},
 	"steamstatus": {
-		"message": "Verifica $domain$",
+		"message": "Verifică pe $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -18,7 +19,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam pare să se confrunte cu conexiune la moment. "
+		"message": "Steam pare să se confrunte cu probleme de conexiune la acest moment. "
 	},
 	"view_on_steamdb": {
 		"message": "Vezi pe SteamDB"
@@ -31,7 +32,7 @@
 		"message": "Vezi pe PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Realizările proprii"
+		"message": "Realizări personale"
 	},
 	"store_page": {
 		"message": "Pagina magazinului",
@@ -269,7 +270,7 @@
 		"message": "Sortează după timp"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Grupurile de realizări sunt furnizate de Steam Hunters via SteamDB.",
+		"message": "Grupurile de realizări sunt furnizate de Steam Hunters prin SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -282,7 +283,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Vinde cu $price$",
+		"message": "Vinde la $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",

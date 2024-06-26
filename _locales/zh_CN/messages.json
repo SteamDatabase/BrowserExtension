@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "在 Steam 商店和社区页面中添加 SteamDB 链接和新功能，可查阅游戏史低价格和在线统计数据。"
+		"message": "在 Steam 商店和社区页面中添加 SteamDB 链接和新功能，可查阅游戏史低价格和在线统计数据。",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB 设置"
@@ -536,7 +537,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "隐藏页面顶部的“在 Steam 中打开”按钮"
+		"message": "隐藏未登录时页面顶部的“在 Steam 应用中打开”横幅"
 	},
 	"options_steamdb_rating": {
 		"message": "在产品页面显示 SteamDB 评分"
@@ -555,11 +556,11 @@
 		"message": "使用现代化设计"
 	},
 	"options_achievement_groups": {
-		"message": "使用来自 Steam Hunters 的数据分组成就",
+		"message": "使用来自 Steam Hunters 的数据对成就进行分组",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "对隐藏成就启用防剧透元素"
+		"message": "对隐藏成就的解锁文字启用防剧透"
 	},
 	"options_prevent_store_images": {
 		"message": "在产品页面阻止图像加载"
@@ -576,7 +577,7 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "添加一个按钮，可折叠商店页面中“您的Steam库中已有此游戏”的模块"
+		"message": "在商店页面的“您的 Steam 库中已有”模块添加折叠按钮"
 	},
 	"options_builtin_card_drops": {
 		"message": "在徽章页面显示剩余可掉落卡片总数量"

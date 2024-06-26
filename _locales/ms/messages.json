@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Menambah pautan SteamDB dan ciri-ciri baharu pada kedai dan komuniti Steam. Lihat harga terendah permainan dan statistik."
+		"message": "Menambah pautan SteamDB dan ciri-ciri baharu pada kedai dan komuniti Steam. Lihat harga terendah permainan dan statistik.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Pilihan SteamDB"

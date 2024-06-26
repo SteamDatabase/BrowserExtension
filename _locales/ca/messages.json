@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Afegeix enllaços de SteamDB i noves funcionalitats a la botiga i comunitat de Steam. Mira els preus més baixos dels jocs i estadístiques."
+		"message": "Afegeix enllaços de SteamDB i noves funcionalitats a la botiga i comunitat de Steam. Mira els preus més baixos dels jocs i estadístiques.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Opcions de SteamDB"
@@ -267,6 +268,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "Ordena per temps"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Els grups d'assoliments són proveïts per Steam Hunters via SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Llistar a $price$",

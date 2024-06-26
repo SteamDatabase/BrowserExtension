@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Pridėtos SteamDB nuorodos ir naujos funkcijos Steam parduotuvėje ir bendruomenėje. Peržiūrėkite mažiausias žaidimų kainas ir statistiką."
+		"message": "Pridėtos SteamDB nuorodos ir naujos funkcijos Steam parduotuvėje ir bendruomenėje. Peržiūrėkite mažiausias žaidimų kainas ir statistiką.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB nustatymai"
@@ -22,6 +23,10 @@
 	},
 	"view_on_steamdb": {
 		"message": "Peržiūrėti per SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Žiurėti per „Steam Hunters“",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Peržiūrėti per PCGamingWiki"
@@ -57,7 +62,7 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Paskutinį kartą atnaujinta:"
+		"message": "Paskutinis atnaujinimas:"
 	},
 	"app_depots_updated_short": {
 		"message": "Atnaujinta",
@@ -101,7 +106,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB žemiausia užfiksuota kaina yra <b>$price$</b> o 2 metų žemiausia kaina yra <b>$price_limited$</b>",
+		"message": "SteamDB žemiausia užfiksuota kaina yra <b>$price$</b>, o 2 metų žemiausia kaina yra <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -114,7 +119,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Kainos, matytos $date$ ($relative$)",
+		"message": "Kaina, matyta $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -145,16 +150,16 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "Automatinis atradimas"
+		"message": "Automatinė peržiūra"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automatiškai atrasti eilę ir gauti įvykio kortelę."
+		"message": "Automatiškai peržiūrėti eilę ir gauti renginio kortelę."
 	},
 	"explore_generating": {
-		"message": "Generuojama nauja atradimo eilė, tai gali nepavykti, jei Steam yra labai apkrautas…"
+		"message": "Generuojama nauja peržiūros eilė, tai gali nepavykti, jei Steam yra labai apkrautas…"
 	},
 	"explore_exploring": {
-		"message": "Tyrinėjama eilė... Reikalaujame $current$ iš $total$",
+		"message": "Peržiūrima eilė… Užklausa $current$ iš $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -188,10 +193,10 @@
 		"message": "Nepavyko sugeneruoti naujos eilės, bandysime dar kartą po penkių sekundžių…"
 	},
 	"explore_finished": {
-		"message": "Išnagrinėta eilė."
+		"message": "Eilė buvo peržiūrėta."
 	},
 	"badges_idle_apps": {
-		"message": "Programos, kuriomis idle'inti: $amount$",
+		"message": "Programos, turinčios kortelių: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +206,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Programos, kuriomis idle'inti šiame puslapyje: $amount$",
+		"message": "Programos, turinčios kortelių šiame puslapyje: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -211,7 +216,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Likusių numetimų: $amount$",
+		"message": "Likę kortelių: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -221,7 +226,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Likę numetimai šiame puslapyje: $amount$",
+		"message": "Likę kortelės šiame puslapyje: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -233,8 +238,43 @@
 	"hidden_achievement": {
 		"message": "Paslėptas pasiekimas: "
 	},
+	"achievement_global_unlock": {
+		"message": "$percent$ žaidėjų turi šį pasiekimą",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "GAUTŲ PASIEKIMŲ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "UŽRAKINTŲ PASIEKIMŲ: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Rūšioti pagal laiką"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Pasiekimų grupes teikia „Steam Hunters“ per SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
-		"message": "Sąrašas su $price$",
+		"message": "Skelbti už $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -252,10 +292,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Pateikia prekę už mažiausią nurodytą pardavimo kainą\n\nRodoma kaina yra pinigai, kuriuos gaunate (be mokesčių)"
+		"message": "Paskelbia prekę už mažiausią esamą pardavimo kainą\n\nRodoma kaina yra pinigai, kuriuos gaunate (be mokesčių)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Pateikia prekę už didžiausią nurodytą pirkimo užsakymo kainą\n\nRodoma kaina - tai pinigai, kuriuos gaunate (be mokesčių)"
+		"message": "Paskelbia prekę už didžiausią esamą pirkimo užsakymo kainą\n\nRodoma kaina - tai pinigai, kuriuos gaunate (be mokesčių)"
 	},
 	"options": {
 		"message": "Nustatymai"
@@ -307,6 +347,9 @@
 	},
 	"options_header_trade_offers": {
 		"message": "Keitimo pasiūlymai"
+	},
+	"options_header_achievements": {
+		"message": "Pasiekimai"
 	},
 	"options_header_enhancements": {
 		"message": "Patobulinimai"
@@ -380,6 +423,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kai \"$options_achievement_groups$\" pasirinkimas yra ijungtas, išplėstukas sukurs saugų prašymą $domain$ kad darytų pasiekimų grupavimą ant savo pasiekimų puslapio su informacija pateikta Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -489,6 +546,22 @@
 		"message": "Rodyti produkto piktogramą parduotuvės ir bendruomenės puslapiuose",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "Pagerink savo pasiekimų puslapį"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Rodyti globalų atrakintų pasiekimų procentą"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernizuotas dizainas"
+	},
+	"options_achievement_groups": {
+		"message": "Grupės pasiekmai su informacija iš Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Uždėti paslėptus pasiekimus už spoilerio elementą"
+	},
 	"options_prevent_store_images": {
 		"message": "Sustabdyti vaizdų krovimą produktų parduotuvės puslapiuose"
 	},
@@ -503,6 +576,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Uždėti mygtuką kad griūtų \"jau tavo bibliotekoje\" blokas"
+	},
 	"options_builtin_card_drops": {
 		"message": "Rodyti bendrą likusių kortelių kiekį ženklelio puslapyje"
 	},
@@ -511,5 +587,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Patobulinkite pasaulio pasiekimų puslapį"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Susieti su savo pasiekimų puslapiu"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Rodyti užrakto simbolį užrakintams pasiekimams"
 	}
 }

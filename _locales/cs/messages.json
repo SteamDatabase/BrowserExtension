@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Přidá SteamDB odkazy a nové funkce v Steam obchodě a komunitě. Zobrazit nejnižší ceny a statistiky."
+		"message": "Přidá SteamDB odkazy a nové funkce v obchodě a komunitě Steam. Zobrazte nejnižší ceny a statistiky.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Nastavení SteamDB"

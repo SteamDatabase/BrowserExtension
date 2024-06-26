@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "ამატებს SteamDB-ს ლინკებს და ახალ ფუნქციებს Steam-ის მაღაზიასა და ქომუნითში. ნახე თამაშების უმცირესი ფასები და მათი მონაცემები."
+		"message": "ამატებს SteamDB-ს ლინკებს და ახალ ფუნქციებს Steam-ის მაღაზიასა და ქომუნითში. ნახე თამაშების უმცირესი ფასები და მათი მონაცემები.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB პარამეტრები"
@@ -149,7 +150,7 @@
 		}
 	},
 	"explore_auto_discover": {
-		"message": "ავტო აღმოჩენა"
+		"message": "ავტომატური აღმოჩენა"
 	},
 	"explore_auto_discover_description": {
 		"message": "ავტომატურად დაათვალიერე აღმოჩენის რიგი და აიღე ივენთ ქარდი."
@@ -267,6 +268,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "სორტირება დროის მიხედვით"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "მიღწევების ჯგუფებს უზრუნველყოფენ Steam Hunters-ის მეშვეობით SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "დადე მარკეტზე $price$-ად",

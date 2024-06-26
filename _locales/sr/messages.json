@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Додаје SteamDB линкове и нове функције на Steam продавницу и заједницу. Погледајте најниже цене игрица и њихову статистику."
+		"message": "Додаје SteamDB линкове и нове функције на Steam продавницу и заједницу. Погледајте најниже цене игрица и њихову статистику.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Подешавања"

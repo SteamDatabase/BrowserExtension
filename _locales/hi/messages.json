@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "SteamDB लिंक और नए विषेशताँऐ Steam स्टोर एवं स्टिम सम्प्रदाय पर जोड़े। देखे सबसे कम कीमत और आँकड़े।"
+		"message": "SteamDB लिंक और नए विषेशताँऐ Steam स्टोर एवं स्टिम सम्प्रदाय पर जोड़े। देखे सबसे कम कीमत और आँकड़े।",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB वरणाधिकार"
@@ -31,7 +32,7 @@
 		"message": "PCGamingWiki पर देखें"
 	},
 	"view_your_achievements": {
-		"message": "व्यक्तिगत निपुणता"
+		"message": "व्यक्तिगत उपलब्धियों"
 	},
 	"store_page": {
 		"message": "स्टोर पृष्ठ",
@@ -196,6 +197,16 @@
 	},
 	"badges_idle_apps": {
 		"message": "ड्रॉप्स वाले ऐप्स: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "इस पेज पर निष्क्रिय रहने के लिए ऐप्स: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -527,5 +538,60 @@
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"ओपन इन द स्टीम\" बैनर छिपाएँ"
+	},
+	"options_steamdb_rating": {
+		"message": "उत्पाद पृष्ठों पर स्टीमडीबी रेटिंग बटन प्रदर्शित करें"
+	},
+	"options_enhancement_appicon": {
+		"message": "स्टोर और सामुदायिक पृष्ठों पर उत्पाद आइकन प्रदर्शित करें",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "व्यक्तिगत उपलब्धियाँ पृष्ठ सुधारें"
+	},
+	"options_achievements_global_unlock": {
+		"message": "वैश्विक उपलब्धि अनलॉक प्रतिशत प्रदर्शित करें"
+	},
+	"options_modernized_achievements": {
+		"message": "आधुनिकीकृत डिज़ाइन"
+	},
+	"options_achievement_groups": {
+		"message": "स्टीम हंटर्स के डेटा के साथ समूह की उपलब्धियाँ",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "छिपी हुई उपलब्धियों को बिगाड़ने वाले तत्व के पीछे रखें"
+	},
+	"options_prevent_store_images": {
+		"message": "उत्पाद के पेज पर चित्रों को लोड होने से रोकें"
+	},
+	"options_prevent_store_images_description": {
+		"message": "कुछ डेवलपर्स उत्पाद विवरण में मेगाबाइट छवियां डालते हैं जिन्हें लोड होने में कुछ समय लग सकता है, लोड करने के लिए छवि पर क्लिक करें"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "प्रोफ़ाइल और साझा फ़ाइल लिंक पर $award$ पैरामीटर का समर्थन करें",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "\"पहले से ही आपकी लाइब्रेरी में\" ब्लॉक को संक्षिप्त करने के लिए एक बटन जोड़ें"
+	},
+	"options_builtin_card_drops": {
+		"message": "बैज पृष्ठ पर शेष कार्ड ड्रॉप की कुल मात्रा प्रदर्शित करें"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "बिक्री के दौरान कतार को स्वचालित रूप से खोजने के लिए एक बटन जोड़ें"
+	},
+	"options_builtin_achievements_global": {
+		"message": "उपलब्धियाँ के पेज को सुधारें"
+	},
+	"options_builtin_achievements_link": {
+		"message": "आपके व्यक्तिगत उपलब्धियां पृष्ठ का लिंक"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "लॉक की गई उपलब्धियों के लिए लॉक आइकन प्रदर्शित करें"
 	}
 }

@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "SteamDB へのリンクと新機能を Steam ストアとコミュニティに追加します。また、ゲームの最低価格や統計を表示できます。"
+		"message": "SteamDB へのリンクと新機能を Steam ストアとコミュニティに追加します。また、ゲームの最低価格や統計を表示できます。",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB オプション"
@@ -18,10 +19,14 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam は現在、一時的なサービス停止が発生しているようです。 "
+		"message": "Steam では現在、一時的なサービス停止が発生しているようです。 "
 	},
 	"view_on_steamdb": {
 		"message": "SteamDB で見る"
+	},
+	"view_on_steam_hunters": {
+		"message": "Steam Huntersで見る",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "PCGamingWiki で見る"
@@ -73,13 +78,13 @@
 		"message": "24時間のピーク:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "最大同時接続者数"
+		"message": "最大同時接続者数:"
 	},
 	"app_stats_followers": {
 		"message": "フォロワー数:"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB 記録された最低価格は <b>$price$</b>",
+		"message": "SteamDB で記録された最低価格は <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -127,7 +132,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "価格は $seen$ 回、最後は $date$ ($relative$)",
+		"message": "この価格は $seen$ 回、最後に $date$ ($relative$) に記録されています。",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -243,6 +248,31 @@
 			}
 		}
 	},
+	"achievements_unlocked_count": {
+		"message": "アンロックした実績: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "未解除の実績: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "アンロック順"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "実績のグループ化データは SteamDB 経由で Steam Hunters によって提供されています。",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "$price$ で出品",
 		"placeholders": {
@@ -265,7 +295,7 @@
 		"message": "最も低い販売価格でアイテムを出品します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
 	},
 	"inventory_sell_at_title": {
-		"message": "最も高い買い注文の価格でアイテムを販売\n\n表示価格は手数料を差し引いた後の受取金額です。"
+		"message": "最も高い買い注文の価格でアイテムを販売します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
 	},
 	"options": {
 		"message": "オプション"
@@ -383,6 +413,33 @@
 			}
 		}
 	},
+	"options_extra_data_prices": {
+		"message": "$options_steamdb_lowest_price$が有効な場合、拡張機能は$domain$から Steam で設定された通貨での最低記録価格を取得します。",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "「$options_achievement_groups$」が有効な場合、拡張機能はセキュアリクエストを介して $domain$ から Steam Hunters によって提供されているデータを取得し、マイ実績ページにある実績をグループ化します。",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
 	"options_steamdb_lowest_price": {
 		"message": "製品ページに最低価格を表示"
 	},
@@ -489,6 +546,22 @@
 		"message": "ストアとコミュニティページで製品アイコンを表示する",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "自分の実績ページの改善"
+	},
+	"options_achievements_global_unlock": {
+		"message": "グローバル実績解除率を表示"
+	},
+	"options_modernized_achievements": {
+		"message": "モダンデザイン"
+	},
+	"options_achievement_groups": {
+		"message": "Steam Huntersのデータを使用し実績をグループ化する",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "隠し実績をぼかす"
+	},
 	"options_prevent_store_images": {
 		"message": "製品ページで画像の読み込みを停止する"
 	},
@@ -503,6 +576,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "「ライブラリにすでに存在します」バナーを折りたたむボタンを追加する"
+	},
 	"options_builtin_card_drops": {
 		"message": "バッジページにカードドロップの残り枚数を表示"
 	},
@@ -511,5 +587,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "グローバル実績ページの改善"
+	},
+	"options_builtin_achievements_link": {
+		"message": "自分の実績ページへのリンク"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "未解除の実績に鍵アイコンを表示する"
 	}
 }

@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Додає посилання та різноманітні функції SteamDB у крамниці та спільноті Steam. Переглядайте найнижчі ціни й статистику ігор."
+		"message": "Додає посилання та різноманітні функції SteamDB у крамниці та спільноті Steam. Переглядайте найнижчі ціни й статистику ігор.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Параметри SteamDB"

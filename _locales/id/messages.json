@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Menambahkan tautan SteamDB dan fitur baru di Toko Steam dan komunitas. Melihat harga permainan terendah dan statistik."
+		"message": "Menambahkan tautan SteamDB dan fitur baru di Toko Steam dan komunitas. Melihat harga permainan terendah dan statistik.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Pengaturan SteamDB"

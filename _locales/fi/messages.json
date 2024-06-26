@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Lisää SteamDB-linkkejä ja ominaisuuksia Steamin kauppa- ja yhteisösivuille. Katso pelien alhaisimmat hinnat ja tilastot."
+		"message": "Lisää SteamDB-linkkejä ja ominaisuuksia Steamin kauppa- ja yhteisösivuille. Katso pelien alhaisimmat hinnat ja tilastot.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB-asetukset"
@@ -267,6 +268,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "Lajittele ajan mukaan"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Saavutusryhmät tarjoaa Steam Hunter SteamDB: n kautta.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",

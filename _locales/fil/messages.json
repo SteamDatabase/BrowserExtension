@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Nagdagdag ng mga link ng SteamDB at mga bagong feature sa Steam store at komunidad. Tingnan ang pinakamababang presyo at istatistika ng laro."
+		"message": "Nagdadagdag ng mga SteamDB link at mga bagong feature sa Steam store at community. Tingnan ang mga pinakamabababang presyo at stats.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Mga option ng SteamDB"
@@ -9,7 +10,7 @@
 		"message": "Calculator ng SteamDB"
 	},
 	"steamstatus": {
-		"message": "Tingnan ito sa $domain$",
+		"message": "Tingnan sa $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -21,7 +22,7 @@
 		"message": "Mukhang nakakaranas ng downtime ang Steam. "
 	},
 	"view_on_steamdb": {
-		"message": "Tingnan ito sa SteamDB"
+		"message": "Tingnan sa SteamDB"
 	},
 	"view_on_steam_hunters": {
 		"message": "Tignan sa Steam Hunters",
@@ -195,7 +196,7 @@
 		"message": "Na-explore na ang queue."
 	},
 	"badges_idle_apps": {
-		"message": "Mga idle na app: $amount$",
+		"message": "Mga app na may drops: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -205,7 +206,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Mga idle na app sa page na ito: $amount$",
+		"message": "Mga app na may drops sa pahinang ito: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -215,7 +216,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Natitira na mga drop: $amount$",
+		"message": "Natitirang drops: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -225,7 +226,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Natitira na mga drop sa page na ito: $amount$",
+		"message": "Natitirang drops sa pahinang ito: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -247,8 +248,30 @@
 			}
 		}
 	},
+	"achievements_unlocked_count": {
+		"message": "MGA NAKAMIT NA PARANGAL: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "MGA DI PA NAKAMIT NA PARANGAL: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
 	"achievements_sort_by_time": {
 		"message": "Uriin ayon sa oras"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Ang grupo ng mga parangal ay inilaan ng Steam Hunters sa pamamagitan ng SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "I-list ito ng $price$",
@@ -325,6 +348,9 @@
 	"options_header_trade_offers": {
 		"message": "Mga Offer ng Pag-trade"
 	},
+	"options_header_achievements": {
+		"message": "Mga Parangal"
+	},
 	"options_header_enhancements": {
 		"message": "Mga Enhancement"
 	},
@@ -397,6 +423,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Kapag naka-enable ang \"$options_achievement_groups$,\" magsasagawa ng secure request ang extension sa $domain$ upang i-grupo ang mga achievement sa personal na achievements page gamit ang datos mula sa Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -506,8 +546,21 @@
 		"message": "Ipakita ang icon ng produkto sa store at community pages",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "Iimprove ang personal na achievements page"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Ipakita ang global achievement unlock percentage"
+	},
 	"options_modernized_achievements": {
 		"message": "Modernisadong disenyo"
+	},
+	"options_achievement_groups": {
+		"message": "Group achievements gamit ang datos mula sa Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Ilagay ang mga nakatagong achievement sa likod ng spoiler element"
 	},
 	"options_prevent_store_images": {
 		"message": "Pigilan ang paglo-load ng mga larawan sa mga page ng produkto"
@@ -523,6 +576,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Magdagdag ng button para i-collapse ang \"already in your library\" block"
+	},
 	"options_builtin_card_drops": {
 		"message": "Ipakita ang kabuuang halaga ng mga natitira na card drop sa page ng mga badge"
 	},
@@ -531,6 +587,9 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Pagbutihin ang page ng mga achievements"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Link papunta sa personal na achievements page"
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Magpakita ng lock icon para sa mga locked achievement"

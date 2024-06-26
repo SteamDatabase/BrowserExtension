@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Добавляет ссылки на SteamDB и новые возможности в магазине и сообществе Steam. Просматривайте самые низкие цены и статистику для игр."
+		"message": "Добавляет ссылки на SteamDB и новые возможности в магазине и сообществе Steam. Просматривайте самые низкие цены и статистику для игр.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Настройки SteamDB"

@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات اللعبة."
+		"message": "إضافة روابط SteamDB والميزات الجديدة على متجر ومجتمع Steam. عرض أقل الأسعار وإحصائيات اللعبة.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "خيارات SteamDB"
@@ -381,7 +382,7 @@
 		"message": "قائمة الرغبات، متابعة، وتجاهل المنتجات على متجر Steam مباشرة من SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">تفعيل البرنامج النصي للحزم المجانية</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">تفعيل البرنامَج النصي للحزم المجانية</a>"
 	},
 	"options_website_highlight3": {
 		"message": "تفعيل التصفية الإضافية على <a href=\"https://steamdb.info/sales/\" target=\"_blank\">صفحة التخفيضات</a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">صفحة الحزم</a>"

@@ -1,9 +1,10 @@
 {
 	"extension_description": {
-		"message": "لینک های SteamDB و قابلیت های جدیدی را در قسمت های Store و Community استیم اضافه می کند. آمار و ارزان‌ترین قیمت بازی ها را مشاهده کنید."
+		"message": "لینک های SteamDB و قابلیت های جدیدی را در قسمت های Store و Community استیم اضافه می کند. آمار و ارزان‌ترین قیمت بازی ها را مشاهده کنید.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
-		"message": "ویژگی های SteamDB"
+		"message": "امکانات SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "ماشین حساب SteamDB"
@@ -155,7 +156,7 @@
 		"message": "به‌طور خودکار صف را کشف کنید تا کارت رویداد را دریافت کنید."
 	},
 	"explore_generating": {
-		"message": "درحال ساخت صف اکتشاف جدید، عملیات ممکن است درصورت وجود فشار بار زیاد بر روی سرور های استیم شکست بخورد…"
+		"message": "درحال ساخت صف اکتشاف جدید، این عملیات ممکن است درصورت وجود فشار بار زیاد بر روی سرور های استیم شکست بخورد…"
 	},
 	"explore_exploring": {
 		"message": "درحال کاوش در صف… تقاضا $current$ از $total$",

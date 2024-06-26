@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Tilføjer SteamDB links og nye funktioner i Steam-butikken og -fællesskabet. Se de laveste spilpriser og statistikker."
+		"message": "Tilføjer SteamDB links og nye funktioner i Steam-butikken og -fællesskabet. Se de laveste spilpriser og statistikker.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Indstillinger"

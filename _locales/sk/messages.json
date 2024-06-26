@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Pridáva SteamDB odkazy a nové funkcie v obchode služby Steam a ich komunite. Zobrazte najnižšie ceny a štatistiky hier."
+		"message": "Pridáva SteamDB odkazy a nové funkcie v obchode služby Steam a ich komunite. Zobrazte najnižšie ceny a štatistiky hier.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Možnosti"
@@ -22,6 +23,10 @@
 	},
 	"view_on_steamdb": {
 		"message": "Pozrieť na SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Zobraziť na Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Pozrieť na PCGamingWiki"
@@ -64,10 +69,10 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Online Štatistiky"
+		"message": "Online štatistiky"
 	},
 	"app_stats_online_now": {
-		"message": "Teraz online:"
+		"message": "Práve online:"
 	},
 	"app_stats_peak_today": {
 		"message": "24-hodinový vrchol:"
@@ -76,7 +81,7 @@
 		"message": "Vrchol všetkých čias:"
 	},
 	"app_stats_followers": {
-		"message": "Sledovatelia:"
+		"message": "Sledujúci:"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB najnižšia zaznamenaná cena je <b>$price$</b>",
@@ -148,10 +153,10 @@
 		"message": "Auto-objavovanie"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automaticky objavte poradie a získajte event kartu."
+		"message": "Automaticky objavujte poradie a získajte event kartu."
 	},
 	"explore_generating": {
-		"message": "Generovanie nového objavovacieho poradia, môže zlyhať, ak je Steam pod vysokým zaťažením…"
+		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
 	},
 	"explore_exploring": {
 		"message": "Skúma sa poradie… Žiadosť $current$ z $total$",
@@ -185,10 +190,10 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Pokus o generovanie nového poradia zlyhal, opäť sa o to pokúsime o niekoľko sekúnd…"
+		"message": "Pokus o generovanie novej rady zlyhal, opäť sa o to pokúsime o niekoľko sekúnd…"
 	},
 	"explore_finished": {
-		"message": "Poradia bolo preskúmané."
+		"message": "Rada bola preskúmaná."
 	},
 	"badges_idle_apps": {
 		"message": "Aplikácie na nečinnosť: $amount$",
@@ -233,8 +238,43 @@
 	"hidden_achievement": {
 		"message": "Skrytý úspech: "
 	},
+	"achievement_global_unlock": {
+		"message": "$percent$ hráčov má tento úspech",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "DOSIAHNUTÉ ÚSPECHY: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "UZAMKNUTÉ ÚSPECHY: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Zoradiť podľa času"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Skupiny úspechov poskytuje služba Steam Hunters prostredníctvom služby SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
-		"message": "Predaj za $price$",
+		"message": "Predať za $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -243,7 +283,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Predaj za $price$",
+		"message": "Predať za $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -251,14 +291,65 @@
 			}
 		}
 	},
+	"inventory_list_at_title": {
+		"message": "Vypíše položku za najnižšiu uvedenú predajnú cenu\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
+	},
+	"inventory_sell_at_title": {
+		"message": "Vypíše položku za najvyššiu uvedenú cenu nákupnej objednávky\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
+	},
 	"options": {
 		"message": "Možnosti"
+	},
+	"options_welcome_title": {
+		"message": "👋 Ďakujeme za inštaláciu rozšírenia SteamDB!"
+	},
+	"options_welcome_description": {
+		"message": "Pozrite si nasledujúce možnosti a prepnite tie, ktoré uprednostňujete. Ak sa sem chcete v budúcnosti vrátiť:"
+	},
+	"options_welcome_option1": {
+		"message": "Stránka nastavení na SteamDB"
+	},
+	"options_welcome_option2": {
+		"message": "Rozbaľovacie menu účtu na stránkach Steam"
+	},
+	"options_welcome_option3": {
+		"message": "Stránka doplnkov vášho prehliadača"
+	},
+	"options_review": {
+		"message": "Zanechať recenziu pre toto rozšírenie"
+	},
+	"options_permissions_description": {
+		"message": "Toto rozšírenie vyžaduje ďalšie oprávnenia, aby správne fungovalo na SteamDB, Steam Store a Steam Community."
+	},
+	"options_permissions_button": {
+		"message": "⚠️ Udeľovanie povolení"
+	},
+	"options_footer1": {
+		"message": "Vytvorené s 💙 od <a href=\"https://steamdb.info\" target=\"_blank\">ľudí zo SteamDB</a>."
+	},
+	"options_footer2": {
+		"message": "Je to <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, vďaka všetkým prispievateľom!"
+	},
+	"options_disabled_checkboxes": {
+		"message": "* Deaktivované zaškrtávacie políčka značia zabudované funkcie."
+	},
+	"options_header_website": {
+		"message": "Webová stránka SteamDB"
 	},
 	"options_header_extra_data": {
 		"message": "Ďalšie údaje"
 	},
+	"options_header_buttons_and_links": {
+		"message": "Tlačidlá a odkazy"
+	},
 	"options_header_inventory": {
 		"message": "Inventár"
+	},
+	"options_header_trade_offers": {
+		"message": "Obchodné ponuky"
+	},
+	"options_header_achievements": {
+		"message": "Úspechy"
 	},
 	"options_header_enhancements": {
 		"message": "Vylepšenie"
@@ -266,8 +357,97 @@
 	"options_website_explanation": {
 		"message": "Vysvetlenie"
 	},
+	"options_website_explanation1": {
+		"message": "Keď je táto možnosť povolená, rozšírenie bude žiadať niektoré údaje od používateľa (zoznam prianí, vlastnené, sledované, ignorované produkty a produkty v košíku) z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam obchodu</a> a použije ich na zvýraznenie na stránke."
+	},
+	"options_website_explanation2": {
+		"message": "Pre túto funkciu musíte byť prihlásení v obchode."
+	},
+	"options_website_explanation3": {
+		"message": "Táto informácia sa nachádza výlučne vo vašom prehliadači a nikdy sa neodošle ani do backendu služby SteamDB."
+	},
+	"options_website_explanation4": {
+		"message": "Aby sa zabránilo nadmernému počtu požiadaviek na Steam Store, vaše používateľské údaje sa ukladajú do medzipamäte v miestnom úložisku prehliadača."
+	},
+	"options_website_highlight": {
+		"message": "Zvýraznenie vlastných a želaných produktov na doméne $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_website_highlight1": {
+		"message": "Zoznam želaní, sledovanie a ignorovanie produktov v obchode Steam priamo z databázy SteamDB"
+	},
+	"options_website_highlight2": {
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Aktivovať skript na bezplatné balíky</a>"
+	},
+	"options_website_highlight3": {
+		"message": "Povolenie dodatočného filtrovania na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">predajnej stránke</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stránke balíkov</a>"
+	},
+	"options_extra_data": {
+		"message": "Dodatočné údaje získané z domény $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			}
+		}
+	},
+	"options_extra_data_players": {
+		"message": "Keď je povolená možnosť \"$options_online_stats$\" alebo \"$options_steamdb_last_update$\", rozšírenie vykoná bezpečnú požiadavku na $domain$, aby získalo aktuálny počet hráčov a poslednú aktualizáciu hry.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_online_stats": {
+				"content": "$1",
+				"description": "Uses translation for options_online_stats"
+			},
+			"options_steamdb_last_update": {
+				"content": "$2",
+				"description": "Uses translation for options_steamdb_last_update"
+			}
+		}
+	},
+	"options_extra_data_prices": {
+		"message": "Keď je povolená možnosť \"$options_steamdb_lowest_price$\", rozšírenie vykoná zabezpečenú požiadavku na $domain$ s vašou menou (s tým, čo si myslí služba Steam), aby získalo zaznamenanú cenu pre konkrétnu hru.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Keď je možnosť \"$options_achievement_groups$\" povolená, rozšírenie vykoná bezpečný požiadavok na $domain$ na zoskupenie úspechov na stránke osobných úspechov s údajmi poskytnutými Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
+			}
+		}
+	},
+	"options_steamdb_lowest_price": {
+		"message": "Zobraziť najnižšiu zaznamenanú cenu na stránkach produktov"
+	},
 	"options_online_stats": {
 		"message": "Zobrazte pocet hráčov a dosiahnuté vrcholy na stránkach hier"
+	},
+	"options_steamdb_last_update": {
+		"message": "Zobraziť poslednú aktualizáciu na stránkach produktov"
 	},
 	"options_button_app": {
 		"message": "Zobrazovať tlačidlo na stránkach balíkov"
@@ -278,8 +458,71 @@
 	"options_button_sub": {
 		"message": "Zobrazovať tlačidlo na stránkach balíkov"
 	},
+	"options_button_gamehub": {
+		"message": "Zobraziť tlačidlo na komunitných centrách"
+	},
+	"options_button_gamecards": {
+		"message": "Zobraz SteamDB a tlačidlá pre uloženie na stránke s hernými kartami"
+	},
 	"options_link_subid": {
 		"message": "Zobrazovať SubID pod každou nákupnou voľbou"
+	},
+	"options_link_subid_widget": {
+		"message": "Zobrazenie SubID vo vložených widgetoch",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "Prepojte každý balík na vašej stránke s licenciami"
+	},
+	"options_profile_calculator": {
+		"message": "Pridať odkaz na kalkulačku na komunitné profily"
+	},
+	"options_enhancement_inventory_sidebar": {
+		"message": "Presunúť výber hier na stránke inventára na bok"
+	},
+	"options_link_inventory": {
+		"message": "Prepojiť každý darček a kupón vo vašom inventári na SteamDB"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "Správne určiť SubID darčeka vo vašom inventári"
+	},
+	"options_enhancement_inventory_no_sell_reload": {
+		"message": "Nerefreshovať inventár pri predaji položky"
+	},
+	"options_enhancement_inventory_quick_sell": {
+		"message": "Pridať tlačidlá na rýchly predaj"
+	},
+	"options_enhancement_inventory_quick_sell_auto": {
+		"message": "Automaticky prijať rýchly predaj"
+	},
+	"options_display_market_price_others": {
+		"message": "Zobraziť trhovú ceny položky v inventároch iných používateľov"
+	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "Podporovať parametre $for_item$ a $my_item$",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
+	"options_github_explanation": {
+		"message": "Zobraziť vysvetlenie na GitHube"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "Potlačiť upozornenia na obchod s oznámením „tento obchod sa zdá podozrivý“ a „ste si istí, že je to dar?“"
+	},
+	"options_enhancement_tradeoffer_better_errors": {
+		"message": "Zobrazovať lepšie chybové správy namiesto kryptických čísel chýb od Valve"
+	},
+	"options_enhancement_skip_agecheck": {
+		"message": "Preskočiť stránku na kontrolu veku"
+	},
+	"options_enhancement_skip_agecheck_description": {
+		"message": "Nastaviť súbory cookie pre vek a narodeniny, aby vždy prechádzali"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Odstraňuje filter odkazov „Opúšťate Steam“ z externých stránok",
@@ -289,7 +532,66 @@
 		"message": "Automaticky prijímate predplatiteľku zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_hide_install_button": {
+		"message": "Skryť tlačidlo \"Inštalovať Steam\" v hlavičke",
+		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+	},
+	"options_enhancement_hide_mobile_app_button": {
+		"message": "Skryť banner „Otvoriť v Steame\""
+	},
 	"options_steamdb_rating": {
 		"message": "Zobrazovať tlačidlo na stránkach balíkov"
+	},
+	"options_enhancement_appicon": {
+		"message": "Zobrazenie ikony produktu na stránkach obchodu a komunity",
+		"description": "The icon is displayed to the left of the game name"
+	},
+	"options_improve_achievements": {
+		"message": "Zlepšenie stránky s osobnými úspechmi"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Zobraziť percentuálny podiel odomknutých globálnych úspechov"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernizovaný dizajn"
+	},
+	"options_achievement_groups": {
+		"message": "Skupinové úspechy s údajmi z Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Umiestnenie skrytých úspechov za prvok spoileru"
+	},
+	"options_prevent_store_images": {
+		"message": "Zastavenie načítavania obrázkov na stránkach produktu"
+	},
+	"options_prevent_store_images_description": {
+		"message": "Niektorí vývojári dávajú megabajty obrázkov do popisov produktov, ktoré sa môžu dlho načítavať, kliknite pre načítanie"
+	},
+	"options_enhancement_award_popup_url": {
+		"message": "Podporovať parametre $award$ na profilových a zdieľaných odkazoch súborov",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "Pridať tlačidlo na zatvorenie bloku „už vo vašej knižnici“"
+	},
+	"options_builtin_card_drops": {
+		"message": "Zobraziť celkový počet zostávajúcich kartičiek na stránke odznakov"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "Pridať tlačidlo na automatické prechádzanie fronty počas výpredajov"
+	},
+	"options_builtin_achievements_global": {
+		"message": "Vylepšiť stránku globálnych úspechov"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Odkaz na stránku osobných úspechov"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Zobraziť ikonu zámku pre uzamknuté úspechy"
 	}
 }

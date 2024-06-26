@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Ergänzt den Steam-Shop und die Steam-Community um neue Funktionen, SteamDB-Verlinkungen, Tiefstpreise und weitere Statistiken."
+		"message": "Ergänzt den Steam-Shop und die Steam-Community um neue Funktionen, SteamDB-Verlinkungen, Tiefstpreise und weitere Statistiken.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB-Einstellungen"
@@ -300,7 +301,7 @@
 		"message": "Einstellungen"
 	},
 	"options_welcome_title": {
-		"message": "👋 Vielen Dank für die Installation der SteamDB-Erweiterung!"
+		"message": "👋 Vielen Dank für das Installieren der SteamDB-Erweiterung!"
 	},
 	"options_welcome_description": {
 		"message": "Überprüfe die nachfolgenden Einstellungen und ändere sie nach deinen Bedürfnissen. Du hast später folgende Möglichkeiten, um die Einstellungen wieder aufzurufen:"

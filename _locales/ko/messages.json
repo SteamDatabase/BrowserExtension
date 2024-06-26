@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "SteamDB 링크와 새로운 기능을 Steam 스토어 및 커뮤니티에 추가해 최저 게임 가격 및 통계를 볼 수 있습니다."
+		"message": "SteamDB 링크와 새로운 기능을 Steam 스토어 및 커뮤니티에 추가해 최저 게임 가격 및 통계를 볼 수 있습니다.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB 옵션"
@@ -31,7 +32,7 @@
 		"message": "PCGamingWiki 에서 보기"
 	},
 	"view_your_achievements": {
-		"message": "개인 성과"
+		"message": "달성한 도전과제 확인"
 	},
 	"store_page": {
 		"message": "상점 페이지",
@@ -48,7 +49,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$중 $positive$개의 리뷰가 긍정적",
+		"message": "$total$개의 리뷰 중 $positive$개 리뷰가 긍정적 (모든 구매 유형)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -61,7 +62,7 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "마지막 업데이트:"
+		"message": "마지막 갱신일:"
 	},
 	"app_depots_updated_short": {
 		"message": "업데이트됨",
@@ -83,7 +84,7 @@
 		"message": "팔로워"
 	},
 	"app_lowest_price": {
-		"message": "\"SteamDB\"에 기록된 최저 가격은 <b>$price$</b>입니다",
+		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -92,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "\"SteamDB\"에 기록된 최저가격은 <b> $discount$%</b>할인 된 <b> $price$ </b>입니다",
+		"message": "SteamDB에 기록된 최저가격: <b> $price$ </b> <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -435,6 +436,9 @@
 	"options_enhancement_inventory_sidebar": {
 		"message": "보관함 페이지의 게임 선택을 옆으로 이동"
 	},
+	"options_link_inventory": {
+		"message": "보관함에 보유한 선물과 쿠폰을 SteamDB에 연결하기"
+	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "아이템을 판매할 때 보관함을 새로고침하지 않습니다"
 	},
@@ -481,10 +485,28 @@
 		"message": "상점과 커뮤니티 페이지에서 제품 아이콘을 표시합니다.",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "개인 도전과제 페이지 개선하기"
+	},
+	"options_achievements_global_unlock": {
+		"message": "글로벌 도전과제 완료 퍼센트 표시하기"
+	},
+	"options_modernized_achievements": {
+		"message": "모던 디자인 적용하기"
+	},
+	"options_spoiler_achievements": {
+		"message": "숨겨진 도전과제를 스포일러로 취급하기"
+	},
 	"options_prevent_store_images": {
 		"message": "제품 페이지에 이미지를 불러오지 않도록 합니다"
 	},
+	"options_prevent_store_images_description": {
+		"message": "몇 개발사는 게임 설명란에 큰 이미지를 넣어 로딩이 길어질 수 있습니다. 클릭하여 이미지를 로딩하세요."
+	},
 	"options_builtin_achievements_global": {
 		"message": "전체 도전 과제 페이지 향상"
+	},
+	"options_builtin_achievements_link": {
+		"message": "내 도전 과제 페이지로 바로가기"
 	}
 }

@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Thêm liên kết và tính năng mới của SteamDB vào trang cửa hàng và cộng đồng của Steam. Xem giá thấp nhất và số liệu mỗi trò chơi."
+		"message": "Thêm liên kết và tính năng mới của SteamDB vào trang cửa hàng và cộng đồng của Steam. Xem giá thấp nhất và số liệu mỗi trò chơi.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Cài đặt SteamDB"
@@ -41,10 +42,10 @@
 		"message": "Tìm kiếm"
 	},
 	"app_steamdb_rating": {
-		"message": "Xếp hạng SteamDB:"
+		"message": "Đánh giá SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " ĐIỂM SỐ STEAMDB",
+		"message": " ĐÁNH GIÁ STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
@@ -61,14 +62,14 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "Cập nhật gần đây nhất:"
+		"message": "Cập nhật gần nhất:"
 	},
 	"app_depots_updated_short": {
-		"message": "Đã cập nhật",
+		"message": "Ngày cập nhật",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Thống kê trực tuyến"
+		"message": "Thống kê người chơi"
 	},
 	"app_stats_online_now": {
 		"message": "Đang chơi:"
@@ -77,7 +78,7 @@
 		"message": "Đỉnh hôm nay:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Cao điểm toàn thời gian:"
+		"message": "Đỉnh lịch sử:"
 	},
 	"app_stats_followers": {
 		"message": "Người theo dõi:"
@@ -105,7 +106,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b> và thấp nhất trong vòng 2 năm trở lại là <b>$price_limited$</b>",
+		"message": "SteamDB ghi nhận giá thấp nhất là <b>$price$</b> và thấp nhất trong vòng 2 năm trở lại đây là <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -118,7 +119,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "Giá vào ngày $date$ ($relative$)",
+		"message": "Giá ghi nhận vào $date$ ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -131,7 +132,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Giá xuất hiện $seen$ lần, lần cuối vào ngày $date$ ($relative$)",
+		"message": "Giá được ghi nhận $seen$ lần, lần cuối vào ngày $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -282,7 +283,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Bán ngay với mức giá: $price$",
+		"message": "Bán ngay với giá: $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -306,7 +307,7 @@
 		"message": "Xem lại và tùy chỉnh cài đặt theo ý bạn. Để mở lại trang này:"
 	},
 	"options_welcome_option1": {
-		"message": "Trang cài đặt trong SteamDB"
+		"message": "Trang cài đặt của SteamDB"
 	},
 	"options_welcome_option2": {
 		"message": "Menu tài khoản xổ xuống trên Steam"
@@ -345,7 +346,7 @@
 		"message": "Kho đồ"
 	},
 	"options_header_trade_offers": {
-		"message": "Yêu cầu trao đổi"
+		"message": "Đề nghị trao đổi"
 	},
 	"options_header_achievements": {
 		"message": "Thành tựu"
@@ -357,7 +358,7 @@
 		"message": "Giải thích"
 	},
 	"options_website_explanation1": {
-		"message": "Khi tùy chọn này được bật, tiện ích sẽ yêu cầu một số dữ liệu người dùng (sản phẩm trong danh sách ước, sản phẩm đã sở hữu, sản phẩm đã theo dõi, sản phẩm bị phớt lờ và sản phẩm trong giỏ hàng) từ <a href=\"https://store.steamPowered.com/dynamicstore/userdata/\" target=\"_blank\">Cửa hàng Steam</a> và sẽ sử dụng chúng để bổ sung thông tin trên trang web."
+		"message": "Khi tùy chọn này được bật, tiện ích sẽ yêu cầu một số dữ liệu người dùng (sản phẩm trong danh sách ước, sản phẩm đã sở hữu, sản phẩm đã theo dõi, sản phẩm bị phớt lờ và sản phẩm trong giỏ hàng) từ <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">cửa hàng Steam</a> và sẽ sử dụng chúng để bổ sung thông tin trên trang web."
 	},
 	"options_website_explanation2": {
 		"message": "Vui lòng đăng nhập vào cửa hàng để sử dụng các tính năng này."
@@ -369,7 +370,7 @@
 		"message": "Để tránh việc gửi yêu cầu dư thừa tới Cửa hàng Steam, dữ liệu người dùng của bạn sẽ được lưu vào bộ nhớ cục bộ của trình duyệt."
 	},
 	"options_website_highlight": {
-		"message": "Làm nổi bật các sản phẩm đã sở hữu và trong danh sách ước trên $domain$",
+		"message": "Làm nổi bật các sản phẩm đã sở hữu hoặc trong danh sách ước trên $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -396,7 +397,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Khi tùy chọn \"$options_online_stats$\" hoặc \"$options_steamdb_last_update$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để lấy số lượng người đang chơi hiện tại cùng cập nhật gần nhất cho trò chơi đó.",
+		"message": "Khi tùy chọn \"$options_online_stats$\" hoặc \"$options_steamdb_last_update$\" được bật, tiện ích sẽ gửi yêu cầu đã được bảo mật tới $domain$ để lấy số lượng người đang chơi hiện tại cùng ngày cập nhật gần nhất cho trò chơi đó.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -440,10 +441,10 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Hiển thị giá thấp nhất được ghi nhận trên trang sản phẩm"
+		"message": "Hiển thị trên trang sản phẩm mức giá thấp nhất được ghi nhận"
 	},
 	"options_online_stats": {
-		"message": "Hiển thị số lượng người chơi hiện tại và cao nhất trên trang sản phẩm"
+		"message": "Hiển thị trên trang sản phẩm số lượng người chơi hiện tại và đỉnh điểm"
 	},
 	"options_steamdb_last_update": {
 		"message": "Hiển thị lần cập nhật cuối trên trang sản phẩm"
@@ -461,7 +462,7 @@
 		"message": "Hiển thị nút trên trang cộng đồng"
 	},
 	"options_button_gamecards": {
-		"message": "Hiển thị nút của SteamDB và cửa hàng trên trang thẻ của game"
+		"message": "Hiển thị các nút trang SteamDB và cửa hàng trên trang huy hiệu"
 	},
 	"options_link_subid": {
 		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
@@ -515,13 +516,13 @@
 		"message": "Bỏ qua cảnh báo \"giao dịch này có vẻ đáng ngờ\" và \"bạn có chắc đây là một món quà không?\" trong yêu cầu trao đổi đồ"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Hiển thị thông báo lỗi tốt hơn, thay vì những con số lỗi khó hiểu của Valve"
+		"message": "Hiển thị thông báo lỗi kèm giải thích thay vì bộ mã lỗi khó hiểu của Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Bỏ qua trang kiểm tra độ tuổi"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Lưu các cookie tuổi và sinh nhật để luôn bỏ qua xác nhận"
+		"message": "Can thiệp vào cookie để luôn bỏ qua xác nhận tuổi và sinh nhật"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Bỏ qua bộ lọc \"Bạn đang rời khỏi Steam\" dẫn tới liên kết ngoài",
@@ -539,7 +540,7 @@
 		"message": "Ẩn biểu ngữ \"Mở bằng ứng dụng Steam\""
 	},
 	"options_steamdb_rating": {
-		"message": "Hiển thị xếp hạng SteamDB trên trang sản phẩm"
+		"message": "Hiển thị số liệu đánh giá theo SteamDB trên trang sản phẩm"
 	},
 	"options_enhancement_appicon": {
 		"message": "Hiển thị biểu tượng ứng dụng trên các trang cửa hàng và cộng đồng",
@@ -568,7 +569,7 @@
 		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh để tải"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang tập tin được chia sẻ",
+		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang nội dung được chia sẻ",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"

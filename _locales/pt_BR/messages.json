@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Aprimore a Loja e Comunidade Steam com links para o SteamDB e novas funcionalidades. Veja descontos e estatísticas de jogos."
+		"message": "Aprimore a Loja e Comunidade Steam com links para o SteamDB e novas funcionalidades. Veja descontos e estatísticas de jogos.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Opções do SteamDB"

@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "เพิ่มลิงก์ SteamDB และคุณสมบัติใหม่บนร้านค้าและชุมชน Steam. ดูราคาเกมที่ต่ำที่สุดและสถิติ"
+		"message": "เพิ่มลิงก์ SteamDB และคุณสมบัติใหม่บนร้านค้าและชุมชน Steam. ดูราคาเกมที่ต่ำที่สุดและสถิติ",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "ตั้งค่า SteamDB"

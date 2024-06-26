@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Steam mağazası ve topluluğuna SteamDB bağlantılarını ve yeni özellikleri ekler. En düşük oyun fiyatlarını ve istatistiklerini şimdi görüntüleyin."
+		"message": "Steam mağazası ve topluluğuna SteamDB bağlantılarını ve yeni özellikleri ekler. En düşük oyun fiyatlarını ve istatistiklerini şimdi görüntüleyin.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Ayarları"
@@ -48,7 +49,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$total$ incelemenin $positive$ adeti olumludur (tüm satın alma türleri dahil)",
+		"message": "$total$ incelemenin $positive$ adedi olumludur (tüm satın alma türleri dâhil)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -68,10 +69,10 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Çevrimiçi İstatistik"
+		"message": "Çevrim İçi İstatistik"
 	},
 	"app_stats_online_now": {
-		"message": "Şimdi çevrimiçi:"
+		"message": "Şimdi çevrim içi:"
 	},
 	"app_stats_peak_today": {
 		"message": "Son 24 saat:"
@@ -180,7 +181,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Kuyruktaki $current$. içerik pek çok kez atlanamaya çalışıldı ancak geçilemedi. Daha sonra tekrar deneyin.",
+		"message": "Kuyruktaki $current$. içerik pek çok kez atlanılmaya çalışıldı ancak geçilemedi. Daha sonra tekrar deneyin.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -324,7 +325,7 @@
 		"message": "⚠️ İzin ver"
 	},
 	"options_footer1": {
-		"message": "💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> kullanıcıları tarafından yapılmıştır."
+		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> kullanıcıları tarafından 💙 ile yapıldı."
 	},
 	"options_footer2": {
 		"message": "Bu uzantı <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">açık kaynak</a> kodludur, katkıda bulunan herkese teşekkürler!"
@@ -542,7 +543,7 @@
 		"message": "Mağaza içeriğine SteamDB puanlamasını ekle"
 	},
 	"options_enhancement_appicon": {
-		"message": "Mağazaya ve topluluk sayafasına içeriklerin simgesini ekle",
+		"message": "Mağazaya ve topluluk sayfasına içeriklerin simgesini ekle",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {

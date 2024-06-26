@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Doda SteamDB hiperpovezave in nove funkcije v trgovini in skupnosti Steam. Oglejte si najnižje cene in statistiko iger."
+		"message": "Doda SteamDB hiperpovezave in nove funkcije v trgovini in skupnosti Steam. Oglejte si najnižje cene in statistiko iger.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB Možnosti"
@@ -22,6 +23,10 @@
 	},
 	"view_on_steamdb": {
 		"message": "Poglej na SteamDB"
+	},
+	"view_on_steam_hunters": {
+		"message": "Poglej na Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
 		"message": "Poglej na PCGamingWiki"
@@ -233,6 +238,41 @@
 	"hidden_achievement": {
 		"message": "Skriti dosežek: "
 	},
+	"achievement_global_unlock": {
+		"message": "$percent$ igralcev ima ta dosežek",
+		"description": "Do not add percent symbol, it will be formatted automatically",
+		"placeholders": {
+			"percent": {
+				"content": "$1",
+				"example": "93.5%"
+			}
+		}
+	},
+	"achievements_unlocked_count": {
+		"message": "Pridobljeni dosežki: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_locked_count": {
+		"message": "Zaklenjeni dosežki: $count$",
+		"placeholders": {
+			"count": {
+				"content": "$1",
+				"example": "69"
+			}
+		}
+	},
+	"achievements_sort_by_time": {
+		"message": "Razvrsti po času"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Skupine z dosežki so na voljo pri Steam Hunters prek SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"inventory_list_at": {
 		"message": "Objavi pri $price$",
 		"placeholders": {
@@ -308,6 +348,9 @@
 	"options_header_trade_offers": {
 		"message": "Trgovske ponudbe"
 	},
+	"options_header_achievements": {
+		"message": "Dosežki"
+	},
 	"options_header_enhancements": {
 		"message": "Izboljšave"
 	},
@@ -380,6 +423,20 @@
 			"options_steamdb_lowest_price": {
 				"content": "$1",
 				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
+	"options_extra_data_achievement_groups": {
+		"message": "Če je omogočena možnost \"$options_achievement_groups$\", bo razširitev izvedla varno poizvedbo pri $domain$, da lahko izvede grupiranje dosežkov na osebni strani z dosežki s podatki, ki jih zagotavljajo Steam Hunters.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_achievement_groups": {
+				"content": "$1",
+				"description": "Uses translation for options_achievement_groups"
 			}
 		}
 	},
@@ -489,6 +546,22 @@
 		"message": "Prikaz ikone izdelka na straneh trgovine in skupnosti",
 		"description": "The icon is displayed to the left of the game name"
 	},
+	"options_improve_achievements": {
+		"message": "Izboljšaj svojo stran z dosežki"
+	},
+	"options_achievements_global_unlock": {
+		"message": "Prikaži odstotek odklenjenosti dosežka na globalni ravni"
+	},
+	"options_modernized_achievements": {
+		"message": "Modernizirani dizajn"
+	},
+	"options_achievement_groups": {
+		"message": "Grupiraj dosežke s podatki, ki jih zagotavljajo Steam Hunters",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"options_spoiler_achievements": {
+		"message": "Skriti dosežki naj bodo za elementom za kvarnike"
+	},
 	"options_prevent_store_images": {
 		"message": "Prepreči nalaganje slik na straneh izdelkov"
 	},
@@ -503,6 +576,9 @@
 			}
 		}
 	},
+	"options_builtin_collapse_library": {
+		"message": "Dodaj gumb za združenje bloka \"že v tvoji knjižnici\""
+	},
 	"options_builtin_card_drops": {
 		"message": "Na strani z značkami prikažite skupno število preostalih padcev kart"
 	},
@@ -511,5 +587,11 @@
 	},
 	"options_builtin_achievements_global": {
 		"message": "Izboljšaj stran z globalnimi dosežki"
+	},
+	"options_builtin_achievements_link": {
+		"message": "Poveži na svojo stran z dosežki"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "Pokaži zaklenjeno ikono za zaklenjene dosežke"
 	}
 }

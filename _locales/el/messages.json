@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Προσθέτει συνδέσμους του SteamDB και νέα χαρακτηριστικά στο Κατάστημα και την Κοινότητα του Steam. Δείτε τις χαμηλότερες τιμές και στατιστικά του παιχνιδιού."
+		"message": "Προσθέτει συνδέσμους του SteamDB και νέα χαρακτηριστικά στο Κατάστημα και την Κοινότητα του Steam. Δείτε τις χαμηλότερες τιμές και στατιστικά του παιχνιδιού.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Επιλογές SteamDB"
@@ -267,6 +268,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "Ταξινόμηση κατά ώρα"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "Οι ομάδες επιτευγμάτων παρέχονται από το Steam Hunters μέσω του SteamDB.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "Λίστα από $price$",

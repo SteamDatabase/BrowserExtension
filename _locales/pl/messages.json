@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "Dodaje linki SteamDB i nowe funkcje w sklepie i w społeczności Steam. Wyświetla najniższe ceny gier i ich statystyki."
+		"message": "Dodaje linki SteamDB i nowe funkcje w sklepie i w społeczności Steam. Wyświetla najniższe ceny gier i ich statystyki.",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "Opcje SteamDB"

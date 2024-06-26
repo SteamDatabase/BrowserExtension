@@ -1,6 +1,7 @@
 {
 	"extension_description": {
-		"message": "在 Steam 商店和社群中加入 SteamDB 連結和新功能。查看最低遊戲價格和統計資料。"
+		"message": "在 Steam 商店和社群中加入 SteamDB 連結和新功能。查看最低遊戲價格和統計資料。",
+		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
 		"message": "SteamDB 選項"
@@ -512,7 +513,7 @@
 		"message": "參閱 GitHub 上的說明"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "交易報價時禁止顯示「此交易看起來很可疑」 和 「您確定這是一份禮物嗎？」 的警示"
+		"message": "禁止交易提案的「此交易看起來很可疑」和「您確定這是一份禮物嗎？」的警告"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "顯示更好的錯誤訊息，而不是 Valve 神秘的錯誤號碼"
@@ -555,11 +556,11 @@
 		"message": "啟用簡約風格"
 	},
 	"options_achievement_groups": {
-		"message": "使用 Steam Hunters 提供資料進行成就分組",
+		"message": "透過 Steam Hunters 提供資料進行成就分組",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "隱藏成就置於劇透元素後"
+		"message": "將隱藏成就放在劇透元素後"
 	},
 	"options_prevent_store_images": {
 		"message": "在產品頁面上停止讀取圖片"
@@ -591,6 +592,6 @@
 		"message": "連結至個人成就頁面"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "顯示未取得成就鎖定圖示"
+		"message": "為未取得成就顯示鎖定圖示"
 	}
 }
