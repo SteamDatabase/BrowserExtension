@@ -1,17 +1,38 @@
 @media (min-width: 1450px) {
+	/**
+	* Make the scrollbar stable so the page doesn't shift when selecting items
+	*/
+	html {
+		scrollbar-gutter: stable;
+	}
+
 	.tabitems_ctn {
 		float: left;
 		width: 242px;
 		margin-left: -259px;
-		border-radius: 3px;
 	}
 
 	.games_list_separator {
+		border: 1px solid #2c3235;
 		margin-top: 0;
+		padding: 8px 12px;
+	}
+
+	.games_list_separator:not(.actionable) {
+		display: none; /* Hide "Active inventories" header */
+	}
+
+	.games_list_tabs_ctn {
+		border: 1px solid #2c3235;
+		padding: 0;
+		border-radius: 0;
 	}
 
 	.games_list_tabs {
-		border-radius: 3px;
+		padding: 0;
+		border-radius: 0;
+		overflow-y: auto;
+		max-height: min(100vh, 600px);
 	}
 
 	#tabcontent_inventory {
@@ -24,7 +45,26 @@
 	a.games_list_tab {
 		width: 100%;
 		float: none;
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		background: unset;
+		border: 0 !important;
 		border-radius: 0 !important;
+	}
+
+	.games_list_tab > span,
+	a.games_list_tab > span {
+		padding: 0;
+		line-height: 1;
+	}
+
+	.games_list_tab_icon {
+		margin: 8px 0;
+	}
+
+	.games_list_tab_number {
+		margin-left: auto;
 	}
 
 	.games_list_tab:first-child {
@@ -36,7 +76,24 @@
 		display: none;
 	}
 
-	.games_list_tab::after,
+	.games_list_tab:hover,
+	a.games_list_tab:hover {
+		background: #4e7297;
+	}
+
+	.games_list_tab:hover .games_list_tab_name,
+	a.games_list_tab:hover .games_list_tab_name {
+		text-decoration: underline;
+	}
+
+	.games_list_tab.active {
+		box-shadow: unset;
+		background: #2c4056;
+		position: sticky;
+		top: 0;
+		bottom: 0;
+	}
+
 	#mainContents::after {
 		content: "";
 		display: table;

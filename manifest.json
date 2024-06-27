@@ -344,6 +344,7 @@
 			]
 		},
 		{
+			"run_at": "document_end",
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/inventory*",
