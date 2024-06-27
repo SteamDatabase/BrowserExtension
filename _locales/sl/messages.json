@@ -249,7 +249,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "Pridobljeni dosežki: $count$",
+		"message": "PRIDOBLJENI DOSEŽKI: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -258,7 +258,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "Zaklenjeni dosežki: $count$",
+		"message": "ZAKLENJENI DOSEŽKI: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -427,7 +427,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Če je omogočena možnost \"$options_achievement_groups$\", bo razširitev izvedla varno poizvedbo pri $domain$, da lahko izvede grupiranje dosežkov na osebni strani z dosežki s podatki, ki jih zagotavljajo Steam Hunters.",
+		"message": "Če je omogočena možnost \"$options_achievement_groups$\", bo razširitev izvedla varno poizvedbo pri $domain$, da lahko izvede grupiranje dosežkov na osebni strani z dosežki s podatki, ki jih zagotavlja Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -553,7 +553,7 @@
 		"message": "Prikaži odstotek odklenjenosti dosežka na globalni ravni"
 	},
 	"options_modernized_achievements": {
-		"message": "Modernizirani dizajn"
+		"message": "Moderni dizajn"
 	},
 	"options_achievement_groups": {
 		"message": "Grupiraj dosežke s podatki, ki jih zagotavljajo Steam Hunters",

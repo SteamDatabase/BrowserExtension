@@ -4,13 +4,13 @@
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
-		"message": "הגדרות דירוג SteamDB"
+		"message": "הגדרות SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "מחשבון SteamDB"
 	},
 	"steamstatus": {
-		"message": "בדיקה ב$domain$",
+		"message": "בדוק ב$domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -25,7 +25,7 @@
 		"message": "הצג ב-SteamDB"
 	},
 	"view_on_steam_hunters": {
-		"message": "ראה ב-Steam Hunters",
+		"message": "הצג ב-Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
@@ -65,11 +65,11 @@
 		"message": "עודכן לאחרונה:"
 	},
 	"app_depots_updated_short": {
-		"message": "עודכן",
+		"message": "עודכן ב",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "מידע עדכני"
+		"message": "נתוני אונליין"
 	},
 	"app_stats_online_now": {
 		"message": "מחוברים כעת:"
@@ -156,10 +156,10 @@
 		"message": "גלה אוטומטית את הרשימה על מנת לזכות בקלף איוונט."
 	},
 	"explore_generating": {
-		"message": "צור רשימת גילוי חדשה, פעולה זו עשויה להכשל אם סטים נמצא תחת עומס כבד…"
+		"message": "צור רשימת גילוי חדשה, פעולה זו עשויה להכשל אם Steam נמצא תחת עומס כבד…"
 	},
 	"explore_exploring": {
-		"message": "חוקר את הגילוי… בקשה $current$ מתוך $total$",
+		"message": "חוקר את הרשימה… בקשה $current$ מתוך $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
