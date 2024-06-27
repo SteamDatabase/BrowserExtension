@@ -9,10 +9,10 @@
 		"start:firefoxdev": "web-ext run --firefox=firefoxdeveloperedition --source-dir ./",
 		"build": "node build.js",
 		"version": "node version.js",
-		"test": "eslint . && stylelint \"**/*.css\"",
+		"test": "eslint . && stylelint \"**/*.css\" && prettier \"**/*.css\" --check",
 		"test:ext": "web-ext lint",
 		"test:locale": "chromex-locale-lint",
-		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix"
+		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix && prettier \"**/*.css\" --write"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.268",
@@ -21,6 +21,7 @@
 		"chromex-locale-lint": "^0.1.0",
 		"eslint": "^8.47.0",
 		"eslint-config-standard": "^17.0.0",
+		"prettier": "^3.3.2",
 		"stylelint": "^16.5.0",
 		"stylelint-config-standard": "^36.0.0",
 		"web-ext": "^8.0.0"

@@ -113,6 +113,11 @@ function InitAchievements( items, isPersonal )
 		extraTabs.append( link );
 	}
 
+	if( !isPersonal )
+	{
+		extraTabs.append( CreateHideEarnedButton() );
+	}
+
 	extraTabs.append( CreateFoldButton( true ) );
 
 	if( window.innerWidth < 600 )
@@ -242,11 +247,15 @@ function InitAchievements( items, isPersonal )
 
 	function OnToggleAllGamesClick( e )
 	{
+		e.preventDefault();
+
 		ToggleDetailsElements( e, document.querySelector( '.steamdb_achievements_container' ) );
 	}
 
 	function OnToggleGameClick( e )
 	{
+		e.preventDefault();
+
 		ToggleDetailsElements( e, this.closest( '.steamdb_achievements_group' ) );
 	}
 
@@ -269,6 +278,41 @@ function InitAchievements( items, isPersonal )
 			<path d="m15 19-3-3-3 3"/>
 			<path d="m15 5-3 3-3-3"/>
 		</svg>`;
+
+		return btn;
+	}
+
+	function OnToggleEarnedClick( e )
+	{
+		e.preventDefault();
+
+		const container = document.getElementById( 'mainContents' );
+		const state = container.classList.contains( 'steamdb_hide_earned_achievements' );
+
+		const ToggleEarned = () =>
+		{
+			container.classList.toggle( 'steamdb_hide_earned_achievements', !state );
+		};
+
+		StartViewTransition( ToggleEarned );
+
+		SessionStorageSet( 'steamdb_ach_hide_earned', state );
+	}
+
+	function CreateHideEarnedButton()
+	{
+		const btn = document.createElement( 'button' );
+		btn.type = 'button';
+		btn.className = 'steamdb_done_button';
+		btn.addEventListener( 'click', OnToggleEarnedClick );
+
+		// https://lucide.dev/icons/check-check
+		btn.innerHTML = `
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M18 6 7 17l-5-5"/>
+				<path d="m22 10-7.5 7.5L13 16"/>
+			</svg>
+		`;
 
 		return btn;
 	}
@@ -490,12 +534,13 @@ function InitAchievements( items, isPersonal )
 
 				if( player.unlock )
 				{
+					element.classList.add( 'steamdb_earned_achievement' );
+
 					checkmark.innerHTML = `
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
 							<path d="M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z"/>
 						</svg>
 					`;
-
 					if( achievement.global_unlock < 0.1 )
 					{
 						image.classList.add( 'steamdb_achievement_image_glow' );
@@ -799,7 +844,13 @@ function InitAchievements( items, isPersonal )
 
 				oldAchievementRows[ 0 ].insertAdjacentElement( 'beforebegin', newContainer );
 
-				document.getElementById( 'mainContents' ).classList.add( 'steamdb_global_achievements_page' );
+				const container = document.getElementById( 'mainContents' );
+				container.classList.add( 'steamdb_global_achievements_page' );
+
+				if( IsSessionStorageSet( 'steamdb_ach_hide_earned' ) )
+				{
+					container.classList.add( 'steamdb_hide_earned_achievements' );
+				}
 			}
 
 			gameLogoElement.hidden = true;
@@ -811,14 +862,7 @@ function InitAchievements( items, isPersonal )
 			document.querySelector( '.es-sortbox' )?.setAttribute( 'hidden', true );
 		};
 
-		if( document.startViewTransition )
-		{
-			document.startViewTransition( ReplaceAchievements );
-		}
-		else
-		{
-			ReplaceAchievements();
-		}
+		StartViewTransition( ReplaceAchievements );
 
 		if( sortButton )
 		{
@@ -1053,14 +1097,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 					}
 				};
 
-				if( document.startViewTransition )
-				{
-					document.startViewTransition( RedrawSortedAchievements );
-				}
-				else
-				{
-					RedrawSortedAchievements();
-				}
+				StartViewTransition( RedrawSortedAchievements );
 			} )
 			.catch( e =>
 			{
@@ -1082,21 +1119,38 @@ function IsSessionStorageSet( key )
 	}
 }
 
-function OnToggleDetails()
+function SessionStorageSet( key, state )
 {
 	try
 	{
-		if( this.open )
+		if( state )
 		{
-			sessionStorage.removeItem( this.id );
+			sessionStorage.removeItem( key );
 		}
 		else
 		{
-			sessionStorage.setItem( this.id, '1' );
+			sessionStorage.setItem( key, '1' );
 		}
 	}
 	catch
 	{
 		//
+	}
+}
+
+function OnToggleDetails()
+{
+	SessionStorageSet( this.id, this.open );
+}
+
+function StartViewTransition( callback )
+{
+	if( document.startViewTransition )
+	{
+		document.startViewTransition( callback );
+	}
+	else
+	{
+		callback();
 	}
 }
