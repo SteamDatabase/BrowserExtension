@@ -69,8 +69,14 @@ function GenerateQueue()
 			let done = 0;
 			let fails = 0;
 
-			const requestDone = () =>
+			const requestDone = ( response ) =>
 			{
+				if( response.status !== 200 )
+				{
+					requestFail( new Error( `HTTP ${response.status}` ) );
+					return;
+				}
+
 				if( ++done === data.queue.length )
 				{
 					span.textContent = _t( 'explore_finished' );
@@ -99,7 +105,7 @@ function GenerateQueue()
 				setTimeout( () =>
 				{
 					requestNextInQueue( done );
-				}, 5000 );
+				}, RandomInt( 5000, 10000 ) );
 			};
 
 			const requestNextInQueue = ( index ) =>
@@ -126,8 +132,13 @@ function GenerateQueue()
 		{
 			WriteLog( 'Failed to generate queue', error );
 
-			setTimeout( GenerateQueue, 5000 );
+			setTimeout( GenerateQueue, RandomInt( 5000, 10000 ) );
 
 			span.textContent = _t( 'explore_failed_to_generate' );
 		} );
+}
+
+function RandomInt( min, max )
+{
+	return Math.floor( Math.random() * ( max - min + 1 ) + min );
 }
