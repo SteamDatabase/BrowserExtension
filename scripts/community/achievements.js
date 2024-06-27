@@ -141,6 +141,8 @@ function InitAchievements( items, isPersonal )
 		{
 			return;
 		}
+
+		extraTabs.append( CreateHideDoneButton() );
 	}
 
 	const applicationConfig = ParseApplicationConfig();
@@ -268,6 +270,45 @@ function InitAchievements( items, isPersonal )
 			<path d="M22 12h-2"/>
 			<path d="m15 19-3-3-3 3"/>
 			<path d="m15 5-3 3-3-3"/>
+		</svg>`;
+
+		return btn;
+	}
+
+	function ToggleHideDone()
+	{
+		const id = 'steamdb_ach_done';
+		const container = document.getElementById( 'mainContents' );
+		const state = !IsSessionStorageSet( id );
+		container.classList.toggle( 'hide_unlocked', state );
+		try
+		{
+			if( !state )
+			{
+				sessionStorage.removeItem( id );
+			}
+			else
+			{
+				sessionStorage.setItem( id, '1' );
+			}
+		}
+		catch
+		{
+			//
+		}
+	}
+
+	function CreateHideDoneButton()
+	{
+		const btn = document.createElement( 'button' );
+		btn.type = 'button';
+		btn.className = 'steamdb_done_button';
+		btn.addEventListener( 'click', ToggleHideDone );
+
+		// https://fontawesome.com/license/free
+		btn.innerHTML = `
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 24" width="21" height="24" fill="none" stroke="currentColor">
+		  <path d="M20.559 4.941c0.586 0.586 0.586 1.537 0 2.123l-12 12c-0.586 0.586 -1.537 0.586 -2.123 0l-6 -6c-0.586 -0.586 -0.586 -1.537 0 -2.123s1.537 -0.586 2.123 0L7.5 15.877l10.941 -10.936c0.586 -0.586 1.537 -0.586 2.123 0z"/>
 		</svg>`;
 
 		return btn;
@@ -495,6 +536,7 @@ function InitAchievements( items, isPersonal )
 							<path d="M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z"/>
 						</svg>
 					`;
+					checkmark.classList.add( 'unlock' );
 
 					if( achievement.global_unlock < 0.1 )
 					{
@@ -799,7 +841,9 @@ function InitAchievements( items, isPersonal )
 
 				oldAchievementRows[ 0 ].insertAdjacentElement( 'beforebegin', newContainer );
 
-				document.getElementById( 'mainContents' ).classList.add( 'steamdb_global_achievements_page' );
+				const classes = [ 'steamdb_global_achievements_page' ];
+				if( IsSessionStorageSet( 'steamdb_ach_done' ) ) classes.push( 'hide_done' );
+				document.getElementById( 'mainContents' ).classList.add( ...classes );
 			}
 
 			gameLogoElement.hidden = true;

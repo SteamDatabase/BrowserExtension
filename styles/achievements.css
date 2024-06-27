@@ -112,7 +112,7 @@ html {
 	height: 40px;
 }
 
-.steamdb_fold_button {
+.steamdb_fold_button, .steamdb_done_button {
 	margin-left: auto;
 	background: none;
 	border: none;
@@ -124,15 +124,19 @@ html {
 }
 
 .steamdb_fold_button:hover,
-.steamdb_fold_button:focus {
+.steamdb_fold_button:focus,
+.steamdb_done_button:hover,
+.steamdb_done_button:focus {
 	color: #1a9fff;
 }
 
-.steamdb_stats_extra_tabs .steamdb_fold_button {
+.steamdb_stats_extra_tabs .steamdb_fold_button,
+.steamdb_stats_extra_tabs .steamdb_done_button {
 	margin-left: 30px;
 }
 
-.steamdb_stats_extra_tabs_mobile .steamdb_fold_button {
+.steamdb_stats_extra_tabs_mobile .steamdb_fold_button,
+.steamdb_stats_extra_tabs_mobile .steamdb_done_button {
 	margin-left: auto;
 }
 
@@ -199,6 +203,10 @@ html {
 	font-size: 12px;
 	font-weight: 400;
 	color: #8b929a;
+}
+
+.steamdb_global_achievements_page.hide_unlocked .steamdb_achievement:has(.steamdb_achievement_checkmark.unlock){
+	display: none;
 }
 
 .steamdb_achievement_checkmark {
