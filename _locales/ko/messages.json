@@ -195,6 +195,26 @@
 	"explore_finished": {
 		"message": "대기열이 탐색이 완료되었습니다."
 	},
+	"badges_idle_apps": {
+		"message": "유휴 상태인 앱: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
+	"badges_idle_apps_on_this_page": {
+		"message": "이 페이지에서 유휴 상태로 유지되는 앱: $amount$",
+		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "5"
+			}
+		}
+	},
 	"badges_idle_drops": {
 		"message": "남은 카드: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
@@ -248,6 +268,10 @@
 	},
 	"achievements_sort_by_time": {
 		"message": "시간순으로 정렬"
+	},
+	"achievements_groups_by_steamhunters": {
+		"message": "업적 그룹은 SteamDB를 통해 Steam Hunters에서 제공됩니다.",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
 		"message": "$price$에 등록",
@@ -389,6 +413,19 @@
 			}
 		}
 	},
+	"options_extra_data_prices": {
+		"message": "\"$options_steamdb_lowest_price$\" 옵션이 활성화되면 확장 프로그램은 특정 게임에 대해 기록된 가격을 얻기 위해 귀하의 통화(Steam 이 생각하는 통화) 를 사용하여 $domain$에 보안 요청을 수행합니다.",
+		"placeholders": {
+			"domain": {
+				"content": "steamdb.info",
+				"example": "steamdb.info"
+			},
+			"options_steamdb_lowest_price": {
+				"content": "$1",
+				"description": "Uses translation for options_steamdb_lowest_price"
+			}
+		}
+	},
 	"options_extra_data_achievement_groups": {
 		"message": "\"$options_achievement_groups$\" 옵션이 활성화되면, 확장 프로그램은 Steam Hunters가 제공한 데이터를 사용하여 개인 도전 과제 페이지에서 도전 과제 그룹화를 수행하도록 $domain$에 보안 요청을 수행합니다.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
@@ -430,6 +467,13 @@
 	"options_link_subid": {
 		"message": "각 구매 옵션 아래에 SubID 표시"
 	},
+	"options_link_subid_widget": {
+		"message": "내장 위젯에 SubID 표시",
+		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
+	},
+	"options_link_accountpage": {
+		"message": "라이선스 페이지에 각 패키지를 연결하세요."
+	},
 	"options_profile_calculator": {
 		"message": "커뮤니티 프로필에 계산기 주소를 추가합니다"
 	},
@@ -438,6 +482,9 @@
 	},
 	"options_link_inventory": {
 		"message": "보관함에 보유한 선물과 쿠폰을 SteamDB에 연결하기"
+	},
+	"options_link_inventory_gift_subid": {
+		"message": "인벤토리에서 선물 SubID 를 올바르게 파악하세요."
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "아이템을 판매할 때 보관함을 새로고침하지 않습니다"
@@ -451,8 +498,22 @@
 	"options_display_market_price_others": {
 		"message": "다른 사용자의 보관함에 상점 가격을 표시합니다"
 	},
+	"options_enhancement_tradeoffer_url_items": {
+		"message": "$for_item$ 및 $my_item$ 매개변수 지원",
+		"placeholders": {
+			"for_item": {
+				"content": "<code>for_item</code>"
+			},
+			"my_item": {
+				"content": "<code>my_item</code>"
+			}
+		}
+	},
 	"options_github_explanation": {
 		"message": "GitHub 에서 설명 확인하기"
+	},
+	"options_enhancement_tradeoffer_no_gift_confirm": {
+		"message": "\"이 거래가 의심스러워 보입니다\" 및 \"이것이 선물인지 확실합니까?\"를 억제하십시오. 거래 제안 알림"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Valve의 암호화된 오류 숫자들 대신, 더 나은 오류 문구들을 표시"
@@ -494,6 +555,10 @@
 	"options_modernized_achievements": {
 		"message": "모던 디자인 적용하기"
 	},
+	"options_achievement_groups": {
+		"message": "Steam Hunters의 데이터를 사용한 그룹 업적",
+		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
 	"options_spoiler_achievements": {
 		"message": "숨겨진 도전과제를 스포일러로 취급하기"
 	},
@@ -503,10 +568,30 @@
 	"options_prevent_store_images_description": {
 		"message": "몇 개발사는 게임 설명란에 큰 이미지를 넣어 로딩이 길어질 수 있습니다. 클릭하여 이미지를 로딩하세요."
 	},
+	"options_enhancement_award_popup_url": {
+		"message": "프로필 및 공유 파일 링크에서 $award$ 매개변수 지원",
+		"placeholders": {
+			"award": {
+				"content": "<code>award</code>"
+			}
+		}
+	},
+	"options_builtin_collapse_library": {
+		"message": "\"이미 라이브러리에 있음\" 블록을 축소하는 버튼을 추가하세요."
+	},
+	"options_builtin_card_drops": {
+		"message": "배지 페이지에 남은 카드 드롭 총량 표시"
+	},
+	"options_builtin_queue_cheat": {
+		"message": "판매 중에 대기열을 자동으로 검색하는 버튼 추가"
+	},
 	"options_builtin_achievements_global": {
 		"message": "전체 도전 과제 페이지 향상"
 	},
 	"options_builtin_achievements_link": {
 		"message": "내 도전 과제 페이지로 바로가기"
+	},
+	"options_builtin_achievements_locked": {
+		"message": "잠긴 업적에 대한 자물쇠 아이콘 표시"
 	}
 }

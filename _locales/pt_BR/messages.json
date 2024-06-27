@@ -19,7 +19,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "O Steam parece estar momentaneamente indisponível. "
+		"message": "O Steam parece estar temporariamente indisponível. "
 	},
 	"view_on_steamdb": {
 		"message": "Ver no SteamDB"
@@ -361,7 +361,7 @@
 		"message": "Quando esta opção estiver ativada, a extensão realizará uma requisição segura ao Steam para obter alguns <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">dados seus</a> (lista de desejos, produtos adquiridos, ignorados e no carrinho), a fim de destacar certas informações no site do SteamDB."
 	},
 	"options_website_explanation2": {
-		"message": "Você precisará iniciar a sessão na Loja Steam para que este recurso funcione."
+		"message": "Você precisará iniciar a sessão na Loja Steam para que esse recurso funcione."
 	},
 	"options_website_explanation3": {
 		"message": "Essa informação é armazenada inteiramente no seu navegador e nunca é enviada aos servidores do SteamDB."
@@ -560,7 +560,7 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Esconder conquistas ocultas usando um elemento de spoiler"
+		"message": "Esconder conquistas ocultas com um elemento de spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Impedir o carregamento de certas imagens nas páginas dos produtos"

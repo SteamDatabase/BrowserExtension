@@ -414,7 +414,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Kui $options_steamdb_lowest_price$ seade on lubatud, siis pikendus teeb turvalise küsitluse $domain$ sinu valitud valuutas (mis Steam arvab, et see on) selleks, et saada salvestatud hind sellele spetsiifilisele mängule.",
+		"message": "Kui \"$options_steamdb_lowest_price$\" seade on lubatud, siis pikendus teeb turvalise küsitluse $domain$ sinu valitud valuutas (mis Steam arvab, et see on) selleks, et saada salvestatud hind sellele spetsiifilisele mängule.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -427,7 +427,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Kui valik \"$options_achievement_groups$ \" on lubatud, teeb laiendus turvalise päringu $domain$ teha saavutuste rühmitamine lehel isiklikud saavutused koos Steam Huntersi esitatud andmetega.",
+		"message": "Kui valik \"$options_achievement_groups$\" on lubatud, teeb laiendus turvalise päringu $domain$ teha saavutuste rühmitamine lehel isiklikud saavutused koos Steam Huntersi esitatud andmetega.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
