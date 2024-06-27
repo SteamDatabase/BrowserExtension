@@ -557,6 +557,7 @@ function InitAchievements( items, isPersonal )
 			return element;
 		};
 
+		let counter = 0;
 		const newContainer = document.createElement( 'div' );
 		newContainer.className = 'steamdb_achievements_container';
 
@@ -651,19 +652,25 @@ function InitAchievements( items, isPersonal )
 				const lockedAchievementsDetails = document.createElement( 'details' );
 				const unlockedAchievementsDetails = document.createElement( 'details' );
 
+				unlockedAchievementsDetails.id = `steamdb_ach_details_${appid}_${counter++}`;
+				lockedAchievementsDetails.id = `steamdb_ach_details_${appid}_${counter++}`;
+
+				lockedAchievementsDetails.addEventListener( 'toggle', OnToggleDetails );
+				unlockedAchievementsDetails.addEventListener( 'toggle', OnToggleDetails );
+
 				update.earnedDetailsElement = unlockedAchievementsDetails;
 
 				{
 					const unlockedAchievementsSummary = document.createElement( 'summary' );
 					unlockedAchievementsSummary.textContent = _t( 'achievements_unlocked_count', [ update.earned.toString() ] );
 					unlockedAchievementsDetails.className = 'steamdb_achievements_list';
-					unlockedAchievementsDetails.open = true;
+					unlockedAchievementsDetails.open = !IsSessionStorageSet( unlockedAchievementsDetails.id );
 					unlockedAchievementsDetails.append( unlockedAchievementsSummary );
 
 					const lockedAchievementsSummary = document.createElement( 'summary' );
 					lockedAchievementsSummary.textContent = _t( 'achievements_locked_count', [ ( update.achievementData.length - update.earned ).toString() ] );
 					lockedAchievementsDetails.className = 'steamdb_achievements_list';
-					lockedAchievementsDetails.open = true;
+					lockedAchievementsDetails.open = !IsSessionStorageSet( lockedAchievementsDetails.id );
 					lockedAchievementsDetails.append( lockedAchievementsSummary );
 				}
 
@@ -1061,4 +1068,35 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 				alert( `Failed to sort achievements: ${e.message}` );
 			} );
 	}, { once: true } );
+}
+
+function IsSessionStorageSet( key )
+{
+	try
+	{
+		return !!sessionStorage.getItem( key );
+	}
+	catch
+	{
+		return false;
+	}
+}
+
+function OnToggleDetails()
+{
+	try
+	{
+		if( this.open )
+		{
+			sessionStorage.removeItem( this.id );
+		}
+		else
+		{
+			sessionStorage.setItem( this.id, '1' );
+		}
+	}
+	catch
+	{
+		//
+	}
 }
