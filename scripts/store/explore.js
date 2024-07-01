@@ -80,6 +80,8 @@ function GenerateQueue()
 				if( ++done === data.queue.length )
 				{
 					span.textContent = _t( 'explore_finished' );
+
+					ClaimSaleItem();
 				}
 				else
 				{
@@ -136,6 +138,64 @@ function GenerateQueue()
 
 			span.textContent = _t( 'explore_failed_to_generate' );
 		} );
+}
+
+function ClaimSaleItem()
+{
+	const applicationConfigElement = document.getElementById( 'application_config' );
+	if( applicationConfigElement )
+	{
+		const userConfigJSON = applicationConfigElement.dataset.store_user_config;
+		const webapiToken =
+			userConfigJSON && JSON.parse( userConfigJSON ).webapi_token;
+
+		if( webapiToken )
+		{
+			let result = span.textContent; // storing explore result to show again after trying to get a sale item
+			span.textContent = _t( 'explore_saleitem_trying_to_claim' );
+
+			fetch(
+				`https://api.steampowered.com/ISaleItemRewardsService/ClaimItem/v1?access_token=${webapiToken}`,
+				{
+					method: 'POST',
+				},
+			)
+				.then( ( response ) =>
+				{
+					if( response.ok )
+					{
+						return response.json();
+					}
+					else
+					{
+						throw new Error( `HTTP ${response.status}` );
+					}
+				} )
+				.then( ( data ) =>
+				{
+					const response = data.response;
+					if( response && response.communityitemid )
+					{
+						const itemTitle = response.reward_item?.community_item_data?.item_title;
+						result += ' ' + _t(	'explore_saleitem_success',	[ itemTitle || `ID #${response.communityitemid}` ] );
+					}
+					else
+					{
+						throw new Error(
+							'No item ID returned while trying to get a sale item, perhaps it was already claimed.',
+						);
+					}
+				} )
+				.catch( ( error ) =>
+				{
+					WriteLog( 'Failed to get a sale item', error );
+				} )
+				.finally( () =>
+				{
+					span.textContent = result;
+				} );
+		}
+	}
 }
 
 function RandomInt( min, max )

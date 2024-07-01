@@ -200,6 +200,18 @@
 	"explore_finished": {
 		"message": "Queue has been explored."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Trying to claim a sale item if there is one…"
+	},
+	"explore_saleitem_success": {
+		"message": "New sale item claimed: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 
 	"badges_idle_apps": {
 		"message": "Apps to idle: $amount$",
