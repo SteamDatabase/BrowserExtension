@@ -203,6 +203,74 @@
 	"explore_saleitem_trying_to_claim": {
 		"message": "Trying to claim a sale item if there is one…"
 	},
+	"explore_saleitem_cant_claim": {
+		"message": "No sale item to claim at this moment."
+	},
+	"explore_saleitem_can_claim_retrying": {
+		"message": "Failed to find out if a sale item can be claimed… Attempt $current$ of $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "5"
+			}
+		}
+	},
+	"explore_saleitem_can_claim_failed": {
+		"message": "Failed to find out if a sale item can be claimed after $retries$ retries. Error: $error$",
+		"placeholders": {
+			"retries": {
+				"content": "$1",
+				"example": "5"
+			},
+			"error": {
+				"content": "$2",
+				"example": "HTTP 403"
+			}
+		}
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Next item available: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_retrying": {
+		"message": "Failed to get a sale item, retrying… Attempt $current$ of $total$",
+		"placeholders": {
+			"current": {
+				"content": "$1",
+				"example": "1"
+			},
+			"total": {
+				"content": "$2",
+				"example": "5"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Failed to get a sale item after $retries$ retries. Error: $error$",
+		"placeholders": {
+			"retries": {
+				"content": "$1",
+				"example": "5"
+			},
+			"error": {
+				"content": "$2",
+				"example": "HTTP 403"
+			}
+		}
+	},
+	"explore_saleitem_empty": {
+		"message": "No item ID returned while trying to get a sale item, perhaps it was already claimed."
+	},
 	"explore_saleitem_success": {
 		"message": "New sale item claimed: $item$.",
 		"placeholders": {
