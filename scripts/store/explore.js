@@ -211,7 +211,6 @@ function ClaimSaleItem()
 
 						if( fails < maxRetries )
 						{
-							itemStatus.textContent = _t( 'explore_saleitem_claim_retrying', [ fails, maxRetries ] );
 							setTimeout( () =>
 							{
 								claimItem( fails );
@@ -262,7 +261,6 @@ function ClaimSaleItem()
 
 						if( fails < maxRetries )
 						{
-							itemStatus.textContent = _t( 'explore_saleitem_can_claim_retrying', [ fails, maxRetries ] );
 							setTimeout( () =>
 							{
 								canClaimItem( fails );
@@ -270,7 +268,7 @@ function ClaimSaleItem()
 						}
 						else
 						{
-							itemStatus.textContent = _t( 'explore_saleitem_can_claim_failed', [ maxRetries, error.message ] );
+							itemStatus.textContent = _t( 'explore_saleitem_claim_failed', [ maxRetries, error.message ] );
 						}
 					} );
 			};
