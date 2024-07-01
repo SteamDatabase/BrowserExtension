@@ -217,20 +217,7 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Failed to get a sale item after $retries$ retries. Error: $error$",
-		"placeholders": {
-			"retries": {
-				"content": "$1",
-				"example": "5"
-			},
-			"error": {
-				"content": "$2",
-				"example": "HTTP 403"
-			}
-		}
-	},
-	"explore_saleitem_empty": {
-		"message": "No item ID returned while trying to get a sale item, perhaps it was already claimed."
+		"message": "Failed to claim a sale item."
 	},
 	"explore_saleitem_success": {
 		"message": "New sale item claimed: $item$.",

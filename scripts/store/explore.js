@@ -201,7 +201,7 @@ function ClaimSaleItem()
 						}
 						else
 						{
-							itemStatus.textContent = _t( 'explore_saleitem_empty' );
+							itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
 						}
 					} )
 					.catch( ( error ) =>
@@ -218,7 +218,7 @@ function ClaimSaleItem()
 						}
 						else
 						{
-							itemStatus.textContent = _t( 'explore_saleitem_claim_failed', [ maxRetries, error.message ] );
+							itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
 						}
 					} );
 			};
