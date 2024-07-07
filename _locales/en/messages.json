@@ -186,10 +186,10 @@
 		"message": "Claim reward"
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Trying to claim a sale item…"
+		"message": "Claiming the daily reward…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "No sale item to claim at this moment."
+		"message": "No daily reward to claim at this moment."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Next item available: $datetime$",
@@ -202,10 +202,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Failed to claim a sale item."
+		"message": "Failed to claim the daily reward."
 	},
 	"explore_saleitem_success": {
-		"message": "New sale item claimed: $item$",
+		"message": "New reward claimed: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",
