@@ -74,7 +74,7 @@ function GenerateQueue( generateFails = 0 )
 	const params = new URLSearchParams();
 	params.set( 'access_token', accessToken );
 	params.set( 'country_code', applicationConfig.COUNTRY || 'US' );
-	// params.set( 'rebuild_queue', '1' );
+	params.set( 'rebuild_queue', '1' );
 	params.set( 'queue_type', '0' ); // k_EStoreDiscoveryQueueTypeNew
 	params.set( 'ignore_user_preferences', '1' );
 
