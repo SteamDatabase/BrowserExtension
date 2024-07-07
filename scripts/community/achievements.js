@@ -1147,7 +1147,17 @@ function StartViewTransition( callback )
 {
 	if( document.startViewTransition )
 	{
-		document.startViewTransition( callback );
+		document.startViewTransition( () =>
+		{
+			try
+			{
+				callback();
+			}
+			catch( e )
+			{
+				console.error( e );
+			}
+		} );
 	}
 	else
 	{

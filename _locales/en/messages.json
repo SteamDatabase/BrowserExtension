@@ -182,6 +182,9 @@
 	"explore_finished": {
 		"message": "Queue has been explored."
 	},
+	"explore_saleitem_claim": {
+		"message": "Claim reward"
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Trying to claim a sale item if there is one…"
 	},

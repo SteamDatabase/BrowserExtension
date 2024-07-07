@@ -8,67 +8,118 @@ if( emptyQueue )
 	emptyQueue.style.height = 'auto';
 }
 
-const buttonContainer = document.createElement( 'div' );
-buttonContainer.id = 'steamdb_cheat_queue';
-buttonContainer.className = 'discovery_queue_customize_ctn';
+const applicationConfigElement = document.getElementById( 'application_config' );
 
-const button = document.createElement( 'div' );
-button.className = 'btnv6_blue_hoverfade btn_medium';
-const span = document.createElement( 'span' );
-span.appendChild( document.createTextNode( _t( 'explore_auto_discover' ) ) );
-button.appendChild( span );
-buttonContainer.appendChild( button );
-
-const textElements = document.createElement( 'div' );
-textElements.className = 'steamdb_cheat_queue_text';
-
-const exploreStatus = document.createElement( 'div' );
-exploreStatus.appendChild( document.createTextNode( _t( 'explore_auto_discover_description' ) ) );
-textElements.appendChild( exploreStatus );
-
-const itemStatus = document.createElement( 'div' );
-textElements.appendChild( itemStatus );
-
-buttonContainer.appendChild( textElements );
-
-const image = document.createElement( 'img' );
-image.src = GetLocalResource( 'icons/white.svg' );
-image.width = 32;
-image.height = 32;
-buttonContainer.appendChild( image );
-
-const container = document.querySelector( '.discovery_queue_customize_ctn' );
-container.parentNode.insertBefore( buttonContainer, container );
-
-button.addEventListener( 'click', function( )
+if( !applicationConfigElement )
 {
-	StartViewTransition( () =>
+	throw new Error( 'Failed to find application_config' );
+}
+
+const storeUserConfigJSON = applicationConfigElement.dataset.store_user_config;
+const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+const accessToken = storeUserConfigJSON && JSON.parse( storeUserConfigJSON ).webapi_token;
+
+if( !accessToken || !applicationConfig )
+{
+	throw new Error( 'Failed to get application_config' );
+}
+
+let exploreButton;
+let exploreStatus;
+let itemButton;
+let itemStatus;
+let itemImage;
+
+CreateSaleItemContainer();
+CreateExploreContainer();
+
+function CreateExploreContainer()
+{
+	const buttonContainer = document.createElement( 'div' );
+	buttonContainer.className = 'steamdb_cheat_queue discovery_queue_customize_ctn';
+
+	exploreButton = document.createElement( 'div' );
+	exploreButton.className = 'btnv6_blue_hoverfade btn_medium';
+	const span = document.createElement( 'span' );
+	span.append( document.createTextNode( _t( 'explore_auto_discover' ) ) );
+	exploreButton.append( span );
+	buttonContainer.append( exploreButton );
+
+	exploreStatus = document.createElement( 'div' );
+	exploreStatus.className = 'steamdb_cheat_queue_text';
+	exploreStatus.append( document.createTextNode( _t( 'explore_auto_discover_description' ) ) );
+	buttonContainer.append( exploreStatus );
+
+	const image = document.createElement( 'img' );
+	image.src = GetLocalResource( 'icons/white.svg' );
+	image.width = 32;
+	image.height = 32;
+	buttonContainer.append( image );
+
+	const container = document.querySelector( '.discovery_queue_customize_ctn' );
+	container.parentNode.insertBefore( buttonContainer, container );
+
+	exploreButton.addEventListener( 'click', function( )
 	{
-		button.style.display = 'none';
-		GenerateQueue();
-	} );
-}, false );
+		if( exploreButton.classList.contains( 'btn_disabled' ) )
+		{
+			return;
+		}
+
+		StartViewTransition( () =>
+		{
+			exploreButton.classList.add( 'btn_disabled' );
+			GenerateQueue();
+		} );
+	}, false );
+}
+
+function CreateSaleItemContainer()
+{
+	const buttonContainer = document.createElement( 'div' );
+	buttonContainer.className = 'steamdb_saleitem_claim discovery_queue_customize_ctn';
+
+	itemButton = document.createElement( 'div' );
+	itemButton.className = 'btnv6_blue_hoverfade btn_medium btn_disabled';
+	const span = document.createElement( 'span' );
+	span.append( document.createTextNode( _t( 'explore_saleitem_claim' ) ) );
+	itemButton.append( span );
+	buttonContainer.append( itemButton );
+
+	itemStatus = document.createElement( 'div' );
+	itemStatus.className = 'steamdb_cheat_queue_text';
+	itemStatus.append( document.createTextNode( _t( 'explore_saleitem_cant_claim' ) ) );
+	buttonContainer.append( itemStatus );
+
+	itemImage = document.createElement( 'img' );
+	itemImage.src = GetLocalResource( 'icons/white.svg' );
+	itemImage.width = 32;
+	itemImage.height = 32;
+	itemImage.style.opacity = '0';
+	buttonContainer.append( itemImage );
+
+	const container = document.querySelector( '.discovery_queue_customize_ctn' );
+	container.parentNode.insertBefore( buttonContainer, container );
+
+	itemButton.addEventListener( 'click', function( )
+	{
+		if( itemButton.classList.contains( 'btn_disabled' ) )
+		{
+			return;
+		}
+
+		StartViewTransition( () =>
+		{
+			itemButton.classList.add( 'btn_disabled' );
+			ClaimSaleItem();
+		} );
+	}, false );
+
+	CheckClaimSaleItem();
+}
 
 function GenerateQueue( generateFails = 0 )
 {
-	const applicationConfigElement = document.getElementById( 'application_config' );
-
-	if( !applicationConfigElement )
-	{
-		exploreStatus.textContent = 'Failed to find application_config'; // This shouldn't happen, so don't translate
-		return;
-	}
-
-	const storeUserConfigJSON = applicationConfigElement.dataset.store_user_config;
-	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
-	const accessToken = storeUserConfigJSON && JSON.parse( storeUserConfigJSON ).webapi_token;
-
-	if( !accessToken || !applicationConfig )
-	{
-		exploreStatus.textContent = 'Failed to get application_config'; // This shouldn't happen, so don't translate
-		return;
-	}
-
 	const valveQueueEl = document.getElementById( 'discovery_queue_ctn' );
 
 	if( valveQueueEl )
@@ -123,12 +174,8 @@ function GenerateQueue( generateFails = 0 )
 
 				if( ++done === appids.length )
 				{
-					StartViewTransition( () =>
-					{
-						exploreStatus.textContent = _t( 'explore_finished' );
-
-						ClaimSaleItem( applicationConfig, accessToken );
-					} );
+					exploreButton.classList.remove( 'btn_disabled' );
+					exploreStatus.textContent = _t( 'explore_finished' );
 				}
 				else
 				{
@@ -144,7 +191,7 @@ function GenerateQueue( generateFails = 0 )
 
 				if( ++fails >= 10 )
 				{
-					button.style.display = '';
+					exploreButton.classList.remove( 'btn_disabled' );
 					exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
 					return;
 				}
@@ -179,7 +226,7 @@ function GenerateQueue( generateFails = 0 )
 
 			if( ++generateFails >= 10 )
 			{
-				button.style.display = '';
+				exploreButton.classList.remove( 'btn_disabled' );
 				exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
 				return;
 			}
@@ -191,7 +238,87 @@ function GenerateQueue( generateFails = 0 )
 		} );
 }
 
-function ClaimSaleItem( applicationConfig, accessToken )
+function HandleSaleItemResponse( response )
+{
+	if( response.next_claim_time )
+	{
+		const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
+			dateStyle: 'medium',
+			timeStyle: 'short',
+		} );
+		const nextClaimTime = dateFormatter.format( response.next_claim_time * 1000 );
+
+		itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
+
+		const timer = ( response.next_claim_time * 1000 ) - Date.now();
+
+		setTimeout( () =>
+		{
+			itemButton.classList.remove( 'btn_disabled' );
+		}, timer );
+	}
+
+	if( response.reward_item?.community_item_data )
+	{
+		const item = response.reward_item.community_item_data;
+		const file = item.item_image_small || item.item_image_large;
+		itemImage.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/items/${response.reward_item.appid}/${file}`;
+		itemImage.title = item.item_title;
+		itemImage.style.opacity = '1';
+	}
+}
+
+function CheckClaimSaleItem( fails = 0 )
+{
+	const params = new URLSearchParams();
+	params.set( 'access_token', accessToken );
+	params.set( 'language', applicationConfig.LANGUAGE );
+
+	fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1/?${params.toString()}` )
+		.then( ( response ) =>
+		{
+			if( !response.ok )
+			{
+				throw new Error( `HTTP ${response.status}` );
+			}
+
+			return response.json();
+		} )
+		.then( ( data ) =>
+		{
+			const response = data.response;
+
+			if( response.can_claim )
+			{
+				itemButton.classList.remove( 'btn_disabled' );
+				return;
+			}
+
+			StartViewTransition( () =>
+			{
+				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
+
+				HandleSaleItemResponse( response );
+			} );
+		} )
+		.catch( ( error ) =>
+		{
+			WriteLog( 'Failed to find out if a sale item can be claimed', error );
+
+			if( ++fails >= 5 )
+			{
+				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
+				return;
+			}
+
+			setTimeout( () =>
+			{
+				CheckClaimSaleItem( fails );
+			}, RandomInt( 5000, 10000 ) );
+		} );
+}
+
+function ClaimSaleItem( fails = 0 )
 {
 	itemStatus.textContent = _t( 'explore_saleitem_trying_to_claim' );
 
@@ -199,131 +326,55 @@ function ClaimSaleItem( applicationConfig, accessToken )
 	params.set( 'access_token', accessToken );
 	params.set( 'language', applicationConfig.LANGUAGE );
 
-	const claimItem = ( fails = 0 ) =>
-	{
-		fetch(
-			`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1/?${params.toString()}`,
+	fetch(
+		`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1/?${params.toString()}`,
+		{
+			method: 'POST',
+		},
+	)
+		.then( ( response ) =>
+		{
+			if( !response.ok )
 			{
-				method: 'POST',
-			},
-		)
-			.then( ( response ) =>
+				throw new Error( `HTTP ${response.status}` );
+			}
+
+			return response.json();
+		} )
+		.then( ( data ) =>
+		{
+			const response = data.response;
+
+			if( !response || !response.communityitemid )
 			{
-				if( !response.ok )
-				{
-					throw new Error( `HTTP ${response.status}` );
-				}
+				fails = 10; // If there is no item to claim the response is just empty
+				throw new Error( 'Unexpected response' );
+			}
 
-				return response.json();
-			} )
-			.then( ( data ) =>
+			StartViewTransition( () =>
 			{
-				const response = data.response;
+				const itemTitle = response.reward_item?.community_item_data?.item_title;
+				itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
 
-				if( !response || !response.communityitemid )
-				{
-					throw new Error( 'Unexpected response' );
-				}
-
-				StartViewTransition( () =>
-				{
-					const itemTitle = response.reward_item?.community_item_data?.item_title;
-					itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
-
-					if( response.reward_item?.community_item_data )
-					{
-						createItemImage( response.reward_item );
-					}
-				} );
-			} )
-			.catch( ( error ) =>
-			{
-				WriteLog( 'Failed to get a sale item', error );
-
-				if( ++fails >= 5 )
-				{
-					itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
-					return;
-				}
-
-				setTimeout( () =>
-				{
-					claimItem( fails );
-				}, RandomInt( 5000, 10000 ) );
+				HandleSaleItemResponse( response );
 			} );
-	};
+		} )
+		.catch( ( error ) =>
+		{
+			WriteLog( 'Failed to get a sale item', error );
 
-	const canClaimItem = ( fails = 0 ) =>
-	{
-		fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1/?${params.toString()}` )
-			.then( ( response ) =>
+			if( ++fails >= 5 )
 			{
-				if( !response.ok )
-				{
-					throw new Error( `HTTP ${response.status}` );
-				}
+				itemButton.classList.remove( 'btn_disabled' );
+				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+				return;
+			}
 
-				return response.json();
-			} )
-			.then( ( data ) =>
+			setTimeout( () =>
 			{
-				const response = data.response;
-
-				if( response && response.can_claim )
-				{
-					claimItem();
-					return;
-				}
-
-				StartViewTransition( () =>
-				{
-					itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
-
-					if( response.next_claim_time )
-					{
-						const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
-							dateStyle: 'medium',
-							timeStyle: 'short',
-						} );
-						const nextClaimTime = dateFormatter.format( response.next_claim_time * 1000 );
-
-						itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
-					}
-
-					if( response.reward_item?.community_item_data )
-					{
-						createItemImage( response.reward_item );
-					}
-				} );
-			} )
-			.catch( ( error ) =>
-			{
-				WriteLog( 'Failed to find out if a sale item can be claimed', error );
-
-				if( ++fails >= 5 )
-				{
-					itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
-					return;
-				}
-
-				setTimeout( () =>
-				{
-					canClaimItem( fails );
-				}, RandomInt( 5000, 10000 ) );
-			} );
-	};
-
-	const createItemImage = ( item ) =>
-	{
-		const itemImage = document.createElement( 'img' );
-		itemImage.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/items/${item.appid}/${item.community_item_data.item_image_small || item.community_item_data.item_image_large}`;
-		itemImage.width = 32;
-		itemImage.height = 32;
-		itemImage.title = item.community_item_data.item_title;
-		image.insertAdjacentElement( 'beforebegin', itemImage );
-	};
-
-	canClaimItem();
+				ClaimSaleItem( fails );
+			}, RandomInt( 5000, 10000 ) );
+		} );
 }
 
 function RandomInt( min, max )
@@ -335,7 +386,17 @@ function StartViewTransition( callback )
 {
 	if( document.startViewTransition )
 	{
-		document.startViewTransition( callback );
+		document.startViewTransition( () =>
+		{
+			try
+			{
+				callback();
+			}
+			catch( e )
+			{
+				console.error( e );
+			}
+		} );
 	}
 	else
 	{

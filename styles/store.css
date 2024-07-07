@@ -221,17 +221,24 @@ a.steamdb_rating:hover {
 	margin: 0;
 }
 
-#steamdb_cheat_queue {
+.steamdb_saleitem_claim,
+.steamdb_cheat_queue {
 	display: flex;
 	align-items: center;
 	gap: 15px;
 }
 
-#steamdb_cheat_queue .btn_medium {
+.steamdb_cheat_queue.discovery_queue_customize_ctn {
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+.steamdb_saleitem_claim .btn_medium,
+.steamdb_cheat_queue .btn_medium {
 	margin: 0;
 }
 
-#steamdb_cheat_queue .steamdb_cheat_queue_text {
+.steamdb_cheat_queue_text {
 	margin-right: auto;
 }
 
