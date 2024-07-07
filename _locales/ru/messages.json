@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "Список просмотрен."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Пытаемся получить товар, если таковой есть…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "В данный момент товары отсутствуют."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Доступен следующий товар: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Не удалось получить товар."
+	},
+	"explore_saleitem_success": {
+		"message": "Получен новый товар: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "Игр с карточками: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "Die Entdeckungsliste wurde erkundet."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Aktionsgegenstand wird beansprucht …"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Derzeit kann kein Aktionsgegenstand beansprucht werden."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Verfügbarkeit des nächsten Gegenstands: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Der Aktionsgegenstand konnte nicht beansprucht werden."
+	},
+	"explore_saleitem_success": {
+		"message": "Neuer Aktionsgegenstand beansprucht: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "Apps zum Sammeln: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "A fila foi explorada."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "A tentar reclamar um item da promoção caso exista um..."
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Não há itens da promoção para reclamar neste momento."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Próximo item disponível: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Falha ao reclamar item da promoção."
+	},
+	"explore_saleitem_success": {
+		"message": "Novo item da promoção reclamado: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "Jogos com cartas: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -270,7 +298,7 @@
 		"message": "Ordenar por data"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Os grupos de proezas são fornecidos por Steam Hunters.",
+		"message": "Os grupos de proezas são fornecidos pelo Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
@@ -427,7 +455,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Quando a opção \"$options_achievement_groups$\" estiver ativa, a extensão fará um pedido seguro a $domain$ para agrupar as proezas na página de proezas pessoais com os dados fornecidos por Steam Hunters.",
+		"message": "Quando a opção \"$options_achievement_groups$\" estiver ativa, a extensão fará um pedido seguro a $domain$ para agrupar as proezas na página de proezas pessoais com os dados fornecidos pelo Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -537,7 +565,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Ocultar a faixa \"Abrir no Steam\""
+		"message": "Esconder a faixa \"Abrir no Steam\""
 	},
 	"options_steamdb_rating": {
 		"message": "Mostrar a avaliação do SteamDB nas páginas de produtos"
@@ -547,20 +575,20 @@
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "Melhorar a página das proezas pessoais"
+		"message": "Melhorar a página de proezas pessoais"
 	},
 	"options_achievements_global_unlock": {
-		"message": "Exibir a percentagem de desbloqueio de proezas globais"
+		"message": "Mostrar a percentagem de desbloqueio de proezas globais"
 	},
 	"options_modernized_achievements": {
-		"message": "Design moderno"
+		"message": "Design modernizado"
 	},
 	"options_achievement_groups": {
-		"message": "Agrupar proezas com dados de Steam Hunters",
+		"message": "Agrupar proezas com dados do Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Colocar proezas bloqueadas com um elemento spoiler"
+		"message": "Colocar proezas bloqueadas atrás de um elemento spoiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Impedir o carregamento de imagens nas páginas de produtos"
@@ -577,7 +605,7 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "Adicionar um botão para esconder o bloco \"já está na tua biblioteca\""
+		"message": "Adicionar um botão para recolher o bloco \"já está na tua biblioteca\""
 	},
 	"options_builtin_card_drops": {
 		"message": "Mostrar a quantidade total de cartas restantes na página de medalhas"
@@ -589,9 +617,9 @@
 		"message": "Melhorar a página de proezas globais"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Ligação para a página pessoal de proezas"
+		"message": "Ligação para a tua página de proezas pessoal"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Exibir um ícone de cadeado para proezas bloqueadas"
+		"message": "Mostrar um ícone de cadeado para proezas bloqueadas"
 	}
 }

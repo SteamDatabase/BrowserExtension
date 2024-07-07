@@ -462,7 +462,7 @@
 		"message": "Toon een knop bij de community hubs"
 	},
 	"options_button_gamecards": {
-		"message": "Toon SteamDB en bewaar pagina knoppen op de gamecard pagina"
+		"message": "Toon SteamDB- en winkelpaginaknoppen op de ruilkaartenpagina"
 	},
 	"options_link_subid": {
 		"message": "Toon sub-ID onder elke aankoopoptie"
@@ -580,7 +580,7 @@
 		"message": "Voeg een knop toe om het blok \"al in je bibliotheek\" in te klappen"
 	},
 	"options_builtin_card_drops": {
-		"message": "Geef het totale aantal resterende kaart drops weer op de badges pagina"
+		"message": "Geef het totale aantal resterende kaartdrops weer op de badgepagina"
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Voeg een knop toe om automatisch de wachtrij te ontdekken tijdens de verkoop"

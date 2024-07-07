@@ -159,7 +159,7 @@
 		"message": "Генериране на нова опашка, тази функция може да не работи, ако Steam е под голямо натоварване…"
 	},
 	"explore_exploring": {
-		"message": "Изследване на опашката... Заявка $current$ от $total$",
+		"message": "Изследване на опашката… Заявка $current$ от $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -194,6 +194,34 @@
 	},
 	"explore_finished": {
 		"message": "Опашката е разгледана."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Опит за получаване на артикул от разпродажбата, ако има такъв…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "В момента няма артикул за получаване от разпродажбата."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Следващ артикул наличен на $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Неуспещно получаване на артикул от разпродажбата."
+	},
+	"explore_saleitem_success": {
+		"message": "Получен е нов артикул от разпродажбата: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Приложения с оставащи падания: $amount$",

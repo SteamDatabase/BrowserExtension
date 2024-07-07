@@ -159,7 +159,7 @@
 		"message": "Đang tạo hàng chờ khám phá mới, có thể không thành công nếu Steam bị quá tải…"
 	},
 	"explore_exploring": {
-		"message": "Đang khám phá hàng đợi… Số lượng $current$ trên $total$",
+		"message": "Đang khám phá hàng chờ… Số lượng $current$ trên $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -172,7 +172,7 @@
 		}
 	},
 	"explore_failed_to_clear": {
-		"message": "Không thể bỏ món #$current$ khỏi hàng đợi, thử lại sau 5 giây nữa…",
+		"message": "Không thể bỏ món #$current$ khỏi hàng chờ, thử lại sau 5 giây nữa…",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -181,7 +181,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Không thể bỏ món #$current$ khỏi hàng đợi quá nhiều lần. Vui lòng thử lại sau.",
+		"message": "Không thể bỏ món #$current$ khỏi hàng chờ quá nhiều lần. Vui lòng thử lại sau.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -190,10 +190,38 @@
 		}
 	},
 	"explore_failed_to_generate": {
-		"message": "Không tạo được hàng đợi mới, hãy thử lại sau 5 giây…"
+		"message": "Không tạo được hàng chờ mới, hãy thử lại sau 5 giây…"
 	},
 	"explore_finished": {
-		"message": "Đã xem hết hàng đợi."
+		"message": "Đã xem hết hàng chờ."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Đang thử nhận vật phẩm sự kiện (nếu có)…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Không có vật phẩm sự kiện nào có thể nhận tại thời điểm này."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Vật phẩm tiếp theo sẵn sàng vào $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Không thể nhận vật phẩm sự kiện."
+	},
+	"explore_saleitem_success": {
+		"message": "Đã nhận vật phẩm sự kiện mới: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Số ứng dụng cần treo: $amount$",

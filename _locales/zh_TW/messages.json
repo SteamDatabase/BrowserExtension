@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "佇列已探索完成。"
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "如有特賣物品將嘗試領取…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "目前沒有可領取的特賣物品。"
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "下一個特賣物品可領取時間為：$datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "特賣物品領取失敗。"
+	},
+	"explore_saleitem_success": {
+		"message": "已領取新的特賣物品：$item$。",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "可掉落應用數： $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -459,7 +487,7 @@
 		"message": "在捆綁包頁面上顯示按鈕"
 	},
 	"options_button_gamehub": {
-		"message": "在社區顯示按鈕"
+		"message": "在社群顯示按鈕"
 	},
 	"options_button_gamecards": {
 		"message": "在遊戲主頁顯示 SteamDB 和商店頁面按鈕"

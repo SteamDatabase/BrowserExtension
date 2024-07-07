@@ -62,7 +62,7 @@
 		}
 	},
 	"app_depots_update": {
-		"message": "마지막 갱신일:"
+		"message": "최근 업데이트:"
 	},
 	"app_depots_updated_short": {
 		"message": "업데이트됨",
@@ -72,16 +72,16 @@
 		"message": "온라인 통계"
 	},
 	"app_stats_online_now": {
-		"message": "현재 온라인 :"
+		"message": "현재 온라인:"
 	},
 	"app_stats_peak_today": {
-		"message": "24시간 동안의 최고 접속량"
+		"message": "24시간 동시접속자:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "최고 동시접속자"
+		"message": "최고 동시접속자:"
 	},
 	"app_stats_followers": {
-		"message": "팔로워"
+		"message": "팔로워:"
 	},
 	"app_lowest_price": {
 		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>",

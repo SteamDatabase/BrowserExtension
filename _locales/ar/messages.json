@@ -195,6 +195,22 @@
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "جاري محاولة المطالبة بمنتج بيع إذا كان هناك واحد…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "لا يوجد منتج بيع للمطالبة به في الوقت الحالي."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "العنصر التالي متاح: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "تطبيقات في حالة خمول: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

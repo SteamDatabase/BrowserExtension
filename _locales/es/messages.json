@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "La cola ha sido explorada."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Intentando reclamar un artículo de rebaja en caso de que lo haya…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "No hay ningún artículo de rebaja que reclamar en este momento."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Siguiente artículo disponible: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Error al reclamar un artículo de rebaja."
+	},
+	"explore_saleitem_success": {
+		"message": "Nuevo artículo de rebaja reclamado: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "Juegos con cromos: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

@@ -75,7 +75,7 @@
 		"message": "Aktualnie online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24-godzinny max. graczy:"
+		"message": "24-godzinny rekord:"
 	},
 	"app_stats_alL_time_peak": {
 		"message": "Rekord aktywnych graczy:"
@@ -194,6 +194,31 @@
 	},
 	"explore_finished": {
 		"message": "Kolejka została przejrzana."
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Brak przedmiotu sprzedaży do uzyskania w tej chwili."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Następny przedmiot dostępny: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nie udało się odebrać elementu sprzedaży."
+	},
+	"explore_saleitem_success": {
+		"message": "Otrzymano nowy element sprzedaży: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikacje z kartami do zdobycia: $amount$",
@@ -358,7 +383,7 @@
 		"message": "Wyjaśnienie"
 	},
 	"options_website_explanation1": {
-		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (lista życzeń, produkty posiadane, obserwowane, ignorowane oraz znajdujące się w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
+		"message": "Gdy ta opcja jest włączona, rozszerzenie zażąda niektórych danych użytkownika (produkty na liście życzeń, posiadane, obserwowane, ignorowane oraz znajdujące się w koszyku) ze <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Sklepu Steam</a> i użyje ich do pokazania wyróżnień na stronie."
 	},
 	"options_website_explanation2": {
 		"message": "Aby użyć tej funkcji, musisz być zalogowany w sklepie."
@@ -367,7 +392,7 @@
 		"message": "Dane są przechowywane lokalnie w twojej przeglądarce i nie są nigdzie wysyłane, nawet do serwerów SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Aby zapobiec nadmiernym zapytaniom do sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
+		"message": "Aby zapobiec nadmiernym żądaniom do Sklepu Steam, dane użytkownika są przechowywane w lokalnej pamięci przeglądarki."
 	},
 	"options_website_highlight": {
 		"message": "Wyróżnij produkty posiadane i znajdujące się na liście życzeń na $domain$",
@@ -441,10 +466,10 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Pokaż najniższą zarejestrowaną cenę produktu na jego stronie"
+		"message": "Wyświetl najniższą zarejestrowaną cenę na stronach produktów"
 	},
 	"options_online_stats": {
-		"message": "Wyświetl aktualną i największą zarejestrowaną liczbę graczy na stronach produktu"
+		"message": "Wyświetl aktualną i największą zarejestrowaną liczbę graczy na stronach produktów"
 	},
 	"options_steamdb_last_update": {
 		"message": "Wyświetl ostatnią aktualizację na stronach produktów"
@@ -459,7 +484,7 @@
 		"message": "Wyświetl przycisk na stronach paczek"
 	},
 	"options_button_gamehub": {
-		"message": "Wyświetl przycisk w centrach społeczności"
+		"message": "Wyświetlaj przycisk w centrach gier"
 	},
 	"options_button_gamecards": {
 		"message": "Wyświetl przyciski SteamDB i strony w sklepie na stronach kart"
@@ -499,7 +524,7 @@
 		"message": "Wyświetl cenę rynkową przedmiotów w ekwipunkach innych użytkowników"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Obsługa parametrów $for_item$ i $my_item$",
+		"message": "Wsparcie dla parametrów $for_item$ i $my_item$",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -513,7 +538,7 @@
 		"message": "Zobacz wyjaśnienie na GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Zignoruj powiadomienia \"ta oferta wydaje się podejrzana\" oraz \"czy jesteś pewien, że jest to prezent?\" w ofertach wymiany"
+		"message": "Ukryj powiadomienia \"ta oferta wydaje się podejrzana\" oraz \"czy jesteś pewien, że jest to prezent?\" w ofertach wymiany"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Wyświetlaj lepsze komunikaty o błędach, zamiast niezrozumiałych numerów błędów Valve"
@@ -533,7 +558,7 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Schowaj przycisk \"Zainstaluj Steam\" w nagłówku",
+		"message": "Ukryj przycisk \"Zainstaluj Steam\" w nagłówku",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
@@ -553,14 +578,14 @@
 		"message": "Wyświetl globalny procent odblokowania osiągnięć"
 	},
 	"options_modernized_achievements": {
-		"message": "Zmodernizowany wygląd"
+		"message": "Nowoczesny wygląd"
 	},
 	"options_achievement_groups": {
 		"message": "Grupuj osiągnięcia według danych od Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Umieść ukryte osiągnięcia za elementem spoiler"
+		"message": "Umieść ukryte osiągnięcia za spoilerem"
 	},
 	"options_prevent_store_images": {
 		"message": "Zatrzymaj ładowanie obrazów na stronach produktów"

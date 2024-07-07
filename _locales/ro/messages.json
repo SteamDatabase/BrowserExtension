@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "Lista a fost explorată."
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Se încearcă solicitarea unui articol de vânzare dacă există un…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Nici un articol de vânzare pentru a solicita în acest moment."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Următorul articol disponibil: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nu s-a putut solicita un element de vânzare."
+	},
+	"explore_saleitem_success": {
+		"message": "Articol nou de vânzare solicitat: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "Aplicații pentru a farma: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

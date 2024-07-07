@@ -195,6 +195,34 @@
 	"explore_finished": {
 		"message": "队列探索完成。"
 	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "如有特卖物品则尝试领取…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "当前没有可领取的特卖物品"
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "下一个特卖物品可在 $datetime$ 后领取",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "无法领取特卖物品"
+	},
+	"explore_saleitem_success": {
+		"message": "已领取新的特卖物品：$item$",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
 		"message": "可掉落卡牌的应用数：$amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
