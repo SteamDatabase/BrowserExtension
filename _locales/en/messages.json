@@ -176,26 +176,14 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Failed to clear queue item #$current$, trying again in five seconds…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Failed to clear queue item #$current$ too many times. You can try again later.",
+		"message": "Failed to clear the queue too many times. You can try again later.",
 		"placeholders": {
 			"current": {
 				"content": "$1",
 				"example": "5"
 			}
 		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Failed to generate new queue, trying again in five seconds…"
 	},
 	"explore_finished": {
 		"message": "Queue has been explored."

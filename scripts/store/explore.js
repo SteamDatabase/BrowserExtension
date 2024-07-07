@@ -49,7 +49,7 @@ button.addEventListener( 'click', function( )
 	} );
 }, false );
 
-function GenerateQueue()
+function GenerateQueue( generateFails = 0 )
 {
 	const session = document.body.innerHTML.match( /g_sessionID = "(?<sessionid>\w+)";/ );
 
@@ -106,16 +106,13 @@ function GenerateQueue()
 
 			const requestFail = ( error ) =>
 			{
-				WriteLog( 'Failed to clear queue', error );
+				WriteLog( 'Failed to clear queue item', error );
 
 				if( ++fails >= 10 )
 				{
-					exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many', [ done ] );
-
+					exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
 					return;
 				}
-
-				exploreStatus.textContent = _t( 'explore_failed_to_clear', [ done ] );
 
 				setTimeout( () =>
 				{
@@ -147,9 +144,16 @@ function GenerateQueue()
 		{
 			WriteLog( 'Failed to generate queue', error );
 
-			setTimeout( GenerateQueue, RandomInt( 5000, 10000 ) );
+			if( ++generateFails >= 10 )
+			{
+				exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
+				return;
+			}
 
-			exploreStatus.textContent = _t( 'explore_failed_to_generate' );
+			setTimeout( () =>
+			{
+				GenerateQueue( generateFails );
+			}, RandomInt( 5000, 10000 ) );
 		} );
 }
 
@@ -177,7 +181,7 @@ function ClaimSaleItem()
 	params.set( 'access_token', webapiToken );
 	params.set( 'language', applicationConfig.LANGUAGE );
 
-	const claimItem = ( fails = 0, maxRetries = 5 ) =>
+	const claimItem = ( fails = 0 ) =>
 	{
 		fetch(
 			`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1?${params.toString()}`,
@@ -219,22 +223,21 @@ function ClaimSaleItem()
 			.catch( ( error ) =>
 			{
 				WriteLog( 'Failed to get a sale item', error );
-				fails++;
 
-				if( fails < maxRetries )
+				if( ++fails >= 5 )
 				{
-					setTimeout( () =>
-					{
-						claimItem( fails );
-					}, RandomInt( 5000, 10000 ) );
+					itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
 					return;
 				}
 
-				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+				setTimeout( () =>
+				{
+					claimItem( fails );
+				}, RandomInt( 5000, 10000 ) );
 			} );
 	};
 
-	const canClaimItem = ( fails = 0, maxRetries = 5 ) =>
+	const canClaimItem = ( fails = 0 ) =>
 	{
 		fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1?${params.toString()}` )
 			.then( ( response ) =>
@@ -280,19 +283,17 @@ function ClaimSaleItem()
 			.catch( ( error ) =>
 			{
 				WriteLog( 'Failed to find out if a sale item can be claimed', error );
-				fails++;
 
-				if( fails < maxRetries )
+				if( ++fails >= 5 )
 				{
-					setTimeout( () =>
-					{
-						canClaimItem( fails );
-					}, RandomInt( 5000, 10000 ) );
-
+					itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
 					return;
 				}
 
-				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+				setTimeout( () =>
+				{
+					canClaimItem( fails );
+				}, RandomInt( 5000, 10000 ) );
 			} );
 	};
 
