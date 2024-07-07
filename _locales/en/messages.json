@@ -202,7 +202,7 @@
 		"message": "Failed to claim a sale item."
 	},
 	"explore_saleitem_success": {
-		"message": "New sale item claimed: $item$.",
+		"message": "New sale item claimed: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",
