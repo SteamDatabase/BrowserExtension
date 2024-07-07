@@ -44,7 +44,7 @@ button.addEventListener( 'click', function( )
 {
 	StartViewTransition( () =>
 	{
-		button.remove();
+		button.style.display = 'none';
 		GenerateQueue();
 	} );
 }, false );
@@ -67,6 +67,18 @@ function GenerateQueue( generateFails = 0 )
 	{
 		exploreStatus.textContent = 'Failed to get application_config'; // This shouldn't happen, so don't translate
 		return;
+	}
+
+	const valveQueueEl = document.getElementById( 'discovery_queue_ctn' );
+
+	if( valveQueueEl )
+	{
+		valveQueueEl.style.display = 'none';
+	}
+
+	if( emptyQueue )
+	{
+		emptyQueue.style.display = 'block';
 	}
 
 	exploreStatus.textContent = _t( 'explore_generating' );
@@ -132,6 +144,7 @@ function GenerateQueue( generateFails = 0 )
 
 				if( ++fails >= 10 )
 				{
+					button.style.display = '';
 					exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
 					return;
 				}
@@ -166,6 +179,7 @@ function GenerateQueue( generateFails = 0 )
 
 			if( ++generateFails >= 10 )
 			{
+				button.style.display = '';
 				exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
 				return;
 			}
