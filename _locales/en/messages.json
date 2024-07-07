@@ -186,7 +186,7 @@
 		"message": "Claim reward"
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Trying to claim a sale item if there is one…"
+		"message": "Trying to claim a sale item…"
 	},
 	"explore_saleitem_cant_claim": {
 		"message": "No sale item to claim at this moment."
