@@ -205,7 +205,7 @@
 		"message": "Failed to claim the daily reward."
 	},
 	"explore_saleitem_success": {
-		"message": "New reward claimed: $item$",
+		"message": "New reward claimed: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
