@@ -20,6 +20,7 @@ button.appendChild( span );
 buttonContainer.appendChild( button );
 
 const textElements = document.createElement( 'div' );
+textElements.className = 'steamdb_cheat_queue_text';
 
 const exploreStatus = document.createElement( 'div' );
 exploreStatus.appendChild( document.createTextNode( _t( 'explore_auto_discover_description' ) ) );
@@ -41,8 +42,11 @@ container.parentNode.insertBefore( buttonContainer, container );
 
 button.addEventListener( 'click', function( )
 {
-	GenerateQueue();
-	button.remove();
+	StartViewTransition( () =>
+	{
+		button.remove();
+		GenerateQueue();
+	} );
 }, false );
 
 function GenerateQueue()
@@ -85,9 +89,12 @@ function GenerateQueue()
 
 				if( ++done === data.queue.length )
 				{
-					exploreStatus.textContent = _t( 'explore_finished' );
+					StartViewTransition( () =>
+					{
+						exploreStatus.textContent = _t( 'explore_finished' );
 
-					ClaimSaleItem();
+						ClaimSaleItem();
+					} );
 				}
 				else
 				{
@@ -193,8 +200,16 @@ function ClaimSaleItem()
 
 				if( response && response.communityitemid )
 				{
-					const itemTitle = response.reward_item?.community_item_data?.item_title;
-					itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
+					StartViewTransition( () =>
+					{
+						const itemTitle = response.reward_item?.community_item_data?.item_title;
+						itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
+
+						if( response.reward_item?.community_item_data )
+						{
+							createItemImage( response.reward_item );
+						}
+					} );
 
 					return;
 				}
@@ -241,18 +256,26 @@ function ClaimSaleItem()
 					return;
 				}
 
-				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
-
-				if( response.next_claim_time )
+				StartViewTransition( () =>
 				{
-					const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
-						dateStyle: 'medium',
-						timeStyle: 'medium',
-					} );
-					const nextClaimTime = dateFormatter.format( response.next_claim_time * 1000 );
+					itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
 
-					itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
-				}
+					if( response.next_claim_time )
+					{
+						const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
+							dateStyle: 'medium',
+							timeStyle: 'short',
+						} );
+						const nextClaimTime = dateFormatter.format( response.next_claim_time * 1000 );
+
+						itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
+					}
+
+					if( response.reward_item?.community_item_data )
+					{
+						createItemImage( response.reward_item );
+					}
+				} );
 			} )
 			.catch( ( error ) =>
 			{
@@ -273,10 +296,32 @@ function ClaimSaleItem()
 			} );
 	};
 
+	const createItemImage = ( item ) =>
+	{
+		const itemImage = document.createElement( 'img' );
+		itemImage.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/items/${item.appid}/${item.community_item_data.item_image_small || item.community_item_data.item_image_large}`;
+		itemImage.width = 32;
+		itemImage.height = 32;
+		itemImage.title = item.community_item_data.item_title;
+		image.insertAdjacentElement( 'beforebegin', itemImage );
+	};
+
 	canClaimItem();
 }
 
 function RandomInt( min, max )
 {
 	return Math.floor( Math.random() * ( max - min + 1 ) + min );
+}
+
+function StartViewTransition( callback )
+{
+	if( document.startViewTransition )
+	{
+		document.startViewTransition( callback );
+	}
+	else
+	{
+		callback();
+	}
 }

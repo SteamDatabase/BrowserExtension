@@ -231,8 +231,8 @@ a.steamdb_rating:hover {
 	margin: 0;
 }
 
-#steamdb_cheat_queue > img {
-	margin-left: auto;
+#steamdb_cheat_queue .steamdb_cheat_queue_text {
+	margin-right: auto;
 }
 
 /**
