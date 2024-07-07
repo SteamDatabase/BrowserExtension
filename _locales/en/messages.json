@@ -177,13 +177,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Failed to clear the queue too many times. You can try again later.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
+		"message": "Failed to clear the queue too many times. You can try again later."
 	},
 	"explore_finished": {
 		"message": "Queue has been explored."
