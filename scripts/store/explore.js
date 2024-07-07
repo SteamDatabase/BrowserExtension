@@ -51,31 +51,53 @@ button.addEventListener( 'click', function( )
 
 function GenerateQueue( generateFails = 0 )
 {
-	const session = document.body.innerHTML.match( /g_sessionID = "(?<sessionid>\w+)";/ );
+	const applicationConfigElement = document.getElementById( 'application_config' );
 
-	if( !session )
+	if( !applicationConfigElement )
 	{
-		exploreStatus.textContent = 'Failed to find g_sessionID'; // This shouldn't happen, so don't translate
+		exploreStatus.textContent = 'Failed to find application_config'; // This shouldn't happen, so don't translate
+		return;
+	}
+
+	const storeUserConfigJSON = applicationConfigElement.dataset.store_user_config;
+	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+	const accessToken = storeUserConfigJSON && JSON.parse( storeUserConfigJSON ).webapi_token;
+
+	if( !accessToken || !applicationConfig )
+	{
+		exploreStatus.textContent = 'Failed to get application_config'; // This shouldn't happen, so don't translate
 		return;
 	}
 
 	exploreStatus.textContent = _t( 'explore_generating' );
 
-	let formData = new FormData();
-	formData.append( 'sessionid', session.groups.sessionid );
-	formData.append( 'queuetype', 0 );
+	const params = new URLSearchParams();
+	params.set( 'access_token', accessToken );
+	params.set( 'country_code', applicationConfig.COUNTRY || 'US' );
+	// params.set( 'rebuild_queue', '1' );
+	params.set( 'queue_type', '0' ); // k_EStoreDiscoveryQueueTypeNew
+	params.set( 'ignore_user_preferences', '1' );
 
-	fetch( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', {
-		credentials: 'include',
-		method: 'POST',
-		body: formData,
-		headers: {
-			'X-Requested-With': 'SteamDB',
-		},
-	} )
-		.then( ( response ) => response.json() )
+	fetch(
+		`${applicationConfig.WEBAPI_BASE_URL}IStoreService/GetDiscoveryQueue/v1/?${params.toString()}`,
+	)
+		.then( ( response ) =>
+		{
+			if( !response.ok )
+			{
+				throw new Error( `HTTP ${response.status}` );
+			}
+
+			return response.json();
+		} )
 		.then( ( data ) =>
 		{
+			if( !data.response || !data.response.appids )
+			{
+				throw new Error( 'Unexpected response' );
+			}
+
+			const appids = data.response.appids;
 			let done = 0;
 			let fails = 0;
 
@@ -87,18 +109,18 @@ function GenerateQueue( generateFails = 0 )
 					return;
 				}
 
-				if( ++done === data.queue.length )
+				if( ++done === appids.length )
 				{
 					StartViewTransition( () =>
 					{
 						exploreStatus.textContent = _t( 'explore_finished' );
 
-						ClaimSaleItem();
+						ClaimSaleItem( applicationConfig, accessToken );
 					} );
 				}
 				else
 				{
-					exploreStatus.textContent = _t( 'explore_exploring', [ done, data.queue.length ] );
+					exploreStatus.textContent = _t( 'explore_exploring', [ done, appids.length ] );
 
 					requestNextInQueue( done );
 				}
@@ -122,18 +144,16 @@ function GenerateQueue( generateFails = 0 )
 
 			const requestNextInQueue = ( index ) =>
 			{
-				formData = new FormData();
-				formData.append( 'sessionid', session.groups.sessionid );
-				formData.append( 'appid_to_clear_from_queue', data.queue[ index ] );
+				const skipParams = new URLSearchParams();
+				skipParams.set( 'access_token', accessToken );
+				skipParams.set( 'appid', appids[ index ] );
 
-				fetch( 'https://store.steampowered.com/app/10', {
-					credentials: 'include',
-					method: 'POST',
-					body: formData,
-					headers: {
-						'X-Requested-With': 'SteamDB',
+				fetch(
+					`${applicationConfig.WEBAPI_BASE_URL}IStoreService/SkipDiscoveryQueueItem/v1/?${skipParams.toString()}`,
+					{
+						method: 'POST',
 					},
-				} )
+				)
 					.then( requestDone )
 					.catch( requestFail );
 			};
@@ -142,7 +162,7 @@ function GenerateQueue( generateFails = 0 )
 		} )
 		.catch( ( error ) =>
 		{
-			WriteLog( 'Failed to generate queue', error );
+			WriteLog( 'Failed to get discovery queue', error );
 
 			if( ++generateFails >= 10 )
 			{
@@ -157,34 +177,18 @@ function GenerateQueue( generateFails = 0 )
 		} );
 }
 
-function ClaimSaleItem()
+function ClaimSaleItem( applicationConfig, accessToken )
 {
-	const applicationConfigElement = document.getElementById( 'application_config' );
-
-	if( !applicationConfigElement )
-	{
-		return;
-	}
-
-	const storeUserConfigJSON = applicationConfigElement.dataset.store_user_config;
-	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
-	const webapiToken = storeUserConfigJSON && JSON.parse( storeUserConfigJSON ).webapi_token;
-
-	if( !webapiToken || !applicationConfig )
-	{
-		return;
-	}
-
 	itemStatus.textContent = _t( 'explore_saleitem_trying_to_claim' );
 
 	const params = new URLSearchParams();
-	params.set( 'access_token', webapiToken );
+	params.set( 'access_token', accessToken );
 	params.set( 'language', applicationConfig.LANGUAGE );
 
 	const claimItem = ( fails = 0 ) =>
 	{
 		fetch(
-			`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1?${params.toString()}`,
+			`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1/?${params.toString()}`,
 			{
 				method: 'POST',
 			},
@@ -202,23 +206,21 @@ function ClaimSaleItem()
 			{
 				const response = data.response;
 
-				if( response && response.communityitemid )
+				if( !response || !response.communityitemid )
 				{
-					StartViewTransition( () =>
-					{
-						const itemTitle = response.reward_item?.community_item_data?.item_title;
-						itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
-
-						if( response.reward_item?.community_item_data )
-						{
-							createItemImage( response.reward_item );
-						}
-					} );
-
-					return;
+					throw new Error( 'Unexpected response' );
 				}
 
-				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+				StartViewTransition( () =>
+				{
+					const itemTitle = response.reward_item?.community_item_data?.item_title;
+					itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
+
+					if( response.reward_item?.community_item_data )
+					{
+						createItemImage( response.reward_item );
+					}
+				} );
 			} )
 			.catch( ( error ) =>
 			{
@@ -239,7 +241,7 @@ function ClaimSaleItem()
 
 	const canClaimItem = ( fails = 0 ) =>
 	{
-		fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1?${params.toString()}` )
+		fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1/?${params.toString()}` )
 			.then( ( response ) =>
 			{
 				if( !response.ok )
