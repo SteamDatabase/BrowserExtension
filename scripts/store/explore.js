@@ -9,9 +9,8 @@ if( emptyQueue )
 }
 
 const buttonContainer = document.createElement( 'div' );
+buttonContainer.id = 'steamdb_cheat_queue';
 buttonContainer.className = 'discovery_queue_customize_ctn';
-buttonContainer.style.display = 'flex';
-buttonContainer.style.alignItems = 'center';
 
 const button = document.createElement( 'div' );
 button.className = 'btnv6_blue_hoverfade btn_medium';
@@ -23,12 +22,10 @@ buttonContainer.appendChild( button );
 const textElements = document.createElement( 'div' );
 
 const exploreStatus = document.createElement( 'div' );
-exploreStatus.style.lineHeight = '32px';
 exploreStatus.appendChild( document.createTextNode( _t( 'explore_auto_discover_description' ) ) );
 textElements.appendChild( exploreStatus );
 
 const itemStatus = document.createElement( 'div' );
-itemStatus.style.lineHeight = '32px';
 textElements.appendChild( itemStatus );
 
 buttonContainer.appendChild( textElements );
@@ -37,7 +34,6 @@ const image = document.createElement( 'img' );
 image.src = GetLocalResource( 'icons/white.svg' );
 image.width = 32;
 image.height = 32;
-image.style.marginLeft = 'auto';
 buttonContainer.appendChild( image );
 
 const container = document.querySelector( '.discovery_queue_customize_ctn' );
@@ -153,129 +149,131 @@ function GenerateQueue()
 function ClaimSaleItem()
 {
 	const applicationConfigElement = document.getElementById( 'application_config' );
-	if( applicationConfigElement )
+
+	if( !applicationConfigElement )
 	{
-		const storeUserConfigJSON = applicationConfigElement.dataset.store_user_config;
-		const webapiToken = storeUserConfigJSON && JSON.parse( storeUserConfigJSON ).webapi_token;
-
-		if( webapiToken )
-		{
-			itemStatus.textContent = _t( 'explore_saleitem_trying_to_claim' );
-
-			const params = new URLSearchParams();
-			params.set( 'access_token', webapiToken );
-
-			const configJSON = applicationConfigElement.dataset.config;
-			const language = configJSON && JSON.parse( configJSON ).LANGUAGE;
-			if( language )
-			{
-				params.set( 'language', language );
-			}
-
-			const claimItem = ( fails = 0, maxRetries = 5 ) =>
-			{
-				fetch(
-					`https://api.steampowered.com/ISaleItemRewardsService/ClaimItem/v1?${params.toString()}`,
-					{
-						method: 'POST',
-					},
-				)
-					.then( ( response ) =>
-					{
-						if( response.ok )
-						{
-							return response.json();
-						}
-						else
-						{
-							throw new Error( `HTTP ${response.status}` );
-						}
-					} )
-					.then( ( data ) =>
-					{
-						const response = data.response;
-						if( response && response.communityitemid )
-						{
-							const itemTitle = response.reward_item?.community_item_data?.item_title;
-							itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
-						}
-						else
-						{
-							itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
-						}
-					} )
-					.catch( ( error ) =>
-					{
-						WriteLog( 'Failed to get a sale item', error );
-						fails++;
-
-						if( fails < maxRetries )
-						{
-							setTimeout( () =>
-							{
-								claimItem( fails );
-							}, RandomInt( 5000, 10000 ) );
-						}
-						else
-						{
-							itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
-						}
-					} );
-			};
-
-			const canClaimItem = ( fails = 0, maxRetries = 5 ) =>
-			{
-				fetch( `https://api.steampowered.com/ISaleItemRewardsService/CanClaimItem/v1?${params.toString()}` )
-					.then( ( response ) =>
-					{
-						if( response.ok )
-						{
-							return response.json();
-						}
-						else
-						{
-							throw new Error( `HTTP ${response.status}` );
-						}
-					} )
-					.then( ( data ) =>
-					{
-						const response = data.response;
-						if( response && response.can_claim === true )
-						{
-							claimItem();
-						}
-						else
-						{
-							itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
-							if( response.next_claim_time )
-							{
-								const nextClaimTime = new Date( response.next_claim_time * 1000 );
-								itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
-							}
-						}
-					} )
-					.catch( ( error ) =>
-					{
-						WriteLog( 'Failed to find out if a sale item can be claimed', error );
-						fails++;
-
-						if( fails < maxRetries )
-						{
-							setTimeout( () =>
-							{
-								canClaimItem( fails );
-							}, RandomInt( 5000, 10000 ) );
-						}
-						else
-						{
-							itemStatus.textContent = _t( 'explore_saleitem_claim_failed', [ maxRetries, error.message ] );
-						}
-					} );
-			};
-
-			canClaimItem();
-		}
+		return;
 	}
+
+	const storeUserConfigJSON = applicationConfigElement.dataset.store_user_config;
+	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+	const webapiToken = storeUserConfigJSON && JSON.parse( storeUserConfigJSON ).webapi_token;
+
+	if( !webapiToken || !applicationConfig )
+	{
+		return;
+	}
+
+	itemStatus.textContent = _t( 'explore_saleitem_trying_to_claim' );
+
+	const params = new URLSearchParams();
+	params.set( 'access_token', webapiToken );
+	params.set( 'language', applicationConfig.LANGUAGE );
+
+	const claimItem = ( fails = 0, maxRetries = 5 ) =>
+	{
+		fetch(
+			`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1?${params.toString()}`,
+			{
+				method: 'POST',
+			},
+		)
+			.then( ( response ) =>
+			{
+				if( !response.ok )
+				{
+					throw new Error( `HTTP ${response.status}` );
+				}
+
+				return response.json();
+			} )
+			.then( ( data ) =>
+			{
+				const response = data.response;
+
+				if( response && response.communityitemid )
+				{
+					const itemTitle = response.reward_item?.community_item_data?.item_title;
+					itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
+
+					return;
+				}
+
+				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+			} )
+			.catch( ( error ) =>
+			{
+				WriteLog( 'Failed to get a sale item', error );
+				fails++;
+
+				if( fails < maxRetries )
+				{
+					setTimeout( () =>
+					{
+						claimItem( fails );
+					}, RandomInt( 5000, 10000 ) );
+					return;
+				}
+
+				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+			} );
+	};
+
+	const canClaimItem = ( fails = 0, maxRetries = 5 ) =>
+	{
+		fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1?${params.toString()}` )
+			.then( ( response ) =>
+			{
+				if( !response.ok )
+				{
+					throw new Error( `HTTP ${response.status}` );
+				}
+
+				return response.json();
+			} )
+			.then( ( data ) =>
+			{
+				const response = data.response;
+
+				if( response && response.can_claim )
+				{
+					claimItem();
+					return;
+				}
+
+				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
+
+				if( response.next_claim_time )
+				{
+					const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
+						dateStyle: 'medium',
+						timeStyle: 'medium',
+					} );
+					const nextClaimTime = dateFormatter.format( response.next_claim_time * 1000 );
+
+					itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
+				}
+			} )
+			.catch( ( error ) =>
+			{
+				WriteLog( 'Failed to find out if a sale item can be claimed', error );
+				fails++;
+
+				if( fails < maxRetries )
+				{
+					setTimeout( () =>
+					{
+						canClaimItem( fails );
+					}, RandomInt( 5000, 10000 ) );
+
+					return;
+				}
+
+				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
+			} );
+	};
+
+	canClaimItem();
 }
 
 function RandomInt( min, max )

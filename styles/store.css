@@ -221,6 +221,20 @@ a.steamdb_rating:hover {
 	margin: 0;
 }
 
+#steamdb_cheat_queue {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+#steamdb_cheat_queue .btn_medium {
+	margin: 0;
+}
+
+#steamdb_cheat_queue > img {
+	margin-left: auto;
+}
+
 /**
  * Fix for very long game names not overflowing correctly
  */
