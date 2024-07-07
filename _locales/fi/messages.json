@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Jonotuotteen #$current$ selvitys epäonnistui, yritetään uudelleen viiden sekunnin kuluttua…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Jonotuotteen #$current$ selvitys epäonnistui liian monta kertaa. Voit yrittää uudelleen myöhemmin.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Jonon luominen epäonnistui, yritetään uudelleen viiden sekunnin kuluttua…"
-	},
 	"explore_finished": {
 		"message": "Jono on tutkittu."
 	},

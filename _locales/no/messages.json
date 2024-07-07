@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Kunne ikke fjerne kø-elementet #$current$, prøver igjen om fem sekunder…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Klarte ikke å fjerne kø-elementet #$current$ for mange ganger. Du kan prøve igjen senere.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Kunne ikke generere ny kø, prøver igjen om fem sekunder…"
-	},
 	"explore_finished": {
 		"message": "Kø har blitt utforsket."
 	},
@@ -215,7 +194,7 @@
 		"message": "Kunne ikke kreve en salgsgjenstand."
 	},
 	"explore_saleitem_success": {
-		"message": "Ny salgsgjenstand krevd: $item$.",
+		"message": "Ny salgsgjenstand krevd: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

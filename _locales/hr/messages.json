@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Nije uspjelo brisanje stavke reda #$current$, pokušavam ponovno za pet sekundi…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Nije uspjelo brisanje stavke reda #$current$ previše puta. Možete pokušati ponovno kasnije.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Nije uspjelo generiranje novog reda, pokušavam ponovno za pet sekundi…"
-	},
 	"explore_finished": {
 		"message": "Red je pretražen."
 	},

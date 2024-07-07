@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "რიგის გასუფთავების დროს ჩაიშალა #$current$-ზე, ვცდი თავიდან 5 წამში…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "რიგის გასუფთავების დროს ჩაიშალა #$current$-ზე ბევრჯერ. ცადე თავიდან მოგვიანებით.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "ვერ დაგენერირდა ახალი რიგი, ვცდი თავიდან 5 წამში…"
-	},
 	"explore_finished": {
 		"message": "რიგი დათვალიერებულია."
 	},

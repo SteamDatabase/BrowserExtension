@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Czyszczenie pozycji #$current$ w kolejce nie powiodło się, ponawianie próby za pięć sekund…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Czyszczenie pozycji #$current$ w kolejce nie powiodło się zbyt wiele razy. Spróbuj ponownie później.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Nie udało się wygenerować nowej kolejki, ponowna próba za pięć sekund…"
-	},
 	"explore_finished": {
 		"message": "Kolejka została przejrzana."
 	},
@@ -212,7 +191,7 @@
 		"message": "Nie udało się odebrać elementu sprzedaży."
 	},
 	"explore_saleitem_success": {
-		"message": "Otrzymano nowy element sprzedaży: $item$.",
+		"message": "Otrzymano nowy element sprzedaży: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

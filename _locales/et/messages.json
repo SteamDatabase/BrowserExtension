@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Ei saanud eemaldada järjekorra eset #$current$, proovime uuesti viie sekundi pärast…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Järjekorra eseme #$current$ hävis liiga mitu korda. Proovige hiljem uuesti.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Ei saanud teha uut järjekorda, proovime uuesti viie sekundi pärast…"
-	},
 	"explore_finished": {
 		"message": "Järjekord on avastatud."
 	},

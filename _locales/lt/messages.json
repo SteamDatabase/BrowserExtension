@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Nepavyko išvalyti eilės įrašo #$current$, bandysime dar kartą po penkių sekundžių…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Nepavyko išvalyti eilės įrašo #$current$ per daug kartų. Jūs galite pabandyti dar kartą vėliau.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Nepavyko sugeneruoti naujos eilės, bandysime dar kartą po penkių sekundžių…"
-	},
 	"explore_finished": {
 		"message": "Eilė buvo peržiūrėta."
 	},

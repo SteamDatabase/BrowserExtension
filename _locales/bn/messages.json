@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "কিউতে $current$-নং পদটি সাফ করতে ব্যর্থ হয়েছে, পাঁচ সেকেন্ডের মধ্যে আবার চেষ্টা করা হবে…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "কিউতে $current$-নং পদটি সাফ করতে অনেকবার​ ব্যর্থ হয়েছে। পরে আবার চেষ্টা করুন।",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "নতুন কিউ তৈরি করতে ব্যর্থ হয়েছে, পাঁচ সেকেন্ডের মধ্যে আবার চেষ্টা করা হবে…"
-	},
 	"explore_finished": {
 		"message": "কিউ অন্বেষিত হয়ে গেছে।"
 	},

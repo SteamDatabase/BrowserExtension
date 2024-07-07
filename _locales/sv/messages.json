@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Misslyckades med köartikel #$current$, försöker igen om fem sekunder…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Köobjekt #$current$ misslyckades för många gånger. Du kan försöka igen senare.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Misslyckades med att generera ny kö, försöker igen om fem sekunder…"
-	},
 	"explore_finished": {
 		"message": "Kön har utforskats."
 	},

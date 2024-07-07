@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Kuyruktaki $current$. içerik atlanamadı, beş saniye içinde tekrar denenecek…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Kuyruktaki $current$. içerik pek çok kez atlanılmaya çalışıldı ancak geçilemedi. Daha sonra tekrar deneyin.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Yeni kuyruk oluşturulamadı, beş saniye içinde tekrar denenecek…"
-	},
 	"explore_finished": {
 		"message": "Kuyruk keşfedildi."
 	},
@@ -292,10 +271,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Listelenen en düşük satış fiyatı ile öğeyi satışa koyar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
+		"message": "Listelenen en düşük satış fiyatı ile ögeyi satışa koyar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Listelenen en yüksek sipariş fiyatına öğeyi satar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
+		"message": "Listelenen en yüksek sipariş fiyatına ögeyi satar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
 	},
 	"options": {
 		"message": "Ayarlar"

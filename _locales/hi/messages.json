@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "कतार आइटम साफ़ करने में असफल #$current$, पाँच सेकंड में पुनः प्रयास करे...",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "कतार आइटम साफ़ करने में असफल #$current$ कई बार। आप बाद में पुनः प्रयास कर सकते हैं |",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "नई कतार उत्पन्न करने में असफल, पाँच सेकंड में पुनः प्रयास करे..."
-	},
 	"explore_finished": {
 		"message": "कतार की खोज हो चुकी है।"
 	},

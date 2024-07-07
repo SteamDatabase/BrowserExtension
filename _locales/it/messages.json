@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Impossibile cancellare l'elemento in coda #$current$, riprova tra cinque secondi…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Impossibile cancellare troppe volte l'elemento della coda #$current$. Puoi riprovare più tardi.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Impossibile generare la nuova coda, riprovo tra cinque secondi…"
-	},
 	"explore_finished": {
 		"message": "La coda è stata esplorata."
 	},

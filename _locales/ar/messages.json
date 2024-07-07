@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "فشل مسح العنصر #$current$ من قائمة الانتظار، حاول مرة أخرى بعد خمس ثوانٍ…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "فشل مسح العنصر #$current$ من قائمة الانتظار بعد محاولات كثيرة. يمكنك إعادة المحاولة لاحقاً.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "فشل في إنشاء قائمة انتظار جديدة، حاول مرة أخرى بعد خمس ثوانٍ…"
-	},
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
 	},

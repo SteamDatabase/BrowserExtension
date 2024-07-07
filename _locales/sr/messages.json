@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Грешка при чишћењу ствари из реда #$current$, покушавам поново за пет секунди…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Грешка при чишћењу ствари из реда #$current$ превише пута. Можеш покушати поново касније.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Грешка при генерисању новог реда, покушавам поново за пет секунди…"
-	},
 	"explore_finished": {
 		"message": "Ред је истражен."
 	},

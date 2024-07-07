@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Không thể bỏ món #$current$ khỏi hàng chờ, thử lại sau 5 giây nữa…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Không thể bỏ món #$current$ khỏi hàng chờ quá nhiều lần. Vui lòng thử lại sau.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Không tạo được hàng chờ mới, hãy thử lại sau 5 giây…"
-	},
 	"explore_finished": {
 		"message": "Đã xem hết hàng chờ."
 	},
@@ -215,7 +194,7 @@
 		"message": "Không thể nhận vật phẩm sự kiện."
 	},
 	"explore_saleitem_success": {
-		"message": "Đã nhận vật phẩm sự kiện mới: $item$.",
+		"message": "Đã nhận vật phẩm sự kiện mới: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

@@ -171,38 +171,20 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Falha ao remover o $current$º item da lista. Tentando novamente em 5 segundos…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Houve muitas tentativas fracassadas ao tentar remover o $current$º item da lista. Tente novamente mais tarde.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Falha ao gerar a lista de descobrimento. Tentando novamente em 5 segundos…"
+		"message": "A lista não pôde ser explorada após várias tentativas. Tente novamente mais tarde."
 	},
 	"explore_finished": {
 		"message": "A lista de descobrimento foi explorada!"
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Tentando resgatar um item da promoção, se houver..."
+		"message": "Tentando resgatar um item da promoção…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Nenhum item da promoção para resgate no momento."
+		"message": "Nenhum item disponível no momento."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Próximo item disponível: $datetime$",
+		"message": "O próximo item estará disponível em: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -215,7 +197,7 @@
 		"message": "Falha ao resgatar o item da promoção."
 	},
 	"explore_saleitem_success": {
-		"message": "Novo item da promoção resgatado: $item$.",
+		"message": "Novo item da promoção resgatado: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

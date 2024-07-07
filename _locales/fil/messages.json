@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Hindi matagumpay ang pag-clear ng queue item na #$current$, susubukan muli sa limang segundo…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Hindi matagumpay ang pag-clear ng queue item na #$current$ nang masyadong maraming beses. Maaari mong subukan muli sa ibang pagkakataon.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Hindi matagumpay ang pagbuo ng bagong queue, susubukan muli sa limang segundo…"
-	},
 	"explore_finished": {
 		"message": "Na-explore na ang queue."
 	},

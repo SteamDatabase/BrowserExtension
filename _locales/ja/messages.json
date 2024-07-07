@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "キューのアイテム #$current$ のクリアに失敗しました。5 秒後にやり直します...",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "キューのアイテム #$current$ のクリアに複数回失敗しました。時間を空けてやり直してください。",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "キューの生成に失敗しました。5 秒後にやり直します..."
-	},
 	"explore_finished": {
 		"message": "キューが探索されました。"
 	},

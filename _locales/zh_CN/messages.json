@@ -171,26 +171,8 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "无法清除队列项 #$current$，将在五秒后重试...",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
 	"explore_failed_to_clear_too_many": {
-		"message": "多次清除队列项 #$current$ 失败。请您稍后再试。",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "无法生成新的队列，将在五秒后重试…"
+		"message": "队列探索失败次数过多，请稍后再试"
 	},
 	"explore_finished": {
 		"message": "队列探索完成。"

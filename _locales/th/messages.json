@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "การล้างรายการคิว #$current$ ล้มเหลว, กำลังลองอีกครั้งในห้าวินาที...",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "การล้างรายการคิว #$current$ ล้มเหลวบ่อยเกินไป, คุณสามารถลองใหม่อีกครั้งในภายหลัง",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "การสร้างคิวใหม่ได้ล้มเหลว, กำลังลองอีกครั้งในห้าวินาที..."
-	},
 	"explore_finished": {
 		"message": "สำรวจคิวแล้ว"
 	},

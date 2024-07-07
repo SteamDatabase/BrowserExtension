@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Problemas ao limpar o item #$current$ da fila. Nova tentativa em cinco segundos…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Problemas ao limpar o item #$current$ da fila. Tenta novamente mais tarde.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Falha ao gerar uma nova fila, a tentar novamente em cinco segundos…"
-	},
 	"explore_finished": {
 		"message": "A fila foi explorada."
 	},
@@ -215,7 +194,7 @@
 		"message": "Falha ao reclamar item da promoção."
 	},
 	"explore_saleitem_success": {
-		"message": "Novo item da promoção reclamado: $item$.",
+		"message": "Novo item da promoção reclamado: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

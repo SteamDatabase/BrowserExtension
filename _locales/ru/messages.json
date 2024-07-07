@@ -171,38 +171,20 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Не удалось просмотреть элемент списка №$current$, повтор попытки через пять секунд…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Не удалось просмотреть элемент списка №$current$ слишком много раз. Вы можете повторить попытку позже.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Не удалось создать новый список, повторная попытка через пять секунд…"
+		"message": "Не удалось очистить очередь слишком много раз. Повторите попытку позже."
 	},
 	"explore_finished": {
 		"message": "Список просмотрен."
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Пытаемся получить товар, если таковой есть…"
+		"message": "Пытаемся получить предмет, если таковой есть…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "В данный момент товары отсутствуют."
+		"message": "В данный момент предмет отсутствует."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Доступен следующий товар: $datetime$",
+		"message": "Следующий предмет будет доступен: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -212,10 +194,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Не удалось получить товар."
+		"message": "Не удалось получить предмет."
 	},
 	"explore_saleitem_success": {
-		"message": "Получен новый товар: $item$.",
+		"message": "Получен новый предмет: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

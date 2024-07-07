@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "No s'ha pogut esborrar l'ítem #$current$ de la cua, tornant a provar en cinc segons…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Ha fallat la neteja de l'ítem #$current$ de la cua massa cops. Pots provar un altre cop més tard.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "No s'ha pogut generar una nova cua, provant un altre cop en cinc segons…"
-	},
 	"explore_finished": {
 		"message": "La cua ha sigut explorada."
 	},

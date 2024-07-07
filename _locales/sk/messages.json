@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Nepodarilo sa vymazať položku #$current$, skúste znova o päť sekúnd…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Nepodarilo sa vymazať položku #$current$ príliš veľa krát. Neskôr môžete skúsiť znova.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Pokus o generovanie novej rady zlyhal, opäť sa o to pokúsime o niekoľko sekúnd…"
-	},
 	"explore_finished": {
 		"message": "Rada bola preskúmaná."
 	},

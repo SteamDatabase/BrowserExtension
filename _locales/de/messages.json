@@ -171,26 +171,8 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "In der Entdeckungsliste konnte der $current$. Eintrag nicht abgeschlossen werden. Neuer Versuch in fünf Sekunden …",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
 	"explore_failed_to_clear_too_many": {
-		"message": "In der Entdeckungsliste konnte der $current$. Eintrag zu oft nicht abgeschlossen werden. Du kannst es später noch einmal versuchen.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Neue Entdeckungsliste konnte nicht generiert werden. Neuer Versuch in fünf Sekunden …"
+		"message": "Die Entdeckungsliste konnte zu oft nicht erkundet werden. Du kannst es später noch einmal versuchen."
 	},
 	"explore_finished": {
 		"message": "Die Entdeckungsliste wurde erkundet."
@@ -215,7 +197,7 @@
 		"message": "Der Aktionsgegenstand konnte nicht beansprucht werden."
 	},
 	"explore_saleitem_success": {
-		"message": "Neuer Aktionsgegenstand beansprucht: $item$.",
+		"message": "Neuer Aktionsgegenstand beansprucht: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

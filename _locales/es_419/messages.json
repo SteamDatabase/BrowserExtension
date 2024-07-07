@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Se produjo un error al borrar el elemento de la cola n.º $current$, se reintentará en cinco segundos…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Se produjo un error al borrar el elemento de la cola n.º $current$ demasiadas veces. Puede volver a intentarlo más tarde.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Se produjo un error al generar una nueva cola, se reintentará en cinco segundos…"
-	},
 	"explore_finished": {
 		"message": "La cola ha sido explorada."
 	},
@@ -215,7 +194,7 @@
 		"message": "Error al reclamar un artículo de rebaja."
 	},
 	"explore_saleitem_success": {
-		"message": "Nuevo artículo de rebaja reclamado: $item$.",
+		"message": "Nuevo artículo de rebaja reclamado: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

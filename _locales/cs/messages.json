@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Položku fronty #$current$se nepodařilo vymazat, zkuste to znovu za pět sekund…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Položku fronty #$current$ se nepodařilo vyčistit. Můžete to zkusit znovu později.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Nepodařilo se vygenerovat novou frontu, zkuste to znovu za pět sekund…"
-	},
 	"explore_finished": {
 		"message": "Fronta byla prozkoumána."
 	},

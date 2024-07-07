@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Neizdevās attīrīt rindas vienumu #$current$, atkārtots mēģinājums pēc piecām sekundēm…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Pārāk bieži neizdevās attīrīt rindas vienumu #$current$. Jūs varat vēlreiz mēģināt vēlāk.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Neizdevās radīt jaunu rindu, atkārtots mēģinājums pēc piecām sekundēm…"
-	},
 	"explore_finished": {
 		"message": "Rinda ir izskatīta."
 	},

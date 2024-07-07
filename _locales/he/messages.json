@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "נכשל בניקוי המעקב במשחק #$current$, מנסה שנית בעוד חמש שניות…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "נכשל בניקוי הגילוי במשחק #$current$ יותר מדי פעמים. אנא נסה שנית מאוחר יותר.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "נכשל ביצירת רשימת גילוי חדשה, מנסה שנית בעוד חמש שניות…"
-	},
 	"explore_finished": {
 		"message": "הגילוי נצפה."
 	},

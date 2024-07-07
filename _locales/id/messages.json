@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Gagal untuk menghapus item antrian #$current$, mencoba lagi dalam Lima detik…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Gagal menghapus item antrian #$current$ terlalu banyak. Coba lagi nanti.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Gagal untuk menghasilkan antrian baru, coba lagi dalam Lima detik…"
-	},
 	"explore_finished": {
 		"message": "Antrian telah dijelajahi."
 	},

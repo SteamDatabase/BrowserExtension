@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Nu s-a reușit ștergerea cozii elementului #$current$, încercăm din nou în cinci secunde…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Eroare la ștergerea cozii de element #$current$ de prea multe ori. Puteți încerca din nou mai târziu.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Generarea unei noi cozi a eșuat, se încearcă din nou în cinci secunde…"
-	},
 	"explore_finished": {
 		"message": "Lista a fost explorată."
 	},
@@ -215,7 +194,7 @@
 		"message": "Nu s-a putut solicita un element de vânzare."
 	},
 	"explore_saleitem_success": {
-		"message": "Articol nou de vânzare solicitat: $item$.",
+		"message": "Articol nou de vânzare solicitat: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

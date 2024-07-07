@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Elementa čakalne vrste #$current$ ni bilo mogoče počistiti, znova poskusite čez pet sekund…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Prevečkrat ni uspelo počistiti elementa čakalne vrste #$current$. Poskusite lahko znova pozneje.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Nove čakalne vrste ni bilo mogoče ustvariti, vnovičen poskus čez pet sekund…"
-	},
 	"explore_finished": {
 		"message": "Čakalna vrsta je bila raziskana."
 	},

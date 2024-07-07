@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "대기열 아이템 #$current$을 지우는 데 실패하였습니다. 5초 뒤 다시 시도하세요...",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "너무 많이 대기열 아이템 #$current$을 지우는 데 실패하였습니다. 나중에 다시 시도하세요.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "새로운 대기열을 생성하는 데 실패하였습니다. 5초 뒤 다시 시도하세요..."
-	},
 	"explore_finished": {
 		"message": "대기열이 탐색이 완료되었습니다."
 	},

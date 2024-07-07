@@ -171,32 +171,17 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Не вдалося очистити елемент черги №$current$, спробуйте ще раз за п’ять секунд…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Забагато спроб прибрати елемент №$current$ з черги. Спробуйте пізніше.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Не вдалося згенерувати нову чергу, спробуйте ще раз за п’ять секунд…"
+		"message": "Забагато спроб очищення черги. Спробуйте пізніше."
 	},
 	"explore_finished": {
 		"message": "Чергу досліджено."
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "…"
+		"message": "Намагаємося отримати предмет розпродажу, якщо він існує…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Наразі, немає предмета розпродажу, який можна було б отримати."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Наступний предмет стане доступний: $datetime$",
@@ -212,7 +197,7 @@
 		"message": "Не вдалося отримати предмет розпродажу."
 	},
 	"explore_saleitem_success": {
-		"message": "Отримано новий предмет розпродажу: $item$.",
+		"message": "Отримано новий предмет розпродажу: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

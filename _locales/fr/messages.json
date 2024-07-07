@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Impossible de supprimer l'élément #$current$ de la liste, nouvel essai dans 5 secondes…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Échec de la suppression de l'article #$current$ trop de fois. Réessayez plus tard.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Échec de la génération d'une nouvelle liste de découverte, nouvelle tentative dans cinq secondes…"
-	},
 	"explore_finished": {
 		"message": "Liste explorée."
 	},

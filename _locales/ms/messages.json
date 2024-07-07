@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Gagal untuk mengosongkan senarai item #$current$, mencuba semula dalam lima saat…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Gagal untuk mengosongkan senarai item #$current$ berulang kali, Anda boleh mencuba semula nanti.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Gagal untuk menjana senarai baharu, mencuba semula dalam lima saat…"
-	},
 	"explore_finished": {
 		"message": "Senarai telah diteroka."
 	},

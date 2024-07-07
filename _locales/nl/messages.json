@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Niet gelukt om wachtrij-item #$current$ te wissen, probeer het over vijf seconden opnieuw…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Wachtrij artikel #$current$ te vaak gefaald met wissen. Je kunt het later opnieuw proberen.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Het genereren van de nieuwe wachtrij is mislukt, probeer het over vijf seconden opnieuw…"
-	},
 	"explore_finished": {
 		"message": "Wachtrij is verkend."
 	},

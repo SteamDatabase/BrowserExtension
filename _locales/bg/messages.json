@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Неуспешно изчистване на елемент #$current$ от опашката, нов опит след пет секунди…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Твърде много неуспешни опити за изчистване на елемент #$current$ от опашката. Може да опитате отново по-късно.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Неуспешно генериране на нова опашка, нов опит след пет секунди…"
-	},
 	"explore_finished": {
 		"message": "Опашката е разгледана."
 	},
@@ -215,7 +194,7 @@
 		"message": "Неуспещно получаване на артикул от разпродажбата."
 	},
 	"explore_saleitem_success": {
-		"message": "Получен е нов артикул от разпродажбата: $item$.",
+		"message": "Получен е нов артикул от разпродажбата: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Αποτυχία καθαρισμού στοιχείου σειράς #$current$, προσπάθεια ξανά σε πέντε δευτερόλεπτα…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Αποτυχία καθαρισμού στοιχείου σειράς #$current$ για πολλές φορές. Προσπάθησε ξανά αργότερα.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Αποτυχία δημιουργίας νέας σειράς, προσπάθεια ξανά σε πέντε δευτερόλεπτα…"
-	},
 	"explore_finished": {
 		"message": "Η σειρά έχει εξερευνηθεί."
 	},

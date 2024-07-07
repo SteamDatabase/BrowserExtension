@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "Kunne ikke rydde kø element #$current$, forsøger igen om fem sekunder…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "Kunne ikke rydde kø element #$current$ for mange gange. Du kan prøve igen senere.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Kunne ikke generere ny kø, forsøger igen om fem sekunder…"
-	},
 	"explore_finished": {
 		"message": "Køen er blevet udforsket."
 	},

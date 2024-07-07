@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "خطا در روند پاکسازی آیتم شماره $current$ از لیست، تللاش دوباره در 5 ثانیه دیگر…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "خطای بیش از حد در روند پاکسازی ایتم شماره #$current$ از لیست، می توانید بعدا دوباره امتحان کنید.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "خطا در ایجاد لیست جدید، تلاش دوباره در 5 ثانیه دیگر…"
-	},
 	"explore_finished": {
 		"message": "صف بررسی شده است."
 	},
@@ -215,7 +194,7 @@
 		"message": "شکست خورد تا یک کالای فروشی را به دست بیاورد."
 	},
 	"explore_saleitem_success": {
-		"message": "کالای فروشی جدید دستیابی شد: $item$.",
+		"message": "کالای فروشی جدید دستیابی شد: $item$",
 		"placeholders": {
 			"item": {
 				"content": "$1",

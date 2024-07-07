@@ -171,27 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear": {
-		"message": "$current$. várólistaelem törlése sikertelen, újrapróbálás öt másodperc múlva…",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_clear_too_many": {
-		"message": "#$current$ várólista elem törlése sikertelen többszöri próbálkozás után is. Később újra próbálhatja.",
-		"placeholders": {
-			"current": {
-				"content": "$1",
-				"example": "5"
-			}
-		}
-	},
-	"explore_failed_to_generate": {
-		"message": "Új várólista generálása sikertelen, újrapróbálás öt másodperc múlva…"
-	},
 	"explore_finished": {
 		"message": "A várólistát már fel lett fedezve."
 	},
