@@ -81,6 +81,9 @@ function MoveMultiBuyButton()
 			{
 				topLinks.append( element );
 				topLinks.append( document.createTextNode( ' ' ) );
+
+				// Some languages will overflow the buttons so we have to correct the spacing
+				topLinks.classList.add( 'steamdb_gamecards_inventorylink' );
 			}
 		}
 	} );

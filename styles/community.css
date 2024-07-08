@@ -59,3 +59,9 @@ a.apphub_NumInApp:hover {
 .profile_small_header_additional.steamdb {
 	margin-top: 40px;
 }
+
+.steamdb_gamecards_inventorylink {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
