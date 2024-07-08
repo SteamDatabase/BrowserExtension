@@ -225,7 +225,7 @@ a.steamdb_rating:hover {
 .steamdb_cheat_queue {
 	display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: 8px 15px;
 }
 
 .steamdb_cheat_queue.discovery_queue_customize_ctn {
@@ -259,5 +259,10 @@ a.steamdb_rating:hover {
 @media (max-width: 500px) {
 	html.responsive .steamdb_stats .block_content_inner {
 		margin-top: 0;
+	}
+
+	.steamdb_saleitem_claim,
+	.steamdb_cheat_queue {
+		flex-wrap: wrap;
 	}
 }
