@@ -171,6 +171,9 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "נכשל בניקוי רשימת הגילוי יותר מדי פעמים. ניתן לנסות שוב מאוחר יותר."
+	},
 	"explore_finished": {
 		"message": "הגילוי נצפה."
 	},
@@ -563,6 +566,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "הוסף כפתור לעבור על תור אוטומטית בזמן ימי מבצעים/אירועים"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "הפנה חזרה לדף קלפי המשחק לאחר קניית הקלפים שנותרו"
 	},
 	"options_builtin_achievements_global": {
 		"message": "שיפורים לעמוד ההישגים"

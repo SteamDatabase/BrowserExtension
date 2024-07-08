@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Trop d'échecs de vidage de la file d'attente. Vous pouvez réessayer plus tard."
+	},
 	"explore_finished": {
 		"message": "Liste explorée."
+	},
+	"explore_saleitem_claim": {
+		"message": "Récupérer la récompense"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Réclamation de la récompense quotidienne…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Aucune récompense quotidienne à réclamer pour le moment."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Prochain article disponible : $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Impossible de réclamer la récompense quotidienne."
+	},
+	"explore_saleitem_success": {
+		"message": "Nouvelle récompense réclamée : $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Applications à collecter : $amount$",
@@ -495,7 +529,7 @@
 		"message": "Supprimez les alertes d'échange \"cet échange semble suspect\" et \"êtes-vous sûr qu'il s'agit d'un cadeau ?\""
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Afficher de meilleurs messages d'erreur, au lieu des numéros d'erreur cryptiques de la Valve"
+		"message": "Remplacer les codes d'erreurs cryptiques de Valve avec de meilleurs messages d'erreurs"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Passer la page de vérification de l'âge"
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Ajouter un bouton pour explorer automatiquement la liste de découverte pendant les soldes"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Rediriger vers la page des cartes de jeu après l'achat des cartes restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Améliorer la page des succès mondiaux"

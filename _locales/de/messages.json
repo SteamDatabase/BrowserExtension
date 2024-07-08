@@ -177,11 +177,14 @@
 	"explore_finished": {
 		"message": "Die Entdeckungsliste wurde erkundet."
 	},
+	"explore_saleitem_claim": {
+		"message": "Belohnung einlösen"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Aktionsgegenstand wird beansprucht …"
+		"message": "Tägliche Belohnung wird eingelöst …"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Derzeit kann kein Aktionsgegenstand beansprucht werden."
+		"message": "Derzeit gibt es keine tägliche Belohnung einzulösen."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Verfügbarkeit des nächsten Gegenstands: $datetime$",
@@ -194,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Der Aktionsgegenstand konnte nicht beansprucht werden."
+		"message": "Die tägliche Belohnung konnte nicht eingelöst werden."
 	},
 	"explore_saleitem_success": {
-		"message": "Neuer Aktionsgegenstand beansprucht: $item$",
+		"message": "Neue Belohnung eingelöst: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -594,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Button hinzufügen, um die Entdeckungsliste während eines Steam-Sales zu überspringen"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Nach dem Kauf verbleibender Karten zur Sammelkartenseite zurückkehren"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Seite für globale Errungenschaften verbessern"

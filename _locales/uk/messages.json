@@ -177,11 +177,14 @@
 	"explore_finished": {
 		"message": "Чергу досліджено."
 	},
+	"explore_saleitem_claim": {
+		"message": "Отримати нагороду"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Намагаємося отримати предмет розпродажу, якщо він існує…"
+		"message": "Отримуємо щоденну нагороду…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Наразі, немає предмета розпродажу, який можна було б отримати."
+		"message": "Наразі, щоденна нагорода недоступна."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Наступний предмет стане доступний: $datetime$",
@@ -194,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Не вдалося отримати предмет розпродажу."
+		"message": "Не вдалося отримати щоденну нагороду."
 	},
 	"explore_saleitem_success": {
-		"message": "Отримано новий предмет розпродажу: $item$",
+		"message": "Отримано нову нагороду: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -594,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Додати кнопку для автоматичного перегляду черги знахідок під час розпродажів"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Перенаправити до сторінки з картками після їх купівлі"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Поліпшити сторінку глобальних досягнень"

@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Kuyruğu tamamlama çok kez başarısız oldu. Sonra tekrar deneyebilirsiniz."
+	},
 	"explore_finished": {
 		"message": "Kuyruk keşfedildi."
+	},
+	"explore_saleitem_claim": {
+		"message": "Ödülü talep et"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Günlük ödül talep ediliyor…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Talep edilebilecek günlük ödül mevcut değil."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Sonraki öge mevcut: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Günlük ödülü talep etme başarısız oldu."
+	},
+	"explore_saleitem_success": {
+		"message": "Yeni ödül talep edinildi: $item$",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Kart düşürebilecek içerik: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Etkinlikli indirimler sırasında keşif kuyruğunu otomatik keşfetmeyi sağlayacak bir buton ekle"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Geriye kalan kartları aldıktan sonra oyun kartları sayfasına geri dön"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Global başarımlar sayfasını iyileştir"

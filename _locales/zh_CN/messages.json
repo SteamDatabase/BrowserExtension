@@ -177,11 +177,14 @@
 	"explore_finished": {
 		"message": "队列探索完成。"
 	},
+	"explore_saleitem_claim": {
+		"message": "领取奖励"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "如有特卖物品则尝试领取…"
+		"message": "正在领取每日奖励…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "当前没有可领取的特卖物品"
+		"message": "当前没有可领取的每日奖励。"
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "下一个特卖物品可在 $datetime$ 后领取",
@@ -194,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "无法领取特卖物品"
+		"message": "无法领取每日奖励。"
 	},
 	"explore_saleitem_success": {
-		"message": "已领取新的特卖物品：$item$",
+		"message": "已领取新的奖励：$item$。",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -594,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "在特卖期间启用“自动探索队列”按钮"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "购买剩余卡片后，重定向到游戏卡页面"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改善全球成就统计页面"

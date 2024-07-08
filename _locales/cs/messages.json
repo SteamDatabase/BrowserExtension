@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Frontu se příliš mnohokrát nepodařilo projít. Můžete to zkusit znovu později."
+	},
 	"explore_finished": {
 		"message": "Fronta byla prozkoumána."
+	},
+	"explore_saleitem_claim": {
+		"message": "Vyzvednout odměnu"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Vyzvedávání denní odměny…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "V tuto chvíli není žádná denní odměna k vyzvednutí."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Další předmět bude k dispozici $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nepodařilo se získat denní odměnu."
+	},
+	"explore_saleitem_success": {
+		"message": "Vyzvednuta nová odměna: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikace k nečinnosti: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Přidat tlačítko pro podvádění fronty při prodeji"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Po zakoupení zbývajících karet přesměrovat zpět na stránku s kartami"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Zlepšit stránku globálních achievementů"

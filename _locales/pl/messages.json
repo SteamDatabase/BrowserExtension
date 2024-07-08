@@ -171,11 +171,20 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nie udało się wyczyścić kolejki zbyt wiele razy. Spróbuj ponownie później."
+	},
 	"explore_finished": {
 		"message": "Kolejka została przejrzana."
 	},
+	"explore_saleitem_claim": {
+		"message": "Odbierz nagrodę"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Odbieranie dziennej nagrody…"
+	},
 	"explore_saleitem_cant_claim": {
-		"message": "Brak przedmiotu sprzedaży do uzyskania w tej chwili."
+		"message": "Brak dziennych nagród do odebrania w tym momencie."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Następny przedmiot dostępny: $datetime$",
@@ -188,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Nie udało się odebrać elementu sprzedaży."
+		"message": "Nie udało się odebrać dziennej nagrody."
 	},
 	"explore_saleitem_success": {
-		"message": "Otrzymano nowy element sprzedaży: $item$",
+		"message": "Otrzymano nową nagrodę: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -588,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Dodaj przycisk, aby automatycznie przejrzeć kolejkę odkryć podczas wyprzedaży"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Przekieruj z powrotem na stronę kart gry po zakupie brakujących kart"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Ulepsz stronę globalnych osiągnięć"

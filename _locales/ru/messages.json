@@ -177,14 +177,20 @@
 	"explore_finished": {
 		"message": "Список просмотрен."
 	},
+	"explore_saleitem_claim": {
+		"message": "Получить награду"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Получите бесплатную ежедневную награду если она есть."
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Пытаемся получить предмет, если таковой есть…"
+		"message": "Получение ежедневной награды…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "В данный момент предмет отсутствует."
+		"message": "В данный ежедневный момент предмет отсутствует."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Следующий предмет будет доступен: $datetime$",
+		"message": "Будет доступно через: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -194,10 +200,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Не удалось получить предмет."
+		"message": "Не удалось получить ежедневную награду."
 	},
 	"explore_saleitem_success": {
-		"message": "Получен новый предмет: $item$",
+		"message": "Получена новая награда: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -594,6 +600,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Добавить кнопку для автоматического просмотра списка рекомендаций во время распродаж"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Перенаправлять обратно на страницу игровых карточек после покупки недостающих карт"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Улучшить страницу глобальных достижений"

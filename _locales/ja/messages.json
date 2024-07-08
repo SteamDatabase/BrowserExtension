@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "キューの消去に失敗しました。後でもう一度お試しください。"
+	},
 	"explore_finished": {
 		"message": "キューが探索されました。"
+	},
+	"explore_saleitem_claim": {
+		"message": "報酬を受け取る"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "デイリー報酬を受け取る"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "現在、受け取れるデイリー報酬はありません"
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "次の報酬の受け取り可能日時:$datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "デイリー報酬の受け取りに失敗しました。"
+	},
+	"explore_saleitem_success": {
+		"message": "報酬を受け取りました:$item$",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "アイドル状態にするアプリ数: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "セール中に自動的にキューを探索するボタンを追加する"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "残りのトレーディングカードを購入した後、トレーディングカードのページにリダイレクトします"
 	},
 	"options_builtin_achievements_global": {
 		"message": "グローバル実績ページの改善"

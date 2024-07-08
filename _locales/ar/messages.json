@@ -171,14 +171,20 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": ""
+	},
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
 	},
+	"explore_saleitem_claim": {
+		"message": "استلام الجائزة"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "جاري محاولة المطالبة بمنتج بيع إذا كان هناك واحد…"
+		"message": "تحصيل المكافأة اليومية…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "لا يوجد منتج بيع للمطالبة به في الوقت الحالي."
+		"message": "لا يوجد مكافأة يومية للحصول عليها في هذه اللحظة."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "العنصر التالي متاح: $datetime$",
@@ -187,6 +193,18 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "فشل في الحصول على المكافأة اليومية."
+	},
+	"explore_saleitem_success": {
+		"message": "تم استلام مكافأة جديدة: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
 			}
 		}
 	},
@@ -579,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "إضافة زر لعرض قائمة الانتظار تِلْقائيًا في أثناء الخصومات"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "إعادة التوجيه إلى صفحة بطاقات اللعبة بعد شراء البطاقات المتبقية"
 	},
 	"options_builtin_achievements_global": {
 		"message": "تحسين صفحة الإنجازات العالمية"

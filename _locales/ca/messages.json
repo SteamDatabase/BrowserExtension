@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Ha fallat la neteja de la cua massa cops. Pots provar un altre cop més tard."
+	},
 	"explore_finished": {
 		"message": "La cua ha sigut explorada."
+	},
+	"explore_saleitem_claim": {
+		"message": "Reclamar recompensa"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Reclamant la recompensa diària…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "No hi ha recompensa diària per reclamar en aquest moment."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Pròxim ítem disponible: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Ha fallat la reclamació de la recompensa diària."
+	},
+	"explore_saleitem_success": {
+		"message": "Nova recompensa reclamada: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplicacions en inactiu: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Afegeix un botó per fer automàticament la cua de descobriment durant les rebaixes"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Redirigeix ​​de nou a la pàgina de cartes de joc després de comprar les cartes restants"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Millora la pàgina d'assoliments globals"

@@ -171,14 +171,20 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "佇列清除失敗次數過多。您可以稍後再試。"
+	},
 	"explore_finished": {
 		"message": "佇列已探索完成。"
 	},
+	"explore_saleitem_claim": {
+		"message": "領取獎勵"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "如有特賣物品將嘗試領取…"
+		"message": "每日獎勵領取中…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "目前沒有可領取的特賣物品。"
+		"message": "目前沒有可領取的每日獎勵。"
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "下一個特賣物品可領取時間為：$datetime$",
@@ -191,7 +197,16 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "特賣物品領取失敗。"
+		"message": "每日獎勵領取失敗。"
+	},
+	"explore_saleitem_success": {
+		"message": "已領取新的每日獎勵：$item$。",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "可掉落應用數： $amount$",
@@ -582,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "在特賣時加入自動探索佇列的按鈕"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "購買缺少卡片後重定向回到遊戲卡片頁面"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改進全球成就頁面"

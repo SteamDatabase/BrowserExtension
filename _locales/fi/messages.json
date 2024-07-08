@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Jonon tyhjentäminen epäonnistui liian monta kertaa. Voit yrittää uudelleen myöhemmin."
+	},
 	"explore_finished": {
 		"message": "Jono on tutkittu."
+	},
+	"explore_saleitem_claim": {
+		"message": "Lunasta palkinto"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Lunastetaan päivittäistä palkkiota…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Tällä hetkellä ei ole päivittäistä palkkiota."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Seuraava tuote saatavilla: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Päivittäistä palkkiota ei voitu lunastaa."
+	},
+	"explore_saleitem_success": {
+		"message": "Uusi palkkio: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Sovelluksia jäljellä: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Lisää painike löytöjonon automatisoimiseen alennusten aikana"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Uudelleenohjaa takaisin pelikortti sivulle jäljellä olevien korttien ostamisen jälkeen"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Paranna maailmanlaajuiset saavutukset -sivua"

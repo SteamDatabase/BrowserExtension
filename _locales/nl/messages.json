@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Het voltooien van de queue is te vaak mislukt. Probeer het later opnieuw."
+	},
 	"explore_finished": {
 		"message": "Wachtrij is verkend."
+	},
+	"explore_saleitem_claim": {
+		"message": "Claim beloning"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Dagelijkse beloning aan het claimen…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Geen dagelijkse beloning om te claimen op dit moment."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Volgende beloning beschikbaar: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Het claimen van de dagelijkse beloning is mislukt."
+	},
+	"explore_saleitem_success": {
+		"message": "Nieuwe beloning geclaimd: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Apps om stil te zetten: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Voeg een knop toe om automatisch de wachtrij te ontdekken tijdens de verkoop"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Verwijs terug naar de game cards pagina na het kopen van de resterende cards"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Verbeter de globale achievements pagina"

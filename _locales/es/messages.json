@@ -171,14 +171,20 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Se produjo un error al borrar la cola demasiadas veces. Puede intentarlo de nuevo más tarde."
+	},
 	"explore_finished": {
 		"message": "La cola ha sido explorada."
 	},
+	"explore_saleitem_claim": {
+		"message": "Reclamar recompensa"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Intentando reclamar un artículo de rebaja en caso de que lo haya…"
+		"message": "Reclamando la recompensa diaria…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "No hay ningún artículo de rebaja que reclamar en este momento."
+		"message": "No hay recompensas diarias para reclamar en este momento."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Siguiente artículo disponible: $datetime$",
@@ -191,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Error al reclamar un artículo de rebaja."
+		"message": "Se produjo un error al reclamar la recompensa diaria."
 	},
 	"explore_saleitem_success": {
-		"message": "Nuevo artículo de rebaja reclamado: $item$",
+		"message": "Nueva recompensa reclamada: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -591,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Añadir un botón para hacer trampa en la cola de descubrimiento durante las ofertas"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Regresar a la página de tarjetas del juego después de comprar las cartas restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Mejorar la página de logros mundiales"

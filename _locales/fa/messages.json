@@ -174,12 +174,6 @@
 	"explore_finished": {
 		"message": "صف بررسی شده است."
 	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "تلاش به دستیابی به یک کالای فروشی اگر یکی وجود دارد…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "درحال حاضر کالای فروشی برای دستیابی وجود ندارد."
-	},
 	"explore_saleitem_next_item_time": {
 		"message": "کالای بعدی در دسترس: $datetime$",
 		"placeholders": {
@@ -187,18 +181,6 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "شکست خورد تا یک کالای فروشی را به دست بیاورد."
-	},
-	"explore_saleitem_success": {
-		"message": "کالای فروشی جدید دستیابی شد: $item$",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
 			}
 		}
 	},

@@ -174,12 +174,6 @@
 	"explore_finished": {
 		"message": "Kø har blitt utforsket."
 	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Prøver å kreve inn en salgsgjenstand hvis det er en…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Ingen salgsgjenstander å kreve for øyeblikket."
-	},
 	"explore_saleitem_next_item_time": {
 		"message": "Neste gjenstand tilgjengelig: $datetime$",
 		"placeholders": {
@@ -187,18 +181,6 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Kunne ikke kreve en salgsgjenstand."
-	},
-	"explore_saleitem_success": {
-		"message": "Ny salgsgjenstand krevd: $item$",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
 			}
 		}
 	},

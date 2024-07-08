@@ -171,17 +171,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Твърде много неуспешни опити за изчистване на опашката. Може да опитате отново по-късно."
+	},
 	"explore_finished": {
 		"message": "Опашката е разгледана."
 	},
+	"explore_saleitem_claim": {
+		"message": "Заявяване на награда"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Опит за получаване на артикул от разпродажбата, ако има такъв…"
+		"message": "Заявява се дневната награда…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "В момента няма артикул за получаване от разпродажбата."
+		"message": "В момента няма дневна награда за заявяване."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Следващ артикул наличен на $datetime$",
+		"message": "Наличност на следващ артикул: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -191,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Неуспещно получаване на артикул от разпродажбата."
+		"message": "Неуспешна заявка на дневната награда."
 	},
 	"explore_saleitem_success": {
-		"message": "Получен е нов артикул от разпродажбата: $item$",
+		"message": "Дневната награда е получена: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -591,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Добави бутон за прескачане на опашката за откриване по време на разпродажби"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Връщане към страницата за напредък на значка след закупуване на оставащите карти"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Подобряване на страницата с глобални постижения"

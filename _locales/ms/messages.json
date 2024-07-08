@@ -171,8 +171,42 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Gagal mengosongkan baris gilir terlalu banyak kali. Anda boleh cuba lagi nanti."
+	},
 	"explore_finished": {
 		"message": "Senarai telah diteroka."
+	},
+	"explore_saleitem_claim": {
+		"message": "Tuntut Ganjaran"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Sedang menuntut ganjaran harian…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Tiada ganjaran harian untuk dituntut pada masa ini."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Item seterusnya disediakan pada masa: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Gagal menuntut ganjaran harian."
+	},
+	"explore_saleitem_success": {
+		"message": "Ganjaran baharu dituntut: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikasi untuk dibiarkan: $amount$",
@@ -563,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Tambah butang untuk meneroka senarai secara automatik semasa jualan"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Ubah hala kembali ke halaman kad permainan selepas membeli baki kad"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Menambahbaik halaman pencapaian global"

@@ -171,17 +171,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Não foi possível explorar a lista devido a muitas tentativas. Tente novamente mais tarde."
+	},
 	"explore_finished": {
 		"message": "A fila foi explorada."
 	},
+	"explore_saleitem_claim": {
+		"message": "Resgatar recompensa"
+	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "A tentar reclamar um item da promoção caso exista um..."
+		"message": "Resgatando recompensa diária…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Não há itens da promoção para reclamar neste momento."
+		"message": "Nenhuma recompensa diária para resgatar no momento."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Próximo item disponível: $datetime$",
+		"message": "Próxima recompensa disponível em: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -191,10 +197,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Falha ao reclamar item da promoção."
+		"message": "Falha ao resgatar recompensa diária."
 	},
 	"explore_saleitem_success": {
-		"message": "Novo item da promoção reclamado: $item$",
+		"message": "Nova recompensa resgatada: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -591,6 +597,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Adicionar um botão para automaticamente descobrir a fila durante as promoções"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Redirecionar de volta para a página de cartas de jogos após comprar as cartas restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de proezas globais"
