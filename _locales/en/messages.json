@@ -185,6 +185,9 @@
 	"explore_saleitem_claim": {
 		"message": "Claim reward"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Claim the free daily reward if there is one."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Claiming the daily reward…"
 	},

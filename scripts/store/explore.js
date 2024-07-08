@@ -41,13 +41,13 @@ function CreateExploreContainer()
 	exploreButton = document.createElement( 'div' );
 	exploreButton.className = 'btnv6_blue_hoverfade btn_medium';
 	const span = document.createElement( 'span' );
-	span.append( document.createTextNode( _t( 'explore_auto_discover' ) ) );
+	span.textContent = _t( 'explore_auto_discover' );
 	exploreButton.append( span );
 	buttonContainer.append( exploreButton );
 
 	exploreStatus = document.createElement( 'div' );
 	exploreStatus.className = 'steamdb_cheat_queue_text';
-	exploreStatus.append( document.createTextNode( _t( 'explore_auto_discover_description' ) ) );
+	exploreStatus.textContent = _t( 'explore_auto_discover_description' );
 	buttonContainer.append( exploreStatus );
 
 	const image = document.createElement( 'img' );
@@ -82,13 +82,13 @@ function CreateSaleItemContainer()
 	itemButton = document.createElement( 'div' );
 	itemButton.className = 'btnv6_blue_hoverfade btn_medium btn_disabled';
 	const span = document.createElement( 'span' );
-	span.append( document.createTextNode( _t( 'explore_saleitem_claim' ) ) );
+	span.textContent = _t( 'explore_saleitem_claim' );
 	itemButton.append( span );
 	buttonContainer.append( itemButton );
 
 	itemStatus = document.createElement( 'div' );
 	itemStatus.className = 'steamdb_cheat_queue_text';
-	itemStatus.append( document.createTextNode( _t( 'explore_saleitem_cant_claim' ) ) );
+	itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
 	buttonContainer.append( itemStatus );
 
 	itemImage = document.createElement( 'img' );
@@ -254,6 +254,7 @@ function HandleSaleItemResponse( response )
 
 		setTimeout( () =>
 		{
+			itemStatus.textContent = _t( 'explore_saleitem_claim_description' );
 			itemButton.classList.remove( 'btn_disabled' );
 		}, timer );
 	}
@@ -288,14 +289,15 @@ function CheckClaimSaleItem( fails = 0 )
 		{
 			const response = data.response;
 
-			if( response.can_claim )
-			{
-				itemButton.classList.remove( 'btn_disabled' );
-				return;
-			}
-
 			StartViewTransition( () =>
 			{
+				if( response.can_claim )
+				{
+					itemStatus.textContent = _t( 'explore_saleitem_claim_description' );
+					itemButton.classList.remove( 'btn_disabled' );
+					return;
+				}
+
 				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
 
 				HandleSaleItemResponse( response );
