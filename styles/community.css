@@ -64,4 +64,5 @@ a.apphub_NumInApp:hover {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 4px;
+	align-items: center;
 }
