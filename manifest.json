@@ -54,6 +54,7 @@
 				"scripts/community/inventory.js",
 				"scripts/community/agecheck_injected.js",
 				"scripts/community/filedetails_award_injected.js",
+				"scripts/community/multibuy_injected.js",
 				"scripts/community/profile_award_injected.js",
 				"scripts/community/tradeoffer_injected.js",
 				"scripts/store/account_licenses_injected.js",
@@ -487,6 +488,17 @@
 			"js":
 			[
 				"scripts/community/filedetails.js"
+			]
+		},
+		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"https://steamcommunity.com/market/multibuy*"
+			],
+			"js":
+			[
+				"scripts/community/multibuy.js"
 			]
 		},
 		{

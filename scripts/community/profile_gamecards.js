@@ -1,5 +1,7 @@
 'use strict';
 
+MoveMultiBuyButton();
+
 GetOption( { 'button-gamecards': true }, function( items )
 {
 	if( !items[ 'button-gamecards' ] )
@@ -49,3 +51,37 @@ GetOption( { 'button-gamecards': true }, function( items )
 	// Add to the page
 	profileTexture.appendChild( container );
 } );
+
+function MoveMultiBuyButton()
+{
+	document.querySelectorAll( '.gamecards_inventorylink a' ).forEach( ( element ) =>
+	{
+		const link = new URL( element.href );
+
+		// Fix Valve incorrectly using CDN in the link
+		if( link.host.endsWith( '.steamstatic.com' ) )
+		{
+			link.host = window.location.host;
+			element.href = link.toString();
+		}
+
+		if( link.pathname === '/market/multibuy' )
+		{
+			// Add return to link to automatically return to the badge page after multi buying the cards
+			const params = new URLSearchParams( link.search );
+			params.set( 'steamdb_return_to', window.location.href );
+
+			link.search = params.toString();
+			element.href = link.toString();
+
+			// Move the buy button up top
+			const topLinks = document.querySelector( '.badge_detail_tasks .gamecards_inventorylink' );
+
+			if( topLinks )
+			{
+				topLinks.append( element );
+				topLinks.append( document.createTextNode( ' ' ) );
+			}
+		}
+	} );
+}

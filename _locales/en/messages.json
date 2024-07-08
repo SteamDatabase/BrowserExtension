@@ -613,6 +613,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "Add a button to automatically discover the queue during sales"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Redirect back to game cards page after buying remaining cards"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Improve global achievements page"
 	},
