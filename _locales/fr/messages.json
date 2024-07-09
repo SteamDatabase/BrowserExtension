@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Récupérer la récompense"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Réclamez la récompense quotidienne gratuite s'il y en a une."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Réclamation de la récompense quotidienne…"
 	},

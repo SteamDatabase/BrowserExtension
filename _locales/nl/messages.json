@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Claim beloning"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Claim de gratis dagelijkse beloning als die er is."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Dagelijkse beloning aan het claimen…"
 	},

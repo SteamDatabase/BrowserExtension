@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "领取奖励"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "自动领取可用的免费每日奖励"
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "正在领取每日奖励…"
 	},

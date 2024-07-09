@@ -178,16 +178,19 @@
 		"message": "A lista de descobrimento foi explorada!"
 	},
 	"explore_saleitem_claim": {
-		"message": "Reivindicar recompensa"
+		"message": "Resgatar recompensa"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Tentar resgatar a recompensa diária gratuita da promoção."
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Reivindicar a recompensa diária…"
+		"message": "Resgatando a recompensa diária…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Nenhuma recompensa diária para reivindicar agora."
+		"message": "Nenhum item disponível no momento."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "O próximo item estará disponível em: $datetime$",
+		"message": "Próximo item disponível em: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -200,7 +203,7 @@
 		"message": "Falha ao resgatar a recompensa diária."
 	},
 	"explore_saleitem_success": {
-		"message": "Novo prêmio reivindicado: $item$.",
+		"message": "Nova recompensa resgatada: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -599,7 +602,7 @@
 		"message": "Adicionar um botão para explorar automaticamente a lista de descobrimento durante promoções temáticas"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Redirecionar de volta para a página do cartucho após a compra de cards restantes"
+		"message": "Retornar à página de cartas do jogo após adquirir as cartas restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de conquistas globais"

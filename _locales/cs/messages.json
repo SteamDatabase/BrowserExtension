@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Vyzvednout odměnu"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Získejte denní odměnu zdarma, pokud je k dispozici."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Vyzvedávání denní odměny…"
 	},

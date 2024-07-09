@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Odbierz nagrodę"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Odbierz darmową dzienną nagrodę, jeśli jest dostępna."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Odbieranie dziennej nagrody…"
 	},

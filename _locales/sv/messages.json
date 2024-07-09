@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Hämta gratis belöning"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Hämta den dagliga gratisbelöningen om det finns en."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Hämta den dagliga belöningen…"
 	},
@@ -597,6 +600,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Lägg till en knapp för att automatiskt upptäcka kön under försäljning"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Omdirigera tillbaka till spelkortssidan efter köp av kvarvarande kort"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Förbättra sidan för globala prestationer"

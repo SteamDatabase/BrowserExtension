@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Reclamar recompensa"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Reclama la recompensa diaria gratuita, en caso de haberla."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Reclamando la recompensa diaria…"
 	},
@@ -599,7 +602,7 @@
 		"message": "Añadir un botón para hacer trampa en la cola de descubrimiento durante las ofertas"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Regresar a la página de tarjetas del juego después de comprar las cartas restantes"
+		"message": "Redirigir a la página de cromos después de comprar los cromos restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Mejorar la página de logros mundiales"

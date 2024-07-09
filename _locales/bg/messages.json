@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Заявяване на награда"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Заявяване на дневната награда, ако има такава."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Заявява се дневната награда…"
 	},

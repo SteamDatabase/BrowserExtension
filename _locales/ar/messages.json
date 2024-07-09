@@ -171,9 +171,6 @@
 			}
 		}
 	},
-	"explore_failed_to_clear_too_many": {
-		"message": ""
-	},
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
 	},

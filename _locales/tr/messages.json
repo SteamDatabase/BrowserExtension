@@ -172,22 +172,25 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Kuyruğu tamamlama çok kez başarısız oldu. Sonra tekrar deneyebilirsiniz."
+		"message": "Kuyruk pek çok kez atlanamadı. Daha sonra tekrar deneyin."
 	},
 	"explore_finished": {
 		"message": "Kuyruk keşfedildi."
 	},
 	"explore_saleitem_claim": {
-		"message": "Ödülü talep et"
+		"message": "Ödülü al"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Varsa ücretsiz günlük ödülünüzü alın."
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Günlük ödül talep ediliyor…"
+		"message": "Günlük ödül alınıyor…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Talep edilebilecek günlük ödül mevcut değil."
+		"message": "Şu an alabileceğiniz günlük bir ödül yok."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Sonraki öge mevcut: $datetime$",
+		"message": "Sıradaki ögenin erişilebilmesine: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -197,10 +200,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Günlük ödülü talep etme başarısız oldu."
+		"message": "Günlük ödül alınamadı."
 	},
 	"explore_saleitem_success": {
-		"message": "Yeni ödül talep edinildi: $item$",
+		"message": "Yeni ödül alındı: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -500,7 +503,7 @@
 		"message": "Envanterdeki hediyenin SubID'sini doğru bir şekilde belirle"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "Bir öğeyi satarken envanteri yenileme"
+		"message": "Bir ögeyi satarken envanteri yenileme"
 	},
 	"options_enhancement_inventory_quick_sell": {
 		"message": "Hızlı sat butonu ekle"
@@ -509,7 +512,7 @@
 		"message": "Hızlı satmayı otomatik olarak kabul et"
 	},
 	"options_display_market_price_others": {
-		"message": "Diğer kullanıcıların envanterlerindeki öğelerin market fiyatını göster"
+		"message": "Diğer kullanıcıların envanterlerindeki ögelerin market fiyatını göster"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ ve $my_item$ parametrelerini destekler",
@@ -599,7 +602,7 @@
 		"message": "Etkinlikli indirimler sırasında keşif kuyruğunu otomatik keşfetmeyi sağlayacak bir buton ekle"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Geriye kalan kartları aldıktan sonra oyun kartları sayfasına geri dön"
+		"message": "Kalan kartlar satın alındıktan sonra oyun kartları sayfasına geri döner"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Global başarımlar sayfasını iyileştir"

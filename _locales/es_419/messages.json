@@ -171,8 +171,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Se produjo un error al borrar la cola demasiadas veces. Puede intentarlo de nuevo más tarde."
+	},
 	"explore_finished": {
 		"message": "La cola ha sido explorada."
+	},
+	"explore_saleitem_claim": {
+		"message": "Reclamar recompensa"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Reclama la recompensa diaria gratuita, en caso de haberla."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Reclamando la recompensa diaria…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "No hay recompensa diaria que reclamar en este momento."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Siguiente artículo disponible: $datetime$",
@@ -181,6 +196,18 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Se produjo un error al reclamar la recompensa diaria."
+	},
+	"explore_saleitem_success": {
+		"message": "Nueva recompensa reclamada: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
 			}
 		}
 	},
@@ -573,6 +600,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Agregar un botón para hacer trampa en la cola de descubrimiento durante las ofertas"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Redireccionar a la página de tarjetas del juego después de comprar las tarjetas restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Mejorar la página de logros mundiales"

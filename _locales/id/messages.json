@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Menambahkan tautan SteamDB dan fitur baru di Toko Steam dan komunitas. Melihat harga permainan terendah dan statistik.",
+		"message": "Menambahkan tautan SteamDB dan fitur baru di toko dan komunitas Steam. Lihat harga terendah gim dan statistiknya.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -178,7 +178,10 @@
 		"message": "Antrian telah dijelajahi."
 	},
 	"explore_saleitem_claim": {
-		"message": "Ambil Hadiah"
+		"message": "Ambil hadiah"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Ambil hadiah harian gratis jika memang ada."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Sedang mengambil hadiah harian…"
@@ -359,7 +362,7 @@
 		"message": "Inventaris"
 	},
 	"options_header_trade_offers": {
-		"message": "Permintaan tukar-menukar"
+		"message": "Tawaran Barter"
 	},
 	"options_header_achievements": {
 		"message": "Pencapaian"
@@ -597,6 +600,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Tambah tombol untuk menjelajahi daftar temuanmu secara otomatis saat promo"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Arahkan kembali ke halaman kartu permainan setelah membeli kartu-kartu yang tersisa"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Tingkatkan halaman pencapaian global"

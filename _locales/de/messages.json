@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Belohnung einlösen"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Kostenlose tägliche Belohnung einlösen, sofern es sie gibt."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Tägliche Belohnung wird eingelöst …"
 	},

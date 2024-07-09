@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "Отримати нагороду"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Отримайте безкоштовну щоденну нагороду, якщо вона є."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Отримуємо щоденну нагороду…"
 	},

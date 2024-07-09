@@ -180,6 +180,9 @@
 	"explore_saleitem_claim": {
 		"message": "領取獎勵"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "領取可取的免費每日獎勵。"
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "每日獎勵領取中…"
 	},

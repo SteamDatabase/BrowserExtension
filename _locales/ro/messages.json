@@ -171,17 +171,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Ștergerea cozii de prea multe ori a eșuat. Poți încerca din nou mai târziu."
+	},
 	"explore_finished": {
 		"message": "Lista a fost explorată."
 	},
 	"explore_saleitem_claim": {
 		"message": "Colectează recompensa"
 	},
+	"explore_saleitem_claim_description": {
+		"message": "Colectează recompensa zilnică dacă există una."
+	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Colectarea recompensei zilnice…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Nu există recompense zilnice pentru a fi colectate în acest moment."
+		"message": "Nu există recompense zilnice pentru a fi obținute în acest moment."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Următorul articol disponibil: $datetime$",
@@ -190,6 +196,18 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nu s-a putut obține recompensa zilnică."
+	},
+	"explore_saleitem_success": {
+		"message": "Recompensă nouă obținută: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
 			}
 		}
 	},
@@ -582,6 +600,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Adăugați un buton pentru a descoperi automat coada de așteptare în timpul reducerilor"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Înapoi la pagina cardurilor de joc după ce s-au cumpărat cardurile rămase"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Îmbunătățește pagina de realizări globale"

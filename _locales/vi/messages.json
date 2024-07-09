@@ -171,8 +171,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Không thể xoá hàng đợi quá nhiều lần. Bạn có thể thử lại sau."
+	},
 	"explore_finished": {
 		"message": "Đã xem hết hàng chờ."
+	},
+	"explore_saleitem_claim": {
+		"message": "Nhận phần thưởng"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Nhận phần thưởng miễn phí hàng ngày nếu có."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Đang nhận phần thưởng hàng ngày…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Không có phần thưởng hàng ngày nào có thể nhận tại thời điểm này."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Vật phẩm tiếp theo sẵn sàng vào $datetime$",
@@ -181,6 +196,18 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nhận phần thưởng hàng ngày thất bại."
+	},
+	"explore_saleitem_success": {
+		"message": "Đã nhận phần thưởng mới: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
 			}
 		}
 	},
@@ -573,6 +600,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Thêm một nút để tự động khám phá hàng chờ trong các đợt giảm giá"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Chuyển hướng trở lại trang thẻ trò chơi sau khi mua những thẻ còn lại"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Cải thiện trang thành tựu toàn cầu"
