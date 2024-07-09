@@ -172,6 +172,8 @@ function GenerateQueue( generateFails = 0 )
 					return;
 				}
 
+				fails--;
+
 				if( ++done === appids.length )
 				{
 					exploreButton.classList.remove( 'btn_disabled' );
