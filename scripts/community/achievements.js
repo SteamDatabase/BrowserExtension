@@ -547,10 +547,8 @@ function InitAchievements( items, isPersonal )
 					}
 				}
 
-				const overlay = document.createElement( 'div' );
-				overlay.className = 'steamdb_achievement_global_progress_overlay';
-				overlay.style.width = `${Math.round( achievement.global_unlock * 100 )}%`;
-				element.append( overlay );
+				element.classList.add( 'steamdb_achievement_global_progress_overlay' );
+				element.style.setProperty( '--steamdb-progress', `${Math.round( achievement.global_unlock * 100 )}%` );
 
 				return element;
 			}
