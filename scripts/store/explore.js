@@ -68,6 +68,7 @@ function CreateExploreContainer()
 
 		StartViewTransition( () =>
 		{
+			exploreStatus.textContent = _t( 'explore_generating' );
 			exploreButton.classList.add( 'btn_disabled' );
 			GenerateQueue();
 		} );
@@ -131,8 +132,6 @@ function GenerateQueue( generateFails = 0 )
 	{
 		emptyQueue.style.display = 'block';
 	}
-
-	exploreStatus.textContent = _t( 'explore_generating' );
 
 	const params = new URLSearchParams();
 	params.set( 'access_token', accessToken );
@@ -226,17 +225,19 @@ function GenerateQueue( generateFails = 0 )
 		{
 			WriteLog( 'Failed to get discovery queue', error );
 
-			if( ++generateFails >= 10 )
+			if( ++generateFails >= 20 )
 			{
 				exploreButton.classList.remove( 'btn_disabled' );
 				exploreStatus.textContent = _t( 'explore_failed_to_clear_too_many' );
 				return;
 			}
 
+			exploreStatus.textContent = `${_t( 'explore_generating' )} (#${generateFails})`;
+
 			setTimeout( () =>
 			{
 				GenerateQueue( generateFails );
-			}, RandomInt( 5000, 10000 ) );
+			}, RandomInt( 5000, 10000 * generateFails ) );
 		} );
 }
 
