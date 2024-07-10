@@ -531,7 +531,7 @@ function DrawLowestPrice()
 
 		if( Number.isInteger( response.data.c ) && response.data.c > 1 )
 		{
-			bottom.innerHTML = _t( 'app_lowest_date_multiple', [
+			bottom.textContent = _t( 'app_lowest_date_multiple', [
 				lastOn,
 				relativeText,
 				response.data.c.toString(),
@@ -539,7 +539,7 @@ function DrawLowestPrice()
 		}
 		else
 		{
-			bottom.innerHTML = _t( 'app_lowest_date', [ lastOn, relativeText ] );
+			bottom.textContent = _t( 'app_lowest_date', [ lastOn, relativeText ] );
 		}
 	} );
 }
