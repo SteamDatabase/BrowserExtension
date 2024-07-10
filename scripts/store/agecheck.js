@@ -43,4 +43,24 @@ GetOption( { 'enhancement-skip-agecheck': false }, function( items )
 			document.location.href = document.location.href.replace( /\/agecheck/, '' );
 		}
 	}
+	else
+	{
+		const container = document.getElementById( 'app_agegate' );
+
+		if( !container )
+		{
+			return;
+		}
+
+		const optionsLink = document.createElement( 'a' );
+		optionsLink.target = '_blank';
+		optionsLink.textContent = _t( 'agecheck_option_hint' );
+		optionsLink.href = GetLocalResource( 'options/options.html' ) + '#skip_agecheck';
+
+		const linkContainer = document.createElement( 'div' );
+		linkContainer.className = 'steamdb_error_link steamdb_agecheck_hint';
+		linkContainer.append( optionsLink );
+
+		container.append( linkContainer );
+	}
 } );

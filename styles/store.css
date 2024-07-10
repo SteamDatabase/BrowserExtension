@@ -12,6 +12,15 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	text-align: center;
 }
 
+.steamdb_agecheck_hint {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.steamdb_agecheck_hint a {
+	text-decoration: underline;
+}
+
 .game_area_purchase_game .steamdb_link {
 	position: absolute;
 	left: 0;

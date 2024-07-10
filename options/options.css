@@ -36,6 +36,11 @@ a:hover {
 	color: #fff;
 }
 
+:target {
+	outline: 3px solid #00aff4;
+	outline-offset: 5px;
+}
+
 button {
 	cursor: pointer;
 }

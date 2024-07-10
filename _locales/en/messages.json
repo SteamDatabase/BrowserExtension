@@ -154,6 +154,10 @@
 		}
 	},
 
+	"agecheck_option_hint": {
+		"message": "SteamDB has an option to automatically skip these age check pages"
+	},
+
 	"explore_auto_discover": {
 		"message": "Auto-discover"
 	},
