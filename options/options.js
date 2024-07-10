@@ -33,6 +33,11 @@
 			console.error( 'Missing localization', element, token );
 		}
 
+		if( element.tagName === 'TITLE' )
+		{
+			msg += ' · SteamDB';
+		}
+
 		element.innerHTML = msg;
 	}
 
