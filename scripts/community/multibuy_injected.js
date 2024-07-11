@@ -13,7 +13,20 @@
 		{
 			const order = window.g_rgOrders[ iOrder ];
 
-			if( order.m_nQuantity > 0 && !order.m_bOrderSuccess )
+			if( order.m_nQuantity < 1 )
+			{
+				continue;
+			}
+
+			if( !order.m_bOrderSuccess )
+			{
+				return;
+			}
+
+			const success = document.getElementById( `buy_${order.m_llNameId}_success` );
+
+			// If the success checkmark is not visible, something went wrong
+			if( !success || !success.checkVisibility() )
 			{
 				return;
 			}
