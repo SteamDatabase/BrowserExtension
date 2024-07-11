@@ -480,7 +480,6 @@ function InitAchievements( items, isPersonal )
 			const image = document.createElement( 'img' );
 			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${!isPersonal || player.unlock ? achievement.icon : achievement.icon_gray}`;
 			image.className = 'steamdb_achievement_image';
-			image.loading = 'lazy';
 			element.append( image );
 
 			const nameContainer = document.createElement( 'div' );
