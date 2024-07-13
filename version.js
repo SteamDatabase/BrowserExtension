@@ -4,9 +4,9 @@ const child_process = require( 'child_process' );
 const manifestPath = path.join( __dirname, 'manifest.json' );
 const version = process.argv[ 2 ];
 
-if( !/^[0-9]+\.[0-9]+\.[0-9]+$/.test( version ) )
+if( !/^[0-9]+\.[0-9]+$/.test( version ) )
 {
-	console.error( 'Provide version as first argument. Example: 3.0.1' );
+	console.error( 'Provide version as the first argument. Example: 3.0' );
 	process.exit( 1 );
 }
 
