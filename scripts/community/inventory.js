@@ -89,17 +89,15 @@
 		};
 	}
 
-	if( hasQuickSellEnabled )
+	const originalBuildHover = window.BuildHover;
+
+	window.BuildHover = function( prefix )
 	{
-		const originalBuildHover = window.BuildHover;
+		document.querySelector( `#${prefix} .steamdb_quick_sell` )?.remove();
+		document.querySelector( `#${prefix} .steamdb_badge_info` )?.remove();
 
-		window.BuildHover = function()
-		{
-			document.querySelector( '.steamdb_quick_sell' )?.remove();
-
-			originalBuildHover.apply( this, arguments );
-		};
-	}
+		originalBuildHover.apply( this, arguments );
+	};
 
 	window.PopulateMarketActions = function( elActions, item )
 	{
@@ -234,12 +232,168 @@
 		}
 	};
 
+	let badgesDataLoaded = false;
+	let badgesData = [];
+
+	function AddBadgeInformation( element, rgActions, item, steamid )
+	{
+		let isTradingCard = false;
+		let isFoilCard = false;
+		let foundBadge = false;
+
+		for( const tag of item.tags )
+		{
+			if( tag.category === 'cardborder' )
+			{
+				isFoilCard = tag.internal_name !== 'cardborder_0';
+			}
+			else if( tag.category === 'item_class' )
+			{
+				isTradingCard = tag.internal_name === 'item_class_2';
+			}
+		}
+
+		const CreateLink = ( foil ) =>
+			`https://steamcommunity.com/profiles/${steamid}/gamecards/${item.market_fee_app}${foil ? '?border=1' : ''}`;
+
+		for( const badge of badgesData )
+		{
+			if( badge.appid !== item.market_fee_app )
+			{
+				continue;
+			}
+
+			const isFoilBadge = badge.border_color > 0;
+
+			if( isTradingCard && isFoilCard !== isFoilBadge )
+			{
+				continue;
+			}
+
+			foundBadge = true;
+
+			const span = document.createElement( 'span' );
+			const str = isFoilBadge ? i18n.inventory_badge_foil_level : i18n.inventory_badge_level;
+			span.textContent = str.replace( '%level%', badge.level.toString() );
+
+			const link = document.createElement( 'a' );
+			link.className = 'btnv6_blue_hoverfade btn_small_thin';
+			link.href = CreateLink( isFoilBadge );
+			link.append( span );
+
+			element.append( link );
+		}
+
+		if( !foundBadge )
+		{
+			const span = document.createElement( 'span' );
+			span.textContent = i18n.inventory_badge_none;
+
+			const link = document.createElement( 'a' );
+			link.className = 'btnv6_blue_hoverfade btn_small_thin';
+			link.href = CreateLink( isFoilCard );
+			link.append( span );
+
+			element.append( link );
+		}
+
+		// TODO: This has a race condition when it's called after badge info fetch() as it directly modifies rgActions
+		for( let i = 0; i < rgActions.length; i++ )
+		{
+			if( rgActions[ i ].link.startsWith( 'https://steamcommunity.com/my/gamecards/' ) )
+			{
+				// Remove the 'View badge progress' button
+				rgActions.splice( i, 1 );
+				break;
+			}
+		}
+	}
+
+	function LoadBadgeInformation( element, rgActions, item, steamid )
+	{
+		if( badgesDataLoaded )
+		{
+			if( badgesData.length > 0 )
+			{
+				AddBadgeInformation( element, rgActions, item, steamid );
+			}
+
+			return;
+		}
+
+		// TODO: This has a race condition if user switches to another item before the fetch request completes
+		// but the only problem they will get is no badge info will be displayed.
+		badgesDataLoaded = true;
+
+		const applicationConfigElement = document.getElementById( 'application_config' );
+
+		if( !applicationConfigElement )
+		{
+			return;
+		}
+
+		const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+		const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
+
+		if( !accessToken )
+		{
+			return;
+		}
+
+		applicationConfig.WEBAPI_ACCESS_TOKEN = accessToken;
+
+		const params = new URLSearchParams();
+		params.set( 'format', 'json' );
+		params.set( 'access_token', applicationConfig.WEBAPI_ACCESS_TOKEN );
+		params.set( 'steamid', steamid );
+		params.set( 'x_requested_with', 'SteamDB' );
+
+		fetch( `${applicationConfig.WEBAPI_BASE_URL}IPlayerService/GetBadges/v1/?${params.toString()}` )
+			.then( ( response ) => response.json() )
+			.then( ( response ) =>
+			{
+				if( response.response?.badges )
+				{
+					badgesData = response.response.badges;
+
+					AddBadgeInformation( element, rgActions, item, steamid );
+				}
+			} );
+	}
+
 	window.PopulateActions = function( prefix, elActions, rgActions, item, owner )
 	{
 		let foundState = FoundState.None;
 
 		try
 		{
+			if( window.g_bViewingOwnProfile && item.description.appid === 753 && item.tags && elActions.classList.contains( 'item_owner_actions' ) )
+			{
+				let itemClass = null;
+
+				for( const tag of item.tags )
+				{
+					if( tag.category === 'item_class' )
+					{
+						itemClass = tag.internal_name;
+						break;
+					}
+				}
+
+				if(
+					itemClass === 'item_class_2' || // trading card
+					itemClass === 'item_class_5' // booster pack
+				)
+				{
+					console.log( rgActions );
+					const element = document.createElement( 'div' );
+					element.className = 'steamdb_badge_info';
+					elActions.insertAdjacentElement( 'beforebegin', element );
+
+					LoadBadgeInformation( element, rgActions, item, owner.strSteamId );
+				}
+			}
+
 			// PopulateActions is called for both item.description.actions and item.description.owner_actions, we only want first one
 			if( hasLinksEnabled && item.description.appid === 753 && rgActions === item.description.actions )
 			{
@@ -428,6 +582,7 @@
 		catch( e )
 		{
 			// Don't break website functionality if something fails above
+			console.error( '[SteamDB]', e );
 		}
 
 		originalPopulateActions( prefix, elActions, rgActions, item, owner );

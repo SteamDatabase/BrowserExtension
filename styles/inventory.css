@@ -38,3 +38,12 @@
 	padding-bottom: 8px;
 	background: #161920;
 }
+
+.steamdb_badge_info {
+	margin-bottom: 11px;
+}
+
+.steamdb_badge_info a {
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
