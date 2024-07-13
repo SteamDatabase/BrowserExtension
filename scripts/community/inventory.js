@@ -10,19 +10,17 @@
 		DisableButtons: 3,
 	};
 
-	let i;
-	let link;
-	const giftCache = {};
-	const hasLinksEnabled = document.body.dataset.steamdbLinks === 'true';
-	const hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
-	const hasBadgeInfoEnabled = document.body.dataset.steamdbBadgeInfo === 'true';
+	const giftCache = {}; // TODO: Store this in indexeddb
+
 	const scriptHook = document.getElementById( 'steamdb_inventory_hook' );
 	const homepage = scriptHook.dataset.homepage;
 	const i18n = JSON.parse( scriptHook.dataset.i18n );
-	const originalPopulateActions = window.PopulateActions;
-	let hasQuickSellEnabled = document.body.dataset.steamdbQuickSell === 'true' && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
-	const originalPopulateMarketActions = window.PopulateMarketActions;
-	const currencyCode = window.GetCurrencyCode( window.g_rgWalletInfo.wallet_currency );
+	const options = JSON.parse( scriptHook.dataset.options );
+
+	const hasLinksEnabled = options[ 'link-inventory' ];
+	const hasPreciseSubIDsEnabled = options[ 'link-inventory-gift-subid' ];
+	const hasBadgeInfoEnabled = options[ 'enhancement-inventory-badge-info' ];
+	let hasQuickSellEnabled = options[ 'enhancement-inventory-quick-sell' ] && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
 
 	const dummySellEvent =
 	{
@@ -42,16 +40,17 @@
 		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
 		window.SellItemDialog.OnAccept( dummySellEvent );
 
-		if( document.body.dataset.steamdbQuickSellAuto )
+		if( options[ 'enhancement-inventory-quick-sell-auto' ] )
 		{
 			window.SellItemDialog.OnConfirmationAccept( dummySellEvent );
 		}
 	};
 
+	const currencyCode = window.GetCurrencyCode( window.g_rgWalletInfo.wallet_currency );
 	const FormatCurrency = ( valueInCents ) =>
 		window.v_currencyformat( valueInCents, currencyCode, window.g_rgWalletInfo.wallet_country );
 
-	if( document.body.dataset.steamdbNoSellReload )
+	if( options[ 'enhancement-inventory-no-sell-reload' ] )
 	{
 		let nextRefreshCausedBySell = false;
 		const originalOnSuccess = window.SellItemDialog.OnSuccess;
@@ -99,6 +98,8 @@
 
 		originalBuildHover.apply( this, arguments );
 	};
+
+	const originalPopulateMarketActions = window.PopulateMarketActions;
 
 	window.PopulateMarketActions = function( elActions, item )
 	{
@@ -362,6 +363,8 @@
 			} );
 	}
 
+	const originalPopulateActions = window.PopulateActions;
+
 	window.PopulateActions = function( prefix, elActions, rgActions, item, owner )
 	{
 		let foundState = FoundState.None;
@@ -402,9 +405,9 @@
 				{
 					let couponLink, pos;
 
-					for( i = 0; i < rgActions.length; i++ )
+					for( let i = 0; i < rgActions.length; i++ )
 					{
-						link = rgActions[ i ];
+						const link = rgActions[ i ];
 
 						if( link.steamdb )
 						{
@@ -429,7 +432,7 @@
 					{
 						const subs = couponLink.substring( pos + 'list_of_subs='.length ).split( ',' );
 
-						for( i = 0; i < subs.length; i++ )
+						for( let i = 0; i < subs.length; i++ )
 						{
 							rgActions.push( {
 								steamdb: true,
@@ -449,9 +452,9 @@
 						rgActions = [];
 					}
 
-					for( i = 0; i < rgActions.length; i++ )
+					for( let i = 0; i < rgActions.length; i++ )
 					{
-						link = rgActions[ i ];
+						const link = rgActions[ i ];
 
 						if( link.steamdb )
 						{
@@ -490,7 +493,7 @@
 								{
 									giftCache[ item.description.classid ] = xhr.response.packageid;
 
-									link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.assetid + '"]' );
+									const link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.assetid + '"]' );
 
 									if( link )
 									{
@@ -511,9 +514,9 @@
 				}
 				else if( rgActions )
 				{
-					for( i = 0; i < rgActions.length; i++ )
+					for( let i = 0; i < rgActions.length; i++ )
 					{
-						link = rgActions[ i ];
+						const link = rgActions[ i ];
 
 						if( link.steamdb )
 						{
@@ -529,22 +532,22 @@
 
 					if( foundState === FoundState.Process )
 					{
-						for( i = 0; i < rgActions.length; i++ )
+						for( let i = 0; i < rgActions.length; i++ )
 						{
-							link = rgActions[ i ].link;
+							const link = rgActions[ i ].link;
 
 							if( !link )
 							{
 								continue;
 							}
 
-							link = link.match( /\.com\/(app|sub)\/([0-9]+)/ );
+							const linkMatch = link.match( /\.com\/(app|sub)\/([0-9]+)/ );
 
-							if( link )
+							if( linkMatch )
 							{
 								rgActions.push( {
 									steamdb: true,
-									link: homepage + link[ 1 ] + '/' + link[ 2 ] + '/',
+									link: homepage + linkMatch[ 1 ] + '/' + linkMatch[ 2 ] + '/',
 									name: i18n.view_on_steamdb, // TODO: Add id?
 								} );
 
@@ -557,13 +560,13 @@
 				}
 				else if( item.description.type === 'Gift' )
 				{
-					link = item.description.name.match( /^Unknown package ([0-9]+)$/ );
+					const linkMatch = item.description.name.match( /^Unknown package ([0-9]+)$/ );
 
-					if( link )
+					if( linkMatch )
 					{
 						item.description.actions = rgActions = [ {
 							steamdb: true,
-							link: homepage + 'sub/' + link[ 1 ] + '/',
+							link: homepage + 'sub/' + linkMatch[ 1 ] + '/',
 							name: i18n.view_on_steamdb,
 						} ];
 					}
@@ -591,11 +594,11 @@
 		// We want our links to be open in new tab
 		if( foundState === FoundState.Added )
 		{
-			link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
+			const link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
 
 			if( link )
 			{
-				for( i = 0; i < link.length; i++ )
+				for( let i = 0; i < link.length; i++ )
 				{
 					link[ i ].target = '_blank';
 				}
@@ -603,11 +606,11 @@
 		}
 		else if( foundState === FoundState.DisableButtons )
 		{
-			link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
+			const link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
 
 			if( link )
 			{
-				for( i = 0; i < link.length; i++ )
+				for( let i = 0; i < link.length; i++ )
 				{
 					link[ i ].target = '_blank';
 					link[ i ].classList.add( 'btn_disabled' );

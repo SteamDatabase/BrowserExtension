@@ -23,41 +23,12 @@ if( document.getElementById( 'inventory_link_753' ) )
 			document.head.appendChild( style );
 		}
 
-		if( items[ 'link-inventory' ] )
-		{
-			document.body.dataset.steamdbLinks = 'true';
-		}
-
-		if( items[ 'link-inventory-gift-subid' ] )
-		{
-			document.body.dataset.steamdbGiftSubid = 'true';
-		}
-
-		if( items[ 'enhancement-inventory-quick-sell' ] )
-		{
-			document.body.dataset.steamdbQuickSell = 'true';
-		}
-
-		if( items[ 'enhancement-inventory-quick-sell-auto' ] )
-		{
-			document.body.dataset.steamdbQuickSellAuto = 'true';
-		}
-
-		if( items[ 'enhancement-inventory-no-sell-reload' ] )
-		{
-			document.body.dataset.steamdbNoSellReload = 'true';
-		}
-
-		if( items[ 'enhancement-inventory-badge-info' ] )
-		{
-			document.body.dataset.steamdbBadgeInfo = 'true';
-		}
-
 		const element = document.createElement( 'script' );
 		element.id = 'steamdb_inventory_hook';
 		element.type = 'text/javascript';
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
+		element.dataset.options = JSON.stringify( items );
 		element.dataset.i18n = JSON.stringify( {
 			view_on_steamdb: _t( 'view_on_steamdb' ),
 			inventory_list_at: _t( 'inventory_list_at' ),
