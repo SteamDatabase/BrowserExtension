@@ -551,6 +551,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automatically accept quick sell"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Display badge level on trading cards and booster packs"
+	},
 	"options_display_market_price_others": {
 		"message": "Display item market price in other users' inventories"
 	},

@@ -15,6 +15,7 @@
 	const giftCache = {};
 	const hasLinksEnabled = document.body.dataset.steamdbLinks === 'true';
 	const hasPreciseSubIDsEnabled = document.body.dataset.steamdbGiftSubid === 'true';
+	const hasBadgeInfoEnabled = document.body.dataset.steamdbBadgeInfo === 'true';
 	const scriptHook = document.getElementById( 'steamdb_inventory_hook' );
 	const homepage = scriptHook.dataset.homepage;
 	const i18n = JSON.parse( scriptHook.dataset.i18n );
@@ -367,7 +368,7 @@
 
 		try
 		{
-			if( window.g_bViewingOwnProfile && item.description.appid === 753 && item.tags && elActions.classList.contains( 'item_owner_actions' ) )
+			if( hasBadgeInfoEnabled && window.g_bViewingOwnProfile && item.description.appid === 753 && item.tags && elActions.classList.contains( 'item_owner_actions' ) )
 			{
 				let itemClass = null;
 
