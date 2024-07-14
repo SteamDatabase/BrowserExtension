@@ -239,11 +239,16 @@
 
 	function AddBadgeInformation( element, rgActions, item, steamid )
 	{
+		if( !item.description.market_fee_app )
+		{
+			return;
+		}
+
 		let isTradingCard = false;
 		let isFoilCard = false;
 		let foundBadge = false;
 
-		for( const tag of item.tags )
+		for( const tag of item.description.tags )
 		{
 			if( tag.category === 'cardborder' )
 			{
@@ -256,11 +261,11 @@
 		}
 
 		const CreateLink = ( foil ) =>
-			`https://steamcommunity.com/profiles/${steamid}/gamecards/${item.market_fee_app}${foil ? '?border=1' : ''}`;
+			`https://steamcommunity.com/profiles/${steamid}/gamecards/${item.description.market_fee_app}${foil ? '?border=1' : ''}`;
 
 		for( const badge of badgesData )
 		{
-			if( badge.appid !== item.market_fee_app )
+			if( badge.appid !== item.description.market_fee_app )
 			{
 				continue;
 			}
@@ -342,11 +347,9 @@
 			return;
 		}
 
-		applicationConfig.WEBAPI_ACCESS_TOKEN = accessToken;
-
 		const params = new URLSearchParams();
 		params.set( 'format', 'json' );
-		params.set( 'access_token', applicationConfig.WEBAPI_ACCESS_TOKEN );
+		params.set( 'access_token', accessToken );
 		params.set( 'steamid', steamid );
 		params.set( 'x_requested_with', 'SteamDB' );
 
@@ -371,11 +374,11 @@
 
 		try
 		{
-			if( hasBadgeInfoEnabled && window.g_bViewingOwnProfile && item.description.appid === 753 && item.tags && elActions.classList.contains( 'item_owner_actions' ) )
+			if( hasBadgeInfoEnabled && window.g_bViewingOwnProfile && item.description.appid === 753 && item.description.tags && elActions.classList.contains( 'item_owner_actions' ) )
 			{
 				let itemClass = null;
 
-				for( const tag of item.tags )
+				for( const tag of item.description.tags )
 				{
 					if( tag.category === 'item_class' )
 					{
@@ -389,7 +392,6 @@
 					itemClass === 'item_class_5' // booster pack
 				)
 				{
-					console.log( rgActions );
 					const element = document.createElement( 'div' );
 					element.className = 'steamdb_badge_info';
 					elActions.insertAdjacentElement( 'beforebegin', element );
@@ -589,7 +591,7 @@
 			console.error( '[SteamDB]', e );
 		}
 
-		originalPopulateActions( prefix, elActions, rgActions, item, owner );
+		originalPopulateActions.apply( this, arguments );
 
 		// We want our links to be open in new tab
 		if( foundState === FoundState.Added )
