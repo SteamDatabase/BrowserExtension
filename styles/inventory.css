@@ -47,3 +47,10 @@
 	margin-bottom: 5px;
 	margin-right: 5px;
 }
+
+/**
+ * Fix Valve's responsive style removing width/height which breaks gems display
+ */
+.trade_item_box .item {
+	aspect-ratio: 1 / 1;
+}
