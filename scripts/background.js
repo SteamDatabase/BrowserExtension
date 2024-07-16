@@ -1,7 +1,6 @@
 let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
-let migrated = false;
 let nextAllowedRequest = 0;
 
 /** @type {browser} ExtensionApi */
@@ -21,8 +20,6 @@ const ExtensionApi = ( () =>
 	}
 } )();
 
-ExtensionApi.runtime.onStartup.addListener( MigrateOptionsToSync );
-
 ExtensionApi.runtime.onInstalled.addListener( ( event ) =>
 {
 	if( event.reason === ExtensionApi.runtime.OnInstalledReason.INSTALL )
@@ -30,10 +27,6 @@ ExtensionApi.runtime.onInstalled.addListener( ( event ) =>
 		ExtensionApi.tabs.create( {
 			url: ExtensionApi.runtime.getURL( 'options/options.html' ) + '?welcome=1',
 		} );
-	}
-	else
-	{
-		MigrateOptionsToSync();
 	}
 } );
 
@@ -577,44 +570,4 @@ function SetLocalOption( option, value )
 	obj[ option ] = value;
 
 	ExtensionApi.storage.local.set( obj );
-}
-
-function MigrateOptionsToSync()
-{
-	if( migrated )
-	{
-		return;
-	}
-
-	migrated = true;
-
-	const callback = ( items ) =>
-	{
-		if( items[ 'migrated-to-sync' ] )
-		{
-			return;
-		}
-
-		delete items[ 'userdata.cached' ];
-		delete items[ 'userdata.stored' ];
-
-		const count = Object.keys( items ).length;
-
-		if( count === 0 )
-		{
-			return;
-		}
-
-		console.log( 'Migrating', count, 'settings to sync', items );
-
-		ExtensionApi.storage.sync.set( items ).then( () =>
-		{
-			ExtensionApi.storage.local.clear().then( () =>
-			{
-				SetLocalOption( 'migrated-to-sync', true );
-			} );
-		} );
-	};
-
-	ExtensionApi.storage.local.get( null ).then( callback );
 }
