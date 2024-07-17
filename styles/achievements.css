@@ -182,6 +182,10 @@ html {
 	position: relative;
 }
 
+.steamdb_achievement[hidden] {
+	display: none;
+}
+
 .steamdb_achievement_global_progress_overlay {
 	background: linear-gradient(
 		to right,
@@ -322,6 +326,30 @@ html {
 
 .steamdb_achievement_groups_disclaimer > a:hover {
 	text-decoration: underline;
+}
+
+.steamdb_achievement_search {
+	margin-bottom: 16px;
+}
+
+.steamdb_achievement_search > input {
+	background: #1b2838;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 6px;
+	width: 100%;
+	font: inherit;
+	box-sizing: border-box;
+	padding: 7px 10px 7px 36px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
+	background-size: 16px;
+	background-position: 10px center;
+	background-repeat: no-repeat;
+}
+
+.steamdb_achievement_search > input:focus {
+	border-color: #417b9c;
+	outline: none;
 }
 
 @media (max-width: 600px) {

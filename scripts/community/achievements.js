@@ -603,6 +603,59 @@ function InitAchievements( items, isPersonal )
 		const newContainer = document.createElement( 'div' );
 		newContainer.className = 'steamdb_achievements_container';
 
+		const searchField = document.createElement( 'input' );
+		searchField.maxLength = 255;
+		searchField.type = 'search';
+
+		const searchFieldContainer = document.createElement( 'div' );
+		searchFieldContainer.className = 'steamdb_achievement_search';
+		searchFieldContainer.append( searchField );
+		newContainer.append( searchFieldContainer );
+
+		searchField.addEventListener( 'input', function()
+		{
+			const searchVal = this.value.trim().toUpperCase();
+			const achievementGroups = document.querySelectorAll( '.steamdb_achievements_group' );
+
+			StartViewTransition( () =>
+			{
+				if( searchVal.length === 0 )
+				{
+					for( const group of achievementGroups )
+					{
+						for( const achievement of group.querySelectorAll( '.steamdb_achievement' ) )
+						{
+							achievement.hidden = false;
+						}
+
+						group.hidden = false;
+					}
+
+					return;
+				}
+
+				for( const group of achievementGroups )
+				{
+					let count = 0;
+
+					for( const achievement of group.querySelectorAll( '.steamdb_achievement' ) )
+					{
+						const title = achievement.querySelector( 'h3' ).textContent;
+						const description = achievement.querySelector( 'h5' ).textContent;
+						const found = title.toUpperCase().includes( searchVal ) || description.toUpperCase().includes( searchVal );
+						achievement.hidden = !found;
+
+						if( found )
+						{
+							count++;
+						}
+					}
+
+					group.hidden = count === 0;
+				}
+			} );
+		} );
+
 		for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
 		{
 			const update = achievementUpdates[ updateId ];
@@ -1152,7 +1205,7 @@ function StartViewTransition( callback )
 			}
 			catch( e )
 			{
-				console.error( e );
+				console.error( '[SteamDB]', e );
 			}
 		} );
 	}
