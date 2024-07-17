@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB má možnost tyto stránky kontroly věku automaticky přeskočit"
+	},
 	"explore_auto_discover": {
 		"message": "Automatické objevování"
 	},

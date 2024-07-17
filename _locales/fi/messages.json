@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB:llä on asetus jolla voi ohittaa nämä iän tarkistus sivun auto maattisesti"
+	},
 	"explore_auto_discover": {
 		"message": "Automaattinen löytöjono"
 	},
@@ -179,6 +182,9 @@
 	},
 	"explore_saleitem_claim": {
 		"message": "Lunasta palkinto"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Lunasta ilmainen päivittäinen palkinto, jos sellainen on."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Lunastetaan päivittäistä palkkiota…"

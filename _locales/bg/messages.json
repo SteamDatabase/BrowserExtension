@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB има опция за автоматично прескачане на страниците за проверка на възрастта"
+	},
 	"explore_auto_discover": {
 		"message": "Автоматично откриване"
 	},
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Продаване на артикула за най-високата заявена цена за купуване\n\nПоказаната цена са парите, които получавате (без такси)"
+	},
+	"inventory_badge_level": {
+		"message": "Ниво на значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Ниво на ламинирана значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Няма изработена значка"
 	},
 	"options": {
 		"message": "Опции"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Автоматично приемане на бърза продажба"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Покажи ниво на значка при карти за размяна и допълнителни пакети"
 	},
 	"options_display_market_price_others": {
 		"message": "Покажи пазарните цени на артикули в инвентара на други профили"

@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB har en innstilling for å automatisk hoppe over disse aldersjekk-sider"
+	},
 	"explore_auto_discover": {
 		"message": "Auto-oppdag"
 	},
@@ -171,11 +174,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Kunne ikke tømme køen for mange ganger. Du kan prøve igjen senere."
+	},
 	"explore_finished": {
 		"message": "Kø har blitt utforsket."
 	},
 	"explore_saleitem_claim": {
 		"message": "Krev belønning"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Krev inn den daglige belønningen hvis det er en."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Krever den daglige belønningen…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Ingen daglig belønning å kreve for øyeblikket."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Neste gjenstand tilgjengelig: $datetime$",
@@ -184,6 +199,18 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Kunne ikke kreve den daglige belønningen."
+	},
+	"explore_saleitem_success": {
+		"message": "Ny belønning krevet: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
 			}
 		}
 	},
@@ -576,6 +603,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Legg til en knapp for å automatisk oppdage køen under salg"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Omdirigerer tilbake til spillkort-siden etter å ha kjøpt de resterende kortene"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Forbedre global prestasjonsside"

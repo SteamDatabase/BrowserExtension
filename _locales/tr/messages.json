@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB yaş doğrulamalarını otomatik olarak atlama seçeneğine sahiptir"
+	},
 	"explore_auto_discover": {
 		"message": "Otomatik Keşfet"
 	},
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Listelenen en yüksek sipariş fiyatına ögeyi satar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
+	},
+	"inventory_badge_level": {
+		"message": "Rozet seviyesi: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Parlak rozet seviyesi: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Rozet işlenmedi"
 	},
 	"options": {
 		"message": "Ayarlar"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Hızlı satmayı otomatik olarak kabul et"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Koleksiyon kartlarında ve hızlandırma paketlerinde rozet seviyesini göster"
 	},
 	"options_display_market_price_others": {
 		"message": "Diğer kullanıcıların envanterlerindeki ögelerin market fiyatını göster"

@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "У SteamDB є можливість автоматично пропускати ці сторінки перевірки віку"
+	},
 	"explore_auto_discover": {
 		"message": "Автодослідження"
 	},

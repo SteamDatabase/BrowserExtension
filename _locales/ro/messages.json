@@ -106,7 +106,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB cel mai mic preț înregistrat este <b>$price$</b> și peste 2 ani este <b>$price_limited$</b>",
+		"message": "SteamDB cel mai mic preț înregistrat este <b>$price$</b> și în ultimii 2 ani este <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB are opțiunea de a sări automat peste paginile de verificare a vârstei"
+	},
 	"explore_auto_discover": {
 		"message": "Auto-descoperire"
 	},
@@ -172,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Ștergerea cozii de prea multe ori a eșuat. Poți încerca din nou mai târziu."
+		"message": "Ștergerea cozii a eșuat de prea multe ori. Poți încerca din nou mai târziu."
 	},
 	"explore_finished": {
 		"message": "Lista a fost explorată."

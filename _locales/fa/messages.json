@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB گزینه‌ای برای ردکردن صفحات بررسی سِن به صورت خودکار دارد"
+	},
 	"explore_auto_discover": {
 		"message": "اکتشاف خودکار"
 	},
@@ -171,8 +174,23 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "خطای بیش از حد در پاک‌سازی صف. می‌توانید بعدا تلاش کنید."
+	},
 	"explore_finished": {
 		"message": "صف بررسی شده است."
+	},
+	"explore_saleitem_claim": {
+		"message": "دریافت پاداش"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "دریافت پاداش روزانه در صورت وجود."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "در حال دریافت پاداش روزانه…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "در حال حاضر پاداشی برای دریافت وجود ندارد."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "کالای بعدی در دسترس: $datetime$",
@@ -181,6 +199,18 @@
 				"content": "$1",
 				"example": "01.07.2024, 20:00:00",
 				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "خطا در دریافت پاداش روزانه."
+	},
+	"explore_saleitem_success": {
+		"message": "پاداش جدید دریافت شد: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
 			}
 		}
 	},
@@ -573,6 +603,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "افزودن دکمه برای نمایش لیست اکتشافات در زمان حراج به صورت خودکار"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "بازگشت به صفحه کارت‌های بازی پس از خریدن کارت‌های باقی‌مانده"
 	},
 	"options_builtin_achievements_global": {
 		"message": "بهبود صفحه دستاوردهای جهانی"

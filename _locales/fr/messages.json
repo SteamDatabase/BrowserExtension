@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB a un paramètre permettant d'ignorer automatiquement ces pages de vérification d'âge"
+	},
 	"explore_auto_discover": {
 		"message": "Découverte automatique"
 	},
@@ -172,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Trop d'échecs de vidage de la file d'attente. Vous pouvez réessayer plus tard."
+		"message": "Trop d'échecs de vidage de la file d'attente. Vous pourrez réessayer plus tard."
 	},
 	"explore_finished": {
 		"message": "Liste explorée."
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Liste l'article pour le prix d'achat le plus élevé\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
+	},
+	"inventory_badge_level": {
+		"message": "Votre niveau de badge : $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Votre niveau de badge premium : $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Aucun badge fabriqué"
 	},
 	"options": {
 		"message": "Paramètres"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Accepter automatiquement les ventes rapides"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Afficher le niveau de badge sur les cartes à échanger et les booster packs"
 	},
 	"options_display_market_price_others": {
 		"message": "Afficher le prix du marché des articles dans l'inventaire des autres utilisateurs"

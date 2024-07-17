@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB có thể giúp bạn bỏ qua các trang kiểm tra độ tuổi"
+	},
 	"explore_auto_discover": {
 		"message": "Tự động khám phá"
 	},
@@ -172,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Không thể xoá hàng đợi quá nhiều lần. Bạn có thể thử lại sau."
+		"message": "Không thể hoàn thành hàng chờ quá nhiều lần. Vui lòng thử lại sau."
 	},
 	"explore_finished": {
 		"message": "Đã xem hết hàng chờ."
@@ -181,7 +184,7 @@
 		"message": "Nhận phần thưởng"
 	},
 	"explore_saleitem_claim_description": {
-		"message": "Nhận phần thưởng miễn phí hàng ngày nếu có."
+		"message": "Nhận phần thưởng miễn phí hàng ngày (nếu có)."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Đang nhận phần thưởng hàng ngày…"
@@ -200,7 +203,7 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Nhận phần thưởng hàng ngày thất bại."
+		"message": "Không thể nhận phần thưởng hàng ngày."
 	},
 	"explore_saleitem_success": {
 		"message": "Đã nhận phần thưởng mới: $item$.",
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Đăng bán với giá đang được đặt mua cao nhất\n\nGiá hiển thị là số tiền bạn nhận được (chưa kèm phí)"
+	},
+	"inventory_badge_level": {
+		"message": "Cấp huy hiệu: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Cấp huy hiệu cao cấp: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Chưa tạo huy hiệu"
 	},
 	"options": {
 		"message": "Cài đặt"
@@ -511,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Tự động chấp nhận bán nhanh"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Đính kèm cấp huy hiệu trong thông tin của thẻ trao đổi và gói bổ sung"
+	},
 	"options_display_market_price_others": {
 		"message": "Hiển thị giá thị trường của món hàng trong kho đồ của người khác"
 	},
@@ -602,7 +629,7 @@
 		"message": "Thêm một nút để tự động khám phá hàng chờ trong các đợt giảm giá"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Chuyển hướng trở lại trang thẻ trò chơi sau khi mua những thẻ còn lại"
+		"message": "Quay lại trang huy hiệu sau khi mua những thẻ còn lại"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Cải thiện trang thành tựu toàn cầu"

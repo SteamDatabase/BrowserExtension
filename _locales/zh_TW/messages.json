@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB 可選項自動跳過此種年齡檢查頁面"
+	},
 	"explore_auto_discover": {
 		"message": "自動探索佇列"
 	},
@@ -181,7 +184,7 @@
 		"message": "領取獎勵"
 	},
 	"explore_saleitem_claim_description": {
-		"message": "領取可取的免費每日獎勵。"
+		"message": "將取得可領取的免費每日獎勵。"
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "每日獎勵領取中…"
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "列出最高購買訂單價格的項目\n顯示的價格是您收到的金額 (不含服務費)"
+	},
+	"inventory_badge_level": {
+		"message": "您的徽章等級：$level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "您的閃亮徽章等級：$level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "沒有已合成徽章"
 	},
 	"options": {
 		"message": "選項"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "自動接受快速出售"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "在交換卡片和擴充包上顯示徽章等級："
 	},
 	"options_display_market_price_others": {
 		"message": "在其他人的物品庫中顯示物品市集價格"

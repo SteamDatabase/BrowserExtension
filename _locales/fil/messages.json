@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "May opsyon ang SteamDB na awtomatikong laktawan ang mga ganitong pahinang pangtsek ng edad"
+	},
 	"explore_auto_discover": {
 		"message": "Awtomatikong pagdiskubre"
 	},

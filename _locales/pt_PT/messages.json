@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "O SteamDB tem uma opção para saltar automaticamente estas páginas de verificação de idade"
+	},
 	"explore_auto_discover": {
 		"message": "Auto-descobrir"
 	},
@@ -172,25 +175,25 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Não foi possível explorar a lista devido a muitas tentativas. Tente novamente mais tarde."
+		"message": "Falha ao limpar a fila demasiadas vezes. Podes tentar novamente mais tarde."
 	},
 	"explore_finished": {
 		"message": "A fila foi explorada."
 	},
 	"explore_saleitem_claim": {
-		"message": "Resgatar recompensa"
+		"message": "Reclamar recompensa"
 	},
 	"explore_saleitem_claim_description": {
-		"message": "Resgate a recompensa diária gratuita se houver uma."
+		"message": "Reclamar a recompensa diária gratuita se houver uma."
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "Resgatando recompensa diária…"
+		"message": "A reclamar a recompensa diária…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Nenhuma recompensa diária para resgatar no momento."
+		"message": "Nenhuma recompensa diária para reclamar no momento."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Próxima recompensa disponível em: $datetime$",
+		"message": "Próximo item disponível: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -200,10 +203,10 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Falha ao resgatar recompensa diária."
+		"message": "Falha ao reclamar a recompensa diária."
 	},
 	"explore_saleitem_success": {
-		"message": "Nova recompensa resgatada: $item$.",
+		"message": "Nova recompensa reclamada: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Coloca à venda pelo preço de compra mais alto anunciado\n\nPreço mostrado é o dinheiro que recebes (sem taxas)"
+	},
+	"inventory_badge_level": {
+		"message": "O nível da tua medalha: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Nível da medalha \"foil\": $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nenhuma medalha criada"
 	},
 	"options": {
 		"message": "Opções"
@@ -511,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Aceitar automaticamente vendas rápidas"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Mostra o nível da medalha nas cartas e nos boosters"
+	},
 	"options_display_market_price_others": {
 		"message": "Mostrar o preço de mercado de itens no inventário dos outros utilizadores"
 	},
@@ -602,7 +629,7 @@
 		"message": "Adicionar um botão para automaticamente descobrir a fila durante as promoções"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Redirecionar de volta para a página de cartas de jogos após comprar as cartas restantes"
+		"message": "Redirecionar de volta para a página de cartas do jogo depois de comprar as cartas restantes"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Melhorar a página de proezas globais"

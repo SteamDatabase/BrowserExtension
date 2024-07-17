@@ -65,7 +65,7 @@
 		"message": "Última atualização:"
 	},
 	"app_depots_updated_short": {
-		"message": "Atualizado:",
+		"message": "Atualizado",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -148,6 +148,9 @@
 				"example": "15"
 			}
 		}
+	},
+	"agecheck_option_hint": {
+		"message": "Dica: a extensão do SteamDB pode pular automaticamente a verificação de idade"
 	},
 	"explore_auto_discover": {
 		"message": "Explorar automaticamente"
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Anuncia o item pelo preço de encomenda mais alto listado\n\nO preço exibido é o valor que você receberá (sem tarifas)"
+	},
+	"inventory_badge_level": {
+		"message": "Nível da insígnia: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Nível da insígnia brilhante: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nenhuma insígnia fabricada"
 	},
 	"options": {
 		"message": "Opções"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Confirmar anúncio de forma automática"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Exibir o nível da insígnia nas descrições de cartas colecionáveis e pacotes bônus"
 	},
 	"options_display_market_price_others": {
 		"message": "Exibir o preço dos itens nos inventários de outros usuários"

@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB ma możliwość automatycznego pomijania tych stron z kontrolą wieku"
+	},
 	"explore_auto_discover": {
 		"message": "Odkryj automatycznie"
 	},
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
+	},
+	"inventory_badge_level": {
+		"message": "Poziom Twojej odznaki: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Poziom Twojej foliowanej odznaki: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nie stworzono odznaki"
 	},
 	"options": {
 		"message": "Opcje"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automatycznie akceptuj szybką sprzedaż"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Wyświetlaj poziom odznaki na kartach kolekcjonerskich i pakietach kart"
 	},
 	"options_display_market_price_others": {
 		"message": "Wyświetl cenę rynkową przedmiotów w ekwipunkach innych użytkowników"

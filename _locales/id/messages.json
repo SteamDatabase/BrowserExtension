@@ -49,7 +49,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ dari $total$ review adalah positif (Semua jenis Pembelian)",
+		"message": "$positive$ dari $total$ review adalah positif (semua jenis pembelian)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -78,13 +78,13 @@
 		"message": "Puncak 24 jam:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Puncak sepanjang masa:"
+		"message": "Harga Tertinggi sepanjang masa:"
 	},
 	"app_stats_followers": {
 		"message": "Pengikut:"
 	},
 	"app_lowest_price": {
-		"message": "Harga Terendah tercacat SteamDB adalah <b>$price$</b>",
+		"message": "Harga Terendah tercatat SteamDB adalah <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -172,7 +172,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Berkali-kali gagal untuk menghapus antrian. Coba lagi nanti."
+		"message": "Gagal untuk menghapus antrian berulang kali. Coba lagi nanti."
 	},
 	"explore_finished": {
 		"message": "Antrian telah dijelajahi."

@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "In den SteamDB-Einstellungen kannst du das Überspringen der Alterskontrolle aktivieren"
+	},
 	"explore_auto_discover": {
 		"message": "Entdeckungsliste überspringen"
 	},
@@ -181,7 +184,7 @@
 		"message": "Belohnung einlösen"
 	},
 	"explore_saleitem_claim_description": {
-		"message": "Kostenlose tägliche Belohnung einlösen, sofern es sie gibt."
+		"message": "Kostenlose tägliche Belohnung einlösen, sofern es eine gibt."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Tägliche Belohnung wird eingelöst …"
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Stellt den Gegenstand zum höchsten angegebenen Kaufauftragspreis ein\n\nDer angezeigte Preis ist das Geld, das du erhältst (ohne Gebühren)"
+	},
+	"inventory_badge_level": {
+		"message": "Level vom Abzeichen: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Level vom Glanzabzeichen: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Kein Abzeichen hergestellt"
 	},
 	"options": {
 		"message": "Einstellungen"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Schnellverkauf automatisch akzeptieren"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Level vom Abzeichen bei Sammelkarten und Booster-Packs anzeigen"
 	},
 	"options_display_market_price_others": {
 		"message": "Marktpreis vom Gegenstand im Inventar anderer Nutzer anzeigen"

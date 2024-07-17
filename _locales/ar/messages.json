@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB لديه خِيار لتخطي صفحات التحقق من العمر تلقائياً"
+	},
 	"explore_auto_discover": {
 		"message": "اكتشاف تلقائي"
 	},
@@ -171,11 +174,17 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "فشل مسح قائمة الانتظار مرات عديده. يمكنك المحاولة مرة أخرى لاحقاً."
+	},
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
 	},
 	"explore_saleitem_claim": {
 		"message": "استلام الجائزة"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "احصل على المكافأة اليومية المجانية إذا كان هناك مكافأة."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "تحصيل المكافأة اليومية…"

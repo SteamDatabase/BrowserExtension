@@ -106,7 +106,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB žemiausia užfiksuota kaina yra <b>$price$</b>, o 2 metų žemiausia kaina yra <b>$price_limited$</b>",
+		"message": "SteamDB mažiausia užfiksuota kaina yra <b>$price$</b> su <b>-$price_limited$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -173,6 +173,9 @@
 	},
 	"explore_finished": {
 		"message": "Eilė buvo peržiūrėta."
+	},
+	"explore_saleitem_claim": {
+		"message": "Atsiimti apdovanojimą"
 	},
 	"badges_idle_apps": {
 		"message": "Programos, turinčios kortelių: $amount$",
@@ -246,7 +249,7 @@
 		}
 	},
 	"achievements_sort_by_time": {
-		"message": "Rūšioti pagal laiką"
+		"message": "Rūšiuoti pagal laiką"
 	},
 	"achievements_groups_by_steamhunters": {
 		"message": "Pasiekimų grupes teikia „Steam Hunters“ per SteamDB.",

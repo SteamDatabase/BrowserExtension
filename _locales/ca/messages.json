@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB disposa d'una opció per a esquivar automàticament les pàgines de comprovació d'edat"
+	},
 	"explore_auto_discover": {
 		"message": "Autodescobreix"
 	},
@@ -179,6 +182,9 @@
 	},
 	"explore_saleitem_claim": {
 		"message": "Reclamar recompensa"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Reclama la teva recompensa diària durant totes les rebaixes."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Reclamant la recompensa diària…"

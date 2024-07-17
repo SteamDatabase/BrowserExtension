@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB heeft een optie om automatisch deze leeftijd check pagina's te overslaan"
+	},
 	"explore_auto_discover": {
 		"message": "Automatisch ontdekken"
 	},

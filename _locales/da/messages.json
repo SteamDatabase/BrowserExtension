@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB har muligheden for automatisk at springe over disse alderskontrol sider"
+	},
 	"explore_auto_discover": {
 		"message": "Auto-opdag"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Kunne ikke rydde køen for mange gange. Du kan prøve igen senere."
+	},
 	"explore_finished": {
 		"message": "Køen er blevet udforsket."
+	},
+	"explore_saleitem_claim": {
+		"message": "Indløs belønning"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Gør krav på den gratis daglige belønning, hvis der er en."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Gør krav på den daglige belønning…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Ingen daglig belønning til at gøre krav på i øjeblikket."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Næste element til rådighed: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Kunne ikke gøre krav på den daglige belønning."
+	},
+	"explore_saleitem_success": {
+		"message": "Ny belønning hævdet: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Apps til inaktiv: $amount$",
@@ -563,6 +603,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Tilføj en knap for automatisk opdagelse af køen under salg"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Omdiriger tilbage til spilkortsiden efter køb af resterende kort"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Forbedre siden for globale præstationer"

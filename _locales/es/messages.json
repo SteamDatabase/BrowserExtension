@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB tiene la opción de omitir automáticamente las páginas de verificación de edad"
+	},
 	"explore_auto_discover": {
 		"message": "Descubrir automáticamente"
 	},

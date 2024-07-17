@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDBには、これらの年齢確認ページを自動的にスキップするオプションがあります。"
+	},
 	"explore_auto_discover": {
 		"message": "自動検索"
 	},
@@ -179,6 +182,9 @@
 	},
 	"explore_saleitem_claim": {
 		"message": "報酬を受け取る"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "無料のデイリー報酬がある場合は受け取ってください。"
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "デイリー報酬を受け取る"
@@ -309,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "最も高い買い注文の価格でアイテムを販売します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
+	},
+	"inventory_badge_level": {
+		"message": "あなたのバッジレベル： $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "あなたのホイルバッジレベル： $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "バッジが作成されていません"
 	},
 	"options": {
 		"message": "オプション"
@@ -507,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "自動的にクイックセルを承認"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "トレーディングカードとブースターパックにバッジレベルを表示する"
 	},
 	"options_display_market_price_others": {
 		"message": "他のユーザーのインベントリにアイテムのマーケット価格を表示"

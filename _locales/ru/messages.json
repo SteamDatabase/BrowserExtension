@@ -72,7 +72,7 @@
 		"message": "Статистика онлайна"
 	},
 	"app_stats_online_now": {
-		"message": "Сейчас онлайн:"
+		"message": "В сети:"
 	},
 	"app_stats_peak_today": {
 		"message": "Пик за 24 часа:"
@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "Пропускайте эти страницы проверки возраста с помощью опции SteamDB"
+	},
 	"explore_auto_discover": {
 		"message": "Автоматический просмотр"
 	},
@@ -172,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Слишком много попыток очистки очереди. Попробуйте позже."
+		"message": "Слишком много попыток просмотра списка. Попробуйте позже."
 	},
 	"explore_finished": {
 		"message": "Список просмотрен."
@@ -181,7 +184,7 @@
 		"message": "Получить награду"
 	},
 	"explore_saleitem_claim_description": {
-		"message": "Получите бесплатную ежедневную награду если она есть."
+		"message": "Получите бесплатную ежедневную награду, если она есть."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Получение ежедневной награды…"
@@ -190,7 +193,7 @@
 		"message": "В данный момент ежедневная награда отсутствует."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Будет доступно через: $datetime$",
+		"message": "Следующий предмет будет доступен: $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Выставляет товар по самой высокой цене из запросов на покупку\n\nОтображаемая цена — это деньги, которые вы получаете (без комиссии)"
+	},
+	"inventory_badge_level": {
+		"message": "Уровень вашего значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Уровень вашего металлического значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Значок не создан"
 	},
 	"options": {
 		"message": "Настройки"
@@ -511,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Автоматически соглашаться на быструю продажу"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Отображать уровень значка в свойствах карточек и их наборов"
+	},
 	"options_display_market_price_others": {
 		"message": "Отображать рыночную цену товара в инвентаре других пользователей"
 	},
@@ -602,7 +629,7 @@
 		"message": "Добавить кнопку для автоматического просмотра списка рекомендаций во время распродаж"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Перенаправлять обратно на страницу игрового значка после покупки недостающих карт"
+		"message": "Перенаправлять обратно на страницу игровых карточек после покупки недостающих карт"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Улучшить страницу глобальных достижений"
