@@ -606,6 +606,7 @@ function InitAchievements( items, isPersonal )
 		const searchField = document.createElement( 'input' );
 		searchField.maxLength = 255;
 		searchField.type = 'search';
+		searchField.placeholder = _t( 'search' );
 
 		const searchFieldContainer = document.createElement( 'div' );
 		searchFieldContainer.className = 'steamdb_achievement_search';
