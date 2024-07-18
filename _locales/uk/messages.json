@@ -316,6 +316,27 @@
 	"inventory_sell_at_title": {
 		"message": "Виставляє товар за найвищою ціною із запитів на купівлю\n\nПоказана ціна - це сума, яку ви отримаєте (без врахування комісій)"
 	},
+	"inventory_badge_level": {
+		"message": "Рівень вашого значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Рівень вашого лискучого значка: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Значок не зібрано"
+	},
 	"options": {
 		"message": "Параметри"
 	},
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Автоматично приймати швидкий продаж"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Показувати рівень значка на колекційних картках та комплектах"
 	},
 	"options_display_market_price_others": {
 		"message": "Показувати ринкову ціну предмета в інвентарях інших користувачів"

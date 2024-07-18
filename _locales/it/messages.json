@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB ha un'opzione per saltare automaticamente queste pagine di controllo dell'età"
+	},
 	"explore_auto_discover": {
 		"message": "Scopri automaticamente"
 	},
@@ -274,7 +277,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "OBIETTIVI BLOCCATI:$count$",
+		"message": "OBIETTIVI BLOCCATI: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -312,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Elenca l'articolo al prezzo d'acquisto più alto\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
+	},
+	"inventory_badge_level": {
+		"message": "Il livello del tuo badge: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Il livello del tuo badge foil: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nessun badge creato"
 	},
 	"options": {
 		"message": "Opzioni"
@@ -510,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Accetta automaticamente la vendita rapida"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Mostra il livello del badge sulle carte trading e sui pacchetti booster"
 	},
 	"options_display_market_price_others": {
 		"message": "Mostra il prezzo di mercato degli articoli negli inventari degli altri utenti"
