@@ -607,6 +607,7 @@ function InitAchievements( items, isPersonal )
 		searchField.maxLength = 255;
 		searchField.type = 'search';
 		searchField.placeholder = _t( 'search' );
+		searchField.setAttribute( 'accesskey', '/' );
 
 		const searchFieldContainer = document.createElement( 'div' );
 		searchFieldContainer.className = 'steamdb_achievement_search';
@@ -655,6 +656,25 @@ function InitAchievements( items, isPersonal )
 					group.hidden = count === 0;
 				}
 			} );
+		} );
+
+		document.addEventListener( 'keydown', ( e ) =>
+		{
+			if( e.ctrlKey || e.metaKey )
+			{
+				return;
+			}
+
+			if( [ 'INPUT', 'TEXTAREA', 'SELECT', 'BUTTON' ].includes( e.target.tagName ) )
+			{
+				return;
+			}
+
+			if( e.code === 'Slash' || e.code === 'KeyS' || e.key === '/' || e.key === 's' )
+			{
+				e.preventDefault();
+				searchField.focus();
+			}
 		} );
 
 		for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
