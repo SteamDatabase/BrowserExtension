@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB ima opciju automatskog preskakanja ovih stranica za provjeru dobi"
+	},
 	"explore_auto_discover": {
 		"message": "Automatsko otkrivanje"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nije uspjelo brisanje reda čekanja previše puta. Možete pokušati ponovo kasnije."
+	},
 	"explore_finished": {
 		"message": "Red je pretražen."
+	},
+	"explore_saleitem_claim": {
+		"message": "Preuzmi nagradu"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Zatražite besplatnu dnevnu nagradu ako je dostupna."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Preuzimanje dnevne nagrade…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Trenutno nema dostupnih dnevnih nagrada."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Sljedeća stavka dostupna: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Traženje dnevne nagrade nije uspjelo."
+	},
+	"explore_saleitem_success": {
+		"message": "Zauzeta nova nagrada: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikacije za mirovanje: $amount$",
@@ -275,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Popisuje stavku po najvišoj navedenoj cijeni kupovne narudžbe\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
+	},
+	"inventory_badge_level": {
+		"message": "Vaša razina značke: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Vaša razina folijskih značka: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nije izrađena značka"
 	},
 	"options": {
 		"message": "Opcije"
@@ -474,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automatski prihvati brzu prodaju"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Prikaz razine značke na kartici za razmjenu i booster paketima"
+	},
 	"options_display_market_price_others": {
 		"message": "Prikaži tržišnu cijenu predmeta u inventarima drugih korisnika"
 	},
@@ -563,6 +627,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Dodaj gumb za automatsko otkrivanje reda tijekom rasprodaja"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Preusmjerite natrag na stranicu s igraćim kartama nakon kupnje preostalih karata"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Poboljšaj stranicu globalnih postignuća"

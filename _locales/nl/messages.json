@@ -316,6 +316,27 @@
 	"inventory_sell_at_title": {
 		"message": "Vermeld het item voor de hoogst vermelde vraagprijs\n\nWeergegeven prijs is het geld dat je krijgt (zonder vergoedingen)"
 	},
+	"inventory_badge_level": {
+		"message": "Jouw badge level: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Jouw glimmende badge level: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Geen badge gemaakt"
+	},
 	"options": {
 		"message": "Opties"
 	},
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Snelle verkoop automatisch accepteren"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Toon badge level op ruilkaarten en booster packs"
 	},
 	"options_display_market_price_others": {
 		"message": "Toon artikel marktprijs in inventaris van andere gebruikers"

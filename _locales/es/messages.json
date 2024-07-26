@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB tiene la opción de omitir automáticamente las páginas de verificación de edad"
+		"message": "SteamDB tiene una opción para omitir automáticamente las páginas de verificación de edad"
 	},
 	"explore_auto_discover": {
 		"message": "Descubrir automáticamente"
@@ -175,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Se produjo un error al borrar la cola demasiadas veces. Puede intentarlo de nuevo más tarde."
+		"message": "Se produjo un error al borrar la cola demasiadas veces. Puedes intentarlo de nuevo más tarde."
 	},
 	"explore_finished": {
 		"message": "La cola ha sido explorada."
@@ -315,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Lista el artículo al precio más alto del pedido de compra.\n\nEl precio mostrado es el dinero que recibes (sin tasas)"
+	},
+	"inventory_badge_level": {
+		"message": "Tu nivel de insignia: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Tu nivel de insignia reflectante: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Ninguna insignia fabricada"
 	},
 	"options": {
 		"message": "Opciones"
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Aceptar automáticamente la venta rápida"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Mostrar el nivel de insignias en los cromos y el pack de refuerzo"
 	},
 	"options_display_market_price_others": {
 		"message": "Mostrar el precio de mercado de los artículos en los inventarios de otros usuarios"

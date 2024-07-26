@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB има опцију да аутоматски прескочи ове странице за проверу старости"
+	},
 	"explore_auto_discover": {
 		"message": "Аутоматски-откривач"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Брисање реда није успело превише пута. Можете покушати поново касније."
+	},
 	"explore_finished": {
 		"message": "Ред је истражен."
+	},
+	"explore_saleitem_claim": {
+		"message": "Преузми награду"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Узми бесплатну дневну награду ако постоји."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Преузимање дневне награде…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Тренутно нема доступних дневних награда."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Следећа ставка доступна: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Преузимање дневне награде није успело."
+	},
+	"explore_saleitem_success": {
+		"message": "Нова награда преузета: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Апликације за мировање: $amount$",
@@ -275,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Објави артикал за највишу куповну цену\n\nПриказана цена је новац који добијате (без трошкова)"
+	},
+	"inventory_badge_level": {
+		"message": "Ваш ниво беџева: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Ваш ниво фолијских беџева: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Није направљен беџ"
 	},
 	"options": {
 		"message": "Опције"
@@ -474,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Аутоматски прихвати брзу продају"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Приказ нивоа беџева на картици за размену и \"booster\" пакетима"
+	},
 	"options_display_market_price_others": {
 		"message": "Прикажи тржишне цене артикала инвентара других корисника"
 	},
@@ -563,6 +627,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Додај дугме за аутоматско откривање реда у току попуста"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Преусмери назад на страницу са картама за игру након куповине преосталих карата"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Побољшај страницу глобалних достигнућа"

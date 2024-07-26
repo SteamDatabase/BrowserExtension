@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB har en innstilling for å automatisk hoppe over disse aldersjekk-sider"
+		"message": "SteamDB har en innstilling for å automatisk hoppe over disse aldersjekk-sidene"
 	},
 	"explore_auto_discover": {
 		"message": "Auto-oppdag"
@@ -315,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Legger ut gjenstanden for høyeste oppgitte kjøpsprisspris\n\nVist pris er pengene du mottar (uten gebyrer)"
+	},
+	"inventory_badge_level": {
+		"message": "Ditt emblemnivå: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Ditt foilemblem nivå: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Ingen emblem laget"
 	},
 	"options": {
 		"message": "Innstillinger"
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automatisk godta hurtigsalg"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Vis emblemnivå på handelskort og booster-pakker"
 	},
 	"options_display_market_price_others": {
 		"message": "Vis markedspris for gjenstander i andre brukeres lager"

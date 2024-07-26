@@ -171,8 +171,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Järjekorra tühjendamine ebaõnnestus liiga mitu korda. Saad hiljem uuesti proovida."
+	},
 	"explore_finished": {
 		"message": "Järjekord on avastatud."
+	},
+	"explore_saleitem_claim": {
+		"message": "Lunasta auhind"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Lunasta igapäevane tasuta auhind kui see on olemas."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Auhinda lunastatakse…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Igapäevast auhinda pole, mida lunastada hetkel."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Järgmine asi saadaval: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Igapäevase auhinna lunastamine ebaõnnestus."
+	},
+	"explore_saleitem_success": {
+		"message": "Uus auhind lunastatud: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "$amount$ Järelejäänud saavutusi",
@@ -275,6 +312,18 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Paneb toote müüki kõrgeima soovi hinnaga\n\nMärgitud hind on see raha mis sa saad (ilma tasudeta)"
+	},
+	"inventory_badge_level": {
+		"message": "Sinu märgi tase: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Märki pole koostatud"
 	},
 	"options": {
 		"message": "Sätted"

@@ -171,11 +171,17 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "A várólista felfedezése sikertelen több próbálkozás után is. Később próbáld újra."
+	},
 	"explore_finished": {
 		"message": "A várólista fel lett fedezve."
 	},
 	"explore_saleitem_claim": {
 		"message": "Jutalom felvétele"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Az ingyenes napi jutalom begyűjtése, ha elérhető."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Napi jutalom felvétele…"
@@ -306,6 +312,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Tárgy felajánlása eladásra a legmagasabb vételi áron\n\nA megjelenített ár az összeg amit meg fogsz kapni (azaz díjak nélkül)"
+	},
+	"inventory_badge_level": {
+		"message": "A te kitűződ szintje: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "A te fóliás kitűződ szintje: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nincs elkészítve kitűző"
 	},
 	"options": {
 		"message": "Beállítások"
@@ -505,6 +532,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Gyors eladás automatikus elfogadása"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Kitűző szintjének megjelenítése játékkártyáknál és bónuszcsomagoknál"
+	},
 	"options_display_market_price_others": {
 		"message": "Tárgyak piaci árának megjelenítése más felhasználók raktáraiban"
 	},
@@ -594,6 +624,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Legyen egy gomb a felfedezési várólista elcsalására a leárazások ideje alatt"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Visszairányítás a játékkártyák oldalára a hiányzó kártyák megvásárlása után"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Globális játékstatisztikák oldal feljavítása"
