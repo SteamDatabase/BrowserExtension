@@ -191,7 +191,7 @@ else
 					continue;
 				}
 
-				InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'sub', subid.groups.id );
+				InsertPurchaseBlockId( element.closest( '.game_purchase_action' ), 'sub', subid.groups.id );
 			}
 
 			// Link appid in demo download banner
@@ -845,6 +845,12 @@ function FormatRelativeDate( date )
 
 function InsertPurchaseBlockId( element, type, id )
 {
+	if( !element )
+	{
+		WriteLog( 'Tried to insert purchase block for non existing element', type, id );
+		return;
+	}
+
 	const span = document.createElement( 'span' );
 	span.dataset.tooltipText = _t( 'view_on_steamdb' );
 
