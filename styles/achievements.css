@@ -352,6 +352,10 @@ html {
 	outline: none;
 }
 
+.steamdb_achievement_search > input::-webkit-search-cancel-button {
+	opacity: 1;
+}
+
 @media (max-width: 600px) {
 	.steamdb_achievements_title {
 		flex-flow: row wrap;
