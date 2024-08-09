@@ -276,6 +276,27 @@
 	"inventory_sell_at_title": {
 		"message": "Vypíše položku za najvyššiu uvedenú cenu nákupnej objednávky\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
 	},
+	"inventory_badge_level": {
+		"message": "Úroveň vášho odznaku: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Úroveň vášho odznaku: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nie je vytvorený žiadny odznak"
+	},
 	"options": {
 		"message": "Možnosti"
 	},
@@ -474,6 +495,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automaticky prijať rýchly predaj"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Zobrazte úroveň odznaku na zberateľských kartách a posilňovacích balíčkoch"
+	},
 	"options_display_market_price_others": {
 		"message": "Zobraziť trhovú ceny položky v inventároch iných používateľov"
 	},
@@ -563,6 +587,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Pridať tlačidlo na automatické prechádzanie fronty počas výpredajov"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Po zakúpení zostávajúcich kariet sa presmerujte späť na stránku herných kariet"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Vylepšiť stránku globálnych úspechov"

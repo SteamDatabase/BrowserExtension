@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Přidá SteamDB odkazy a nové funkce v obchodě a komunitě Steam. Zobrazte nejnižší ceny a statistiky.",
+		"message": "Přidá odkazy na SteamDB a nové funkce v obchodě a komunitě Steam. Zobrazí nejnižší ceny a statistiky.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -42,10 +42,10 @@
 		"message": "Hledat"
 	},
 	"app_steamdb_rating": {
-		"message": "SteamDB hodnocení:"
+		"message": "Hodnocení SteamDB:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB HODNOCENÍ",
+		"message": " HODNOCENÍ STEAMDB",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
@@ -69,16 +69,16 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Online statistiky"
+		"message": "Onlinové statistiky"
 	},
 	"app_stats_online_now": {
 		"message": "Právě online:"
 	},
 	"app_stats_peak_today": {
-		"message": "24hodinový vrchol:"
+		"message": "24hodinové maximum:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Celkový rekord:"
+		"message": "Celkové maximum:"
 	},
 	"app_stats_followers": {
 		"message": "Sledující:"
@@ -93,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b> v <b>-$discount$%</b>",
+		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b>, tj. <b>−$discount$ %</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -106,7 +106,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b> a nejnižší cena za poslední 2 roky je <b>$price_limited$</b>",
+		"message": "Nejnižší zaznamenaná cena na SteamDB je <b>$price$</b> a nejnižší cena za poslední 2 roky je <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -132,7 +132,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Cena viděná $seen$ krát, naposledy $date$ ($relative$)",
+		"message": "Cena zaznamenána $seen$krát, naposledy $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -150,16 +150,16 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB má možnost tyto stránky kontroly věku automaticky přeskočit"
+		"message": "SteamDB umožňuje tyto stránky kontroly věku automaticky přeskakovat"
 	},
 	"explore_auto_discover": {
-		"message": "Automatické objevování"
+		"message": "Automaticky projít"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automaticky objevte frontu pro získání karty událostí."
+		"message": "Automaticky projít frontu pro získání akční karty."
 	},
 	"explore_generating": {
-		"message": "Vytvoření nové fronty doporučení může selhat, pokud je Steam vysoce zatížen…"
+		"message": "Vytváří se nová fronta doporučení; generování může selhat, pokud je Steam hodně zatížen…"
 	},
 	"explore_exploring": {
 		"message": "Prozkoumávání fronty… Žádost $current$ z $total$",
@@ -175,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Frontu se příliš mnohokrát nepodařilo projít. Můžete to zkusit znovu později."
+		"message": "Procházení fronty selhalo příliš mnohokrát. Můžete to zkusit znovu později."
 	},
 	"explore_finished": {
 		"message": "Fronta byla prozkoumána."
@@ -184,16 +184,16 @@
 		"message": "Vyzvednout odměnu"
 	},
 	"explore_saleitem_claim_description": {
-		"message": "Získejte denní odměnu zdarma, pokud je k dispozici."
+		"message": "Vyzvednout bezplatnou denní odměnu, pokud je k dispozici."
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Vyzvedávání denní odměny…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "V tuto chvíli není žádná denní odměna k vyzvednutí."
+		"message": "Momentálně není k vyzvednutí žádná denní odměna."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Další předmět bude k dispozici $datetime$",
+		"message": "Další předmět bude k dispozici $datetime$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -203,7 +203,7 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "Nepodařilo se získat denní odměnu."
+		"message": "Nepodařilo se vyzvednout denní odměnu."
 	},
 	"explore_saleitem_success": {
 		"message": "Vyzvednuta nová odměna: $item$.",
@@ -215,7 +215,7 @@
 		}
 	},
 	"badges_idle_apps": {
-		"message": "Aplikace k nečinnosti: $amount$",
+		"message": "Hry se získatelnými kartami: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -225,7 +225,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Aplikace k neččinosti na této stránce: $amount$",
+		"message": "Hry se získatelnými kartami na této stránce: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -235,7 +235,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Zbývající karty: $amount$",
+		"message": "Získatelné karty: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -245,7 +245,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Karty zbývající na této stránce: $amount$",
+		"message": "Získatelné karty na této stránce: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -258,7 +258,7 @@
 		"message": "Skrytý achievement: "
 	},
 	"achievement_global_unlock": {
-		"message": "Tento achievement odemnknulo $percent$ hráčů",
+		"message": "Tento achievement odemknulo $percent$ hráčů",
 		"description": "Do not add percent symbol, it will be formatted automatically",
 		"placeholders": {
 			"percent": {
@@ -289,11 +289,11 @@
 		"message": "Seřadit podle času"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Skupiny úspěchů poskytuje služba Steam Hunters prostřednictvím služby SteamDB.",
+		"message": "Seskupení achievementů poskytuje služba Steam Hunters prostřednictvím SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"inventory_list_at": {
-		"message": "Prodat za $price$",
+		"message": "Nabídnout za $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -311,10 +311,31 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "Zobrazená cena je částka, kterou obdržíte (bez poplatků)"
+		"message": "Nabídne předmět za nejnižší nabízenou prodejní cenu\n\nZobrazená cena je částka, kterou obdržíte (bez poplatků)"
 	},
 	"inventory_sell_at_title": {
-		"message": "Zobrazená cena je částka, kterou obdržíte (bez poplatků)"
+		"message": "Nabídne předmět za nejvyšší nabízenou kupní cenu\n\nZobrazená cena je částka, kterou obdržíte (bez poplatků)"
+	},
+	"inventory_badge_level": {
+		"message": "Úroveň vašeho odznaku: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Úroveň vašeho speciálního odznaku: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nevytvořen žádný odznak"
 	},
 	"options": {
 		"message": "Možnosti"
@@ -323,34 +344,34 @@
 		"message": "👋 Děkujeme za instalaci rozšíření SteamDB!"
 	},
 	"options_welcome_description": {
-		"message": "Prohlédněte si níže uvedené možnosti a zapněte ty, které chcete. Chcete-li se vrátit sem do budoucna:"
+		"message": "Prohlédněte si níže uvedené možnosti a zapněte ty, které chcete. Na tuto stránku se lze později dostat skrz:"
 	},
 	"options_welcome_option1": {
 		"message": "Stránka nastavení na SteamDB"
 	},
 	"options_welcome_option2": {
-		"message": "Rozbalovací seznam účtu na stránkách Steam"
+		"message": "Rozbalovací menu vašeho účtu na stránkách Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Vaše stránka doplňků prohlížeče"
+		"message": "Stránka doplňků vašeho prohlížeče"
 	},
 	"options_review": {
 		"message": "Zanechat recenzi pro toto rozšíření"
 	},
 	"options_permissions_description": {
-		"message": "Toto rozšíření vyžaduje další oprávnění, aby správně fungovalo na SteamDB, Steam Store, a Steam komunitě."
+		"message": "Toto rozšíření vyžaduje další oprávnění, aby správně fungovalo na stránkách SteamDB, Obchod Steam a Komunita Steam."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Udělit oprávnění"
 	},
 	"options_footer1": {
-		"message": "Vyrobeno s 💙 lidmi od <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+		"message": "Vytvořeno s 💙 lidmi na <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "Je to <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, děkujeme všem, co přispěli!"
+		"message": "Jedná se o <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, díky všem přispěvatelům!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Nezaškrklá políčka označují vestavěné funkce."
+		"message": "* Vypnutá zaškrtávátka označují vestavěné funkce."
 	},
 	"options_header_website": {
 		"message": "Webové stránky SteamDB"
@@ -374,22 +395,22 @@
 		"message": "Rozšíření"
 	},
 	"options_website_explanation": {
-		"message": "Vysvětlení"
+		"message": "Popis"
 	},
 	"options_website_explanation1": {
-		"message": "Pokud je tato možnost povolena, rozšíření bude vyžadovat některá uživatelská data (na seznamu přání, sledováno, ignorováno produkty), a produkty v košíku z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam store</a> a budou tyto produkty používat pro zvýraznění na webu."
+		"message": "Pokud je tato možnost zapnutá, rozšíření bude vyžadovat některá uživatelská data (na seznamu přání, sledováno, ignorováno a položky v košíku) z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Obchodu Steam</a>, která budou použita pro zvýrazňování webu."
 	},
 	"options_website_explanation2": {
-		"message": "Aby toto fungovalo, musíte být přihlášeni do obchodu."
+		"message": "Aby to fungovalo, musíte být přihlášeni do Obchodu Steam."
 	},
 	"options_website_explanation3": {
-		"message": "Toto je zcela obsaženo ve vašem prohlížeči a nikdy není odesílán ani na SteamDB backend."
+		"message": "Data zůstávají zcela ve vašem prohlížeči a nejsou nikdy nikam odesílána, ani na backend SteamDB."
 	},
 	"options_website_explanation4": {
-		"message": "Aby se zabránilo nadměrným požadavkům na Steam Store, jsou vaše uživatelská data uložena v místním úložišti vašeho prohlížeče."
+		"message": "Aby se zabránilo nadměrnému počtu požadavků na Obchod Steam, jsou vaše uživatelská data uložena v lokálním úložišti vašeho prohlížeče."
 	},
 	"options_website_highlight": {
-		"message": "Zvýraznit vlastněné a vysněné produkty na $domain$",
+		"message": "Zvýraznit produkty vlastněné a ze seznamu přání na $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -398,16 +419,16 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Seznam přání, sledovat a ignorovat produkty v Steam obchodě přímo ze SteamDB"
+		"message": "Měnit seznam přání, sledování a ignorování produktů v Obchodě Steam přímo ze SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Povolit skript</a> balíčků zdarma"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Povolit skript bezplatných balíčků</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Povolit další filtrování na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">obchodní stránce</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčky</a>"
+		"message": "Povolit další filtrování na stránkách <a href=\"https://steamdb.info/sales/\" target=\"_blank\">slev</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčků</a>"
 	},
 	"options_extra_data": {
-		"message": "Další data načtena z $domain$",
+		"message": "Další načídata načítaná ze $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -416,7 +437,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Pokud je zvolena volba \"$options_online_stats$\" nebo \"$options_steamdb_last_update$, rozšíření provede bezpečný požadavek na $domain$ pro získání aktuálního počtu hráčů a poslední aktualizaci hry.",
+		"message": "Pokud je zvolena volba \"$options_online_stats$\" nebo \"$options_steamdb_last_update$, rozšíření provede zabezpečený požadavek na $domain$ pro získání aktuálního počtu hráčů a data poslední aktualizace hry.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -433,7 +454,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Když je volba \"$options_steamdb_lowest_price$\" povolena, rozšíření provede bezpečný požadavek na $domain$ s vaší měnou (tu kterou si myslí Steam, že je vaše) pro získání ceny specifické hry.",
+		"message": "Pokud je volba \"$options_steamdb_lowest_price$\" povolena, rozšíření provede zabezpečený požadavek na $domain$ s vaší měnou (kterou považuje Steam za vaši) pro získání zaznamenané ceny specifické hry.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -446,7 +467,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Pokud je volba \"$options_achievement_groups$\" povolena, rozšíření provede bezpečný požadavek na $domain$, aby bylo provedeno seskupení úspěchů na stránce s údaji poskytnutými Steam Hunters.",
+		"message": "Pokud je volba \"$options_achievement_groups$\" povolena, rozšíření provede zabezpečený požadavek na $domain$ za účelem seskupení achievementů na osobní stránce achievementů pomocí údajů získaných ze Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -460,65 +481,68 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Zobrazit nejnižší zaznamenanou cenu na stránce s aplikacemi"
+		"message": "Zobrazovat nejnižší zaznamenanou cenu na stránkách produktů"
 	},
 	"options_online_stats": {
-		"message": "Zobrazit aktuální hráče a maximální špičky na stránkách produktů"
+		"message": "Zobrazovat aktuální a maximální počty hráčů na stránkách produktů"
 	},
 	"options_steamdb_last_update": {
-		"message": "Zobrazit nejnovější aktualizaci hry na stránce s produkty"
+		"message": "Zobrazovat datum poslední aktualizace na stránkách produktů"
 	},
 	"options_button_app": {
-		"message": "Zobrazit tlačítko na stránkách produktů"
+		"message": "Zobrazovat tlačítko SteamDB na stránkách produktů"
 	},
 	"options_button_pcgw": {
-		"message": "Zobrazit tlačítko PCGamingWiki na stránce s produkty"
+		"message": "Zobrazovat tlačítko PCGamingWiki na stránkách produktů"
 	},
 	"options_button_sub": {
-		"message": "Zobrazit tlačítko na stránce s balíčky"
+		"message": "Zobrazovat tlačítko SteamDB na stránkách balíčků"
 	},
 	"options_button_gamehub": {
-		"message": "Zobrazit tlačítko na stránce s komunitnými huby"
+		"message": "Zobrazovat tlačítko SteamDB na komunitních stránkách"
 	},
 	"options_button_gamecards": {
-		"message": "Zobrazit tlačítka stránky SteamDB a stránky obchodu na stránce s herními kartami"
+		"message": "Zobrazovat tlačítka SteamDB a stránky obchodu na stránce herních karet"
 	},
 	"options_link_subid": {
-		"message": "Zobrazit subID pod každou možností nákupu"
+		"message": "Zobrazovat SubID pod každou možností nákupu"
 	},
 	"options_link_subid_widget": {
-		"message": "Zobrazit subID ve věstavěných widgetech",
+		"message": "Zobrazovat SubID ve věstavěných widgetech",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Propojit každý balíček na stránce s vašimi licencemi"
+		"message": "Přidat odkaz na SteamDB pro všechny produkty na stránce vašich licencí"
 	},
 	"options_profile_calculator": {
-		"message": "Přidat odkaz na kalkulačku v komunitních profilech"
+		"message": "Přidat odkaz na kalkulačku v komunitních profilech"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Přesunout výběr hry na stránku inventáře na stranu"
+		"message": "Na stránce inventáře přesunout výběr hry na stranu"
 	},
 	"options_link_inventory": {
-		"message": "Propojit každý dárek a kupón ve vašem inventáři se SteamDB"
+		"message": "Přidat ke všem dárkům a kupónům v inventáři odkaz na SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
-		"message": "Úspěšně načtíst dárkové SubID ve vašem inventáři"
+		"message": "Správně určit SubID dárků ve vašem inventáři"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
-		"message": "Neobnovujte inventář když prodáváte položku"
+		"message": "Neobnovovat stránku inventáře po prodeji předmětu"
 	},
 	"options_enhancement_inventory_quick_sell": {
-		"message": "Přidat tlačítko na rychlé prodávání"
+		"message": "Přidat tlačítka pro zrychlený prodej"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "Automaticky přijímat rychlý prodej"
+		"message": "Automaticky potvrzovat zrychlený prodej"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Zobrazovat úroveň odznaku na sběratelských kartách a přídavných balíčcích"
 	},
 	"options_display_market_price_others": {
-		"message": "Zobrazit tržní cenu položky v inventáři ostatních uživatelů"
+		"message": "Zobrazovat tržní cenu předmětu v inventářích jiných uživatelů"
 	},
 	"options_enhancement_tradeoffer_url_items": {
-		"message": "Podpora parametrů $for_item$ a $my_item$",
+		"message": "Podporovat parametry $for_item$ a $my_item$",
 		"placeholders": {
 			"for_item": {
 				"content": "<code>for_item</code>"
@@ -532,63 +556,63 @@
 		"message": "Viz vysvětlení na GitHubu"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Potlačit upozornění \"tento obchod se zdá podezřelý\" a \"Jste si jistí, že se jedná o dárek?\" na obchodních nabídkách"
+		"message": "Potlačit upozornění „tento obchod vypadá podezřele“ a „jste si jistí, že se jedná o dárek?“ v obchodních nabídkách"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
-		"message": "Zobrazit lepší chybové zprávy, místo kryptických číselných chyb od Valve"
+		"message": "Zobrazit lepší chybové zprávy místo kryptických číselných chyb od Valve"
 	},
 	"options_enhancement_skip_agecheck": {
 		"message": "Přeskočit stránku kontroly věku"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Nastaví věl a narozeninové cookies na vždy projít"
+		"message": "Nastaví cookies věku a narozenin na vždy procházející"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "Odebrat filtr odkazů \"Opouštíte Steam\" při přecházení na externí stránky",
+		"message": "Odebrat filtr odkazů „Opouštíte Steam“ při přecházení na externí stránky",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Automaticky příjmat Účastnickou smlouvu na trhu, inventáři a na stránce aktivace klíče",
+		"message": "Automaticky příjmat Účastnickou smlouvu na stánkách tržiště, inventáře a aktivace klíče",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
-		"message": "Skrýt tlačítko \"Instalovat Steam\" v záhlaví",
+		"message": "Skrýt v záhlaví tlačítko „Instalovat Steam“",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Skrýt \"Otevřít ve Steamu\" banner"
+		"message": "Skrýt banner „Otevřít ve Steamu“"
 	},
 	"options_steamdb_rating": {
-		"message": "Zobrazit hodnocení SteamDB na stránce s aplikacemi"
+		"message": "Zobrazovat hodnocení SteamDB na stránkách produktů"
 	},
 	"options_enhancement_appicon": {
-		"message": "Zobrazit ikony produktů v obchodě a komunitní stránce",
+		"message": "Zobrazovat ikony produktů na stránkách obchodu a komunity",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "Zlepšit stránku osobních achievementů"
+		"message": "Vylepšit stránku osobních achievementů"
 	},
 	"options_achievements_global_unlock": {
-		"message": "Zobrazit procento odemčení globálního achievementu"
+		"message": "Zobrazovat celkové procento odemčení achievementu"
 	},
 	"options_modernized_achievements": {
-		"message": "Modernizovaný design"
+		"message": "Modernizovaný vzhled"
 	},
 	"options_achievement_groups": {
-		"message": "Seskupit úspěchy s daty z Steam Hunters",
+		"message": "Seskupit achievementy pomocí dat ze Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Dát skryté achievementy za prvek spoileru"
+		"message": "Zpřístupnit skryté achievementy pomocí prvku spoileru"
 	},
 	"options_prevent_store_images": {
-		"message": "Zastavit načítání obrázků na stránce obchodu s produkty"
+		"message": "Nenačítat obrázky na stránkách produktů"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Někteří vývojáři vloží megabajty obrázků do popisku produktu, které mohou chvíli trvat, než se načtou, klikněte na obrázek pro načtení"
+		"message": "Někteří vývojáři vkládají do popisu produktu megabajty obrázků, které se mohou dlouho načítat; obrázek se načte po kliknutí na ikonu"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Podporovat $award$ parametry profilu a sdílené odkazy na soubory",
+		"message": "Podporovat parametr $award$ v odkazech na profily a sdílené soubory",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"
@@ -596,24 +620,24 @@
 		}
 	},
 	"options_builtin_collapse_library": {
-		"message": "Přidat tlačítko, abyste sbalili blok \"již v knihovně\""
+		"message": "Přidat tlačítko pro sbalení bloku „máte již ve své knihovně“"
 	},
 	"options_builtin_card_drops": {
-		"message": "Zobrazit celkový počet zbývajících karetních dropů na stránce s odznaky"
+		"message": "Zobrazovat celkový počet zbývajících získatelných karet na stránce odznaků"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Přidat tlačítko pro podvádění fronty při prodeji"
+		"message": "Přidat tlačítko pro automatické projití fronty doporučení během slevových akcí"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Po zakoupení zbývajících karet přesměrovat zpět na stránku s kartami"
+		"message": "Po zakoupení zbývajících karet přesměrovat zpět na stránku s kartami"
 	},
 	"options_builtin_achievements_global": {
-		"message": "Zlepšit stránku globálních achievementů"
+		"message": "Vylepšit stránku globálních achievementů"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Odkaz na stránku s osobními achievementy"
+		"message": "Přidat odkaz na stránku osobních achievementů"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Zobrazit ikonu zámku pro uzamčené achievementy"
+		"message": "Zobrazovat ikonu zámku na uzamčených achievementech"
 	}
 }

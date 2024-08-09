@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB-ს შეუძლია ავტომატურად გამოტოვოს ეს წლოვანების შესამოწმებელი გვერდი"
+	},
 	"explore_auto_discover": {
 		"message": "ავტომატური აღმოჩენა"
 	},
@@ -173,6 +176,15 @@
 	},
 	"explore_finished": {
 		"message": "რიგი დათვალიერებულია."
+	},
+	"explore_saleitem_claim": {
+		"message": "ჯილდოს აღება"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "აიღეთ ყოველ დღიური უფასო ჯილდო თუ არის."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "აიღეთ ყოველდღიური ჯილდო…"
 	},
 	"badges_idle_apps": {
 		"message": "აპების რაოდენობა სადაც შესაძლებელია დროპების დაგდება: $amount$",

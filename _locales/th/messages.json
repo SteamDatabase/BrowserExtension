@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "เพิ่มลิงก์ SteamDB และคุณสมบัติใหม่บนร้านค้าและชุมชน Steam. ดูราคาเกมที่ต่ำที่สุดและสถิติ",
+		"message": "เพิ่มลิงก์ SteamDB และคุณสมบัติใหม่บนร้านค้า Steam และชุมชน ดูราคาและสถิติเกมต่ำสุด",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB has an option to automatically skip these age check pages"
+	},
 	"explore_auto_discover": {
 		"message": "ค้นพบอัตโนมัติ"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "ไม่สามารถล้างคิวได้หลายครั้งเกินไป คุณสามารถลองอีกครั้งในภายหลัง"
+	},
 	"explore_finished": {
 		"message": "สำรวจคิวแล้ว"
+	},
+	"explore_saleitem_claim": {
+		"message": "รับรางวัล"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "รับรางวัลรายวันฟรีหากมี"
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "รับของรางวัลประจำวัน ..."
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "ไม่มีรางวัลรายวันให้รับในขณะนี้"
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "รายการถัดไปที่มีอยู่: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "ไม่สามารถมารับเงินรางวัลประจำวันได้"
+	},
+	"explore_saleitem_success": {
+		"message": "รับของรางวัลใหม่: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "แอปที่มีดรอป: $amount$",
@@ -275,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "แสดงรายการราคาคำสั่งซื้อสูงสุดที่ระบุไว้\n\nราคาที่แสดงคือจำนวนเงินที่คุณได้รับ (ไม่มีค่าธรรมเนียม)"
+	},
+	"inventory_badge_level": {
+		"message": "ระดับตราสัญลักษณ์ของคุณ: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "ระดับป้ายฟอยล์ของคุณ: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "ไม่มีการสร้างตราสัญลักษณ์"
 	},
 	"options": {
 		"message": "ตัวเลือก"
@@ -474,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "ยอมรับการขายด่วนโดยอัตโนมัติ"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "แสดงระดับตราสัญลักษณ์บนการ์ดสะสมและบูสเตอร์แพ็ค"
+	},
 	"options_display_market_price_others": {
 		"message": "แสดงราคาตลาดของสินค้าในคลังของผู้ใช้รายอื่น"
 	},
@@ -563,6 +627,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "เพิ่มปุ่มเพื่อโกงคิวการค้นหาในระหว่างการขาย"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "เปลี่ยนเส้นทางกลับไปที่หน้าการ์ดเกมหลังจากซื้อการ์ดที่เหลือ"
 	},
 	"options_builtin_achievements_global": {
 		"message": "ปรับปรุงหน้าความสำเร็จระดับโลก"

@@ -326,7 +326,7 @@
 		}
 	},
 	"inventory_badge_foil_level": {
-		"message": "Nível da medalha \"foil\": $level$",
+		"message": "O nível da tua medalha \"foil\": $level$",
 		"placeholders": {
 			"level": {
 				"content": "%level%",

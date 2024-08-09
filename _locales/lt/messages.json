@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Pridėtos SteamDB nuorodos ir naujos funkcijos Steam parduotuvėje ir bendruomenėje. Peržiūrėkite mažiausias žaidimų kainas ir statistiką.",
+		"message": "Prideda SteamDB nuorodas ir naujas funkcijas Steam pardotuvėje bei bendruomenėje. Raskite žemiausias žaidimų kainas ir statistiką.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB turi automatinę funkciją, kurios dėka galima apeiti amžiaus patvirtinimo etapą"
+	},
 	"explore_auto_discover": {
 		"message": "Automatinė peržiūra"
 	},
@@ -171,11 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nepavyko keliskart panaikinti įrašų iš eilės. Bandykite vėliau."
+	},
 	"explore_finished": {
 		"message": "Eilė buvo peržiūrėta."
 	},
 	"explore_saleitem_claim": {
 		"message": "Atsiimti apdovanojimą"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Atsiimkite kasdienį apdovanojimą, jei toks yra."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Gaunamas kasdienis apdovanojimas…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Kasdienio apdovanojimo šiuo metu nėra."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Artimiausias apdovanojimas: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nepavyko gauti kasdienio apdovanojimo."
+	},
+	"explore_saleitem_success": {
+		"message": "Gautas naujas apdovanojimas: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Programos, turinčios kortelių: $amount$",

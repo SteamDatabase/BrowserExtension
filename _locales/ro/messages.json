@@ -316,6 +316,27 @@
 	"inventory_sell_at_title": {
 		"message": "Listează articolul pentru cel mai mare preț al ordinului de cumpărare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"
 	},
+	"inventory_badge_level": {
+		"message": "Nivelul insignei dvs.: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Nivelul insignei de foi dvs: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Nici o insignă făcută"
+	},
 	"options": {
 		"message": "Opțiuni"
 	},
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Acceptă automat vânzarea rapidă"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Afișează nivelul de insignă pe cardurile de tranzacționare și pachetele de booster"
 	},
 	"options_display_market_price_others": {
 		"message": "Afișează prețul pieței în inventarele altor utilizatori"
