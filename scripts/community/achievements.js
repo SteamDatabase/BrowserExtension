@@ -120,15 +120,23 @@ function InitAchievements( items, isPersonal )
 
 	extraTabs.append( CreateFoldButton( true ) );
 
-	if( window.innerWidth < 600 )
+	function AppendExtraTabs()
 	{
-		extraTabs.classList.add( 'steamdb_stats_extra_tabs_mobile' );
-		document.querySelector( '#subtabs' ).insertAdjacentElement( 'afterend', extraTabs );
+		if( window.innerWidth < 600 )
+		{
+			extraTabs.classList.add( 'steamdb_stats_extra_tabs_mobile' );
+			document
+				.querySelector( '#subtabs' )
+				.insertAdjacentElement( 'afterend', extraTabs );
+		}
+		else
+		{
+			extraTabs.classList.remove( 'steamdb_stats_extra_tabs_mobile' );
+			document.querySelector( '#tabs' ).append( extraTabs );
+		}
 	}
-	else
-	{
-		document.querySelector( '#tabs' ).append( extraTabs );
-	}
+	AppendExtraTabs();
+	window.addEventListener( 'resize', AppendExtraTabs );
 
 	if( isPersonal )
 	{
