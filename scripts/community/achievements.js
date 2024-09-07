@@ -402,6 +402,7 @@ function InitAchievements( items, isPersonal )
 			const progress = element.querySelector( '.achievementProgressBar' );
 			let progressText = null;
 			let progressWidth = null;
+			let progressTextCompare = null;
 			let unlock;
 			let unlockCompare;
 
@@ -430,7 +431,19 @@ function InitAchievements( items, isPersonal )
 
 			if( progress )
 			{
-				progressText = progress.querySelector( '.progressText' ).textContent.trim();
+				if ( isCompareView )
+				{
+					progressText = progress
+						.querySelector( '.progressText' )
+						?.childNodes[0].textContent.trim();
+					progressTextCompare = progress
+						.querySelector( '.progressText .compareVal' )
+						?.textContent.trim();
+				}
+				else
+				{
+					progressText = progress.querySelector( '.progressText' ).textContent.trim();
+				}
 				progressWidth = progress.querySelector( '.progress' ).style.width;
 			}
 
@@ -459,6 +472,7 @@ function InitAchievements( items, isPersonal )
 					unlock,
 					unlockCompare,
 					progressText,
+					progressTextCompare,
 					progressWidth,
 				} );
 
@@ -499,11 +513,11 @@ function InitAchievements( items, isPersonal )
 		const CreateUnlockRow = ( isLeftPlayer, unlock, unlockTimestamp ) =>
 		{
 			const unlockRow = document.createElement( 'div' );
-			unlockRow.className = 'steamdb_achievement_unlock_row';
+			unlockRow.className = 'steamdb_achievement_status_row';
 			if( isCompareView )
 			{
 				const avatar = document.createElement( 'img' );
-				avatar.className = 'steamdb_achievement_unlock_avatar';
+				avatar.className = 'steamdb_achievement_status_avatar';
 				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
 				unlockRow.append( avatar );
 			}
@@ -511,7 +525,7 @@ function InitAchievements( items, isPersonal )
 			text.textContent = unlock;
 			if( !isLeftPlayer )
 			{
-				text.className = 'steamdb_achievement_unlock_row_compare';
+				text.className = 'steamdb_achievement_status_row_compare';
 			}
 
 			if( unlockTimestamp )
@@ -526,6 +540,50 @@ function InitAchievements( items, isPersonal )
 			unlockRow.append( text );
 			return unlockRow;
 		};
+
+		const CreateProgressRow = ( isLeftPlayer, progressText, progressWidth ) =>
+		{
+			const progressRow = document.createElement( 'div' );
+			progressRow.className = 'steamdb_achievement_status_row';
+
+			const progress = document.createElement( 'div' );
+			progress.className = 'steamdb_achievement_progress';
+
+			if( isCompareView )
+			{
+				const avatar = document.createElement( 'img' );
+				avatar.className = 'steamdb_achievement_status_avatar';
+				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+				progressRow.append( avatar );
+
+				if ( !isLeftPlayer ) {
+					progress.classList.add('steamdb_achievement_progress_compare')
+					// removing parentheses from start and end of second player progress text
+					progressText = progressText.replace(/^\(/, '').replace(/\)$/, '');
+	
+					// trying to get progress based on text, as right player doesn't have a bar
+					const [ current, total ] = progressText.split('/').map(val => val.replace(/\,/g, '').trim());
+					progressWidth = Math.ceil(current / total * 100) + '%';
+				}
+			}
+			console.log(progressWidth);
+			const text = document.createElement( 'div' );
+			text.textContent = progressText;
+			progress.append( text );
+
+			const progressBar = document.createElement( 'div' );
+			progressBar.className = 'steamdb_achievement_progressbar';
+			progress.append( progressBar );
+
+			const progressBarInner = document.createElement( 'div' );
+			progressBarInner.className = 'steamdb_achievement_progressbar_inner';
+			progressBarInner.style.width = progressWidth;
+			progressBar.append( progressBarInner );
+
+			progressRow.append(progress);
+
+			return progressRow;
+		}
 
 		const CreateAchievementRow = ( { id, achievement, player } ) =>
 		{
@@ -619,55 +677,45 @@ function InitAchievements( items, isPersonal )
 				nameContainer.append( globalUnlock );
 			}
 
-			if( player.unlock || player.unlockCompare )
+			const status = document.createElement( 'div' );
+			status.className = 'steamdb_achievement_status';
+
+			if( player.unlock )
 			{
-				const unlock = document.createElement( 'div' );
-				unlock.className = 'steamdb_achievement_unlock';
-
-				if( player.unlock )
-				{
-					const unlockRow = CreateUnlockRow(
-						true,
-						player.unlock,
-						player.unlockTimestamp,
-					);
-					unlock.append( unlockRow );
-				}
-
-				if( player.unlockCompare )
-				{
-					const unlockRow = CreateUnlockRow(
-						false,
-						player.unlockCompare,
-						null,
-					);
-					unlock.append( unlockRow );
-				}
-
-				element.append( unlock );
-
-				if( achievement.global_unlock < 0.1 )
-				{
-					image.classList.add( 'steamdb_achievement_image_glow' );
-				}
+				const unlockRow = CreateUnlockRow(
+					true,
+					player.unlock,
+					player.unlockTimestamp,
+				);
+				status.append( unlockRow );
 			}
-			else if( player.progressText )
+			else if ( player.progressText )
 			{
-				const progress = document.createElement( 'div' );
-				progress.className = 'steamdb_achievement_progress';
-				progress.textContent = player.progressText;
-
-				const progressBar = document.createElement( 'div' );
-				progressBar.className = 'steamdb_achievement_progressbar';
-				progress.append( progressBar );
-
-				const progressBarInner = document.createElement( 'div' );
-				progressBarInner.className = 'steamdb_achievement_progressbar_inner';
-				progressBarInner.style.width = player.progressWidth;
-				progressBar.append( progressBarInner );
-
-				element.append( progress );
+				const progressRow = CreateProgressRow( true, player.progressText, player.progressWidth );
+				status.append( progressRow );
 			}
+
+			if( player.unlockCompare )
+			{
+				const unlockRow = CreateUnlockRow(
+					false,
+					player.unlockCompare,
+					null,
+				);
+				status.append( unlockRow );
+			}
+			else if ( player.progressTextCompare )
+			{
+				const progressRow = CreateProgressRow( false, player.progressTextCompare, null );
+				status.append( progressRow );
+			}
+
+			if( achievement.global_unlock < 0.1 )
+			{
+				image.classList.add( 'steamdb_achievement_image_glow' );
+			}
+
+			element.append( status );
 
 			return element;
 		};
