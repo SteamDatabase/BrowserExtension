@@ -248,11 +248,27 @@ html {
 }
 
 .steamdb_achievement_unlock {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 	margin-left: auto;
-	text-align: right;
 	font-size: 12px;
 	font-weight: 400;
 	color: #8b929a;
+}
+
+.steamdb_achievement_unlock_row {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.steamdb_achievement_unlock_avatar {
+	height: 16px;
+}
+
+.steamdb_achievement_unlock_row_compare {
+	color: #ffcc6a;
 }
 
 .steamdb_achievement_unlock_global {

@@ -138,11 +138,16 @@ function InitAchievements( items, isPersonal )
 	AppendExtraTabs();
 	window.addEventListener( 'resize', AppendExtraTabs );
 
+	let isCompareView = false;
+	let leftAvatarUrl = null;
+	let rightAvatarUrl = null;
 	if( isPersonal )
 	{
 		if( oldContainer.classList.contains( 'compare_view' ) )
 		{
-			return;
+			isCompareView = true;
+			leftAvatarUrl = document.querySelector( '.topAvatarsLeft img' ).src;
+			rightAvatarUrl = document.querySelector( '.topAvatarsRight img' ).src;
 		}
 	}
 	else
@@ -398,10 +403,25 @@ function InitAchievements( items, isPersonal )
 			let progressText = null;
 			let progressWidth = null;
 			let unlock;
+			let unlockCompare;
 
 			if( isPersonal )
 			{
-				unlock = element.querySelector( '.achieveUnlockTime' )?.textContent.trim();
+				if( isCompareView )
+				{
+					unlock = element
+						.querySelector( '.achieveUnlockTime' )
+						?.childNodes[ 0 ].textContent.trim();
+					unlockCompare = element
+						.querySelector( '.achieveUnlockTime .compareVal' )
+						?.textContent.trim();
+				}
+				else
+				{
+					unlock = element
+						.querySelector( '.achieveUnlockTime' )
+						?.textContent.trim();
+				}
 			}
 			else
 			{
@@ -437,6 +457,7 @@ function InitAchievements( items, isPersonal )
 
 				AddAchievementData( id, domId, achievement, {
 					unlock,
+					unlockCompare,
 					progressText,
 					progressWidth,
 				} );
@@ -474,6 +495,37 @@ function InitAchievements( items, isPersonal )
 			minimumFractionDigits: 1,
 			maximumFractionDigits: 1,
 		} );
+
+		const CreateUnlockRow = ( isLeftPlayer, unlock, unlockTimestamp ) =>
+		{
+			const unlockRow = document.createElement( 'div' );
+			unlockRow.className = 'steamdb_achievement_unlock_row';
+			if( isCompareView )
+			{
+				const avatar = document.createElement( 'img' );
+				avatar.className = 'steamdb_achievement_unlock_avatar';
+				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+				unlockRow.append( avatar );
+			}
+			const text = document.createElement( 'div' );
+			text.textContent = unlock;
+			if( !isLeftPlayer )
+			{
+				text.className = 'steamdb_achievement_unlock_row_compare';
+			}
+
+			if( unlockTimestamp )
+			{
+				const relativeUnlock = document.createElement( 'div' );
+				relativeUnlock.textContent = FormatRelativeTime(
+					Date.now() - unlockTimestamp,
+				);
+				text.append( relativeUnlock );
+			}
+
+			unlockRow.append( text );
+			return unlockRow;
+		};
 
 		const CreateAchievementRow = ( { id, achievement, player } ) =>
 		{
@@ -571,15 +623,28 @@ function InitAchievements( items, isPersonal )
 			{
 				const unlock = document.createElement( 'div' );
 				unlock.className = 'steamdb_achievement_unlock';
-				unlock.textContent = player.unlock;
-				element.append( unlock );
 
-				if( player.unlockTimestamp )
+				if( player.unlock )
 				{
-					const relativeUnlock = document.createElement( 'div' );
-					relativeUnlock.textContent = FormatRelativeTime( Date.now() - player.unlockTimestamp );
-					unlock.append( relativeUnlock );
+					const unlockRow = CreateUnlockRow(
+						true,
+						player.unlock,
+						player.unlockTimestamp,
+					);
+					unlock.append( unlockRow );
 				}
+
+				if( player.unlockCompare )
+				{
+					const unlockRow = CreateUnlockRow(
+						false,
+						player.unlockCompare,
+						null,
+					);
+					unlock.append( unlockRow );
+				}
+
+				element.append( unlock );
 
 				if( achievement.global_unlock < 0.1 )
 				{
