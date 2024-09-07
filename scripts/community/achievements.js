@@ -619,7 +619,7 @@ function InitAchievements( items, isPersonal )
 				nameContainer.append( globalUnlock );
 			}
 
-			if( player.unlock )
+			if( player.unlock || player.unlockCompare )
 			{
 				const unlock = document.createElement( 'div' );
 				unlock.className = 'steamdb_achievement_unlock';
