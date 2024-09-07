@@ -431,11 +431,11 @@ function InitAchievements( items, isPersonal )
 
 			if( progress )
 			{
-				if ( isCompareView )
+				if( isCompareView )
 				{
 					progressText = progress
 						.querySelector( '.progressText' )
-						?.childNodes[0].textContent.trim();
+						?.childNodes[ 0 ].textContent.trim();
 					progressTextCompare = progress
 						.querySelector( '.progressText .compareVal' )
 						?.textContent.trim();
@@ -556,14 +556,15 @@ function InitAchievements( items, isPersonal )
 				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
 				progressRow.append( avatar );
 
-				if ( !isLeftPlayer ) {
-					progress.classList.add('steamdb_achievement_progress_compare')
+				if( !isLeftPlayer )
+				{
+					progress.classList.add( 'steamdb_achievement_progress_compare' );
 					// removing parentheses from start and end of second player progress text
-					progressText = progressText.replace(/^\(/, '').replace(/\)$/, '');
-	
+					progressText = progressText.replace( /^\(/, '' ).replace( /\)$/, '' );
+
 					// trying to get progress based on text, as right player doesn't have a bar
-					const [ current, total ] = progressText.split('/').map(val => val.replace(/\,/g, '').trim());
-					progressWidth = Math.ceil(current / total * 100) + '%';
+					const [ current, total ] = progressText.split( '/' ).map( val => val.replace( /,/g, '' ).trim() );
+					progressWidth = Math.ceil( current / total * 100 ) + '%';
 				}
 			}
 
@@ -580,10 +581,10 @@ function InitAchievements( items, isPersonal )
 			progressBarInner.style.width = progressWidth;
 			progressBar.append( progressBarInner );
 
-			progressRow.append(progress);
+			progressRow.append( progress );
 
 			return progressRow;
-		}
+		};
 
 		const CreateAchievementRow = ( { id, achievement, player } ) =>
 		{
@@ -689,7 +690,7 @@ function InitAchievements( items, isPersonal )
 				);
 				status.append( unlockRow );
 			}
-			else if ( player.progressText )
+			else if( player.progressText )
 			{
 				const progressRow = CreateProgressRow( true, player.progressText, player.progressWidth );
 				status.append( progressRow );
@@ -704,7 +705,7 @@ function InitAchievements( items, isPersonal )
 				);
 				status.append( unlockRow );
 			}
-			else if ( player.progressTextCompare )
+			else if( player.progressTextCompare )
 			{
 				const progressRow = CreateProgressRow( false, player.progressTextCompare, null );
 				status.append( progressRow );
@@ -717,7 +718,7 @@ function InitAchievements( items, isPersonal )
 
 			element.append( status );
 
-			if ( isCompareView )
+			if( isCompareView )
 			{
 				const image = document.createElement( 'img' );
 				image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare ? achievement.icon : achievement.icon_gray}`;
@@ -1056,6 +1057,10 @@ function InitAchievements( items, isPersonal )
 			gameLogoElement.hidden = true;
 
 			document.querySelector( '#topSummaryAchievements .achieveBar' )?.classList.add( 'steamdb_achievement_progressbar' );
+			if( isCompareView )
+			{
+				document.querySelector( '#topSummaryAchievements :nth-child(2 of .achieveBar)' )?.classList.add( 'steamdb_achievement_progressbar' );
+			}
 
 			// As we are completely redrawing the achievement list, sorting added by
 			// Augmented Steam won't work it, hide their sorting to prevent user confusion

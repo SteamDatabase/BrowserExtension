@@ -321,6 +321,10 @@ html {
 	width: 0%;
 }
 
+:nth-child(2 of .steamdb_achievement_progressbar) .achieveBarProgress {
+	background: #ffcc6a;
+}
+
 .steamdb_achievement_progress_compare .steamdb_achievement_progressbar_inner {
 	background: #8f723b;
 }
