@@ -348,6 +348,7 @@ function InitAchievements( items, isPersonal )
 		{
 			const update = achievementUpdates[ updateId ];
 			update.earned = 0;
+			update.earnedCompare = 0;
 			update.achievementData = [];
 			update.earnedDetailsElement = null;
 
@@ -378,6 +379,11 @@ function InitAchievements( items, isPersonal )
 			if( ach.player.unlock )
 			{
 				update.earned++;
+			}
+
+			if( ach.player.unlockCompare )
+			{
+				update.earnedCompare++;
 			}
 		};
 
@@ -510,7 +516,7 @@ function InitAchievements( items, isPersonal )
 			maximumFractionDigits: 1,
 		} );
 
-		const CreateUnlockRow = ( isLeftPlayer, unlock, unlockTimestamp ) =>
+		const CreateUnlockRow = ( unlock, unlockTimestamp, isLeftPlayer ) =>
 		{
 			const unlockRow = document.createElement( 'div' );
 			unlockRow.className = 'steamdb_achievement_status_row';
@@ -541,7 +547,7 @@ function InitAchievements( items, isPersonal )
 			return unlockRow;
 		};
 
-		const CreateProgressRow = ( isLeftPlayer, progressText, progressWidth ) =>
+		const CreateProgressRow = ( progressText, progressWidth, isLeftPlayer = true ) =>
 		{
 			const progressRow = document.createElement( 'div' );
 			progressRow.className = 'steamdb_achievement_status_row';
@@ -684,30 +690,30 @@ function InitAchievements( items, isPersonal )
 			if( player.unlock )
 			{
 				const unlockRow = CreateUnlockRow(
-					true,
 					player.unlock,
 					player.unlockTimestamp,
+					true,
 				);
 				status.append( unlockRow );
 			}
 			else if( player.progressText )
 			{
-				const progressRow = CreateProgressRow( true, player.progressText, player.progressWidth );
+				const progressRow = CreateProgressRow( player.progressText, player.progressWidth, true );
 				status.append( progressRow );
 			}
 
 			if( player.unlockCompare )
 			{
 				const unlockRow = CreateUnlockRow(
-					false,
 					player.unlockCompare,
 					null,
+					false,
 				);
 				status.append( unlockRow );
 			}
 			else if( player.progressTextCompare )
 			{
-				const progressRow = CreateProgressRow( false, player.progressTextCompare, null );
+				const progressRow = CreateProgressRow( player.progressTextCompare, null, false );
 				status.append( progressRow );
 			}
 
@@ -807,6 +813,26 @@ function InitAchievements( items, isPersonal )
 			}
 		} );
 
+		const CreateProgressSummary = ( earned, total, isLeftPlayer = true ) =>
+		{
+			const percentage = earned / total;
+			const progress = document.createElement( 'div' );
+			progress.className = 'steamdb_achievement_progress';
+			if( !isLeftPlayer ) progress.classList.add( 'steamdb_achievement_progress_compare' );
+			progress.textContent = `${earned} / ${total} (${percentFormatter.format( percentage )})`;
+
+			const progressBar = document.createElement( 'div' );
+			progressBar.className = 'steamdb_achievement_progressbar';
+			progress.append( progressBar );
+
+			const progressBarInner = document.createElement( 'div' );
+			progressBarInner.className = 'steamdb_achievement_progressbar_inner';
+			progressBarInner.style.width = Math.round( percentage * 100 ) + '%';
+			progressBar.append( progressBarInner );
+
+			return progress;
+		};
+
 		for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
 		{
 			const update = achievementUpdates[ updateId ];
@@ -873,20 +899,13 @@ function InitAchievements( items, isPersonal )
 				summary.append( summaryText );
 
 				{
-					const percentage = update.earned / update.achievementData.length;
-					const progress = document.createElement( 'div' );
-					progress.className = 'steamdb_achievement_progress';
-					progress.textContent = `${update.earned} / ${update.achievementData.length} (${percentFormatter.format( percentage )})`;
+					const progress = CreateProgressSummary( update.earned, update.achievementData.length, true );
+					summaryText.append( progress );
+				}
 
-					const progressBar = document.createElement( 'div' );
-					progressBar.className = 'steamdb_achievement_progressbar';
-					progress.append( progressBar );
-
-					const progressBarInner = document.createElement( 'div' );
-					progressBarInner.className = 'steamdb_achievement_progressbar_inner';
-					progressBarInner.style.width = Math.round( percentage * 100 ) + '%';
-					progressBar.append( progressBarInner );
-
+				if( isCompareView )
+				{
+					const progress = CreateProgressSummary( update.earnedCompare, update.achievementData.length, false );
 					summaryText.append( progress );
 				}
 
