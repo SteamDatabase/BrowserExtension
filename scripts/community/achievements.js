@@ -614,7 +614,11 @@ function InitAchievements( items, isPersonal )
 			name.textContent = achievement.localized_name;
 			nameContainer.append( name );
 
-			if( achievement.hidden && !player.unlock )
+			if(
+				achievement.hidden &&
+				( ( !player.unlock && !isCompareView ) ||
+				( !player.unlockCompare && isCompareView ) )
+			)
 			{
 				const hiddenAch = document.createElement( 'i' );
 				hiddenAch.textContent = _t( 'hidden_achievement' );
