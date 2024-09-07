@@ -566,7 +566,7 @@ function InitAchievements( items, isPersonal )
 					progressWidth = Math.ceil(current / total * 100) + '%';
 				}
 			}
-			console.log(progressWidth);
+
 			const text = document.createElement( 'div' );
 			text.textContent = progressText;
 			progress.append( text );
@@ -716,6 +716,14 @@ function InitAchievements( items, isPersonal )
 			}
 
 			element.append( status );
+
+			if ( isCompareView )
+			{
+				const image = document.createElement( 'img' );
+				image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare ? achievement.icon : achievement.icon_gray}`;
+				image.className = 'steamdb_achievement_image';
+				element.append( image );
+			}
 
 			return element;
 		};
