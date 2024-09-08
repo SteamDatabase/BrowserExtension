@@ -557,7 +557,7 @@ function InitAchievements( items, isPersonal )
 		const CreateProgressRow = ( progressText, progressWidth, isLeftPlayer = true ) =>
 		{
 			const progressRow = document.createElement( 'div' );
-			progressRow.className = 'steamdb_achievement_status_row';
+			progressRow.className = 'steamdb_achievement_status_row steamdb_achievement_status_locked';
 
 			const progress = document.createElement( 'div' );
 			progress.className = 'steamdb_achievement_progress';
