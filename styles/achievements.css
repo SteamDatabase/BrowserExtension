@@ -256,6 +256,7 @@ html {
 	flex-direction: column;
 	gap: 5px;
 	margin-left: auto;
+	text-align: right;
 	font-size: 12px;
 	font-weight: 400;
 	color: #8b929a;
