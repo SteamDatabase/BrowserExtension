@@ -153,7 +153,7 @@
 		"message": "SteamDB yaş doğrulamalarını otomatik olarak atlama seçeneğine sahiptir"
 	},
 	"explore_auto_discover": {
-		"message": "Otomatik Keşfet"
+		"message": "Otomatik keşfet"
 	},
 	"explore_auto_discover_description": {
 		"message": "Etkinlik kartı almak için kuyruğu otomatik olarak keşfeder."

@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "ל-SteamDB יש את האפשרות לדלג על דפי בדיקות הגיל האלו באופן אוטומטי"
+	},
 	"explore_auto_discover": {
 		"message": "גילוי אוטומטי"
 	},
@@ -176,6 +179,40 @@
 	},
 	"explore_finished": {
 		"message": "הגילוי נצפה."
+	},
+	"explore_saleitem_claim": {
+		"message": "אסוף את הפרס"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "אסוף את הפרס החינמי היומי אם קיים כזה."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "אוסף את הפרס היומי…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "לא קיים פרס חינמי יומי לאסוף כרגע."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "זמינות הפריט הבא: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "כישלון באיסוף הפרס היומי."
+	},
+	"explore_saleitem_success": {
+		"message": "הפרס הבא נאסף: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "אפלקיציות להפסיק: $amount$",
@@ -278,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "מכניס את הפריט במחיר הגבוהה ביותר מממחיר השוק\n\nהמחיר המוצג הוא הכסף המתקבל (בלי עמלות)"
+	},
+	"inventory_badge_level": {
+		"message": "רמת התג שלך: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "רמת התג הכסוף שלך: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "לא נוצר תג"
 	},
 	"options": {
 		"message": "הגדרות"
@@ -476,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "אשר אוטומטית מכירה מהירה"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "הצג את רמת התג על כרטיסים וחבילות בוסטר"
 	},
 	"options_display_market_price_others": {
 		"message": "הצג מחירי חפצים בתיק של משתמש אחר"

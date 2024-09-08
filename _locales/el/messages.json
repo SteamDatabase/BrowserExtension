@@ -7,7 +7,7 @@
 		"message": "Επιλογές SteamDB"
 	},
 	"steamdb_calculator": {
-		"message": "Υπολογιστής SteamDB"
+		"message": "Υπολογιστικό εργαλείο SteamDB"
 	},
 	"steamstatus": {
 		"message": "Ελέγξτε στο $domain$",
@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "Το SteamDB έχει την επιλογή να παρακάμπτει αυτόματα αυτές τις σελίδες ελέγχου ηλικίας"
+	},
 	"explore_auto_discover": {
 		"message": "Ανακαλύψετε-Αυτόματα"
 	},
@@ -159,7 +162,7 @@
 		"message": "Δημιουργία νέας σειράς ανακάλυψης, αυτό μπορεί να αποτύχει αν το Steam είναι υπό υψηλή χρησιμότητα…"
 	},
 	"explore_exploring": {
-		"message": "Εξερευνώντας την ουρά… Αίτηση $current$ από $total$",
+		"message": "Εξερευνώντας την ουρά… Αίτημα $current$ από $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Απέτυχε η εκκαθάριση της ουράς πάρα πολλές φορές. Μπορείτε να δοκιμάσετε ξανά αργότερα."
+	},
 	"explore_finished": {
-		"message": "Η σειρά έχει εξερευνηθεί."
+		"message": "Η ουρά έχει εξερευνηθεί."
+	},
+	"explore_saleitem_claim": {
+		"message": "Διεκδίκηση Ανταμοιβής"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Διεκδικήστε την δωρεάν καθημερινή ανταμοιβή εάν υπάρχει."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Διεκδικώντας την ημερήσια ανταμοιβή…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Δεν υπάρχει καθημερινή ανταμοιβή για να διεκδικήσετε αυτή τη στιγμή."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "$datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Αποτυχία διεκδίκησης της ημερήσιας ανταμοιβής."
+	},
+	"explore_saleitem_success": {
+		"message": "Νέα ανταμοιβή διεκδικήθηκε: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Εφαρμογές σε αδράνεια: $amount$",
@@ -275,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Τοποθετεί το αντικείμενο για την υψηλότερη τιμή πώλησης\n\nΗ τιμή που εμφανίζεται είναι τα χρήματα που λαμβάνετε (χωρίς τέλη)"
+	},
+	"inventory_badge_level": {
+		"message": "Επίπεδο εμβλημάτων: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Επίπεδο περιγραμμένων εμβλημάτων: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Δεν κατασκευάστηκε έμβλημα"
 	},
 	"options": {
 		"message": "Επιλογές"
@@ -474,6 +535,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Αυτόματη αποδοχή γρήγορης πώλησης"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Προβολή επιπέδου εμβλήματος επάνω σε κάρτες ανταλλαγής και ενισχυτικά πακέτα"
+	},
 	"options_display_market_price_others": {
 		"message": "Εμφάνιση τιμής αγοράς αντικειμένων στα αποθέματα άλλων χρηστών"
 	},
@@ -563,6 +627,9 @@
 	},
 	"options_builtin_queue_cheat": {
 		"message": "Πρόσθεση κουμπιού ώστε να διαπερνάτε τη σειρά ανακάλυψης αυτόματα κατά τη διάρκεια προσφορών"
+	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Ανακατεύθυνση πίσω στη σελίδα καρτών του παιχνιδιού μόλις αγοραστούν και οι εναπομείναντες"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Βελτίωση της σελίδας παγκόσμιων επιτευγμάτων"

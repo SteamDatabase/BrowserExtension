@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB rendelkezik egy opcióval mely automatikusan kihagyja az életkor ellenőrzési oldalakat"
+	},
 	"explore_auto_discover": {
 		"message": "Automatikus felfedezés"
 	},

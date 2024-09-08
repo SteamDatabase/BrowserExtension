@@ -316,6 +316,27 @@
 	"inventory_sell_at_title": {
 		"message": "عَرض العنصر بأعلى سعر شراء مطلوب\n\nالسعر المعروض هو المبلغ الذي تتلقاه (دون رسوم)"
 	},
+	"inventory_badge_level": {
+		"message": "مستوى الشارة الخاصة بك: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "مستوى الشارة الخاصة بك: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "لا توجد شارة مصنوعة"
+	},
 	"options": {
 		"message": "الخيارات"
 	},
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "قبول البيع السريع تلقائياً"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "عرض مستوى الشارة على بطاقات التداول وحزم التعزيز"
 	},
 	"options_display_market_price_others": {
 		"message": "عرض سعر السوق للعنصر في مخزونات المستخدمين الآخرين"

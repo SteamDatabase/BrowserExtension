@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB 可以自动跳过这些年龄验证页面"
+		"message": "SteamDB 能够自动跳过此类年龄检查页面"
 	},
 	"explore_auto_discover": {
 		"message": "自动探索队列"
@@ -175,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "队列探索失败次数过多，请稍后再试"
+		"message": "探索队列多次失败，请稍后再试。"
 	},
 	"explore_finished": {
 		"message": "队列探索完成。"

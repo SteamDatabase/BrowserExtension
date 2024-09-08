@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB:llä on asetus jolla voi ohittaa nämä iän tarkistus sivun auto maattisesti"
+		"message": "SteamDB:ssä on asetus, jolla voi ohittaa iäntarkistussivut automaattisesti"
 	},
 	"explore_auto_discover": {
 		"message": "Automaattinen löytöjono"
@@ -315,6 +315,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
+	},
+	"inventory_badge_level": {
+		"message": "Kunniamerkkisi taso: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Kiiltävän kunniamerkkisi taso: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Kunniamerkkiä ei ole luotu"
 	},
 	"options": {
 		"message": "Asetukset"
@@ -513,6 +534,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Hyväksy pikamyynti automaattisesti"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Näytä kunniamerkin taso keräilykorteissa ja tehostepaketeissa"
 	},
 	"options_display_market_price_others": {
 		"message": "Näytä tavaroiden kauppahinta muiden käyttäjien tavaraluetteloissa"
