@@ -120,21 +120,38 @@ function InitAchievements( items, isPersonal )
 
 	extraTabs.append( CreateFoldButton( true ) );
 
-	if( window.innerWidth < 600 )
+	function AppendExtraTabs( firstTime = false )
 	{
-		extraTabs.classList.add( 'steamdb_stats_extra_tabs_mobile' );
-		document.querySelector( '#subtabs' ).insertAdjacentElement( 'afterend', extraTabs );
+		if( window.innerWidth < 600 )
+		{
+			if( extraTabs.classList.contains( 'steamdb_stats_extra_tabs_mobile' ) )
+			{
+				return;
+			}
+			extraTabs.classList.add( 'steamdb_stats_extra_tabs_mobile' );
+			document
+				.querySelector( '#subtabs' )
+				.insertAdjacentElement( 'afterend', extraTabs );
+		}
+		else if( firstTime || extraTabs.classList.contains( 'steamdb_stats_extra_tabs_mobile' ) )
+		{
+			extraTabs.classList.remove( 'steamdb_stats_extra_tabs_mobile' );
+			document.querySelector( '#tabs' ).append( extraTabs );
+		}
 	}
-	else
-	{
-		document.querySelector( '#tabs' ).append( extraTabs );
-	}
+	AppendExtraTabs( true );
+	window.addEventListener( 'resize', () => AppendExtraTabs( false ) );
 
+	let isCompareView = false;
+	let leftAvatarUrl = null;
+	let rightAvatarUrl = null;
 	if( isPersonal )
 	{
 		if( oldContainer.classList.contains( 'compare_view' ) )
 		{
-			return;
+			isCompareView = true;
+			leftAvatarUrl = document.querySelector( '.topAvatarsLeft img' ).src;
+			rightAvatarUrl = document.querySelector( '.topAvatarsRight img' ).src;
 		}
 	}
 	else
@@ -335,6 +352,7 @@ function InitAchievements( items, isPersonal )
 		{
 			const update = achievementUpdates[ updateId ];
 			update.earned = 0;
+			update.earnedCompare = 0;
 			update.achievementData = [];
 			update.earnedDetailsElement = null;
 
@@ -366,6 +384,11 @@ function InitAchievements( items, isPersonal )
 			{
 				update.earned++;
 			}
+
+			if( ach.player.unlockCompare )
+			{
+				update.earnedCompare++;
+			}
 		};
 
 		let badAchievementsLogged = 10;
@@ -389,11 +412,27 @@ function InitAchievements( items, isPersonal )
 			const progress = element.querySelector( '.achievementProgressBar' );
 			let progressText = null;
 			let progressWidth = null;
+			let progressTextCompare = null;
 			let unlock;
+			let unlockCompare;
 
 			if( isPersonal )
 			{
-				unlock = element.querySelector( '.achieveUnlockTime' )?.textContent.trim();
+				if( isCompareView )
+				{
+					unlock = element
+						.querySelector( '.achieveUnlockTime' )
+						?.childNodes[ 0 ].textContent.trim();
+					unlockCompare = element
+						.querySelector( '.achieveUnlockTime .compareVal' )
+						?.textContent.trim();
+				}
+				else
+				{
+					unlock = element
+						.querySelector( '.achieveUnlockTime' )
+						?.textContent.trim();
+				}
 			}
 			else
 			{
@@ -402,7 +441,19 @@ function InitAchievements( items, isPersonal )
 
 			if( progress )
 			{
-				progressText = progress.querySelector( '.progressText' ).textContent.trim();
+				if( isCompareView )
+				{
+					progressText = progress
+						.querySelector( '.progressText' )
+						?.childNodes[ 0 ].textContent.trim();
+					progressTextCompare = progress
+						.querySelector( '.progressText .compareVal' )
+						?.textContent.trim();
+				}
+				else
+				{
+					progressText = progress.querySelector( '.progressText' ).textContent.trim();
+				}
 				progressWidth = progress.querySelector( '.progress' ).style.width;
 			}
 
@@ -429,7 +480,9 @@ function InitAchievements( items, isPersonal )
 
 				AddAchievementData( id, domId, achievement, {
 					unlock,
+					unlockCompare,
 					progressText,
+					progressTextCompare,
 					progressWidth,
 				} );
 
@@ -467,6 +520,97 @@ function InitAchievements( items, isPersonal )
 			maximumFractionDigits: 1,
 		} );
 
+		const CreateUnlockRow = ( unlock, unlockTimestamp, isLeftPlayer ) =>
+		{
+			const unlockRow = document.createElement( 'div' );
+			unlockRow.className = 'steamdb_achievement_status_row';
+
+			const text = document.createElement( 'div' );
+			text.textContent = unlock;
+			unlockRow.append( text );
+
+			if( !isLeftPlayer )
+			{
+				text.className = 'steamdb_achievement_status_row_compare';
+			}
+
+			if( unlockTimestamp )
+			{
+				const relativeUnlock = document.createElement( 'div' );
+				relativeUnlock.textContent = FormatRelativeTime(
+					Date.now() - unlockTimestamp,
+				);
+				text.append( relativeUnlock );
+			}
+
+			if( isCompareView )
+			{
+				const avatar = document.createElement( 'img' );
+				avatar.className = 'steamdb_achievement_status_avatar';
+				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+				unlockRow.append( avatar );
+			}
+
+			return unlockRow;
+		};
+
+		const CreateProgressRow = ( progressText, progressWidth, isLeftPlayer = true ) =>
+		{
+			const progressRow = document.createElement( 'div' );
+			progressRow.className = 'steamdb_achievement_status_row steamdb_achievement_status_locked';
+
+			const progress = document.createElement( 'div' );
+			progress.className = 'steamdb_achievement_progress';
+			progressRow.append( progress );
+
+			if( !isLeftPlayer )
+			{
+				progress.classList.add( 'steamdb_achievement_progress_compare' );
+				// removing parentheses from start and end of second player progress text
+				progressText = progressText.replace( /^\(/, '' ).replace( /\)$/, '' );
+
+				// trying to get progress based on text, as right player doesn't have a bar
+				const [ current, total ] = progressText.split( '/' ).map( val => val.replace( /,/g, '' ).trim() );
+				progressWidth = Math.ceil( current / total * 100 ) + '%';
+			}
+
+			const info = document.createElement( 'div' );
+			info.textContent = progressText;
+			progress.append( info );
+
+			const progressBar = document.createElement( 'div' );
+			progressBar.className = 'steamdb_achievement_progressbar';
+			info.append( progressBar );
+
+			const progressBarInner = document.createElement( 'div' );
+			progressBarInner.className = 'steamdb_achievement_progressbar_inner';
+			progressBarInner.style.width = progressWidth;
+			progressBar.append( progressBarInner );
+
+			if( isCompareView )
+			{
+				const avatar = document.createElement( 'img' );
+				avatar.className = 'steamdb_achievement_status_avatar';
+				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+				progressRow.append( avatar );
+			}
+
+			return progressRow;
+		};
+
+		const CreateLockRow = ( isLeftPlayer ) =>
+		{
+			const lockRow = document.createElement( 'div' );
+			lockRow.className = 'steamdb_achievement_status_row steamdb_achievement_status_locked';
+
+			const avatar = document.createElement( 'img' );
+			avatar.className = 'steamdb_achievement_status_avatar';
+			avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+			lockRow.append( avatar );
+
+			return lockRow;
+		};
+
 		const CreateAchievementRow = ( { id, achievement, player } ) =>
 		{
 			const element = document.createElement( 'div' );
@@ -489,7 +633,11 @@ function InitAchievements( items, isPersonal )
 			name.textContent = achievement.localized_name;
 			nameContainer.append( name );
 
-			if( achievement.hidden && !player.unlock )
+			if(
+				achievement.hidden &&
+				( ( !player.unlock && !isCompareView ) ||
+				( !player.unlockCompare && isCompareView ) )
+			)
 			{
 				const hiddenAch = document.createElement( 'i' );
 				hiddenAch.textContent = _t( 'hidden_achievement' );
@@ -559,41 +707,62 @@ function InitAchievements( items, isPersonal )
 				nameContainer.append( globalUnlock );
 			}
 
+			const status = document.createElement( 'div' );
+			status.className = 'steamdb_achievement_status';
+
 			if( player.unlock )
 			{
-				const unlock = document.createElement( 'div' );
-				unlock.className = 'steamdb_achievement_unlock';
-				unlock.textContent = player.unlock;
-				element.append( unlock );
-
-				if( player.unlockTimestamp )
-				{
-					const relativeUnlock = document.createElement( 'div' );
-					relativeUnlock.textContent = FormatRelativeTime( Date.now() - player.unlockTimestamp );
-					unlock.append( relativeUnlock );
-				}
-
-				if( achievement.global_unlock < 0.1 )
-				{
-					image.classList.add( 'steamdb_achievement_image_glow' );
-				}
+				const unlockRow = CreateUnlockRow(
+					player.unlock,
+					player.unlockTimestamp,
+					true,
+				);
+				status.append( unlockRow );
 			}
 			else if( player.progressText )
 			{
-				const progress = document.createElement( 'div' );
-				progress.className = 'steamdb_achievement_progress';
-				progress.textContent = player.progressText;
+				const progressRow = CreateProgressRow( player.progressText, player.progressWidth, true );
+				status.append( progressRow );
+			}
+			else if( isCompareView )
+			{
+				const locked = CreateLockRow( true );
+				status.append( locked );
+			}
 
-				const progressBar = document.createElement( 'div' );
-				progressBar.className = 'steamdb_achievement_progressbar';
-				progress.append( progressBar );
+			if( player.unlockCompare )
+			{
+				const unlockRow = CreateUnlockRow(
+					player.unlockCompare,
+					null,
+					false,
+				);
+				status.append( unlockRow );
+			}
+			else if( player.progressTextCompare )
+			{
+				const progressRow = CreateProgressRow( player.progressTextCompare, null, false );
+				status.append( progressRow );
+			}
+			else if( isCompareView )
+			{
+				const locked = CreateLockRow( false );
+				status.append( locked );
+			}
 
-				const progressBarInner = document.createElement( 'div' );
-				progressBarInner.className = 'steamdb_achievement_progressbar_inner';
-				progressBarInner.style.width = player.progressWidth;
-				progressBar.append( progressBarInner );
+			if( achievement.global_unlock < 0.1 )
+			{
+				image.classList.add( 'steamdb_achievement_image_glow' );
+			}
 
-				element.append( progress );
+			element.append( status );
+
+			if( isCompareView )
+			{
+				const image = document.createElement( 'img' );
+				image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare ? achievement.icon : achievement.icon_gray}`;
+				image.className = 'steamdb_achievement_image';
+				element.append( image );
 			}
 
 			return element;
@@ -677,6 +846,39 @@ function InitAchievements( items, isPersonal )
 			}
 		} );
 
+		const CreateProgressSummary = ( earned, total, isLeftPlayer = true ) =>
+		{
+			const percentage = earned / total;
+			const progress = document.createElement( 'div' );
+			progress.className = 'steamdb_achievement_progress';
+			if( !isLeftPlayer ) progress.classList.add( 'steamdb_achievement_progress_compare' );
+
+			const info = document.createElement( 'div' );
+			info.className = 'steamdb_achievement_progress_info';
+			info.textContent = `${earned} / ${total} (${percentFormatter.format( percentage )})`;
+
+			const progressBar = document.createElement( 'div' );
+			progressBar.className = 'steamdb_achievement_progressbar';
+
+			const progressBarInner = document.createElement( 'div' );
+			progressBarInner.className = 'steamdb_achievement_progressbar_inner';
+			progressBarInner.style.width = Math.round( percentage * 100 ) + '%';
+			progressBar.append( progressBarInner );
+
+			info.append( progressBar );
+			progress.append( info );
+
+			if( isCompareView )
+			{
+				const avatar = document.createElement( 'img' );
+				avatar.className = 'steamdb_achievement_progress_avatar';
+				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+				progress.append( avatar );
+			}
+
+			return progress;
+		};
+
 		for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
 		{
 			const update = achievementUpdates[ updateId ];
@@ -743,20 +945,13 @@ function InitAchievements( items, isPersonal )
 				summary.append( summaryText );
 
 				{
-					const percentage = update.earned / update.achievementData.length;
-					const progress = document.createElement( 'div' );
-					progress.className = 'steamdb_achievement_progress';
-					progress.textContent = `${update.earned} / ${update.achievementData.length} (${percentFormatter.format( percentage )})`;
+					const progress = CreateProgressSummary( update.earned, update.achievementData.length, true );
+					summaryText.append( progress );
+				}
 
-					const progressBar = document.createElement( 'div' );
-					progressBar.className = 'steamdb_achievement_progressbar';
-					progress.append( progressBar );
-
-					const progressBarInner = document.createElement( 'div' );
-					progressBarInner.className = 'steamdb_achievement_progressbar_inner';
-					progressBarInner.style.width = Math.round( percentage * 100 ) + '%';
-					progressBar.append( progressBarInner );
-
+				if( isCompareView )
+				{
+					const progress = CreateProgressSummary( update.earnedCompare, update.achievementData.length, false );
 					summaryText.append( progress );
 				}
 
@@ -926,7 +1121,13 @@ function InitAchievements( items, isPersonal )
 
 			gameLogoElement.hidden = true;
 
-			document.querySelector( '#topSummaryAchievements .achieveBar' )?.classList.add( 'steamdb_achievement_progressbar' );
+			document.querySelectorAll( '#topSummaryAchievements .achieveBar' ).forEach( ( el, i ) =>
+			{
+				el.classList.add( 'steamdb_achievement_progressbar' );
+
+				// Second progress bar at the top belongs to the second player
+				if( i === 1 ) el.classList.add( 'steamdb_achievement_progress_compare' );
+			} );
 
 			// As we are completely redrawing the achievement list, sorting added by
 			// Augmented Steam won't work it, hide their sorting to prevent user confusion
@@ -937,7 +1138,7 @@ function InitAchievements( items, isPersonal )
 
 		if( sortButton )
 		{
-			HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow );
+			HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView );
 		}
 	}
 }
@@ -1031,7 +1232,7 @@ function FormatRelativeTime( ms )
 	return relativeDateFormatter.format( -year, 'year' );
 }
 
-function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow )
+function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView )
 {
 	sortButton.addEventListener( 'click', ( e ) =>
 	{
@@ -1105,7 +1306,11 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 						throw new Error( 'Mismatching achievement icon' );
 					}
 
-					const unlock = otherAchievement.querySelector( '.achieveUnlockTime' )?.textContent.trim();
+					const unlock = isCompareView
+						? otherAchievement.querySelector( '.achieveUnlockTime' )
+							?.childNodes[ 0 ].textContent.trim()
+						: otherAchievement.querySelector( '.achieveUnlockTime' )
+							?.textContent.trim();
 
 					if( !unlock )
 					{
