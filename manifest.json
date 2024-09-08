@@ -381,6 +381,18 @@
 			]
 		},
 		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"https://steamcommunity.com/id/*/stats/CSGO*",
+				"https://steamcommunity.com/profiles/*/stats/CSGO*"
+			],
+			"js":
+			[
+				"scripts/community/achievements_cs2.js"
+			]
+		},
+		{
 			"matches":
 			[
 				"https://steamcommunity.com/stats/*/achievements*"
