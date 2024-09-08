@@ -390,6 +390,10 @@
 			"js":
 			[
 				"scripts/community/achievements_cs2.js"
+			],
+			"css":
+			[
+				"styles/achievements_cs2.css"
 			]
 		},
 		{
