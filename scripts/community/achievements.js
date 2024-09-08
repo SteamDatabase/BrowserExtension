@@ -528,7 +528,7 @@ function InitAchievements( items, isPersonal )
 			const text = document.createElement( 'div' );
 			text.textContent = unlock;
 			unlockRow.append( text );
-			
+
 			if( !isLeftPlayer )
 			{
 				text.className = 'steamdb_achievement_status_row_compare';
@@ -574,7 +574,7 @@ function InitAchievements( items, isPersonal )
 				progressWidth = Math.ceil( current / total * 100 ) + '%';
 			}
 
-			const info = document.createElement('div');
+			const info = document.createElement( 'div' );
 			info.textContent = progressText;
 			progress.append( info );
 
