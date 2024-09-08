@@ -417,4 +417,8 @@ html {
 		max-width: 200px;
 		width: 100%;
 	}
+
+	.steamdb_achievement_image_compare {
+		display: none;
+	}
 }
