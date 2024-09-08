@@ -527,6 +527,8 @@ function InitAchievements( items, isPersonal )
 
 			const text = document.createElement( 'div' );
 			text.textContent = unlock;
+			unlockRow.append( text );
+			
 			if( !isLeftPlayer )
 			{
 				text.className = 'steamdb_achievement_status_row_compare';
@@ -540,7 +542,6 @@ function InitAchievements( items, isPersonal )
 				);
 				text.append( relativeUnlock );
 			}
-			unlockRow.append( text );
 
 			if( isCompareView )
 			{
@@ -560,6 +561,7 @@ function InitAchievements( items, isPersonal )
 
 			const progress = document.createElement( 'div' );
 			progress.className = 'steamdb_achievement_progress';
+			progressRow.append( progress );
 
 			if( !isLeftPlayer )
 			{
@@ -572,20 +574,18 @@ function InitAchievements( items, isPersonal )
 				progressWidth = Math.ceil( current / total * 100 ) + '%';
 			}
 
-			const text = document.createElement( 'div' );
-			text.textContent = progressText;
-			progress.append( text );
+			const info = document.createElement('div');
+			info.textContent = progressText;
+			progress.append( info );
 
 			const progressBar = document.createElement( 'div' );
 			progressBar.className = 'steamdb_achievement_progressbar';
-			progress.append( progressBar );
+			info.append( progressBar );
 
 			const progressBarInner = document.createElement( 'div' );
 			progressBarInner.className = 'steamdb_achievement_progressbar_inner';
 			progressBarInner.style.width = progressWidth;
 			progressBar.append( progressBarInner );
-
-			progressRow.append( progress );
 
 			if( isCompareView )
 			{
