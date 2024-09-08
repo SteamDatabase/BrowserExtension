@@ -598,6 +598,19 @@ function InitAchievements( items, isPersonal )
 			return progressRow;
 		};
 
+		const CreateLockRow = ( isLeftPlayer ) =>
+		{
+			const lockRow = document.createElement( 'div' );
+			lockRow.className = 'steamdb_achievement_status_row steamdb_achievement_status_locked';
+
+			const avatar = document.createElement( 'img' );
+			avatar.className = 'steamdb_achievement_status_avatar';
+			avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+			lockRow.append( avatar );
+
+			return lockRow;
+		};
+
 		const CreateAchievementRow = ( { id, achievement, player } ) =>
 		{
 			const element = document.createElement( 'div' );
@@ -711,6 +724,11 @@ function InitAchievements( items, isPersonal )
 				const progressRow = CreateProgressRow( player.progressText, player.progressWidth, true );
 				status.append( progressRow );
 			}
+			else if( isCompareView )
+			{
+				const locked = CreateLockRow( true );
+				status.append( locked );
+			}
 
 			if( player.unlockCompare )
 			{
@@ -725,6 +743,11 @@ function InitAchievements( items, isPersonal )
 			{
 				const progressRow = CreateProgressRow( player.progressTextCompare, null, false );
 				status.append( progressRow );
+			}
+			else if( isCompareView )
+			{
+				const locked = CreateLockRow( false );
+				status.append( locked );
 			}
 
 			if( achievement.global_unlock < 0.1 )
@@ -829,16 +852,29 @@ function InitAchievements( items, isPersonal )
 			const progress = document.createElement( 'div' );
 			progress.className = 'steamdb_achievement_progress';
 			if( !isLeftPlayer ) progress.classList.add( 'steamdb_achievement_progress_compare' );
-			progress.textContent = `${earned} / ${total} (${percentFormatter.format( percentage )})`;
+
+			const info = document.createElement( 'div' );
+			info.className = 'steamdb_achievement_progress_info';
+			info.textContent = `${earned} / ${total} (${percentFormatter.format( percentage )})`;
 
 			const progressBar = document.createElement( 'div' );
 			progressBar.className = 'steamdb_achievement_progressbar';
-			progress.append( progressBar );
 
 			const progressBarInner = document.createElement( 'div' );
 			progressBarInner.className = 'steamdb_achievement_progressbar_inner';
 			progressBarInner.style.width = Math.round( percentage * 100 ) + '%';
 			progressBar.append( progressBarInner );
+
+			info.append( progressBar );
+			progress.append( info );
+
+			if( isCompareView )
+			{
+				const avatar = document.createElement( 'img' );
+				avatar.className = 'steamdb_achievement_progress_avatar';
+				avatar.src = isLeftPlayer ? leftAvatarUrl : rightAvatarUrl;
+				progress.append( avatar );
+			}
 
 			return progress;
 		};

@@ -22,6 +22,10 @@ html {
 	top: 22px;
 }
 
+#topSummaryAchievements .compareVal {
+	margin-top: 10px;
+}
+
 .steamdb_global_achievements_page {
 	padding: 0 !important;
 }
@@ -261,11 +265,15 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: end;
-	gap: 5px;
+	gap: 8px;
 }
 
 .steamdb_achievement_status_avatar {
 	height: 24px;
+}
+
+.steamdb_achievement_status_locked .steamdb_achievement_status_avatar {
+	opacity: .2;
 }
 
 .steamdb_achievement_status_row_compare {
@@ -282,6 +290,8 @@ html {
 }
 
 .steamdb_achievement_progress {
+	display: flex;
+	gap: 10px;
 	margin-left: auto;
 	font-size: 12px;
 	font-weight: 400;
@@ -294,8 +304,17 @@ html {
 	color: #ffcc6a;
 }
 
+.steamdb_achievements_name_container .steamdb_achievement_progress_compare {
+	margin-top: 10px;
+}
+
 .steamdb_achievements_title .steamdb_achievement_progress {
 	text-align: left;
+}
+
+.steamdb_achievement_progress_avatar {
+	height: 26px;
+	align-self: center;
 }
 
 .steamdb_achievement_progressbar {
