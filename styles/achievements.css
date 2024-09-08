@@ -274,7 +274,7 @@ html {
 }
 
 .steamdb_achievement_status_locked .steamdb_achievement_status_avatar {
-	opacity: .2;
+	opacity: 0.2;
 }
 
 .steamdb_achievement_status_row_compare {
@@ -342,7 +342,8 @@ html {
 	width: 0%;
 }
 
-.steamdb_achievement_progressbar.steamdb_achievement_progress_compare .achieveBarProgress,
+.steamdb_achievement_progressbar.steamdb_achievement_progress_compare
+	.achieveBarProgress,
 .steamdb_achievement_progress_compare .steamdb_achievement_progressbar_inner {
 	background: #ffcc6a;
 }
