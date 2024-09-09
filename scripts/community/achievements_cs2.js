@@ -88,9 +88,20 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 	ctx.lineTo( width, height );
 	ctx.fill();
 
+	// Max tier dashed line
+	const maxCSRTier = 2 * ( ( maxCSR - ( maxCSR % 5000 ) ) / maxCSR - 0.5 );
+	const maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
+	ctx.strokeStyle = '#424857';
+	ctx.lineWidth = 1 * devicePixelRatio;
+	ctx.setLineDash( [ 7 * devicePixelRatio, 4 * devicePixelRatio ] );
 	ctx.beginPath();
+	ctx.moveTo( 0, maxCSRTierY );
+	ctx.lineTo( width, maxCSRTierY );
+	ctx.stroke();
+	ctx.setLineDash( [] );
 
 	// Draw line
+	ctx.beginPath();
 	ctx.strokeStyle = '#5d91df';
 	ctx.lineWidth = 2 * devicePixelRatio;
 
