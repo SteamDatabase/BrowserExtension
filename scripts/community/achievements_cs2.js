@@ -53,7 +53,7 @@ const InitChart = ( container, initialData ) =>
 	const maxLengthInput = document.createElement( 'input' );
 	maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
 	maxLengthInput.type = 'range';
-	maxLengthInput.min = 10;
+	maxLengthInput.min = 2;
 	maxLengthInput.max = initialData.length;
 	maxLengthInput.value = maxLength;
 	maxLengthInput.addEventListener( 'input', () =>
@@ -337,13 +337,23 @@ const FetchCSRating = async( profileUrl ) =>
 	summaryName.textContent = _t( 'achievements_csrating_name' );
 	summary.append( summaryName );
 
-	const chart = InitChart( summary, premierRows );
+	let chart = null;
+
+	if( premierRows.length > 1 )
+	{
+		chart = InitChart( summary, premierRows );
+	}
+
 	CreateCSRatingTable( summary, premierRows );
 
 	StartViewTransition( () =>
 	{
 		document.querySelector( '#mainContents' ).append( summary );
-		DrawChart( premierRows, -1, chart.canvas, chart.tooltip, chart.maxLength );
+
+		if( chart !== null )
+		{
+			DrawChart( premierRows, -1, chart.canvas, chart.tooltip, chart.maxLength );
+		}
 	} );
 };
 
