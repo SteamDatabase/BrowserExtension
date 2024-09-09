@@ -12,7 +12,7 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 		document.querySelector( '#mainContents' ).append( canvas );
 
 		const tooltip = document.createElement( 'div' );
-		tooltip.className = 'steamdb_achievements_csrating_graph_tooltip';
+		tooltip.className = 'community_tooltip steamdb_achievements_csrating_graph_tooltip';
 		document.body.append( tooltip );
 
 		canvas.addEventListener( 'mousemove', ( event ) =>
@@ -150,7 +150,7 @@ const CreateCSRatingTable = ( rows ) =>
 		const header = document.createElement( 'tr' );
 
 		const headerTdDatetime = document.createElement( 'th' );
-		headerTdDatetime.textContent = 'Updated';
+		headerTdDatetime.textContent = 'Date';
 		const headerTdCSR = document.createElement( 'th' );
 		headerTdCSR.textContent = 'CS Rating';
 		const headerTdCSRdelta = document.createElement( 'th' );

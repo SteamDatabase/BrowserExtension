@@ -72,12 +72,11 @@
 	font-weight: bold;
 }
 
-.steamdb_achievements_csrating_graph_tooltip {
+.community_tooltip.steamdb_achievements_csrating_graph_tooltip {
 	display: none;
 	position: absolute;
 	white-space: pre;
-	padding: 0 5px;
-	background: #fff;
+	font-size: 14px;
 	font-weight: 500;
 	z-index: 9999;
 }
