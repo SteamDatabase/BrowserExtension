@@ -2,6 +2,21 @@
 
 'use strict';
 
+const tierColors =
+[
+	'#b0c3d9',
+	'#8cc6ff',
+	'#6a7dff',
+	'#c166ff',
+	'#f03cff',
+	'#eb4b4b',
+	'#ffd700',
+];
+
+/**
+ * @param {HTMLCanvasElement} canvas
+ * @param {HTMLDivElement} tooltip
+ */
 const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = null ) =>
 {
 	const maxLength = 200;
@@ -11,7 +26,7 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 		canvas.className = 'steamdb_achievements_csrating_graph';
 		document.querySelector( '#mainContents' ).append( canvas );
 
-		const tooltip = document.createElement( 'div' );
+		tooltip = document.createElement( 'div' );
 		tooltip.className = 'community_tooltip steamdb_achievements_csrating_graph_tooltip';
 		document.body.append( tooltip );
 
@@ -60,19 +75,13 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 	canvas.height = height;
 
 	// Draw gradient
-	const grd = ctx.createLinearGradient( 0, 0, 0, height );
-	grd.addColorStop( 0, 'rgba(93, 145, 223, .2)' );
-	grd.addColorStop( 1, 'transparent' );
-
-	ctx.fillStyle = grd;
-
-	ctx.beginPath();
-
 	let i = 0;
+	let lastTier = -1;
 	const paddedHeight = height * 0.95;
 	const halfHeight = height / 2;
 	const gap = width / ( points.length - 1 );
 
+	ctx.beginPath();
 	ctx.moveTo( 0, height );
 
 	for( const point of points )
@@ -80,7 +89,33 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 		const val = 2 * ( point / maxCSR - 0.5 );
 		const x = i * gap;
 		const y = ( -val * paddedHeight ) / 2 + halfHeight;
-		ctx.lineTo( x, y );
+
+		const tier = Math.min( Math.floor( point / 5000 ), tierColors.length - 1 );
+
+		if( lastTier !== tier )
+		{
+			if( i > 0 )
+			{
+				ctx.lineTo( x, y );
+				ctx.lineTo( x, height );
+				ctx.fill();
+				ctx.beginPath();
+				ctx.moveTo( x, height );
+			}
+
+			const grd = ctx.createLinearGradient( 0, 0, 0, height );
+			grd.addColorStop( 0, tierColors[ tier ] + '22' );
+			grd.addColorStop( 1, 'transparent' );
+			ctx.fillStyle = grd;
+
+			ctx.lineTo( x, y );
+
+			lastTier = tier;
+		}
+		else
+		{
+			ctx.lineTo( x, y );
+		}
 
 		i += 1;
 	}
@@ -102,7 +137,6 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 
 	// Draw line
 	ctx.beginPath();
-	ctx.strokeStyle = '#5d91df';
 	ctx.lineWidth = 2 * devicePixelRatio;
 
 	let circleX = null;
@@ -110,16 +144,28 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 	let highlightedCSR = '';
 	let highlightedDate = '';
 	i = 0;
+	lastTier = -1;
 
 	for( const point of points )
 	{
 		const val = 2 * ( point / maxCSR - 0.5 );
 		const x = i * gap;
 		const y = ( -val * paddedHeight ) / 2 + halfHeight;
+		const tier = Math.min( Math.floor( point / 5000 ), tierColors.length - 1 );
 
-		if( i === 0 )
+		if( lastTier !== tier )
 		{
+			if( i > 0 )
+			{
+				ctx.lineTo( x, y );
+				ctx.stroke();
+				ctx.beginPath();
+			}
+
+			ctx.strokeStyle = tierColors[ tier ];
 			ctx.moveTo( x, y );
+
+			lastTier = tier;
 		}
 		else
 		{
@@ -136,6 +182,7 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 
 		i += 1;
 	}
+
 	ctx.stroke();
 
 	if( circleX !== null && circleY !== null )
@@ -210,8 +257,9 @@ const CreateCSRatingTable = ( rows ) =>
 
 		const csr = document.createElement( 'td' );
 		csr.textContent = row.csr.toLocaleString( 'en-US' );
-		const tier = Math.floor( row.csr / 5000 );
-		csr.className = `steamdb_achievements_csrating-value steamdb_achievements_csrating-tier${tier}`;
+		const tier = Math.min( Math.floor( row.csr / 5000 ), tierColors.length - 1 );
+		csr.className = 'steamdb_achievements_csrating-value';
+		csr.style.color = tierColors[ tier ];
 		tr.append( csr );
 
 		const delta = document.createElement( 'td' );

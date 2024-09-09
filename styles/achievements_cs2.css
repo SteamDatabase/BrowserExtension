@@ -11,34 +11,6 @@
 	font-weight: bold;
 }
 
-.steamdb_achievements_csrating-tier0 {
-	color: #b0c3d9;
-}
-
-.steamdb_achievements_csrating-tier1 {
-	color: #8cc6ff;
-}
-
-.steamdb_achievements_csrating-tier2 {
-	color: #6a7dff;
-}
-
-.steamdb_achievements_csrating-tier3 {
-	color: #c166ff;
-}
-
-.steamdb_achievements_csrating-tier4 {
-	color: #f03cff;
-}
-
-.steamdb_achievements_csrating-tier5 {
-	color: #eb4b4b;
-}
-
-.steamdb_achievements_csrating-tier6 {
-	color: #ffd700;
-}
-
 .steamdb_achievements_csrating tr:nth-child(odd) {
 	background-color: rgb(0 0 0 / 20%);
 }
