@@ -301,6 +301,22 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 
+	"achievements_csrating_season": {
+		"message": "Season $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Date"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Rating"
+	},
+
 	"inventory_list_at": {
 		"message": "List at $price$",
 		"placeholders": {
