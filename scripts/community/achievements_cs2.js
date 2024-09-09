@@ -221,9 +221,9 @@ const CreateCSRatingTable = ( rows ) =>
 	}
 };
 
-const FetchCSRating = async() =>
+const FetchCSRating = async( profileUrl ) =>
 {
-	const res = await fetch( 'https://steamcommunity.com/my/gcpd/730?tab=majors' );
+	const res = await fetch( `https://steamcommunity.com${profileUrl}/gcpd/730?tab=majors` );
 	const html = await res.text();
 
 	const parser = new DOMParser();
@@ -261,10 +261,10 @@ const FetchCSRating = async() =>
 
 const removeTrailingSlash = ( str ) => str.endsWith( '/' ) ? str.slice( 0, -1 ) : str;
 
-const viewingProfile = removeTrailingSlash( document.querySelector( '.pagecontent .persona_name_text_content' ).pathname );
-const myProfile = removeTrailingSlash( document.querySelector( '.user_avatar' ).pathname );
+const viewingProfile = removeTrailingSlash( document.querySelector( '.pagecontent .persona_name_text_content' )?.pathname ?? '' );
+const myProfile = removeTrailingSlash( document.querySelector( '#global_actions .user_avatar' )?.pathname ?? '' );
 
 if( viewingProfile === myProfile )
 {
-	FetchCSRating();
+	FetchCSRating( myProfile );
 }
