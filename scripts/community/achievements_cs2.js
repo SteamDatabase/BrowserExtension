@@ -219,9 +219,9 @@ const CreateCSRatingTable = ( rows ) =>
 		const header = document.createElement( 'tr' );
 
 		const headerTdDatetime = document.createElement( 'th' );
-		headerTdDatetime.textContent = 'Date';
+		headerTdDatetime.textContent = _t( 'achievements_csrating_date' );
 		const headerTdCSR = document.createElement( 'th' );
-		headerTdCSR.textContent = 'CS Rating';
+		headerTdCSR.textContent = _t( 'achievements_csrating_name' );
 		const headerTdCSRdelta = document.createElement( 'th' );
 		headerTdCSRdelta.textContent = 'Δ';
 		header.append( headerTdDatetime, headerTdCSR, headerTdCSRdelta );
@@ -253,7 +253,7 @@ const CreateCSRatingTable = ( rows ) =>
 			tbody.append( tr );
 
 			const th = document.createElement( 'th' );
-			th.textContent = `Season ${season}`;
+			th.textContent = _t( 'achievements_csrating_season', [ season ] );
 			th.colSpan = 3;
 			th.className = 'steamdb_achievements_csrating_season';
 			tr.append( th );
