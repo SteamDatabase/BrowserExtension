@@ -671,5 +671,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Display a lock icon for locked achievements"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Display CS rating history on CS2 achievements page"
 	}
 }
