@@ -53,6 +53,7 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 		canvas.addEventListener( 'mouseleave', resetCanvas );
 		window.addEventListener( 'resize', resetCanvas );
 
+		maxLength = Math.min( maxLength, initialData.length );
 		const maxLengthInput = document.createElement( 'input' );
 		maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
 		maxLengthInput.type = 'range';
