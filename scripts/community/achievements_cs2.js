@@ -333,7 +333,7 @@ const FetchCSRating = async( profileUrl ) =>
 	summary.className = 'steamdb_achievements_title';
 
 	const summaryName = document.createElement( 'summary' );
-	summaryName.className = 'steamdb_achievements_game_name';
+	summaryName.className = 'steamdb_achievements_game_name steamdb_achievements_csrating_fold';
 	summaryName.textContent = _t( 'achievements_csrating_name' );
 	summary.append( summaryName );
 
