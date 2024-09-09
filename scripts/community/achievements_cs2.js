@@ -40,8 +40,6 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 		window.addEventListener( 'resize', resetCanvas );
 	}
 
-	canvas.width = canvas.parentElement.clientWidth;
-
 	const data = initialData.slice( 0, maxLength ).reverse();
 	const points = data.map( d => d.csr );
 	const maxCSR = Math.max( ...data.map( p => p.csr ) );
@@ -185,7 +183,7 @@ const CreateCSRatingTable = ( rows ) =>
 
 			const th = document.createElement( 'th' );
 			th.textContent = `Season ${season}`;
-			th.colSpan = '3';
+			th.colSpan = 3;
 			th.className = 'steamdb_achievements_csrating_season';
 			tr.append( th );
 
