@@ -13,61 +13,65 @@ const tierColors =
 	'#ffd700',
 ];
 
+const InitChart = ( container, initialData ) =>
+{
+	let maxLength = 200;
+
+	const canvas = document.createElement( 'canvas' );
+	canvas.className = 'steamdb_achievements_csrating_graph';
+	container.append( canvas );
+
+	const tooltip = document.createElement( 'div' );
+	tooltip.className = 'community_tooltip steamdb_achievements_csrating_graph_tooltip';
+	document.body.append( tooltip );
+
+	canvas.addEventListener( 'mousemove', ( event ) =>
+	{
+		const gap = canvas.offsetWidth / ( Math.min( initialData.length, maxLength ) );
+		const x = event.offsetX - ( gap / 2 );
+		const index = Math.ceil( x / gap );
+		DrawChart( initialData, index, canvas, tooltip, maxLength );
+		tooltip.style.display = 'block';
+
+		const tooltipWidth = tooltip.clientWidth;
+		const shiftTooltip = event.pageX + tooltipWidth - document.body.clientWidth;
+		tooltip.style.left = shiftTooltip > 0
+			? event.pageX - shiftTooltip + 'px'
+			: event.pageX + 'px';
+		tooltip.style.top = event.pageY + 30 + 'px';
+	} );
+
+	const resetCanvas = () =>
+	{
+		DrawChart( initialData, -1, canvas, tooltip, maxLength );
+		tooltip.style.display = 'none';
+	};
+	canvas.addEventListener( 'mouseleave', resetCanvas );
+	window.addEventListener( 'resize', resetCanvas );
+
+	maxLength = Math.min( maxLength, initialData.length );
+	const maxLengthInput = document.createElement( 'input' );
+	maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
+	maxLengthInput.type = 'range';
+	maxLengthInput.min = 10;
+	maxLengthInput.max = initialData.length;
+	maxLengthInput.value = maxLength;
+	maxLengthInput.addEventListener( 'input', () =>
+	{
+		maxLength = maxLengthInput.value;
+		DrawChart( initialData, -1, canvas, tooltip, maxLength );
+	} );
+	canvas.insertAdjacentElement( 'afterend', maxLengthInput );
+
+	return { canvas, tooltip, maxLength };
+};
+
 /**
  * @param {HTMLCanvasElement} canvas
  * @param {HTMLDivElement} tooltip
  */
-const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = null, maxLength = 200 ) =>
+const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 {
-	if( !canvas )
-	{
-		canvas = document.createElement( 'canvas' );
-		canvas.className = 'steamdb_achievements_csrating_graph';
-		document.querySelector( '#mainContents' ).append( canvas );
-
-		tooltip = document.createElement( 'div' );
-		tooltip.className = 'community_tooltip steamdb_achievements_csrating_graph_tooltip';
-		document.body.append( tooltip );
-
-		canvas.addEventListener( 'mousemove', ( event ) =>
-		{
-			const gap = canvas.offsetWidth / ( Math.min( initialData.length, maxLength ) );
-			const x = event.offsetX - ( gap / 2 );
-			const index = Math.ceil( x / gap );
-			DrawChart( initialData, index, canvas, tooltip, maxLength );
-			tooltip.style.display = 'block';
-
-			const tooltipWidth = tooltip.clientWidth;
-			const shiftTooltip = event.pageX + tooltipWidth - document.body.clientWidth;
-			tooltip.style.left = shiftTooltip > 0
-				? event.pageX - shiftTooltip + 'px'
-				: event.pageX + 'px';
-			tooltip.style.top = event.pageY + 30 + 'px';
-		} );
-
-		const resetCanvas = () =>
-		{
-			DrawChart( initialData, -1, canvas, tooltip, maxLength );
-			tooltip.style.display = 'none';
-		};
-		canvas.addEventListener( 'mouseleave', resetCanvas );
-		window.addEventListener( 'resize', resetCanvas );
-
-		maxLength = Math.min( maxLength, initialData.length );
-		const maxLengthInput = document.createElement( 'input' );
-		maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
-		maxLengthInput.type = 'range';
-		maxLengthInput.min = 10;
-		maxLengthInput.max = initialData.length;
-		maxLengthInput.value = maxLength;
-		maxLengthInput.addEventListener( 'input', () =>
-		{
-			maxLength = maxLengthInput.value;
-			DrawChart( initialData, -1, canvas, tooltip, maxLength );
-		} );
-		canvas.insertAdjacentElement( 'afterend', maxLengthInput );
-	}
-
 	const data = initialData.slice( 0, maxLength ).reverse();
 	const points = data.map( d => d.csr );
 	const maxCSR = Math.max( ...data.map( p => p.csr ) );
@@ -208,11 +212,11 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 	}
 };
 
-const CreateCSRatingTable = ( rows ) =>
+const CreateCSRatingTable = ( container, rows ) =>
 {
 	const table = document.createElement( 'table' );
 	table.className = 'steamdb_achievements_csrating';
-	document.querySelector( '#mainContents' ).append( table );
+	container.append( table );
 
 	const CreateHeader = () =>
 	{
@@ -319,14 +323,28 @@ const FetchCSRating = async( profileUrl ) =>
 		} );
 	}
 
-	if( premierRows.length )
+	if( premierRows.length < 1 )
 	{
-		StartViewTransition( () =>
-		{
-			DrawChart( premierRows );
-			CreateCSRatingTable( premierRows );
-		} );
+		return;
 	}
+
+	const summary = document.createElement( 'details' );
+	summary.open = true;
+	summary.className = 'steamdb_achievements_title';
+
+	const summaryName = document.createElement( 'summary' );
+	summaryName.className = 'steamdb_achievements_game_name';
+	summaryName.textContent = _t( 'achievements_csrating_name' );
+	summary.append( summaryName );
+
+	const chart = InitChart( summary, premierRows );
+	CreateCSRatingTable( summary, premierRows );
+
+	StartViewTransition( () =>
+	{
+		document.querySelector( '#mainContents' ).append( summary );
+		DrawChart( premierRows, -1, chart.canvas, chart.tooltip, chart.maxLength );
+	} );
 };
 
 const removeTrailingSlash = ( str ) => str.endsWith( '/' ) ? str.slice( 0, -1 ) : str;
