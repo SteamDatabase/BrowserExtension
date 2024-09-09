@@ -17,9 +17,8 @@ const tierColors =
  * @param {HTMLCanvasElement} canvas
  * @param {HTMLDivElement} tooltip
  */
-const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = null ) =>
+const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = null, maxLength = 200 ) =>
 {
-	const maxLength = 200;
 	if( !canvas )
 	{
 		canvas = document.createElement( 'canvas' );
@@ -35,7 +34,7 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 			const gap = canvas.offsetWidth / ( Math.min( initialData.length, maxLength ) );
 			const x = event.offsetX - ( gap / 2 );
 			const index = Math.ceil( x / gap );
-			DrawChart( initialData, index, canvas, tooltip );
+			DrawChart( initialData, index, canvas, tooltip, maxLength );
 			tooltip.style.display = 'block';
 
 			const tooltipWidth = tooltip.clientWidth;
@@ -48,11 +47,24 @@ const DrawChart = ( initialData, hoveredIndex = -1, canvas = null, tooltip = nul
 
 		const resetCanvas = () =>
 		{
-			DrawChart( initialData, -1, canvas, tooltip );
+			DrawChart( initialData, -1, canvas, tooltip, maxLength );
 			tooltip.style.display = 'none';
 		};
 		canvas.addEventListener( 'mouseleave', resetCanvas );
 		window.addEventListener( 'resize', resetCanvas );
+
+		const maxLengthInput = document.createElement( 'input' );
+		maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
+		maxLengthInput.type = 'range';
+		maxLengthInput.min = 10;
+		maxLengthInput.max = initialData.length;
+		maxLengthInput.value = maxLength;
+		maxLengthInput.addEventListener( 'input', () =>
+		{
+			maxLength = maxLengthInput.value;
+			DrawChart( initialData, -1, canvas, tooltip, maxLength );
+		} );
+		canvas.insertAdjacentElement( 'afterend', maxLengthInput );
 	}
 
 	const data = initialData.slice( 0, maxLength ).reverse();

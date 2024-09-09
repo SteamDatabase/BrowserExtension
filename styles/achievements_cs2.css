@@ -50,6 +50,12 @@
 	width: 100%;
 }
 
+.steamdb_achievements_csrating_graph_slider {
+	color-scheme: dark;
+	direction: rtl;
+	width: 100%;
+}
+
 .community_tooltip.steamdb_achievements_csrating_graph_tooltip {
 	display: none;
 	position: absolute;
