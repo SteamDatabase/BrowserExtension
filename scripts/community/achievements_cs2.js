@@ -135,8 +135,8 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	ctx.fill();
 
 	// Max tier dashed line
-	const maxCSRTier = 2 * ( ( maxCSR - ( maxCSR % 5000 ) ) / maxCSR - 0.5 );
-	const maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
+	let maxCSRTier = 2 * ( ( maxCSR - ( maxCSR % 5000 ) ) / maxCSR - 0.5 );
+	let maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
 	ctx.strokeStyle = '#424857';
 	ctx.lineWidth = 1 * devicePixelRatio;
 	ctx.setLineDash( [ 7 * devicePixelRatio, 4 * devicePixelRatio ] );
@@ -144,6 +144,14 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	ctx.moveTo( 0, maxCSRTierY );
 	ctx.lineTo( width, maxCSRTierY );
 	ctx.stroke();
+
+	maxCSRTier = 2 * ( ( maxCSR - ( maxCSR % 5000 ) - 5000 ) / maxCSR - 0.5 );
+	maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
+	ctx.beginPath();
+	ctx.moveTo( 0, maxCSRTierY );
+	ctx.lineTo( width, maxCSRTierY );
+	ctx.stroke();
+
 	ctx.setLineDash( [] );
 
 	// Draw line
