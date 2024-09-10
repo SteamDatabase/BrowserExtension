@@ -27,7 +27,7 @@ const InitChart = ( container, initialData ) =>
 
 	canvas.addEventListener( 'mousemove', ( event ) =>
 	{
-		const gap = canvas.offsetWidth / ( Math.min( initialData.length, maxLength ) );
+		const gap = canvas.offsetWidth / ( Math.min( initialData.length, maxLength ) - 1 );
 		const x = event.offsetX - ( gap / 2 );
 		const index = Math.ceil( x / gap );
 		DrawChart( initialData, index, canvas, tooltip, maxLength );
