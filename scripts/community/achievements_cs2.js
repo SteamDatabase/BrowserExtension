@@ -73,19 +73,13 @@ const InitChart = ( container, initialData ) =>
 const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 {
 	const data = initialData.slice( 0, maxLength ).reverse();
-	const points = data.map( d => d.csr );
-	const maxCSR = Math.max( ...data.map( p => p.csr ) );
+	const maxCSR = data.reduce( ( a, b ) => a.csr > b.csr ? a : b ).csr;
 
 	const rect = canvas.getBoundingClientRect();
 	const width = rect.width * devicePixelRatio;
 	const height = rect.height * devicePixelRatio;
 
 	const ctx = canvas.getContext( '2d' );
-
-	if( !points || ctx === null )
-	{
-		return;
-	}
 
 	// Setting size clears the canvas
 	canvas.width = width;
@@ -96,18 +90,18 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	let lastTier = -1;
 	const paddedHeight = height * 0.95;
 	const halfHeight = height / 2;
-	const gap = width / ( points.length - 1 );
+	const gap = width / ( data.length - 1 );
 
 	ctx.beginPath();
 	ctx.moveTo( 0, height );
 
-	for( const point of points )
+	for( const point of data )
 	{
-		const val = 2 * ( point / maxCSR - 0.5 );
+		const val = 2 * ( point.csr / maxCSR - 0.5 );
 		const x = i * gap;
 		const y = ( -val * paddedHeight ) / 2 + halfHeight;
 
-		const tier = Math.min( Math.floor( point / 5000 ), tierColors.length - 1 );
+		const tier = Math.min( Math.floor( point.csr / 5000 ), tierColors.length - 1 );
 
 		if( lastTier !== tier )
 		{
@@ -163,12 +157,12 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	i = 0;
 	lastTier = -1;
 
-	for( const point of points )
+	for( const point of data )
 	{
-		const val = 2 * ( point / maxCSR - 0.5 );
+		const val = 2 * ( point.csr / maxCSR - 0.5 );
 		const x = i * gap;
 		const y = ( -val * paddedHeight ) / 2 + halfHeight;
-		const tier = Math.min( Math.floor( point / 5000 ), tierColors.length - 1 );
+		const tier = Math.min( Math.floor( point.csr / 5000 ), tierColors.length - 1 );
 
 		if( lastTier !== tier )
 		{
@@ -193,8 +187,8 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 		{
 			circleX = x;
 			circleY = y;
-			highlightedCSR = data[ i ].csr;
-			highlightedDate = data[ i ].datetime;
+			highlightedCSR = point.csr;
+			highlightedDate = point.datetime;
 		}
 
 		i += 1;
