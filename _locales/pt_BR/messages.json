@@ -292,6 +292,21 @@
 		"message": "Os grupos de conquistas são fornecidos pelo site Steam Hunters, através do SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Temporada $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Data"
+	},
+	"achievements_csrating_name": {
+		"message": "Classificação CS"
+	},
 	"inventory_list_at": {
 		"message": "Anunciar por $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Exibir um ícone de cadeado em conquistas não alcançadas"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Exibe o histórico de classificação CS na página de conquistas CS2"
 	}
 }

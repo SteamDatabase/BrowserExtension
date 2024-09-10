@@ -292,6 +292,21 @@
 		"message": "Errungenschaftsgruppen werden von Steam Hunters über SteamDB bereitgestellt.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "$season$. Saison",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Datum"
+	},
+	"achievements_csrating_name": {
+		"message": "CS-Wertung"
+	},
 	"inventory_list_at": {
 		"message": "Für $price$ einstellen",
 		"placeholders": {
@@ -590,7 +605,7 @@
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "Persönliche Errungenschaftenseite verbessern"
+		"message": "Seite für persönliche Errungenschaften verbessern"
 	},
 	"options_achievements_global_unlock": {
 		"message": "Globale Freischaltrate für Errungenschaften anzeigen"
@@ -635,9 +650,12 @@
 		"message": "Seite für globale Errungenschaften verbessern"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Persönliche Errungenschaftenseite verlinken"
+		"message": "Seite für persönliche Errungenschaften verlinken"
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Schlosssymbol bei ausstehenden Errungenschaften anzeigen"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Verlauf der CS-Wertung bei den CS2-Errungenschaften anzeigen"
 	}
 }

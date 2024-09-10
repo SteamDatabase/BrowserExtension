@@ -276,6 +276,15 @@
 	"inventory_sell_at_title": {
 		"message": "가장 많은 구매 요청순으로 정렬하기\n\n표시된 가격은 수수료 없이 받는 돈입니다"
 	},
+	"inventory_badge_level": {
+		"message": "배지 레벨: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
 	"options": {
 		"message": "옵션"
 	},

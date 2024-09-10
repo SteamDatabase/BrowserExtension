@@ -292,6 +292,21 @@
 		"message": "Групи досягнень надані Steam Hunters за допомогою SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Сезон $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Дата"
+	},
+	"achievements_csrating_name": {
+		"message": "Рейтинг CS"
+	},
 	"inventory_list_at": {
 		"message": "Виставити за $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Показувати значок замка на заблокованих досягненнях"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Показувати історію рейтингу CS на сторінці досягнень CS2"
 	}
 }

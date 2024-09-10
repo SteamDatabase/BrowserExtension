@@ -292,6 +292,21 @@
 		"message": "Başarım gruplandırmaları Steam Hunters tarafından SteamDB aracılığıyla sağlanmaktadır.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "$season$. sezon",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Tarih"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Derecesi"
+	},
 	"inventory_list_at": {
 		"message": "Satışa koy: $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Kilitli başarımları kilit simgesi ile göster"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2'nin başarımlarında CS derecelerini göster"
 	}
 }
