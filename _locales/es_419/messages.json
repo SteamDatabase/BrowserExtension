@@ -292,6 +292,21 @@
 		"message": "Los grupos de logros son proporcionados por Steam Hunters a través de SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Temporada $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Fecha"
+	},
+	"achievements_csrating_name": {
+		"message": "Clasificación CS"
+	},
 	"inventory_list_at": {
 		"message": "Poner a la venta a $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Mostrar un icono de candado para logros no desbloqueados"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Mostrar el historial de \"Clasificación CS\" en la página de logros de CS2"
 	}
 }

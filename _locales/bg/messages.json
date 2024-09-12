@@ -292,6 +292,21 @@
 		"message": "Групираните постижения са предоставени от Steam Hunters чрез SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Сезон $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Дата"
+	},
+	"achievements_csrating_name": {
+		"message": "CS рейтинг"
+	},
 	"inventory_list_at": {
 		"message": "Пускане за $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Отбележи с катинар заключените постижения"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Покажи история на CS рейтинга на страницата с постижения на CS2"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Přidá odkazy na SteamDB a nové funkce v obchodě a komunitě Steam. Zobrazí nejnižší ceny a statistiky.",
+		"message": "Přidá odkazy na SteamDB a nové funkce v obchodě a komunitě Steam. Zobrazí nejnižší ceny a statistiky.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -291,6 +291,21 @@
 	"achievements_groups_by_steamhunters": {
 		"message": "Seskupení achievementů poskytuje služba Steam Hunters prostřednictvím SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Sezóna $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Datum"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Hodnocení"
 	},
 	"inventory_list_at": {
 		"message": "Nabídnout za $price$",
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Zobrazovat ikonu zámku na uzamčených achievementech"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Zobrazit historii CS hodnocení na stránce CS2 achivementů"
 	}
 }

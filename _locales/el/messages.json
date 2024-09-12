@@ -1,8 +1,4 @@
 {
-	"extension_description": {
-		"message": "Προσθέτει συνδέσμους του SteamDB και νέα χαρακτηριστικά στο Κατάστημα και την Κοινότητα του Steam. Δείτε τις χαμηλότερες τιμές και στατιστικά του παιχνιδιού.",
-		"description": "This value can be up to 132 characters."
-	},
 	"steamdb_options": {
 		"message": "Επιλογές SteamDB"
 	},

@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Afegeix enllaços de SteamDB i noves funcionalitats a la botiga i comunitat de Steam. Mira els preus més baixos dels jocs i estadístiques.",
+		"message": "Afegeix enllaços de SteamDB i noves utilitats a la botiga i comunitat de Steam. Mira els preus més baixos dels jocs i estadístiques.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {

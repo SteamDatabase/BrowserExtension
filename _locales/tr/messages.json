@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Steam mağazası ve topluluğuna SteamDB bağlantılarını ve yeni özellikleri ekler. En düşük oyun fiyatlarını ve istatistiklerini şimdi görüntüleyin.",
+		"message": "SteamDB, Steam mağaza ve topluluğuna yeni özellikler ve bağlantılar ekler. En düşük oyun fiyatlarını ve istatistiklerini gösterir.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {

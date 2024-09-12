@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Hozzáadja A SteamDB linkjeit és új funkcióit a Steam Áruház és Közösség oldalaihoz. Megtekinthetőek a legalacsonyabb játékárak és különböző statisztikák.",
+		"message": "Hozzáadja a SteamDB linkjeit és új funkcióit a Steam Áruházi és Közösségi oldalán. A legalacsonyabb játékárak és különböző statisztikák megtekinthetőek.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -93,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "A SteamDB által rögzített legalacsonyabb ár <b>$price$</b> (<b>-$discount$%</b>)",
+		"message": "SteamDB legkisebb rögzített ára <b>$price$</b> <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
