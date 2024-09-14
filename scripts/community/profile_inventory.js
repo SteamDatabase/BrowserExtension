@@ -10,7 +10,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 		'enhancement-inventory-quick-sell-auto': false,
 		'enhancement-inventory-no-sell-reload': true,
 		'enhancement-inventory-badge-info': true,
-	}, function( items )
+	}, ( items ) =>
 	{
 		if( items[ 'enhancement-inventory-sidebar' ] )
 		{

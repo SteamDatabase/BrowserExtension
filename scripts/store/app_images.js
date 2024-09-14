@@ -2,7 +2,7 @@
 
 GetOption( {
 	'prevent-store-images': false,
-}, function( items )
+}, ( items ) =>
 {
 	if( !items[ 'prevent-store-images' ] )
 	{

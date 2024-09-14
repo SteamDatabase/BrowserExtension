@@ -21,7 +21,7 @@ document.title === 'We Broke It' )
 }
 else
 {
-	GetOption( { 'enhancement-hide-install-button': true, 'enhancement-no-linkfilter': false }, function( items )
+	GetOption( { 'enhancement-hide-install-button': true, 'enhancement-no-linkfilter': false }, ( items ) =>
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{

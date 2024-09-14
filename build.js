@@ -1,5 +1,5 @@
-const fs = require( 'fs' );
-const path = require( 'path' );
+const fs = require( 'node:fs' );
+const path = require( 'node:path' );
 const archiver = require( 'archiver' );
 const manifest = require( './manifest.json' );
 const version = manifest.version.replace( /\./g, '_' );

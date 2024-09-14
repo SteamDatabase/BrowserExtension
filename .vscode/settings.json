@@ -1,6 +1,6 @@
 {
 	"search.exclude": {
 		"/_locales/[!e]*/messages.json": true,
-		"/_locales/e[!n]*/messages.json": true,
+		"/_locales/e[!n]*/messages.json": true
 	}
 }

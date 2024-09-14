@@ -134,7 +134,7 @@ function FetchSteamUserData( callback )
 			{
 				InvalidateCache();
 
-				GetLocalOption( { 'userdata.stored': false }, function( data )
+				GetLocalOption( { 'userdata.stored': false }, ( data ) =>
 				{
 					const response =
 					{
@@ -158,9 +158,9 @@ function GetJsonWithStatusCheck( response )
 	{
 		if( response.status === 429 )
 		{
-			let retryAfter = parseInt( response.headers.get( 'Retry-After' ), 10 );
+			let retryAfter = Number.parseInt( response.headers.get( 'Retry-After' ), 10 );
 
-			if( isNaN( retryAfter ) || retryAfter < 1 )
+			if( Number.isNaN( retryAfter ) || retryAfter < 1 )
 			{
 				retryAfter = 60;
 			}
@@ -187,7 +187,7 @@ function GetApp( appid, callback )
 	}
 
 	const params = new URLSearchParams();
-	params.set( 'appid', parseInt( appid, 10 ) );
+	params.set( 'appid', Number.parseInt( appid, 10 ) );
 
 	fetch( `https://steamdb.info/api/ExtensionApp/?${params.toString()}`, {
 		headers: {
@@ -209,7 +209,7 @@ function GetAppPrice( { appid, currency }, callback )
 	}
 
 	const params = new URLSearchParams();
-	params.set( 'appid', parseInt( appid, 10 ) );
+	params.set( 'appid', Number.parseInt( appid, 10 ) );
 	params.set( 'currency', currency );
 
 	fetch( `https://steamdb.info/api/ExtensionAppPrice/?${params.toString()}`, {
@@ -232,7 +232,7 @@ function GetAchievementsGroups( appid, callback )
 	}
 
 	const params = new URLSearchParams();
-	params.set( 'appid', parseInt( appid, 10 ) );
+	params.set( 'appid', Number.parseInt( appid, 10 ) );
 
 	fetch( `https://steamdb.info/api/ExtensionGetAchievements/?${params.toString()}`, {
 		headers: {
@@ -248,28 +248,28 @@ function GetAchievementsGroups( appid, callback )
 function StoreWishlistAdd( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ) );
 	ExecuteStoreApiCall( 'api/addtowishlist', formData, callback );
 }
 
 function StoreWishlistRemove( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ) );
 	ExecuteStoreApiCall( 'api/removefromwishlist', formData, callback );
 }
 
 function StoreFollow( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ) );
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
 
 function StoreUnfollow( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ) );
 	formData.set( 'unfollow', 1 );
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
@@ -277,7 +277,7 @@ function StoreUnfollow( appid, callback )
 function StoreIgnore( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ) );
 	formData.set( 'ignore_reason', 0 );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
@@ -285,7 +285,7 @@ function StoreIgnore( appid, callback )
 function StoreUnignore( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ) );
 	formData.set( 'remove', 1 );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
@@ -297,11 +297,11 @@ function StoreAddToCart( request, callback )
 
 	if( request.subid )
 	{
-		formData.set( 'subid', parseInt( request.subid, 10 ) );
+		formData.set( 'subid', Number.parseInt( request.subid, 10 ) );
 	}
 	else if( request.bundleid )
 	{
-		formData.set( 'bundleid', parseInt( request.bundleid, 10 ) );
+		formData.set( 'bundleid', Number.parseInt( request.bundleid, 10 ) );
 	}
 	else
 	{
@@ -348,7 +348,7 @@ function StoreAddFreeLicense( request, callback )
 
 	if( request.subid )
 	{
-		const subid = parseInt( request.subid, 10 );
+		const subid = Number.parseInt( request.subid, 10 );
 		const formData = new FormData();
 		formData.set( 'ajax', 'true' );
 
@@ -356,7 +356,7 @@ function StoreAddFreeLicense( request, callback )
 	}
 	else if( request.bundleid )
 	{
-		const bundleid = parseInt( request.bundleid, 10 );
+		const bundleid = Number.parseInt( request.bundleid, 10 );
 		const formData = new FormData();
 		formData.set( 'ajax', 'true' );
 
@@ -368,7 +368,7 @@ function StoreRemoveFreeLicense( request, callback )
 {
 	if( request.subid )
 	{
-		const subid = parseInt( request.subid, 10 );
+		const subid = Number.parseInt( request.subid, 10 );
 		const formData = new FormData();
 		formData.set( 'packageid', subid );
 		ExecuteStoreApiCall( 'account/removelicense', formData, callback );
@@ -379,7 +379,7 @@ function StoreRequestPlaytestAccess( request, callback )
 {
 	const playtestResponse = ( response ) =>
 	{
-		if( response && response.success )
+		if( response?.success )
 		{
 			const granted = !!response.granted;
 
@@ -399,7 +399,7 @@ function StoreRequestPlaytestAccess( request, callback )
 	if( request.appid )
 	{
 		const formData = new FormData();
-		ExecuteStoreApiCall( `ajaxrequestplaytestaccess/${parseInt( request.appid, 10 )}`, formData, playtestResponse, true );
+		ExecuteStoreApiCall( `ajaxrequestplaytestaccess/${Number.parseInt( request.appid, 10 )}`, formData, playtestResponse, true );
 	}
 }
 
@@ -480,7 +480,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 					};
 				}
 
-				if( response && response.success )
+				if( response?.success )
 				{
 					callback( { success: true } );
 
@@ -533,7 +533,7 @@ function GetStoreSessionID( isCheckout, callback )
 		{
 			const session = response.match( /g_sessionID = "(\w+)";/ );
 
-			if( session && session[ 1 ] )
+			if( session?.[ 1 ] )
 			{
 				if( isCheckout )
 				{

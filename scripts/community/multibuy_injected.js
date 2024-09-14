@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -50,4 +50,4 @@
 
 		window.location = returnToUrl.toString();
 	};
-}() );
+} )() );

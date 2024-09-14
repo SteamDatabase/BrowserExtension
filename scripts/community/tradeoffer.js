@@ -3,7 +3,7 @@
 GetOption( {
 	'enhancement-tradeoffer-url-items': true,
 	'enhancement-tradeoffer-no-gift-confirm': null,
-}, function( items )
+}, ( items ) =>
 {
 	const element = document.createElement( 'script' );
 

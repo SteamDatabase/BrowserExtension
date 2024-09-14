@@ -6,7 +6,7 @@ script.type = 'text/javascript';
 script.src = GetLocalResource( 'scripts/store/account_licenses_injected.js' );
 document.documentElement.append( script );
 
-GetOption( { 'link-accountpage': true }, function( items )
+GetOption( { 'link-accountpage': true }, ( items ) =>
 {
 	const addLinks = items[ 'link-accountpage' ];
 

@@ -2,7 +2,7 @@
 
 GetOption( {
 	'enhancement-appicon': true,
-}, function( items )
+}, ( items ) =>
 {
 	if( items[ 'enhancement-appicon' ] )
 	{

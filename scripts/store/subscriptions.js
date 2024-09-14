@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -22,4 +22,4 @@
 		link.href = `${homepage}sub/${subId}/`;
 		link.querySelector( '.steamdb_link_id' ).textContent = subId.toString();
 	};
-}() );
+} )() );

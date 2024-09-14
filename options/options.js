@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -75,7 +75,7 @@
 		element.addEventListener( 'change', CheckboxChange );
 	}
 
-	GetOption( Object.keys( options ), function( items )
+	GetOption( Object.keys( options ), ( items ) =>
 	{
 		for( const item in items )
 		{
@@ -173,4 +173,4 @@
 	{
 		storeUrl.href = storeHref;
 	}
-}() );
+} )() );

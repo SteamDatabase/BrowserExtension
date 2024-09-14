@@ -3,7 +3,7 @@
 GetOption( {
 	'profile-calculator': true,
 	'enhancement-award-popup-url': true,
-}, function( items )
+}, ( items ) =>
 {
 	if( items[ 'enhancement-award-popup-url' ] && window.location.search.includes( 'award' ) )
 	{

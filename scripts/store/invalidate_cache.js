@@ -16,7 +16,7 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 
 	window.addEventListener( 'message', ( request ) =>
 	{
-		if( request && request.data && request.data.type === 'steamdb:extension-invalidate-cache' )
+		if( request?.data && request.data.type === 'steamdb:extension-invalidate-cache' )
 		{
 			WriteLog( 'Invalidating userdata cache' );
 			SendMessageToBackgroundScript( {

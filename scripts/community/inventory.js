@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -24,7 +24,7 @@
 
 	const dummySellEvent =
 	{
-		stop: function()
+		stop: () =>
 		{
 
 		},
@@ -165,7 +165,7 @@
 				histogramParams.set( 'two_factor', '0' );
 
 				const xhrHistogram = new XMLHttpRequest();
-				xhrHistogram.onreadystatechange = function()
+				xhrHistogram.onreadystatechange = () =>
 				{
 					if( xhrHistogram.readyState !== 4 )
 					{
@@ -405,7 +405,8 @@
 			{
 				if( item.description.type === 'Coupon' && rgActions )
 				{
-					let couponLink, pos;
+					let couponLink;
+					let pos;
 
 					for( let i = 0; i < rgActions.length; i++ )
 					{
@@ -489,7 +490,7 @@
 						else
 						{
 							const xhr = new XMLHttpRequest();
-							xhr.onreadystatechange = function()
+							xhr.onreadystatechange = () =>
 							{
 								if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )
 								{
@@ -526,7 +527,7 @@
 
 							break;
 						}
-						else if( link.link && link.link.match( /\.com\/(app|sub)\// ) )
+						else if( link.link?.match( /\.com\/(app|sub)\// ) )
 						{
 							foundState = FoundState.Process;
 						}
@@ -637,7 +638,7 @@
 				}
 
 				const xhr = new XMLHttpRequest();
-				xhr.onreadystatechange = function()
+				xhr.onreadystatechange = () =>
 				{
 					if( xhr.readyState !== 4 )
 					{
@@ -731,4 +732,4 @@
 			return PromisifyDbRequest( store.transaction );
 		} );
 	}
-}() );
+} )() );

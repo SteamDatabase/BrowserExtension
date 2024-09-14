@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -33,7 +33,7 @@
 
 	window.PublishedFileAward(
 		data.groups.id,
-		parseInt( data.groups.fileType, 10 ),
-		parseInt( awardId, 10 ),
+		Number.parseInt( data.groups.fileType, 10 ),
+		Number.parseInt( awardId, 10 ),
 	);
-}() );
+} )() );

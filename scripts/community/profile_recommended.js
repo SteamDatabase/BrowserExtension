@@ -1,6 +1,6 @@
 'use strict';
 
-GetOption( { 'button-gamehub': true }, function( items )
+GetOption( { 'button-gamehub': true }, ( items ) =>
 {
 	if( !items[ 'button-gamehub' ] )
 	{

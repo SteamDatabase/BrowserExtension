@@ -1,6 +1,6 @@
 'use strict';
 
-GetOption( { 'button-sub': true }, function( items )
+GetOption( { 'button-sub': true }, ( items ) =>
 {
 	if( !items[ 'button-sub' ] )
 	{

@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -23,6 +23,6 @@
 			// do nothing
 		},
 		undefined, // ugcType
-		parseInt( awardId, 10 ),
+		Number.parseInt( awardId, 10 ),
 	);
-}() );
+} )() );

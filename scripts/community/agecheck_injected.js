@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -6,4 +6,4 @@
 	{
 		window.Proceed();
 	}
-}() );
+} )() );

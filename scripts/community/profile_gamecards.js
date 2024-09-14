@@ -2,7 +2,7 @@
 
 MoveMultiBuyButton();
 
-GetOption( { 'button-gamecards': true }, function( items )
+GetOption( { 'button-gamecards': true }, ( items ) =>
 {
 	if( !items[ 'button-gamecards' ] )
 	{
@@ -54,7 +54,7 @@ GetOption( { 'button-gamecards': true }, function( items )
 
 function MoveMultiBuyButton()
 {
-	document.querySelectorAll( '.gamecards_inventorylink a' ).forEach( ( element ) =>
+	for( const element of document.querySelectorAll( '.gamecards_inventorylink a' ) )
 	{
 		const link = new URL( element.href );
 
@@ -86,5 +86,5 @@ function MoveMultiBuyButton()
 				topLinks.classList.add( 'steamdb_gamecards_inventorylink' );
 			}
 		}
-	} );
+	}
 }

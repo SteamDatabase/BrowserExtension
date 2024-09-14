@@ -14,7 +14,7 @@ if( progressInfo.length > 0 )
 
 		if( match )
 		{
-			match = parseInt( match.groups.number, 10 ) || 0;
+			match = Number.parseInt( match.groups.number, 10 ) || 0;
 
 			if( match > 0 )
 			{
@@ -47,7 +47,7 @@ if( progressInfo.length > 0 )
 }
 else
 {
-	GetOption( { 'button-gamecards': true }, function( items )
+	GetOption( { 'button-gamecards': true }, ( items ) =>
 	{
 		if( !items[ 'button-gamecards' ] )
 		{
@@ -68,7 +68,7 @@ else
 			return;
 		}
 
-		const badgeid = parseInt( badgeUrl[ 1 ], 10 );
+		const badgeid = Number.parseInt( badgeUrl[ 1 ], 10 );
 
 		const container = document.createElement( 'div' );
 		container.className = 'profile_small_header_additional steamdb';

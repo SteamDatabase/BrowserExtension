@@ -1,6 +1,6 @@
 'use strict';
 
-GetOption( { 'link-subid-widget': true }, function( items )
+GetOption( { 'link-subid-widget': true }, ( items ) =>
 {
 	if( !items[ 'link-subid-widget' ] )
 	{

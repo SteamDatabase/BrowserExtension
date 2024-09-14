@@ -22,7 +22,7 @@ else
 		'steamdb-last-update': true,
 		'enhancement-hide-mobile-app-button': false,
 		'collapse-already-in-library': false,
-	}, function( items )
+	}, ( items ) =>
 	{
 		if( ( items[ 'steamdb-last-update' ] || items[ 'online-stats' ] ) && !document.querySelector( '.game_area_dlc_bubble' ) )
 		{
@@ -258,10 +258,10 @@ else
 
 			if( positiveVoteText && negativeVoteText )
 			{
-				const positiveVotes = parseInt( positiveVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
-				const totalVotes = positiveVotes + parseInt( negativeVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
+				const positiveVotes = Number.parseInt( positiveVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
+				const totalVotes = positiveVotes + Number.parseInt( negativeVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
 				const average = positiveVotes / totalVotes;
-				const score = average - ( average - 0.5 ) * Math.pow( 2, -Math.log10( totalVotes + 1 ) );
+				const score = average - ( average - 0.5 ) * ( 2 ** -Math.log10( totalVotes + 1 ) );
 
 				let ratingClass = 'poor';
 
@@ -337,7 +337,7 @@ function DrawLowestPrice()
 
 	if( price && price.content !== '' )
 	{
-		const parsedPrice = parseFloat( price.content.replace( ',', '.' ), 10 );
+		const parsedPrice = Number.parseFloat( price.content.replace( ',', '.' ), 10 );
 
 		WriteLog( 'Parsed current price as', parsedPrice );
 
@@ -483,7 +483,7 @@ function DrawLowestPrice()
 	{
 		if( !response || !response.success )
 		{
-			if( response && response.error )
+			if( response?.error )
 			{
 				WriteLog( `GetAppPrice failed to load: ${response.error}` );
 			}
@@ -708,7 +708,7 @@ function DrawOnlineStatsWidget( items )
 	{
 		if( !response || !response.success )
 		{
-			if( response && response.error )
+			if( response?.error )
 			{
 				WriteLog( `GetApp failed to load: ${response.error}` );
 			}

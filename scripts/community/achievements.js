@@ -205,7 +205,7 @@ function InitAchievements( items, isPersonal )
 					ProcessGameAchievements( gameAchievements, [] );
 				} );
 
-				if( response && response.error )
+				if( response?.error )
 				{
 					WriteLog( `GetAchievementsGroups failed to load: ${response.error}` );
 				}
@@ -367,7 +367,7 @@ function InitAchievements( items, isPersonal )
 
 		const AddAchievementData = ( id, domId, achievement, player ) =>
 		{
-			achievement.global_unlock = parseFloat( achievement.player_percent_unlocked ) / 100.0;
+			achievement.global_unlock = Number.parseFloat( achievement.player_percent_unlocked ) / 100.0;
 
 			const ach = {
 				id,

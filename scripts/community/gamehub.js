@@ -4,7 +4,7 @@
 GetOption( {
 	'button-gamehub': true,
 	'button-pcgw': true,
-}, function( items )
+}, ( items ) =>
 {
 	let element;
 	let link;

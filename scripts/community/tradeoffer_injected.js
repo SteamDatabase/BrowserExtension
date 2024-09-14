@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -159,4 +159,4 @@
 
 		return originalShowAlertDialog.apply( this, arguments );
 	};
-}() );
+} )() );

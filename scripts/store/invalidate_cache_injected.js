@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -17,4 +17,4 @@
 			type: 'steamdb:extension-invalidate-cache',
 		}, window.location.origin );
 	};
-}() );
+} )() );

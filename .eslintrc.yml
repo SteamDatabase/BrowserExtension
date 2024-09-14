@@ -7,7 +7,9 @@ env:
   browser: true
   webextensions: true
 
-extends: standard
+extends:
+  - eslint:recommended
+  - standard
 
 globals:
   _t: false
@@ -35,6 +37,7 @@ rules:
   no-var: [error]
   object-curly-spacing: [error, always]
   prefer-const: [error]
+  prefer-arrow-callback: [error]
   semi: [error, always]
   space-before-function-paren: [error, never]
   space-in-parens: [error, always]

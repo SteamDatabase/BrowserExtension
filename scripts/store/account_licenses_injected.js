@@ -1,4 +1,4 @@
-( function()
+( ( () =>
 {
 	'use strict';
 
@@ -46,4 +46,4 @@
 			window.DisableTooltipMutationObserver();
 		}
 	}
-}() );
+} )() );

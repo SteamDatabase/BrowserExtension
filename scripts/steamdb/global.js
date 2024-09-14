@@ -49,7 +49,7 @@ window.addEventListener( 'message', ( request ) =>
 	}
 } );
 
-GetOption( { 'steamdb-highlight': true }, function( items )
+GetOption( { 'steamdb-highlight': true }, ( items ) =>
 {
 	if( !items[ 'steamdb-highlight' ] )
 	{

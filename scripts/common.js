@@ -29,7 +29,7 @@ function GetAppIDFromUrl( url )
 {
 	const appid = url.match( /\/(?:app|sub|bundle|friendsthatplay|gamecards|recommended|widget)\/(?<id>[0-9]+)/ );
 
-	return appid ? parseInt( appid.groups.id, 10 ) : -1;
+	return appid ? Number.parseInt( appid.groups.id, 10 ) : -1;
 }
 
 function GetCurrentAppID()

@@ -59,7 +59,7 @@ function CreateExploreContainer()
 	const container = document.querySelector( '.discovery_queue_customize_ctn' );
 	container.parentNode.insertBefore( buttonContainer, container );
 
-	exploreButton.addEventListener( 'click', function( )
+	exploreButton.addEventListener( 'click', ( ) =>
 	{
 		if( exploreButton.classList.contains( 'btn_disabled' ) )
 		{
@@ -102,7 +102,7 @@ function CreateSaleItemContainer()
 	const container = document.querySelector( '.discovery_queue_customize_ctn' );
 	container.parentNode.insertBefore( buttonContainer, container );
 
-	itemButton.addEventListener( 'click', function( )
+	itemButton.addEventListener( 'click', ( ) =>
 	{
 		if( itemButton.classList.contains( 'btn_disabled' ) )
 		{

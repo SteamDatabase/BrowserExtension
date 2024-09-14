@@ -1,6 +1,6 @@
-const fs = require( 'fs' );
-const path = require( 'path' );
-const child_process = require( 'child_process' );
+const fs = require( 'node:fs' );
+const path = require( 'node:path' );
+const child_process = require( 'node:child_process' );
 const manifestPath = path.join( __dirname, 'manifest.json' );
 const version = process.argv[ 2 ];
 
