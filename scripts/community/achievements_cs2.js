@@ -299,11 +299,11 @@ const CreateCSRatingTable = ( container, rows ) =>
 
 const FetchCSRating = async( profileUrl ) =>
 {
-	const res = await fetch( `https://steamcommunity.com${profileUrl}/gcpd/730?tab=majors` );
-	const html = await res.text();
+	const res = await fetch( `https://steamcommunity.com${profileUrl}/gcpd/730?tab=majors&ajax=1` );
+	const json = await res.json();
 
 	const parser = new DOMParser();
-	const dom = parser.parseFromString( html, 'text/html' );
+	const dom = parser.parseFromString( json.html, 'text/html' );
 
 	const rows = [ ...dom.querySelectorAll( 'tr' ) ]
 		.filter( tr => tr.querySelector( 'td' )?.textContent.startsWith( 'premier' ) );
