@@ -21,6 +21,9 @@ const InitChart = ( container, initialData ) =>
 	canvas.className = 'steamdb_achievements_csrating_graph';
 	container.append( canvas );
 
+	const ctx = canvas.getContext( '2d' );
+	ctx.font = '16px "Motiva Sans", sans-serif';
+
 	const tooltip = document.createElement( 'div' );
 	tooltip.className = 'community_tooltip steamdb_achievements_csrating_graph_tooltip';
 	document.body.append( tooltip );
@@ -135,7 +138,8 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	ctx.fill();
 
 	// Max tier dashed line
-	let maxCSRTier = 2 * ( ( maxCSR - ( maxCSR % 5000 ) ) / maxCSR - 0.5 );
+	let maxCSRClean = maxCSR - ( maxCSR % 5000 );
+	let maxCSRTier = 2 * ( maxCSRClean / maxCSR - 0.5 );
 	let maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
 	ctx.strokeStyle = '#424857';
 	ctx.lineWidth = 1 * devicePixelRatio;
@@ -145,12 +149,18 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	ctx.lineTo( width, maxCSRTierY );
 	ctx.stroke();
 
-	maxCSRTier = 2 * ( ( maxCSR - ( maxCSR % 5000 ) - 5000 ) / maxCSR - 0.5 );
+	ctx.fillStyle = '#999';
+	ctx.fillText( `${( maxCSRClean / 1000 ).toFixed( 0 )}k`, 0, maxCSRTierY - 4 );
+
+	maxCSRClean -= 5000;
+	maxCSRTier = 2 * ( maxCSRClean / maxCSR - 0.5 );
 	maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
 	ctx.beginPath();
 	ctx.moveTo( 0, maxCSRTierY );
 	ctx.lineTo( width, maxCSRTierY );
 	ctx.stroke();
+
+	ctx.fillText( `${( maxCSRClean / 1000 ).toFixed( 0 )}k`, 0, maxCSRTierY - 4 );
 
 	ctx.setLineDash( [] );
 
