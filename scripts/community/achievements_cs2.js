@@ -138,29 +138,23 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	ctx.fill();
 
 	// Max tier dashed line
-	let maxCSRClean = maxCSR - ( maxCSR % 5000 );
-	let maxCSRTier = 2 * ( maxCSRClean / maxCSR - 0.5 );
-	let maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
 	ctx.strokeStyle = '#424857';
 	ctx.lineWidth = 1 * devicePixelRatio;
 	ctx.setLineDash( [ 7 * devicePixelRatio, 4 * devicePixelRatio ] );
-	ctx.beginPath();
-	ctx.moveTo( 0, maxCSRTierY );
-	ctx.lineTo( width, maxCSRTierY );
-	ctx.stroke();
-
 	ctx.fillStyle = '#999';
-	ctx.fillText( `${( maxCSRClean / 1000 ).toFixed( 0 )}k`, 0, maxCSRTierY - 4 );
 
-	maxCSRClean -= 5000;
-	maxCSRTier = 2 * ( maxCSRClean / maxCSR - 0.5 );
-	maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
-	ctx.beginPath();
-	ctx.moveTo( 0, maxCSRTierY );
-	ctx.lineTo( width, maxCSRTierY );
-	ctx.stroke();
+	for( let maxCSRClean = maxCSR - ( maxCSR % 5000 ), i = 0; maxCSRClean >= 5000 && i < 2; maxCSRClean -= 5000, i++ )
+	{
+		const maxCSRTier = 2 * ( maxCSRClean / maxCSR - 0.5 );
+		const maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;
 
-	ctx.fillText( `${( maxCSRClean / 1000 ).toFixed( 0 )}k`, 0, maxCSRTierY - 4 );
+		ctx.beginPath();
+		ctx.moveTo( 0, maxCSRTierY );
+		ctx.lineTo( width, maxCSRTierY );
+		ctx.stroke();
+
+		ctx.fillText( `${( maxCSRClean / 1000 ).toFixed( 0 )}k`, 0,	maxCSRTierY < 12 ? maxCSRTierY + 12 : maxCSRTierY - 4 );
+	}
 
 	ctx.setLineDash( [] );
 
