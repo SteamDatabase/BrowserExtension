@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require( 'node:fs' );
 const path = require( 'node:path' );
 const child_process = require( 'node:child_process' );

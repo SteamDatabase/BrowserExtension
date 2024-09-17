@@ -142,8 +142,9 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	ctx.lineWidth = 1 * devicePixelRatio;
 	ctx.setLineDash( [ 7 * devicePixelRatio, 4 * devicePixelRatio ] );
 	ctx.fillStyle = '#999';
+	i = 0;
 
-	for( let maxCSRClean = maxCSR - ( maxCSR % 5000 ), i = 0; maxCSRClean >= 5000 && i < 2; maxCSRClean -= 5000, i++ )
+	for( let maxCSRClean = maxCSR - ( maxCSR % 5000 ); maxCSRClean >= 5000 && i < 2; maxCSRClean -= 5000, i++ )
 	{
 		const maxCSRTier = 2 * ( maxCSRClean / maxCSR - 0.5 );
 		const maxCSRTierY = ( -maxCSRTier * paddedHeight ) / 2 + halfHeight;

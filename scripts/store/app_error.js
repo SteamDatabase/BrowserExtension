@@ -2,7 +2,6 @@
 
 'use strict';
 
-// eslint-disable-next-line no-unused-vars
 function AddLinksInErrorBox( container )
 {
 	const pageTypeMatch = location.pathname.match( /^\/(?:[a-z]+\/)?(?<type>app|bundle|sub)\// );

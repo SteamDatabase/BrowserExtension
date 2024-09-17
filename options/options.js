@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	document.body.dir = _t( '@@bidi_dir' );
 
 	const localizable = document.querySelectorAll( '[data-msg]' );

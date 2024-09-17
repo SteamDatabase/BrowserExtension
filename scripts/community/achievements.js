@@ -1,7 +1,6 @@
 /* exported DoAchievements */
 'use strict';
 
-// eslint-disable-next-line no-unused-vars
 function DoAchievements( isPersonal )
 {
 	GetOption( {
@@ -851,7 +850,10 @@ function InitAchievements( items, isPersonal )
 			const percentage = earned / total;
 			const progress = document.createElement( 'div' );
 			progress.className = 'steamdb_achievement_progress';
-			if( !isLeftPlayer ) progress.classList.add( 'steamdb_achievement_progress_compare' );
+			if( !isLeftPlayer )
+			{
+				progress.classList.add( 'steamdb_achievement_progress_compare' );
+			}
 
 			const info = document.createElement( 'div' );
 			info.className = 'steamdb_achievement_progress_info';
@@ -1126,7 +1128,10 @@ function InitAchievements( items, isPersonal )
 				el.classList.add( 'steamdb_achievement_progressbar' );
 
 				// Second progress bar at the top belongs to the second player
-				if( i === 1 ) el.classList.add( 'steamdb_achievement_progress_compare' );
+				if( i === 1 )
+				{
+					el.classList.add( 'steamdb_achievement_progress_compare' );
+				}
 			} );
 
 			// As we are completely redrawing the achievement list, sorting added by

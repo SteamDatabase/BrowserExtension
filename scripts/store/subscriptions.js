@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	const scriptHook = document.getElementById( 'steamdb_subscriptions_hook' );
 	const homepage = scriptHook.dataset.homepage;
 	const originalDropdownSelectOption = window.GamePurchaseDropdownSelectOption;

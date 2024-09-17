@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	if( !( 'PublishedFileAward' in window ) )
 	{
 		return;

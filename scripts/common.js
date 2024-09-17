@@ -1,5 +1,4 @@
 /* exported _t, ExtensionApi, GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, SetOption, WriteLog */
-/* eslint-disable no-unused-vars */
 
 'use strict';
 
@@ -15,10 +14,8 @@ var ExtensionApi = ( () =>
 	{
 		return chrome;
 	}
-	else
-	{
-		throw new Error( 'Did not find appropriate web extensions api' );
-	}
+
+	throw new Error( 'Did not find appropriate web extensions api' );
 } )();
 
 // exported variable needs to be `var`
@@ -94,6 +91,5 @@ function SendMessageToBackgroundScript( message, callback )
 
 function WriteLog( )
 {
-	// eslint-disable-next-line no-console
 	console.log( '%c[SteamDB]%c', 'color:#2196F3; font-weight:bold;', '', ...arguments );
 }

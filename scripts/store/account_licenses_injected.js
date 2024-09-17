@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	if( document.body )
 	{
 		PerformHook();

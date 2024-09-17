@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	const originalOrderPollingComplete = window.OrderPollingComplete;
 
 	window.OrderPollingComplete = function SteamDB_OrderPollingComplete()

@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	const script = document.getElementById( 'steamdb_registerkey_hook' );
 	const originalOnRegisterProductKeyFailure = window.OnRegisterProductKeyFailure;
 

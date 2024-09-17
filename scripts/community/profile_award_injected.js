@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	if( !( 'g_rgProfileData' in window ) || !( 'fnLoyalty_ShowAwardModal' in window ) )
 	{
 		return;

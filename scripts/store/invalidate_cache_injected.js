@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	if( !window.GDynamicStore || !window.GDynamicStore.InvalidateCache )
 	{
 		return;

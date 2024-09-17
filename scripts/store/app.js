@@ -500,14 +500,11 @@ function DrawLowestPrice()
 		WriteLog( 'GetAppPrice loaded' );
 
 		// We trust the API, but this ensures safety
-		const escapeHtml = ( str ) =>
-		{
-			return str
-				.replaceAll( '&', '&amp;' )
-				.replaceAll( '<', '&lt;' )
-				.replaceAll( '"', '&quot;' )
-				.replaceAll( "'", '&apos;' );
-		};
+		const escapeHtml = ( str ) => str
+			.replaceAll( '&', '&amp;' )
+			.replaceAll( '<', '&lt;' )
+			.replaceAll( '"', '&quot;' )
+			.replaceAll( "'", '&apos;' );
 
 		const safePrice = escapeHtml( response.data.p );
 

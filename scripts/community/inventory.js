@@ -1,7 +1,7 @@
+'use strict';
+
 ( ( () =>
 {
-	'use strict';
-
 	const FoundState =
 	{
 		None: 0,
@@ -26,7 +26,7 @@
 	{
 		stop: () =>
 		{
-
+			// empty
 		},
 	};
 
@@ -127,7 +127,7 @@
 
 			const listNow = document.createElement( 'a' );
 			listNow.title = i18n.inventory_list_at_title;
-			listNow.href = 'javascript:void(0)';
+			listNow.href = 'javascript:void(0)'; // eslint-disable-line no-script-url
 			listNow.className = 'btn_small btn_darkblue_white_innerfade';
 			listNow.style.opacity = 0.5;
 			listNow.appendChild( listNowText );
@@ -137,7 +137,7 @@
 
 			const sellNow = document.createElement( 'a' );
 			sellNow.title = i18n.inventory_sell_at_title;
-			sellNow.href = 'javascript:void(0)';
+			sellNow.href = 'javascript:void(0)'; // eslint-disable-line no-script-url
 			sellNow.className = 'btn_small btn_darkblue_white_innerfade';
 			sellNow.style.opacity = 0.5;
 			sellNow.appendChild( sellNowText );

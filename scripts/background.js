@@ -1,3 +1,5 @@
+'use strict';
+
 let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
@@ -14,10 +16,8 @@ const ExtensionApi = ( () =>
 	{
 		return chrome;
 	}
-	else
-	{
-		throw new Error( 'Did not find appropriate web extensions api' );
-	}
+
+	throw new Error( 'Did not find appropriate web extensions api' );
 } )();
 
 ExtensionApi.runtime.onInstalled.addListener( ( event ) =>
@@ -37,7 +37,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 		return false;
 	}
 
-	if( !Object.hasOwnProperty.call( request, 'contentScriptQuery' ) )
+	if( !Object.hasOwn( request, 'contentScriptQuery' ) )
 	{
 		return false;
 	}
