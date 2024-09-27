@@ -49,6 +49,8 @@
 	let element;
 	let starDismissed = false;
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
+
+	/** @type {Object.<string, HTMLElement>} */
 	const options =
 	{
 		'clicked-star': null,
@@ -104,6 +106,21 @@
 				options[ item ].disabled = false;
 			}
 		}
+	} );
+
+	document.querySelectorAll( '.js-scroll-to-option' ).forEach( ( el ) =>
+	{
+		el.addEventListener( 'click', ( e )=>
+		{
+			e.preventDefault();
+
+			const option = options[ el.dataset.option ];
+			option.scrollIntoView( {
+				behavior: 'smooth',
+				block: 'center',
+			} );
+			option.closest( 'label' ).focus( { preventScroll: true } );
+		} );
 	} );
 
 	// Must be synced with host_permissions in manifest.json

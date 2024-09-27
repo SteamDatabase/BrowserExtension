@@ -160,6 +160,14 @@ footer p {
 	margin-top: 0.4rem;
 }
 
+:focus,
+.checkbox:focus {
+	outline: solid;
+	outline-color: #00aff4;
+	outline-offset: 4px;
+	outline-width: 2px;
+}
+
 .checkbox > input {
 	width: 1rem;
 	height: 1rem;
