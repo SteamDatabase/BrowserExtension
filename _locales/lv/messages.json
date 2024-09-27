@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB ir iespēja automātiski izlaist šīs vecuma pārbaudes lapas"
+	},
 	"explore_auto_discover": {
 		"message": "Automātiskā atklāšana"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Pārāk daudz reižu neizdevās iztīrīt rindu. Vēlāk vari mēģināt vēlreiz."
+	},
 	"explore_finished": {
 		"message": "Rinda ir izskatīta."
+	},
+	"explore_saleitem_claim": {
+		"message": "Saņemt atlīdzību"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Saņemt bezmaksas ikdienas atlīdzību, ja tāda ir."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Notiek ikdienas atlīdzības saņemšana…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Šobrīd nav pieejama ikdienas atlīdzība."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Nākamais priekšmets pieejams: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Neizdevās iegūt ikdienas atlīdzību."
+	},
+	"explore_saleitem_success": {
+		"message": "Jauna atlīdzība saņemta: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Spēles ar kārtīm: $amount$",
@@ -252,6 +292,21 @@
 		"message": "Sasniegumu grupas nodrošina Steam Hunters caur SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sezona $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Datums"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Reitings"
+	},
 	"inventory_list_at": {
 		"message": "Izlikt par $price$",
 		"placeholders": {
@@ -275,6 +330,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Izveido sludinājumu vienumam ar augstāko pieejamo pirkšanas cenu\n\nNorādīta cena parāda, cik naudu tu saņem (bez papildus izmaksām)"
+	},
+	"inventory_badge_level": {
+		"message": "Tavs žetona līmeni: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Tavs sudraba žetona līmenis: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Žetons netika izstrādāts"
 	},
 	"options": {
 		"message": "Iestatījumi"
@@ -474,6 +550,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automātiski apstiprināt ātro pārdošanu"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Parādīt žetona līmeni uz tirgošanās kārtīm un pastiprināšanas pakām"
+	},
 	"options_display_market_price_others": {
 		"message": "Parādīt vienuma cenu tirgū, kad apskata citu lietotāju inventāru"
 	},
@@ -564,6 +643,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "Pievienot pogu, ar kuru automātiski iziet cauri Discovery Queue, kad veikalā notiek izpārdošana"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Pēc atlikušo kāršu iegādes, novirzīt atpakaļ uz spēļu kāršu lapu"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Uzlabot globālo sasniegumu lapu"
 	},
@@ -572,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Parādīt slēdzenes ikonu priekš neiegūtiem sasniegumiem"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Parādīt CS reitinga vēsturi uz CS2 sasniegumu lapas"
 	}
 }

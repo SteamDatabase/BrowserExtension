@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Añade enlaces a SteamDB y nuevas funciones en el sitio web de Steam. Consulta los precios más bajos y estadísticas de los juegos.",
+		"message": "Añade enlaces de SteamDB y nuevas funciones en el sitio web de Steam. Consulta los precios más bajos y estadísticas de los juegos.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {

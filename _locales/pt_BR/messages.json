@@ -305,7 +305,7 @@
 		"message": "Data"
 	},
 	"achievements_csrating_name": {
-		"message": "Avaliação CS"
+		"message": "Classificação CS"
 	},
 	"inventory_list_at": {
 		"message": "Anunciar por $price$",
@@ -656,6 +656,6 @@
 		"message": "Exibir um ícone de cadeado em conquistas não alcançadas"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Exibir o histórico de avaliação CS na página de conquistas CS2"
+		"message": "Exibir o histórico de classificação CS na página de conquistas CS2"
 	}
 }

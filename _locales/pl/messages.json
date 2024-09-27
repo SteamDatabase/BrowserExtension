@@ -292,6 +292,21 @@
 		"message": "Grupy Osiągnięć są dostarczane przez Steam Hunters za pośrednictwem SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sezon $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Data"
+	},
+	"achievements_csrating_name": {
+		"message": "Klasyfikacja CS"
+	},
 	"inventory_list_at": {
 		"message": "Wystaw za $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Wyświetl ikonę blokady dla zablokowanych osiągnięć"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Wyświetl historię klasyfikacji CS na stronie osiągnięć CS2"
 	}
 }

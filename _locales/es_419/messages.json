@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Agrega enlaces a SteamDB y nuevas funciones en el sitio web de Steam. Consulta los precios más bajos y estadísticas de los juegos.",
+		"message": "Agrega enlaces de SteamDB y nuevas funciones en el sitio web de Steam. Consulta los precios más bajos y estadísticas de los juegos.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -601,7 +601,7 @@
 		"message": "Mostrar la valoración de SteamDB en las páginas de los productos"
 	},
 	"options_enhancement_appicon": {
-		"message": "Mostrar el icono del producto en la página de la tienda y de la comunidad",
+		"message": "Mostrar el ícono del producto en la página de la tienda y de la comunidad",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
@@ -653,7 +653,7 @@
 		"message": "Vincular a la página de logros personales"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Mostrar un icono de candado para logros no desbloqueados"
+		"message": "Mostrar un ícono de candado para logros no desbloqueados"
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Mostrar el historial de \"Clasificación CS\" en la página de logros de CS2"

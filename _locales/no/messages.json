@@ -175,7 +175,7 @@
 		}
 	},
 	"explore_failed_to_clear_too_many": {
-		"message": "Kunne ikke tømme køen for mange ganger. Du kan prøve igjen senere."
+		"message": "Greide ikke å tømme køen for mange ganger. Du kan prøve igjen senere."
 	},
 	"explore_finished": {
 		"message": "Kø har blitt utforsket."
@@ -206,7 +206,7 @@
 		"message": "Kunne ikke kreve den daglige belønningen."
 	},
 	"explore_saleitem_success": {
-		"message": "Ny belønning krevet: $item$.",
+		"message": "Ny belønning krevd: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -332,7 +332,7 @@
 		"message": "Legger ut gjenstanden for høyeste oppgitte kjøpsprisspris\n\nVist pris er pengene du mottar (uten gebyrer)"
 	},
 	"inventory_badge_level": {
-		"message": "Ditt emblemnivå: $level$",
+		"message": "Ditt merkenivå: $level$",
 		"placeholders": {
 			"level": {
 				"content": "%level%",
@@ -341,7 +341,7 @@
 		}
 	},
 	"inventory_badge_foil_level": {
-		"message": "Ditt foilemblem nivå: $level$",
+		"message": "Ditt foile-merkenivå: $level$",
 		"placeholders": {
 			"level": {
 				"content": "%level%",
@@ -350,7 +350,7 @@
 		}
 	},
 	"inventory_badge_none": {
-		"message": "Ingen emblem laget"
+		"message": "Ingen merke lagd"
 	},
 	"options": {
 		"message": "Innstillinger"
@@ -551,7 +551,7 @@
 		"message": "Automatisk godta hurtigsalg"
 	},
 	"options_enhancement_inventory_badge_info": {
-		"message": "Vis emblemnivå på handelskort og booster-pakker"
+		"message": "Vis merkenivå på kort og booster-pakker"
 	},
 	"options_display_market_price_others": {
 		"message": "Vis markedspris for gjenstander i andre brukeres lager"
@@ -644,7 +644,7 @@
 		"message": "Legg til en knapp for å automatisk oppdage køen under salg"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "Omdirigerer tilbake til spillkort-siden etter å ha kjøpt de resterende kortene"
+		"message": "Omdirigerer tilbake til kortsiden etter å ha kjøpt de resterende kortene"
 	},
 	"options_builtin_achievements_global": {
 		"message": "Forbedre global prestasjonsside"
@@ -656,6 +656,6 @@
 		"message": "Vis et låseikon for låste prestasjoner"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Vis CS vurderingshistorikk på CS2-prestasjonssiden"
+		"message": "Vis CS-rangeringshistorikk på CS2-prestasjonssiden"
 	}
 }

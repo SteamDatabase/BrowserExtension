@@ -292,6 +292,21 @@
 		"message": "Grupe postignuća osiguravaju Steam Hunters preko SteamDB-a.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sezona $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Datum"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Ocjena"
+	},
 	"inventory_list_at": {
 		"message": "Popis po cijeni od $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Prikazati ikonu lokota za zaključana postignuća"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Prikaži povijest CS ocjena na CS2 stranici postignuća"
 	}
 }

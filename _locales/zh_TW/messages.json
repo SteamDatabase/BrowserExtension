@@ -292,6 +292,18 @@
 		"message": "成就分類由 Steam Hunters 透過 SteamDB 提供。",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "第 $season$ 季",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "日期"
+	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
 		"placeholders": {
@@ -629,7 +641,7 @@
 		"message": "在特賣時加入自動探索佇列的按鈕"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "購買缺少卡片後重定向回到遊戲卡片頁面"
+		"message": "購買缺少卡片後重新導向回到遊戲卡片頁面"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改進全球成就頁面"
