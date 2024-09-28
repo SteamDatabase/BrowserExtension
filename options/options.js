@@ -46,11 +46,10 @@
 		document.getElementById( 'welcome' ).hidden = false;
 	}
 
-	let element;
 	let starDismissed = false;
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
 
-	/** @type {Object.<string, HTMLElement>} */
+	/** @type {Object.<string, HTMLElement[]>} */
 	const options =
 	{
 		'clicked-star': null,
@@ -70,9 +69,17 @@
 
 	for( let i = 0; i < checkboxes.length; i++ )
 	{
-		element = checkboxes[ i ];
+		const element = checkboxes[ i ];
+		const item = element.dataset.option;
 
-		options[ element.dataset.option ] = element;
+		if( !options[ item ] )
+		{
+			options[ item ] = [ element ];
+		}
+		else
+		{
+			options[ item ].push( element );
+		}
 
 		element.addEventListener( 'change', CheckboxChange );
 	}
@@ -88,9 +95,10 @@
 				continue;
 			}
 
-			element = options[ item ];
-
-			element.checked = items[ item ];
+			for( const element of options[ item ] )
+			{
+				element.checked = items[ item ];
+			}
 		}
 	} );
 
@@ -102,25 +110,13 @@
 		{
 			if( options[ item ] )
 			{
-				options[ item ].checked = !!changes[ item ].newValue;
-				options[ item ].disabled = false;
+				for( const element of options[ item ] )
+				{
+					element.checked = !!changes[ item ].newValue;
+					element.disabled = false;
+				}
 			}
 		}
-	} );
-
-	document.querySelectorAll( '.js-scroll-to-option' ).forEach( ( el ) =>
-	{
-		el.addEventListener( 'click', ( e )=>
-		{
-			e.preventDefault();
-
-			const option = options[ el.dataset.option ];
-			option.scrollIntoView( {
-				behavior: 'smooth',
-				block: 'center',
-			} );
-			option.closest( 'label' ).focus( { preventScroll: true } );
-		} );
 	} );
 
 	// Must be synced with host_permissions in manifest.json
