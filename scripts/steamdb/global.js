@@ -2,13 +2,25 @@
 
 const EXTENSION_INTEROP_VERSION = 2;
 
-window.postMessage( {
-	version: EXTENSION_INTEROP_VERSION,
-	type: 'steamdb:extension-init',
-	data: {
-		options_url: GetLocalResource( 'options/options.html' ),
-	},
-}, GetHomepage() );
+const OnPageLoadedInit = () =>
+{
+	window.postMessage( {
+		version: EXTENSION_INTEROP_VERSION,
+		type: 'steamdb:extension-init',
+		data: {
+			options_url: GetLocalResource( 'options/options.html' ),
+		},
+	}, GetHomepage() );
+};
+
+if( document.readyState === 'loading' )
+{
+	document.addEventListener( 'DOMContentLoaded', OnPageLoadedInit, { once: true } );
+}
+else
+{
+	OnPageLoadedInit();
+}
 
 window.addEventListener( 'message', ( request ) =>
 {
