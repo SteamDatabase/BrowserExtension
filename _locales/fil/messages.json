@@ -1,16 +1,16 @@
 {
 	"extension_description": {
-		"message": "Nagdadagdag ng mga SteamDB link at mga bagong feature sa Steam store at community. Tingnan ang mga pinakamabababang presyo at stats.",
+		"message": "Nagdagdag ng mga link ng SteamDB at mga bagong feature sa Steam store at komunidad. Tingnan ang pinakamababang presyo at istatistika ng laro.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
-		"message": "Mga option ng SteamDB"
+		"message": "Mga opsyon ng SteamDB"
 	},
 	"steamdb_calculator": {
 		"message": "Calculator ng SteamDB"
 	},
 	"steamstatus": {
-		"message": "Tingnan sa $domain$",
+		"message": "Tingnan ito sa $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -22,7 +22,7 @@
 		"message": "Mukhang nakakaranas ng downtime ang Steam. "
 	},
 	"view_on_steamdb": {
-		"message": "Tingnan sa SteamDB"
+		"message": "Tingnan ito sa SteamDB"
 	},
 	"view_on_steam_hunters": {
 		"message": "Tignan sa Steam Hunters",
@@ -174,11 +174,48 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Nabigong i-clear ang queue nang maraming beses. Maaari mong subukan muli sa ibang pagkakataon."
+	},
 	"explore_finished": {
 		"message": "Na-explore na ang queue."
 	},
+	"explore_saleitem_claim": {
+		"message": "Kunin ang gantimpala"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Kuhain ang libreng pang-araw-araw na reward kung mayroon man."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Kinukuha ang pang-araw-araw na reward…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Walang pang-araw-araw na reward ang makukuha sa ngayon."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Available na susunod na item: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nabigong kuhain ang pang-araw-araw na reward."
+	},
+	"explore_saleitem_success": {
+		"message": "Bagong gantimpala na nakuha: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
+	},
 	"badges_idle_apps": {
-		"message": "Mga app na may drops: $amount$",
+		"message": "Mga idle na app: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -188,7 +225,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Mga app na may drops sa pahinang ito: $amount$",
+		"message": "Mga idle na app sa page na ito: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -198,7 +235,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Natitirang drops: $amount$",
+		"message": "Natitira na mga drop: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -208,7 +245,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Natitirang drops sa pahinang ito: $amount$",
+		"message": "Natitira na mga drop sa page na ito: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -221,7 +258,7 @@
 		"message": "Nakatagong achievement: "
 	},
 	"achievement_global_unlock": {
-		"message": "$percent$ ng mga manlalaro ay meron nitong achievement",
+		"message": "$percent$ ng mga manlalaro ay mayroon nitong achievement",
 		"description": "Do not add percent symbol, it will be formatted automatically",
 		"placeholders": {
 			"percent": {
@@ -255,6 +292,21 @@
 		"message": "Ang grupo ng mga parangal ay inilaan ng Steam Hunters sa pamamagitan ng SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Season $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Petsa"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Rating"
+	},
 	"inventory_list_at": {
 		"message": "I-list ito ng $price$",
 		"placeholders": {
@@ -278,6 +330,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "I-list ang item para sa pinakamataas na nakalistang presyo ng buy order\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
+	},
+	"inventory_badge_level": {
+		"message": "Ang iyong badge level: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Ang iyong foil badge level: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Walang na-craft na badge"
 	},
 	"options": {
 		"message": "Mga Option"
@@ -310,7 +383,7 @@
 		"message": "Ginawa gamit ang buong pagmamahal 💙 ng mga tao sa <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "Ito ay <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, salamat sa lahat ng mga kontribyutor!"
+		"message": "Ito ay <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, salamat sa lahat na mga kontribyutor!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Ang mga naka-disable na checkbox ay palatandaan na ito ay built-in na feature."
@@ -477,6 +550,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Awtomatikong tumanggap ng quick sell"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Ipakita ang antas ng badge sa mga trading card at booster pack"
+	},
 	"options_display_market_price_others": {
 		"message": "Ipakita ang presyo ng item sa mga inventory ng ibang mga user"
 	},
@@ -567,6 +643,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "Magdagdag ng button para awtomatikong ma-discover ang queue habang nagbebenta"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Mag-redirect pabalik sa page ng mga game card pagkatapos bumili ng mga remaining card"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Pagbutihin ang page ng mga achievements"
 	},
@@ -575,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Magpakita ng lock icon para sa mga locked achievement"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Ipakita ang CS rating history sa CS2 achievements page"
 	}
 }
