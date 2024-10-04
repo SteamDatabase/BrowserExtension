@@ -60,8 +60,6 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 		contentScriptQuery: 'FetchSteamUserData',
 	}, ( response ) =>
 	{
-		console.log( document.readyState );
-
 		const OnPageLoaded = () =>
 		{
 			if( response.error )
