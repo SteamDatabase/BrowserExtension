@@ -60,26 +60,40 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 		contentScriptQuery: 'FetchSteamUserData',
 	}, ( response ) =>
 	{
-		if( response.error )
-		{
-			WriteLog( 'Failed to load userdata', response.error );
+		console.log( document.readyState );
 
-			window.postMessage( {
-				version: EXTENSION_INTEROP_VERSION,
-				type: 'steamdb:extension-error',
-				error: `Failed to load your games. ${response.error}`,
-			}, GetHomepage() );
+		const OnPageLoaded = () =>
+		{
+			if( response.error )
+			{
+				WriteLog( 'Failed to load userdata', response.error );
+
+				window.postMessage( {
+					version: EXTENSION_INTEROP_VERSION,
+					type: 'steamdb:extension-error',
+					error: `Failed to load your games. ${response.error}`,
+				}, GetHomepage() );
+			}
+
+			if( response.data )
+			{
+				window.postMessage( {
+					version: EXTENSION_INTEROP_VERSION,
+					type: 'steamdb:extension-loaded',
+					data: response.data,
+				}, GetHomepage() );
+
+				WriteLog( 'Userdata loaded', `Packages: ${response.data.rgOwnedPackages.length}` );
+			}
+		};
+
+		if( document.readyState === 'loading' )
+		{
+			document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
 		}
-
-		if( response.data )
+		else
 		{
-			window.postMessage( {
-				version: EXTENSION_INTEROP_VERSION,
-				type: 'steamdb:extension-loaded',
-				data: response.data,
-			}, GetHomepage() );
-
-			WriteLog( 'Userdata loaded', `Packages: ${response.data.rgOwnedPackages.length}` );
+			OnPageLoaded();
 		}
 	} );
 } );
