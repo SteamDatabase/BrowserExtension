@@ -54,6 +54,7 @@
 				"scripts/community/inventory.js",
 				"scripts/community/agecheck_injected.js",
 				"scripts/community/filedetails_award_injected.js",
+				"scripts/community/market_injected.js",
 				"scripts/community/multibuy_injected.js",
 				"scripts/community/profile_award_injected.js",
 				"scripts/community/tradeoffer_injected.js",
@@ -506,6 +507,21 @@
 			"js":
 			[
 				"scripts/community/multibuy.js"
+			]
+		},
+		{
+			"run_at": "document_start",
+			"matches":
+			[
+				"https://steamcommunity.com/market/*"
+			],
+			"js":
+			[
+				"scripts/community/market.js"
+			],
+			"css":
+			[
+				"styles/market.css"
 			]
 		},
 		{

@@ -1,0 +1,26 @@
+.steamdb_market_per_page {
+	display: flex;
+	align-items: center;
+	line-height: 1;
+	gap: 5px;
+	margin-top: 10px;
+}
+
+.steamdb_market_per_page a.disabled {
+	color: inherit;
+	cursor: inherit;
+}
+
+.steamdb_market_loader {
+	width: 40px;
+	aspect-ratio: 4;
+	background: radial-gradient(circle closest-side, #FFF 90%, #0000) 0/calc(100%/3) 100% space;
+	clip-path: inset(0 100% 0 0);
+	animation: steamdb_market_loader_animation 1s steps(4) infinite;
+}
+
+@keyframes steamdb_market_loader_animation {
+	to {
+		clip-path: inset(0 -34% 0 0)
+	}
+}
