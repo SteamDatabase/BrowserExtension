@@ -106,4 +106,52 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 			OnPageLoaded();
 		}
 	} );
+
+	// Maybe it should be its own option?
+	SendMessageToBackgroundScript( {
+		contentScriptQuery: 'FetchSteamUserFamilyData',
+	}, ( response ) =>
+	{
+		const OnPageLoaded = () =>
+		{
+			if( response.error )
+			{
+				if( response.error === 'You are not part of any family group.' )
+				{
+					WriteLog( response.error );
+				}
+				else
+				{
+					WriteLog( 'Failed to load family userdata', response.error );
+
+					window.postMessage( {
+						version: EXTENSION_INTEROP_VERSION,
+						type: 'steamdb:extension-error',
+						error: `Failed to load your family games. ${response.error}`,
+					}, GetHomepage() );
+				}
+
+			}
+
+			if( response.data )
+			{
+				window.postMessage( {
+					version: EXTENSION_INTEROP_VERSION,
+					type: 'steamdb:extension-loaded',
+					data: response.data,
+				}, GetHomepage() );
+
+				WriteLog( 'UserFamilydata loaded', `Apps: ${response.data.rgFamilySharedApps.length}` );
+			}
+		};
+
+		if( document.readyState === 'loading' )
+		{
+			document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
+		}
+		else
+		{
+			OnPageLoaded();
+		}
+	} );
 } );

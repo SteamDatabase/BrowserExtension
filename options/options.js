@@ -23,6 +23,10 @@
 		{
 			msg = _t( token, [ _t( 'options_achievement_groups' ) ] );
 		}
+		else if( token === 'options_extra_data_steam_family' )
+		{
+			msg = _t( token, [ _t( 'options_steam_family_flag' ) ] );
+		}
 		else
 		{
 			msg = _t( token );

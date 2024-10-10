@@ -677,5 +677,33 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Display CS rating history on CS2 achievements page"
+	},
+	"options_extra_data_steam": {
+		"message": "Extra data fetched from $domain$",
+		"placeholders": {
+			"domain": {
+				"content": "steampowered.com",
+				"example": "steampowered.com"
+			}
+		}
+	},
+	"options_extra_data_steam_family": {
+		"message": "When the \"$options_steam_family_flag$\" option is enabled, the extension will do a secure request to $domain$ to get a working access token, which will be used to fetch your current family group and your shared family apps.",
+		"placeholders": {
+			"domain": {
+				"content": "steampowered.com",
+				"example": "steampowered.com"
+			},
+			"options_steam_family_flag": {
+				"content": "$1",
+				"description": "Uses translation for options_steam_family_flag"
+			}
+		}
+	},
+	"options_steam_family_flag": {
+		"message": "Display a flag on family shared apps' links"
+	},
+	"in_family": {
+		"message": "IN FAMILY"
 	}
 }

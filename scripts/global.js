@@ -76,4 +76,47 @@ else
 
 		popup.appendChild( optionsLink );
 	}
+
+	GetOption( { 'options_steam_family_flag': true }, ( items ) =>
+	{
+		if( !items.options_steam_family_flag )
+		{
+			return;
+		}
+
+		SendMessageToBackgroundScript( {
+			contentScriptQuery: 'FetchSteamUserFamilyData',
+		}, ( response ) =>
+		{
+			const OnPageLoaded = () =>
+			{
+				if( response.error )
+				{
+					if( response.error === 'You are not part of any family group.' )
+					{
+						WriteLog( response.error );
+					}
+					else
+					{
+						WriteLog( 'Failed to load userFamilydata', response.error );
+					}
+				}
+
+				if( response.data )
+				{
+					WriteLog( 'UserFamilydata loaded', `Apps: ${Object.keys( response.data.rgFamilySharedApps ).length}` );
+					window.postMessage( { type: 'steamdb:user-family-data-processed', data: response.data } );
+				}
+			};
+
+			if( document.readyState === 'loading' )
+			{
+				document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
+			}
+			else
+			{
+				OnPageLoaded();
+			}
+		} );
+	} );
 }
