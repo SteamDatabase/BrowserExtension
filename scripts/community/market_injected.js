@@ -152,6 +152,11 @@ function OnLoaded()
 		}
 	}, 100 );
 
+	if( !location.pathname.startsWith( '/market/listings/' ) )
+	{
+		return;
+	}
+
 	const originalAddItemHoverToElement = window.AddItemHoverToElement;
 
 	const descriptorTagsToUse =
@@ -179,14 +184,39 @@ function OnLoaded()
 				return;
 			}
 
-			if( !rgItem.descriptions )
+			if( !element.classList.contains( 'market_listing_item_name' ) )
 			{
 				return;
 			}
 
-			if( !element.classList.contains( 'market_listing_item_name' ) )
+			if( rgItem.market_actions )
 			{
-				return;
+				for( const action of rgItem.market_actions )
+				{
+					if( action.link && action.link.startsWith( 'steam://rungame/' ) )
+					{
+						const link = document.createElement( 'a' );
+						link.href = action.link
+							.replace( "%assetid%", rgItem.id )
+							.replace( "%contextid%", rgItem.contextid )
+							.replace( "%owner_steamid%", rgItem.owner );
+						link.title = action.name;
+						link.textContent = '🔎';
+
+						const linkContainer = document.createElement( 'div' );
+						linkContainer.className = 'market_listing_right_cell steamdb_market_inspect_link';
+						linkContainer.append( link );
+
+						const cells = element.closest( '.market_listing_row' ).querySelectorAll( '.market_listing_right_cell' );
+
+						if( cells.length > 0 )
+						{
+							cells[ cells.length - 1 ].insertAdjacentElement( 'afterend', linkContainer );
+						}
+
+						break;
+					}
+				}
 			}
 
 			if( !rgItem.descriptions || !Object.hasOwn( descriptorTagsToUse, rgItem.appid ) )
