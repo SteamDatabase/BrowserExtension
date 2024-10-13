@@ -66,21 +66,16 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 	return false;
 } );
 
-function InvalidateCache( target = null )
+function InvalidateCache()
 {
-	if( target === null || target === 'userdata' )
-	{
-		userDataCache = null;
 
-		SetLocalOption( 'userdata.cached', Date.now() );
-	}
+	userDataCache = null;
 
-	if( target === null || target === 'userfamilydata' )
-	{
-		userFamilyDataCache = null;
+	SetLocalOption( 'userdata.cached', Date.now() );
 
-		SetLocalOption( 'userfamilydata.stored', '' );
-	}
+	userFamilyDataCache = null;
+
+	SetLocalOption( 'userfamilydata.stored', '' );
 }
 
 function FetchSteamUserData( callback )
@@ -242,9 +237,6 @@ async function FetchSteamUserFamilyData( callback )
 				} );
 		} ).catch( ( error ) =>
 		{
-
-			InvalidateCache( 'userfamilydata' );
-
 			const response =
 				{
 					error: error.message,
