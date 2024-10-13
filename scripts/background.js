@@ -75,9 +75,11 @@ function InvalidateCache( target = null )
 		SetLocalOption( 'userdata.cached', Date.now() );
 	}
 
-	if( target === null )
+	if( target === null || target === 'userfamilydata' )
 	{
 		userFamilyDataCache = null;
+
+		SetLocalOption( 'userfamilydata.stored', '' );
 	}
 }
 
@@ -162,7 +164,7 @@ function FetchSteamUserData( callback )
 	} );
 }
 
-function FetchSteamUserFamilyData( callback )
+async function FetchSteamUserFamilyData( callback )
 {
 	if( userFamilyDataCache !== null )
 	{
@@ -172,7 +174,7 @@ function FetchSteamUserFamilyData( callback )
 	const now = Date.now();
 	let cache;
 
-	GetLocalOption( { 'userfamilydata.stored': false }, ( data ) =>
+	await GetLocalOption( { 'userfamilydata.stored': false }, ( data ) =>
 	{
 		cache = JSON.parse( data[ 'userfamilydata.stored' ] );
 	} );
@@ -235,20 +237,19 @@ function FetchSteamUserFamilyData( callback )
 		} ).catch( ( error ) =>
 		{
 
-			GetLocalOption( { 'userfamilydata.stored': false }, ( data ) =>
-			{
-				const response =
-					{
-						error: error.message,
-					};
+			InvalidateCache( 'userfamilydata' );
 
-				if( data[ 'userfamilydata.stored' ] )
+			const response =
 				{
-					response.data = JSON.parse( data[ 'userfamilydata.stored' ] );
-				}
+					error: error.message,
+				};
 
-				callback( response );
-			} );
+			if( cache )
+			{
+				response.data = cache;
+			}
+
+			callback( response );
 		} );
 }
 
@@ -661,7 +662,7 @@ function GetStoreSessionID( isCheckout, callback )
 
 function GetLocalOption( items, callback )
 {
-	ExtensionApi.storage.local.get( items ).then( callback );
+	return ExtensionApi.storage.local.get( items ).then( callback );
 }
 
 function SetLocalOption( option, value )
