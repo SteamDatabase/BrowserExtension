@@ -61,7 +61,7 @@ window.addEventListener( 'message', ( request ) =>
 	}
 } );
 
-GetOption( { 'steamdb-highlight': true }, ( items ) =>
+GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( items ) =>
 {
 	if( !items[ 'steamdb-highlight' ] )
 	{
@@ -77,12 +77,6 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 			if( response.error )
 			{
 				WriteLog( 'Failed to load userdata', response.error );
-
-				window.postMessage( {
-					version: EXTENSION_INTEROP_VERSION,
-					type: 'steamdb:extension-error',
-					error: `Failed to load your games. ${response.error}`,
-				}, GetHomepage() );
 			}
 
 			if( response.data )
@@ -106,10 +100,7 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 			OnPageLoaded();
 		}
 	} );
-} );
 
-GetOption( { 'steamdb-highlight-family': true }, ( items ) =>
-{
 	if( !items[ 'steamdb-highlight-family' ] )
 	{
 		return;
