@@ -94,20 +94,22 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		} ),
 	] ).then( ( responses ) =>
 	{
-		if( responses[ 0 ]?.error )
+		const { UserData, UserFamilyData } = responses;
+
+		if( UserData?.error )
 		{
-			WriteLog( 'Failed to load userdata', responses[ 0 ].error );
+			WriteLog( 'Failed to load userdata', UserData.error );
 		}
 
-		if( responses[ 1 ]?.error )
+		if( UserFamilyData?.error )
 		{
-			if( responses[ 1 ].error === 'You are not part of any family group.' )
+			if( UserFamilyData.error === 'You are not part of any family group.' )
 			{
-				WriteLog( responses[ 1 ].error );
+				WriteLog( UserFamilyData.error );
 			}
 			else
 			{
-				WriteLog( 'Failed to load family userdata', responses[ 1 ].error );
+				WriteLog( 'Failed to load family userdata', UserFamilyData.error );
 
 				// window.postMessage( {
 				// 	version: EXTENSION_INTEROP_VERSION,
@@ -118,16 +120,16 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		}
 		let response;
 		const log = [];
-		if( responses[ 0 ].data )
+		if( UserData.data )
 		{
-			response = responses[ 0 ].data;
+			response = UserData.data;
 			log.push( `Packages: ${response.rgOwnedPackages.length}` );
 		}
-		if( responses[ 0 ].data && responses[ 1 ].data )
+		if( UserData.data && UserFamilyData.data )
 		{
-			response.rgFamilySharedApps =  responses[ 1 ].data?.rgFamilySharedApps.reduce( ( data, app ) =>
+			response.rgFamilySharedApps =  UserFamilyData.data?.rgFamilySharedApps.reduce( ( data, app ) =>
 			{
-				if( !app.owner_steamids.includes( responses[ 1 ].data?.owner_steamid ) )
+				if( !app.owner_steamids.includes( UserFamilyData.data?.owner_steamid ) )
 				{
 					data.push( app.appid );
 				}
