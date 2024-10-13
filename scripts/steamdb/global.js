@@ -94,7 +94,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		} ),
 	] ).then( ( responses ) =>
 	{
-		const { UserData, UserFamilyData } = responses;
+		const [ UserData, UserFamilyData ] = responses;
 
 		if( UserData?.error )
 		{
