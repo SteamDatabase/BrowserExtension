@@ -3,6 +3,7 @@
 let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
+let userFamilyDataCache = null;
 let nextAllowedRequest = 0;
 
 /** @type {browser} ExtensionApi */
@@ -46,6 +47,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
+		case 'FetchSteamUserFamilyData': FetchSteamUserFamilyData( callback ); return true;
 		case 'GetApp': GetApp( request.appid, callback ); return true;
 		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
 		case 'GetAchievementsGroups': GetAchievementsGroups( request.appid, callback ); return true;
@@ -67,11 +69,16 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 function InvalidateCache()
 {
 	userDataCache = null;
+	userFamilyDataCache = null;
 
 	SetLocalOption( 'userdata.cached', Date.now() );
+	SetLocalOption( 'userfamilydata', '{}' );
 }
 
-function FetchSteamUserData( callback )
+/**
+ * @param {Function} callback
+ */
+async function FetchSteamUserData( callback )
 {
 	if( userDataCache !== null )
 	{
@@ -79,79 +86,197 @@ function FetchSteamUserData( callback )
 		return;
 	}
 
-	GetLocalOption( { 'userdata.cached': Date.now() }, ( data ) =>
+	const now = Date.now();
+	const cacheData = await GetLocalOption( { 'userdata.cached': now } );
+	let cacheTime = cacheData[ 'userdata.cached' ];
+
+	if( now > cacheTime + 3600000 )
 	{
-		const now = Date.now();
-		let cache = data[ 'userdata.cached' ];
+		await SetLocalOption( 'userdata.cached', now );
+		cacheTime = now;
+	}
 
-		if( now > cache + 3600000 )
-		{
-			SetLocalOption( 'userdata.cached', now );
-			cache = now;
-		}
+	const params = new URLSearchParams();
+	params.set( '_', cacheTime );
 
-		const params = new URLSearchParams();
-		params.set( '_', cache );
-
-		fetch( `https://store.steampowered.com/dynamicstore/userdata/?${params.toString()}`,
+	try
+	{
+		const responseFetch = await fetch(
+			`https://store.steampowered.com/dynamicstore/userdata/?${params.toString()}`,
 			{
 				credentials: 'include',
 				headers: {
-					// Pretend we're doing a normal navigation request.
-					// This will trigger login.steampowered.com redirect flow if user has expired cookies.
+				// Pretend we're doing a normal navigation request.
+				// This will trigger login.steampowered.com redirect flow if user has expired cookies.
 					Accept: 'text/html',
 				},
-			} )
-			.then( ( response ) => response.json() )
-			.then( ( response ) =>
-			{
-				if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
-				{
-					throw new Error( 'Are you logged on the Steam Store in this browser?' );
-				}
+			}
+		);
+		const response = await responseFetch.json();
 
-				// Only keep the data we actually need
-				userDataCache =
-				{
-					rgOwnedPackages: response.rgOwnedPackages || [],
-					rgOwnedApps: response.rgOwnedApps || [],
+		if( !response || !response.rgOwnedPackages || !response.rgOwnedPackages.length )
+		{
+			throw new Error( 'Are you logged on the Steam Store in this browser?' );
+		}
 
-					rgPackagesInCart: response.rgPackagesInCart || [],
-					rgAppsInCart: response.rgAppsInCart || [],
+		// Only keep the data we actually need
+		// eslint-disable-next-line require-atomic-updates
+		userDataCache =
+		{
+			rgOwnedPackages: response.rgOwnedPackages || [],
+			rgOwnedApps: response.rgOwnedApps || [],
 
-					rgIgnoredApps: response.rgIgnoredApps || {},
-					rgIgnoredPackages: response.rgIgnoredPackages || {},
+			rgPackagesInCart: response.rgPackagesInCart || [],
+			rgAppsInCart: response.rgAppsInCart || [],
 
-					rgFollowedApps: response.rgFollowedApps || [],
-					rgWishlist: response.rgWishlist || [],
-				};
+			rgIgnoredApps: response.rgIgnoredApps || {}, // object, not array
+			rgIgnoredPackages: response.rgIgnoredPackages || {},
 
-				callback( { data: userDataCache } );
+			rgFollowedApps: response.rgFollowedApps || [],
+			rgWishlist: response.rgWishlist || [],
+		};
 
-				SetLocalOption( 'userdata.stored', JSON.stringify( userDataCache ) );
-			} )
-			.catch( ( error ) =>
-			{
-				InvalidateCache();
+		callback( { data: userDataCache } );
 
-				GetLocalOption( { 'userdata.stored': false }, ( data ) =>
-				{
-					const response =
-					{
-						error: error.message,
-					};
+		await SetLocalOption( 'userdata.stored', JSON.stringify( userDataCache ) );
+	}
+	catch( error )
+	{
+		InvalidateCache();
 
-					if( data[ 'userdata.stored' ] )
-					{
-						response.data = JSON.parse( data[ 'userdata.stored' ] );
-					}
+		const data = await GetLocalOption( { 'userdata.stored': false } );
+		const response =
+		{
+			error: error.message,
+		};
 
-					callback( response );
-				} );
-			} );
-	} );
+		if( data[ 'userdata.stored' ] )
+		{
+			response.data = JSON.parse( data[ 'userdata.stored' ] );
+		}
+
+		callback( response );
+	}
 }
 
+/**
+ * @param {Function} callback
+ */
+async function FetchSteamUserFamilyData( callback )
+{
+	if( userFamilyDataCache !== null||false )
+	{
+		callback( { data: userFamilyDataCache } );
+		return;
+	}
+
+	const now = Date.now();
+	const cacheData = await GetLocalOption( { userfamilydata: false } );
+	const cache = cacheData.userfamilydata && JSON.parse( cacheData.userfamilydata );
+
+	if( cache && cache.cached && cache.data && now < cache.cached + 21600000 )
+	{
+		callback( { data: cache.data } );
+		return;
+	}
+
+	try
+	{
+		const tokenResponseFetch = await fetch(
+			`https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`,
+			{
+				credentials: 'include',
+				headers: {
+					Accept: 'application/json',
+				},
+			}
+		);
+		const token = await tokenResponseFetch.json();
+
+		if( !token || !token.success || !token.data || !token.data.webapi_token )
+		{
+			throw new Error( 'Are you logged on the Steam Store in this browser?' );
+		}
+
+		const paramsSharedLibrary = new URLSearchParams();
+		paramsSharedLibrary.set( 'access_token', token.data.webapi_token );
+		paramsSharedLibrary.set( 'family_groupid', '0' ); // family_groupid is ignored
+		paramsSharedLibrary.set( 'include_excluded', 'true' );
+		paramsSharedLibrary.set( 'include_free', 'true' );
+		paramsSharedLibrary.set( 'include_non_games', 'true' );
+
+		// the include_own param has no link with its name, if it is false, then it returns only your owned apps.
+		// if true, it returns your owned apps and the apps from your family.
+		paramsSharedLibrary.set( 'include_own', 'true' );
+
+		const responseFetch = await fetch(
+			`https://api.steampowered.com/IFamilyGroupsService/GetSharedLibraryApps/v1/?${paramsSharedLibrary.toString()}`,
+			{
+				headers: {
+					Accept: 'application/json',
+				}
+			}
+		);
+		const response = await responseFetch.json();
+
+		if( !response || !response.response || !response.response.apps )
+		{
+			throw new Error( 'Is Steam okay?' );
+		}
+
+		const reduced = response.response.apps.reduce( ( data, app ) =>
+		{
+			if( !app.owner_steamids.includes( response.response.owner_steamid ) )
+			{
+				if( app.exclude_reason === 0 )
+				{
+					data.shared.push( app.appid );
+				}
+			}
+			else
+			{
+				data.owned.push( app.appid );
+			}
+
+			return data;
+		}, {
+			shared: [],
+			owned: []
+		} );
+
+		// eslint-disable-next-line require-atomic-updates
+		userFamilyDataCache =
+		{
+			rgFamilySharedApps: reduced.shared,
+			rgOwnedApps: reduced.owned,
+		};
+
+		callback( { data: userFamilyDataCache } );
+
+		await SetLocalOption( 'userfamilydata', JSON.stringify( {
+			data: userFamilyDataCache,
+			cached: now
+		} ) );
+	}
+	catch( error )
+	{
+		const response =
+		{
+			error: error.message,
+		};
+
+		if( cache )
+		{
+			response.data = cache;
+		}
+
+		callback( response );
+	}
+}
+
+/**
+ * @param {Response} response
+ */
 function GetJsonWithStatusCheck( response )
 {
 	if( !response.ok )
@@ -178,6 +303,9 @@ function GetJsonWithStatusCheck( response )
 	return response.json();
 }
 
+/**
+ * @param {Function} callback
+ */
 function GetApp( appid, callback )
 {
 	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
@@ -200,6 +328,9 @@ function GetApp( appid, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
+/**
+ * @param {Function} callback
+ */
 function GetAppPrice( { appid, currency }, callback )
 {
 	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
@@ -223,6 +354,9 @@ function GetAppPrice( { appid, currency }, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
+/**
+ * @param {Function} callback
+ */
 function GetAchievementsGroups( appid, callback )
 {
 	if( nextAllowedRequest > 0 && Date.now() < nextAllowedRequest )
@@ -245,6 +379,9 @@ function GetAchievementsGroups( appid, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreWishlistAdd( appid, callback )
 {
 	const formData = new FormData();
@@ -252,6 +389,9 @@ function StoreWishlistAdd( appid, callback )
 	ExecuteStoreApiCall( 'api/addtowishlist', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreWishlistRemove( appid, callback )
 {
 	const formData = new FormData();
@@ -259,6 +399,9 @@ function StoreWishlistRemove( appid, callback )
 	ExecuteStoreApiCall( 'api/removefromwishlist', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreFollow( appid, callback )
 {
 	const formData = new FormData();
@@ -266,6 +409,9 @@ function StoreFollow( appid, callback )
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreUnfollow( appid, callback )
 {
 	const formData = new FormData();
@@ -274,6 +420,9 @@ function StoreUnfollow( appid, callback )
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreIgnore( appid, callback )
 {
 	const formData = new FormData();
@@ -282,6 +431,9 @@ function StoreIgnore( appid, callback )
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreUnignore( appid, callback )
 {
 	const formData = new FormData();
@@ -290,6 +442,9 @@ function StoreUnignore( appid, callback )
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreAddToCart( request, callback )
 {
 	const formData = new FormData();
@@ -311,6 +466,9 @@ function StoreAddToCart( request, callback )
 	ExecuteStoreApiCall( 'cart/addtocart', formData, callback );
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreAddFreeLicense( request, callback )
 {
 	const freeLicenseResponse = ( response ) =>
@@ -364,6 +522,9 @@ function StoreAddFreeLicense( request, callback )
 	}
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreRemoveFreeLicense( request, callback )
 {
 	if( request.subid )
@@ -375,6 +536,9 @@ function StoreRemoveFreeLicense( request, callback )
 	}
 }
 
+/**
+ * @param {Function} callback
+ */
 function StoreRequestPlaytestAccess( request, callback )
 {
 	const playtestResponse = ( response ) =>
@@ -403,6 +567,9 @@ function StoreRequestPlaytestAccess( request, callback )
 	}
 }
 
+/**
+ * @param {Function} callback
+ */
 function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 {
 	const isCheckout = path.startsWith( 'checkout/' );
@@ -495,6 +662,10 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 	} );
 }
 
+/**
+ * @param {Boolean} isCheckout
+ * @param {Function} callback
+ */
 function GetStoreSessionID( isCheckout, callback )
 {
 	let url;
@@ -559,15 +730,22 @@ function GetStoreSessionID( isCheckout, callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
 }
 
-function GetLocalOption( items, callback )
+/**
+ * @param {{[key: string]: any}} items
+ * @return Promise<{[key: string]: any}>
+ */
+function GetLocalOption( items )
 {
-	ExtensionApi.storage.local.get( items ).then( callback );
+	return ExtensionApi.storage.local.get( items );
 }
 
+/**
+ * @param {String} option
+ */
 function SetLocalOption( option, value )
 {
 	const obj = {};
 	obj[ option ] = value;
 
-	ExtensionApi.storage.local.set( obj );
+	return ExtensionApi.storage.local.set( obj );
 }

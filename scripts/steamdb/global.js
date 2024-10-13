@@ -61,49 +61,100 @@ window.addEventListener( 'message', ( request ) =>
 	}
 } );
 
-GetOption( { 'steamdb-highlight': true }, ( items ) =>
+GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, async( items ) =>
 {
 	if( !items[ 'steamdb-highlight' ] )
 	{
 		return;
 	}
 
-	SendMessageToBackgroundScript( {
-		contentScriptQuery: 'FetchSteamUserData',
-	}, ( response ) =>
+	/** @type {Promise<{data?: object, error?: string}>} */
+	const userDataPromise = new Promise( ( resolve ) =>
 	{
-		const OnPageLoaded = () =>
-		{
-			if( response.error )
-			{
-				WriteLog( 'Failed to load userdata', response.error );
-
-				window.postMessage( {
-					version: EXTENSION_INTEROP_VERSION,
-					type: 'steamdb:extension-error',
-					error: `Failed to load your games. ${response.error}`,
-				}, GetHomepage() );
-			}
-
-			if( response.data )
-			{
-				window.postMessage( {
-					version: EXTENSION_INTEROP_VERSION,
-					type: 'steamdb:extension-loaded',
-					data: response.data,
-				}, GetHomepage() );
-
-				WriteLog( 'Userdata loaded', `Packages: ${response.data.rgOwnedPackages.length}` );
-			}
-		};
-
-		if( document.readyState === 'loading' )
-		{
-			document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
-		}
-		else
-		{
-			OnPageLoaded();
-		}
+		SendMessageToBackgroundScript( {
+			contentScriptQuery: 'FetchSteamUserData',
+		}, resolve );
 	} );
+
+	/** @type {Promise<{data?: object, error?: string}>} */
+	const familyDataPromise = new Promise( ( resolve ) =>
+	{
+		if( !items[ 'steamdb-highlight-family' ] )
+		{
+			resolve( {} );
+			return;
+		}
+
+		SendMessageToBackgroundScript( {
+			contentScriptQuery: 'FetchSteamUserFamilyData',
+		}, resolve );
+	} );
+
+	const userData = await userDataPromise;
+	const familyData = await familyDataPromise;
+
+	if( userData.error )
+	{
+		WriteLog( 'Failed to load userdata', userData.error );
+	}
+
+	if( familyData.error )
+	{
+		WriteLog( 'Failed to load family userdata', familyData.error );
+	}
+
+	let response;
+	let beforeDom = false;
+
+	if( userData.data )
+	{
+		response = userData.data;
+
+		if( familyData.data )
+		{
+			response.rgFamilySharedApps = familyData.data.rgFamilySharedApps;
+
+			if( familyData.data.rgOwnedApps )
+			{
+				// Merge owned apps from the shared library because it returns extra apps
+				// that are not returned by the dynamicstore such as tools
+				response.rgOwnedApps = Array.from( new Set( [
+					...response.rgOwnedApps,
+					...familyData.data.rgOwnedApps
+				] ) );
+			}
+		}
+	}
+
+	const OnPageLoaded = () =>
+	{
+		if( response )
+		{
+			window.postMessage( {
+				version: EXTENSION_INTEROP_VERSION,
+				type: 'steamdb:extension-loaded',
+				data: response,
+			}, GetHomepage() );
+
+			WriteLog(
+				'Userdata loaded',
+				beforeDom ? '(before dom completed)' : '',
+				'Packages',
+				response.rgOwnedPackages?.length || 0,
+				'Family Apps',
+				response.rgFamilySharedApps?.length || 0,
+			);
+		}
+	};
+
+	if( document.readyState === 'loading' )
+	{
+		beforeDom = true;
+
+		document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
+	}
+	else
+	{
+		OnPageLoaded();
+	}
 } );
