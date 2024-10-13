@@ -127,18 +127,12 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		}
 		if( UserData.data && UserFamilyData.data )
 		{
-			response.rgFamilySharedApps =  UserFamilyData.data?.rgFamilySharedApps.reduce( ( data, app ) =>
+
+			response.rgFamilySharedApps =  UserFamilyData.data?.rgFamilySharedApps;
+			if( UserFamilyData.data?.rgOwnedPackages )
 			{
-				if( !app.owner_steamids.includes( UserFamilyData.data?.owner_steamid ) )
-				{
-					data.push( app.appid );
-				}
-				else if( !response.rgOwnedApps[ app.appid ] )
-				{
-					response.rgOwnedApps.push( app.appid );
-				}
-				return data;
-			}, [] );
+				response.rgOwnedApps = [ ... new Set( [ ...response.rgOwnedApps, ...UserFamilyData.data.rgOwnedApps ] ) ];
+			}
 			log.push( `Family Apps: ${response.rgFamilySharedApps.length}` );
 		}
 

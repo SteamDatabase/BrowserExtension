@@ -221,13 +221,20 @@ async function FetchSteamUserFamilyData( callback )
 					}
 					const reduced = response.response.apps.reduce( ( data, app ) =>
 					{
-						data.push( { appid: app.appid, owner_steamids: app.owner_steamids } );
+						if( !app.owner_steamids.includes( response.response.owner_steamid ) )
+						{
+							data.left.push( app.appid );
+						}
+						else
+						{
+							data.right.push( app.appid );
+						}
 						return data;
-					}, [] );
+					}, { left: [], right: [] }  );
 					userFamilyDataCache =
 						{
-							rgFamilySharedApps: reduced,
-							owner_steamid: response.response.owner_steamid,
+							rgFamilySharedApps: reduced.left,
+							rgOwnedApps: reduced.right,
 						};
 
 					callback( { data: userFamilyDataCache } );
