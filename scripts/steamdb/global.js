@@ -68,78 +68,89 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		return;
 	}
 
-	SendMessageToBackgroundScript( {
-		contentScriptQuery: 'FetchSteamUserData',
-	}, ( response ) =>
+	Promise.all( [
+		new Promise( ( resolve ) =>
+		{
+			SendMessageToBackgroundScript( {
+				contentScriptQuery: 'FetchSteamUserData',
+			}, ( response ) =>
+			{
+				resolve( response );
+			} );
+		} ),
+		new Promise( ( resolve ) =>
+		{
+			if( !items[ 'steamdb-highlight-family' ] )
+			{
+				// ! this is probably a bad idea maybe returning an empty object is better
+				resolve( null );
+			}
+			SendMessageToBackgroundScript( {
+				contentScriptQuery: 'FetchSteamUserFamilyData',
+			}, ( response ) =>
+			{
+				resolve( response );
+			} );
+		} ),
+	] ).then( ( responses ) =>
 	{
+		if( responses[ 0 ]?.error )
+		{
+			WriteLog( 'Failed to load userdata', responses[ 0 ].error );
+		}
+
+		if( responses[ 1 ]?.error )
+		{
+			if( responses[ 1 ].error === 'You are not part of any family group.' )
+			{
+				WriteLog( responses[ 1 ].error );
+			}
+			else
+			{
+				WriteLog( 'Failed to load family userdata', responses[ 1 ].error );
+
+				// window.postMessage( {
+				// 	version: EXTENSION_INTEROP_VERSION,
+				// 	type: 'steamdb:extension-error',
+				// 	error: `Failed to load your family games. ${response.error}`,
+				// }, GetHomepage() );
+			}
+		}
+		let response;
+		const log = [];
+		if( responses[ 0 ].data )
+		{
+			response = responses[ 0 ].data;
+			log.push( `Packages: ${response.rgOwnedPackages.length}` );
+		}
+		if( responses[ 0 ].data && responses[ 1 ].data )
+		{
+			response.rgFamilySharedApps =  responses[ 1 ].data?.rgFamilySharedApps.reduce( ( data, app ) =>
+			{
+				if( !app.owner_steamids.includes( responses[ 1 ].data?.owner_steamid ) )
+				{
+					data.push( app.appid );
+				}
+				else if( !response.rgOwnedApps[ app.appid ] )
+				{
+					response.rgOwnedApps.push( app.appid );
+				}
+				return data;
+			}, [] );
+			log.push( `Family Apps: ${response.rgFamilySharedApps.length}` );
+		}
+
 		const OnPageLoaded = () =>
 		{
-			if( response.error )
+			if( response )
 			{
-				WriteLog( 'Failed to load userdata', response.error );
-			}
-
-			if( response.data )
-			{
+				console.log( response );
 				window.postMessage( {
 					version: EXTENSION_INTEROP_VERSION,
 					type: 'steamdb:extension-loaded',
-					data: response.data,
+					data: response,
 				}, GetHomepage() );
-
-				WriteLog( 'Userdata loaded', `Packages: ${response.data.rgOwnedPackages.length}` );
-			}
-		};
-
-		if( document.readyState === 'loading' )
-		{
-			document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
-		}
-		else
-		{
-			OnPageLoaded();
-		}
-	} );
-
-	if( !items[ 'steamdb-highlight-family' ] )
-	{
-		return;
-	}
-
-	SendMessageToBackgroundScript( {
-		contentScriptQuery: 'FetchSteamUserFamilyData',
-	}, ( response ) =>
-	{
-		const OnPageLoaded = () =>
-		{
-			if( response.error )
-			{
-				if( response.error === 'You are not part of any family group.' )
-				{
-					WriteLog( response.error );
-				}
-				else
-				{
-					WriteLog( 'Failed to load family userdata', response.error );
-
-					window.postMessage( {
-						version: EXTENSION_INTEROP_VERSION,
-						type: 'steamdb:extension-error',
-						error: `Failed to load your family games. ${response.error}`,
-					}, GetHomepage() );
-				}
-
-			}
-
-			if( response.data )
-			{
-				window.postMessage( {
-					version: EXTENSION_INTEROP_VERSION,
-					type: 'steamdb:extension-loaded',
-					data: response.data,
-				}, GetHomepage() );
-
-				WriteLog( 'UserFamilydata loaded', `Apps: ${Object.keys( response.data.rgFamilySharedApps ).length}` );
+				WriteLog( 'Userdata loaded', log.join( ', ' ) );
 			}
 		};
 

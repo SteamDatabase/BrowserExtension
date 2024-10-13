@@ -169,6 +169,19 @@ function FetchSteamUserFamilyData( callback )
 		callback( { data: userFamilyDataCache } );
 		return;
 	}
+	const now = Date.now();
+	let cache;
+
+	GetLocalOption( { 'userfamilydata.stored': false }, ( data ) =>
+	{
+		cache = JSON.parse( data[ 'userfamilydata.stored' ] );
+	} );
+
+	if( cache && cache.cached && cache.data && now < cache.cached + 3600000 )
+	{
+		callback( { data: cache.data } );
+		return;
+	}
 
 	fetch( `https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`, {
 		credentials: 'include',
@@ -185,67 +198,40 @@ function FetchSteamUserFamilyData( callback )
 
 			const accessToken = response.data.webapi_token;
 
-			if( accessToken )
-			{
-				const paramsGroupId = new URLSearchParams();
-				paramsGroupId.set( 'access_token', accessToken );
-				fetch( `https://api.steampowered.com/IFamilyGroupsService/GetFamilyGroupForUser/v1/?${paramsGroupId.toString()}`, {
-					headers: {
-						Accept: 'application/json',
-					},
-				} ).then( ( response ) =>  response.json() )
-					.then( ( response ) =>
+			const paramsSharedLibrary = new URLSearchParams();
+			paramsSharedLibrary.set( 'access_token', accessToken );
+			paramsSharedLibrary.set( 'include_free', 'true' );
+			paramsSharedLibrary.set( 'family_groupid', '0' );
+			paramsSharedLibrary.set( 'include_own', 'true' );
+			paramsSharedLibrary.set( 'include_non_games', 'true' );
+			// family_groupid is ignored
+			// the include_own param has no link with its name, if set at false, it returns only your owned apps, if set at true, it returns your owned apps and the apps from your family
+			fetch( `https://api.steampowered.com/IFamilyGroupsService/GetSharedLibraryApps/v1/?${paramsSharedLibrary.toString()}`, {
+				headers: {
+					Accept: 'application/json',
+				}
+			} ).then( ( response ) => response.json() )
+				.then( ( response ) =>
+				{
+					if( !response || !response.response || !response.response.apps )
 					{
-						if( !response || !response.response )
-						{
-							throw new Error( 'Is Steam okay?' );
-						}
-						else if( response.response.is_not_member_of_any_group || !response.response.family_groupid )
-						{
-							throw new Error( 'You are not part of a family group.' );
-						}
-
-						return response.response.family_groupid ;
-					} )
-					.then( ( family_groupid ) =>
+						throw new Error( 'Is Steam okay?' );
+					}
+					const reduced = response.response.apps.reduce( ( data, app ) =>
 					{
-						const paramsSharedLibrary = new URLSearchParams();
-						paramsSharedLibrary.set( 'access_token', accessToken );
-						paramsSharedLibrary.set( 'include_free', 'true' );
-						paramsSharedLibrary.set( 'family_groupid', family_groupid );
-						paramsSharedLibrary.set( 'include_own', 'true' );
-						paramsSharedLibrary.set( 'include_non_games', 'true' );
-						// the include_own param has no link with its name, if set at false, it returns only your owned apps, if set at true, it returns your owned apps and the apps from your family
-						fetch( `https://api.steampowered.com/IFamilyGroupsService/GetSharedLibraryApps/v1/?${paramsSharedLibrary.toString()}`, {
-							headers: {
-								Accept: 'application/json',
-							}
-						} ).then( ( response ) => response.json() )
-							.then( ( response ) =>
-							{
-								if( !response || !response.response || !response.response.apps )
-								{
-									throw new Error( 'Is Steam okay?' );
-								}
-								const reduced = response.response.apps.reduce( ( data, app ) =>
-								{
-									if( !app.owner_steamids.includes( response.response.owner_steamid ) )
-									{
-										data[ app.appid ] = app.owner_steamids;
-									}
-									return data;
-								}, {} );
-								userFamilyDataCache =
-									{
-										rgFamilySharedApps: reduced,
-									};
+						data.push( { appid: app.appid, owner_steamids: app.owner_steamids } );
+						return data;
+					}, [] );
+					userFamilyDataCache =
+						{
+							rgFamilySharedApps: reduced,
+							owner_steamid: response.response.owner_steamid,
+						};
 
-								callback( { data: userFamilyDataCache } );
+					callback( { data: userFamilyDataCache } );
 
-								SetLocalOption( 'userfamilydata.stored', JSON.stringify( userFamilyDataCache ) );
-							} );
-					} );
-			}
+					SetLocalOption( 'userfamilydata.stored', JSON.stringify( { "data": userFamilyDataCache, 'cached': now } ) );
+				} );
 		} ).catch( ( error ) =>
 		{
 
