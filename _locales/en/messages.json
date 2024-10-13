@@ -457,6 +457,9 @@
 	"options_website_highlight3": {
 		"message": "Enable extra filtering on <a href=\"https://steamdb.info/sales/\" target=\"_blank\">sales page</a> and <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundles page</a>"
 	},
+	"options_website_family": {
+		"message": "Highlight family owned apps"
+	},
 
 	"options_extra_data": {
 		"message": "Extra data fetched from $domain$",

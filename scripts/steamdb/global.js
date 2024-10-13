@@ -107,3 +107,59 @@ GetOption( { 'steamdb-highlight': true }, ( items ) =>
 		}
 	} );
 } );
+
+GetOption( { 'steamdb-highlight-family': true }, ( items ) =>
+{
+	if( !items[ 'steamdb-highlight-family' ] )
+	{
+		return;
+	}
+
+	SendMessageToBackgroundScript( {
+		contentScriptQuery: 'FetchSteamUserFamilyData',
+	}, ( response ) =>
+	{
+		const OnPageLoaded = () =>
+		{
+			if( response.error )
+			{
+				if( response.error === 'You are not part of any family group.' )
+				{
+					WriteLog( response.error );
+				}
+				else
+				{
+					WriteLog( 'Failed to load family userdata', response.error );
+
+					window.postMessage( {
+						version: EXTENSION_INTEROP_VERSION,
+						type: 'steamdb:extension-error',
+						error: `Failed to load your family games. ${response.error}`,
+					}, GetHomepage() );
+				}
+
+			}
+
+			if( response.data )
+			{
+				window.postMessage( {
+					version: EXTENSION_INTEROP_VERSION,
+					type: 'steamdb:extension-loaded',
+					data: response.data,
+				}, GetHomepage() );
+
+				WriteLog( 'UserFamilydata loaded', `Apps: ${Object.keys( response.data.rgFamilySharedApps ).length}` );
+			}
+		};
+
+		if( document.readyState === 'loading' )
+		{
+			document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
+		}
+		else
+		{
+			OnPageLoaded();
+		}
+	} );
+}
+);

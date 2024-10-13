@@ -3,6 +3,7 @@
 let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
+let userFamilyDataCache = null;
 let nextAllowedRequest = 0;
 
 /** @type {browser} ExtensionApi */
@@ -46,6 +47,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
+		case 'FetchSteamUserFamilyData': FetchSteamUserFamilyData( callback ); return true;
 		case 'GetApp': GetApp( request.appid, callback ); return true;
 		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
 		case 'GetAchievementsGroups': GetAchievementsGroups( request.appid, callback ); return true;
@@ -64,11 +66,19 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 	return false;
 } );
 
-function InvalidateCache()
+function InvalidateCache( target = null )
 {
-	userDataCache = null;
+	if( target === null || target === 'userdata' )
+	{
+		userDataCache = null;
 
-	SetLocalOption( 'userdata.cached', Date.now() );
+		SetLocalOption( 'userdata.cached', Date.now() );
+	}
+
+	if( target === null )
+	{
+		userFamilyDataCache = null;
+	}
 }
 
 function FetchSteamUserData( callback )
@@ -150,6 +160,110 @@ function FetchSteamUserData( callback )
 				} );
 			} );
 	} );
+}
+
+function FetchSteamUserFamilyData( callback )
+{
+	if( userFamilyDataCache !== null )
+	{
+		callback( { data: userFamilyDataCache } );
+		return;
+	}
+
+	fetch( `https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`, {
+		credentials: 'include',
+		headers: {
+			Accept: 'application/json',
+		},
+	} ).then( ( response ) => response.json() )
+		.then( ( response ) =>
+		{
+			if( !response || !response.success || !response.data || !response.data.webapi_token )
+			{
+				throw new Error( 'Are you logged on the Steam Store in this browser?' );
+			}
+
+			const accessToken = response.data.webapi_token;
+
+			if( accessToken )
+			{
+				const paramsGroupId = new URLSearchParams();
+				paramsGroupId.set( 'access_token', accessToken );
+				fetch( `https://api.steampowered.com/IFamilyGroupsService/GetFamilyGroupForUser/v1/?${paramsGroupId.toString()}`, {
+					headers: {
+						Accept: 'application/json',
+					},
+				} ).then( ( response ) =>  response.json() )
+					.then( ( response ) =>
+					{
+						if( !response || !response.response )
+						{
+							throw new Error( 'Is Steam okay?' );
+						}
+						else if( response.response.is_not_member_of_any_group || !response.response.family_groupid )
+						{
+							throw new Error( 'You are not part of a family group.' );
+						}
+
+						return response.response.family_groupid ;
+					} )
+					.then( ( family_groupid ) =>
+					{
+						const paramsSharedLibrary = new URLSearchParams();
+						paramsSharedLibrary.set( 'access_token', accessToken );
+						paramsSharedLibrary.set( 'include_free', 'true' );
+						paramsSharedLibrary.set( 'family_groupid', family_groupid );
+						paramsSharedLibrary.set( 'include_own', 'true' );
+						paramsSharedLibrary.set( 'include_non_games', 'true' );
+						// the include_own param has no link with its name, if set at false, it returns only your owned apps, if set at true, it returns your owned apps and the apps from your family
+						fetch( `https://api.steampowered.com/IFamilyGroupsService/GetSharedLibraryApps/v1/?${paramsSharedLibrary.toString()}`, {
+							headers: {
+								Accept: 'application/json',
+							}
+						} ).then( ( response ) => response.json() )
+							.then( ( response ) =>
+							{
+								if( !response || !response.response || !response.response.apps )
+								{
+									throw new Error( 'Is Steam okay?' );
+								}
+								const reduced = response.response.apps.reduce( ( data, app ) =>
+								{
+									if( !app.owner_steamids.includes( response.response.owner_steamid ) )
+									{
+										data[ app.appid ] = app.owner_steamids;
+									}
+									return data;
+								}, {} );
+								userFamilyDataCache =
+									{
+										rgFamilySharedApps: reduced,
+									};
+
+								callback( { data: userFamilyDataCache } );
+
+								SetLocalOption( 'userfamilydata.stored', JSON.stringify( userFamilyDataCache ) );
+							} );
+					} );
+			}
+		} ).catch( ( error ) =>
+		{
+
+			GetLocalOption( { 'userfamilydata.stored': false }, ( data ) =>
+			{
+				const response =
+					{
+						error: error.message,
+					};
+
+				if( data[ 'userfamilydata.stored' ] )
+				{
+					response.data = JSON.parse( data[ 'userfamilydata.stored' ] );
+				}
+
+				callback( response );
+			} );
+		} );
 }
 
 function GetJsonWithStatusCheck( response )
