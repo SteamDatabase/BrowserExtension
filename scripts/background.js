@@ -172,9 +172,8 @@ async function FetchSteamUserFamilyData( callback )
 		return;
 	}
 	const now = Date.now();
-	let cache;
 
-	await GetLocalOption( { 'userfamilydata.stored': false } ).then( ( data ) =>
+	let cache = await GetLocalOption( { 'userfamilydata.stored': false } ).then( ( data ) =>
 	{
 		cache = JSON.parse( data[ 'userfamilydata.stored' ] );
 	} );
