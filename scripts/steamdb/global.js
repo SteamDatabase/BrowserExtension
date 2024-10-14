@@ -121,7 +121,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 			if( UserFamilyData.data )
 			{
 				response.rgFamilySharedApps =  UserFamilyData.data?.rgFamilySharedApps;
-				if( UserFamilyData.data?.rgOwnedPackages )
+				if( UserFamilyData.data?.rgOwnedApps )
 				{
 					response.rgOwnedApps = [ ... new Set( [ ...response.rgOwnedApps, ...UserFamilyData.data.rgOwnedApps ] ) ];
 				}
