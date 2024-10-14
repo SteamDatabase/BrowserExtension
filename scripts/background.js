@@ -4,6 +4,7 @@ let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
 let userFamilyDataCache = null;
+let userFamilySemaphore = null;
 let nextAllowedRequest = 0;
 
 /** @type {browser} ExtensionApi */
@@ -121,7 +122,6 @@ async function FetchSteamUserData( callback )
 		}
 
 		// Only keep the data we actually need
-		// eslint-disable-next-line require-atomic-updates
 		userDataCache =
 		{
 			rgOwnedPackages: response.rgOwnedPackages || [],
@@ -171,6 +171,11 @@ async function FetchSteamUserFamilyData( callback )
 		return;
 	}
 
+	if( userFamilySemaphore !== null )
+	{
+		await userFamilySemaphore;
+	}
+
 	const now = Date.now();
 	const cacheData = await GetLocalOption( { userfamilydata: false } );
 	const cache = cacheData.userfamilydata && JSON.parse( cacheData.userfamilydata );
@@ -180,6 +185,12 @@ async function FetchSteamUserFamilyData( callback )
 		callback( { data: cache.data } );
 		return;
 	}
+
+	let semaphoreResolve = null;
+	userFamilySemaphore = new Promise( resolve =>
+	{
+		semaphoreResolve = resolve;
+	} );
 
 	try
 	{
@@ -245,7 +256,6 @@ async function FetchSteamUserFamilyData( callback )
 			owned: []
 		} );
 
-		// eslint-disable-next-line require-atomic-updates
 		userFamilyDataCache =
 		{
 			rgFamilySharedApps: reduced.shared,
@@ -272,6 +282,11 @@ async function FetchSteamUserFamilyData( callback )
 		}
 
 		callback( response );
+	}
+	finally
+	{
+		userFamilySemaphore = null;
+		semaphoreResolve();
 	}
 }
 

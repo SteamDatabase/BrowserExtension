@@ -97,6 +97,7 @@ export default[
 			"prefer-named-capture-group": "off",
 			"prefer-rest-params": "off",
 			"prefer-template": "off",
+			"require-atomic-updates":  "off",
 			"require-unicode-regexp": "off",
 			"semi": [ "error", "always" ],
 			"sort-keys": "off",
