@@ -63,6 +63,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 		case 'StoreRequestPlaytestAccess': StoreRequestPlaytestAccess( request, callback ); return true;
 	}
 
+	callback( { success: false, error: 'Unknown query' } );
 	return false;
 } );
 
