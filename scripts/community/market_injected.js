@@ -234,7 +234,7 @@ function OnLoaded()
 						el.className = 'steamdb_market_item_extra';
 						el.innerHTML = desc.value;
 
-						for( const child of[ ...el.children ] )
+						for( const child of [ ...el.children ] )
 						{
 							if( child.tagName === 'BR' )
 							{

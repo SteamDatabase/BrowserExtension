@@ -108,6 +108,14 @@ export default[
 				after: false,
 
 				overrides: {
+					async: {
+						after: true,
+					},
+
+					await: {
+						after: true,
+					},
+
 					case: {
 						after: true,
 					},
@@ -126,6 +134,7 @@ export default[
 
 					of: {
 						before: true,
+						after: true,
 					},
 
 					from: {
