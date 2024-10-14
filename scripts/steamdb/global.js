@@ -82,8 +82,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		{
 			if( !items[ 'steamdb-highlight-family' ] )
 			{
-				// ! this is probably a bad idea maybe returning an empty object is better
-				resolve( null );
+				resolve( {} );
 			}
 			SendMessageToBackgroundScript( {
 				contentScriptQuery: 'FetchSteamUserFamilyData',
@@ -110,12 +109,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 			else
 			{
 				WriteLog( 'Failed to load family userdata', UserFamilyData.error );
-
-				// window.postMessage( {
-				// 	version: EXTENSION_INTEROP_VERSION,
-				// 	type: 'steamdb:extension-error',
-				// 	error: `Failed to load your family games. ${response.error}`,
-				// }, GetHomepage() );
 			}
 		}
 		let response;
@@ -124,16 +117,16 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, ( it
 		{
 			response = UserData.data;
 			log.push( `Packages: ${response.rgOwnedPackages.length}` );
-		}
-		if( UserData.data && UserFamilyData.data )
-		{
 
-			response.rgFamilySharedApps =  UserFamilyData.data?.rgFamilySharedApps;
-			if( UserFamilyData.data?.rgOwnedPackages )
+			if( UserFamilyData.data )
 			{
-				response.rgOwnedApps = [ ... new Set( [ ...response.rgOwnedApps, ...UserFamilyData.data.rgOwnedApps ] ) ];
+				response.rgFamilySharedApps =  UserFamilyData.data?.rgFamilySharedApps;
+				if( UserFamilyData.data?.rgOwnedPackages )
+				{
+					response.rgOwnedApps = [ ... new Set( [ ...response.rgOwnedApps, ...UserFamilyData.data.rgOwnedApps ] ) ];
+				}
+				log.push( `Family Apps: ${response.rgFamilySharedApps.length}` );
 			}
-			log.push( `Family Apps: ${response.rgFamilySharedApps.length}` );
 		}
 
 		const OnPageLoaded = () =>
