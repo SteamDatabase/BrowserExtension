@@ -68,7 +68,6 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 
 function InvalidateCache()
 {
-
 	userDataCache = null;
 
 	SetLocalOption( 'userdata.cached', Date.now() );
@@ -168,10 +167,8 @@ async function FetchSteamUserFamilyData( callback )
 	}
 	const now = Date.now();
 
-	let cache = await GetLocalOption( { 'userfamilydata.stored': false } ).then( ( data ) =>
-	{
-		cache = JSON.parse( data[ 'userfamilydata.stored' ] );
-	} );
+	const cache = await GetLocalOption( { 'userfamilydata.stored': false } )
+		.then( ( data ) => data[ 'userfamilydata.stored' ] ?? JSON.parse( data[ 'userfamilydata.stored' ] ) );
 
 	if( cache && cache.cached && cache.data && now < cache.cached + 3600000 )
 	{
@@ -192,10 +189,8 @@ async function FetchSteamUserFamilyData( callback )
 				throw new Error( 'Are you logged on the Steam Store in this browser?' );
 			}
 
-			const accessToken = response.data.webapi_token;
-
 			const paramsSharedLibrary = new URLSearchParams();
-			paramsSharedLibrary.set( 'access_token', accessToken );
+			paramsSharedLibrary.set( 'access_token', response.data.webapi_token );
 			paramsSharedLibrary.set( 'include_free', 'true' );
 			paramsSharedLibrary.set( 'family_groupid', '0' );
 			paramsSharedLibrary.set( 'include_own', 'true' );
