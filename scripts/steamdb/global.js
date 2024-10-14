@@ -107,7 +107,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		WriteLog( 'Failed to load family userdata', familyData.error );
 	}
 
-	let response;
+	let response = null;
 	let beforeDom = false;
 
 	if( userData.data )
