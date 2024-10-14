@@ -173,7 +173,8 @@ async function FetchSteamUserFamilyData( callback )
 
 	if( userFamilySemaphore !== null )
 	{
-		await userFamilySemaphore;
+		callback( await userFamilySemaphore );
+		return;
 	}
 
 	const now = Date.now();
@@ -186,6 +187,7 @@ async function FetchSteamUserFamilyData( callback )
 		return;
 	}
 
+	let callbackResponse = null;
 	let semaphoreResolve = null;
 	userFamilySemaphore = new Promise( resolve =>
 	{
@@ -262,7 +264,12 @@ async function FetchSteamUserFamilyData( callback )
 			rgOwnedApps: reduced.owned,
 		};
 
-		callback( { data: userFamilyDataCache } );
+		callbackResponse =
+		{
+			data: userFamilyDataCache
+		};
+
+		callback( callbackResponse );
 
 		await SetLocalOption( 'userfamilydata', JSON.stringify( {
 			data: userFamilyDataCache,
@@ -271,22 +278,22 @@ async function FetchSteamUserFamilyData( callback )
 	}
 	catch( error )
 	{
-		const response =
+		callbackResponse =
 		{
 			error: error.message,
 		};
 
 		if( cache )
 		{
-			response.data = cache;
+			callbackResponse.data = cache;
 		}
 
-		callback( response );
+		callback( callbackResponse );
 	}
 	finally
 	{
+		semaphoreResolve( callbackResponse );
 		userFamilySemaphore = null;
-		semaphoreResolve();
 	}
 }
 
