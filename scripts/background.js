@@ -283,9 +283,9 @@ async function FetchSteamUserFamilyData( callback )
 			error: error.message,
 		};
 
-		if( cache )
+		if( cache && cache.data )
 		{
-			callbackResponse.data = cache;
+			callbackResponse.data = cache.data;
 		}
 
 		callback( callbackResponse );
