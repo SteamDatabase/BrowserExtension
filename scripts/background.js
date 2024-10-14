@@ -191,9 +191,10 @@ async function FetchSteamUserFamilyData( callback )
 
 			const paramsSharedLibrary = new URLSearchParams();
 			paramsSharedLibrary.set( 'access_token', response.data.webapi_token );
-			paramsSharedLibrary.set( 'include_free', 'true' );
 			paramsSharedLibrary.set( 'family_groupid', '0' );
 			paramsSharedLibrary.set( 'include_own', 'true' );
+			paramsSharedLibrary.set( 'include_excluded', 'true' );
+			paramsSharedLibrary.set( 'include_free', 'true' );
 			paramsSharedLibrary.set( 'include_non_games', 'true' );
 			// family_groupid is ignored
 			// the include_own param has no link with its name, if set at false, it returns only your owned apps, if set at true, it returns your owned apps and the apps from your family
@@ -212,7 +213,10 @@ async function FetchSteamUserFamilyData( callback )
 					{
 						if( !app.owner_steamids.includes( response.response.owner_steamid ) )
 						{
-							data.left.push( app.appid );
+							if( app.exclude_reason === 0 )
+							{
+								data.left.push( app.appid );
+							}
 						}
 						else
 						{
@@ -225,6 +229,7 @@ async function FetchSteamUserFamilyData( callback )
 							rgFamilySharedApps: reduced.left,
 							rgOwnedApps: reduced.right,
 						};
+					console.log( userFamilyDataCache );
 
 					callback( { data: userFamilyDataCache } );
 
