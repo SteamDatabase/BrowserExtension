@@ -1,3 +1,7 @@
+/**
+ * @typedef {import('../common')}
+ */
+
 'use strict';
 
 ( ( () =>

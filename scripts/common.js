@@ -22,6 +22,10 @@ var ExtensionApi = ( () =>
 // eslint-disable-next-line no-var
 var CurrentAppID;
 
+/**
+ * @param {String} url
+ * @returns {Number}
+ */
 function GetAppIDFromUrl( url )
 {
 	const appid = url.match( /\/(?:app|sub|bundle|friendsthatplay|gamecards|recommended|widget)\/(?<id>[0-9]+)/ );
@@ -44,6 +48,11 @@ function GetHomepage()
 	return 'https://steamdb.info/';
 }
 
+/**
+ * @param {String} message
+ * @param {String[]} substitutions
+ * @returns {String}
+ */
 function _t( message, substitutions = [] )
 {
 	return ExtensionApi.i18n.getMessage( message, substitutions );
@@ -54,11 +63,23 @@ function GetLanguage()
 	return ExtensionApi.i18n.getUILanguage();
 }
 
+/**
+ * @callback GetOptionCallback
+ * @param {{[key: string]: any}} items
+ */
+
+/**
+ * @param {{[key: string]: any}} items
+ * @param {GetOptionCallback} callback
+ */
 function GetOption( items, callback )
 {
 	ExtensionApi.storage.sync.get( items ).then( callback );
 }
 
+/**
+ * @param {String} option
+ */
 function SetOption( option, value )
 {
 	const obj = {};
@@ -67,11 +88,23 @@ function SetOption( option, value )
 	ExtensionApi.storage.sync.set( obj );
 }
 
+/**
+ * @param {String} res
+ */
 function GetLocalResource( res )
 {
 	return ExtensionApi.runtime.getURL( res );
 }
 
+/**
+ * @callback SendMessageToBackgroundScriptCallback
+ * @param {{success: Boolean, error?: String}?} data
+ */
+
+/**
+ * @param {String} message
+ * @param {SendMessageToBackgroundScriptCallback} callback
+ */
 function SendMessageToBackgroundScript( message, callback )
 {
 	const errorCallback = ( error ) => callback( { success: false, error: error.message } );
