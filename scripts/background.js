@@ -292,7 +292,7 @@ function GetJsonWithStatusCheck( response )
 
 			nextAllowedRequest = Date.now() + ( retryAfter * 1000 ) + ( Math.random() * 10000 );
 
-			console.log( 'Rate limite for', retryAfter, 'seconds, retry after', new Date( nextAllowedRequest ) );
+			console.log( 'Rate limited for', retryAfter, 'seconds, retry after', new Date( nextAllowedRequest ) );
 		}
 
 		const e = new Error( `HTTP ${response.status}` );
