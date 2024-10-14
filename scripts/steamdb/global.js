@@ -94,8 +94,22 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		}, resolve );
 	} );
 
+	/** @type {Promise<{error?: string}>} */
+	const familyDataTimeoutPromise = new Promise( ( resolve ) =>
+	{
+		setTimeout( () =>
+		{
+			resolve( { error: 'Family data timed out' } );
+		}, 10000 ); // 10 seconds
+	} );
+
 	const userData = await userDataPromise;
-	const familyData = await familyDataPromise;
+
+	// If family data does not load fast enough, assume it failed
+	const familyData = await Promise.race( [
+		familyDataPromise,
+		familyDataTimeoutPromise,
+	] );
 
 	if( userData.error )
 	{
