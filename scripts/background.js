@@ -164,7 +164,7 @@ async function FetchSteamUserData( callback )
  */
 async function FetchSteamUserFamilyData( callback )
 {
-	if( userFamilyDataCache !== null||false )
+	if( userFamilyDataCache !== null )
 	{
 		callback( { data: userFamilyDataCache } );
 		return;
