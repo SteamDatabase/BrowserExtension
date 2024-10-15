@@ -56,6 +56,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 		case 'GetApp': GetApp( request.appid, callback ); return true;
 		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
 		case 'GetAchievementsGroups': GetAchievementsGroups( request.appid, callback ); return true;
+		case 'SetAppPrivate': SetAppPrivate( request.appids, request.private, callback ); return true;
 		case 'StoreWishlistAdd': StoreWishlistAdd( request.appid, callback ); return true;
 		case 'StoreWishlistRemove': StoreWishlistRemove( request.appid, callback ); return true;
 		case 'StoreFollow': StoreFollow( request.appid, callback ); return true;
@@ -482,6 +483,27 @@ function GetAchievementsGroups( appid, callback )
 		.then( GetJsonWithStatusCheck )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
+}
+
+/**
+ * @param {Array<Number>} appids
+ * @param {Boolean} privateState
+ * @param {Function} callback
+ */
+// ? Api supports setting multiple apps at once (Are they even using that feature?), do we really need that?
+async function SetAppPrivate( appids, privateState, callback )
+{
+	const token = await GetStoreToken();
+	const paramsSetPrivate = new URLSearchParams();
+	paramsSetPrivate.set( 'access_token', token );
+	appids.forEach( ( appid, index ) =>
+	{
+		paramsSetPrivate.set( `appids[${index}]`, appid );
+	} );
+	paramsSetPrivate.set( 'private', privateState );
+	const responseFetch = await fetch(
+		`https://api.steampowered.com/IAccountPrivateAppsService/ToggleAppPrivacy/v1/?${paramsSetPrivate.toString()}`
+	);
 }
 
 /**
