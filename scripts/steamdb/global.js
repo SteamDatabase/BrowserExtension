@@ -81,6 +81,14 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 	} );
 
 	/** @type {Promise<{data?: object, error?: string}>} */
+	const PrivateDataPromise = new Promise( ( resolve ) =>
+	{
+		SendMessageToBackgroundScript( {
+			contentScriptQuery: 'FetchPrivateApps',
+		}, resolve );
+	} );
+
+	/** @type {Promise<{data?: object, error?: string}>} */
 	const familyDataPromise = new Promise( ( resolve ) =>
 	{
 		if( !items[ 'steamdb-highlight-family' ] )
@@ -103,7 +111,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		}, 10000 ); // 10 seconds
 	} );
 
-	const userData = await userDataPromise;
+	const [ userData, privateData ] = await Promise.all( [ userDataPromise, PrivateDataPromise ] );
 
 	// If family data does not load fast enough, assume it failed
 	const familyData = await Promise.race( [
@@ -114,6 +122,11 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 	if( userData.error )
 	{
 		WriteLog( 'Failed to load userdata', userData.error );
+	}
+
+	if( privateData.error )
+	{
+		WriteLog( 'Failed to load privatedata', privateData.error );
 	}
 
 	if( familyData.error )
@@ -127,6 +140,11 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 	if( userData.data )
 	{
 		response = userData.data;
+
+		if( privateData.data )
+		{
+			response.rgPrivateApps = privateData.data.rgPrivateApps;
+		}
 
 		if( familyData.data )
 		{
@@ -159,6 +177,8 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 				beforeDom ? '(before dom completed)' : '',
 				'Packages',
 				response.rgOwnedPackages?.length || 0,
+				'Private Apps',
+				response.rgPrivateApps?.length || 0,
 				'Family Apps',
 				response.rgFamilySharedApps?.length || 0,
 			);

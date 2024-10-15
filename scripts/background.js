@@ -4,7 +4,9 @@ let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
 let userFamilyDataCache = null;
+let userPrivateAppsCache = null;
 let userFamilySemaphore = null;
+let userPrivateAppsSemaphore = null;
 let tokenSemaphore = null;
 let nextAllowedRequest = 0;
 
@@ -48,6 +50,7 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 	switch( request.contentScriptQuery )
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
+		case 'FetchPrivateApps': FetchPrivateApps( callback ); return true;
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
 		case 'FetchSteamUserFamilyData': FetchSteamUserFamilyData( callback ); return true;
 		case 'GetApp': GetApp( request.appid, callback ); return true;
@@ -77,6 +80,99 @@ function InvalidateCache()
 	SetLocalOption( 'userdata.cached', Date.now() );
 	SetLocalOption( 'userfamilydata', '{}' );
 }
+
+/**
+ * @param {Function} callback
+ */
+async function FetchPrivateApps( callback )
+{
+	if( userPrivateAppsCache !== null )
+	{
+		callback( { data: userPrivateAppsCache } );
+		return;
+	}
+
+	if( userPrivateAppsSemaphore !== null )
+	{
+		callback( await userFamilySemaphore );
+		return;
+	}
+
+	const now = Date.now();
+	const cacheData = await GetLocalOption( { privateappsdata: false } );
+	const cache = cacheData.userfamilydata && cacheData.userfamilydata;
+
+	if( cache && cache.cached && cache.data && now < cache.cached + 21600000 )
+	{
+		callback( { data: cache.data } );
+		return;
+	}
+
+	let callbackResponse = null;
+	let semaphoreResolve = null;
+	userPrivateAppsSemaphore = new Promise( resolve =>
+	{
+		semaphoreResolve = resolve;
+	} );
+
+	try
+	{
+		const token = await GetStoreToken();
+		const paramsPrivateApps = new URLSearchParams();
+		paramsPrivateApps.set( 'access_token', token );
+		const responseFetch = await fetch(
+			`https://api.steampowered.com/IAccountPrivateAppsService/GetPrivateAppList/v1/?${paramsPrivateApps.toString()}`,
+			{
+				headers: {
+					Accept: 'application/json',
+				}
+			}
+		);
+		const response = await responseFetch.json();
+
+		if( !response || !response.response || !response.response.private_apps )
+		{
+			throw new Error( 'Is Steam okay?' );
+		}
+
+		userPrivateAppsCache =
+		{
+			rgPrivateApps: response.response.private_apps.appids || [],
+		};
+
+		callbackResponse =
+		{
+			data: userPrivateAppsCache
+		};
+
+		callback( callbackResponse );
+
+		await SetLocalOption( 'privateappsdata', JSON.stringify( {
+			data: userPrivateAppsCache,
+			cached: now
+		} ) );
+	}
+	catch( error )
+	{
+		callbackResponse =
+		{
+			error: error.message,
+		};
+
+		if( cache && cache.data )
+		{
+			callbackResponse.data = cache.data;
+		}
+
+		callback( callbackResponse );
+	}
+	finally
+	{
+		semaphoreResolve( callbackResponse );
+		userPrivateAppsSemaphore = null;
+	}
+
+};
 
 /**
  * @param {Function} callback
