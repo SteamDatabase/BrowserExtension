@@ -5,6 +5,7 @@ let checkoutSessionId;
 let userDataCache = null;
 let userFamilyDataCache = null;
 let userFamilySemaphore = null;
+let tokenSemaphore = null;
 let nextAllowedRequest = 0;
 
 /** @type {browser} ExtensionApi */
@@ -196,24 +197,9 @@ async function FetchSteamUserFamilyData( callback )
 
 	try
 	{
-		const tokenResponseFetch = await fetch(
-			`https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`,
-			{
-				credentials: 'include',
-				headers: {
-					Accept: 'application/json',
-				},
-			}
-		);
-		const token = await tokenResponseFetch.json();
-
-		if( !token || !token.success || !token.data || !token.data.webapi_token )
-		{
-			throw new Error( 'Are you logged on the Steam Store in this browser?' );
-		}
-
+		const token = await GetStoreToken();
 		const paramsSharedLibrary = new URLSearchParams();
-		paramsSharedLibrary.set( 'access_token', token.data.webapi_token );
+		paramsSharedLibrary.set( 'access_token', token );
 		paramsSharedLibrary.set( 'family_groupid', '0' ); // family_groupid is ignored
 		paramsSharedLibrary.set( 'include_excluded', 'true' );
 		paramsSharedLibrary.set( 'include_free', 'true' );
@@ -400,6 +386,62 @@ function GetAchievementsGroups( appid, callback )
 		.then( GetJsonWithStatusCheck )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
+}
+
+/**
+ * @return {Promise<String>}
+ */
+async function GetStoreToken()
+{
+	if( tokenSemaphore !== null )
+	{
+		return await tokenSemaphore ;
+	}
+	let token = null;
+	let semaphoreResolve = null;
+	tokenSemaphore = new Promise( resolve =>
+	{
+		semaphoreResolve = resolve;
+	} );
+
+	try
+	{
+		token = await GetLocalOption( { storetoken: false } ).then( data => data.storetoken );
+		if( token )
+		{
+			const jwt = token.split( '.' );
+			const payload = JSON.parse( atob( jwt[ 1 ] ) );
+			const expiration = payload.exp * 1000;
+			if( Date.now() < expiration )
+			{
+				return token;
+			}
+		}
+
+		token = await fetch(
+			`https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`,
+			{
+				credentials: 'include',
+				headers: {
+					Accept: 'application/json',
+				},
+			}
+		).then( response =>response.json() );
+
+		if( !token || !token.success || !token.data || !token.data.webapi_token )
+		{
+			throw new Error( 'Are you logged on the Steam Store in this browser?' );
+		}
+
+		await SetLocalOption( 'storetoken', token.data.webapi_token );
+
+		return token.data.webapi_token;
+	}
+	finally
+	{
+		semaphoreResolve( token );
+		tokenSemaphore = null;
+	};
 }
 
 /**
