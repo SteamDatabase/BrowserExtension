@@ -292,6 +292,21 @@
 		"message": "Saavutusryhmät tarjoaa Steam Hunter SteamDB: n kautta.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Kausi $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Päivämäärä"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Luokitus"
+	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",
 		"placeholders": {
@@ -426,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Ota käyttöön lisäsuodatukset <a href=\"https://steamdb.info/sales/\" target=\"_blank\">alennukset</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> paketit -sivuilla</a>"
+	},
+	"options_website_family": {
+		"message": "Korosta perheen omistamat sovellukset (vaatii ylimääräisen pyynnön)"
 	},
 	"options_extra_data": {
 		"message": "Lisätiedot haettu $domain$:sta",
@@ -575,6 +593,9 @@
 		"message": "Hyväksy Steam-tilaussopimus kauppapaikka, tavaraluettelo ja aktivoi tuote -sivuilla automaattisesti",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_market_stickers": {
+		"message": "Näytä lisää tietoa markkinaluetteloista, kuten Counter-Strike 2 -tarroista"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Piilota \"Asenna Steam\" -painike ylätunnisteesta",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -639,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Näytä lukituskuvake lukituille saavutuksille"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Näytä CS-luokituksen historia CS2-saavutusten sivulla"
 	}
 }

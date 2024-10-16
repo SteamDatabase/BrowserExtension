@@ -292,6 +292,21 @@
 		"message": "Præstationsgrupper leveres af Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sæson $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Dato"
+	},
+	"achievements_csrating_name": {
+		"message": "CS bedømmelse"
+	},
 	"inventory_list_at": {
 		"message": "Liste på $price$",
 		"placeholders": {
@@ -315,6 +330,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Lister varen for højeste noteret købsordre pris\n\nViser pris er de penge, du modtager (uden gebyrer)"
+	},
+	"inventory_badge_level": {
+		"message": "Dit badge niveau: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Dit foliemærke niveau: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Ingen badge fremstillet"
 	},
 	"options": {
 		"message": "Indstillinger"
@@ -405,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Aktiver ekstra filtrering på <a href=\"https://steamdb.info/sales/\" target=\"_blank\">salgsside</a> og <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">bundles side</a>"
+	},
+	"options_website_family": {
+		"message": "Fremhæv familieejede applikationer (kræver en ekstra anmodning)"
 	},
 	"options_extra_data": {
 		"message": "Ekstra data hentet fra $domain$",
@@ -514,6 +553,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Accepter automatisk hurtig salg"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Vis badge niveau på byttekort og booster pakker"
+	},
 	"options_display_market_price_others": {
 		"message": "Vis varens markedspris i andre brugeres lagerbeholdninger"
 	},
@@ -550,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Accepter Abonnementsaftale på markedet, inventar, og aktivere nøglesider automatisk",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Vis ekstra information omkring markedsopslag, såsom Counter-Strike 2 klistermærker"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skjul knappen \"Installer Steam\" i headeren",
@@ -615,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Vis et låseikon for låste præstationer"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Vis CS-vurderingshistorik på CS2 bedriftssiden"
 	}
 }

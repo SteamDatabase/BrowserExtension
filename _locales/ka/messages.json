@@ -174,6 +174,9 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "სიის ნახვის ძალიან ბევრი მცდელობა. გთხოვთ, სცადოთ მოგვიანებით."
+	},
 	"explore_finished": {
 		"message": "რიგი დათვალიერებულია."
 	},
@@ -185,6 +188,31 @@
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "აიღეთ ყოველდღიური ჯილდო…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "ამჟამად არ არის ხელმისაწვდომი ყოველდღიური ჯილდო."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "შემდეგი ნივთი ხელმისაწვდომია: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "ყოველდღიური ჯილდოს მიღება ვერ მოხერხდა."
+	},
+	"explore_saleitem_success": {
+		"message": "მიღებული ახალი ჯილდო: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "აპების რაოდენობა სადაც შესაძლებელია დროპების დაგდება: $amount$",
@@ -264,6 +292,21 @@
 		"message": "მიღწევების ჯგუფებს უზრუნველყოფენ Steam Hunters-ის მეშვეობით SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "სეზონი $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "თარიღი"
+	},
+	"achievements_csrating_name": {
+		"message": "რეიტინგი CS"
+	},
 	"inventory_list_at": {
 		"message": "დადე მარკეტზე $price$-ად",
 		"placeholders": {
@@ -287,6 +330,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "დადე ნივთი ყველაზე მაღალ ფასად:\n\n\nგამოჩენილი ფასი არის ის ფული რომელსაც შენ მიიღებ (Steam-ის გადასახადის გამოკლებით)"
+	},
+	"inventory_badge_level": {
+		"message": "თქვენი ბეჯის დონე: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "თქვენი ლითონის ბეჯის დონე: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "ბეჯი არ არის დამუშავებული"
 	},
 	"options": {
 		"message": "პარამეტრები"
@@ -486,6 +550,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "ავტომატურად დაეთანხმე სწრაფად გაყიდვას"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "აჩვენეთ ხატის დონე ბარათებისა და ბარათების კომპლექტების თვისებებში"
+	},
 	"options_display_market_price_others": {
 		"message": "გამოაჩინე ნივთის ფასი მარკეტზე სხვების ინვენტარში"
 	},
@@ -522,6 +589,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "დაეთანხმე პირობებს ავტომატურად მარკეტზე, ინვენტარში და გააქტიურე key-ს გვერდები ავტომატურად",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "აჩვენე დამატებითი ინფორმაცია ბაზრის ჩამონათვალის შესახებ Counter-Strike 2 სტიკერებით"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "დამალდე \"Install Steam\" -ის ღილაკი",
@@ -576,6 +646,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "დაამატე ღილაკი რომ ავტომატურად აღმოაჩინო რიგი ფასდაკლებების დროს"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "გადამისამართდით თამაშის ბარათების გვერდზე დარჩენილი ბარათების შეძენის შემდეგ"
+	},
 	"options_builtin_achievements_global": {
 		"message": "გააუმჯობესე გლობალური მიღწევების გვერდი"
 	},
@@ -584,5 +657,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "ლუქის სურათის ჩვენება ჩაკეთილ ჯილდოებზე"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2 მიღწევების გვერდზე CS შეფასების ისტორიის ჩვენება"
 	}
 }

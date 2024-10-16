@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Ativar filtragem extra nas páginas <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de promoções</a> e nas <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> páginas de conjuntos</a>"
 	},
+	"options_website_family": {
+		"message": "Destacar aplicações obtidas na biblioteca da família (requer uma solicitação adicional)"
+	},
 	"options_extra_data": {
 		"message": "Dados adicionais obtidos a partir de $domain$",
 		"placeholders": {
@@ -590,6 +593,9 @@
 		"message": "Aceitar Acordo de Subscrição no mercado, inventário e páginas de ativação de chaves automaticamente",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_market_stickers": {
+		"message": "Mostrar informação adicional sobre os anúncios de venda tal como autocolantes do Counter-Strike 2"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ocultar botão \"Instalar o Steam\" no cabeçalho",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -656,6 +662,6 @@
 		"message": "Mostrar um ícone de cadeado para proezas bloqueadas"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Exibir o histórico de classificação CS na página de proezas CS2"
+		"message": "Mostrar o histórico de classificação CS na página de proezas do CS2"
 	}
 }

@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Увімкнути додаткову фільтрацію на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">сторінці продажу</a> та на <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">сторінці комплектів</a>"
 	},
+	"options_website_family": {
+		"message": "Виділяти застосунки, які належать родині (потрібен додатковий запит)"
+	},
 	"options_extra_data": {
 		"message": "Додаткові дані, взяті з $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Автоматично приймати Угоду підписника Steam на ринку, в інвентарі, і на сторінці активації ключів",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Показувати додаткову інформацію стосовно списків ринку, таких як наліпки для Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Сховати кнопку «Інсталювати в Steam» у заголовку",

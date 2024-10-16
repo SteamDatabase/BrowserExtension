@@ -292,6 +292,21 @@
 		"message": "קבוצות הישגים מסופקות על ידי Steam Hunters באמצעות SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "עונה $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "תאריך"
+	},
+	"achievements_csrating_name": {
+		"message": "דרגות CS"
+	},
 	"inventory_list_at": {
 		"message": "פרסם במחיר $price$",
 		"placeholders": {
@@ -639,5 +654,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "הצג אייקון מנעול להישגים נעולים"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "הצג היסתורית דרגות CS על דף הישגים של CS2"
 	}
 }

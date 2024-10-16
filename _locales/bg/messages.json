@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Покажи допълнителни филтри на страниците за <a href=\"https://steamdb.info/sales/\" target=\"_blank\">разпродажби</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">комплекти</a>"
 	},
+	"options_website_family": {
+		"message": "Отбелязване на приложения притежавани от членове на семейство (изисква допълнителна заявка)"
+	},
 	"options_extra_data": {
 		"message": "Допълнителна информация взета от $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Автоматично приеми „Условия за ползване на Steam“ на страниците на пазара, инвентара и активиране на ключове",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Покажи допълнителна информация за обяви на пазара, като Counter-Strike 2 стикери"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Скрий бутона „Инсталирайте Steam“ в горната лента",

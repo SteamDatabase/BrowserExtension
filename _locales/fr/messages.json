@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Activer le filtrage supplémentaire sur <a href=\"https://steamdb.info/sales/\" target=\"_blank\">la page des soldes</a> et <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">la page des bundles</a>"
 	},
+	"options_website_family": {
+		"message": "Mettre en valeur les applications dans votre bibliothèque familiale (requiert une requête supplémentaire)"
+	},
 	"options_extra_data": {
 		"message": "Données supplémentaires récupérées depuis $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Accepter automatiquement les conditions d'utilisation de Steam sur le marché, l'inventaire et les pages d'activation de clés",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Afficher des informations supplémentaires sur les offres du marché telles que les autocollants Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Cacher le bouton \"Installer Steam\" dans l'en-tête",

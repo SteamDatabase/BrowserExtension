@@ -292,6 +292,21 @@
 		"message": "Grupurile de realizări sunt furnizate de Steam Hunters prin SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sezonul $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Dată"
+	},
+	"achievements_csrating_name": {
+		"message": "Evaluare CS"
+	},
 	"inventory_list_at": {
 		"message": "Listează la $price$",
 		"placeholders": {
@@ -426,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Activați filtrarea suplimentară pe pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de vânzări</a> și <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pachete (bundles)</a>"
+	},
+	"options_website_family": {
+		"message": "Evidențiere aplicații de familie (necesită o cerere suplimentară)"
 	},
 	"options_extra_data": {
 		"message": "Date suplimentare preluate de la $domain$",
@@ -575,6 +593,9 @@
 		"message": "Acceptați Acordul de abonat pe piață, inventar și activați automat paginile cheie",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_market_stickers": {
+		"message": "Afișează informații suplimentare despre listările de pe piață, cum ar fi stickere Counter-Strike 2"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ascunde butonul \"Instalează Steam\" în antet",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -639,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Afişează o pictogramă de blocare pentru realizărilor blocate"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Afişează istoricul de evaluare în CS pe pagina de realizări CS2"
 	}
 }

@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Aktiver ekstra filtrering på <a href=\"https://steamdb.info/sales/\" target=\"_blank\">salgssiden</a> og <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakkesiden</a>"
 	},
+	"options_website_family": {
+		"message": "Fremhev familieeide apper (krever en ekstra forespørsel)"
+	},
 	"options_extra_data": {
 		"message": "Ekstra data hentet fra $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Godta abonnementsavtale på markedet, lageret og aktiver nøkkelsider automatisk",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Vis ekstra informasjon om markedsannonser som Counter-Strike 2-klistremerker"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skjul \"Installer Steam\"-knappen i toppteksten",

@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Nagdagdag ng mga link ng SteamDB at mga bagong feature sa Steam store at komunidad. Tingnan ang pinakamababang presyo at istatistika ng laro.",
+		"message": "Nagdadagdag ng mga SteamDB link at mga bagong feature sa Steam store at community. Tingnan ang mga pinakamabababang presyo at stats.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {

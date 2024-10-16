@@ -72,7 +72,7 @@
 		"message": "Статистика онлайна"
 	},
 	"app_stats_online_now": {
-		"message": "В сети:"
+		"message": "Сейчас онлайн:"
 	},
 	"app_stats_peak_today": {
 		"message": "Пик за 24 часа:"
@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "Пропускайте эти страницы проверки возраста с помощью опции SteamDB"
+		"message": "У SteamDB есть опция автоматического пропуска страниц проверки возраста"
 	},
 	"explore_auto_discover": {
 		"message": "Автоматический просмотр"
@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Включить дополнительную фильтрацию на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">странице распродаж</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">странице наборов</a>"
 	},
+	"options_website_family": {
+		"message": "Выделять приложения имеющиеся в семейной группе (требуется доп. запрос)"
+	},
 	"options_extra_data": {
 		"message": "Дополнительные данные получаемые с $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Автоматически принимать Соглашение подписчика Steam на Торговой площадке, в инвентаре и на странице активации ключей",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Отображать доп. информацию о лотах торговой площадки, такую как стикеры Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Скрыть кнопку «Установить Steam» в заголовке",

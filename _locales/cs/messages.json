@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Povolit další filtrování na stránkách <a href=\"https://steamdb.info/sales/\" target=\"_blank\">slev</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčků</a>"
 	},
+	"options_website_family": {
+		"message": "Zvýraznit aplikace vlastněné rodinou (vyžaduje další žádost)"
+	},
 	"options_extra_data": {
 		"message": "Další načídata načítaná ze $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Automaticky příjmat Účastnickou smlouvu na stánkách tržiště, inventáře a aktivace klíče",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Zobrazit další informace o nabídkách na trhu, jako například Counter Strike 2 Nálepky"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skrýt v záhlaví tlačítko „Instalovat Steam“",

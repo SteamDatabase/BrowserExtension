@@ -292,6 +292,21 @@
 		"message": "I gruppi di obiettivi sono forniti da Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Stagione $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Data"
+	},
+	"achievements_csrating_name": {
+		"message": "Valutazione CS"
+	},
 	"inventory_list_at": {
 		"message": "Elenca a $price$",
 		"placeholders": {
@@ -426,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Abilita filtraggio extra sulla pagina <a href=\"https://steamdb.info/sales/\" target=\"_blank\">di vendita</a> e <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> la pagina dei pacchetti</a>"
+	},
+	"options_website_family": {
+		"message": "Evidenzia le app gestite da famiglie (richiede una richiesta aggiuntiva)"
 	},
 	"options_extra_data": {
 		"message": "Dati aggiuntivi recuperati da $domain$",
@@ -575,6 +593,9 @@
 		"message": "Accetta il contratto di abbonamento sul mercato, sull'inventario e attiva automaticamente le pagine chiave",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_market_stickers": {
+		"message": "Mostra informazioni aggiuntive sulle inserzioni di mercato, come gli adesivi di Counter-Strike 2"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Nascondi il pulsante \"Installa Steam\" nell'intestazione",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -639,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Mostra l'icona di un lucchetto per gli achievement bloccati"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Visualizza la cronologia del punteggio CS sulla pagina degli obiettivi di CS2"
 	}
 }

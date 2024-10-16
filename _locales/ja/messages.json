@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "<a href=\"https://steamdb.info/sales/\" target=\"_blank\">セールページ</a> および <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">バンドルページ</a> で追加フィルタリングを有効にする"
 	},
+	"options_website_family": {
+		"message": "ファミリーが所有するアプリを強調表示する (追加のリクエストが必要)"
+	},
 	"options_extra_data": {
 		"message": "$domain$ の追加データ設定",
 		"placeholders": {

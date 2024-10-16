@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Zusätzliche Filter auf der <a href=\"https://steamdb.info/sales/\" target=\"_blank\">Angebotsseite</a> und der <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">Bündelseite</a> aktivieren"
 	},
+	"options_website_family": {
+		"message": "Apps aus der Familienbibliothek hervorheben (zusätzliche Anfrage notwendig)"
+	},
 	"options_extra_data": {
 		"message": "Zusätzlich abgerufene Daten von $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Steam-Nutzungsvertrag auf dem Markt, dem Inventar und den Produktaktivierungsseiten automatisch akzeptieren",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Zusätzliche Informationen bei Marktangeboten anzeigen (wie z. B. Counter-Strike-2-Sticker)"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "„Steam installieren“-Button in der Kopfzeile verbergen",

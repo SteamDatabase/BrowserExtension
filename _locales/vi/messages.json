@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói</a>"
 	},
+	"options_website_family": {
+		"message": "Làm nổi bật ứng dụng đã sở hữu trong thư viện gia đình (cần một yêu cầu thêm)"
+	},
 	"options_extra_data": {
 		"message": "Dữ liệu bổ sung được lấy từ $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Tự động chấp nhận \"Thỏa thuận người đăng ký\" trong chợ, kho đồ và trang kích hoạt sản phẩm của Steam",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Hiển thị thêm thông tin về lệnh mua bán như là hình dán Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ẩn nút \"Cài đặt Steam\" ở đầu trang",

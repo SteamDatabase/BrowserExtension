@@ -292,6 +292,9 @@
 		"message": "Групе достигнућа обезбеђују Steam Hunters преко SteamDB-а.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_date": {
+		"message": "Датум"
+	},
 	"inventory_list_at": {
 		"message": "Објави за $price$",
 		"placeholders": {
