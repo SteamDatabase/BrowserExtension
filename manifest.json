@@ -37,7 +37,6 @@
 	"web_accessible_resources":
 	[
 		{
-			"use_dynamic_url": true,
 			"resources":
 			[
 				"options/options.html",
@@ -70,7 +69,6 @@
 			]
 		},
 		{
-			"use_dynamic_url": true,
 			"resources":
 			[
 				"options/options.html"
