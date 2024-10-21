@@ -36,31 +36,23 @@ if( document.querySelector( '.guideTopContent' ) )
 
 		const checkboxWrapper = document.createElement( 'label' );
 		checkboxWrapper.textContent = _t( 'spoilers_reveal' );
-		checkboxWrapper.className = 'workshopItemControlCtn general_btn';
-		checkboxWrapper.style.gap = '5px';
+		checkboxWrapper.className = 'workshopItemControlCtn general_btn steamdb_reveal_spoilers_button';
 
 		const checkbox = document.createElement( 'input' );
 		checkbox.type = 'checkbox';
-		checkbox.style.colorScheme = 'dark';
-		checkbox.style.margin = 0;
-		checkbox.style.cursor = 'pointer';
 		checkboxWrapper.prepend( checkbox );
 		controls.append( checkboxWrapper );
 
-		checkbox.addEventListener( 'change', event =>
+		checkbox.addEventListener( 'change', () =>
 		{
-			const spoilers = guide.querySelectorAll( '.bb_spoiler,.steamdb_spoiler_revealed' );
-			const reveal = event.target.checked;
-
-			checkboxWrapper.style.backgroundColor = reveal ? '#2d6bcd' : '';
-			checkboxWrapper.style.color = reveal ? '#fff' : '';
+			const spoilers = guide.querySelectorAll( '.bb_spoiler' );
+			const reveal = checkbox.checked;
 
 			StartViewTransition( () =>
 			{
 				for( const spoiler of spoilers )
 				{
 					spoiler.classList.toggle( 'steamdb_spoiler_revealed', reveal );
-					spoiler.classList.toggle( 'bb_spoiler', !reveal );
 				}
 			} );
 		} );

@@ -66,3 +66,29 @@ a.apphub_NumInApp:hover {
 	gap: 4px;
 	align-items: center;
 }
+
+.steamdb_reveal_spoilers_button {
+	cursor: pointer;
+	align-items: center;
+	gap: 5px;
+}
+
+.steamdb_reveal_spoilers_button:has(input:checked) {
+	background: #2d6bcd;
+	color: #fff;
+}
+
+.steamdb_reveal_spoilers_button > input {
+	margin: 0;
+	color-scheme: dark;
+	cursor: pointer;
+}
+
+span.bb_spoiler.steamdb_spoiler_revealed {
+	background-color: rgb(0 0 0 / 50%);
+	color: #fff;
+}
+
+span.bb_spoiler.steamdb_spoiler_revealed > span {
+	visibility: visible;
+}
