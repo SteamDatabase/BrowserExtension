@@ -101,6 +101,7 @@
 		},
 		{
 			"run_at": "document_start",
+			"all_frames": true,
 			"matches":
 			[
 				"https://store.steampowered.com/*",
@@ -494,6 +495,18 @@
 			"js":
 			[
 				"scripts/community/filedetails.js"
+			]
+		},
+		{
+			"all_frames": true,
+			"matches":
+			[
+				"https://steamcommunity.com/sharedfiles/filedetails*",
+				"https://steamcommunity.com/workshop/filedetails*"
+			],
+			"js":
+			[
+				"scripts/community/filedetails_guide.js"
 			]
 		},
 		{

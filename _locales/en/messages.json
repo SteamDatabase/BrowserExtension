@@ -363,6 +363,10 @@
 		"message": "No badge crafted"
 	},
 
+	"spoilers_reveal": {
+		"message": "Reveal spoilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 
 	"options": {
 		"message": "Options"
