@@ -621,7 +621,7 @@ function InitAchievements( items, isPersonal )
 			}
 
 			const image = document.createElement( 'img' );
-			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${!isPersonal || player.unlock ? achievement.icon : achievement.icon_gray}`;
+			image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${!isPersonal || player.unlock || !achievement.icon_gray ? achievement.icon : achievement.icon_gray}`;
 			image.className = 'steamdb_achievement_image';
 			element.append( image );
 
@@ -759,7 +759,7 @@ function InitAchievements( items, isPersonal )
 			if( isCompareView )
 			{
 				const image = document.createElement( 'img' );
-				image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare ? achievement.icon : achievement.icon_gray}`;
+				image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare && achievement.icon_gray ? achievement.icon : achievement.icon_gray}`;
 				image.className = 'steamdb_achievement_image steamdb_achievement_image_compare';
 				element.append( image );
 			}
