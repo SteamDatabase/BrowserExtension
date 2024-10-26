@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Ingen badge fremstillet"
 	},
+	"spoilers_reveal": {
+		"message": "Afslør spoilere",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Indstillinger"
 	},

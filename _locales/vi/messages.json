@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Chưa tạo huy hiệu"
 	},
+	"spoilers_reveal": {
+		"message": "Hiển thị nội dung ẩn",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Cài đặt"
 	},
@@ -443,7 +447,7 @@
 		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói</a>"
 	},
 	"options_website_family": {
-		"message": "Làm nổi bật ứng dụng đã sở hữu trong thư viện gia đình (cần một yêu cầu thêm)"
+		"message": "Làm nổi bật ứng dụng đã sở hữu trong thư viện gia đình (cần thêm một yêu cầu)"
 	},
 	"options_extra_data": {
 		"message": "Dữ liệu bổ sung được lấy từ $domain$",
@@ -520,7 +524,7 @@
 		"message": "Hiển thị nút trên trang cộng đồng"
 	},
 	"options_button_gamecards": {
-		"message": "Hiển thị các nút trang SteamDB và cửa hàng trên trang huy hiệu"
+		"message": "Hiển thị đường dẫn tới SteamDB và trang cửa hàng trên trang huy hiệu"
 	},
 	"options_link_subid": {
 		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
@@ -594,7 +598,7 @@
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_market_stickers": {
-		"message": "Hiển thị thêm thông tin về lệnh mua bán như là hình dán Counter-Strike 2"
+		"message": "Hiển thị thông tin thêm về vật phẩm trong lệnh mua/bán (ví dụ: hình dán Counter-Strike 2)"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ẩn nút \"Cài đặt Steam\" ở đầu trang",

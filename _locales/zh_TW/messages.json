@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB可選擇自動略過這些年齡檢查頁面"
+		"message": "SteamDB 能够自动跳过此类年龄检查页面"
 	},
 	"explore_auto_discover": {
 		"message": "自動探索佇列"

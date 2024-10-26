@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Ninguna insignia fabricada"
 	},
+	"spoilers_reveal": {
+		"message": "Revelar spoilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Opciones"
 	},

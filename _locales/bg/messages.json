@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Няма изработена значка"
 	},
+	"spoilers_reveal": {
+		"message": "Покажи спойлери",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Опции"
 	},

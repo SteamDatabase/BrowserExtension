@@ -1,4 +1,8 @@
 {
+	"extension_description": {
+		"message": "Προσθέτει συνδέσεις με το SteamDB και νέα χαρακτηριστικά στο Κατάστημα και την κοινότητα του Steam.",
+		"description": "This value can be up to 132 characters."
+	},
 	"steamdb_options": {
 		"message": "Επιλογές SteamDB"
 	},
@@ -288,6 +292,21 @@
 		"message": "Οι ομάδες επιτευγμάτων παρέχονται από το Steam Hunters μέσω του SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Σεζόν $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Ημερομηνία"
+	},
+	"achievements_csrating_name": {
+		"message": "Βαθμολογία CS"
+	},
 	"inventory_list_at": {
 		"message": "Λίστα από $price$",
 		"placeholders": {
@@ -422,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Ενεργοποίηση επιπλέον φίλτρα στη σελίδα πωλήσεων <a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> και <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">σελίδα πακέτων</a>"
+	},
+	"options_website_family": {
+		"message": "Επισημάνετε εφαρμογές τις οικογένειας (απαιτείται επιπλέον αίτημα)"
 	},
 	"options_extra_data": {
 		"message": "Επιπρόσθετα δεδομένα που ανακτήθηκαν από το $domain$",
@@ -571,6 +593,9 @@
 		"message": "Αποδοχή του συμφωνητικού συνδρομητή στην αγορά, στα αντικείμενα, και στη σελίδα ενεργοποίησης προϊόντος αυτόματα",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_market_stickers": {
+		"message": "Εμφάνιση πρόσθετων πληροφοριών σχετικά με τις καταχωρίσεις της αγοράς, όπως αυτοκόλλητα στο Counter-Strike 2"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Απόκρυψη κουμπιού \"Εγκατάσταση Steam\" στην κεφαλίδα",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -635,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Εμφάνιση εικονιδίου κλειδαριάς για κλειδωμένα επιτεύγματα"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Εμφάνιση του ιστορικού αξιολόγησης CS στη σελίδα επιτευγμάτων CS2"
 	}
 }

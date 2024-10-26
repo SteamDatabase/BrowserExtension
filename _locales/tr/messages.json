@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Rozet işlenmedi"
 	},
+	"spoilers_reveal": {
+		"message": "Sürprizbozan içeriği göster",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Ayarlar"
 	},
@@ -441,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">Paket</a> ve <a href=\"https://steamdb.info/sales/\" target=\"_blank\">satış</a> sayfasında ekstra filtrelemeyi etkinleştir"
+	},
+	"options_website_family": {
+		"message": "Aile kütüphanesindeki içerikleri vurgula (ek izin gerektirir)"
 	},
 	"options_extra_data": {
 		"message": "$domain$'dan alınan ekstra veriler",

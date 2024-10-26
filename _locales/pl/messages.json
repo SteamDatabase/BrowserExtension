@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Nie stworzono odznaki"
 	},
+	"spoilers_reveal": {
+		"message": "Pokaż spoilery",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Opcje"
 	},

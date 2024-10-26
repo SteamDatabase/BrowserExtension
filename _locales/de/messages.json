@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Kein Abzeichen hergestellt"
 	},
+	"spoilers_reveal": {
+		"message": "Spoiler aufdecken",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Einstellungen"
 	},

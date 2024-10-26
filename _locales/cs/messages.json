@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Nevytvořen žádný odznak"
 	},
+	"spoilers_reveal": {
+		"message": "Odhalit spoilery",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Možnosti"
 	},
@@ -446,7 +450,7 @@
 		"message": "Zvýraznit aplikace vlastněné rodinou (vyžaduje další žádost)"
 	},
 	"options_extra_data": {
-		"message": "Další načídata načítaná ze $domain$",
+		"message": "Další data načítaná ze $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",

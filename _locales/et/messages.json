@@ -25,14 +25,14 @@
 		"message": "Vaata SteamDB-s"
 	},
 	"view_on_steam_hunters": {
-		"message": "Vaata Steam Hunters",
+		"message": "Vaata Steam Hunters-is",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "Vaata PCGamingWiki peal"
+		"message": "Vaata PCGamingWiki-s"
 	},
 	"view_your_achievements": {
-		"message": "Personaalsed saavutused"
+		"message": "Isiklikud saavutused"
 	},
 	"store_page": {
 		"message": "Poeleht",
@@ -42,10 +42,10 @@
 		"message": "Otsi"
 	},
 	"app_steamdb_rating": {
-		"message": "SteamDB Hindamine:"
+		"message": "SteamDB Hinnang:"
 	},
 	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB HINDAMINE",
+		"message": " STEAMDB HINNANG",
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
@@ -69,16 +69,16 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Võrgus Statistika"
+		"message": "Veebistatistika"
 	},
 	"app_stats_online_now": {
-		"message": "Võrgus praegu:"
+		"message": "Online praegu:"
 	},
 	"app_stats_peak_today": {
 		"message": "24-tunni tipp:"
 	},
 	"app_stats_alL_time_peak": {
-		"message": "Kõigi-aegade tipp:"
+		"message": "Kõigi aegade tipp:"
 	},
 	"app_stats_followers": {
 		"message": "Jälgijad:"
@@ -149,14 +149,17 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB-l on võimalus neid vanuse kontrollimise lehekülgi automaatselt vahele jätta"
+	},
 	"explore_auto_discover": {
-		"message": "Automaatselt-avasta"
+		"message": "Automaatselt avasta"
 	},
 	"explore_auto_discover_description": {
 		"message": "Automaatselt vaata mängud läbi et saada sündmuse kaart."
 	},
 	"explore_generating": {
-		"message": "Genereerin uut avastus järjekorda, see võib ebaõnnestuda kui Steam on suurema koormuse all…"
+		"message": "Uue avastamisjärjekorra loomine, see võib ebaõnnestuda, kui Steam on suure koormuse all…"
 	},
 	"explore_exploring": {
 		"message": "Avastan järjekorda… Päring $current$ $total$st",
@@ -187,7 +190,7 @@
 		"message": "Auhinda lunastatakse…"
 	},
 	"explore_saleitem_cant_claim": {
-		"message": "Igapäevast auhinda pole, mida lunastada hetkel."
+		"message": "Hetkel ei ole igapäevast auhinda, mida taotleda."
 	},
 	"explore_saleitem_next_item_time": {
 		"message": "Järgmine asi saadaval: $datetime$",
@@ -274,7 +277,7 @@
 		}
 	},
 	"achievements_locked_count": {
-		"message": "$count$ Mitte omantatud saavutused",
+		"message": "LUKUSTATUD SAAVUTUSED: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -286,8 +289,23 @@
 		"message": "Sordi aja järgi"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Saavutuste rühmi pakuvad Steam Hunters kaudu SteamDB.",
+		"message": "Saavutuste gruppe pakuvad Steam Hunters SteamDB kaudu.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Hooaeg $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Kuupäev"
+	},
+	"achievements_csrating_name": {
+		"message": "CS hinnang"
 	},
 	"inventory_list_at": {
 		"message": "Lisa kuulutusse hinnaga $price$",
@@ -322,6 +340,15 @@
 			}
 		}
 	},
+	"inventory_badge_foil_level": {
+		"message": "Teie fooliumimärgi tase: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
 	"inventory_badge_none": {
 		"message": "Märki pole koostatud"
 	},
@@ -329,37 +356,37 @@
 		"message": "Sätted"
 	},
 	"options_welcome_title": {
-		"message": "👋 Tänud et laadisite alla SteamDB extensioni!"
+		"message": "👋 Täname SteamDB laienduse paigaldamise eest!"
 	},
 	"options_welcome_description": {
 		"message": "Vaata valikuid allpool ja klõpsa nendel, mis sulle sobivad. Selleks, et saada siia tagasi tulevikus:"
 	},
 	"options_welcome_option1": {
-		"message": "Seadete lehekülg SteamDB"
+		"message": "Seadete lehekülg SteamDB-s"
 	},
 	"options_welcome_option2": {
-		"message": "Konto rippmenüü Steami lehel"
+		"message": "Konto rippmenüü Steam'i lehekülgedel"
 	},
 	"options_welcome_option3": {
-		"message": "Sinu brauseri lisandmoodulite lehekülg"
+		"message": "Teie brauseri lisade lehekülg"
 	},
 	"options_review": {
-		"message": "Jätta arvustus selle lisandmooduli jaoks"
+		"message": "Jäta selle laienduse kohta arvustus"
 	},
 	"options_permissions_description": {
-		"message": "See lisandmoodul vajab ekstra ligipääsu selleks, et töötada korralikult lehekülgedel nagu SteamDB, Steam Store ja Steam Community."
+		"message": "See laiendus nõuab täiendavaid õigusi, et töötada korrektselt SteamDB-s, Steam Store'is ja Steam Community's."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Anna load"
 	},
 	"options_footer1": {
-		"message": "Tehtud 💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteabDB</a> inimeste poolt."
+		"message": "Tehtud 💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> rahva poolt."
 	},
 	"options_footer2": {
 		"message": "See on <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">vabavaraline</a>, tänu kõikidele panustajatele!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Väljalülitatud kastikesed märgistavad sisse ehitatud funktsioone."
+		"message": "* Väljalülitatud märkeruudud tähistavad sisseehitatud funktsioone."
 	},
 	"options_header_website": {
 		"message": "SteamDB Veebisait"
@@ -368,13 +395,13 @@
 		"message": "Täiendavad andmed"
 	},
 	"options_header_buttons_and_links": {
-		"message": "Nuppud ja lingid"
+		"message": "Nupud ja lingid"
 	},
 	"options_header_inventory": {
 		"message": "Inventar"
 	},
 	"options_header_trade_offers": {
-		"message": "Kaubanduspakkumine"
+		"message": "Kaubanduspakkumised"
 	},
 	"options_header_achievements": {
 		"message": "Saavutused"
@@ -386,19 +413,19 @@
 		"message": "Selgitus"
 	},
 	"options_website_explanation1": {
-		"message": "Kui see valik on lubatud, laiendus küsib mõningaid kasutajaandmeid (soovitud, ostetud, jälgitavad, eiratud tooted ja tooted ostukorvis) <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam'i poest</a> ja kasutab neid saidil esiletõstmiseks."
+		"message": "Kui see valik on sisse lülitatud, küsib laiendus <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam poest</a> mõned kasutaja andmed (soovide nimekiri, omandatud, järgitud, ignoreeritud tooted ja tooted ostukorvis) ja kasutab neid, et rakendada veebilehel esiletõstmisi."
 	},
 	"options_website_explanation2": {
-		"message": "Te peate olema sisse logitud poodi selleks, et see töötaks."
+		"message": "Selleks, et see toimiks, peate olema poes sisse logitud."
 	},
 	"options_website_explanation3": {
-		"message": "See on hoitud täielikult sinu brauseril ja seda ei saadeta kunagi isegi SteamDB tagaosale."
+		"message": "See sisaldub täielikult teie brauseris ja seda ei saadeta kunagi isegi SteamDB taustsüsteemile."
 	},
 	"options_website_explanation4": {
-		"message": "Selleks, et vältida liikseid taotlusi Steami poe poolt, sinu kasutaja andmed salvestatake vahemällu sinu brauseri kohalikku mällu."
+		"message": "Et vältida liigseid päringuid Steam Store'ile, salvestatakse teie kasutajaandmed veebilehitseja kohalikku mällu."
 	},
 	"options_website_highlight": {
-		"message": "Tõsta esile omandatud ja soovitud rakendused$domain$",
+		"message": "Rõhutage omandatud ja soovitud tooteid $domain$ veebilehel",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -407,13 +434,16 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Lisa soovinimekirja, jälgi, ja ignoreeri rakendusi Steam poes otse SteamDB"
+		"message": "Soovinimekirja panemine, jälgimine ja toodete ignoreerimine Steami poes otse SteamDB-st"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Luba tasuta rakenduste skript</a>"
 	},
 	"options_website_highlight3": {
 		"message": "Luba ekstra filtreerimine <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> soodustuste leheküljel</a> ja <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakendite leheküljel</a>"
+	},
+	"options_website_family": {
+		"message": "Tooge esile perekonna omanduses olevad rakendused (nõuab lisataotlust)"
 	},
 	"options_extra_data": {
 		"message": "Lisa andmed hangitud $domain$",
@@ -523,6 +553,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automaatselt aksepteeri kiirmüüke"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Märgise taseme kuvamine kauplemiskaartidel ja boosterpakkidel"
+	},
 	"options_display_market_price_others": {
 		"message": "Kuva asja poe hinda teiste kasutajate inventaris"
 	},
@@ -559,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Nõustu tellimislepinguga turu, inventari ja võtme koodide aktiveerimis lehtedel automaatselt",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Näita lisateavet turunimekirjade kohta, näiteks Counter-Strike 2 kleebised"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Peida \"Install Steam\" nupp pealises",
@@ -613,6 +649,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "Lisa nupp, et automaatselt allahindluste ajal Discovery Queue'd uurida"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Pärast ülejäänud kaartide ostmist suunata tagasi mängukaartide lehele"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Täiusta globaalsete saavutuste lehte"
 	},
@@ -621,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Kuva luku ikoon lukus saavutustel"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS-i reitingute ajaloo kuvamine CS2 saavutuste lehel"
 	}
 }

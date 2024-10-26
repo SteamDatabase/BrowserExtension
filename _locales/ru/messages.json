@@ -150,7 +150,7 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "У SteamDB есть опция автоматического пропуска страниц проверки возраста"
+		"message": "У SteamDB есть опция для автоматического пропуска страниц проверки возраста"
 	},
 	"explore_auto_discover": {
 		"message": "Автоматический просмотр"
@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Значок не создан"
 	},
+	"spoilers_reveal": {
+		"message": "Показать спойлеры",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Настройки"
 	},
@@ -443,7 +447,7 @@
 		"message": "Включить дополнительную фильтрацию на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">странице распродаж</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">странице наборов</a>"
 	},
 	"options_website_family": {
-		"message": "Выделять приложения имеющиеся в семейной группе (требуется доп. запрос)"
+		"message": "Выделять товары, имеющиеся в семейной группе (требуется доп. запрос)"
 	},
 	"options_extra_data": {
 		"message": "Дополнительные данные получаемые с $domain$",

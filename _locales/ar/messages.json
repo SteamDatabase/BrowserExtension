@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "لا توجد شارة مصنوعة"
 	},
+	"spoilers_reveal": {
+		"message": "كشف تفاصيل القصة",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "الخيارات"
 	},
@@ -441,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "تفعيل التصفية الإضافية على <a href=\"https://steamdb.info/sales/\" target=\"_blank\">صفحة التخفيضات</a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">صفحة الحزم</a>"
+	},
+	"options_website_family": {
+		"message": "تمييز التطبيقات المملوكة من قبل أفراد العائلة (يتطلب طلب إضافي)"
 	},
 	"options_extra_data": {
 		"message": "بيانات إضافية تم جلبها من $domain$",
@@ -589,6 +596,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "قَبُول الشروط, لتصفح السوق والمخزن وصفحة تنشيط المفتاح",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "عرض معلومات إضافية عن السلع المعروضة مثل ملصقات كاونتر سترايك 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "إخفاء زر \"تثبيت الشاشة\" في رأس الصفحة",

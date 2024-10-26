@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "对应徽章尚未合成"
 	},
+	"spoilers_reveal": {
+		"message": "显示剧透文本",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "设置"
 	},

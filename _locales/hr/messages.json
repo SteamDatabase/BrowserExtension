@@ -442,6 +442,9 @@
 	"options_website_highlight3": {
 		"message": "Omogućite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">stranici prodaje</a> i <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stranici s paketima</a>"
 	},
+	"options_website_family": {
+		"message": "Istakni aplikacije u porodičnom vlasništvu (zahtijeva dodatni zahtjev)"
+	},
 	"options_extra_data": {
 		"message": "Dodatni podaci preuzeti s $domain$",
 		"placeholders": {
@@ -589,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Automatski prihvati Ugovor o pretplati na stranicama tržišta, inventara i aktivacije ključeva",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Prikaži dodatne informacije o tržišnim ponudama kao što su naljepnice za Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Sakrij gumb 'Instaliraj Steam' u zaglavlju",

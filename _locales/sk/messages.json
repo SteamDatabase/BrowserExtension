@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB má možnosť automaticky preskočiť tieto stránky kontroly veku"
+	},
 	"explore_auto_discover": {
 		"message": "Auto-objavovanie"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Príliš veľakrát sa nepodarilo vymazať front. Môžete to skúsiť znova neskôr."
+	},
 	"explore_finished": {
 		"message": "Rada bola preskúmaná."
+	},
+	"explore_saleitem_claim": {
+		"message": "Získať odmenu"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Získaj bezplatnú dennú odmenu, ak je dostupná."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "Denná odmena sa získava…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "Momentálne nie je dostupná žiadna denná odmena."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "Ďalšia odmena dostupná: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "Nepodarilo sa uplatniť dennú odmenu."
+	},
+	"explore_saleitem_success": {
+		"message": "Nová odmena získaná: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikácie na nečinnosť: $amount$",
@@ -251,6 +291,21 @@
 	"achievements_groups_by_steamhunters": {
 		"message": "Skupiny úspechov poskytuje služba Steam Hunters prostredníctvom služby SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
+	},
+	"achievements_csrating_season": {
+		"message": "Sezóna $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Dátum"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Hodnotenie"
 	},
 	"inventory_list_at": {
 		"message": "Predať za $price$",
@@ -386,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Povolenie dodatočného filtrovania na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">predajnej stránke</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">stránke balíkov</a>"
+	},
+	"options_website_family": {
+		"message": "Zvýrazniť aplikácie vlastnené rodinou (vyžaduje ďalšiu žiadosť)"
 	},
 	"options_extra_data": {
 		"message": "Dodatočné údaje získané z domény $domain$",
@@ -535,6 +593,9 @@
 		"message": "Automaticky prijímate predplatiteľku zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
+	"options_enhancement_market_stickers": {
+		"message": "Zobraziť ďalšie informácie o produktoch na trhu ako napríklad nálepky v Counter-Strike 2"
+	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skryť tlačidlo \"Inštalovať Steam\" v hlavičke",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
@@ -599,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Zobraziť ikonu zámku pre uzamknuté úspechy"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Zobrazovať históriu CS Hodnotenia na stránke CS2 achievementov"
 	}
 }

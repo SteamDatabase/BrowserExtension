@@ -292,6 +292,9 @@
 		"message": "उपलब्धि समूह Steam Hunters द्वारा SteamDB के माध्यम से प्रदान किए जाते हैं।",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_date": {
+		"message": "दिनांक"
+	},
 	"inventory_list_at": {
 		"message": "$price$ पर बेचें",
 		"placeholders": {

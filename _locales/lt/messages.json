@@ -292,6 +292,12 @@
 		"message": "Pasiekimų grupes teikia „Steam Hunters“ per SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_date": {
+		"message": "Data"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Reitingas"
+	},
 	"inventory_list_at": {
 		"message": "Skelbti už $price$",
 		"placeholders": {
@@ -612,5 +618,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Rodyti užrakto simbolį užrakintams pasiekimams"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Rodyti CS reitingo istoriją CS2 pasiekimų puslapyje"
 	}
 }

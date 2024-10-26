@@ -292,6 +292,21 @@
 		"message": "گروه های دستاورد ها توسط Steam Hunters ارائه داده شده از طریق SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "فصل$season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "تاریخ"
+	},
+	"achievements_csrating_name": {
+		"message": "امتیاز CS"
+	},
 	"inventory_list_at": {
 		"message": "درخواست خرید در $price$",
 		"placeholders": {
@@ -315,6 +330,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "ثبت آیتم به بیشترین قیمت درخواست شده\n\n قیمت نمایش داده شده مبلغ دریافتی شما (بدون کارمزد) می باشد"
+	},
+	"inventory_badge_level": {
+		"message": "سطح نشان شما: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "سطح نشان فویلی شما: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "هیچ نشانی ساخته نشده است"
 	},
 	"options": {
 		"message": "تنظیمات"
@@ -405,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "فعال کردن فیلتر های اضافه برای <a href=\"https://steamdb.info/sales/\" target=\"_blank\">صفحه تخفیفات</a> و <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">صفحه باندل ها</a>"
+	},
+	"options_website_family": {
+		"message": "هایلایت برنامه ها با مالکیت خانوادگی(نیازمند تقاضا اضافی)"
 	},
 	"options_extra_data": {
 		"message": "اطلاعات اضافی دریافت شده از $domain$",
@@ -514,6 +553,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "قبول کردن فروش سریع به طور خودکار"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "نمایش سطح نشان بر روی تریدینگ کارت ها و بوستر پک ها"
+	},
 	"options_display_market_price_others": {
 		"message": "نمایش قیمت هر آیتم در صفحه اینونتوری دیگر کاربران"
 	},
@@ -550,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "قبول اتوماتیک قوانین استیم در صفحات مارکت، انباری و فعالسازی کلید",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "نمایش دادن اطلاعات اضافه درباره لیستینگ بازار مانند برچسب های Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "مخفی کردن دکمه \"Install Steam\" در بالای صفحه",
@@ -615,5 +660,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "نمایش آیکون قفل برای دستاورد های قفل شده"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "نمایش تاریخجه امتیازات CS در صفحه دستاوردهای CS2"
 	}
 }

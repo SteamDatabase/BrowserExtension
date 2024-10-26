@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Ingen merke lagd"
 	},
+	"spoilers_reveal": {
+		"message": "Avslør spoilere",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Innstillinger"
 	},

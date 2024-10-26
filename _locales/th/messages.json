@@ -187,7 +187,7 @@
 		"message": "รับรางวัลรายวันฟรีหากมี"
 	},
 	"explore_saleitem_trying_to_claim": {
-		"message": "รับของรางวัลประจำวัน ..."
+		"message": "รับของรางวัลประจำวัน…"
 	},
 	"explore_saleitem_cant_claim": {
 		"message": "ไม่มีรางวัลรายวันให้รับในขณะนี้"
@@ -292,8 +292,20 @@
 		"message": "กลุ่มของความสำเร็จ ให้ข้อมูลโดย Steam Hunters ผ่าน SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "ซีซั่น $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
 	"achievements_csrating_date": {
 		"message": "วันที่"
+	},
+	"achievements_csrating_name": {
+		"message": "CS เรตติ้ง"
 	},
 	"inventory_list_at": {
 		"message": "ตั้งราคาที่ $price$",
@@ -429,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "เปิดใช้งานการกรองเพิ่มเติมใน<a href=\"https://steamdb.info/sales/\" target=\"_blank\">หน้าการขาย</a> และ<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">หน้าบันเดิล</a>"
+	},
+	"options_website_family": {
+		"message": "ไฮไลต์แอปพลิเคชันที่สมาชิกในครอบครัวเป็นเจ้าของ (ต้องการการร้องขอพิเศษ)"
 	},
 	"options_extra_data": {
 		"message": "ข้อมูลเพิ่มเติมที่ดึงมาจาก $domain$",
@@ -577,6 +592,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "ยอมรับข้อตกลงสมาชิกในตลาด, คลัง และเปิดใช้งานหน้าหลักโดยอัตโนมัติ",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "เเสดงข้อมูลเพิ่มเติมเกี่ยวกับสินค้า"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "ซ่อนปุ่ม \"ติดตั้ง Steam\" ที่ส่วนหัว",

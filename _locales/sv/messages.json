@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB har ett alternativ för att automatiskt hoppa över dessa ålderskontrollsidor"
+	},
 	"explore_auto_discover": {
 		"message": "Utforska automatiskt"
 	},
@@ -289,6 +292,21 @@
 		"message": "Prestationsgrupper ges av Steam Hunters via SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Säsong $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Datum"
+	},
+	"achievements_csrating_name": {
+		"message": "CS-betyg"
+	},
 	"inventory_list_at": {
 		"message": "Lägg upp för försäljning för $price$",
 		"placeholders": {
@@ -312,6 +330,31 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Lägg upp för försäljning för det högsta efterfrågade försäljningspris\n\nVisat pris är de pengar du får (utan avgifter)"
+	},
+	"inventory_badge_level": {
+		"message": "Din märkesnivå: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Din folie märkesnivå: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Inga märken tillverkade"
+	},
+	"spoilers_reveal": {
+		"message": "Visa spoilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {
 		"message": "Inställningar"
@@ -402,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Aktivera extra filter på SteamDBs sidor om <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prissänkta produkter</a> och <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">paketerbjudande</a>"
+	},
+	"options_website_family": {
+		"message": "Markera familjeägda appar (kräver en extra förfrågan)"
 	},
 	"options_extra_data": {
 		"message": "Ytterligare information hämtad från $domain$",
@@ -511,6 +557,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Godkänn snabbförsäljning automatiskt"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Visa märkesnivå på kort och booster paket"
+	},
 	"options_display_market_price_others": {
 		"message": "Visa föremålets marknadspris i andra användares förråd"
 	},
@@ -547,6 +596,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Acceptera automatiskt Steams abonnentavtal på marknaden, förrådet och när du aktiverar en produkt",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Visa extra information om marknadslistorna som t.ex. Counter-Strike 2 klistermärken"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Dölj ”Installera Steam”-knappen",
@@ -612,5 +664,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Visa en låsikon för låsta prestationer"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Visa CS rating historik på CS2 achievements sidan"
 	}
 }
