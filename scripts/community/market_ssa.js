@@ -1,6 +1,6 @@
 'use strict';
 
-GetOption( { 'enhancement-market-ssa': true }, ( items ) =>
+GetOption( { 'enhancement-market-ssa': false }, ( items ) =>
 {
 	if( items[ 'enhancement-market-ssa' ] )
 	{

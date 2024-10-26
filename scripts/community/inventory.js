@@ -35,13 +35,14 @@
 		window.SellCurrentSelection();
 
 		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price / 100;
-		document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
 
 		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
 		window.SellItemDialog.OnAccept( dummySellEvent );
 
 		if( options[ 'enhancement-inventory-quick-sell-auto' ] )
 		{
+			document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
+
 			window.SellItemDialog.OnConfirmationAccept( dummySellEvent );
 		}
 	};
