@@ -337,7 +337,6 @@ const FetchCSRating = async( profileUrl ) =>
 
 	const summary = document.createElement( 'details' );
 	summary.open = true;
-	summary.className = 'steamdb_achievements_title';
 
 	const summaryName = document.createElement( 'summary' );
 	summaryName.className = 'steamdb_achievements_game_name steamdb_achievements_csrating_fold';

@@ -8,6 +8,7 @@
 }
 
 .steamdb_achievements_csrating_fold {
+	color: #fff;
 	cursor: pointer;
 	width: fit-content;
 }
