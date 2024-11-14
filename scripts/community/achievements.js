@@ -910,9 +910,13 @@ function InitAchievements( items, isPersonal )
 				summaryGameLogoImg.className = 'steamdb_achievements_game_logo';
 				summaryGameLogo.append( summaryGameLogoImg );
 
-				if( updateId === 0 )
+				if( updateId === 0 || dlcAppId === appid )
 				{
-					summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
+					if( updateId === 0 )
+					{
+						summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
+					}
+
 					summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
 				}
 				else
