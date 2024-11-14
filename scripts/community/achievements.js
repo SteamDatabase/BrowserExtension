@@ -921,6 +921,18 @@ function InitAchievements( items, isPersonal )
 				}
 				else
 				{
+					summaryGameLogoImg.addEventListener( 'error', () =>
+					{
+						summaryGameLogoImg.addEventListener( 'error', () =>
+						{
+							summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
+						}, { once: true } );
+
+						// Fallback to the header for now because they are not hashed
+						summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/header.jpg`;
+					}, { once: true } );
+
+					// TODO: Need to query the api to get correct hashed url for the capsule
 					summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/capsule_184x69.jpg`;
 				}
 
