@@ -138,12 +138,14 @@ function InitAchievements( items, isPersonal )
 			document.querySelector( '#tabs' ).append( extraTabs );
 		}
 	}
+
 	AppendExtraTabs( true );
 	window.addEventListener( 'resize', () => AppendExtraTabs( false ) );
 
 	let isCompareView = false;
 	let leftAvatarUrl = null;
 	let rightAvatarUrl = null;
+
 	if( isPersonal )
 	{
 		if( oldContainer.classList.contains( 'compare_view' ) )
@@ -173,6 +175,7 @@ function InitAchievements( items, isPersonal )
 	}
 
 	const params = new URLSearchParams();
+	params.set( 'origin', location.origin );
 	params.set( 'format', 'json' );
 
 	if( applicationConfig.WEBAPI_ACCESS_TOKEN )
@@ -218,9 +221,11 @@ function InitAchievements( items, isPersonal )
 
 			WriteLog( 'GetAchievementsGroups loaded' );
 
+			const dlcCapsulesPromise = FetchDlcCapsules( applicationConfig, appid, response.data );
+
 			gameAchievementsFetch.then( ( gameAchievements ) =>
 			{
-				ProcessGameAchievements( gameAchievements, response.data );
+				ProcessGameAchievements( gameAchievements, response.data, dlcCapsulesPromise );
 			} ).catch( e => console.error( '[SteamDB]', e ) );
 		} );
 	}
@@ -232,108 +237,7 @@ function InitAchievements( items, isPersonal )
 		} ).catch( e => console.error( '[SteamDB]', e ) );
 	}
 
-	function ToggleDetailsElements( e, parent )
-	{
-		e.preventDefault();
-
-		if( !parent )
-		{
-			return;
-		}
-
-		const elements = parent.querySelectorAll( 'details' );
-		let state = true;
-
-		// Figure out if any of the elements are currently open
-		// If at least one is open, we will close all of them
-		for( const el of elements )
-		{
-			if( el.open )
-			{
-				state = false;
-				break;
-			}
-		}
-
-		for( const el of elements )
-		{
-			el.open = state;
-		}
-	}
-
-	function OnToggleAllGamesClick( e )
-	{
-		e.preventDefault();
-
-		ToggleDetailsElements( e, document.querySelector( '.steamdb_achievements_container' ) );
-	}
-
-	function OnToggleGameClick( e )
-	{
-		e.preventDefault();
-
-		ToggleDetailsElements( e, this.closest( '.steamdb_achievements_group' ) );
-	}
-
-	function CreateFoldButton( isRoot )
-	{
-		const btn = document.createElement( 'button' );
-		btn.type = 'button';
-		btn.className = 'steamdb_fold_button';
-		btn.addEventListener( 'click', isRoot ? OnToggleAllGamesClick : OnToggleGameClick );
-
-		// https://lucide.dev/icons/fold-vertical
-		btn.innerHTML = `
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			<path d="M12 22v-6"/>
-			<path d="M12 8V2"/>
-			<path d="M4 12H2"/>
-			<path d="M10 12H8"/>
-			<path d="M16 12h-2"/>
-			<path d="M22 12h-2"/>
-			<path d="m15 19-3-3-3 3"/>
-			<path d="m15 5-3 3-3-3"/>
-		</svg>`;
-
-		return btn;
-	}
-
-	function OnToggleEarnedClick( e )
-	{
-		e.preventDefault();
-
-		const container = document.getElementById( 'mainContents' );
-		const state = container.classList.contains( 'steamdb_hide_earned_achievements' );
-
-		const ToggleEarned = () =>
-		{
-			container.classList.toggle( 'steamdb_hide_earned_achievements', !state );
-		};
-
-		StartViewTransition( ToggleEarned );
-
-		SessionStorageSet( 'steamdb_ach_hide_earned', state );
-	}
-
-	function CreateHideEarnedButton()
-	{
-		const btn = document.createElement( 'button' );
-		btn.type = 'button';
-		btn.className = 'steamdb_done_button';
-		btn.addEventListener( 'click', OnToggleEarnedClick );
-
-		// https://lucide.dev/icons/check-check
-		btn.innerHTML = `
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<path d="M18 6 7 17l-5-5"/>
-				<path d="m22 10-7.5 7.5L13 16"/>
-			</svg>
-		`;
-
-		return btn;
-	}
-
-	function ProcessGameAchievements( response, achievementUpdates )
+	function ProcessGameAchievements( response, achievementUpdates, dlcCapsulesPromise )
 	{
 		if( !response || !response.response || !response.response.achievements )
 		{
@@ -908,32 +812,16 @@ function InitAchievements( items, isPersonal )
 
 				const summaryGameLogoImg = document.createElement( 'img' );
 				summaryGameLogoImg.className = 'steamdb_achievements_game_logo';
+				summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
 				summaryGameLogo.append( summaryGameLogoImg );
 
-				if( updateId === 0 || dlcAppId === appid )
+				if( updateId === 0 )
 				{
-					if( updateId === 0 )
-					{
-						summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
-					}
-
-					summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
+					summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
 				}
-				else
+				else if( dlcAppId !== appid )
 				{
-					summaryGameLogoImg.addEventListener( 'error', () =>
-					{
-						summaryGameLogoImg.addEventListener( 'error', () =>
-						{
-							summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
-						}, { once: true } );
-
-						// Fallback to the header for now because they are not hashed
-						summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/header.jpg`;
-					}, { once: true } );
-
-					// TODO: Need to query the api to get correct hashed url for the capsule
-					summaryGameLogoImg.src = `${applicationConfig.STORE_ICON_BASE_URL}${dlcAppId}/capsule_184x69.jpg`;
+					summaryGameLogoImg.dataset.appid = dlcAppId;
 				}
 
 				const summaryName = document.createElement( 'div' );
@@ -1150,6 +1038,20 @@ function InitAchievements( items, isPersonal )
 				}
 			} );
 
+			if( dlcCapsulesPromise )
+			{
+				dlcCapsulesPromise.then( ( images ) =>
+				{
+					for( const [ appid, url ] of images )
+					{
+						for( const image of document.querySelectorAll( `.steamdb_achievements_game_logo[data-appid="${appid}"]` ) )
+						{
+							image.src = url;
+						}
+					}
+				} ).catch( e => console.error( '[SteamDB]', e ) );
+			}
+
 			// As we are completely redrawing the achievement list, sorting added by
 			// Augmented Steam won't work it, hide their sorting to prevent user confusion
 			document.querySelector( '.es-sortbox' )?.setAttribute( 'hidden', true );
@@ -1162,6 +1064,114 @@ function InitAchievements( items, isPersonal )
 			HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView );
 		}
 	}
+}
+
+async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
+{
+	const dlcAppIds = [];
+
+	/** @type Set<number> */
+	const uniqueAppIds = new Set();
+
+	/** @type Map<number, string> */
+	const images = new Map();
+
+	for( const update of achievementUpdates )
+	{
+		if( update.dlcAppId && update.dlcAppId !== appid && !uniqueAppIds.has( update.dlcAppId ) )
+		{
+			uniqueAppIds.add( update.dlcAppId );
+
+			const knownCapsule = SessionStorageGet( `steamdb_capsule_${update.dlcAppId}` );
+
+			if( knownCapsule )
+			{
+				images.set( update.dlcAppId, knownCapsule );
+				continue;
+			}
+
+			dlcAppIds.push( {
+				appid: update.dlcAppId
+			} );
+		}
+	}
+
+	if( dlcAppIds.length === 0 )
+	{
+		return Promise.resolve( images );
+	}
+
+	const request =
+	{
+		ids: dlcAppIds,
+		context:
+		{
+			language: applicationConfig.LANGUAGE,
+			country_code: applicationConfig.COUNTRY,
+			steam_realm: applicationConfig.EREALM,
+		},
+		data_request:
+		{
+			include_assets: true
+		}
+	};
+
+	const params = new URLSearchParams();
+	params.set( 'origin', location.origin );
+	params.set( 'format', 'json' );
+
+	if( applicationConfig.WEBAPI_ACCESS_TOKEN )
+	{
+		params.set( 'access_token', applicationConfig.WEBAPI_ACCESS_TOKEN );
+	}
+
+	params.set( 'input_json', JSON.stringify( request ) );
+
+	// Request header field x-requested-with is not allowed
+	// by Access-Control-Allow-Headers in preflight response.
+	params.set( 'x_requested_with', 'SteamDB' );
+
+	const assetsToTry =
+	[
+		'small_capsule',
+		'main_capsule',
+		'header',
+	];
+
+	const itemsFetch = await fetch( `${applicationConfig.WEBAPI_BASE_URL}IStoreBrowseService/GetItems/v1/?${params.toString()}` );
+	const response = await itemsFetch.json();
+
+	if( !response || !response.response || !response.response.store_items )
+	{
+		return images;
+	}
+
+	for( const item of response.response.store_items )
+	{
+		if( !item.assets )
+		{
+			continue;
+		}
+
+		for( const assetKey of assetsToTry )
+		{
+			if( item.assets[ assetKey ] )
+			{
+				// eslint-disable-next-line no-template-curly-in-string
+				const name = item.assets.asset_url_format.replace( "${FILENAME}", item.assets[ assetKey ] );
+				const url = `${applicationConfig.STORE_ITEM_BASE_URL}${name}`;
+				images.set( item.appid, url );
+
+				SessionStorageSet( `steamdb_capsule_${item.appid}`, url );
+
+				break;
+			}
+		}
+	}
+
+	WriteLog( 'Loaded', images.size, 'capsules' );
+
+	return images;
 }
 
 function ParseApplicationConfig()
@@ -1224,6 +1234,9 @@ function ParseApplicationConfig()
 
 const relativeDateFormatter = new Intl.RelativeTimeFormat( GetLanguage(), { numeric: 'auto' } );
 
+/**
+ * @param {number} ms
+ */
 function FormatRelativeTime( ms )
 {
 	const sec = ms / 1000;
@@ -1404,19 +1417,167 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 	}, { once: true } );
 }
 
-function IsSessionStorageSet( key )
+/**
+ * @param {MouseEvent} e
+ * @param {HTMLElement|undefined} parent
+ */
+function ToggleDetailsElements( e, parent )
 {
-	try
+	e.preventDefault();
+
+	if( !parent )
 	{
-		return !!sessionStorage.getItem( key );
+		return;
 	}
-	catch
+
+	const elements = parent.querySelectorAll( 'details' );
+	let state = true;
+
+	// Figure out if any of the elements are currently open
+	// If at least one is open, we will close all of them
+	for( const el of elements )
 	{
-		return false;
+		if( el.open )
+		{
+			state = false;
+			break;
+		}
+	}
+
+	for( const el of elements )
+	{
+		el.open = state;
 	}
 }
 
-function SessionStorageSet( key, state )
+/**
+ * @param {MouseEvent} e
+ */
+function OnToggleAllGamesClick( e )
+{
+	e.preventDefault();
+
+	ToggleDetailsElements( e, document.querySelector( '.steamdb_achievements_container' ) );
+}
+
+/**
+ * @param {MouseEvent} e
+ */
+function OnToggleGameClick( e )
+{
+	e.preventDefault();
+
+	ToggleDetailsElements( e, this.closest( '.steamdb_achievements_group' ) );
+}
+
+/**
+ * @param {boolean} isRoot
+ */
+function CreateFoldButton( isRoot )
+{
+	const btn = document.createElement( 'button' );
+	btn.type = 'button';
+	btn.className = 'steamdb_fold_button';
+	btn.addEventListener( 'click', isRoot ? OnToggleAllGamesClick : OnToggleGameClick );
+
+	// https://lucide.dev/icons/fold-vertical
+	btn.innerHTML = `
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M12 22v-6"/>
+		<path d="M12 8V2"/>
+		<path d="M4 12H2"/>
+		<path d="M10 12H8"/>
+		<path d="M16 12h-2"/>
+		<path d="M22 12h-2"/>
+		<path d="m15 19-3-3-3 3"/>
+		<path d="m15 5-3 3-3-3"/>
+	</svg>`;
+
+	return btn;
+}
+
+/**
+ * @param {MouseEvent} e
+ */
+function OnToggleEarnedClick( e )
+{
+	e.preventDefault();
+
+	const container = document.getElementById( 'mainContents' );
+	const state = container.classList.contains( 'steamdb_hide_earned_achievements' );
+
+	const ToggleEarned = () =>
+	{
+		container.classList.toggle( 'steamdb_hide_earned_achievements', !state );
+	};
+
+	StartViewTransition( ToggleEarned );
+
+	SessionStorageToggle( 'steamdb_ach_hide_earned', state );
+}
+
+function CreateHideEarnedButton()
+{
+	const btn = document.createElement( 'button' );
+	btn.type = 'button';
+	btn.className = 'steamdb_done_button';
+	btn.addEventListener( 'click', OnToggleEarnedClick );
+
+	// https://lucide.dev/icons/check-check
+	btn.innerHTML = `
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M18 6 7 17l-5-5"/>
+			<path d="m22 10-7.5 7.5L13 16"/>
+		</svg>
+	`;
+
+	return btn;
+}
+
+/**
+ * @param {string} key
+ */
+function SessionStorageGet( key )
+{
+	try
+	{
+		return sessionStorage.getItem( key );
+	}
+	catch
+	{
+		return null;
+	}
+}
+
+/**
+ * @param {string} key
+ */
+function IsSessionStorageSet( key )
+{
+	return !!SessionStorageGet( key );
+}
+
+/**
+ * @param {string} key
+ * @param {string} value
+ */
+function SessionStorageSet( key, value )
+{
+	try
+	{
+		sessionStorage.setItem( key, value );
+	}
+	catch
+	{
+		//
+	}
+}
+
+/**
+ * @param {string} key
+ * @param {boolean} state
+ */
+function SessionStorageToggle( key, state )
 {
 	try
 	{
@@ -1437,9 +1598,12 @@ function SessionStorageSet( key, state )
 
 function OnToggleDetails()
 {
-	SessionStorageSet( this.id, this.open );
+	SessionStorageToggle( this.id, this.open );
 }
 
+/**
+ * @param {callback} callback
+ */
 function StartViewTransition( callback )
 {
 	if( document.startViewTransition )

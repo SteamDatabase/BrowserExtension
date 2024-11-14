@@ -349,6 +349,7 @@
 		}
 
 		const params = new URLSearchParams();
+		params.set( 'origin', location.origin );
 		params.set( 'format', 'json' );
 		params.set( 'access_token', accessToken );
 		params.set( 'steamid', steamid );

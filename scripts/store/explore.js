@@ -134,6 +134,7 @@ function GenerateQueue( generateFails = 0 )
 	}
 
 	const params = new URLSearchParams();
+	params.set( 'origin', location.origin );
 	params.set( 'access_token', accessToken );
 	params.set( 'country_code', applicationConfig.COUNTRY || 'US' );
 	params.set( 'rebuild_queue', '1' );
@@ -206,6 +207,7 @@ function GenerateQueue( generateFails = 0 )
 			const requestNextInQueue = ( index ) =>
 			{
 				const skipParams = new URLSearchParams();
+				skipParams.set( 'origin', location.origin );
 				skipParams.set( 'access_token', accessToken );
 				skipParams.set( 'appid', appids[ index ] );
 
@@ -275,6 +277,7 @@ function HandleSaleItemResponse( response )
 function CheckClaimSaleItem( fails = 0 )
 {
 	const params = new URLSearchParams();
+	params.set( 'origin', location.origin );
 	params.set( 'access_token', accessToken );
 	params.set( 'language', applicationConfig.LANGUAGE );
 
@@ -328,6 +331,7 @@ function ClaimSaleItem( fails = 0 )
 	itemStatus.textContent = _t( 'explore_saleitem_trying_to_claim' );
 
 	const params = new URLSearchParams();
+	params.set( 'origin', location.origin );
 	params.set( 'access_token', accessToken );
 	params.set( 'language', applicationConfig.LANGUAGE );
 
