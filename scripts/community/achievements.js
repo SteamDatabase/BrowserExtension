@@ -804,6 +804,7 @@ function InitAchievements( items, isPersonal )
 				gameGroup.append( summary );
 
 				const dlcAppId = update.dlcAppId || appid;
+				const logoAppId = update.logoAppId || dlcAppId;
 
 				const summaryGameLogo = document.createElement( 'a' );
 				summaryGameLogo.className = 'steamdb_achievements_game_logo_contain';
@@ -819,9 +820,9 @@ function InitAchievements( items, isPersonal )
 				{
 					summaryGameLogo.style.viewTransitionName = 'steamdb-gamelogo';
 				}
-				else if( dlcAppId !== appid )
+				else if( logoAppId !== appid )
 				{
-					summaryGameLogoImg.dataset.appid = dlcAppId;
+					summaryGameLogoImg.dataset.appid = logoAppId;
 				}
 
 				const summaryName = document.createElement( 'div' );
@@ -1078,20 +1079,23 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 
 	for( const update of achievementUpdates )
 	{
-		if( update.dlcAppId && update.dlcAppId !== appid && !uniqueAppIds.has( update.dlcAppId ) )
-		{
-			uniqueAppIds.add( update.dlcAppId );
+		const dlcAppId = update.dlcAppId;
+		const logoAppId = update.logoAppId || dlcAppId;
 
-			const knownCapsule = SessionStorageGet( `steamdb_capsule_${update.dlcAppId}` );
+		if( logoAppId && logoAppId !== appid && !uniqueAppIds.has( logoAppId ) )
+		{
+			uniqueAppIds.add( logoAppId );
+
+			const knownCapsule = SessionStorageGet( `steamdb_capsule_${logoAppId}` );
 
 			if( knownCapsule )
 			{
-				images.set( update.dlcAppId, knownCapsule );
+				images.set( logoAppId, knownCapsule );
 				continue;
 			}
 
 			dlcAppIds.push( {
-				appid: update.dlcAppId
+				appid: logoAppId
 			} );
 		}
 	}
