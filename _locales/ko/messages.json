@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB에는 이러한 연령 확인 페이지를 자동으로 건너뛸 수 있는 옵션이 있습니다"
+	},
 	"explore_auto_discover": {
 		"message": "자동탐색"
 	},
@@ -171,8 +174,45 @@
 			}
 		}
 	},
+	"explore_failed_to_clear_too_many": {
+		"message": "대기열을 여러 번 지우지 못했습니다. 나중에 다시 시도할 수 있습니다."
+	},
 	"explore_finished": {
 		"message": "대기열이 탐색이 완료되었습니다."
+	},
+	"explore_saleitem_claim": {
+		"message": "보상 받기"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "매일 무료 리워드가 있는 경우 청구하세요."
+	},
+	"explore_saleitem_trying_to_claim": {
+		"message": "일일 보상 청구…"
+	},
+	"explore_saleitem_cant_claim": {
+		"message": "지금은 일일 보상을 청구할 수 없습니다."
+	},
+	"explore_saleitem_next_item_time": {
+		"message": "해당 항목을 사용할 수 있는 다음 시간: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
+	"explore_saleitem_claim_failed": {
+		"message": "일일 보상을 청구하지 못했습니다."
+	},
+	"explore_saleitem_success": {
+		"message": "새로운 보상이 청구되었습니다: $item$.",
+		"placeholders": {
+			"item": {
+				"content": "$1",
+				"example": "Unicorn Sticker"
+			}
+		}
 	},
 	"badges_idle_apps": {
 		"message": "유휴 상태인 앱: $amount$",
@@ -252,6 +292,21 @@
 		"message": "업적 그룹은 SteamDB를 통해 Steam Hunters에서 제공됩니다.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "시즌 $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "날짜"
+	},
+	"achievements_csrating_name": {
+		"message": "CS 등급"
+	},
 	"inventory_list_at": {
 		"message": "$price$에 등록",
 		"placeholders": {
@@ -284,6 +339,22 @@
 				"example": "5"
 			}
 		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "호일 배지 레벨: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "배지가 제작되지 않았습니다"
+	},
+	"spoilers_reveal": {
+		"message": "'스포일러'가 포함된 미디어가 표시됩니다",
+		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {
 		"message": "옵션"
@@ -374,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "추가 필터링 활성화 <a href=\"https://steamdb.info/sales/\" target=\"_blank\">판매 페이지</a> 및 <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">번들 페이지</a>"
+	},
+	"options_website_family": {
+		"message": "가족 소유 앱 강조 표시(추가 요청 필요)"
 	},
 	"options_extra_data": {
 		"message": "$domain$에서 가져온 추가 데이터",
@@ -483,6 +557,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "자동으로 빠른 판매 수락"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "트레이딩 카드 및 부스터 팩에 배지 레벨 표시"
+	},
 	"options_display_market_price_others": {
 		"message": "다른 사용자의 보관함에 상점 가격을 표시합니다"
 	},
@@ -519,6 +596,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "상점, 인벤토리에서 구독자 동의 수락 및 주요 페이지 자동 활성화",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Counter Strike 2 스티커와 같은 마켓 리스팅에 대한 추가 정보 표시"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "\"스팀 설치\" 버튼 숨기기",
@@ -573,6 +653,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "판매 중에 대기열을 자동으로 검색하는 버튼 추가"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "남은 카드 구매 후 게임 카드 페이지로 리디렉션"
+	},
 	"options_builtin_achievements_global": {
 		"message": "전체 도전 과제 페이지 향상"
 	},
@@ -581,5 +664,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "잠긴 업적에 대한 자물쇠 아이콘 표시"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2 달성 페이지에 CS 등급 기록 표시"
 	}
 }

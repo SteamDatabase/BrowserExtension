@@ -292,6 +292,15 @@
 		"message": "Pasiekimų grupes teikia „Steam Hunters“ per SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sezonas $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
 	"achievements_csrating_date": {
 		"message": "Data"
 	},
@@ -321,6 +330,27 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Paskelbia prekę už didžiausią esamą pirkimo užsakymo kainą\n\nRodoma kaina - tai pinigai, kuriuos gaunate (be mokesčių)"
+	},
+	"inventory_badge_level": {
+		"message": "Tavo ženklelio lygis: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Tavo blizgiojo ženklelio lygis: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Ženklelis negamintas"
 	},
 	"options": {
 		"message": "Nustatymai"
@@ -411,6 +441,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Įjungti papildomą filtravimą <a href=\"https://steamdb.info/sales/\" target=\"_blank\"> pardavimų puslapyje</a> ir <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">komplektų puslapyje</a>"
+	},
+	"options_website_family": {
+		"message": "Paryškinti šeimai priklausiančias aplikacijas (reikalauja papildomos užklausos)"
 	},
 	"options_extra_data": {
 		"message": "Papildoma informacija, gauta iš $domain$",
@@ -519,6 +552,9 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Automatiškai priimti greitą pardavimą"
+	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Rodyti ženklelio lygį kortelėms ir papildymų pakams"
 	},
 	"options_display_market_price_others": {
 		"message": "Rodyti prekės rinkos kainą kitų naudotojų inventoriuje"

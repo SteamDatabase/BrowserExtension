@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Nenhuma medalha criada"
 	},
+	"spoilers_reveal": {
+		"message": "Mostrar spoilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Opções"
 	},
@@ -443,7 +447,7 @@
 		"message": "Ativar filtragem extra nas páginas <a href=\"https://steamdb.info/sales/\" target=\"_blank\">de promoções</a> e nas <a href=\"https://steamdb.info/bundles/\" target=\"_blank\"> páginas de conjuntos</a>"
 	},
 	"options_website_family": {
-		"message": "Destacar aplicações obtidas na biblioteca da família (requer uma solicitação adicional)"
+		"message": "Destacar aplicações na biblioteca da família (requer um pedido adicional)"
 	},
 	"options_extra_data": {
 		"message": "Dados adicionais obtidos a partir de $domain$",

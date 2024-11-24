@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Walang na-craft na badge"
 	},
+	"spoilers_reveal": {
+		"message": "Ipakita ang mga spoiler",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Mga Option"
 	},
@@ -441,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Paganahin ang karagdagang pag-filter sa <a href=\"https://steamdb.info/sales/\" target=\"_blank\">page ng pagbebenta</a> at <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">page ng mga bundle</a>"
+	},
+	"options_website_family": {
+		"message": "I-highlight ang mga app na pagmamay-ari ng pamilya (nangangailangan ng karagdagang kahilingan)"
 	},
 	"options_extra_data": {
 		"message": "Karagdagang data na nakuha mula sa $domain$",
@@ -589,6 +596,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "Tanggapin ang Agreement ng Subscriber sa market, inventory, at awtomatikong i-activate ang mga pangunahing page",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "Magpakita ng karagdagang impormasyon tungkol sa mga listahan ng market gaya ng mga sticker ng Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Itago ang button na \"Install Steam\" sa header",

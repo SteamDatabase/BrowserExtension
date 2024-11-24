@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "לא נוצר תג"
 	},
+	"spoilers_reveal": {
+		"message": "חשוף ספוילרים",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "הגדרות"
 	},
@@ -441,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "הפעל מסננים נוספים על <a href=\"https://steamdb.info/sales/\" target=\"_blank\">דפי מבצעים</a> ו<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">דפי חבילות</a>"
+	},
+	"options_website_family": {
+		"message": "הדגש אפליקציות בבעלות משפחתית (דורש בקשה נוספת)"
 	},
 	"options_extra_data": {
 		"message": "מידע נוסף שמיובא מ$domain$",
@@ -589,6 +596,9 @@
 	"options_enhancement_market_ssa": {
 		"message": "אישרור אוטומטית של תנאי שימוש בחנות, תיק ועמודי הכנסת מפתח",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
+	},
+	"options_enhancement_market_stickers": {
+		"message": "הצג מידע נוסף על רשימות שוק כגון מדבקות Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",

@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Nici o insignă făcută"
 	},
+	"spoilers_reveal": {
+		"message": "Afișează spoilere",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Opțiuni"
 	},

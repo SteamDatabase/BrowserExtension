@@ -353,7 +353,7 @@
 		"message": "Chưa tạo huy hiệu"
 	},
 	"spoilers_reveal": {
-		"message": "Hiển thị nội dung ẩn",
+		"message": "Hiển thị nội dung bị ẩn",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {

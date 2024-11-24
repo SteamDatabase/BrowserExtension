@@ -353,7 +353,7 @@
 		"message": "Nenhuma insígnia fabricada"
 	},
 	"spoilers_reveal": {
-		"message": "Exibir spoilers",
+		"message": "Revelar spoilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {
