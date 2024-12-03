@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Aggiunge link SteamDB e nuove funzionalità nel negozio e nella comunità di Steam. Visualizza i prezzi più bassi per i giochi e le statistiche.",
+		"message": "Aggiunge collegamenti a SteamDB e funzionalità al negozio e comunità di Steam. Mostra i prezzi più bassi del gioco e le statistiche.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -596,9 +596,6 @@
 	"options_enhancement_market_ssa": {
 		"message": "Accetta il contratto di abbonamento sul mercato, sull'inventario e attiva automaticamente le pagine chiave",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
-	},
-	"options_enhancement_market_stickers": {
-		"message": "Mostra informazioni aggiuntive sulle inserzioni di mercato, come gli adesivi di Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Nascondi il pulsante \"Installa Steam\" nell'intestazione",

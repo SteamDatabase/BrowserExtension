@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Geen badge gemaakt"
 	},
+	"spoilers_reveal": {
+		"message": "Toon spoilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Opties"
 	},
@@ -592,9 +596,6 @@
 	"options_enhancement_market_ssa": {
 		"message": "Accepteer Abonneeovereenkomst op de markt, inventaris en activeer belangrijke pagina's automatisch",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
-	},
-	"options_enhancement_market_stickers": {
-		"message": "Extra informatie weergeven over markt aanbiedingen zoals Counter-Strike 2 stickers"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Verberg de \"Install Steam\" knop in de header",

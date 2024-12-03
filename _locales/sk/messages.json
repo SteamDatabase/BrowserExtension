@@ -593,9 +593,6 @@
 		"message": "Automaticky prijímate predplatiteľku zmluvu na trhu, inventári a na stránke aktivácia kľúčov",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Zobraziť ďalšie informácie o produktoch na trhu ako napríklad nálepky v Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skryť tlačidlo \"Inštalovať Steam\" v hlavičke",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

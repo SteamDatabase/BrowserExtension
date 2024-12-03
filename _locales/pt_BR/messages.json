@@ -597,9 +597,6 @@
 		"message": "Aceitar automaticamente o Acordo de Assinatura do Steam nas páginas do Mercado, inventário e ativação de códigos",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Exibir informações adicionais sobre anúncios do Mercado (como adesivos do Counter-Strike 2)"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ocultar o botão \"Instale o Steam\" no cabeçalho",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

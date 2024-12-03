@@ -597,9 +597,6 @@
 		"message": "אישרור אוטומטית של תנאי שימוש בחנות, תיק ועמודי הכנסת מפתח",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "הצג מידע נוסף על רשימות שוק כגון מדבקות Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

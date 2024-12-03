@@ -593,9 +593,6 @@
 		"message": "قبول اتوماتیک قوانین استیم در صفحات مارکت، انباری و فعالسازی کلید",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "نمایش دادن اطلاعات اضافه درباره لیستینگ بازار مانند برچسب های Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "مخفی کردن دکمه \"Install Steam\" در بالای صفحه",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

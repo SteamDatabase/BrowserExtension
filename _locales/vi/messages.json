@@ -597,9 +597,6 @@
 		"message": "Tự động chấp nhận \"Thỏa thuận người đăng ký\" trong chợ, kho đồ và trang kích hoạt sản phẩm của Steam",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Hiển thị thông tin thêm về vật phẩm trong lệnh mua/bán (ví dụ: hình dán Counter-Strike 2)"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ẩn nút \"Cài đặt Steam\" ở đầu trang",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

@@ -597,9 +597,6 @@
 		"message": "Pazarda, envanterde ve ürün etkinleştirme sayfasında Abonelik Sözleşmesini otomatik olarak kabul et",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Counter-Strike 2 çıkartmaları gibi pazar listelemeleri hakkında daha fazla bilgi göster"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Başlıktaki \"Steam'i Yükle\" butonunu gizle",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

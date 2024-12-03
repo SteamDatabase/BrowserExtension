@@ -593,9 +593,6 @@
 		"message": "ยอมรับข้อตกลงสมาชิกในตลาด, คลัง และเปิดใช้งานหน้าหลักโดยอัตโนมัติ",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "เเสดงข้อมูลเพิ่มเติมเกี่ยวกับสินค้า"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "ซ่อนปุ่ม \"ติดตั้ง Steam\" ที่ส่วนหัว",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

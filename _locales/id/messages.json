@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB mempunyai pengaturan untuk secara otomatis melewati halaman pengecekan umur"
+	},
 	"explore_auto_discover": {
 		"message": "Temuan-otomatis"
 	},
@@ -289,6 +292,12 @@
 		"message": "Kelompok pencapaian disediakan oleh Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_date": {
+		"message": "Tanggal"
+	},
+	"achievements_csrating_name": {
+		"message": "Penilaian CS"
+	},
 	"inventory_list_at": {
 		"message": "Daftarkan di $price$",
 		"placeholders": {
@@ -312,6 +321,22 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Daftarkan item dengan harga tertinggi\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa pajak)"
+	},
+	"inventory_badge_level": {
+		"message": "Level lencana anda: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Tidak ada lencana yang telah dibuat"
+	},
+	"spoilers_reveal": {
+		"message": "Buka spoiler",
+		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {
 		"message": "Pengaturan"
@@ -402,6 +427,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Hidupkan filtering extra di <a href=\"https://steamdb.info/sales/\" target=\"_blank\">halaman diskon</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">halaman bundles</a>"
+	},
+	"options_website_family": {
+		"message": "Tandai aplikasi yang dimiliki oleh anggota keluarga (membutuhkan permintaan tambahan)"
 	},
 	"options_extra_data": {
 		"message": "Data tambahan yang diambil dari $domain$",
@@ -511,6 +539,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Otomatis menerima jual cepat"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Tampilkan level lencana di penukaran kartu dan booster pack"
+	},
 	"options_display_market_price_others": {
 		"message": "Tampilkan harga barang di inventory pengguna lainnya"
 	},
@@ -612,5 +643,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Tampilkan ikon gembok untuk pencapaian terkunci"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Tampilkan riwayat penilaian CS di halaman pencapaian CS2"
 	}
 }

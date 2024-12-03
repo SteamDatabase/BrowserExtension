@@ -597,9 +597,6 @@
 		"message": "قَبُول الشروط, لتصفح السوق والمخزن وصفحة تنشيط المفتاح",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "عرض معلومات إضافية عن السلع المعروضة مثل ملصقات كاونتر سترايك 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "إخفاء زر \"تثبيت الشاشة\" في رأس الصفحة",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

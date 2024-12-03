@@ -597,9 +597,6 @@
 		"message": "Acceptați Acordul de abonat pe piață, inventar și activați automat paginile cheie",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Afișează informații suplimentare despre listările de pe piață, cum ar fi stickere Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ascunde butonul \"Instalează Steam\" în antet",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

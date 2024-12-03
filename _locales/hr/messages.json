@@ -593,9 +593,6 @@
 		"message": "Automatski prihvati Ugovor o pretplati na stranicama tržišta, inventara i aktivacije ključeva",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Prikaži dodatne informacije o tržišnim ponudama kao što su naljepnice za Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Sakrij gumb 'Instaliraj Steam' u zaglavlju",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

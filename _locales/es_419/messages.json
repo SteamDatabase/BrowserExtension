@@ -366,7 +366,7 @@
 		"message": "Revisa las opciones a continuación y cambia las que prefieras. Para volver aquí en el futuro:"
 	},
 	"options_welcome_option1": {
-		"message": "Ajustes de SteamDB"
+		"message": "Configuraciones de SteamDB"
 	},
 	"options_welcome_option2": {
 		"message": "Menú desplegable de cuentas en las páginas de Steam"
@@ -596,9 +596,6 @@
 	"options_enhancement_market_ssa": {
 		"message": "Aceptar el acuerdo de suscriptor en el mercado, inventario y activar las páginas clave automáticamente",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
-	},
-	"options_enhancement_market_stickers": {
-		"message": "Mostrar información adicional sobre los anuncios del mercado, como las calcomanías de Counter-Strike 2"
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ocultar botón \"Instalar Steam\" en el encabezado",

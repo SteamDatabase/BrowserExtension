@@ -593,9 +593,6 @@
 		"message": "Αποδοχή του συμφωνητικού συνδρομητή στην αγορά, στα αντικείμενα, και στη σελίδα ενεργοποίησης προϊόντος αυτόματα",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Εμφάνιση πρόσθετων πληροφοριών σχετικά με τις καταχωρίσεις της αγοράς, όπως αυτοκόλλητα στο Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Απόκρυψη κουμπιού \"Εγκατάσταση Steam\" στην κεφαλίδα",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

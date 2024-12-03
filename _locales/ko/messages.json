@@ -597,9 +597,6 @@
 		"message": "상점, 인벤토리에서 구독자 동의 수락 및 주요 페이지 자동 활성화",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Counter Strike 2 스티커와 같은 마켓 리스팅에 대한 추가 정보 표시"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "\"스팀 설치\" 버튼 숨기기",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

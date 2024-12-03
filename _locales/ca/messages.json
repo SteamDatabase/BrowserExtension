@@ -593,9 +593,6 @@
 		"message": "Accepta l'Acord de Subscriptor al mercat, inventari, i activa les claus de pàgines automàticament",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Mostra informació addicional sobre les llistes de mercat, per exemple, adhesius de Counter-Strike 2"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Amaga el botó d'\"Instal·lar Steam\" a la capçalera",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"

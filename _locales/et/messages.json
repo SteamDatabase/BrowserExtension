@@ -593,9 +593,6 @@
 		"message": "Nõustu tellimislepinguga turu, inventari ja võtme koodide aktiveerimis lehtedel automaatselt",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Näita lisateavet turunimekirjade kohta, näiteks Counter-Strike 2 kleebised"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Peida \"Install Steam\" nupp pealises",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
