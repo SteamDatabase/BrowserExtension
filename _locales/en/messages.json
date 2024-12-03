@@ -614,9 +614,6 @@
 		"message": "Accept Subscriber Agreement on market, inventory, and activate key pages automatically",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
-	"options_enhancement_market_stickers": {
-		"message": "Display extra information about market listings such as Counter-Strike 2 stickers"
-	},
 	"options_enhancement_hide_install_button": {
 		"message": "Hide \"Install Steam\" button in header",
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
