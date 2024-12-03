@@ -2,18 +2,6 @@
 	margin-top: 15px;
 }
 
-.steamdb_market_item_extra {
-	background-color: rgb(0 0 0 / 20%);
-	padding: 5px;
-	padding-left: 81px;
-	white-space: break-spaces;
-	font-size: 12px;
-}
-
-.steamdb_market_item_extra center {
-	text-align: inherit;
-}
-
 .steamdb_market_loader[hidden] {
 	display: block;
 	visibility: hidden;
