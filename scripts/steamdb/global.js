@@ -114,6 +114,12 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 	if( userData.error )
 	{
 		WriteLog( 'Failed to load userdata', userData.error );
+
+		window.postMessage( {
+			version: EXTENSION_INTEROP_VERSION,
+			type: 'steamdb:extension-error',
+			error: `Failed to load your games. ${userData.error}`,
+		}, GetHomepage() );
 	}
 
 	if( familyData.error )
