@@ -292,6 +292,15 @@
 		"message": "Kelompok pencapaian disediakan oleh Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Musim $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
 	"achievements_csrating_date": {
 		"message": "Tanggal"
 	},
@@ -328,6 +337,15 @@
 			"level": {
 				"content": "%level%",
 				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Level lencana anda: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
 			}
 		}
 	},

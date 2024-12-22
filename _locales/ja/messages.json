@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "バッジが作成されていません"
 	},
+	"spoilers_reveal": {
+		"message": "ネタバレを表示する",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "オプション"
 	},

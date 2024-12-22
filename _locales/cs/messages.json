@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Přidá odkazy na SteamDB a nové funkce v obchodě a komunitě Steam. Zobrazí nejnižší ceny a statistiky.",
+		"message": "Přidá SteamDB odkazy a nové funkce v obchodě a komunitě Steam. Zobrazte nejnižší ceny a statistiky.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -69,7 +69,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "Onlinové statistiky"
+		"message": "Online statistiky"
 	},
 	"app_stats_online_now": {
 		"message": "Právě online:"
@@ -350,7 +350,7 @@
 		}
 	},
 	"inventory_badge_none": {
-		"message": "Nevytvořen žádný odznak"
+		"message": "Žádný odznak vytvořen"
 	},
 	"spoilers_reveal": {
 		"message": "Odhalit spoilery",

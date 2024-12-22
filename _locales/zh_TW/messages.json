@@ -651,7 +651,7 @@
 		"message": "在特賣時加入自動探索佇列的按鈕"
 	},
 	"options_builtin_multibuy_redirect": {
-		"message": "購買缺少卡片後重新導向回到遊戲卡片頁面"
+		"message": "購買缺少卡片後將重新導向回遊戲卡片頁面"
 	},
 	"options_builtin_achievements_global": {
 		"message": "改進全球成就頁面"
