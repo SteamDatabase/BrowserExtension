@@ -449,12 +449,12 @@
 						foundState = FoundState.Added;
 					}
 				}
-				else if( hasPreciseSubIDsEnabled && item.description.owner_actions && item.description.type === 'Gift' )
+				else if( hasPreciseSubIDsEnabled && item.description.owner_actions && ( item.description.type === 'Gift' || item.description.type === 'Guest Pass' ) )
 				{
 					// If a gift has no actions, rgActions is undefined
 					if( !rgActions )
 					{
-						rgActions = [];
+						arguments[ 2 ] = item.description.actions = rgActions = [];
 					}
 
 					for( let i = 0; i < rgActions.length; i++ )
@@ -463,12 +463,19 @@
 
 						if( link.steamdb )
 						{
-							if( link.link.match( /^#steamdb_/ ) !== null )
-							{
-								rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/';
-							}
-
 							foundState = FoundState.Added;
+
+							if( link.link.startsWith( '#steamdb_' ) )
+							{
+								if( giftCache[ item.description.classid ] )
+								{
+									rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/';
+								}
+								else
+								{
+									foundState = FoundState.DisableButtons;
+								}
+							}
 
 							break;
 						}
