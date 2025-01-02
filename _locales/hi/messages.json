@@ -292,8 +292,20 @@
 		"message": "उपलब्धि समूह Steam Hunters द्वारा SteamDB के माध्यम से प्रदान किए जाते हैं।",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "सीजन $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
 	"achievements_csrating_date": {
 		"message": "दिनांक"
+	},
+	"achievements_csrating_name": {
+		"message": "CS रेटिंग"
 	},
 	"inventory_list_at": {
 		"message": "$price$ पर बेचें",
@@ -339,6 +351,10 @@
 	},
 	"inventory_badge_none": {
 		"message": "कोई बैज तैयार नहीं किया गया"
+	},
+	"spoilers_reveal": {
+		"message": "स्पॉइलर का खुलासा करें",
+		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {
 		"message": "वरणाधिकार"
@@ -429,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "अतिरिक्त फ़िल्टरिंग सक्षम करें<a href=\"https://steamdb.info/sales/\" target=\"_blank\">बिक्री पृष्ठ</a>और<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">बंडल पेज</a>"
+	},
+	"options_website_family": {
+		"message": "परिवार के स्वामित्व वाले ऐप्स हाइलाइट करें (एक अतिरिक्त अनुरोध की आवश्यकता है)"
 	},
 	"options_extra_data": {
 		"message": "$domain$ से अतिरिक्त डेटा प्राप्त किया गया",
@@ -642,5 +661,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "लॉक की गई उपलब्धियों के लिए लॉक आइकन प्रदर्शित करें"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "CS2 उपलब्धियां पृष्ठ पर CS रेटिंग इतिहास प्रदर्शित करें"
 	}
 }

@@ -178,7 +178,7 @@
 		"message": "Se produjo un error al borrar la cola demasiadas veces. Puede intentarlo de nuevo más tarde."
 	},
 	"explore_finished": {
-		"message": "La cola ha sido explorada."
+		"message": "La cola ya fue explorada."
 	},
 	"explore_saleitem_claim": {
 		"message": "Reclamar recompensa"

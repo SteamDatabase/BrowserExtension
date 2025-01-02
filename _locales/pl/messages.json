@@ -32,7 +32,7 @@
 		"message": "Zobacz na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Osobiste osiągnięcia"
+		"message": "Osiągnięcia gracza"
 	},
 	"store_page": {
 		"message": "Strona w sklepie",
@@ -608,7 +608,7 @@
 		"message": "Wyświetlaj ocenę SteamDB na stronach produktów"
 	},
 	"options_enhancement_appicon": {
-		"message": "Wyświetlaj ikonę produkty na stronach sklepu i społeczności",
+		"message": "Wyświetlaj ikonę produktu na stronach sklepu i społeczności",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
