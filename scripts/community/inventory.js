@@ -37,12 +37,13 @@
 		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price / 100;
 
 		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
-		window.SellItemDialog.OnAccept( dummySellEvent );
 
 		if( options[ 'enhancement-inventory-quick-sell-auto' ] )
 		{
+			// SSA must be accepted before OnAccept call, as it has a check for it
 			document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
 
+			window.SellItemDialog.OnAccept( dummySellEvent );
 			window.SellItemDialog.OnConfirmationAccept( dummySellEvent );
 		}
 	};
