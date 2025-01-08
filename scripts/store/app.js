@@ -84,7 +84,7 @@ else
 			if( lastLinkBar )
 			{
 				const link = document.createElement( 'a' );
-				link.className = 'linkbar';
+				link.className = 'linkbar linkbar_steamdb';
 				link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/';
 
 				const image = document.createElement( 'img' );
@@ -129,7 +129,7 @@ else
 			if( lastLinkBar )
 			{
 				const link = document.createElement( 'a' );
-				link.className = 'linkbar';
+				link.className = 'linkbar linkbar_steamdb';
 				link.href = 'https://pcgamingwiki.com/api/appid.php?appid=' + GetCurrentAppID() + '&utm_source=SteamDB';
 
 				const image = document.createElement( 'img' );

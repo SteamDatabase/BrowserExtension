@@ -39,6 +39,10 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	left: 16px;
 }
 
+.linkbar_steamdb {
+	display: none !important;
+}
+
 @media (max-width: 500px) {
 	.game_purchase_sub_dropdown .steamdb_link {
 		position: relative;
@@ -52,6 +56,10 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 		position: relative;
 		align-self: start;
 		margin-right: auto;
+	}
+
+	html.responsive .linkbar_steamdb {
+		display: block !important;
 	}
 }
 
