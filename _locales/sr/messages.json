@@ -292,8 +292,20 @@
 		"message": "Групе достигнућа обезбеђују Steam Hunters преко SteamDB-а.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Сезона $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
 	"achievements_csrating_date": {
 		"message": "Датум"
+	},
+	"achievements_csrating_name": {
+		"message": "CS Рејтинг"
 	},
 	"inventory_list_at": {
 		"message": "Објави за $price$",
@@ -339,6 +351,10 @@
 	},
 	"inventory_badge_none": {
 		"message": "Није направљен беџ"
+	},
+	"spoilers_reveal": {
+		"message": "Прикажи спојлере",
+		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"options": {
 		"message": "Опције"
@@ -429,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Омогући додатне филтере на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">страници продаје</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">страници пакета</a>"
+	},
+	"options_website_family": {
+		"message": "Истакни апликације у породичном власништву (захтева додатни захтев)"
 	},
 	"options_extra_data": {
 		"message": "Додатни подаци су преузети са $domain$",
@@ -642,5 +661,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Прикажите икону закључавања за закључана достигнућа"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Прикажи историју CS рејтинга на страници CS2 достигнућа"
 	}
 }

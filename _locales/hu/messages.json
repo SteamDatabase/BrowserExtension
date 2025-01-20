@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Nincs elkészítve kitűző"
 	},
+	"spoilers_reveal": {
+		"message": "Spoilerek megjelenítése",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Beállítások"
 	},
@@ -441,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Extra szűrés engedélyezése az <a href=\"https://steamdb.info/sales/\" target=\"_blank\">értékesítési oldalon</a> és a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">csomagok oldalon</a>"
+	},
+	"options_website_family": {
+		"message": "Család tulajdonban lévő alkalmazások kiemelése (külön kérés szükséges)"
 	},
 	"options_extra_data": {
 		"message": "A $domain$ oldalról származó további adatok",
