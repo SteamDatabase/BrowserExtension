@@ -545,6 +545,36 @@ function DrawLowestPrice()
 	} );
 }
 
+async function FetchSteamApiCurrentPlayers()
+{
+	const params = new URLSearchParams();
+	params.set( 'origin', location.origin );
+	params.set( 'appid', GetCurrentAppID() );
+
+	const response = await fetch(
+		`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?${params.toString()}`,
+		{
+			headers: {
+				Accept: 'application/json',
+			}
+		}
+	);
+
+	if( !response.ok )
+	{
+		return 0;
+	}
+
+	const data = await response.json();
+
+	if( data && data.response && data.response.player_count > 0 )
+	{
+		return data.response.player_count;
+	}
+
+	return 0;
+}
+
 function DrawOnlineStatsWidget( items )
 {
 	let block = null;
@@ -552,6 +582,7 @@ function DrawOnlineStatsWidget( items )
 	let peakToday = null;
 	let peakAll = null;
 	let followers = null;
+	let steamApiPlayersFetch = null;
 
 	if( items[ 'online-stats' ] )
 	{
@@ -561,6 +592,8 @@ function DrawOnlineStatsWidget( items )
 		{
 			return;
 		}
+
+		steamApiPlayersFetch = FetchSteamApiCurrentPlayers();
 
 		const blockInner = document.createElement( 'div' );
 		blockInner.className = 'block_content_inner';
@@ -745,6 +778,28 @@ function DrawOnlineStatsWidget( items )
 				followers.previousElementSibling.remove();
 				followers.remove();
 			}
+
+			steamApiPlayersFetch.then( ( livePlayers ) =>
+			{
+				if( livePlayers < 1 )
+				{
+					return;
+				}
+
+				WriteLog( 'FetchSteamApiCurrentPlayers loaded' );
+
+				onlineNow.textContent = FormatNumber( livePlayers );
+
+				if( livePlayers > response.data.mdp )
+				{
+					peakToday.textContent = FormatNumber( livePlayers );
+				}
+
+				if( livePlayers > response.data.mp )
+				{
+					peakAll.textContent = FormatNumber( livePlayers );
+				}
+			} );
 		}
 
 		if( items[ 'steamdb-last-update' ] && response.data.u )
