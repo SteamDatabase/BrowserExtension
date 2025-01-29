@@ -751,12 +751,21 @@ function DrawOnlineStatsWidget( items )
 				WriteLog( 'GetApp failed to load' );
 			}
 
-			block?.remove();
-
 			for( const el of updateElements )
 			{
 				el.remove();
 			}
+
+			steamApiPlayersFetch.then( ( livePlayers ) =>
+			{
+				if( livePlayers < 1 )
+				{
+					block?.remove();
+					return;
+				}
+
+				onlineNow.textContent = FormatNumber( livePlayers );
+			} );
 
 			return;
 		}
