@@ -328,6 +328,9 @@ else
 		AddCollapseButtonToAlreadyInLibraryBlock( items );
 	} );
 
+	// Make family share banner a link to the Steam client
+	MakeGameInFamilyLinkToLibrary();
+
 	// Valve does not invalidate cache for follow button, so we catch it here
 	FollowInvalidateCache();
 
@@ -996,4 +999,20 @@ function AddCollapseButtonToAlreadyInLibraryBlock( options )
 
 	alreadyInLibrary.insertAdjacentElement( 'afterend', button );
 	alreadyInLibrary.style.marginRight = `${button.getBoundingClientRect().width - 15}px`;
+}
+
+function MakeGameInFamilyLinkToLibrary()
+{
+	const inFamilyText = document.querySelector( '.game_purchase_area_owned_by_family .family_info p' );
+
+	if( !inFamilyText )
+	{
+		return;
+	}
+
+	const link = document.createElement( 'a' );
+	link.classList.add( 'steamdb_already_in_library_link' );
+	link.href = `steam://nav/games/details/${GetCurrentAppID()}`;
+	link.textContent = inFamilyText.textContent;
+	inFamilyText.replaceChildren( link );
 }
