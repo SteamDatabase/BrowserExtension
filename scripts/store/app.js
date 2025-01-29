@@ -466,11 +466,11 @@ function DrawLowestPrice()
 
 	const top = document.createElement( 'div' );
 	top.className = 'steamdb_prices_top';
-	top.textContent = '…';
+	top.innerHTML = _t( 'app_lowest_price', [ '…' ] );
 
 	const bottom = document.createElement( 'div' );
 	bottom.className = 'steamdb_prices_bottom';
-	bottom.textContent = '…';
+	bottom.innerHTML = _t( 'app_lowest_date', [ '…', '…' ] );
 
 	const textContainer = document.createElement( 'div' );
 	textContainer.appendChild( top );
