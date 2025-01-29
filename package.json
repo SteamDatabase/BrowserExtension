@@ -14,13 +14,13 @@
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix && prettier \"**/*.css\" --write"
 	},
 	"devDependencies": {
-		"@types/chrome": "^0.0.284",
+		"@types/chrome": "^0.0.299",
 		"@types/firefox-webext-browser": "^120.0.3",
 		"archiver": "^7.0.1",
 		"eslint": "^9.10.0",
 		"prettier": "^3.3.2",
 		"stylelint": "^16.5.0",
-		"stylelint-config-standard": "^36.0.0",
+		"stylelint-config-standard": "^37.0.0",
 		"web-ext": "^8.0.0"
 	},
 	"repository": {
