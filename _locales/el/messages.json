@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Δεν κατασκευάστηκε έμβλημα"
 	},
+	"spoilers_reveal": {
+		"message": "Αποκάλυψη σπόιλερ",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Επιλογές"
 	},
