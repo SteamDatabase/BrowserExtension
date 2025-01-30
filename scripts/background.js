@@ -4,7 +4,10 @@ let storeSessionId;
 let checkoutSessionId;
 let userDataCache = null;
 let userFamilyDataCache = null;
+let userPrivateAppsCache = null;
 let userFamilySemaphore = null;
+let userPrivateAppsSemaphore = null;
+let tokenSemaphore = null;
 let nextAllowedRequest = 0;
 
 /** @type {browser} ExtensionApi */
@@ -47,11 +50,13 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 	switch( request.contentScriptQuery )
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
+		case 'FetchPrivateApps': FetchPrivateApps( callback ); return true;
 		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
 		case 'FetchSteamUserFamilyData': FetchSteamUserFamilyData( callback ); return true;
 		case 'GetApp': GetApp( request.appid, callback ); return true;
 		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
 		case 'GetAchievementsGroups': GetAchievementsGroups( request.appid, callback ); return true;
+		case 'SetAppPrivate': SetAppPrivate( request.appids, request.private, callback ); return true;
 		case 'StoreWishlistAdd': StoreWishlistAdd( request.appid, callback ); return true;
 		case 'StoreWishlistRemove': StoreWishlistRemove( request.appid, callback ); return true;
 		case 'StoreFollow': StoreFollow( request.appid, callback ); return true;
@@ -76,6 +81,99 @@ function InvalidateCache()
 	SetLocalOption( 'userdata.cached', Date.now() );
 	SetLocalOption( 'userfamilydata', '{}' );
 }
+
+/**
+ * @param {Function} callback
+ */
+async function FetchPrivateApps( callback )
+{
+	if( userPrivateAppsCache !== null )
+	{
+		callback( { data: userPrivateAppsCache } );
+		return;
+	}
+
+	if( userPrivateAppsSemaphore !== null )
+	{
+		callback( await userFamilySemaphore );
+		return;
+	}
+
+	const now = Date.now();
+	const cacheData = await GetLocalOption( { privateappsdata: false } );
+	const cache = cacheData.userfamilydata && cacheData.userfamilydata;
+
+	if( cache && cache.cached && cache.data && now < cache.cached + 21600000 )
+	{
+		callback( { data: cache.data } );
+		return;
+	}
+
+	let callbackResponse = null;
+	let semaphoreResolve = null;
+	userPrivateAppsSemaphore = new Promise( resolve =>
+	{
+		semaphoreResolve = resolve;
+	} );
+
+	try
+	{
+		const token = await GetStoreToken();
+		const paramsPrivateApps = new URLSearchParams();
+		paramsPrivateApps.set( 'access_token', token );
+		const responseFetch = await fetch(
+			`https://api.steampowered.com/IAccountPrivateAppsService/GetPrivateAppList/v1/?${paramsPrivateApps.toString()}`,
+			{
+				headers: {
+					Accept: 'application/json',
+				}
+			}
+		);
+		const response = await responseFetch.json();
+
+		if( !response || !response.response || !response.response.private_apps )
+		{
+			throw new Error( 'Is Steam okay?' );
+		}
+
+		userPrivateAppsCache =
+		{
+			rgPrivateApps: response.response.private_apps.appids || [],
+		};
+
+		callbackResponse =
+		{
+			data: userPrivateAppsCache
+		};
+
+		callback( callbackResponse );
+
+		await SetLocalOption( 'privateappsdata', JSON.stringify( {
+			data: userPrivateAppsCache,
+			cached: now
+		} ) );
+	}
+	catch( error )
+	{
+		callbackResponse =
+		{
+			error: error.message,
+		};
+
+		if( cache && cache.data )
+		{
+			callbackResponse.data = cache.data;
+		}
+
+		callback( callbackResponse );
+	}
+	finally
+	{
+		semaphoreResolve( callbackResponse );
+		userPrivateAppsSemaphore = null;
+	}
+
+};
 
 /**
  * @param {Function} callback
@@ -196,24 +294,9 @@ async function FetchSteamUserFamilyData( callback )
 
 	try
 	{
-		const tokenResponseFetch = await fetch(
-			`https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`,
-			{
-				credentials: 'include',
-				headers: {
-					Accept: 'application/json',
-				},
-			}
-		);
-		const token = await tokenResponseFetch.json();
-
-		if( !token || !token.success || !token.data || !token.data.webapi_token )
-		{
-			throw new Error( 'Are you logged on the Steam Store in this browser?' );
-		}
-
+		const token = await GetStoreToken();
 		const paramsSharedLibrary = new URLSearchParams();
-		paramsSharedLibrary.set( 'access_token', token.data.webapi_token );
+		paramsSharedLibrary.set( 'access_token', token );
 		paramsSharedLibrary.set( 'family_groupid', '0' ); // family_groupid is ignored
 		paramsSharedLibrary.set( 'include_excluded', 'true' );
 		paramsSharedLibrary.set( 'include_free', 'true' );
@@ -400,6 +483,83 @@ function GetAchievementsGroups( appid, callback )
 		.then( GetJsonWithStatusCheck )
 		.then( callback )
 		.catch( ( error ) => callback( { success: false, error: error.message } ) );
+}
+
+/**
+ * @param {Array<Number>} appids
+ * @param {Boolean} privateState
+ * @param {Function} callback
+ */
+// ? Api supports setting multiple apps at once (Are they even using that feature?), do we really need that?
+async function SetAppPrivate( appids, privateState, callback )
+{
+	const token = await GetStoreToken();
+	const paramsSetPrivate = new URLSearchParams();
+	paramsSetPrivate.set( 'access_token', token );
+	appids.forEach( ( appid, index ) =>
+	{
+		paramsSetPrivate.set( `appids[${index}]`, appid );
+	} );
+	paramsSetPrivate.set( 'private', privateState );
+	const responseFetch = await fetch(
+		`https://api.steampowered.com/IAccountPrivateAppsService/ToggleAppPrivacy/v1/?${paramsSetPrivate.toString()}`
+	);
+}
+
+/**
+ * @return {Promise<String>}
+ */
+async function GetStoreToken()
+{
+	if( tokenSemaphore !== null )
+	{
+		return await tokenSemaphore ;
+	}
+	let token = null;
+	let semaphoreResolve = null;
+	tokenSemaphore = new Promise( resolve =>
+	{
+		semaphoreResolve = resolve;
+	} );
+
+	try
+	{
+		token = await GetLocalOption( { storetoken: false } ).then( data => data.storetoken );
+		if( token )
+		{
+			const jwt = token.split( '.' );
+			const payload = JSON.parse( atob( jwt[ 1 ] ) );
+			const expiration = payload.exp * 1000;
+			if( Date.now() < expiration )
+			{
+				return token;
+			}
+		}
+
+		token = await fetch(
+			`https://store.steampowered.com/pointssummary/ajaxgetasyncconfig`,
+			{
+				credentials: 'include',
+				headers: {
+					Accept: 'application/json',
+				},
+			}
+		).then( response =>response.json() );
+
+		if( !token || !token.success || !token.data || !token.data.webapi_token )
+		{
+			throw new Error( 'Are you logged on the Steam Store in this browser?' );
+		}
+
+		await SetLocalOption( 'storetoken', token.data.webapi_token );
+
+		return token.data.webapi_token;
+	}
+	finally
+	{
+		semaphoreResolve( token );
+		tokenSemaphore = null;
+	};
 }
 
 /**
