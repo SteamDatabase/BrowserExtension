@@ -27,9 +27,9 @@ GetOption( { 'enhancement-skip-agecheck': false }, ( items ) =>
 {
 	if( items[ 'enhancement-skip-agecheck' ] )
 	{
-		let date = new Date();
-		date.setFullYear( date.getFullYear() + 1 );
-		date = date.toGMTString();
+		const dateFuture = new Date();
+		dateFuture.setFullYear( dateFuture.getFullYear() + 1 );
+		const date = dateFuture.toUTCString();
 
 		document.cookie = 'wants_mature_content=1; expires=' + date + '; path=/; Secure; SameSite=Lax;';
 		document.cookie = 'mature_content=1; expires=' + date + '; path=/; Secure; SameSite=Lax;';
