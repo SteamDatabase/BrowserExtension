@@ -1,7 +1,3 @@
-/**
- * @typedef {import('../common')}
- */
-
 /* global AddLinksInErrorBox */
 
 'use strict';
@@ -344,7 +340,7 @@ function DrawLowestPrice()
 
 	if( price && price.content !== '' )
 	{
-		const parsedPrice = Number.parseFloat( price.content.replace( ',', '.' ), 10 );
+		const parsedPrice = Number.parseFloat( price.content.replace( ',', '.' ) );
 
 		WriteLog( 'Parsed current price as', parsedPrice );
 
@@ -355,8 +351,10 @@ function DrawLowestPrice()
 		}
 	}
 
-	let currency = document.querySelector( 'meta[itemprop="priceCurrency"]' );
-	currency = currency ? currency.content : null;
+	const currencyElement = document.querySelector( 'meta[itemprop="priceCurrency"]' );
+
+	/** @type {string | null} */
+	let currency = currencyElement ? currencyElement.content : null;
 
 	if( !currency )
 	{
@@ -507,6 +505,9 @@ function DrawLowestPrice()
 		WriteLog( 'GetAppPrice loaded' );
 
 		// We trust the API, but this ensures safety
+		/**
+		 * @param {String} str
+		 */
 		const escapeHtml = ( str ) => str
 			.replaceAll( '&', '&amp;' )
 			.replaceAll( '<', '&lt;' )
@@ -552,7 +553,7 @@ async function FetchSteamApiCurrentPlayers()
 {
 	const params = new URLSearchParams();
 	params.set( 'origin', location.origin );
-	params.set( 'appid', GetCurrentAppID() );
+	params.set( 'appid', GetCurrentAppID().toString() );
 
 	const response = await fetch(
 		`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?${params.toString()}`,
@@ -578,6 +579,9 @@ async function FetchSteamApiCurrentPlayers()
 	return 0;
 }
 
+/**
+ * @param {{ [key: string]: any }} items
+ */
 function DrawOnlineStatsWidget( items )
 {
 	let block = null;
@@ -678,6 +682,8 @@ function DrawOnlineStatsWidget( items )
 
 	let historyLink = null;
 	let historyLinkResponsive = null;
+
+	/** @type {Element[]} */
 	const updateElements = [];
 
 	if( items[ 'steamdb-last-update' ] )
@@ -851,6 +857,9 @@ function FollowInvalidateCache()
 	BindFollowClick( document.querySelector( '.queue_control_button.queue_btn_follow .queue_btn_inactive' ) );
 	BindFollowClick( document.querySelector( '.queue_control_button.queue_btn_follow .queue_btn_active' ) );
 
+	/**
+	 * @param {Element} el
+	 */
 	function BindFollowClick( el )
 	{
 		if( !el )
@@ -892,11 +901,18 @@ function HideCurator()
 	}
 }
 
+/**
+ * @param {number} num
+ */
 function FormatNumber( num )
 {
 	return numberFormatter.format( num );
 }
 
+/**
+ * @param {number} date
+ * @returns {[number, string]}
+ */
 function FormatRelativeDate( date )
 {
 	const relativeDateFormatter = new Intl.RelativeTimeFormat( language, { numeric: 'auto' } );
@@ -911,6 +927,12 @@ function FormatRelativeDate( date )
 	return [ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
 }
 
+
+/**
+ * @param {Element} element
+ * @param {string} type
+ * @param {number} id
+ */
 function InsertPurchaseBlockId( element, type, id )
 {
 	if( !element )
@@ -950,6 +972,9 @@ function InsertPurchaseBlockId( element, type, id )
 	}
 }
 
+/**
+ * @param {{ [key: string]: any }} options
+ */
 function AddCollapseButtonToAlreadyInLibraryBlock( options )
 {
 	const alreadyInLibrary = document.querySelector( '.game_area_already_owned .already_in_library' );

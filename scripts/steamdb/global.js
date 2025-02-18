@@ -1,7 +1,3 @@
-/**
- * @typedef {import('../common')}
- */
-
 'use strict';
 
 const EXTENSION_INTEROP_VERSION = 2;

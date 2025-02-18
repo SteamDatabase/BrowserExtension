@@ -1,4 +1,4 @@
-/* exported _t, ExtensionApi, GetCurrentAppID, GetHomepage, GetOption, GetLocalResource, SendMessageToBackgroundScript, SetOption, WriteLog */
+/* exported _t, ExtensionApi, GetCurrentAppID, GetHomepage, GetOption, GetLanguage, GetLocalResource, SendMessageToBackgroundScript, SetOption, WriteLog */
 
 'use strict';
 
@@ -19,6 +19,7 @@ var ExtensionApi = ( () =>
 } )();
 
 // exported variable needs to be `var`
+/** @type {number|undefined} */
 // eslint-disable-next-line no-var
 var CurrentAppID;
 
@@ -98,11 +99,11 @@ function GetLocalResource( res )
 
 /**
  * @callback SendMessageToBackgroundScriptCallback
- * @param {{success: Boolean, error?: String}?} data
+ * @param {{success: Boolean, error?: String, data?: any}?} data
  */
 
 /**
- * @param {String} message
+ * @param {{contentScriptQuery: string, [key: string]: any}} message
  * @param {SendMessageToBackgroundScriptCallback} callback
  */
 function SendMessageToBackgroundScript( message, callback )

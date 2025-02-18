@@ -1,8 +1,15 @@
 'use strict';
 
+/** @type {string|null} */
 let storeSessionId = null;
+
+/** @type {Record<string, any>|null} */
 let userDataCache = null;
+
+/** @type {Record<string, any>|null} */
 let userFamilyDataCache = null;
+
+/** @type {Promise<{data: Record<string, any>}|{error: string, data?: Record<string, any>}>|null} */
 let userFamilySemaphore = null;
 let nextAllowedRequest = 0;
 
@@ -77,7 +84,7 @@ function InvalidateCache()
 }
 
 /**
- * @param {Function} callback
+ * @param {(obj: {data: Record<string, any>}|{error: string, data?: Record<string, any>}) => void} callback
  */
 async function FetchSteamUserData( callback )
 {
@@ -160,7 +167,7 @@ async function FetchSteamUserData( callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {(obj: {data: Record<string, any>}|{error: string, data?: Record<string, any>}) => void} callback
  */
 async function FetchSteamUserFamilyData( callback )
 {
@@ -326,7 +333,8 @@ function GetJsonWithStatusCheck( response )
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function GetApp( appid, callback )
 {
@@ -337,7 +345,7 @@ function GetApp( appid, callback )
 	}
 
 	const params = new URLSearchParams();
-	params.set( 'appid', Number.parseInt( appid, 10 ) );
+	params.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 
 	fetch( `https://steamdb.info/api/ExtensionApp/?${params.toString()}`, {
 		headers: {
@@ -351,7 +359,10 @@ function GetApp( appid, callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {Object} obj
+ * @param {string} obj.appid
+ * @param {string} obj.currency
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function GetAppPrice( { appid, currency }, callback )
 {
@@ -362,7 +373,7 @@ function GetAppPrice( { appid, currency }, callback )
 	}
 
 	const params = new URLSearchParams();
-	params.set( 'appid', Number.parseInt( appid, 10 ) );
+	params.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 	params.set( 'currency', currency );
 
 	fetch( `https://steamdb.info/api/ExtensionAppPrice/?${params.toString()}`, {
@@ -377,7 +388,8 @@ function GetAppPrice( { appid, currency }, callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function GetAchievementsGroups( appid, callback )
 {
@@ -388,7 +400,7 @@ function GetAchievementsGroups( appid, callback )
 	}
 
 	const params = new URLSearchParams();
-	params.set( 'appid', Number.parseInt( appid, 10 ) );
+	params.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 
 	fetch( `https://steamdb.info/api/ExtensionGetAchievements/?${params.toString()}`, {
 		headers: {
@@ -402,70 +414,77 @@ function GetAchievementsGroups( appid, callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreWishlistAdd( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', Number.parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 	ExecuteStoreApiCall( 'api/addtowishlist', formData, callback );
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreWishlistRemove( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', Number.parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 	ExecuteStoreApiCall( 'api/removefromwishlist', formData, callback );
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreFollow( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', Number.parseInt( appid, 10 ) );
+	formData.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreUnfollow( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', Number.parseInt( appid, 10 ) );
-	formData.set( 'unfollow', 1 );
+	formData.set( 'appid', Number.parseInt( appid, 10 ).toString() );
+	formData.set( 'unfollow', '1' );
 	ExecuteStoreApiCall( 'explore/followgame/', formData, callback );
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreIgnore( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', Number.parseInt( appid, 10 ) );
-	formData.set( 'ignore_reason', 0 );
+	formData.set( 'appid', Number.parseInt( appid, 10 ).toString() );
+	formData.set( 'ignore_reason', '0' );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
 
 /**
- * @param {Function} callback
+ * @param {string} appid
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreUnignore( appid, callback )
 {
 	const formData = new FormData();
-	formData.set( 'appid', Number.parseInt( appid, 10 ) );
-	formData.set( 'remove', 1 );
+	formData.set( 'appid', Number.parseInt( appid, 10 ).toString() );
+	formData.set( 'remove', '1' );
 	ExecuteStoreApiCall( 'recommended/ignorerecommendation/', formData, callback );
 }
 
 /**
- * @param {Function} callback
+ * @param {Record<string, string>} request
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreAddToCart( request, callback )
 {
@@ -474,11 +493,11 @@ function StoreAddToCart( request, callback )
 
 	if( request.subid )
 	{
-		formData.set( 'subid', Number.parseInt( request.subid, 10 ) );
+		formData.set( 'subid', Number.parseInt( request.subid, 10 ).toString() );
 	}
 	else if( request.bundleid )
 	{
-		formData.set( 'bundleid', Number.parseInt( request.bundleid, 10 ) );
+		formData.set( 'bundleid', Number.parseInt( request.bundleid, 10 ).toString() );
 	}
 	else
 	{
@@ -489,7 +508,8 @@ function StoreAddToCart( request, callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {Record<string, string>} request
+ * @param {(obj: {success: true}|{success: false, error: string, resultCode: number}) => void} callback
  */
 function StoreAddFreeLicense( request, callback )
 {
@@ -545,7 +565,8 @@ function StoreAddFreeLicense( request, callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {Record<string, string>} request
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function StoreRemoveFreeLicense( request, callback )
 {
@@ -553,13 +574,14 @@ function StoreRemoveFreeLicense( request, callback )
 	{
 		const subid = Number.parseInt( request.subid, 10 );
 		const formData = new FormData();
-		formData.set( 'packageid', subid );
+		formData.set( 'packageid', subid.toString() );
 		ExecuteStoreApiCall( 'account/removelicense', formData, callback );
 	}
 }
 
 /**
- * @param {Function} callback
+* @param {Record<string, string>} request
+ * @param {(obj: {success: boolean, granted: boolean}) => void} callback
  */
 function StoreRequestPlaytestAccess( request, callback )
 {
@@ -590,7 +612,9 @@ function StoreRequestPlaytestAccess( request, callback )
 }
 
 /**
- * @param {Function} callback
+ * @param {string} path
+ * @param {FormData} formData
+ * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
  */
 function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 {
@@ -673,7 +697,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 }
 
 /**
- * @param {Function} callback
+ * @param {(obj: {success: true, sessionID: string}|{success: false, error: string}) => void} callback
  */
 function GetStoreSessionID( callback )
 {

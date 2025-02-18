@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"allowJs": true,
+		"checkJs": true,
+		"declaration": false,
+		"noEmit": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": false,
+		"moduleResolution": "node",
+		"moduleDetection": "force",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"types": [
+			"chrome",
+			"firefox-webext-browser"
+		]
+	},
+	"include": [
+		"scripts/**/*"
+	]
+}
