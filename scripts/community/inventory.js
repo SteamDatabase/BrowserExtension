@@ -725,6 +725,7 @@
 
 	/**
 	 * Get a value by its key.
+	 * @param {string} key
 	 */
 	function GetCachedItemId( key )
 	{
@@ -733,6 +734,8 @@
 
 	/**
 	 * Set a value with a key.
+	 * @param {string} key
+	 * @param {string} value
 	 */
 	function SetCachedItemId( key, value )
 	{

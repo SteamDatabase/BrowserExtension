@@ -13,6 +13,14 @@ const tierColors =
 	'#ffd700',
 ];
 
+/**
+ * @typedef {{csr: number, datetime: string, season: string}[]} CSRArray
+ */
+
+/**
+ * @param {Element} container
+ * @param {CSRArray} initialData
+ */
 const InitChart = ( container, initialData ) =>
 {
 	let maxLength = 200;
@@ -53,6 +61,8 @@ const InitChart = ( container, initialData ) =>
 	window.addEventListener( 'resize', resetCanvas );
 
 	maxLength = Math.min( maxLength, initialData.length );
+
+	/** @type {HTMLInputElement} */
 	const maxLengthInput = document.createElement( 'input' );
 	maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
 	maxLengthInput.type = 'range';
@@ -70,8 +80,11 @@ const InitChart = ( container, initialData ) =>
 };
 
 /**
+ * @param {CSRArray} initialData
+ * @param {number} hoveredIndex
  * @param {HTMLCanvasElement} canvas
  * @param {HTMLDivElement} tooltip
+ * @param {number} maxLength
  */
 const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 {
@@ -165,7 +178,7 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 
 	let circleX = null;
 	let circleY = null;
-	let highlightedCSR = '';
+	let highlightedCSR = 0;
 	let highlightedDate = '';
 	i = 0;
 	lastTier = -1;
@@ -219,6 +232,10 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	}
 };
 
+/**
+ * @param {Element} container
+ * @param {*} rows
+ */
 const CreateCSRatingTable = ( container, rows ) =>
 {
 	const table = document.createElement( 'table' );
@@ -302,6 +319,9 @@ const CreateCSRatingTable = ( container, rows ) =>
 	}
 };
 
+/**
+ * @param {string} profileUrl
+ */
 const FetchCSRating = async( profileUrl ) =>
 {
 	const res = await fetch( `https://steamcommunity.com${profileUrl}/gcpd/730?tab=majors&ajax=1` );
@@ -318,7 +338,9 @@ const FetchCSRating = async( profileUrl ) =>
 		timeStyle: 'short',
 	} );
 
+	/** @type {CSRArray} */
 	const premierRows = [];
+
 	for( const row of rows )
 	{
 		premierRows.push( {
@@ -363,6 +385,9 @@ const FetchCSRating = async( profileUrl ) =>
 	} );
 };
 
+/**
+ * @param {string} str
+ */
 const removeTrailingSlash = ( str ) => str.endsWith( '/' ) ? str.slice( 0, -1 ) : str;
 
 const viewingProfile = removeTrailingSlash( document.querySelector( '.pagecontent .persona_name_text_content' )?.pathname ?? '' );

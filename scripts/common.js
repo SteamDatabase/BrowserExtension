@@ -24,8 +24,8 @@ var ExtensionApi = ( () =>
 var CurrentAppID;
 
 /**
- * @param {String} url
- * @returns {Number}
+ * @param {string} url
+ * @returns {number}
  */
 function GetAppIDFromUrl( url )
 {
@@ -50,9 +50,9 @@ function GetHomepage()
 }
 
 /**
- * @param {String} message
- * @param {String[]} substitutions
- * @returns {String}
+ * @param {string} message
+ * @param {string[]} substitutions
+ * @returns {string}
  */
 function _t( message, substitutions = [] )
 {
@@ -79,7 +79,8 @@ function GetOption( items, callback )
 }
 
 /**
- * @param {String} option
+ * @param {string} option
+ * @param {any} value
  */
 function SetOption( option, value )
 {
@@ -90,7 +91,7 @@ function SetOption( option, value )
 }
 
 /**
- * @param {String} res
+ * @param {string} res
  */
 function GetLocalResource( res )
 {
@@ -99,7 +100,7 @@ function GetLocalResource( res )
 
 /**
  * @callback SendMessageToBackgroundScriptCallback
- * @param {{success: Boolean, error?: String, data?: any}?} data
+ * @param {{success: boolean, error?: string, data?: any}?} data
  */
 
 /**

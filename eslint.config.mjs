@@ -2,6 +2,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import { fileURLToPath } from "node:url";
 import globals from "globals";
 import js from "@eslint/js";
+import jsdoc from 'eslint-plugin-jsdoc';
 import path from "node:path";
 
 const __filename = fileURLToPath( import.meta.url );
@@ -15,6 +16,7 @@ const compat = new FlatCompat( {
 export default[
 	...compat.extends( "eslint:all" ),
 	...compat.extends( "eslint:recommended" ),
+	jsdoc.configs[ 'flat/recommended-typescript-flavor' ],
 	{
 		ignores: [ "node_modules/*" ],
 		languageOptions: {
@@ -37,7 +39,16 @@ export default[
 			sourceType: "commonjs",
 		},
 
+		plugins: {
+			jsdoc,
+		},
+
 		rules: {
+			"jsdoc/require-description": "off",
+			"jsdoc/require-param-description": "off",
+			"jsdoc/require-returns-description": "off",
+			"jsdoc/require-jsdoc": "off",
+			"jsdoc/require-returns": "off",
 			"array-bracket-spacing": [ "error", "always" ],
 			"brace-style": [ "error", "allman" ],
 			"camelcase": "off",

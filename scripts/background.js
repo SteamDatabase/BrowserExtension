@@ -359,7 +359,7 @@ function GetApp( appid, callback )
 }
 
 /**
- * @param {Object} obj
+ * @param {object} obj
  * @param {string} obj.appid
  * @param {string} obj.currency
  * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
@@ -580,7 +580,7 @@ function StoreRemoveFreeLicense( request, callback )
 }
 
 /**
-* @param {Record<string, string>} request
+ * @param {Record<string, string>} request
  * @param {(obj: {success: boolean, granted: boolean}) => void} callback
  */
 function StoreRequestPlaytestAccess( request, callback )
@@ -615,6 +615,7 @@ function StoreRequestPlaytestAccess( request, callback )
  * @param {string} path
  * @param {FormData} formData
  * @param {(obj: {success: true}|{success: false, error: string}) => void} callback
+ * @param {boolean} rawCallback
  */
 function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 {
@@ -743,7 +744,7 @@ function GetStoreSessionID( callback )
 
 /**
  * @param {{[key: string]: any}} items
- * @return Promise<{[key: string]: any}>
+ * @returns {Promise<{[key: string]: any}>}
  */
 function GetLocalOption( items )
 {
@@ -751,7 +752,8 @@ function GetLocalOption( items )
 }
 
 /**
- * @param {String} option
+ * @param {string} option
+ * @param {any} value
  */
 function SetLocalOption( option, value )
 {

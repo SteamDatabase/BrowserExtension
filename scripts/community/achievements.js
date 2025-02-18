@@ -1071,10 +1071,10 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 {
 	const dlcAppIds = [];
 
-	/** @type Set<number> */
+	/** @type {Set<number>} */
 	const uniqueAppIds = new Set();
 
-	/** @type Map<number, string> */
+	/** @type {Map<number, string>} */
 	const images = new Map();
 
 	for( const update of achievementUpdates )

@@ -49,7 +49,7 @@
 	let starDismissed = false;
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
 
-	/** @type {Object.<string, HTMLElement[]>} */
+	/** @type {Record<string, HTMLElement[]>} */
 	const options =
 	{
 		'clicked-star': null,

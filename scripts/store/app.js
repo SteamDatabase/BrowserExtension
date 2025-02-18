@@ -506,7 +506,7 @@ function DrawLowestPrice()
 
 		// We trust the API, but this ensures safety
 		/**
-		 * @param {String} str
+		 * @param {string} str
 		 */
 		const escapeHtml = ( str ) => str
 			.replaceAll( '&', '&amp;' )
