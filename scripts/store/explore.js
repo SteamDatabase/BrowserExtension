@@ -1,6 +1,7 @@
 'use strict';
 
 // Fix Valve's bug where empty queue banner has wrong height and it hides text
+/** @type {HTMLElement} */
 const emptyQueue = document.querySelector( '.discover_queue_empty' );
 
 if( emptyQueue )
@@ -24,10 +25,15 @@ if( !accessToken || !applicationConfig )
 	throw new Error( 'Failed to get application_config' );
 }
 
+/** @type {HTMLElement} */
 let exploreButton;
+/** @type {HTMLElement} */
 let exploreStatus;
+/** @type {HTMLElement} */
 let itemButton;
+/** @type {HTMLElement} */
 let itemStatus;
+/** @type {HTMLImageElement} */
 let itemImage;
 
 CreateSaleItemContainer();
@@ -164,6 +170,9 @@ function GenerateQueue( generateFails = 0 )
 			let done = 0;
 			let fails = 0;
 
+			/**
+			 * @param {Response} response
+			 */
 			const requestDone = ( response ) =>
 			{
 				if( response.status !== 200 )
@@ -187,6 +196,9 @@ function GenerateQueue( generateFails = 0 )
 				}
 			};
 
+			/**
+			 * @param {any} error
+			 */
 			const requestFail = ( error ) =>
 			{
 				WriteLog( 'Failed to clear queue item', error );
@@ -204,6 +216,9 @@ function GenerateQueue( generateFails = 0 )
 				}, RandomInt( 5000, 10000 ) );
 			};
 
+			/**
+			 * @param {number} index
+			 */
 			const requestNextInQueue = ( index ) =>
 			{
 				const skipParams = new URLSearchParams();

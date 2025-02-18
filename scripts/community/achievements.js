@@ -2,6 +2,51 @@
 'use strict';
 
 /**
+ * @typedef {object} ApiGameAchievement
+ * @property {string} internal_name - The internal identifier for the achievement
+ * @property {string} localized_name - The display name of the achievement
+ * @property {string} localized_desc - The description of the achievement
+ * @property {string} icon - The filename for the achievement icon
+ * @property {string} icon_gray - The filename for the grayed-out achievement icon
+ * @property {boolean} hidden - Whether the achievement is hidden from players until unlocked
+ * @property {string} player_percent_unlocked - The percentage of players who have unlocked this achievement
+ * @property {number?} global_unlock - The parsed float value of player_percent_unlocked
+ */
+
+/**
+ * @typedef {object} PlayerAchievement
+ * @property {string|null} unlock
+ * @property {string|null} unlockCompare
+ * @property {string|null} progressText
+ * @property {string|null} progressTextCompare
+ * @property {string|null} progressWidth
+ * @property {number} [unlockTimestamp]
+ */
+
+/**
+ * @typedef {object} AchievementData
+ * @property {number} id
+ * @property {number} domId
+ * @property {number} update
+ * @property {ApiGameAchievement} achievement
+ * @property {PlayerAchievement} player
+ */
+
+/**
+ * @typedef {object} AchievementGroup
+ * @property {string} [name]
+ * @property {string} [dlcAppName]
+ * @property {number} [dlcAppId]
+ * @property {number} [logoAppId]
+ * @property {string[]} achievementApiNames
+ * @property {number} [earned]
+ * @property {number} [earnedCompare]
+ * @property {AchievementData[]} [achievementData]
+ * @property {HTMLElement|null} [earnedDetailsElement]
+ */
+
+
+/**
  * @param {boolean} isPersonal
  */
 function DoAchievements( isPersonal )
@@ -61,7 +106,7 @@ function InitAchievements( items, isPersonal )
 		return;
 	}
 
-	const appid = appidMatch.groups.id;
+	const appid = Number.parseInt( appidMatch.groups.id, 10 );
 
 	const extraTabs = document.createElement( 'div' );
 	extraTabs.className = 'steamdb_stats_extra_tabs';
@@ -197,7 +242,7 @@ function InitAchievements( items, isPersonal )
 		params.set( 'access_token', applicationConfig.WEBAPI_ACCESS_TOKEN );
 	}
 
-	params.set( 'appid', appid );
+	params.set( 'appid', appid.toString() );
 	params.set( 'language', applicationConfig.LANGUAGE );
 
 	// Request header field x-requested-with is not allowed
@@ -253,8 +298,8 @@ function InitAchievements( items, isPersonal )
 
 	/**
 	 * @param {Record<string, any>} response
-	 * @param {any[]} achievementUpdates
-	 * @param {Promise<any>} [dlcCapsulesPromise]
+	 * @param {AchievementGroup[]} achievementUpdates
+	 * @param {Promise<Map<number, string>>} [dlcCapsulesPromise]
 	 */
 	function ProcessGameAchievements( response, achievementUpdates, dlcCapsulesPromise )
 	{
@@ -268,6 +313,7 @@ function InitAchievements( items, isPersonal )
 			achievementApiNames: [],
 		} );
 
+		/** @type {Map<string, number>} */
 		const achievementInternalIdToUpdate = new Map();
 
 		for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
@@ -284,13 +330,23 @@ function InitAchievements( items, isPersonal )
 			}
 		}
 
+		/** @type {NodeListOf<HTMLElement>} */
 		const oldAchievementRows = document.querySelectorAll( '.achieveRow' );
-		const achievements = new Map( response.response.achievements.map( ( value, index ) => [ index, value ] ) );
 
+		/** @type {Map<number, ApiGameAchievement>} */
+		const achievements = new Map( response.response.achievements.map( ( /** @type {ApiGameAchievement} */ value, /** @type {number} */ index ) => [ index, value ] ) );
+
+		/**
+		 * @param {number} id
+		 * @param {number} domId
+		 * @param {ApiGameAchievement} achievement
+		 * @param {PlayerAchievement} player
+		 */
 		const AddAchievementData = ( id, domId, achievement, player ) =>
 		{
 			achievement.global_unlock = Number.parseFloat( achievement.player_percent_unlocked ) / 100.0;
 
+			/** @type {AchievementData} */
 			const ach = {
 				id,
 				domId,
@@ -358,9 +414,9 @@ function InitAchievements( items, isPersonal )
 						?.textContent.trim();
 				}
 			}
-			else
+			else if( element.classList.contains( 'unlocked' ) )
 			{
-				unlock = element.classList.contains( 'unlocked' );
+				unlock = 'true'; // slightly odd type conformation, but the text won't be displayed for non-personal pages
 			}
 
 			if( progress )
@@ -378,6 +434,7 @@ function InitAchievements( items, isPersonal )
 				{
 					progressText = progress.querySelector( '.progressText' ).textContent.trim();
 				}
+
 				progressWidth = progress.querySelector( '.progress' ).style.width;
 			}
 
@@ -433,7 +490,9 @@ function InitAchievements( items, isPersonal )
 		{
 			AddAchievementData( id, null, achievement, {
 				unlock: null,
+				unlockCompare: null,
 				progressText: null,
+				progressTextCompare: null,
 				progressWidth: null,
 			} );
 		}
@@ -483,6 +542,11 @@ function InitAchievements( items, isPersonal )
 			return unlockRow;
 		};
 
+		/**
+		 * @param {string} progressText
+		 * @param {string} progressWidth
+		 * @param {boolean} isLeftPlayer
+		 */
 		const CreateProgressRow = ( progressText, progressWidth, isLeftPlayer = true ) =>
 		{
 			const progressRow = document.createElement( 'div' );
@@ -500,7 +564,7 @@ function InitAchievements( items, isPersonal )
 
 				// trying to get progress based on text, as right player doesn't have a bar
 				const [ current, total ] = progressText.split( '/' ).map( val => val.replace( /,/g, '' ).trim() );
-				progressWidth = Math.ceil( current / total * 100 ) + '%';
+				progressWidth = Math.ceil( Number.parseInt( current, 10 ) / Number.parseInt( total, 10 ) * 100 ) + '%';
 			}
 
 			const info = document.createElement( 'div' );
@@ -527,6 +591,9 @@ function InitAchievements( items, isPersonal )
 			return progressRow;
 		};
 
+		/**
+		 * @param {boolean} isLeftPlayer
+		 */
 		const CreateLockRow = ( isLeftPlayer ) =>
 		{
 			const lockRow = document.createElement( 'div' );
@@ -540,6 +607,12 @@ function InitAchievements( items, isPersonal )
 			return lockRow;
 		};
 
+		/**
+		 * @param {object} obj
+		 * @param {number} obj.id
+		 * @param {ApiGameAchievement} obj.achievement
+		 * @param {PlayerAchievement} obj.player
+		 */
 		const CreateAchievementRow = ( { id, achievement, player } ) =>
 		{
 			const element = document.createElement( 'div' );
@@ -617,6 +690,7 @@ function InitAchievements( items, isPersonal )
 							<path d="M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z"/>
 						</svg>
 					`;
+
 					if( achievement.global_unlock < 0.1 )
 					{
 						image.classList.add( 'steamdb_achievement_image_glow' );
@@ -715,6 +789,8 @@ function InitAchievements( items, isPersonal )
 		searchField.addEventListener( 'input', function()
 		{
 			const searchVal = this.value.trim().toUpperCase();
+
+			/** @type {NodeListOf<HTMLElement>} */
 			const achievementGroups = document.querySelectorAll( '.steamdb_achievements_group' );
 
 			StartViewTransition( () =>
@@ -853,7 +929,7 @@ function InitAchievements( items, isPersonal )
 				}
 				else if( logoAppId !== appid )
 				{
-					summaryGameLogoImg.dataset.appid = logoAppId;
+					summaryGameLogoImg.dataset.appid = logoAppId.toString();
 				}
 
 				const summaryName = document.createElement( 'div' );
@@ -1076,7 +1152,10 @@ function InitAchievements( items, isPersonal )
 				{
 					for( const [ appid, url ] of images )
 					{
-						for( const image of document.querySelectorAll( `.steamdb_achievements_game_logo[data-appid="${appid}"]` ) )
+						/** @type {NodeListOf<HTMLImageElement>} */
+						const imageTags = document.querySelectorAll( `.steamdb_achievements_game_logo[data-appid="${appid}"]` );
+
+						for( const image of imageTags )
 						{
 							image.src = url;
 						}
@@ -1098,6 +1177,11 @@ function InitAchievements( items, isPersonal )
 	}
 }
 
+/**
+ * @param {ApplicationConfig} applicationConfig
+ * @param {number} appid
+ * @param {AchievementGroup[]} achievementUpdates
+ */
 async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 {
 	const dlcAppIds = [];
@@ -1209,12 +1293,17 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 	return images;
 }
 
+/**
+ * @typedef {{WEBAPI_BASE_URL: string, WEBAPI_ACCESS_TOKEN?: string, MEDIA_CDN_COMMUNITY_URL?: string, STORE_ICON_BASE_URL?: string, LANGUAGE?: string, STORE_ITEM_BASE_URL?: string, COUNTRY?: string, EREALM?: string}} ApplicationConfig
+ */
+
 function ParseApplicationConfig()
 {
 	const applicationConfigElement = document.getElementById( 'application_config' );
 
 	if( applicationConfigElement )
 	{
+		/** @type {ApplicationConfig} */
 		const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
 		const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
 
@@ -1227,18 +1316,16 @@ function ParseApplicationConfig()
 	}
 
 	// Application config does not exist if user is logged out, so we have to reconstruct the data
+	/** @type {ApplicationConfig} */
 	const applicationConfig =
 	{
 		WEBAPI_BASE_URL: 'https://api.steampowered.com/',
-		/** @type {string?} */
-		MEDIA_CDN_COMMUNITY_URL: undefined,
-		/** @type {string?} */
-		STORE_ICON_BASE_URL: undefined,
-		/** @type {string?} */
-		LANGUAGE: undefined,
 	};
 
-	for( const script of document.querySelectorAll( 'script[src]' ) )
+	/** @type {NodeListOf<HTMLScriptElement>} */
+	const scriptTags = document.querySelectorAll( 'script[src]' );
+
+	for( const script of scriptTags )
 	{
 		const scriptLanguage = new URL( script.src ).searchParams.get( 'l' );
 
@@ -1259,7 +1346,10 @@ function ParseApplicationConfig()
 	}
 
 	// Media cdn
-	for( const image of document.querySelectorAll( '.achieveImgHolder > img' ) )
+	/** @type {NodeListOf<HTMLImageElement>} */
+	const imageTags = document.querySelectorAll( '.achieveImgHolder > img' );
+
+	for( const image of imageTags )
 	{
 		const index = image.src.lastIndexOf( '/images/apps/' );
 
@@ -1309,9 +1399,9 @@ function FormatRelativeTime( ms )
 
 /**
  * @param {HTMLButtonElement} sortButton
- * @param {any[]} achievementUpdates
- * @param {NodeListOf<Element>} oldAchievementRows
- * @param {any} CreateAchievementRow
+ * @param {AchievementGroup[]} achievementUpdates
+ * @param {NodeListOf<HTMLElement>} oldAchievementRows
+ * @param {(data: AchievementData) => HTMLDivElement} CreateAchievementRow
  * @param {boolean} isCompareView
  */
 function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView )
@@ -1346,6 +1436,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 
 				const currentYear = new Date().getFullYear();
 
+				/** @type {Record<number, AchievementData>} */
 				const achievementDataMap = [];
 
 				for( const update of achievementUpdates )
@@ -1361,7 +1452,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 					}
 				}
 
-				/** @type {Record<number, any>[][]} */
+				/** @type {AchievementData[][]} */
 				const unlockedAchievementsPerUpdate = [];
 
 				for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )

@@ -2,7 +2,7 @@
 
 'use strict';
 
-/** @type {browser} ExtensionApi */
+/** @type {chrome|browser} ExtensionApi */
 // eslint-disable-next-line no-var
 var ExtensionApi = ( () =>
 {

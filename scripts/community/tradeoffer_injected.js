@@ -90,6 +90,10 @@
 	// better error messages
 	const originalShowAlertDialog = window.ShowAlertDialog;
 	const originalSetAssetOrCurrencyInTrade = window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade;
+
+	/**
+	 * @param {object} item
+	 */
 	window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade = function SteamDB_SetAssetOrCurrencyInTrade( item )
 	{
 		try
@@ -132,6 +136,10 @@
 		originalSetAssetOrCurrencyInTrade.apply( this, arguments );
 	};
 
+	/**
+	 * @param {string} strTitle
+	 * @param {string} strDescription
+	 */
 	window.ShowAlertDialog = function SteamDB_ShowAlertDialog( strTitle, strDescription )
 	{
 		const eresult = strDescription.match( /\(([0-9]+)\)$/ );

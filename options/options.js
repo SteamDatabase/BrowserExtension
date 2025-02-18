@@ -4,6 +4,7 @@
 {
 	document.body.dir = _t( '@@bidi_dir' );
 
+	/** @type {NodeListOf<HTMLElement>} */
 	const localizable = document.querySelectorAll( '[data-msg]' );
 
 	for( const element of localizable )
@@ -47,14 +48,20 @@
 	}
 
 	let starDismissed = false;
+
+	/** @type {NodeListOf<HTMLInputElement>} */
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
 
-	/** @type {Record<string, HTMLElement[]>} */
+	/** @type {Record<string, HTMLInputElement[]>} */
 	const options =
 	{
 		'clicked-star': null,
 	};
 
+	/**
+	 * @this {HTMLInputElement}
+	 * @param {Event} e
+	 */
 	const CheckboxChange = function( e )
 	{
 		if( !e.isTrusted )
@@ -141,7 +148,7 @@
 		}
 		catch( e )
 		{
-			alert( `Failed to request permissions: ${e.message}` );
+			alert( `Failed to request permissions: ${e}` );
 		}
 	} );
 
@@ -174,6 +181,7 @@
 		storeHref = 'https://addons.mozilla.org/en-US/firefox/addon/steam-database/?utm_source=Options';
 	}
 
+	/** @type {HTMLAnchorElement} */
 	const storeUrl = document.querySelector( '#star a' );
 	storeUrl.addEventListener( 'click', () =>
 	{

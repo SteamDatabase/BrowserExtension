@@ -1,4 +1,4 @@
-declare var ExtensionApi: typeof browser;
+declare var ExtensionApi: typeof browser | typeof chrome;
 
 declare var CurrentAppID: number;
 

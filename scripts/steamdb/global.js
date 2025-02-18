@@ -68,7 +68,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		return;
 	}
 
-	/** @type {Promise<{data?: object, error?: string}>} */
+	/** @type {Promise<{data?: Record<string, any>, error?: string}>} */
 	const userDataPromise = new Promise( ( resolve ) =>
 	{
 		SendMessageToBackgroundScript( {
@@ -76,7 +76,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		}, resolve );
 	} );
 
-	/** @type {Promise<{data?: object, error?: string}>} */
+	/** @type {Promise<{data?: Record<string, any>, error?: string}>} */
 	const familyDataPromise = new Promise( ( resolve ) =>
 	{
 		if( !items[ 'steamdb-highlight-family' ] )
@@ -90,7 +90,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		}, resolve );
 	} );
 
-	/** @type {Promise<{error?: string}>} */
+	/** @type {Promise<{data?: undefined, error?: string}>} */
 	const familyDataTimeoutPromise = new Promise( ( resolve ) =>
 	{
 		setTimeout( () =>
@@ -123,6 +123,7 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		WriteLog( 'Failed to load family userdata', familyData.error );
 	}
 
+	/** @type {Record<string, any>} */
 	let response = null;
 	let beforeDom = false;
 

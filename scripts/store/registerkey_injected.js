@@ -5,6 +5,10 @@
 	const script = document.getElementById( 'steamdb_registerkey_hook' );
 	const originalOnRegisterProductKeyFailure = window.OnRegisterProductKeyFailure;
 
+	/**
+	 * @param {any} ePurchaseResult
+	 * @param {any} receipt
+	 */
 	window.OnRegisterProductKeyFailure = function SteamDB_OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 	{
 		originalOnRegisterProductKeyFailure.apply( this, arguments );
@@ -15,6 +19,9 @@
 		}
 	};
 
+	/**
+	 * @param {any} result
+	 */
 	window.UpdateReceiptForm = function SteamDB_UpdateReceiptForm( result )
 	{
 		const list = document.getElementById( 'registerkey_productlist' );

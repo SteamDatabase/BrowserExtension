@@ -150,11 +150,10 @@ else
 
 			let hasDropdowns = false;
 
-			for( let element of container )
+			for( const inputElement of container )
 			{
-				const subid = element.value;
-
-				element = element.parentElement.parentElement;
+				const subid = inputElement.value;
+				let element = inputElement.parentElement.parentElement;
 
 				// Is this a subscription selector?
 				if( subid.length > 0 )
