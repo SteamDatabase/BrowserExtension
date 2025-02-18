@@ -48,6 +48,6 @@
 			return;
 		}
 
-		window.location = returnToUrl.toString();
+		window.location.href = returnToUrl.toString();
 	};
 } )() );

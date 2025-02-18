@@ -84,6 +84,7 @@ function GetOption( items, callback )
  */
 function SetOption( option, value )
 {
+	/** @type {{ [key: string]: any }} */
 	const obj = {};
 	obj[ option ] = value;
 
@@ -115,13 +116,21 @@ function SendMessageToBackgroundScript( message, callback )
 	try
 	{
 		ExtensionApi.runtime
+			// @ts-ignore - janky type definitions
 			.sendMessage( message )
 			.then( callback )
 			.catch( errorCallback );
 	}
 	catch( error )
 	{
-		errorCallback( error );
+		if( error instanceof Error )
+		{
+			errorCallback( error );
+		}
+		else
+		{
+			errorCallback( new Error( String( error ) ) );
+		}
 	}
 }
 

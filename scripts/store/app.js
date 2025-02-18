@@ -169,7 +169,7 @@ else
 
 					if( element )
 					{
-						InsertPurchaseBlockId( element, 'sub', subid );
+						InsertPurchaseBlockId( element, 'sub', Number.parseInt( subid, 10 ) );
 					}
 				}
 				else if( element.querySelector( '.game_area_purchase_game_dropdown_selection' ) )
@@ -192,7 +192,7 @@ else
 					continue;
 				}
 
-				InsertPurchaseBlockId( element.closest( '.game_purchase_action' ), 'sub', subid.groups.id );
+				InsertPurchaseBlockId( element.closest( '.game_purchase_action' ), 'sub', Number.parseInt( subid.groups.id, 10 ) );
 			}
 
 			// Link appid in demo download banner
@@ -209,7 +209,7 @@ else
 
 					if( appid )
 					{
-						InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'app', appid.groups.id );
+						InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'app', Number.parseInt( appid.groups.id, 10 ) );
 					}
 				}
 			}
@@ -228,7 +228,7 @@ else
 
 					if( appid )
 					{
-						InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'app', appid.groups.id );
+						InsertPurchaseBlockId( element.querySelector( '.game_purchase_action' ), 'app', Number.parseInt( appid.groups.id, 10 ) );
 					}
 				}
 			}
@@ -238,7 +238,7 @@ else
 
 			for( const element of container )
 			{
-				InsertPurchaseBlockId( element.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', element.value );
+				InsertPurchaseBlockId( element.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( element.value, 10 ) );
 			}
 
 			// We have to inject our JS directly into the page to hook Steam's functionatily

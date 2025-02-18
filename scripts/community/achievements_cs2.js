@@ -66,12 +66,12 @@ const InitChart = ( container, initialData ) =>
 	const maxLengthInput = document.createElement( 'input' );
 	maxLengthInput.className = 'steamdb_achievements_csrating_graph_slider';
 	maxLengthInput.type = 'range';
-	maxLengthInput.min = 2;
-	maxLengthInput.max = initialData.length;
-	maxLengthInput.value = maxLength;
+	maxLengthInput.min = '2';
+	maxLengthInput.max = initialData.length.toString();
+	maxLengthInput.value = maxLength.toString();
 	maxLengthInput.addEventListener( 'input', () =>
 	{
-		maxLength = maxLengthInput.value;
+		maxLength = Number.parseInt( maxLengthInput.value, 10 );
 		DrawChart( initialData, -1, canvas, tooltip, maxLength );
 	} );
 	canvas.insertAdjacentElement( 'afterend', maxLengthInput );
@@ -390,8 +390,8 @@ const FetchCSRating = async( profileUrl ) =>
  */
 const removeTrailingSlash = ( str ) => str.endsWith( '/' ) ? str.slice( 0, -1 ) : str;
 
-const viewingProfile = removeTrailingSlash( document.querySelector( '.pagecontent .persona_name_text_content' )?.pathname ?? '' );
-const myProfile = removeTrailingSlash( document.querySelector( '#global_actions .user_avatar' )?.pathname ?? '' );
+const viewingProfile = removeTrailingSlash( /** @type {HTMLAnchorElement} */ ( document.querySelector( '.pagecontent .persona_name_text_content' ) )?.pathname ?? '' );
+const myProfile = removeTrailingSlash( /** @type {HTMLAnchorElement} */ ( document.querySelector( '#global_actions .user_avatar' ) )?.pathname ?? '' );
 
 if( viewingProfile === myProfile )
 {

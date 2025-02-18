@@ -152,9 +152,11 @@ async function FetchSteamUserData( callback )
 		InvalidateCache();
 
 		const data = await GetLocalOption( { 'userdata.stored': false } );
+
+		/** @type {{error: string, data?: any}} */
 		const response =
 		{
-			error: error.message,
+			error: error instanceof Error ? error.message : String( error ),
 		};
 
 		if( data[ 'userdata.stored' ] )
@@ -193,6 +195,7 @@ async function FetchSteamUserFamilyData( callback )
 		return;
 	}
 
+	/** @type {{data: Record<string, any>}|{error: string, data?: Record<string, any>}} */
 	let callbackResponse = null;
 	let semaphoreResolve = null;
 	userFamilySemaphore = new Promise( resolve =>
@@ -244,7 +247,7 @@ async function FetchSteamUserFamilyData( callback )
 			throw new Error( 'Is Steam okay?' );
 		}
 
-		const reduced = response.response.apps.reduce( ( data, app ) =>
+		const reduced = response.response.apps.reduce( ( /** @type {any} */ data, /** @type {any} */ app ) =>
 		{
 			if( !app.owner_steamids.includes( response.response.owner_steamid ) )
 			{
@@ -286,7 +289,7 @@ async function FetchSteamUserFamilyData( callback )
 	{
 		callbackResponse =
 		{
-			error: error.message,
+			error: error instanceof Error ? error.message : String( error ),
 		};
 
 		if( cache && cache.data )
@@ -298,6 +301,7 @@ async function FetchSteamUserFamilyData( callback )
 	}
 	finally
 	{
+		// @ts-ignore - this is assigned inside of a promise
 		semaphoreResolve( callbackResponse );
 		userFamilySemaphore = null;
 	}
@@ -513,6 +517,9 @@ function StoreAddToCart( request, callback )
  */
 function StoreAddFreeLicense( request, callback )
 {
+	/**
+	 * @param {any} response
+	 */
 	const freeLicenseResponse = ( response ) =>
 	{
 		if( Array.isArray( response ) )
@@ -585,6 +592,9 @@ function StoreRemoveFreeLicense( request, callback )
  */
 function StoreRequestPlaytestAccess( request, callback )
 {
+	/**
+	 * @param {any} response
+	 */
 	const playtestResponse = ( response ) =>
 	{
 		if( response?.success )
@@ -757,6 +767,7 @@ function GetLocalOption( items )
  */
 function SetLocalOption( option, value )
 {
+	/** @type {{ [key: string]: any }} */
 	const obj = {};
 	obj[ option ] = value;
 

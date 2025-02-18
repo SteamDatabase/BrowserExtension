@@ -77,6 +77,10 @@
 	if( script.dataset.noGiftConfirm === 'true' )
 	{
 		const originalToggleReady = window.ToggleReady;
+
+		/**
+		 * @param {any} ready
+		 */
 		window.ToggleReady = function( ready )
 		{
 			window.g_rgCurrentTradeStatus.me.ready = ready;
@@ -92,7 +96,7 @@
 	const originalSetAssetOrCurrencyInTrade = window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade;
 
 	/**
-	 * @param {object} item
+	 * @param {Record<string, any>} item
 	 */
 	window.CTradeOfferStateManager.SetAssetOrCurrencyInTrade = function SteamDB_SetAssetOrCurrencyInTrade( item )
 	{

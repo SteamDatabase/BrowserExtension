@@ -5,7 +5,7 @@ GetOption( { 'enhancement-market-ssa': true }, ( items ) =>
 	if( items[ 'enhancement-market-ssa' ] )
 	{
 		/** @type {HTMLInputElement} */
-		const element = document.getElementById( 'accept_ssa' );
+		const element = document.querySelector( '#accept_ssa' );
 
 		if( element )
 		{

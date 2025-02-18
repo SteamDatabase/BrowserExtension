@@ -3,6 +3,7 @@
 // If prototype.js already loaded, use its event
 if( 'observe' in Event )
 {
+	// @ts-ignore
 	Event.observe( document, 'dom:loaded', OnLoaded );
 }
 else
@@ -29,6 +30,9 @@ function OnLoaded()
 			summary.append( loader );
 		}
 
+		/**
+		 * @param {any} transport
+		 */
 		window.CAjaxPagingControls.prototype.OnResponseRenderResults = function SteamDB_OnResponseRenderResults( transport )
 		{
 			const response = transport.responseJSON;
@@ -62,6 +66,9 @@ function OnLoaded()
 			}
 		};
 
+		/**
+		 * @param {number} iPage
+		 */
 		window.CAjaxPagingControls.prototype.GoToPage = function SteamDB_GoToPage( iPage )
 		{
 			if( this.m_strElementPrefix !== 'searchResults' )
@@ -87,6 +94,9 @@ function OnLoaded()
 			}
 		};
 
+		/**
+		 * @param {any} transport
+		 */
 		window.CAjaxPagingControls.prototype.OnAJAXComplete = function( transport )
 		{
 			originalOnAJAXComplete.apply( this, arguments );
@@ -113,6 +123,9 @@ function OnLoaded()
 		};
 	}
 
+	/**
+	 * @param {any} context
+	 */
 	function AddRetryMarketButton( context )
 	{
 		const message = document.querySelector( '#searchResultsTable .market_listing_table_message' );

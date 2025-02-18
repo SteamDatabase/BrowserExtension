@@ -10,6 +10,7 @@
 		DisableButtons: 3,
 	};
 
+	/** @type {Record<string, string>} */
 	const giftCache = {}; // TODO: Store this in indexeddb
 
 	const scriptHook = document.getElementById( 'steamdb_inventory_hook' );
@@ -37,14 +38,18 @@
 	{
 		window.SellCurrentSelection();
 
-		document.getElementById( 'market_sell_currency_input' ).value = this.dataset.price / 100;
+		/** @type {HTMLInputElement} */
+		const currencyInput = document.querySelector( '#market_sell_currency_input' );
+		currencyInput.value = ( Number.parseFloat( this.dataset.price ) / 100.0 ).toString();
 
 		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
 
 		if( options[ 'enhancement-inventory-quick-sell-auto' ] )
 		{
 			// SSA must be accepted before OnAccept call, as it has a check for it
-			document.getElementById( 'market_sell_dialog_accept_ssa' ).checked = true;
+			/** @type {HTMLInputElement} */
+			const ssa = document.querySelector( '#market_sell_dialog_accept_ssa' );
+			ssa.checked = true;
 
 			window.SellItemDialog.OnAccept( dummySellEvent );
 			window.SellItemDialog.OnConfirmationAccept( dummySellEvent );
@@ -52,6 +57,10 @@
 	};
 
 	const currencyCode = window.GetCurrencyCode( window.g_rgWalletInfo.wallet_currency );
+
+	/**
+	 * @param {number} valueInCents
+	 */
 	const FormatCurrency = ( valueInCents ) =>
 		window.v_currencyformat( valueInCents, currencyCode, window.g_rgWalletInfo.wallet_country );
 
@@ -61,6 +70,9 @@
 		const originalOnSuccess = window.SellItemDialog.OnSuccess;
 		const originalReloadInventory = window.CUserYou.prototype.ReloadInventory;
 
+		/**
+		 * @param {any} transport
+		 */
 		window.SellItemDialog.OnSuccess = function( transport )
 		{
 			nextRefreshCausedBySell = true;
@@ -96,6 +108,9 @@
 
 	const originalBuildHover = window.BuildHover;
 
+	/**
+	 * @param {string} prefix
+	 */
 	window.BuildHover = function( prefix )
 	{
 		document.querySelector( `#${prefix} .steamdb_quick_sell` )?.remove();
@@ -106,6 +121,10 @@
 
 	const originalPopulateMarketActions = window.PopulateMarketActions;
 
+	/**
+	 * @param {HTMLElement} elActions
+	 * @param {any} item
+	 */
 	window.PopulateMarketActions = function( elActions, item )
 	{
 		const realIsTrading = window.g_bIsTrading;
@@ -134,7 +153,7 @@
 			listNow.title = i18n.inventory_list_at_title;
 			listNow.href = 'javascript:void(0)'; // eslint-disable-line no-script-url
 			listNow.className = 'btn_small btn_darkblue_white_innerfade';
-			listNow.style.opacity = 0.5;
+			listNow.style.opacity = '0.5';
 			listNow.appendChild( listNowText );
 
 			const sellNowText = document.createElement( 'span' );
@@ -144,7 +163,7 @@
 			sellNow.title = i18n.inventory_sell_at_title;
 			sellNow.href = 'javascript:void(0)'; // eslint-disable-line no-script-url
 			sellNow.className = 'btn_small btn_darkblue_white_innerfade';
-			sellNow.style.opacity = 0.5;
+			sellNow.style.opacity = '0.5';
 			sellNow.appendChild( sellNowText );
 
 			buttons.appendChild( listNow );
@@ -207,7 +226,7 @@
 						const listNowPrice = data.lowest_sell_order - listNowFee.fees;
 
 						listNow.style.removeProperty( 'opacity' );
-						listNow.dataset.price = listNowPrice;
+						listNow.dataset.price = listNowPrice.toString();
 						listNow.addEventListener( 'click', OnQuickSellButtonClick );
 						listNowText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( listNowPrice ) );
 					}
@@ -222,7 +241,7 @@
 						const sellNowPrice = data.highest_buy_order - sellNowFee.fees;
 
 						sellNow.style.removeProperty( 'opacity' );
-						sellNow.dataset.price = sellNowPrice;
+						sellNow.dataset.price = sellNowPrice.toString();
 						sellNow.addEventListener( 'click', OnQuickSellButtonClick );
 						sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', FormatCurrency( sellNowPrice ) );
 					}
@@ -240,8 +259,16 @@
 	};
 
 	let badgesDataLoaded = false;
+
+	/** @type {any[]} */
 	let badgesData = [];
 
+	/**
+	 * @param {HTMLElement} element
+	 * @param {any[]} rgActions
+	 * @param {any} item
+	 * @param {string} steamid
+	 */
 	function AddBadgeInformation( element, rgActions, item, steamid )
 	{
 		if( !item.description.market_fee_app )
@@ -265,6 +292,9 @@
 			}
 		}
 
+		/**
+		 * @param {boolean} foil
+		 */
 		const CreateLink = ( foil ) =>
 			`https://steamcommunity.com/profiles/${steamid}/gamecards/${item.description.market_fee_app}${foil ? '?border=1' : ''}`;
 
@@ -321,6 +351,12 @@
 		}
 	}
 
+	/**
+	 * @param {HTMLElement} element
+	 * @param {any[]} rgActions
+	 * @param {any} item
+	 * @param {string} steamid
+	 */
 	function LoadBadgeInformation( element, rgActions, item, steamid )
 	{
 		if( badgesDataLoaded )
@@ -374,6 +410,13 @@
 
 	const originalPopulateActions = window.PopulateActions;
 
+	/**
+	 * @param {any} prefix
+	 * @param {HTMLElement} elActions
+	 * @param {any[]} rgActions
+	 * @param {any} item
+	 * @param {any} owner
+	 */
 	window.PopulateActions = function( prefix, elActions, rgActions, item, owner )
 	{
 		let foundState = FoundState.None;
@@ -509,6 +552,7 @@
 								{
 									giftCache[ item.description.classid ] = xhr.response.packageid;
 
+									/** @type {HTMLAnchorElement} */
 									const link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.assetid + '"]' );
 
 									if( link )
@@ -610,6 +654,7 @@
 		// We want our links to be open in new tab
 		if( foundState === FoundState.Added )
 		{
+			/** @type {NodeListOf<HTMLAnchorElement>} */
 			const link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
 
 			if( link )
@@ -622,6 +667,7 @@
 		}
 		else if( foundState === FoundState.DisableButtons )
 		{
+			/** @type {NodeListOf<HTMLAnchorElement>} */
 			const link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
 
 			if( link )
@@ -635,6 +681,10 @@
 		}
 	};
 
+	/**
+	 * @param {any} item
+	 * @param {(commodityID: string|null) => void} callback
+	 */
 	function GetMarketItemNameId( item, callback )
 	{
 		const appid = item.description.appid;
@@ -709,15 +759,30 @@
 	 */
 	const itemDatabase = CreateItemStore( 'steamdb_extension', 'itemid_name_cache' );
 
+	/**
+	 * Promisifies an IndexedDB request
+	 * @param {IDBRequest<T>|IDBTransaction} request - The IndexedDB request to promisify
+	 * @returns {Promise<T>} A promise that resolves with the request result
+	 * @template T
+	 */
 	function PromisifyDbRequest( request )
 	{
 		return new Promise( ( resolve, reject ) =>
 		{
+			// @ts-ignore
 			request.oncomplete = request.onsuccess = () => resolve( request.result );
+			// @ts-ignore
 			request.onabort = request.onerror = () => reject( request.error );
 		} );
 	}
 
+	/**
+	 * Creates an IndexedDB store with the specified name
+	 * @param {string} dbName - The name of the database
+	 * @param {string} storeName - The name of the object store
+	 * @returns {function(IDBTransactionMode, function(IDBObjectStore): T|PromiseLike<T>): Promise<T>} A function that executes callbacks against the store
+	 * @template T
+	 */
 	function CreateItemStore( dbName, storeName )
 	{
 		const request = indexedDB.open( dbName );
@@ -728,7 +793,8 @@
 
 	/**
 	 * Get a value by its key.
-	 * @param {string} key
+	 * @param {IDBValidKey} key - The key to look up
+	 * @returns {Promise<string|undefined>} A promise that resolves with the stored value or undefined if not found
 	 */
 	function GetCachedItemId( key )
 	{
@@ -737,8 +803,9 @@
 
 	/**
 	 * Set a value with a key.
-	 * @param {string} key
-	 * @param {string} value
+	 * @param {IDBValidKey} key - The key to store the value under
+	 * @param {string} value - The value to store
+	 * @returns {Promise<void>} A promise that resolves when the transaction completes
 	 */
 	function SetCachedItemId( key, value )
 	{
