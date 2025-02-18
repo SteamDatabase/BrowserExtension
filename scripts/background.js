@@ -1,7 +1,6 @@
 'use strict';
 
-let storeSessionId;
-let checkoutSessionId;
+let storeSessionId = null;
 let userDataCache = null;
 let userFamilyDataCache = null;
 let userFamilySemaphore = null;
@@ -595,9 +594,7 @@ function StoreRequestPlaytestAccess( request, callback )
  */
 function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 {
-	const isCheckout = path.startsWith( 'checkout/' );
-
-	GetStoreSessionID( isCheckout, ( session ) =>
+	GetStoreSessionID( ( session ) =>
 	{
 		if( !session.success )
 		{
@@ -607,16 +604,7 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 
 		formData.set( 'sessionid', session.sessionID );
 
-		let url;
-
-		if( isCheckout )
-		{
-			url = `https://checkout.steampowered.com/${path}`;
-		}
-		else
-		{
-			url = `https://store.steampowered.com/${path}`;
-		}
+		const url = `https://store.steampowered.com/${path}`;
 
 		fetch( url, {
 			credentials: 'include',
@@ -638,7 +626,6 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 				if( response.status === 401 && !path.startsWith( 'ajaxrequestplaytestaccess/' ) )
 				{
 					storeSessionId = null;
-					checkoutSessionId = null;
 				}
 
 				// Handle possible family view requirement
@@ -686,33 +673,17 @@ function ExecuteStoreApiCall( path, formData, callback, rawCallback = false )
 }
 
 /**
- * @param {Boolean} isCheckout
  * @param {Function} callback
  */
-function GetStoreSessionID( isCheckout, callback )
+function GetStoreSessionID( callback )
 {
-	let url;
-
-	if( isCheckout )
+	if( storeSessionId )
 	{
-		if( checkoutSessionId )
-		{
-			callback( { success: true, sessionID: checkoutSessionId } );
-			return;
-		}
-
-		url = 'https://checkout.steampowered.com/checkout/addfreelicense';
+		callback( { success: true, sessionID: storeSessionId } );
+		return;
 	}
-	else
-	{
-		if( storeSessionId )
-		{
-			callback( { success: true, sessionID: storeSessionId } );
-			return;
-		}
 
-		url = 'https://store.steampowered.com/account/preferences';
-	}
+	const url = 'https://store.steampowered.com/account/preferences';
 
 	fetch( url, {
 		credentials: 'include',
@@ -729,14 +700,7 @@ function GetStoreSessionID( isCheckout, callback )
 
 			if( session?.[ 1 ] )
 			{
-				if( isCheckout )
-				{
-					checkoutSessionId = session[ 1 ];
-				}
-				else
-				{
-					storeSessionId = session[ 1 ];
-				}
+				storeSessionId = session[ 1 ];
 
 				callback( { success: true, sessionID: session[ 1 ] } );
 			}
