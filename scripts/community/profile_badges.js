@@ -34,13 +34,13 @@ if( progressInfo.length > 0 )
 
 			let text = document.createElement( 'span' );
 			text.className = 'steamdb_drops_remaining';
-			text.appendChild( document.createTextNode( _t( hasPages ? 'badges_idle_apps_on_this_page' : 'badges_idle_apps', [ apps ] ) ) );
+			text.appendChild( document.createTextNode( _t( hasPages ? 'badges_idle_apps_on_this_page' : 'badges_idle_apps', [ apps.toString() ] ) ) );
 			container.prepend( text );
 			container.prepend( document.createTextNode( ' ' ) );
 
 			text = document.createElement( 'span' );
 			text.className = 'steamdb_drops_remaining';
-			text.appendChild( document.createTextNode( _t( hasPages ? 'badges_idle_drops_on_this_page' : 'badges_idle_drops', [ drops ] ) ) );
+			text.appendChild( document.createTextNode( _t( hasPages ? 'badges_idle_drops_on_this_page' : 'badges_idle_drops', [ drops.toString() ] ) ) );
 			container.prepend( text );
 		}
 	}

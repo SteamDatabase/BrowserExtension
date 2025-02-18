@@ -14,6 +14,7 @@ GetOption( { 'link-subid-widget': true }, ( items ) =>
 	const text = document.createElement( 'span' );
 	text.className = 'steamdb_link_id';
 
+	/** @type {HTMLInputElement} */
 	const subid = document.querySelector( 'input[name="subid"]' );
 
 	if( subid )

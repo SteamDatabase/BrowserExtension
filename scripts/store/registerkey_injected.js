@@ -27,6 +27,9 @@
 		list.appendChild( FormatLineItems( result.purchase_receipt_info.line_items ) );
 	};
 
+	/**
+	 * @param {Record<string, any>[]} line_items
+	 */
 	function FormatLineItems( line_items )
 	{
 		const fragment = document.createElement( 'div' );

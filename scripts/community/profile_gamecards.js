@@ -54,7 +54,10 @@ GetOption( { 'button-gamecards': true }, ( items ) =>
 
 function MoveMultiBuyButton()
 {
-	for( const element of document.querySelectorAll( '.gamecards_inventorylink a' ) )
+	/** @type {NodeListOf<HTMLAnchorElement>} */
+	const links = document.querySelectorAll( '.gamecards_inventorylink a' );
+
+	for( const element of links )
 	{
 		const link = new URL( element.href );
 

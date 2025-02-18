@@ -109,6 +109,7 @@ function GetLocalResource( res )
  */
 function SendMessageToBackgroundScript( message, callback )
 {
+	/** @param {Error} error */
 	const errorCallback = ( error ) => callback( { success: false, error: error.message } );
 
 	try

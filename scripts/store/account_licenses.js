@@ -50,7 +50,10 @@ GetOption( { 'link-accountpage': true }, ( items ) =>
 					continue;
 				}
 
+				/** @type {HTMLAnchorElement} */
 				const link = document.createElement( 'a' );
+
+				/** @type {HTMLAnchorElement} */
 				const removeElement = nameCell.querySelector( '.free_license_remove_link a' );
 
 				if( removeElement )

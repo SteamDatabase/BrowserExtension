@@ -17,7 +17,7 @@ document.title === 'We Broke It' )
 
 	document.body.insertBefore( container, document.body.firstChild );
 
-	document.body.style.margin = 0;
+	document.body.style.margin = '0';
 }
 else
 {
@@ -25,17 +25,19 @@ else
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
+			/** @type {HTMLElement} */
 			const button = document.querySelector( '.header_installsteam_btn' );
 
 			if( button )
 			{
-				button.setAttribute( 'hidden', true );
+				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
 			}
 		}
 
 		if( items[ 'enhancement-no-linkfilter' ] )
 		{
+			/** @type {NodeListOf<HTMLAnchorElement>} */
 			const links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
 
 			for( const link of links )

@@ -1,6 +1,9 @@
 /* exported DoAchievements */
 'use strict';
 
+/**
+ * @param {boolean} isPersonal
+ */
 function DoAchievements( isPersonal )
 {
 	GetOption( {
@@ -14,6 +17,10 @@ function DoAchievements( isPersonal )
 	} );
 }
 
+/**
+ * @param {{ [key: string]: any }} items
+ * @param {boolean} isPersonal
+ */
 function InitAchievements( items, isPersonal )
 {
 	if( !items[ 'improve-achievements' ] )
@@ -30,6 +37,7 @@ function InitAchievements( items, isPersonal )
 		return;
 	}
 
+	/** @type {HTMLElement} */
 	const gameLogoElement = document.querySelector( '.profile_small_header_additional .gameLogo' );
 
 	if( !gameLogoElement )
@@ -58,6 +66,7 @@ function InitAchievements( items, isPersonal )
 	const extraTabs = document.createElement( 'div' );
 	extraTabs.className = 'steamdb_stats_extra_tabs';
 
+	/** @type {HTMLButtonElement|null} */
 	let sortButton = null;
 
 	if( isPersonal )
@@ -143,7 +152,11 @@ function InitAchievements( items, isPersonal )
 	window.addEventListener( 'resize', () => AppendExtraTabs( false ) );
 
 	let isCompareView = false;
+
+	/** @type {string|null} */
 	let leftAvatarUrl = null;
+
+	/** @type {string|null} */
 	let rightAvatarUrl = null;
 
 	if( isPersonal )
@@ -158,6 +171,7 @@ function InitAchievements( items, isPersonal )
 	else
 	{
 		// Some games like TF2 and CS:S have achievement groups, so skip if it's filtered
+		/** @type {HTMLSelectElement} */
 		const groupSelector = document.querySelector( '#headerContent select[name="group"]' );
 
 		if( groupSelector && groupSelector.value !== 'all' )
@@ -237,6 +251,11 @@ function InitAchievements( items, isPersonal )
 		} ).catch( e => console.error( '[SteamDB]', e ) );
 	}
 
+	/**
+	 * @param {Record<string, any>} response
+	 * @param {any[]} achievementUpdates
+	 * @param {Promise<any>} [dlcCapsulesPromise]
+	 */
 	function ProcessGameAchievements( response, achievementUpdates, dlcCapsulesPromise )
 	{
 		if( !response || !response.response || !response.response.achievements )
@@ -300,6 +319,8 @@ function InitAchievements( items, isPersonal )
 		for( let domId = 0; domId < oldAchievementRows.length; domId++ )
 		{
 			const element = oldAchievementRows[ domId ];
+
+			/** @type {HTMLImageElement} */
 			const image = element.querySelector( '.achieveImgHolder > img' );
 
 			if( !image )
@@ -423,6 +444,11 @@ function InitAchievements( items, isPersonal )
 			maximumFractionDigits: 1,
 		} );
 
+		/**
+		 * @param {string} unlock
+		 * @param {number} unlockTimestamp
+		 * @param {boolean} isLeftPlayer
+		 */
 		const CreateUnlockRow = ( unlock, unlockTimestamp, isLeftPlayer ) =>
 		{
 			const unlockRow = document.createElement( 'div' );
@@ -749,6 +775,11 @@ function InitAchievements( items, isPersonal )
 			}
 		} );
 
+		/**
+		 * @param {number} earned
+		 * @param {number} total
+		 * @param {boolean} isLeftPlayer
+		 */
 		const CreateProgressSummary = ( earned, total, isLeftPlayer = true ) =>
 		{
 			const percentage = earned / total;
@@ -946,7 +977,7 @@ function InitAchievements( items, isPersonal )
 				globalAchievementsContainer.open = true;
 
 				const globalAchievementsSummary = document.createElement( 'summary' );
-				globalAchievementsSummary.setAttribute( 'hidden', true );
+				globalAchievementsSummary.setAttribute( 'hidden', 'true' );
 				globalAchievementsContainer.append( globalAchievementsSummary );
 
 				// Sort by global unlock rate
@@ -1055,7 +1086,7 @@ function InitAchievements( items, isPersonal )
 
 			// As we are completely redrawing the achievement list, sorting added by
 			// Augmented Steam won't work it, hide their sorting to prevent user confusion
-			document.querySelector( '.es-sortbox' )?.setAttribute( 'hidden', true );
+			document.querySelector( '.es-sortbox' )?.setAttribute( 'hidden', 'true' );
 		};
 
 		StartViewTransition( ReplaceAchievements );
@@ -1199,6 +1230,12 @@ function ParseApplicationConfig()
 	const applicationConfig =
 	{
 		WEBAPI_BASE_URL: 'https://api.steampowered.com/',
+		/** @type {string?} */
+		MEDIA_CDN_COMMUNITY_URL: undefined,
+		/** @type {string?} */
+		STORE_ICON_BASE_URL: undefined,
+		/** @type {string?} */
+		LANGUAGE: undefined,
 	};
 
 	for( const script of document.querySelectorAll( 'script[src]' ) )
@@ -1270,13 +1307,20 @@ function FormatRelativeTime( ms )
 	return relativeDateFormatter.format( -year, 'year' );
 }
 
+/**
+ * @param {HTMLButtonElement} sortButton
+ * @param {any[]} achievementUpdates
+ * @param {NodeListOf<Element>} oldAchievementRows
+ * @param {any} CreateAchievementRow
+ * @param {boolean} isCompareView
+ */
 function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView )
 {
-	sortButton.addEventListener( 'click', ( e ) =>
+	sortButton.addEventListener( 'click', ( /** @type {MouseEvent} */ e ) =>
 	{
 		e.preventDefault();
 
-		sortButton.setAttribute( 'disabled', true );
+		sortButton.setAttribute( 'disabled', 'true' );
 
 		// Request the same page in finnish because it has an easier date format to parse
 		const url = new URL( window.location );
@@ -1317,6 +1361,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 					}
 				}
 
+				/** @type {Record<number, any>[][]} */
 				const unlockedAchievementsPerUpdate = [];
 
 				for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
@@ -1330,7 +1375,10 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 					const otherAchievement = otherAchievementRows[ id ];
 					const oldAchievement = oldAchievementRows[ id ];
 
+					/** @type {HTMLImageElement} */
 					const otherImage = otherAchievement.querySelector( '.achieveImgHolder > img' );
+
+					/** @type {HTMLImageElement} */
 					const oldImage = oldAchievement.querySelector( '.achieveImgHolder > img' );
 
 					if( !otherImage || !oldImage )
@@ -1465,6 +1513,7 @@ function OnToggleAllGamesClick( e )
 }
 
 /**
+ * @this {HTMLButtonElement}
  * @param {MouseEvent} e
  */
 function OnToggleGameClick( e )
@@ -1477,7 +1526,7 @@ function OnToggleGameClick( e )
 /**
  * @param {boolean} isRoot
  */
-function CreateFoldButton( isRoot )
+function CreateFoldButton( isRoot = false )
 {
 	const btn = document.createElement( 'button' );
 	btn.type = 'button';
@@ -1600,13 +1649,16 @@ function SessionStorageToggle( key, state )
 	}
 }
 
+/**
+ * @this {HTMLDetailsElement}
+ */
 function OnToggleDetails()
 {
 	SessionStorageToggle( this.id, this.open );
 }
 
 /**
- * @param {callback} callback
+ * @param {ViewTransitionUpdateCallback} callback
  */
 function StartViewTransition( callback )
 {

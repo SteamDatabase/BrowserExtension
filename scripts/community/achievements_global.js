@@ -5,6 +5,7 @@
 DoAchievements( false );
 
 {
+	/** @type {HTMLAnchorElement} */
 	const currentUser = document.querySelector( '#global_actions .user_avatar' );
 	const currentUserPath = location.pathname.split( '/' );
 

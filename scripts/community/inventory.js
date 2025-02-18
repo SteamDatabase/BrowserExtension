@@ -30,6 +30,9 @@
 		},
 	};
 
+	/**
+	 * @this {HTMLAnchorElement}
+	 */
 	const OnQuickSellButtonClick = function( )
 	{
 		window.SellCurrentSelection();

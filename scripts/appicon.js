@@ -26,6 +26,7 @@ GetOption( {
 				document.head.appendChild( style );
 			}
 
+			/** @type {HTMLImageElement} */
 			const icon = document.querySelector( '.apphub_AppIcon > img' );
 
 			if( !icon )
@@ -40,6 +41,7 @@ GetOption( {
 				return;
 			}
 
+			/** @type {HTMLLinkElement} */
 			const metaImage = document.querySelector( 'link[rel="image_src"]' );
 
 			if( !metaImage )

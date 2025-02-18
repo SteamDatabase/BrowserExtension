@@ -9,6 +9,7 @@ GetOption( {
 		return;
 	}
 
+	/** @type {HTMLImageElement[]} */
 	const images = Array.from( document.querySelectorAll( '.game_area_description img, .early_access_announcements img' ) );
 
 	if( !images.length )
@@ -30,6 +31,10 @@ GetOption( {
 		image.addEventListener( 'click', ImageClick, { once: true } );
 	}
 
+	/**
+	 * @param {MouseEvent} e
+	 * @this {HTMLImageElement}
+	 */
 	function ImageClick( e )
 	{
 		this.addEventListener( 'load', ImageLoad, { once: true } );
@@ -37,6 +42,9 @@ GetOption( {
 		e.preventDefault();
 	}
 
+	/**
+	 * @this {HTMLImageElement}
+	 */
 	function ImageLoad()
 	{
 		this.style.width = '';

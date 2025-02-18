@@ -243,6 +243,9 @@ function GenerateQueue( generateFails = 0 )
 		} );
 }
 
+/**
+ * @param {Record<string, any>} response
+ */
 function HandleSaleItemResponse( response )
 {
 	if( response.next_claim_time )
@@ -386,11 +389,18 @@ function ClaimSaleItem( fails = 0 )
 		} );
 }
 
+/**
+ * @param {number} min
+ * @param {number} max
+ */
 function RandomInt( min, max )
 {
 	return Math.floor( Math.random() * ( max - min + 1 ) + min );
 }
 
+/**
+ * @param {ViewTransitionUpdateCallback} callback
+ */
 function StartViewTransition( callback )
 {
 	if( document.startViewTransition )

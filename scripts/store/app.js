@@ -36,11 +36,12 @@ else
 
 		if( items[ 'enhancement-hide-mobile-app-button' ] )
 		{
+			/** @type {HTMLMetaElement} */
 			let button = document.querySelector( '.open_in_steam_container' );
 
 			if( button )
 			{
-				button.setAttribute( 'hidden', true );
+				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
 			}
 
@@ -48,7 +49,7 @@ else
 
 			if( button )
 			{
-				button.setAttribute( 'hidden', true );
+				button.setAttribute( 'hidden', 'true' );
 			}
 		}
 
@@ -144,6 +145,7 @@ else
 		if( items[ 'link-subid' ] )
 		{
 			// Find each "add to cart" button
+			/** @type {NodeListOf<HTMLInputElement>} */
 			let container = document.querySelectorAll( 'input[name="subid"]' );
 
 			let hasDropdowns = false;
@@ -199,6 +201,7 @@ else
 
 			if( element )
 			{
+				/** @type {HTMLAnchorElement} */
 				const demoGameBtn = element.querySelector( '#demoGameBtn a' );
 
 				if( demoGameBtn )
@@ -217,6 +220,7 @@ else
 
 			if( element )
 			{
+				/** @type {HTMLAnchorElement} */
 				const playtestBtn = element.querySelector( '.game_purchase_action a' );
 
 				if( playtestBtn )
@@ -241,13 +245,13 @@ else
 			// We have to inject our JS directly into the page to hook Steam's functionatily
 			if( hasDropdowns )
 			{
-				element = document.createElement( 'script' );
-				element.id = 'steamdb_subscriptions_hook';
-				element.type = 'text/javascript';
-				element.src = GetLocalResource( 'scripts/store/subscriptions.js' );
-				element.dataset.homepage = GetHomepage();
+				const script = document.createElement( 'script' );
+				script.id = 'steamdb_subscriptions_hook';
+				script.type = 'text/javascript';
+				script.src = GetLocalResource( 'scripts/store/subscriptions.js' );
+				script.dataset.homepage = GetHomepage();
 
-				document.head.appendChild( element );
+				document.head.appendChild( script );
 			}
 		}
 
@@ -336,6 +340,7 @@ else
 
 function DrawLowestPrice()
 {
+	/** @type {HTMLMetaElement} */
 	const price = document.querySelector( 'meta[itemprop="price"]' );
 
 	if( price && price.content !== '' )
@@ -351,6 +356,7 @@ function DrawLowestPrice()
 		}
 	}
 
+	/** @type {HTMLMetaElement} */
 	const currencyElement = document.querySelector( 'meta[itemprop="priceCurrency"]' );
 
 	/** @type {string | null} */
@@ -883,10 +889,12 @@ function FollowInvalidateCache()
 
 function HideCurator()
 {
+	/** @type {HTMLElement} */
 	const container = document.querySelector( '.referring_curator_ctn' );
 
 	if( container )
 	{
+		/** @type {HTMLAnchorElement} */
 		const referring = container.querySelector( '.referringSteamCurator a' );
 
 		if( referring )
@@ -977,7 +985,10 @@ function InsertPurchaseBlockId( element, type, id )
  */
 function AddCollapseButtonToAlreadyInLibraryBlock( options )
 {
+	/** @type {HTMLElement} */
 	const alreadyInLibrary = document.querySelector( '.game_area_already_owned .already_in_library' );
+
+	/** @type {HTMLElement} */
 	const playStats = document.querySelector( '.game_area_play_stats' );
 
 	if( !alreadyInLibrary || !playStats )

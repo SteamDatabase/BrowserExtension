@@ -21,13 +21,16 @@ GetOption( {
 
 	// Can't access g_rgProfileData inside sandbox :(
 
-	// If we can, use abuseID
-	let steamID = document.querySelector( '#abuseForm > input[name=abuseID]' );
+	let steamID = '';
 	let isCommunityID = false;
 
-	if( steamID )
+	// If we can, use abuseID
+	/** @type {HTMLInputElement} */
+	const abuseIDInput = document.querySelector( '#abuseForm > input[name=abuseID]' );
+
+	if( abuseIDInput )
 	{
-		steamID = steamID.value;
+		steamID = abuseIDInput.value;
 
 		isCommunityID = true;
 	}

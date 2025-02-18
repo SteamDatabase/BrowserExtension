@@ -6,6 +6,9 @@ if( document.querySelector( '.guideTopContent' ) )
 
 	if( guide.querySelector( '.bb_spoiler' ) )
 	{
+		/**
+		 * @param {ViewTransitionUpdateCallback} callback
+		 */
 		const StartViewTransition = ( callback ) =>
 		{
 			if( document.startViewTransition )

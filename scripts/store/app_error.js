@@ -2,6 +2,9 @@
 
 'use strict';
 
+/**
+ * @param {Element} container
+ */
 function AddLinksInErrorBox( container )
 {
 	const pageTypeMatch = location.pathname.match( /^\/(?:[a-z]+\/)?(?<type>app|bundle|sub)\// );
