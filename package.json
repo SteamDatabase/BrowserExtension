@@ -14,7 +14,7 @@
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix && prettier \"**/*.css\" --write"
 	},
 	"devDependencies": {
-		"@types/chrome": "^0.0.299",
+		"@types/chrome": "^0.0.304",
 		"@types/firefox-webext-browser": "^120.0.3",
 		"archiver": "^7.0.1",
 		"eslint": "^9.10.0",
