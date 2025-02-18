@@ -209,8 +209,8 @@ function InitAchievements( items, isPersonal )
 		if( oldContainer.classList.contains( 'compare_view' ) )
 		{
 			isCompareView = true;
-			leftAvatarUrl = document.querySelector( '.topAvatarsLeft img' ).src;
-			rightAvatarUrl = document.querySelector( '.topAvatarsRight img' ).src;
+			leftAvatarUrl = /** @type {HTMLImageElement} */ ( document.querySelector( '.topAvatarsLeft img' ) ).src;
+			rightAvatarUrl = /** @type {HTMLImageElement} */ ( document.querySelector( '.topAvatarsRight img' ) ).src;
 		}
 	}
 	else
@@ -435,7 +435,7 @@ function InitAchievements( items, isPersonal )
 					progressText = progress.querySelector( '.progressText' ).textContent.trim();
 				}
 
-				progressWidth = progress.querySelector( '.progress' ).style.width;
+				progressWidth = /** @type {HTMLElement} */ ( progress.querySelector( '.progress' ) ).style.width;
 			}
 
 			let foundAchievement = false;
@@ -800,7 +800,10 @@ function InitAchievements( items, isPersonal )
 				{
 					for( const group of achievementGroups )
 					{
-						for( const achievement of group.querySelectorAll( '.steamdb_achievement' ) )
+						/** @type {NodeListOf<HTMLElement>} */
+						const achievementElements =  group.querySelectorAll( '.steamdb_achievement' );
+
+						for( const achievement of achievementElements )
 						{
 							achievement.hidden = false;
 						}
@@ -815,7 +818,10 @@ function InitAchievements( items, isPersonal )
 				{
 					let count = 0;
 
-					for( const achievement of group.querySelectorAll( '.steamdb_achievement' ) )
+					/** @type {NodeListOf<HTMLElement>} */
+					const achievementElements =  group.querySelectorAll( '.steamdb_achievement' );
+
+					for( const achievement of achievementElements )
 					{
 						const title = achievement.querySelector( 'h3' ).textContent;
 						const description = achievement.querySelector( 'h5' ).textContent;
@@ -840,7 +846,7 @@ function InitAchievements( items, isPersonal )
 				return;
 			}
 
-			if( [ 'INPUT', 'TEXTAREA', 'SELECT', 'BUTTON' ].includes( e.target.tagName ) )
+			if( e.target instanceof Element && [ 'INPUT', 'TEXTAREA', 'SELECT', 'BUTTON' ].includes( e.target.tagName ) )
 			{
 				return;
 			}
@@ -1338,7 +1344,7 @@ function ParseApplicationConfig()
 	}
 
 	// Game logo cdn
-	const gameLogoUrl = document.querySelector( '.profile_small_header_additional .gameLogo img' ).src;
+	const gameLogoUrl = /** @type {HTMLImageElement} */ ( document.querySelector( '.profile_small_header_additional .gameLogo img' ) ).src;
 	const gameLogoUrlAppsIndex = gameLogoUrl.lastIndexOf( '/apps/' );
 
 	if( gameLogoUrlAppsIndex > 0 )
@@ -1414,7 +1420,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 		sortButton.setAttribute( 'disabled', 'true' );
 
 		// Request the same page in finnish because it has an easier date format to parse
-		const url = new URL( window.location );
+		const url = new URL( window.location.href );
 		url.searchParams.set( 'l', 'finnish' );
 
 		fetch( url, {
@@ -1503,7 +1509,15 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 					}
 
 					const c = parsedTime.groups;
-					const date = new Date( c.year || currentYear, c.month - 1, c.day, c.hour, c.minute, 0, 0 );
+					const date = new Date(
+						c.year ? Number.parseInt( c.year, 10 ) : currentYear,
+						Number.parseInt( c.month, 10 ) - 1,
+						Number.parseInt( c.day, 10 ),
+						Number.parseInt( c.hour, 10 ),
+						Number.parseInt( c.minute, 10 ),
+						0,
+						0
+					);
 
 					const achievement = achievementDataMap[ id ];
 					achievement.player.unlockTimestamp = date.getTime();
