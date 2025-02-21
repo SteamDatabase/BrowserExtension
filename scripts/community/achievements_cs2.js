@@ -194,8 +194,6 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	// Draw season changes
 	for( const season of seasonChanges )
 	{
-		console.log( season );
-
 		ctx.beginPath();
 		ctx.moveTo( season.x, 0 );
 		ctx.lineTo( season.x, height );
