@@ -14,7 +14,11 @@ const tierColors =
 ];
 
 /**
- * @typedef {{csr: number, datetime: string, season: string}[]} CSRArray
+ * @typedef {object[]} CSRArray
+ * @property {number} csr
+ * @property {string} datetime
+ * @property {string} season
+ * @property {number} [delta]
  */
 
 /**
@@ -104,9 +108,14 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	// Draw gradient
 	let i = 0;
 	let lastTier = -1;
+	let lastSeason = data[ 0 ].season;
 	const paddedHeight = height * 0.95;
 	const halfHeight = height / 2;
 	const gap = width / ( data.length - 1 );
+
+
+	/** @type {{season: string, x: number}[]} */
+	const seasonChanges = [];
 
 	ctx.beginPath();
 	ctx.moveTo( 0, height );
@@ -144,6 +153,16 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 			ctx.lineTo( x, y );
 		}
 
+		if( lastSeason !== point.season )
+		{
+			lastSeason = point.season;
+
+			seasonChanges.push( {
+				x,
+				season: lastSeason,
+			} );
+		}
+
 		i += 1;
 	}
 
@@ -171,6 +190,19 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	}
 
 	ctx.setLineDash( [] );
+
+	// Draw season changes
+	for( const season of seasonChanges )
+	{
+		console.log( season );
+
+		ctx.beginPath();
+		ctx.moveTo( season.x, 0 );
+		ctx.lineTo( season.x, height );
+		ctx.stroke();
+
+		ctx.fillText( `Season ${season.season}`, season.x + 5, height - 5 );
+	}
 
 	// Draw line
 	ctx.beginPath();
@@ -234,7 +266,7 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 
 /**
  * @param {Element} container
- * @param {*} rows
+ * @param {CSRArray} rows
  */
 const CreateCSRatingTable = ( container, rows ) =>
 {
@@ -264,6 +296,7 @@ const CreateCSRatingTable = ( container, rows ) =>
 		{
 			rows[ i ].delta = rows[ i ].csr - prevScore;
 		}
+
 		prevScore = rows[ i ].csr;
 	}
 
@@ -304,17 +337,21 @@ const CreateCSRatingTable = ( container, rows ) =>
 		tr.append( csr );
 
 		const delta = document.createElement( 'td' );
+
 		if( row.delta )
 		{
 			delta.textContent = ( row.delta > 0 ? '+' : '' ) + row.delta;
 		}
+
 		delta.className = row.delta > 0
 			? 'steamdb_achievements_csrating_positive'
 			: 'steamdb_achievements_csrating_negative';
+
 		if( row.delta < -199 || row.delta > 199 )
 		{
 			delta.classList.add( 'steamdb_achievements_csrating_significant' );
 		}
+
 		tr.append( delta );
 	}
 };
