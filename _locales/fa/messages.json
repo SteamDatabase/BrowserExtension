@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "هیچ نشانی ساخته نشده است"
 	},
+	"spoilers_reveal": {
+		"message": "آشکار کردن اسپویلر ها",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "تنظیمات"
 	},

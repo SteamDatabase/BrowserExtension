@@ -352,6 +352,10 @@
 	"inventory_badge_none": {
 		"message": "Žetons netika izstrādāts"
 	},
+	"spoilers_reveal": {
+		"message": "Atklāt intrigu",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"options": {
 		"message": "Iestatījumi"
 	},
@@ -441,6 +445,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Iespējot papildus filtrēšanu uz <a href=\"https://steamdb.info/sales/\" target=\"_blank\">izpārdošanas lapas</a> un <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">pakotņu lapas</a>"
+	},
+	"options_website_family": {
+		"message": "Izcelt ģimenei piederošās lietotnes (nepieciešams papildu pieprasījums)"
 	},
 	"options_extra_data": {
 		"message": "Papildus dati ņemti no $domain$",

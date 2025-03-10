@@ -447,7 +447,7 @@
 		"message": "Включить дополнительную фильтрацию на <a href=\"https://steamdb.info/sales/\" target=\"_blank\">странице распродаж</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">странице наборов</a>"
 	},
 	"options_website_family": {
-		"message": "Выделять товары, имеющиеся в семейной группе (требуется доп. запрос)"
+		"message": "Выделять приложения имеющиеся в семейной группе (требуется доп. запрос)"
 	},
 	"options_extra_data": {
 		"message": "Дополнительные данные получаемые с $domain$",

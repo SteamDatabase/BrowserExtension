@@ -372,13 +372,13 @@
 		"message": "Падащо меню за акаунт в страници на Steam"
 	},
 	"options_welcome_option3": {
-		"message": "Страницата с добавки на вашия браузър"
+		"message": "Страницата с разширения на вашия браузър"
 	},
 	"options_review": {
 		"message": "Оставете отзив за това разширение"
 	},
 	"options_permissions_description": {
-		"message": "Тази добавка изисква допълнителни разрешения, за да работи правилно в SteamDB, Steam магазин и Steam общност."
+		"message": "Това разширение изисква допълнителни разрешения, за да работи правилно в SteamDB, Steam магазин и Steam общност."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Разреши"
@@ -423,7 +423,7 @@
 		"message": "Трябва да сте влезли в магазина, за да може тази опция да работи."
 	},
 	"options_website_explanation3": {
-		"message": "Това се съдържа само във вашия браузър и няма да се изпраща на бекенда на SteamDB."
+		"message": "Това се съдържа изцяло във вашия браузър и никога не се изпраща до бекенда на SteamDB."
 	},
 	"options_website_explanation4": {
 		"message": "За да се предотвратят прекомерни заявки към магазина на Steam, потребителските Ви данни се кешират в локалното хранилище на вашия браузър."
@@ -438,10 +438,10 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "Добавяне в списък с желания, следване и игнориране на продукти в магазина на Steam директно от SteamDB"
+		"message": "Добавяне в списъка с желания, следване и игнориране на продукти в магазина на Steam директно от SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Активирайте скрипта за безплатни пакети</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Активиране на скрипта за безплатни пакети</a>"
 	},
 	"options_website_highlight3": {
 		"message": "Покажи допълнителни филтри на страниците за <a href=\"https://steamdb.info/sales/\" target=\"_blank\">разпродажби</a> и <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">комплекти</a>"
@@ -540,7 +540,7 @@
 		"message": "Добави връзка към калкулатор в обществени профили"
 	},
 	"options_enhancement_inventory_sidebar": {
-		"message": "Премести избора на игра в инвентара да е отстрани"
+		"message": "Премести списъка с игри в инвентара настрани"
 	},
 	"options_link_inventory": {
 		"message": "Добави връзка към SteamDB за подаръци и купони за намаление в инвентара"
@@ -578,7 +578,7 @@
 		"message": "Вижте обяснението в GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Потискане на сигналите „тази оферта изглежда подозрително“ и „сигурни ли сте, че това е подарък?“ при оферти за търговия"
+		"message": "Потискане на предупрежденията „Тази оферта изглежда подозрително“ и „Сигурни ли сте, че това е подарък?“ при оферти за търговия"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Показване на детайлни съобщения за грешки, вместо загадъчните кодове на Valve"
@@ -587,7 +587,7 @@
 		"message": "Прескочи проверката на възрастта"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "Наглася бисквитките за възраст и дата на раждане да минават винаги"
+		"message": "Наглася бисквитките за възраст и дата на раждане да се приемат винаги"
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Премахни предупреждението „Напускате Steam“ за външни сайтове",
@@ -625,7 +625,7 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Постави скрити постижения зад спойлер"
+		"message": "Постави скрити постижения зад спойлър"
 	},
 	"options_prevent_store_images": {
 		"message": "Спри зареждането на изображения на продуктовите страници"
