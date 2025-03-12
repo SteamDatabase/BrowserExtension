@@ -351,7 +351,7 @@ function GetApp( appid, callback )
 	const params = new URLSearchParams();
 	params.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 
-	fetch( `https://steamdb.info/api/ExtensionApp/?${params.toString()}`, {
+	fetch( `https://extension.steamdb.info/api/ExtensionApp/?${params.toString()}`, {
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
@@ -380,7 +380,7 @@ function GetAppPrice( { appid, currency }, callback )
 	params.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 	params.set( 'currency', currency );
 
-	fetch( `https://steamdb.info/api/ExtensionAppPrice/?${params.toString()}`, {
+	fetch( `https://extension.steamdb.info/api/ExtensionAppPrice/?${params.toString()}`, {
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',
@@ -406,7 +406,7 @@ function GetAchievementsGroups( appid, callback )
 	const params = new URLSearchParams();
 	params.set( 'appid', Number.parseInt( appid, 10 ).toString() );
 
-	fetch( `https://steamdb.info/api/ExtensionGetAchievements/?${params.toString()}`, {
+	fetch( `https://extension.steamdb.info/api/ExtensionGetAchievements/?${params.toString()}`, {
 		headers: {
 			Accept: 'application/json',
 			'X-Requested-With': 'SteamDB',

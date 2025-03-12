@@ -58,6 +58,9 @@ function ArchiveFirefox()
 	return archive.finalize();
 }
 
+/**
+ * @param {string} zipPath
+ */
 function PrepareArchive( zipPath )
 {
 	console.log( `Packaging to ${zipPath}` );
