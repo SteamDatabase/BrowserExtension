@@ -1,4 +1,5 @@
 {
+	"$schema": "https://json.schemastore.org/chrome-manifest",
 	"manifest_version": 3,
 	"version": "4.14",
 	"author": "SteamDB",
@@ -32,7 +33,23 @@
 	],
 	"background":
 	{
+		"scripts":
+		[
+			"scripts/background.js"
+		],
 		"service_worker": "scripts/background.js"
+	},
+	"browser_specific_settings":
+	{
+		"gecko":
+		{
+			"id": "firefox-extension@steamdb.info",
+			"strict_min_version": "109.0"
+		},
+		"gecko_android":
+		{
+			"strict_min_version": "120.0"
+		}
 	},
 	"web_accessible_resources":
 	[

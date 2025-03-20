@@ -6,6 +6,8 @@ const archiver = require( 'archiver' );
 const manifest = require( './manifest.json' );
 const version = manifest.version.replace( /\./g, '_' );
 
+delete manifest.$schema;
+
 ( async() =>
 {
 	await ArchiveChromium();
@@ -17,7 +19,13 @@ function ArchiveChromium()
 	const zipPath = path.join( __dirname, `steamdb_ext_${version}.zip` );
 	const archive = PrepareArchive( zipPath );
 
-	archive.file( path.join( __dirname, 'manifest.json' ), { name: 'manifest.json' } );
+	const chromeManifest = structuredClone( manifest );
+	delete chromeManifest.background.scripts;
+	delete chromeManifest.browser_specific_settings;
+
+	const json = JSON.stringify( chromeManifest, null, '\t' );
+	archive.append( json, { name: 'manifest.json' } );
+
 	return archive.finalize();
 }
 
@@ -26,35 +34,12 @@ function ArchiveFirefox()
 	const zipPath = path.join( __dirname, `steamdb_ext_${version}_firefox.zip` );
 	const archive = PrepareArchive( zipPath );
 
-	const ffManifest = manifest;
-	ffManifest.background =
-	{
-		scripts:
-		[
-			'scripts/background.js',
-		],
-	};
-	ffManifest.browser_specific_settings =
-	{
-		gecko:
-		{
-			id: 'firefox-extension@steamdb.info',
-			strict_min_version: '109.0',
-		},
-		gecko_android:
-		{
-			strict_min_version: '120.0',
-		},
-	};
+	const firefoxManifest = structuredClone( manifest );
+	delete firefoxManifest.background.service_worker;
 
-	for( const web_accessible_resources of ffManifest.web_accessible_resources )
-	{
-		delete web_accessible_resources.use_dynamic_url; // Unsupported
-	}
-
-	const json = JSON.stringify( ffManifest, null, '\t' );
-
+	const json = JSON.stringify( firefoxManifest, null, '\t' );
 	archive.append( json, { name: 'manifest.json' } );
+
 	return archive.finalize();
 }
 
