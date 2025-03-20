@@ -50,11 +50,16 @@ ExtensionApi.runtime.onMessage.addListener( ( request, sender, callback ) =>
 		return false;
 	}
 
+	/** @type {browser.tabs.Tab} */
+	// @ts-ignore - cookieStoreId is only available in Firefox
+	const firefoxTab = sender.tab;
+	const cookieStoreId = firefoxTab?.cookieStoreId;
+
 	switch( request.contentScriptQuery )
 	{
 		case 'InvalidateCache': InvalidateCache(); callback(); return true;
-		case 'FetchSteamUserData': FetchSteamUserData( callback ); return true;
-		case 'FetchSteamUserFamilyData': FetchSteamUserFamilyData( callback ); return true;
+		case 'FetchSteamUserData': FetchSteamUserData( callback, cookieStoreId ); return true;
+		case 'FetchSteamUserFamilyData': FetchSteamUserFamilyData( callback, cookieStoreId ); return true;
 		case 'GetApp': GetApp( request.appid, callback ); return true;
 		case 'GetAppPrice': GetAppPrice( request, callback ); return true;
 		case 'GetAchievementsGroups': GetAchievementsGroups( request.appid, callback ); return true;
@@ -85,8 +90,9 @@ function InvalidateCache()
 
 /**
  * @param {(obj: {data: Record<string, any>}|{error: string, data?: Record<string, any>}) => void} callback
+ * @param {string|undefined} cookieStoreId
  */
-async function FetchSteamUserData( callback )
+async function FetchSteamUserData( callback, cookieStoreId )
 {
 	if( userDataCache !== null )
 	{
@@ -118,6 +124,9 @@ async function FetchSteamUserData( callback )
 				// This will trigger login.steampowered.com redirect flow if user has expired cookies.
 					Accept: 'text/html',
 				},
+
+				// @ts-ignore - only available in Firefox
+				cookieStoreId,
 			}
 		);
 		const response = await responseFetch.json();
@@ -170,8 +179,9 @@ async function FetchSteamUserData( callback )
 
 /**
  * @param {(obj: {data: Record<string, any>}|{error: string, data?: Record<string, any>}) => void} callback
+ * @param {string|undefined} cookieStoreId
  */
-async function FetchSteamUserFamilyData( callback )
+async function FetchSteamUserFamilyData( callback, cookieStoreId )
 {
 	if( userFamilyDataCache !== null )
 	{
@@ -212,6 +222,9 @@ async function FetchSteamUserFamilyData( callback )
 				headers: {
 					Accept: 'application/json',
 				},
+
+				// @ts-ignore - only available in Firefox
+				cookieStoreId,
 			}
 		);
 		const token = await tokenResponseFetch.json();
@@ -237,7 +250,10 @@ async function FetchSteamUserFamilyData( callback )
 			{
 				headers: {
 					Accept: 'application/json',
-				}
+				},
+
+				// @ts-ignore - only available in Firefox
+				cookieStoreId,
 			}
 		);
 		const response = await responseFetch.json();
