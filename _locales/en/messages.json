@@ -368,6 +368,22 @@
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 
+	"popup_charts": {
+		"message": "Charts"
+	},
+	"popup_sales": {
+		"message": "Sales"
+	},
+	"popup_calendar": {
+		"message": "Calendar"
+	},
+	"popup_patches": {
+		"message": "Patches"
+	},
+	"popup_calculator": {
+		"message": "Calculator"
+	},
+
 	"options": {
 		"message": "Options"
 	},

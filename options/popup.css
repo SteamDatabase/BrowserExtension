@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-color: #000;
+	--link-color: #fff;
+	--link-color-hover: #34c8fe;
+}
+
+body {
+	min-width: min-content;
+	margin: 0;
+	padding: 0;
+	background: var(--bg-color);
+	color: var(--link-color);
+	font:
+		1rem/1.5 -apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	padding: 0.5em 1em;
+	gap: 0.7em;
+	text-decoration: none;
+	color: inherit;
+
+	> svg {
+		width: 1em;
+		height: 1em;
+		flex-shrink: 0;
+	}
+
+	&:hover {
+		color: var(--link-color-hover);
+		background-color: rgba(0 100 255 / 20%);
+
+		> b,
+		> span {
+			text-decoration: underline;
+		}
+	}
+
+	&.options-link {
+		color: var(--link-color-hover);
+	}
+}
+
+.separator {
+	height: 1px;
+	background: rgba(255 255 255 / 30%);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #fff;
+		--link-color: #000;
+		--link-color-hover: #00f;
+	}
+
+	.separator {
+		background: rgba(0 0 0 / 30%);
+	}
+}

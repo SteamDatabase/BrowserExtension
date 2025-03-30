@@ -31,6 +31,10 @@
 		"https://steamcommunity.com/*",
 		"https://*.steampowered.com/*"
 	],
+	"action":
+	{
+		"default_popup": "options/popup.html"
+	},
 	"background":
 	{
 		"scripts":
