@@ -178,7 +178,7 @@
 	}
 	else if( ExtensionApi.runtime.id === 'firefox-extension@steamdb.info' )
 	{
-		storeHref = 'https://addons.mozilla.org/en-US/firefox/addon/steam-database/?utm_source=Options';
+		storeHref = 'https://addons.mozilla.org/firefox/addon/steam-database/?utm_source=Options';
 	}
 
 	/** @type {HTMLAnchorElement} */

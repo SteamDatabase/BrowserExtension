@@ -258,7 +258,7 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 		ctx.fillStyle = '#fff';
 		ctx.arc( circleX, circleY, 3 * devicePixelRatio, 0, Math.PI * 2 );
 		ctx.fill();
-		tooltip.textContent = `${highlightedCSR.toLocaleString( 'en-US' )}\n${highlightedDate}`;
+		tooltip.textContent = `${highlightedCSR.toLocaleString()}\n${highlightedDate}`;
 	}
 };
 
@@ -328,7 +328,7 @@ const CreateCSRatingTable = ( container, rows ) =>
 		tr.append( datetime );
 
 		const csr = document.createElement( 'td' );
-		csr.textContent = row.csr.toLocaleString( 'en-US' );
+		csr.textContent = row.csr.toLocaleString();
 		const tier = Math.min( Math.floor( row.csr / 5000 ), tierColors.length - 1 );
 		csr.className = 'steamdb_achievements_csrating-value';
 		csr.style.color = tierColors[ tier ];
