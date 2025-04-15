@@ -15,7 +15,7 @@ const OnPageLoadedInit = () =>
 
 if( document.readyState === 'loading' )
 {
-	document.addEventListener( 'DOMContentLoaded', OnPageLoadedInit, { once: true } );
+	document.addEventListener( 'readystatechange', OnPageLoadedInit, { once: true } );
 }
 else
 {
@@ -125,7 +125,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 
 	/** @type {Record<string, any>} */
 	let response = null;
-	let beforeDom = false;
 
 	if( userData.data )
 	{
@@ -159,7 +158,6 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 
 			WriteLog(
 				'Userdata loaded',
-				beforeDom ? '(before dom completed)' : '',
 				'Packages',
 				response.rgOwnedPackages?.length || 0,
 				'Family Apps',
@@ -168,14 +166,37 @@ GetOption( { 'steamdb-highlight': true, 'steamdb-highlight-family': true }, asyn
 		}
 	};
 
-	if( document.readyState === 'loading' )
-	{
-		beforeDom = true;
+	const IsSiteReady = () => document.readyState === 'complete' || !!document.getElementById( 'main' );
 
-		document.addEventListener( 'DOMContentLoaded', OnPageLoaded, { once: true } );
-	}
-	else
+	if( IsSiteReady() )
 	{
 		OnPageLoaded();
+		return;
 	}
+
+	// As we wait for promises to complete first, chances are very high that the main element should be ready by now,
+	// but to avoid any possible issues we still have a fallback to the mutation observer.
+	//
+	// The website has code to process the extension messages loaded in a script before the #main element,
+	// and this script is not deferred. But to apply the highlights to all the elements correctly,
+	// the site will have to wait for the DOM to complete loading before applying the highlights.
+	//
+	// We avoid waiting for DOMContentLoaded event and instead wait for the receiving script to be ready,
+	// because postMessage() itself may take time.
+
+	WriteLog( 'Data loaded too fast, site is not yet ready.' );
+
+	const observer = new MutationObserver( () =>
+	{
+		if( IsSiteReady() )
+		{
+			observer.disconnect();
+			OnPageLoaded();
+		}
+	} );
+
+	observer.observe( document.documentElement, {
+		childList: true,
+		subtree: true
+	} );
 } );
