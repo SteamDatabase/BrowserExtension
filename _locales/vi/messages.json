@@ -49,7 +49,7 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_steamdb_rating_tooltip": {
-		"message": "$positive$ đánh giá tích cực trên tổng số $total$ đánh giá (toàn bộ hình thức mua hàng)",
+		"message": "$positive$ trên $total$ người dùng đánh giá tích cực trò chơi này (tính trên toàn bộ hình thức mua hàng)",
 		"placeholders": {
 			"positive": {
 				"content": "$1",
@@ -72,7 +72,7 @@
 		"message": "Thống kê người chơi"
 	},
 	"app_stats_online_now": {
-		"message": "Đang chơi:"
+		"message": "Hiện tại:"
 	},
 	"app_stats_peak_today": {
 		"message": "Đỉnh hôm nay:"
@@ -215,7 +215,7 @@
 		}
 	},
 	"badges_idle_apps": {
-		"message": "Số ứng dụng cần treo: $amount$",
+		"message": "Cần treo $amount$ ứng dụng",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -225,7 +225,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Số ứng dụng cần treo ở trang này: $amount$",
+		"message": "Cần treo $amount$ ứng dụng trong trang này",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -245,7 +245,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Còn $amount$ lần rớt thẻ ở trang này",
+		"message": "Còn $amount$ lần rớt thẻ trong trang này",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -308,7 +308,7 @@
 		"message": "Hệ số CS"
 	},
 	"inventory_list_at": {
-		"message": "Đăng bán với giá: $price$",
+		"message": "Đăng bán với giá $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -317,7 +317,7 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "Bán ngay với giá: $price$",
+		"message": "Bán ngay với giá $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -355,6 +355,21 @@
 	"spoilers_reveal": {
 		"message": "Hiển thị nội dung bị ẩn",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Thống kê"
+	},
+	"popup_sales": {
+		"message": "Khuyến mãi"
+	},
+	"popup_calendar": {
+		"message": "Lịch phát hành"
+	},
+	"popup_patches": {
+		"message": "Cập nhật"
+	},
+	"popup_calculator": {
+		"message": "Máy tính"
 	},
 	"options": {
 		"message": "Cài đặt"
@@ -441,7 +456,7 @@
 		"message": "Thêm vào danh sách ước, theo dõi và phớt lờ sản phẩm trên cửa hàng Steam trực tiếp từ giao diện SteamDB"
 	},
 	"options_website_highlight2": {
-		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Bật hiện sản phẩm miễn phí</a>"
+		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Bật tập lệnh kích hoạt gói miễn phí</a>"
 	},
 	"options_website_highlight3": {
 		"message": "Bật tính năng lọc bổ sung trên <a href=\"https://steamdb.info/sales/\" target=\"_blank\">trang giảm giá</a> và <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">trang các gói</a>"
@@ -503,10 +518,10 @@
 		}
 	},
 	"options_steamdb_lowest_price": {
-		"message": "Hiển thị trên trang sản phẩm mức giá thấp nhất được ghi nhận"
+		"message": "Hiển thị mức giá thấp nhất được ghi nhận trên trang sản phẩm"
 	},
 	"options_online_stats": {
-		"message": "Hiển thị trên trang sản phẩm số lượng người chơi hiện tại và đỉnh điểm"
+		"message": "Hiển thị số lượng người chơi hiện tại và đỉnh điểm trên trang sản phẩm"
 	},
 	"options_steamdb_last_update": {
 		"message": "Hiển thị lần cập nhật cuối trên trang sản phẩm"
@@ -578,7 +593,7 @@
 		"message": "Xem giải thích trên GitHub"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Bỏ qua cảnh báo \"giao dịch này có vẻ đáng ngờ\" và \"bạn có chắc đây là một món quà không?\" trong yêu cầu trao đổi đồ"
+		"message": "Bỏ qua cảnh báo giao dịch đáng ngờ và xác nhận tặng vật phẩm khi tạo yêu cầu trao đổi"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Hiển thị thông báo lỗi kèm giải thích thay vì bộ mã lỗi khó hiểu của Valve"
@@ -594,7 +609,7 @@
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
-		"message": "Tự động chấp nhận \"Thỏa thuận người đăng ký\" trong chợ, kho đồ và trang kích hoạt sản phẩm của Steam",
+		"message": "Tự động chấp nhận Thỏa thuận người đăng ký Steam trong chợ, kho đồ và trang kích hoạt sản phẩm",
 		"description": "Steam Subscriber Agreement (SSA): https://store.steampowered.com/subscriber_agreement/"
 	},
 	"options_enhancement_hide_install_button": {
@@ -602,7 +617,7 @@
 		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "Ẩn biểu ngữ \"Mở bằng ứng dụng Steam\""
+		"message": "Ẩn biểu ngữ \"Mở trong phần mềm Steam\""
 	},
 	"options_steamdb_rating": {
 		"message": "Hiển thị số liệu đánh giá theo SteamDB trên trang sản phẩm"
@@ -631,7 +646,7 @@
 		"message": "Dừng tải hình ảnh trên các trang sản phẩm"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh để tải"
+		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh nếu vẫn cần tải"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang nội dung được chia sẻ",

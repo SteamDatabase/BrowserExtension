@@ -356,6 +356,21 @@
 		"message": "顯示劇透內容",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "統計圖表"
+	},
+	"popup_sales": {
+		"message": "特賣"
+	},
+	"popup_calendar": {
+		"message": "發行日曆"
+	},
+	"popup_patches": {
+		"message": "更新日誌"
+	},
+	"popup_calculator": {
+		"message": "價值計算機"
+	},
 	"options": {
 		"message": "選項"
 	},

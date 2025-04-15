@@ -356,6 +356,21 @@
 		"message": "Revelar spoilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Estadísticas"
+	},
+	"popup_sales": {
+		"message": "Rebajas"
+	},
+	"popup_calendar": {
+		"message": "Calendario: Lanzamientos"
+	},
+	"popup_patches": {
+		"message": "Actualizaciones"
+	},
+	"popup_calculator": {
+		"message": "Calculadora"
+	},
 	"options": {
 		"message": "Opciones"
 	},
@@ -558,7 +573,7 @@
 		"message": "Aceptar automáticamente la venta rápida"
 	},
 	"options_enhancement_inventory_badge_info": {
-		"message": "Mostrar el nivel de insignias en las tarjetas y el pack de refuerzo"
+		"message": "Mostrar el nivel de insignias en las tarjetas y los paquetes de refuerzo"
 	},
 	"options_display_market_price_others": {
 		"message": "Mostrar el precio de mercado de los artículos en los inventarios de otros usuarios"

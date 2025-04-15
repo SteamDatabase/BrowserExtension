@@ -356,6 +356,21 @@
 		"message": "Revelar spoilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Gráficos"
+	},
+	"popup_sales": {
+		"message": "Promoções"
+	},
+	"popup_calendar": {
+		"message": "Calendário"
+	},
+	"popup_patches": {
+		"message": "Atualizações"
+	},
+	"popup_calculator": {
+		"message": "Calculadora"
+	},
 	"options": {
 		"message": "Opções"
 	},

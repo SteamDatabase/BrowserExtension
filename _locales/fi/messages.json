@@ -7,7 +7,7 @@
 		"message": "SteamDB-asetukset"
 	},
 	"steamdb_calculator": {
-		"message": "SteamDB Laskin"
+		"message": "SteamDB-laskuri"
 	},
 	"steamstatus": {
 		"message": "Katso $domain$",

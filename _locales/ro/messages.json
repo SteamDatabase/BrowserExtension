@@ -356,6 +356,21 @@
 		"message": "Afișează spoilere",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Date"
+	},
+	"popup_sales": {
+		"message": "Vânzări"
+	},
+	"popup_calendar": {
+		"message": "Calendar"
+	},
+	"popup_patches": {
+		"message": "Patch-uri"
+	},
+	"popup_calculator": {
+		"message": "Calculator"
+	},
 	"options": {
 		"message": "Opțiuni"
 	},

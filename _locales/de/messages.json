@@ -356,6 +356,21 @@
 		"message": "Spoiler aufdecken",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Statistiken"
+	},
+	"popup_sales": {
+		"message": "Angebote"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Patches"
+	},
+	"popup_calculator": {
+		"message": "Rechner"
+	},
 	"options": {
 		"message": "Einstellungen"
 	},

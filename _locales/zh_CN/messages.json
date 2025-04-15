@@ -203,7 +203,7 @@
 		}
 	},
 	"explore_saleitem_claim_failed": {
-		"message": "无法领取每日奖励。"
+		"message": "领取每日奖励失败。"
 	},
 	"explore_saleitem_success": {
 		"message": "已领取新的奖励：$item$。",
@@ -326,10 +326,10 @@
 		}
 	},
 	"inventory_list_at_title": {
-		"message": "以市场中的最低上架价格上架物品\n\n显示的价格是您收到的实际金额(不含手续费)"
+		"message": "以市场中的最低上架价格上架物品\n\n显示的价格是您收到的实际金额（不含手续费）"
 	},
 	"inventory_sell_at_title": {
-		"message": "以市场订购单的最高出价出售物品\n\n显示的价格是您收到的实际金额(不含手续费)"
+		"message": "以市场订购单的最高出价出售物品\n\n显示的价格是您收到的实际金额（不含手续费）"
 	},
 	"inventory_badge_level": {
 		"message": "您的徽章等级：$level$",
@@ -350,11 +350,26 @@
 		}
 	},
 	"inventory_badge_none": {
-		"message": "对应徽章尚未合成"
+		"message": "徽章未合成"
 	},
 	"spoilers_reveal": {
-		"message": "显示剧透文本",
+		"message": "显示隐藏文本",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "在线人数"
+	},
+	"popup_sales": {
+		"message": "特卖"
+	},
+	"popup_calendar": {
+		"message": "发行日历"
+	},
+	"popup_patches": {
+		"message": "补丁说明"
+	},
+	"popup_calculator": {
+		"message": "账号价值计算器"
 	},
 	"options": {
 		"message": "设置"
@@ -447,7 +462,7 @@
 		"message": "在<a href=\"https://steamdb.info/sales/\" target=\"_blank\">特卖页面</a>和<a href=\"https://steamdb.info/bundles/\" target=\"_blank\">捆绑包页</a>上启用额外的筛选器"
 	},
 	"options_website_family": {
-		"message": "高亮显示家庭共享的应用(需要额外请求)"
+		"message": "高亮显示家庭共享的应用（需要额外请求）"
 	},
 	"options_extra_data": {
 		"message": "从 $domain$ 获取的额外数据",
@@ -631,7 +646,7 @@
 		"message": "在产品页面阻止图像加载"
 	},
 	"options_prevent_store_images_description": {
-		"message": "一些开发者可能会在产品介绍中加入大尺寸的图像，从而使得页面加载变慢，点击这些图片来使其加载"
+		"message": "一些开发者可能会在产品介绍中加入较大的图像，从而使得页面加载变慢，点击这些图片来使其加载"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "支持个人资料和共享文件链接上的 $award$ 参数",

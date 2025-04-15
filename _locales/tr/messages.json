@@ -356,6 +356,21 @@
 		"message": "Sürprizbozan içeriği göster",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "İstatistikler"
+	},
+	"popup_sales": {
+		"message": "İndirimler"
+	},
+	"popup_calendar": {
+		"message": "Çıkış Takvimi"
+	},
+	"popup_patches": {
+		"message": "Yama Notları"
+	},
+	"popup_calculator": {
+		"message": "Hesap Değerleyici"
+	},
 	"options": {
 		"message": "Ayarlar"
 	},

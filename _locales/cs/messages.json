@@ -356,6 +356,21 @@
 		"message": "Odhalit spoilery",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Grafy"
+	},
+	"popup_sales": {
+		"message": "Slevy"
+	},
+	"popup_calendar": {
+		"message": "Kalendář"
+	},
+	"popup_patches": {
+		"message": "Patche"
+	},
+	"popup_calculator": {
+		"message": "Kalkulátor"
+	},
 	"options": {
 		"message": "Možnosti"
 	},

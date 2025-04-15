@@ -356,6 +356,21 @@
 		"message": "Revelar spoilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Estadísticas"
+	},
+	"popup_sales": {
+		"message": "Rebajas"
+	},
+	"popup_calendar": {
+		"message": "Calendario: Lanzamientos"
+	},
+	"popup_patches": {
+		"message": "Actualizaciones"
+	},
+	"popup_calculator": {
+		"message": "Calculadora"
+	},
 	"options": {
 		"message": "Opciones"
 	},
@@ -444,7 +459,7 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Activa el script de paquetes gratuitos.</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Activar el filtrado adicional en <a href=\"https://steamdb.info/sales/\" target=\"_blank\">página de ofertas</a> y <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">página de lotes</a>"
+		"message": "Activar el filtrado adicional en <a href=\"https://steamdb.info/sales/\" target=\"_blank\">página de rebajas</a> y <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">página de packs</a>"
 	},
 	"options_website_family": {
 		"message": "Destacar las aplicaciones de la biblioteca familiar (requiere una solicitud adicional)"

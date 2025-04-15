@@ -356,6 +356,21 @@
 		"message": "ネタバレを表示する",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "チャート"
+	},
+	"popup_sales": {
+		"message": "セール"
+	},
+	"popup_calendar": {
+		"message": "カレンダー"
+	},
+	"popup_patches": {
+		"message": "パッチ"
+	},
+	"popup_calculator": {
+		"message": "カルキュレーター"
+	},
 	"options": {
 		"message": "オプション"
 	},
