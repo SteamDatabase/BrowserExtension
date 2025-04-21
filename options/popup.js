@@ -11,7 +11,7 @@
 
 	for( const element of localizable )
 	{
-		element.innerHTML = browserApi.i18n.getMessage( element.dataset.msg );
+		element.textContent = browserApi.i18n.getMessage( element.dataset.msg );
 	}
 
 	document.getElementById( 'options-link' ).addEventListener( 'click', function( ev )
