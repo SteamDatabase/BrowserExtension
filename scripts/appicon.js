@@ -41,17 +41,16 @@ GetOption( {
 				return;
 			}
 
-			/** @type {HTMLLinkElement} */
-			const metaImage = document.querySelector( 'link[rel="image_src"]' );
+			const applicationConfigElement = document.getElementById( 'application_config' );
 
-			if( !metaImage )
+			if( !applicationConfigElement )
 			{
 				return;
 			}
 
-			const url = new URL( metaImage.href );
+			const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
 
-			icon.src = src.replace( '%CDN_HOST_MEDIA_SSL%', url.host );
+			icon.src = src.replace( 'https://%CDN_HOST_MEDIA_SSL%/', applicationConfig.MEDIA_CDN_URL );
 		} );
 	}
 } );
