@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/chrome-manifest",
 	"manifest_version": 3,
-	"version": "4.15",
+	"version": "4.16",
 	"author": "SteamDB",
 	"name": "SteamDB",
 	"short_name": "SteamDB",
