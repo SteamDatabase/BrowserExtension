@@ -149,6 +149,9 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB mempunyai pilihan untuk melangkaui pemeriksaan umur"
+	},
 	"explore_auto_discover": {
 		"message": "Auto Teroka"
 	},
@@ -179,6 +182,9 @@
 	},
 	"explore_saleitem_claim": {
 		"message": "Tuntut Ganjaran"
+	},
+	"explore_saleitem_claim_description": {
+		"message": "Tuntut ganjaran harian sekiranya ada"
 	},
 	"explore_saleitem_trying_to_claim": {
 		"message": "Sedang menuntut ganjaran harian…"
@@ -286,6 +292,21 @@
 		"message": "Kumpulan pencapaian disediakan oleh Steam Hunters melalui SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Musim  $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Tarikh"
+	},
+	"achievements_csrating_name": {
+		"message": "Penilaian CS"
+	},
 	"inventory_list_at": {
 		"message": "Senarai pada $price$",
 		"placeholders": {
@@ -309,6 +330,46 @@
 	},
 	"inventory_sell_at_title": {
 		"message": "Senaraikan item untuk harga jualan yang tertinggi tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
+	},
+	"inventory_badge_level": {
+		"message": "Tahap Lencana anda: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
+	},
+	"inventory_badge_foil_level": {
+		"message": "Tahap Lencana Foil anda: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Tiada Lencana dirumuskan"
+	},
+	"spoilers_reveal": {
+		"message": "Papar spoiler",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Carta"
+	},
+	"popup_sales": {
+		"message": "Jualan"
+	},
+	"popup_calendar": {
+		"message": "Kalendar"
+	},
+	"popup_patches": {
+		"message": "Pembaharuan"
+	},
+	"popup_calculator": {
+		"message": "Kalkulator"
 	},
 	"options": {
 		"message": "Pilihan"
@@ -399,6 +460,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Aktifkan penapisan tambahan di <a href=\"https://steamdb.info/sales/\" target=\"_blank\">halaman jualan</a> dan <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">halaman berkas</a>"
+	},
+	"options_website_family": {
+		"message": "Serlahkan aplikasi milik keluarga (memerlukan permintaan tambahan)"
 	},
 	"options_extra_data": {
 		"message": "Data tambahan diambil dari $domain$",
@@ -508,6 +572,9 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Terima jual cepat secara automatik"
 	},
+	"options_enhancement_inventory_badge_info": {
+		"message": "Paparkan tahap lencana pada kad dagangan dan pek penggalak"
+	},
 	"options_display_market_price_others": {
 		"message": "Papar harga pasaran item dalam inventori pengguna lain"
 	},
@@ -609,5 +676,8 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Papar ikon kunci untuk pencapaian terkunci"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Paparkan sejarah penilaian CS pada halaman pencapaian CS2"
 	}
 }

@@ -381,13 +381,13 @@
 		"message": "Revisa las opciones a continuación y cambia las que prefieras. Para volver aquí en el futuro:"
 	},
 	"options_welcome_option1": {
-		"message": "Configuraciones de SteamDB"
+		"message": "Opciones de SteamDB."
 	},
 	"options_welcome_option2": {
-		"message": "Menú desplegable de cuentas en las páginas de Steam"
+		"message": "Menú desplegable de cuentas en las páginas de Steam."
 	},
 	"options_welcome_option3": {
-		"message": "Extensiones de tu navegador"
+		"message": "Página de extensiones de tu navegador."
 	},
 	"options_review": {
 		"message": "Deja una reseña de esta extensión"

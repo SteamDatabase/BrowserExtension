@@ -352,6 +352,25 @@
 	"inventory_badge_none": {
 		"message": "ბეჯი არ არის დამუშავებული"
 	},
+	"spoilers_reveal": {
+		"message": "სპოილერების ნახვა",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "სქემები"
+	},
+	"popup_sales": {
+		"message": "ფასდაკლებები"
+	},
+	"popup_calendar": {
+		"message": "კალენდარი"
+	},
+	"popup_patches": {
+		"message": "განახლებები"
+	},
+	"popup_calculator": {
+		"message": "კალკულატორი"
+	},
 	"options": {
 		"message": "პარამეტრები"
 	},
@@ -441,6 +460,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "დაუშვი დამატებითი გაფილტვრა <a href=\"https://steamdb.info/sales/\" target=\"_blank\">-ს გაყიდვების გვერდზე</a> და <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">-ს კრებულების გვერდზე </a>"
+	},
+	"options_website_family": {
+		"message": "მონიშნეთ ოჯახით კუთვნილი აპები (საჭიროებს დამატებით მოთხოვნას)"
 	},
 	"options_extra_data": {
 		"message": "დამატებითი მონაცემები აღებულია $domain$-დან",

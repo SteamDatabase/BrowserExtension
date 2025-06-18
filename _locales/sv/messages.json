@@ -356,6 +356,21 @@
 		"message": "Visa spoilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Diagram"
+	},
+	"popup_sales": {
+		"message": "Rabatter"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Patchningar"
+	},
+	"popup_calculator": {
+		"message": "Kalkylator"
+	},
 	"options": {
 		"message": "Inställningar"
 	},

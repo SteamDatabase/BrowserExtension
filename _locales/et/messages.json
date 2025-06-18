@@ -352,6 +352,25 @@
 	"inventory_badge_none": {
 		"message": "Märki pole koostatud"
 	},
+	"spoilers_reveal": {
+		"message": "Näita spoilerid",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Diagrammid"
+	},
+	"popup_sales": {
+		"message": "Müügid"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Uuendused"
+	},
+	"popup_calculator": {
+		"message": "Kalkulaator"
+	},
 	"options": {
 		"message": "Sätted"
 	},

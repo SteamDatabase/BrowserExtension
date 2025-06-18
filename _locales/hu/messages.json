@@ -356,6 +356,21 @@
 		"message": "Spoilerek megjelenítése",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Diagramok"
+	},
+	"popup_sales": {
+		"message": "Kedvezmények"
+	},
+	"popup_calendar": {
+		"message": "Naptár"
+	},
+	"popup_patches": {
+		"message": "Javítások"
+	},
+	"popup_calculator": {
+		"message": "Számológép"
+	},
 	"options": {
 		"message": "Beállítások"
 	},

@@ -356,6 +356,21 @@
 		"message": "Розкрити спойлери",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Графіки"
+	},
+	"popup_sales": {
+		"message": "Продажі"
+	},
+	"popup_calendar": {
+		"message": "Календар"
+	},
+	"popup_patches": {
+		"message": "Патчі"
+	},
+	"popup_calculator": {
+		"message": "Калькулятор"
+	},
 	"options": {
 		"message": "Параметри"
 	},

@@ -7,10 +7,10 @@
 		"message": "Opzioni SteamDB"
 	},
 	"steamdb_calculator": {
-		"message": "Calcolatore SteamDB"
+		"message": "Calcolatrice di SteamDB"
 	},
 	"steamstatus": {
-		"message": "Controlla su $domain$",
+		"message": "Verifica su $domain$",
 		"placeholders": {
 			"domain": {
 				"content": "steamstat.us",
@@ -19,7 +19,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Sembra che Steam stia sperimentando un errore di server temporaneo. "
+		"message": "Sembra che il server di Steam stia riscontrando un problema temporaneo. "
 	},
 	"view_on_steamdb": {
 		"message": "Visualizza su SteamDB"
@@ -206,7 +206,7 @@
 		"message": "Impossibile riscattare la ricompensa giornaliera."
 	},
 	"explore_saleitem_success": {
-		"message": "Nuova ricompensa reclamata: $item$.",
+		"message": "Nuova ricompensa riscattata: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -355,6 +355,21 @@
 	"spoilers_reveal": {
 		"message": "Rivela spoiler",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafici"
+	},
+	"popup_sales": {
+		"message": "Promozioni"
+	},
+	"popup_calendar": {
+		"message": "Calendario"
+	},
+	"popup_patches": {
+		"message": "Patch"
+	},
+	"popup_calculator": {
+		"message": "Calcolatrice"
 	},
 	"options": {
 		"message": "Opzioni"

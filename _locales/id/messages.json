@@ -356,6 +356,15 @@
 		"message": "Buka spoiler",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_calendar": {
+		"message": "Kalendar"
+	},
+	"popup_patches": {
+		"message": "Patch"
+	},
+	"popup_calculator": {
+		"message": "Kalkulator"
+	},
 	"options": {
 		"message": "Pengaturan"
 	},

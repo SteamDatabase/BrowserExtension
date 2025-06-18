@@ -356,6 +356,21 @@
 		"message": "Toon spoilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Grafieken"
+	},
+	"popup_sales": {
+		"message": "Korting"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Patches"
+	},
+	"popup_calculator": {
+		"message": "Rekenmachine"
+	},
 	"options": {
 		"message": "Opties"
 	},

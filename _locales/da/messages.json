@@ -356,6 +356,21 @@
 		"message": "Afslør spoilere",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Diagrammer"
+	},
+	"popup_sales": {
+		"message": "Salg"
+	},
+	"popup_calendar": {
+		"message": "Kalender"
+	},
+	"popup_patches": {
+		"message": "Fejlrettelser"
+	},
+	"popup_calculator": {
+		"message": "Lommeregner"
+	},
 	"options": {
 		"message": "Indstillinger"
 	},

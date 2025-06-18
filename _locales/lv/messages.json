@@ -356,6 +356,21 @@
 		"message": "Atklāt intrigu",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Grafiki"
+	},
+	"popup_sales": {
+		"message": "Atlaides"
+	},
+	"popup_calendar": {
+		"message": "Kalendārs"
+	},
+	"popup_patches": {
+		"message": "Ielāpi"
+	},
+	"popup_calculator": {
+		"message": "Kalkulators"
+	},
 	"options": {
 		"message": "Iestatījumi"
 	},
