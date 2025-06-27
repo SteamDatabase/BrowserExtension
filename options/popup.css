@@ -47,7 +47,7 @@ body {
 
 	&:hover {
 		color: var(--link-color-hover);
-		background-color: rgba(0 100 255 / 20%);
+		background-color: rgb(0 100 255 / 20%);
 
 		> b,
 		> span {
@@ -62,7 +62,7 @@ body {
 
 .separator {
 	height: 1px;
-	background: rgba(255 255 255 / 30%);
+	background: rgb(255 255 255 / 30%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -73,6 +73,6 @@ body {
 	}
 
 	.separator {
-		background: rgba(0 0 0 / 30%);
+		background: rgb(0 0 0 / 30%);
 	}
 }
