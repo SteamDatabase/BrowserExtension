@@ -25,6 +25,16 @@ else
 		'enhancement-hide-install-button': true,
 	}, ( items ) =>
 	{
+		if( ( items[ 'steamdb-last-update' ] || items[ 'online-stats' ] ) && !document.querySelector( '.game_area_dlc_bubble' ) )
+		{
+			DrawOnlineStatsWidget( items );
+		}
+
+		if( items[ 'steamdb-lowest-price' ] )
+		{
+			DrawLowestPrice();
+		}
+
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
 			// On app page, `Install Steam` and `Play Now` buttons share the same `.game_area_already_owned_btn` class.
@@ -39,16 +49,6 @@ else
 				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
 			}
-		}
-
-		if( ( items[ 'steamdb-last-update' ] || items[ 'online-stats' ] ) && !document.querySelector( '.game_area_dlc_bubble' ) )
-		{
-			DrawOnlineStatsWidget( items );
-		}
-
-		if( items[ 'steamdb-lowest-price' ] )
-		{
-			DrawLowestPrice();
 		}
 
 		if( items[ 'enhancement-hide-mobile-app-button' ] )
