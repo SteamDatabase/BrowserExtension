@@ -25,10 +25,10 @@ else
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
-			/** @type {NodeListOf<HTMLAnchorElement>} */
-			const buttons = document.querySelectorAll( '.header_installsteam_btn, .game_area_already_owned_btn:first-of-type>a' );
+			/** @type {HTMLElement} */
+			const button = document.querySelector( '.header_installsteam_btn' );
 
-			for( const button of buttons )
+			if( button )
 			{
 				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
