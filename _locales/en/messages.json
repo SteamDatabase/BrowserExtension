@@ -162,7 +162,7 @@
 		"message": "Auto-discover"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automatically discover the queue to get an event card."
+		"message": "Automatically discover the queue."
 	},
 	"explore_generating": {
 		"message": "Generating new discovery queue, this can fail if Steam is under high load…"
