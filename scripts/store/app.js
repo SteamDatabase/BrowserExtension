@@ -22,6 +22,7 @@ else
 		'steamdb-last-update': true,
 		'enhancement-hide-mobile-app-button': false,
 		'collapse-already-in-library': false,
+		'enhancement-hide-install-button': true,
 	}, ( items ) =>
 	{
 		if( ( items[ 'steamdb-last-update' ] || items[ 'online-stats' ] ) && !document.querySelector( '.game_area_dlc_bubble' ) )
@@ -32,6 +33,22 @@ else
 		if( items[ 'steamdb-lowest-price' ] )
 		{
 			DrawLowestPrice();
+		}
+
+		if( items[ 'enhancement-hide-install-button' ] )
+		{
+			// On app page, `Install Steam` and `Play Now` buttons share the same `.game_area_already_owned_btn` class.
+			// To distinguish them, we are hiding the first one only if href attribute points to /about/ to avoid
+			// hiding the `Play Now` button or any other in the event Valve decides to change the order.
+
+			/** @type {HTMLAnchorElement} */
+			const button = document.querySelector( '.game_area_already_owned_btn:first-of-type a' );
+
+			if( button && button.pathname === "/about/" )
+			{
+				button.setAttribute( 'hidden', 'true' );
+				button.style.display = 'none';
+			}
 		}
 
 		if( items[ 'enhancement-hide-mobile-app-button' ] )
