@@ -73,6 +73,7 @@
 
 				"scripts/community/inventory.js",
 				"scripts/community/agecheck_injected.js",
+				"scripts/community/linkfilter_injected.js",
 				"scripts/community/filedetails_award_injected.js",
 				"scripts/community/market_injected.js",
 				"scripts/community/multibuy_injected.js",
@@ -568,6 +569,17 @@
 			"js":
 			[
 				"scripts/community/agecheck.js"
+			]
+		},
+		{
+			"run_at": "document_start",
+			"matches":
+			[
+				"https://steamcommunity.com/linkfilter/*"
+			],
+			"js":
+			[
+				"scripts/community/linkfilter.js"
 			]
 		},
 		{
