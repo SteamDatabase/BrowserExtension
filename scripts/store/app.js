@@ -573,12 +573,29 @@ function DrawLowestPrice()
 
 async function FetchSteamApiCurrentPlayers()
 {
+	const applicationConfigElement = document.getElementById( 'application_config' );
+
+	if( !applicationConfigElement )
+	{
+		WriteLog( 'Failed to get application_config' );
+		return;
+	}
+
+	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+	const webApiBaseUrl = applicationConfig.WEBAPI_BASE_URL;
+
+	if( !webApiBaseUrl )
+	{
+		WriteLog( 'Failed to get WEBAPI_BASE_URL' );
+		return;
+	}
+
 	const params = new URLSearchParams();
 	params.set( 'origin', location.origin );
 	params.set( 'appid', GetCurrentAppID().toString() );
 
 	const response = await fetch(
-		`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?${params.toString()}`,
+		`${webApiBaseUrl}ISteamUserStats/GetNumberOfCurrentPlayers/v1/?${params.toString()}`,
 		{
 			headers: {
 				Accept: 'application/json',
