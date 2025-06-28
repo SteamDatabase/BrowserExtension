@@ -201,6 +201,10 @@ footer p {
 	border-top-right-radius: 1rem;
 }
 
+#steamchina-permissions {
+	margin-top: 3rem;
+}
+
 #star {
 	background: #000;
 	color: #fff;
@@ -210,6 +214,7 @@ footer p {
 	font-weight: bold;
 }
 
+#js-get-steamchina-permissions,
 #js-get-permissions {
 	appearance: none;
 	border: 0;
@@ -223,6 +228,8 @@ footer p {
 	width: 100%;
 }
 
+#js-get-steamchina-permissions:focus,
+#js-get-steamchina-permissions:hover,
 #js-get-permissions:focus,
 #js-get-permissions:hover {
 	background: #00f;

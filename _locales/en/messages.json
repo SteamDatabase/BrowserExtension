@@ -411,6 +411,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Grant permissions"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Enable Steam China support"
+	},
 
 	"options_footer1": {
 		"message": "Made with 💙 by <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> folks."

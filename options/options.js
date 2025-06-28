@@ -194,4 +194,41 @@
 	{
 		storeUrl.href = storeHref;
 	}
+
+	// Steam China optional permission
+	const steamChinaPermissions = {
+		origins: [
+			'https://*.steamchina.com/*',
+		],
+	};
+
+	document.getElementById( 'js-get-steamchina-permissions' ).addEventListener( 'click', ( e ) =>
+	{
+		e.preventDefault();
+
+		try
+		{
+			ExtensionApi.permissions.request( steamChinaPermissions ).catch( e =>
+			{
+				alert( `Failed to request Steam China permissions: ${e.message}` );
+			} );
+		}
+		catch( e )
+		{
+			alert( `Failed to request Steam China permissions: ${e}` );
+		}
+	} );
+
+	ExtensionApi.permissions.onAdded.addListener( HideSteamChinaButtonIfPermissionsGranted );
+	ExtensionApi.permissions.onRemoved.addListener( HideSteamChinaButtonIfPermissionsGranted );
+
+	HideSteamChinaButtonIfPermissionsGranted();
+
+	function HideSteamChinaButtonIfPermissionsGranted()
+	{
+		ExtensionApi.permissions.contains( steamChinaPermissions, ( result ) =>
+		{
+			document.getElementById( 'steamchina-permissions' ).hidden = result;
+		} );
+	}
 } )() );
