@@ -38,7 +38,7 @@ else
 		if( items[ 'enhancement-no-linkfilter' ] )
 		{
 			/** @type {NodeListOf<HTMLAnchorElement>} */
-			const links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"], a[href^="https://steamcommunity.com:/linkfilter/"]' );
+			const links = document.querySelectorAll( 'a[href^="https://steamcommunity.com/linkfilter/"]' );
 
 			for( const link of links )
 			{
