@@ -1064,7 +1064,8 @@ function AddCollapseButtonToAlreadyInLibraryBlock( options )
 
 	const link = document.createElement( 'a' );
 	link.classList.add( 'steamdb_already_in_library_link' );
-	link.href = `steam://nav/games/details/${GetCurrentAppID()}`;
+	const steamProtocol = window.location.hostname === 'store.steamchina.com' ? 'steamchina' : 'steam';
+	link.href = `${steamProtocol}://nav/games/details/${GetCurrentAppID()}`;
 	link.textContent = alreadyInLibrary.textContent;
 	alreadyInLibrary.replaceChildren( link );
 
@@ -1107,7 +1108,8 @@ function MakeGameInFamilyLinkToLibrary()
 
 	const link = document.createElement( 'a' );
 	link.classList.add( 'steamdb_already_in_library_link' );
-	link.href = `steam://nav/games/details/${GetCurrentAppID()}`;
+	const steamProtocol = window.location.hostname === 'store.steamchina.com' ? 'steamchina' : 'steam';
+	link.href = `${steamProtocol}://nav/games/details/${GetCurrentAppID()}`;
 	link.textContent = inFamilyText.textContent;
 	inFamilyText.replaceChildren( link );
 }

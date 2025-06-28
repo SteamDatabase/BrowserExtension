@@ -61,7 +61,8 @@
 			lineitem.appendChild( document.createTextNode( ' - ' ) );
 
 			link = document.createElement( 'a' );
-			link.href = 'steam://subscriptioninstall/' + item.packageid;
+			const steamProtocol = window.location.hostname === 'store.steamchina.com' ? 'steamchina' : 'steam';
+			link.href = `${steamProtocol}://subscriptioninstall/${item.packageid}`;
 			link.appendChild( document.createTextNode( 'Install' ) );
 
 			lineitem.append( link );
