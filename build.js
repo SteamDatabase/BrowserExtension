@@ -20,6 +20,7 @@ function ArchiveChromium()
 	const archive = PrepareArchive( zipPath );
 
 	const chromeManifest = structuredClone( manifest );
+	delete chromeManifest.$schema;
 	delete chromeManifest.background.scripts;
 	delete chromeManifest.browser_specific_settings;
 
@@ -35,6 +36,7 @@ function ArchiveFirefox()
 	const archive = PrepareArchive( zipPath );
 
 	const firefoxManifest = structuredClone( manifest );
+	delete firefoxManifest.$schema;
 	delete firefoxManifest.background.service_worker;
 
 	const json = JSON.stringify( firefoxManifest, null, '\t' );
