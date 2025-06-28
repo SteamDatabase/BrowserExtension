@@ -72,7 +72,20 @@ else
 
 		if( items[ 'button-app' ] )
 		{
-			const container = document.querySelector( '.apphub_OtherSiteInfo' );
+			let container = document.querySelector( '.apphub_OtherSiteInfo' );
+
+			if( !container )
+			{
+				// Steam China has no community hub
+				const headerStandardTop = document.querySelector( '.apphub_HeaderStandardTop' );
+
+				if( headerStandardTop )
+				{
+					container = document.createElement( 'div' );
+					container.className = 'apphub_OtherSiteInfo';
+					headerStandardTop.prepend( container );
+				}
+			}
 
 			if( container )
 			{
@@ -116,7 +129,20 @@ else
 
 		if( items[ 'button-pcgw' ] )
 		{
-			const container = document.querySelector( '.apphub_OtherSiteInfo' );
+			let container = document.querySelector( '.apphub_OtherSiteInfo' );
+
+			if( !container )
+			{
+				// Steam China has no community hub
+				const headerStandardTop = document.querySelector( '.apphub_HeaderStandardTop' );
+
+				if( headerStandardTop )
+				{
+					container = document.createElement( 'div' );
+					container.className = 'apphub_OtherSiteInfo';
+					headerStandardTop.prepend( container );
+				}
+			}
 
 			if( container )
 			{
