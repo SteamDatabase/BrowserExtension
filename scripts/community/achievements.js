@@ -87,26 +87,41 @@ function InitAchievements( items, isPersonal )
 
 	if( !gameLogoElement )
 	{
-		return;
-	}
-
-	const appIdElement = gameLogoElement.querySelector( 'a' );
-
-	if( !appIdElement )
-	{
+		WriteLog( 'Failed to find game logo' );
 		return;
 	}
 
 	gameLogoElement.style.viewTransitionName = 'steamdb-gamelogo';
 
-	const appidMatch = appIdElement.href.match( /\/app\/(?<id>[0-9]+)/ );
+	const appIdElement = gameLogoElement.querySelector( 'a' );
+	let appid = 0;
 
-	if( !appidMatch )
+	if( appIdElement )
 	{
-		return;
+		const appidMatch = appIdElement.href.match( /\/app\/(?<id>[0-9]+)/ );
+
+		if( appidMatch )
+		{
+			appid = Number.parseInt( appidMatch.groups.id, 10 );
+		}
+	}
+	else
+	{
+		/** @type {HTMLImageElement} */
+		const gameLogoImage = gameLogoElement.querySelector( 'img' );
+		const appidMatch = gameLogoImage.src.match( /\/apps\/(?<id>[0-9]+)/ );
+
+		if( appidMatch )
+		{
+			appid = Number.parseInt( appidMatch.groups.id, 10 );
+		}
 	}
 
-	const appid = Number.parseInt( appidMatch.groups.id, 10 );
+	if( appid === 0 )
+	{
+		WriteLog( 'Failed to find appid' );
+		return;
+	}
 
 	const extraTabs = document.createElement( 'div' );
 	extraTabs.className = 'steamdb_stats_extra_tabs';
@@ -243,7 +258,15 @@ function InitAchievements( items, isPersonal )
 	}
 
 	params.set( 'appid', appid.toString() );
-	params.set( 'language', applicationConfig.LANGUAGE );
+
+	if( applicationConfig.LANGUAGE === 'sc_schinese' )
+	{
+		params.set( 'language', 'schinese' );
+	}
+	else
+	{
+		params.set( 'language', applicationConfig.LANGUAGE );
+	}
 
 	// Request header field x-requested-with is not allowed
 	// by Access-Control-Allow-Headers in preflight response.
@@ -1326,7 +1349,7 @@ function ParseApplicationConfig()
 	/** @type {ApplicationConfig} */
 	const applicationConfig =
 	{
-		WEBAPI_BASE_URL: 'https://api.steampowered.com/',
+		WEBAPI_BASE_URL: window.location.hostname === 'my.steamchina.com' ? 'https://api.steamchina.com/' : 'https://api.steampowered.com/',
 	};
 
 	/** @type {NodeListOf<HTMLScriptElement>} */
