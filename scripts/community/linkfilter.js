@@ -4,18 +4,18 @@ GetOption( { 'enhancement-no-linkfilter': false }, ( items ) =>
 {
 	if( items[ 'enhancement-no-linkfilter' ] )
 	{
-		const element = document.createElement( 'script' );
-		element.id = 'steamdb_skip_linkfilter';
-		element.type = 'text/javascript';
-		element.src = GetLocalResource( 'scripts/community/linkfilter_injected.js' );
+		if( window.location && window.location.search )
+		{
+			const params = new URLSearchParams( window.location.search );
 
-		if( document.head )
-		{
-			document.head.insertBefore( element, document.head.firstChild );
-		}
-		else
-		{
-			document.documentElement.appendChild( element );
+			if( params.has( 'u' ) )
+			{
+				window.location.replace( params.get( 'u' ) );
+			}
+			else if( params.has( 'url' ) )
+			{
+				window.location.replace( params.get( 'url' ) );
+			}
 		}
 	}
 } );

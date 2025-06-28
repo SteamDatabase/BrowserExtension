@@ -73,7 +73,6 @@
 
 				"scripts/community/inventory.js",
 				"scripts/community/agecheck_injected.js",
-				"scripts/community/linkfilter_injected.js",
 				"scripts/community/filedetails_award_injected.js",
 				"scripts/community/market_injected.js",
 				"scripts/community/multibuy_injected.js",
