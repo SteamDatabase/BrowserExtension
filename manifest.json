@@ -52,11 +52,11 @@
 		"gecko":
 		{
 			"id": "firefox-extension@steamdb.info",
-			"strict_min_version": "109.0"
+			"strict_min_version": "128.0"
 		},
 		"gecko_android":
 		{
-			"strict_min_version": "120.0"
+			"strict_min_version": "128.0"
 		}
 	},
 	"web_accessible_resources":
