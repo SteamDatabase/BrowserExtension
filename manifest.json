@@ -571,6 +571,17 @@
 			]
 		},
 		{
+			"run_at": "document_start",
+			"matches":
+			[
+				"https://steamcommunity.com/linkfilter/*"
+			],
+			"js":
+			[
+				"scripts/community/linkfilter.js"
+			]
+		},
+		{
 			"all_frames": true,
 			"matches":
 			[
