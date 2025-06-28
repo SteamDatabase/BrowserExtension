@@ -493,6 +493,10 @@ function DrawLowestPrice()
 				break;
 		}
 	}
+	else if( currency === 'CNY' && window.location.hostname === 'store.steamchina.com' )
+	{
+		currency = 'CNY-XC';
+	}
 
 	WriteLog( `Currency is "${currency}"` );
 
