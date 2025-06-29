@@ -14,10 +14,7 @@
 		element.textContent = browserApi.i18n.getMessage( element.dataset.msg );
 	}
 
-	document.getElementById( 'options-link' ).addEventListener( 'click', function( ev )
-	{
-		ev.preventDefault();
-
-		browserApi.runtime.openOptionsPage();
-	} );
+	/** @type {HTMLAnchorElement} */
+	const optionsLink = document.querySelector( '.options-link' );
+	optionsLink.href = browserApi.runtime.getURL( 'options/options.html' );
 } )();
