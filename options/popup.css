@@ -17,11 +17,13 @@ body {
 	background: var(--bg-color);
 	color: var(--link-color);
 	font:
-		1rem/1.5 -apple-system,
-		BlinkMacSystemFont,
+		1rem/1.5 system-ui,
+		-apple-system,
 		"Segoe UI",
 		Roboto,
-		Helvetica,
+		"Helvetica Neue",
+		"Noto Sans",
+		"Liberation Sans",
 		Arial,
 		sans-serif;
 }
