@@ -13,9 +13,13 @@ html {
 	font-size: 16px;
 	background: #1b1b24;
 	accent-color: #00aff4;
+	scrollbar-gutter: stable;
+	scrollbar-color: hsl(197deg 100% 30%) #1b1b24;
+	height: 100%;
 }
 
 body {
+	height: 100%;
 	margin: 0;
 	font:
 		1rem/1.5 system-ui,
@@ -32,6 +36,8 @@ body {
 		"Segoe UI Symbol",
 		"Noto Color Emoji";
 	color: #c6d4df;
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -110,6 +116,10 @@ summary:hover {
 	max-width: 34rem;
 }
 
+.options-list {
+	margin-bottom: auto;
+}
+
 .built-in-checkboxes {
 	margin-top: 3rem;
 	color: #888;
@@ -121,6 +131,14 @@ header {
 	border-bottom: 1px solid #0197cf;
 	background-color: #000;
 	color: #fff;
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 header .logo {
@@ -240,6 +258,24 @@ footer p {
 #js-get-permissions:hover {
 	background: #00f;
 	color: #fff;
+}
+
+.search {
+	flex-grow: 1;
+
+	input {
+		background: #1b2838;
+		color: #fff;
+		border: 0;
+		border-radius: 10rem;
+		width: 100%;
+		font: inherit;
+		padding: 5px 12px 5px 40px;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
+		background-size: 16px;
+		background-position: 12px center;
+		background-repeat: no-repeat;
+	}
 }
 
 @media (max-width: 34rem) {
