@@ -76,3 +76,13 @@ body {
 		background: rgb(0 0 0 / 30%);
 	}
 }
+
+@media (pointer: coarse) {
+	body {
+		font-size: 1.2rem;
+	}
+
+	.link {
+		padding: 0.75em 1em;
+	}
+}
