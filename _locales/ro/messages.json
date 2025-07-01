@@ -156,7 +156,7 @@
 		"message": "Auto-descoperire"
 	},
 	"explore_auto_discover_description": {
-		"message": "Descoperă automat pentru a obține un card de eveniment."
+		"message": "Descoperă automat coada."
 	},
 	"explore_generating": {
 		"message": "Generează o nouă coadă de așteptare, acest lucru poate eșua dacă Steam este sub încărcare mare…"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Acordă permisiuni"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Activează suportul pentru China Steam"
 	},
 	"options_footer1": {
 		"message": "Făcut cu drag💙 de Comunitate <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."

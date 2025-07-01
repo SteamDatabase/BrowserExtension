@@ -84,7 +84,7 @@
 		"message": "Följare:"
 	},
 	"app_lowest_price": {
-		"message": "SteamDB:s lägsta registrerade pris är <b>$price$</b>",
+		"message": "SteamDBs lägsta registrerade pris är <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -156,7 +156,7 @@
 		"message": "Utforska automatiskt"
 	},
 	"explore_auto_discover_description": {
-		"message": "Utforska kön automatiskt för att få ett event-samlarkort."
+		"message": "Upptäck kön automatiskt."
 	},
 	"explore_generating": {
 		"message": "Genererar ny discovery-kö, detta kan misslyckas om Steam är under hög belastning…"
@@ -398,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Bevilja tillstånd"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktivera stöd för Steam China"
+	},
 	"options_footer1": {
 		"message": "Gjord med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
@@ -408,7 +411,7 @@
 		"message": "* Ofyllda kryssrutor indikerar inbyggda funktioner."
 	},
 	"options_header_website": {
-		"message": "SteamDB:s webbplats"
+		"message": "SteamDBs webbplats"
 	},
 	"options_header_extra_data": {
 		"message": "Extra information"

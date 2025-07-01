@@ -65,7 +65,7 @@
 		"message": "최근 업데이트:"
 	},
 	"app_depots_updated_short": {
-		"message": "업데이트됨",
+		"message": "업데이트",
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
@@ -93,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB에 기록된 최저가격: <b> $price$ </b>, 할인율: <b>-$discount$%</b>",
+		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>, 할인율: <b>-$discount$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -106,7 +106,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB에 기록된 최저가격: <b> $price$ </b>, 최근 2년 이내 최저가격: <b> $price_limited$ </b>",
+		"message": "SteamDB에 기록된 최저가격: <b>$price$</b>, 최근 2년 이내 최저가격: <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -154,9 +154,6 @@
 	},
 	"explore_auto_discover": {
 		"message": "자동탐색"
-	},
-	"explore_auto_discover_description": {
-		"message": "이벤트 카드를 얻기 위해 대기열을 자동으로 탐색합니다."
 	},
 	"explore_generating": {
 		"message": "새로운 탐색 대기열을 생성하는 중입니다. Steam 부하가 높으면 실패할 수 있습니다…"
@@ -417,7 +414,7 @@
 		"message": "버튼과 링크"
 	},
 	"options_header_inventory": {
-		"message": "인벤토리"
+		"message": "보관함"
 	},
 	"options_header_trade_offers": {
 		"message": "거래 제안"
@@ -605,7 +602,7 @@
 		"message": "나이와 생일 쿠키를 설정하고 항상 건너뛰기"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "외부 사이트에서 “Steam 을 떠나는 중입니다” 링크 필터 제거",
+		"message": "외부 사이트에서 “Steam 을 벗어납니다” 링크 필터 제거",
 		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {

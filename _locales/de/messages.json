@@ -156,7 +156,7 @@
 		"message": "Entdeckungsliste überspringen"
 	},
 	"explore_auto_discover_description": {
-		"message": "Entdeckungsliste überspringen, um eine Aktionssammelkarte zu erhalten."
+		"message": "Erkundet die gesamte Entdeckungsliste."
 	},
 	"explore_generating": {
 		"message": "Neue Entdeckungsliste wird generiert. Sollte Steam ausgelastet sein, kann dieser Prozess fehlschlagen …"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Berechtigungen erteilen"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Unterstützung für Steam-China aktivieren"
 	},
 	"options_footer1": {
 		"message": "Mit 💙 von <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>-Leuten entwickelt."

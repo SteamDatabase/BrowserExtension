@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Auto-opdag"
 	},
-	"explore_auto_discover_description": {
-		"message": "Opdag automatisk køen for at få et event kort."
-	},
 	"explore_generating": {
 		"message": "Generering af ny opdagelseskø, dette kan mislykkes, hvis Steam er under høj belastning…"
 	},

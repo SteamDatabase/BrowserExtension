@@ -156,7 +156,7 @@
 		"message": "Odkryj automatycznie"
 	},
 	"explore_auto_discover_description": {
-		"message": "Automatycznie odkryj kolejkę, aby otrzymać kartę wydarzenia."
+		"message": "Automatycznie odkryj kolejkę."
 	},
 	"explore_generating": {
 		"message": "Generowanie nowej kolejki odkryć, to może się nie udać, jeśli Steam jest pod dużym obciążeniem…"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Przyznaj uprawnienia"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Włącz obsługę Steam China"
 	},
 	"options_footer1": {
 		"message": "Stworzone z 💙 przez zespół <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."

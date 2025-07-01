@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "ค้นพบอัตโนมัติ"
 	},
-	"explore_auto_discover_description": {
-		"message": "ค้นพบคิวโดยอัตโนมัติเพื่อรับการ์ดกิจกรรม"
-	},
 	"explore_generating": {
 		"message": "กำลังสร้างคิวการค้นพบใหม่, อาจล้มเหลวได้หาก Steam กำลังทำงานหนัก..."
 	},

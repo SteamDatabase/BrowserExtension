@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Auto-objavovanie"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automaticky objavujte poradie a získajte event kartu."
-	},
 	"explore_generating": {
 		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
 	},

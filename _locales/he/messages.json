@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "גילוי אוטומטי"
 	},
-	"explore_auto_discover_description": {
-		"message": "גלה אוטומטית את הרשימה על מנת לזכות בקלף איוונט."
-	},
 	"explore_generating": {
 		"message": "צור רשימת גילוי חדשה, פעולה זו עשויה להכשל אם Steam נמצא תחת עומס כבד…"
 	},

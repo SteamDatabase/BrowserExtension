@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "自動探索佇列"
 	},
-	"explore_auto_discover_description": {
-		"message": "自動探索佇列以取得活動卡片。"
-	},
 	"explore_generating": {
 		"message": "正在產生新的探索佇列，如果 Steam 處於高負載下可能會失敗..."
 	},

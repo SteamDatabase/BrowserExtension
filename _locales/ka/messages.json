@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "ავტომატური აღმოჩენა"
 	},
-	"explore_auto_discover_description": {
-		"message": "ავტომატურად დაათვალიერე აღმოჩენის რიგი და აიღე ივენთ ქარდი."
-	},
 	"explore_generating": {
 		"message": "იქმნება ახალი აღმოჩენის რიგი, ეს შეიძლება არ მოხდეს თუ Steam დიდი დატვირთვის ქვეშაა…"
 	},

@@ -153,10 +153,10 @@
 		"message": "SteamDB tiene una opción para omitir automáticamente las páginas de verificación de edad"
 	},
 	"explore_auto_discover": {
-		"message": "Descubrir automáticamente"
+		"message": "Explorar automáticamente"
 	},
 	"explore_auto_discover_description": {
-		"message": "Descubre automáticamente la cola para obtener un cromo de evento."
+		"message": "Explorar automáticamente la cola."
 	},
 	"explore_generating": {
 		"message": "Generando nueva cola de descubrimiento, esto puede fallar si Steam está sometido a una alta demanda…"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Conceder permisos"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Activar compatibilidad para Steam China"
 	},
 	"options_footer1": {
 		"message": "Hecho con 💙 por los miembros de <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."

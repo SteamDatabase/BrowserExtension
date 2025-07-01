@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Autodescobreix"
 	},
-	"explore_auto_discover_description": {
-		"message": "Descobreix automàticament la cua per aconseguir una targeta d'esdeveniment."
-	},
 	"explore_generating": {
 		"message": "Generant una nova cua de descobriment, això pot fallar si Steam té una càrrega elevada…"
 	},

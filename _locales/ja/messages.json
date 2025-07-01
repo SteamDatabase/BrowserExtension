@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "自動検索"
 	},
-	"explore_auto_discover_description": {
-		"message": "自動的にキューを確認し、イベントカードを取得します。"
-	},
 	"explore_generating": {
 		"message": "ディスカバリーキューを生成中です。Steam に負荷がかかっている場合失敗する可能性があります..."
 	},

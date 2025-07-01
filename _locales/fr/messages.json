@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Découverte automatique"
 	},
-	"explore_auto_discover_description": {
-		"message": "Explore automatiquement la liste de découverte pour obtenir une carte d'événement."
-	},
 	"explore_generating": {
 		"message": "Génération d'une nouvelle liste de découverte, ceci peut ne pas marcher si Steam est fortement sollicité…"
 	},

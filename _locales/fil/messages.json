@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Awtomatikong pagdiskubre"
 	},
-	"explore_auto_discover_description": {
-		"message": "Awtomatikong idiskubre ang queue para makakuha ng event card."
-	},
 	"explore_generating": {
 		"message": "Bumubuo ng bagong pagdiskubre na queue, maaari itong hindi magtagumpay kung marami ang nag-access sa Steam sa parehong oras…"
 	},

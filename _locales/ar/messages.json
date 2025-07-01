@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "اكتشاف تلقائي"
 	},
-	"explore_auto_discover_description": {
-		"message": "اكتشف تلقائياً قائمة الانتظار للحصول على بطاقة حدث."
-	},
 	"explore_generating": {
 		"message": "إنشاء قائمة انتظار اكتشاف جديدة، هذا يمكن أن يفشل إذا كان Steam تحت ضغط عالي…"
 	},

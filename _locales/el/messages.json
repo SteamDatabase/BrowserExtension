@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Ανακαλύψετε-Αυτόματα"
 	},
-	"explore_auto_discover_description": {
-		"message": "Ανακαλύψτε αυτόματα την ουρά για να πάρετε μία κάρτα εκδήλωσης."
-	},
 	"explore_generating": {
 		"message": "Δημιουργία νέας σειράς ανακάλυψης, αυτό μπορεί να αποτύχει αν το Steam είναι υπό υψηλή χρησιμότητα…"
 	},

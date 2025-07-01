@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Auto-oppdag"
 	},
-	"explore_auto_discover_description": {
-		"message": "Oppdag køen automatisk for å få et hendelseskort."
-	},
 	"explore_generating": {
 		"message": "Genererer ny oppdagelseskø, dette kan feile hvis Steam opplever høy belastning…"
 	},

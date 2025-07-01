@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automatinė peržiūra"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automatiškai peržiūrėti eilę ir gauti renginio kortelę."
-	},
 	"explore_generating": {
 		"message": "Generuojama nauja peržiūros eilė, tai gali nepavykti, jei Steam yra labai apkrautas…"
 	},

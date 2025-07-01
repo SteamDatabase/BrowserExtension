@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Аутоматски-откривач"
 	},
-	"explore_auto_discover_description": {
-		"message": "Аутоматски откриј ред да би добио картицу догађаја."
-	},
 	"explore_generating": {
 		"message": "Генерисанје новог реда за откривање, ово може да пропадне ако су Steam сервери под великим притиском…"
 	},

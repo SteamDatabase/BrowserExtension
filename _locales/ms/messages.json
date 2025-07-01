@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Auto Teroka"
 	},
-	"explore_auto_discover_description": {
-		"message": "Auto teroka Senarai untuk mendapat Kad Peristiwa."
-	},
 	"explore_generating": {
 		"message": "Menjana Senarai Auto Teroka yang baru, ini mungkin gagal jika Steam dalam keadaan beban yang tinggi…"
 	},

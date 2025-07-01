@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automātiskā atklāšana"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automātiski atklājiet Discovery Queue, lai iegūtu spēļu karti."
-	},
 	"explore_generating": {
 		"message": "Tiek ģenerēta jauna Discovery Queue, šis var neizdoties, ja Steam ir pārslogots…"
 	},

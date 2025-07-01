@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Otomatik keşfet"
 	},
-	"explore_auto_discover_description": {
-		"message": "Etkinlik kartı almak için kuyruğu otomatik olarak keşfeder."
-	},
 	"explore_generating": {
 		"message": "Yeni bir keşif kuyruğu oluşturuluyor, Steam sunucuları aşırı yoğunsa bu işlem başarısız olabilir…"
 	},

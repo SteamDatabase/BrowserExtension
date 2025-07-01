@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Scopri automaticamente"
 	},
-	"explore_auto_discover_description": {
-		"message": "Scopri automaticamente la coda per ottenere una carta evento."
-	},
 	"explore_generating": {
 		"message": "Generazione nuova coda di scoperta, questo può fallire se Steam è sotto carico elevato…"
 	},

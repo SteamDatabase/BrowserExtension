@@ -152,9 +152,6 @@
 	"explore_auto_discover": {
 		"message": "Samodejno odkrij"
 	},
-	"explore_auto_discover_description": {
-		"message": "Samodejno odkrijte čakalno vrsto, da dobite kartico dogodka."
-	},
 	"explore_generating": {
 		"message": "Ustvarjanje nove čakalne vrste za odkrivanje, to lahko spodleti, če je Steam pod visoko obremenitvijo…"
 	},

@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Temuan-otomatis"
 	},
-	"explore_auto_discover_description": {
-		"message": "Temukan antrian secara otomatis untuk mendapatkan event card."
-	},
 	"explore_generating": {
 		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
 	},

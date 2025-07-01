@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Автодослідження"
 	},
-	"explore_auto_discover_description": {
-		"message": "Автоматично дослідити чергу знахідок, щоб отримати картку події."
-	},
 	"explore_generating": {
 		"message": "Генеруємо нову чергу знахідок. Це може не спрацювати, якщо Steam перебуває під високим навантаженням…"
 	},

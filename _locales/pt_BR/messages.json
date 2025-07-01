@@ -156,7 +156,7 @@
 		"message": "Explorar automaticamente"
 	},
 	"explore_auto_discover_description": {
-		"message": "Explorar automaticamente para ganhar uma carta do evento."
+		"message": "Explorar automaticamente a lista."
 	},
 	"explore_generating": {
 		"message": "Gerando lista de descobrimento… (Esta operação pode falhar caso o Steam esteja instável.)"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Solicitar permissões"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Ativar suporte para o Steam China"
 	},
 	"options_footer1": {
 		"message": "Feito com 💙 pelo pessoal do <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."

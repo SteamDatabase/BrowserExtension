@@ -152,9 +152,6 @@
 	"explore_auto_discover": {
 		"message": "স্বয়ংক্রিয়-আবিষ্কার"
 	},
-	"explore_auto_discover_description": {
-		"message": "একটি ইভেন্ট কার্ড পেতে স্বয়ংক্রিয়ভাবে কিউ আবিষ্কার করুন।"
-	},
 	"explore_generating": {
 		"message": "নতুন আবিষ্কারের সারি তৈরি করা হচ্ছে, স্টীম​ অতি ভারপ্রাপ্ত হলে এটি ব্যর্থ হতে পারে…"
 	},

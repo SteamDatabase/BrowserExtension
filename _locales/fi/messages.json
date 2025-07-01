@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automaattinen löytöjono"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automatisoi löytöjonosi saadaksesi tapahtumakortin."
-	},
 	"explore_generating": {
 		"message": "Luodaan uutta löytöjonoa, tämä voi epäonnistua jos Steam on kovassa kuormituksessa…"
 	},

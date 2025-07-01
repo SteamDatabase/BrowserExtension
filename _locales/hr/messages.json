@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automatsko otkrivanje"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automatski otkrij red čekanja za dobivanje kartice događaja."
-	},
 	"explore_generating": {
 		"message": "Generiranje novog reda otkrivanja, ovo može ne uspjeti ako je Steam pod velikim opterećenjem…"
 	},

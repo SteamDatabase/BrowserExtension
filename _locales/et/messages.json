@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automaatselt avasta"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automaatselt vaata mängud läbi et saada sündmuse kaart."
-	},
 	"explore_generating": {
 		"message": "Uue avastamisjärjekorra loomine, see võib ebaõnnestuda, kui Steam on suure koormuse all…"
 	},

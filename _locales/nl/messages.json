@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automatisch ontdekken"
 	},
-	"explore_auto_discover_description": {
-		"message": "Ontdek automatisch de wachtrij om een evenementenkaart te krijgen."
-	},
 	"explore_generating": {
 		"message": "Een nieuwe ontdekkingswachtrij aan het genereren, dit kan mislukken als Steam onder hoge druk staat…"
 	},

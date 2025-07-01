@@ -156,7 +156,7 @@
 		"message": "Auto-descobrir"
 	},
 	"explore_auto_discover_description": {
-		"message": "Descobrir automaticamente a fila para obter uma carta de evento."
+		"message": "Explorar automaticamente a fila."
 	},
 	"explore_generating": {
 		"message": "A gerar uma nova fila de descoberta, isto pode falhar se o Steam estiver sob carga elevada…"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Dar permissões"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Ativar Suporte para o Steam China"
 	},
 	"options_footer1": {
 		"message": "Feito com 💙 pela malta do <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."

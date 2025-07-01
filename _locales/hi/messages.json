@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "ऑटोमैटिक-खोज"
 	},
-	"explore_auto_discover_description": {
-		"message": "ईवेंट कार्ड प्राप्त करने के लिए कतार को खुद ब खुद रूप से खोजें।"
-	},
 	"explore_generating": {
 		"message": "नई खोज कतार उत्पन्न हो रही है, यदि स्टीम अधिक लोड में है तो यह असफल हो सकता है..."
 	},

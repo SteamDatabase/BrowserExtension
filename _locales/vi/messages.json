@@ -156,7 +156,7 @@
 		"message": "Tự động khám phá"
 	},
 	"explore_auto_discover_description": {
-		"message": "Tự động khám phá hàng chờ để nhận một thẻ sự kiện."
+		"message": "Giúp bạn lướt qua hàng khám phá mà không phải thao tác thủ công."
 	},
 	"explore_generating": {
 		"message": "Đang tạo hàng chờ khám phá mới, có thể không thành công nếu Steam bị quá tải…"
@@ -397,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Cấp quyền truy cập"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Cấp quyền để SteamDB truy cập vào Steam China (nếu cần)"
 	},
 	"options_footer1": {
 		"message": "Được phát triển với 💙 bởi <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."

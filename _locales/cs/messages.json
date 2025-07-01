@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automaticky projít"
 	},
-	"explore_auto_discover_description": {
-		"message": "Automaticky projít frontu pro získání akční karty."
-	},
 	"explore_generating": {
 		"message": "Vytváří se nová fronta doporučení; generování může selhat, pokud je Steam hodně zatížen…"
 	},

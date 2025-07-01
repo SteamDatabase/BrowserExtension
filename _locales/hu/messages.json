@@ -155,9 +155,6 @@
 	"explore_auto_discover": {
 		"message": "Automatikus felfedezés"
 	},
-	"explore_auto_discover_description": {
-		"message": "Várólista automatikus felfedezése eseménykártyák begyűjtéséért."
-	},
 	"explore_generating": {
 		"message": "Új felfedezési várólista generálása, ez meghiúsulhat, ha a Steam nagy terhelés alatt van…"
 	},
