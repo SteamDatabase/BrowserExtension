@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Otomatik keşfet"
 	},
+	"explore_auto_discover_description": {
+		"message": "Keşif kuyruğunu otomatik olarak keşfedin."
+	},
 	"explore_generating": {
 		"message": "Yeni bir keşif kuyruğu oluşturuluyor, Steam sunucuları aşırı yoğunsa bu işlem başarısız olabilir…"
 	},
@@ -394,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ İzin ver"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Steam Çin desteğini etkinleştir"
 	},
 	"options_footer1": {
 		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> kullanıcıları tarafından 💙 ile yapıldı."
