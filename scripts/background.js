@@ -745,7 +745,7 @@ function GetStoreSessionID( callback )
 					success: false,
 					error: response.includes( 'login' )
 						? 'Failed to fetch sessionid. It does not look like you are logged in to the Steam store.'
-						: 'Failed to fetch sessionid. Something went horribly wrong, you should report this issue.',
+						: 'Failed to fetch sessionid. Try reloading the page.',
 				} );
 			}
 		} )
