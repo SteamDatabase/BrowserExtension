@@ -595,7 +595,7 @@
 				"scripts/community/market_ssa.js"
 			]
 		},
-				{
+		{
 			"run_at": "document_end",
 			"matches":
 			[
