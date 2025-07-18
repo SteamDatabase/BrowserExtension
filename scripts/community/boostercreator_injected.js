@@ -26,7 +26,7 @@ function updateBoosterAvailableDate( )
 
 	if( availableDate )
 	{
-		availableDateContainer.textContent = `You will not be able to create another Booster Pack this game until ${availableDate}.`;
+		availableDateContainer.textContent = `You will not be able to create another Booster Pack for this game until ${availableDate}.`;
 	}
 	else
 	{
