@@ -700,5 +700,16 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Display CS rating history on CS2 achievements page"
+	},
+
+	"boostercreator_available_at_date": {
+		"message": "You will not be able to create another Booster Pack for this game until $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }
