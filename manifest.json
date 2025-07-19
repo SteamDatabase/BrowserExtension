@@ -78,6 +78,7 @@
 				"scripts/community/multibuy_injected.js",
 				"scripts/community/profile_award_injected.js",
 				"scripts/community/tradeoffer_injected.js",
+				"scripts/community/boostercreator_injected.js",
 				"scripts/store/account_licenses_injected.js",
 				"scripts/store/invalidate_cache_injected.js",
 				"scripts/store/registerkey_injected.js",
@@ -592,6 +593,21 @@
 			"js":
 			[
 				"scripts/community/market_ssa.js"
+			]
+		},
+		{
+			"run_at": "document_end",
+			"matches":
+			[
+				"https://steamcommunity.com/tradingcards/boostercreator*"
+			],
+			"js":
+			[
+				"scripts/community/boostercreator.js"
+			],
+			"css":
+			[
+				"styles/boostercreator.css"
 			]
 		}
 	]
