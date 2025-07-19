@@ -17,5 +17,5 @@ function emitBoosterAvailableDate( )
 	const selectedGame = gameSelector.value;
 	const rgBoosterData = window.CBoosterCreatorPage.sm_rgBoosterData[ selectedGame ];
 
-	gameSelector.dispatchEvent( new CustomEvent( 'boosterPackChange', { detail: rgBoosterData } ) );
+	gameSelector.dispatchEvent( new CustomEvent( 'steamdb-booster-game-change', { detail: rgBoosterData } ) );
 }

@@ -12,7 +12,7 @@ if( gameSelector )
 
 	// Add an event listener to catch the details about the choosen booster pack
 	// This data is sent by `boostercreator_injected.js` when the game selector changes
-	gameSelector.addEventListener( 'boosterPackChange', function( event )
+	gameSelector.addEventListener( 'steamdb-booster-game-change', function( event )
 	{
 		/** @type {CustomEvent<{ available_at_time?: string }>} */
 		const customEvent = /** @type {CustomEvent} */ ( event );
