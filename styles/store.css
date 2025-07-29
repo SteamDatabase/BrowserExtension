@@ -283,3 +283,17 @@ a.steamdb_rating:hover {
 		flex-wrap: wrap;
 	}
 }
+
+.steamdb_dev_pub_link {
+	display: inline-flex;
+	margin-left: 5px;
+	width: 14px;
+	height: 14px;
+	vertical-align: text-top;
+	opacity: 0.5;
+	transition: opacity 0.1s ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
+}

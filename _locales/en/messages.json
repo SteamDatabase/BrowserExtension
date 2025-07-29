@@ -562,6 +562,9 @@
 	"options_button_gamecards": {
 		"message": "Display SteamDB and store page buttons on game cards page"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Display SteamDB links next to developer and publisher names"
+	},
 	"options_link_subid": {
 		"message": "Display SubID under each purchase option"
 	},

@@ -20,6 +20,7 @@ else
 		'steamdb-lowest-price': true,
 		'steamdb-rating': true,
 		'steamdb-last-update': true,
+		'steamdb-dev-pub-links': true,
 		'enhancement-hide-mobile-app-button': false,
 		'collapse-already-in-library': false,
 		'enhancement-hide-install-button': true,
@@ -364,6 +365,11 @@ else
 					element.appendChild( container.cloneNode( true ) );
 				}
 			}
+		}
+
+		if( items[ 'steamdb-dev-pub-links' ] )
+		{
+			AddLinksToDevelopers();
 		}
 
 		// Add a collapse button to the "already in library" block which hides the review block
@@ -1116,4 +1122,36 @@ function MakeGameInFamilyLinkToLibrary()
 	link.href = `${steamProtocol}://nav/games/details/${GetCurrentAppID()}`;
 	link.textContent = inFamilyText.textContent;
 	inFamilyText.replaceChildren( link );
+}
+
+function AddLinksToDevelopers()
+{
+	const summaryColumns = document.querySelectorAll( '.summary.column' );
+
+	for( const container of summaryColumns )
+	{
+		const isDeveloper = container.id === 'developers_list';
+		const type = isDeveloper ? 'developer' : 'publisher';
+		const links = container.querySelectorAll( 'a' );
+
+		for( const originalLink of links )
+		{
+			const name = originalLink.textContent.trim();
+			if( !name )
+			{
+				continue;
+			}
+
+			const link = document.createElement( 'a' );
+			link.className = 'steamdb_dev_pub_link';
+			link.href = `${GetHomepage()}${type}/${encodeURIComponent( name )}/`;
+
+			const icon = document.createElement( 'img' );
+			icon.src = GetLocalResource( 'icons/white.svg' );
+			icon.dataset.tooltipText = _t( 'view_on_steamdb' );
+			link.appendChild( icon );
+
+			originalLink.insertAdjacentElement( 'afterend', link );
+		}
+	}
 }
