@@ -1126,16 +1126,43 @@ function MakeGameInFamilyLinkToLibrary()
 
 function AddLinksToDevelopers()
 {
-	const summaryColumns = document.querySelectorAll( '.summary.column' );
+	/** @type {Element[]} */
+	const rows = [];
 
-	for( const container of summaryColumns )
+	/** @type {Element} */
+	let row = document.querySelector( '#developers_list' )?.parentElement;
+	if( row )
 	{
+		rows.push( row );
+	}
+
+	// Next row is publisher, but it has no id we can use.
+	row = row?.nextElementSibling;
+	if( row )
+	{
+		rows.push( row );
+	}
+
+	for( const row of rows )
+	{
+		const container = row.querySelector( '.summary.column' );
+
+		if( !container )
+		{
+			continue;
+		}
+
 		const isDeveloper = container.id === 'developers_list';
 		const type = isDeveloper ? 'developer' : 'publisher';
 		const links = container.querySelectorAll( 'a' );
 
 		for( const originalLink of links )
 		{
+			if( originalLink.origin !== location.origin ) // Skip external links that could be added by other extensions
+			{
+				continue;
+			}
+
 			const name = originalLink.textContent.trim();
 			if( !name )
 			{
@@ -1153,5 +1180,16 @@ function AddLinksToDevelopers()
 
 			originalLink.insertAdjacentElement( 'afterend', link );
 		}
+
+		container.parentElement.classList.add( 'steamdb_dev_pub_link_container' );
 	}
+
+	// In case adding buttons causes the row to overflow, we have to ensure Steam's "plus" button gets shown
+	const script = document.createElement( 'script' );
+	script.id = 'steamdb_collapse_dev_pub_links';
+	script.type = 'text/javascript';
+	script.src = GetLocalResource( 'scripts/store/app_collapse_long_strings.js' );
+	script.dataset.homepage = GetHomepage();
+
+	document.head.appendChild( script );
 }

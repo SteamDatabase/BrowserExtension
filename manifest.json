@@ -80,6 +80,7 @@
 				"scripts/community/tradeoffer_injected.js",
 				"scripts/community/boostercreator_injected.js",
 				"scripts/store/account_licenses_injected.js",
+				"scripts/store/app_collapse_long_strings.js",
 				"scripts/store/invalidate_cache_injected.js",
 				"scripts/store/registerkey_injected.js",
 				"scripts/store/subscriptions.js"
