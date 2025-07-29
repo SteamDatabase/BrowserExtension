@@ -687,7 +687,7 @@ function DrawOnlineStatsWidget( items )
 		// Logo and link
 		const link = document.createElement( 'a' );
 		link.className = 'steamdb_stats_logo';
-		link.title = _t( 'view_on_steamdb' );
+		link.dataset.tooltipText = _t( 'view_on_steamdb' );
 		link.href = GetHomepage() + 'app/' + GetCurrentAppID() + '/charts/';
 
 		const image = document.createElement( 'img' );
