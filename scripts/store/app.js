@@ -1163,6 +1163,11 @@ function AddLinksToDevelopers()
 				continue;
 			}
 
+			if( originalLink.classList.contains( 'as-homepage' ) ) // Skip "homepage" links added by Augmented Steam
+			{
+				continue;
+			}
+
 			const name = originalLink.textContent.trim();
 			if( !name )
 			{
