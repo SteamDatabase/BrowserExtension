@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Автодослідження"
 	},
+	"explore_auto_discover_description": {
+		"message": "Виявляти чергу автоматично."
+	},
 	"explore_generating": {
 		"message": "Генеруємо нову чергу знахідок. Це може не спрацювати, якщо Steam перебуває під високим навантаженням…"
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Надати дозволи"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Увімкнути китайську в Steam"
+	},
 	"options_footer1": {
 		"message": "Зроблено з 💙 людьми зі <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
@@ -538,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Показувати кнопки SteamDB та сторінки крамниці на сторінці карток ігор"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Відображати посилання SteamDB біля імен розробників і видавців"
+	},
 	"options_link_subid": {
 		"message": "Показувати SubID під кожним варіантом придбання"
 	},
@@ -676,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Показувати історію рейтингу CS на сторінці досягнень CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Ви не зможете створити інший комплект для цієї гри до $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

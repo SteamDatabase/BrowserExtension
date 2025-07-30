@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Afișează butoanele SteamDB și magazin pe pagina cardurilor jocului"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Afișează link-urile SteamDB lângă numele dezvoltatorului și editorului"
+	},
 	"options_link_subid": {
 		"message": "Afișează subID-ul la fiecare opțiune de cumpărare"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Afişează istoricul de evaluare în CS pe pagina de realizări CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Nu veți putea crea un alt Pachet de rapel pentru acest joc până când nu veți putea $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

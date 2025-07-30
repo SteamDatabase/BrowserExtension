@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Automaattinen löytöjono"
 	},
+	"explore_auto_discover_description": {
+		"message": "Etsi jono automaattisesti."
+	},
 	"explore_generating": {
 		"message": "Luodaan uutta löytöjonoa, tämä voi epäonnistua jos Steam on kovassa kuormituksessa…"
 	},
@@ -349,6 +352,25 @@
 	"inventory_badge_none": {
 		"message": "Kunniamerkkiä ei ole luotu"
 	},
+	"spoilers_reveal": {
+		"message": "Paljasta spoilerit",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Kaaviot"
+	},
+	"popup_sales": {
+		"message": "Myynti"
+	},
+	"popup_calendar": {
+		"message": "Kalenteri"
+	},
+	"popup_patches": {
+		"message": "Paikat"
+	},
+	"popup_calculator": {
+		"message": "Laskin"
+	},
 	"options": {
 		"message": "Asetukset"
 	},
@@ -375,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Myönnä käyttöoikeudet"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Ota käyttöön Steam China -tuki"
 	},
 	"options_footer1": {
 		"message": "Tehty 💙:lla <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB:n</a> porukan toimesta."
@@ -519,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Näytä SteamDB ja kauppasivu -painikkeet keräilykorttisivulla"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Näytä SteamDB linkit kehittäjän ja julkaisijan nimen vieressä"
+	},
 	"options_link_subid": {
 		"message": "Näytä SubID jokaisen ostovaihtoedon alla"
 	},
@@ -657,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Näytä CS-luokituksen historia CS2-saavutusten sivulla"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Et voi luoda toista Booster Pack tätä peliä ennen kuin $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

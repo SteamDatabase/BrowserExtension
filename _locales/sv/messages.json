@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Visa knapp för SteamDB och butik på sidan för samlarkort"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Visa SteamDB länkar bredvid utvecklare och förlag namn"
+	},
 	"options_link_subid": {
 		"message": "Visa SubID under varje köpalternativ"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Visa CS rating historik på CS2 achievements sidan"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Du kommer inte att kunna skapa ett nytt Booster Pack för detta spel förrän $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

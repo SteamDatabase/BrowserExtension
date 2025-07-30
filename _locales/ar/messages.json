@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "اكتشاف تلقائي"
 	},
+	"explore_auto_discover_description": {
+		"message": "اكتشف قائمة الانتظار تلقائياً."
+	},
 	"explore_generating": {
 		"message": "إنشاء قائمة انتظار اكتشاف جديدة، هذا يمكن أن يفشل إذا كان Steam تحت ضغط عالي…"
 	},
@@ -353,6 +356,21 @@
 		"message": "كشف تفاصيل القصة",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "الرسوم البيانية"
+	},
+	"popup_sales": {
+		"message": "المبيعات"
+	},
+	"popup_calendar": {
+		"message": "التقويم"
+	},
+	"popup_patches": {
+		"message": "التصحيحات"
+	},
+	"popup_calculator": {
+		"message": "حاسبة"
+	},
 	"options": {
 		"message": "الخيارات"
 	},
@@ -379,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ منح الصلاحيات"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 تمكين دعم Steam China"
 	},
 	"options_footer1": {
 		"message": "صنع مع 💙 بواسطة <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -523,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "عرض أزرار صفحة SteamDB وصفحة المتجر على صفحة بطاقات الألعاب"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "عرض روابط SteamDB بجانب أسماء المطور والناشر"
+	},
 	"options_link_subid": {
 		"message": "عرض SubID تحت كل خيار شراء"
 	},
@@ -661,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "عرض سجل تصنيف CS على صفحة إنجازات CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "لن تتمكن من إنشاء حزمة معززة أخرى لهذه اللعبة حتى $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

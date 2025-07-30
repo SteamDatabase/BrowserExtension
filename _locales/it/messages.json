@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Scopri automaticamente"
 	},
+	"explore_auto_discover_description": {
+		"message": "Scopri automaticamente la coda."
+	},
 	"explore_generating": {
 		"message": "Generazione nuova coda di scoperta, questo può fallire se Steam è sotto carico elevato…"
 	},
@@ -538,6 +541,9 @@
 	"options_button_gamecards": {
 		"message": "Mostra i pulsanti SteamDB e la pagina del negozio sulla pagina delle carte di gioco"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Mostra i link SteamDB accanto ai nomi degli sviluppatori e degli editori"
+	},
 	"options_link_subid": {
 		"message": "Visualizza SubID sotto ogni opzione di acquisto"
 	},
@@ -676,5 +682,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Visualizza la cronologia del punteggio CS sulla pagina degli obiettivi di CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Non sarai in grado di creare un altro Booster Pack per questo gioco fino ad $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

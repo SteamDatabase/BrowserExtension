@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Покажи бутони SteamDB и „Страница в магазина“ на страницата за напредък на значка"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Показване на връзки към SteamDB до имената на разработчика и издателя"
+	},
 	"options_link_subid": {
 		"message": "Покажи SubID под всяка опция за покупка"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Покажи история на CS рейтинга на страницата с постижения на CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Няма да можете да създадете нов допълнителен пакет за тази игра до $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

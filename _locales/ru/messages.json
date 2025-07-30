@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Автоматический просмотр"
 	},
+	"explore_auto_discover_description": {
+		"message": "Автоматически обнаруживать очередь."
+	},
 	"explore_generating": {
 		"message": "Создание нового списка рекомендаций. Это может не сработать, если Steam находится под высокой нагрузкой…"
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Предоставить разрешения"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Включить поддержку Steam China"
+	},
 	"options_footer1": {
 		"message": "Сделано c 💙 людьми из <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
@@ -538,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Отображать кнопки \"SteamDB\" и \"Страница в магазине\" на странице игровых карточек"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Отображать ссылки SteamDB рядом с именем разработчика и издателя"
+	},
 	"options_link_subid": {
 		"message": "Отображать SubID для каждого варианта покупки"
 	},
@@ -676,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Отображать историю рейтинга CS на странице достижений CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Вы не сможете создать дополнительный набор карточек этой игры до$available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

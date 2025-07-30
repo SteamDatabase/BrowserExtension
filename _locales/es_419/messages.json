@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Mostrar botones de SteamDB y de la página de tienda en la página de tarjetas de juego"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Mostrar enlaces de SteamDB junto a nombres de los desarrolladores y editores"
+	},
 	"options_link_subid": {
 		"message": "Mostrar el id. de paquete (SubID) en cada opción de compra"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Mostrar el historial de \"Clasificación CS\" en la página de logros de CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "No podrás crear otro paquete de refuerzo para este juego hasta el $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

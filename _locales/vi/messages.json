@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Hiển thị đường dẫn tới SteamDB và trang cửa hàng trên trang huy hiệu"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Đính kèm đường dẫn tới SteamDB cạnh tên nhà phát triển và nhà phát hành"
+	},
 	"options_link_subid": {
 		"message": "Hiển thị SubID (mã gói) dưới mỗi món hàng"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Đính kèm lịch sử hệ số CS trên trang thành tựu Steam của CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Bạn hiện chưa thể tạo thêm gói bổ sung cho trò chơi này, vui lòng thử lại sau thời điểm $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

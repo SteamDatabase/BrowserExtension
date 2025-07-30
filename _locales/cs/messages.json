@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Automaticky projít"
 	},
+	"explore_auto_discover_description": {
+		"message": "Automaticky zobrazit frontu."
+	},
 	"explore_generating": {
 		"message": "Vytváří se nová fronta doporučení; generování může selhat, pokud je Steam hodně zatížen…"
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Udělit oprávnění"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Povolit podporu Steam China"
+	},
 	"options_footer1": {
 		"message": "Vytvořeno s 💙 lidmi na <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
@@ -538,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Zobrazovat tlačítka SteamDB a stránky obchodu na stránce herních karet"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Zobrazit odkazy SteamDB vedle jmen vývojářů a vydavatelů"
+	},
 	"options_link_subid": {
 		"message": "Zobrazovat SubID pod každou možností nákupu"
 	},
@@ -676,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Zobrazit historii CS hodnocení na stránce CS2 achivementů"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Do $available_date$ nebudete moci vytvořit další balíček Booster Pack pro tuto hru.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Ανακαλύψετε-Αυτόματα"
 	},
+	"explore_auto_discover_description": {
+		"message": "Ανακαλύψτε αυτόματα την ουρά."
+	},
 	"explore_generating": {
 		"message": "Δημιουργία νέας σειράς ανακάλυψης, αυτό μπορεί να αποτύχει αν το Steam είναι υπό υψηλή χρησιμότητα…"
 	},
@@ -353,6 +356,21 @@
 		"message": "Αποκάλυψη σπόιλερ",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Γραφήματα"
+	},
+	"popup_sales": {
+		"message": "Πωλήσεις"
+	},
+	"popup_calendar": {
+		"message": "Ημερολόγιο"
+	},
+	"popup_patches": {
+		"message": "Διορθώσεις"
+	},
+	"popup_calculator": {
+		"message": "Αριθμομηχανή"
+	},
 	"options": {
 		"message": "Επιλογές"
 	},
@@ -379,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Παραχώρηση δικαιωμάτων"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Ενεργοποίηση υποστήριξης Steam Κίνα"
 	},
 	"options_footer1": {
 		"message": "Φτιαγμένο με 💙 από τον λαό του <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -523,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Εμφάνιση κουμπιών SteamDB και σελίδας καταστήματος στη σελίδα καρτών παιχνιδιών"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Εμφάνιση συνδέσμων SteamDB δίπλα στα ονόματα προγραμματιστή και εκδότες"
+	},
 	"options_link_subid": {
 		"message": "Εμφάνιση SubID σε κάθε επιλογή αγοράς"
 	},
@@ -661,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Εμφάνιση του ιστορικού αξιολόγησης CS στη σελίδα επιτευγμάτων CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Δεν θα είστε σε θέση να δημιουργήσετε ένα άλλο Booster Pack για αυτό το παιχνίδι μέχρι $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

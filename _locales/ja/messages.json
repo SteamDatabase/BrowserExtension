@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "自動検索"
 	},
+	"explore_auto_discover_description": {
+		"message": "自動的にキューを発見します。"
+	},
 	"explore_generating": {
 		"message": "ディスカバリーキューを生成中です。Steam に負荷がかかっている場合失敗する可能性があります..."
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ 権限を付与する"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Steam China サポートを有効にする"
+	},
 	"options_footer1": {
 		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> のみんなと💙を持って作られました。"
 	},
@@ -538,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "ゲームカードのページに SteamDB とストアページボタンを表示"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "開発者とパブリッシャー名の隣にSteamDBリンクを表示する"
+	},
 	"options_link_subid": {
 		"message": "各購入オプションにSubIDを表示"
 	},
@@ -676,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2実績ページにCSレーティングの履歴を表示する"
+	},
+	"boostercreator_available_at_date": {
+		"message": "$available_date$ までこのゲーム用のブースターパックを作成することはできません。",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

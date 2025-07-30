@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Automātiskā atklāšana"
 	},
+	"explore_auto_discover_description": {
+		"message": "Automātiski atklāt rindu."
+	},
 	"explore_generating": {
 		"message": "Tiek ģenerēta jauna Discovery Queue, šis var neizdoties, ja Steam ir pārslogots…"
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Dot piekļuvi"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Iespējot Steam China atbalstu"
+	},
 	"options_footer1": {
 		"message": "Veidots ar 💙 no <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> komandas."
 	},
@@ -537,6 +543,9 @@
 	},
 	"options_button_gamecards": {
 		"message": "Parādīt SteamDB un veikala lapas pogas spēļu karšu lapā"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Rādīt SteamDB saites blakus izstrādātāju un izdevēju nosaukumiem"
 	},
 	"options_link_subid": {
 		"message": "Parādīt SubID zem katras pirkšanas opcijas"

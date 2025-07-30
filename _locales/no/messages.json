@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Auto-oppdag"
 	},
+	"explore_auto_discover_description": {
+		"message": "Oppdag køen automatisk."
+	},
 	"explore_generating": {
 		"message": "Genererer ny oppdagelseskø, dette kan feile hvis Steam opplever høy belastning…"
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Gi tillatelser"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktiver støtte for Steam Kina"
+	},
 	"options_footer1": {
 		"message": "Laget med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>-folkene."
 	},
@@ -538,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Vis SteamDB og butikksideknapper på spillkortsiden"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Vis SteamDB-lenker ved siden av utvikler- og utgivernavn"
+	},
 	"options_link_subid": {
 		"message": "Vis SubID under hvert kjøpsalternativ"
 	},
@@ -676,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Vis CS-rangeringshistorikk på CS2-prestasjonssiden"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Du vil ikke kunne lage enda en booster-pakke for dette spille før $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

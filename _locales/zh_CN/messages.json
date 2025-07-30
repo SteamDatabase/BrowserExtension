@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "在卡牌页面上显示 SteamDB 和商店页面按钮"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "在开发者和发行商名称旁显示对应的 SteamDB 链接"
+	},
 	"options_link_subid": {
 		"message": "在每个购买选项下显示 SubID"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "在 CS2 成就页面显示 CS 段位历史"
+	},
+	"boostercreator_available_at_date": {
+		"message": "等到 $available_date$ 后，你才能为此游戏再制作一个补充包。",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

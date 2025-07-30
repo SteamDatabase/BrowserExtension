@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Wyświetl przyciski SteamDB i strony w sklepie na stronach kart"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Wyświetlaj linki SteamDB obok nazw deweloperów i wydawców"
+	},
 	"options_link_subid": {
 		"message": "Wyświetl SubID pod każdą opcją zakupu"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Wyświetl historię klasyfikacji CS na stronie osiągnięć CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Nie będziesz w stanie utworzyć kolejnego Pakietu Boostera dla tej gry dopóki $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Exibir botões para o SteamDB e para a página na loja na página de insígnias do jogo"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Exibir links do SteamDB próximos aos nomes dos desenvolvedores e das distribuidoras"
+	},
 	"options_link_subid": {
 		"message": "Exibir o ID do pacote (SubID) sob cada opção de compra"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Exibir o histórico da CSficação na página de conquistas do CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Você não poderá criar outro pacote bônus para este jogo até $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

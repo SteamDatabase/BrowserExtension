@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Découverte automatique"
 	},
+	"explore_auto_discover_description": {
+		"message": "Découvrir automatiquement la file d'attente."
+	},
 	"explore_generating": {
 		"message": "Génération d'une nouvelle liste de découverte, ceci peut ne pas marcher si Steam est fortement sollicité…"
 	},
@@ -362,9 +365,6 @@
 	"popup_calendar": {
 		"message": "Calendrier"
 	},
-	"popup_patches": {
-		"message": ""
-	},
 	"popup_calculator": {
 		"message": "Calculateur"
 	},
@@ -394,6 +394,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Accorder les permissions"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Activer le support de Steam China"
 	},
 	"options_footer1": {
 		"message": "Fait avec le 💙 par <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -538,6 +541,9 @@
 	"options_button_gamecards": {
 		"message": "Afficher les boutons de SteamDB et de la page du magasin sur la page des cartes de jeu"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Afficher les liens SteamDB à côté des noms des développeurs et des éditeurs"
+	},
 	"options_link_subid": {
 		"message": "Afficher le SubID sous chaque option d'achat"
 	},
@@ -676,5 +682,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Afficher l'historique de note CS sur la page des succès de CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Vous ne serez pas en mesure de créer un autre Pack de Booster pour ce jeu avant $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }
