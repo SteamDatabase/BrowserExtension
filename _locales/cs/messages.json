@@ -162,7 +162,7 @@
 		"message": "Vytváří se nová fronta doporučení; generování může selhat, pokud je Steam hodně zatížen…"
 	},
 	"explore_exploring": {
-		"message": "Prozkoumávání fronty… Žádost $current$ z $total$",
+		"message": "Procházení fronty… Požadavek $current$ z $total$",
 		"placeholders": {
 			"current": {
 				"content": "$1",
@@ -305,7 +305,7 @@
 		"message": "Datum"
 	},
 	"achievements_csrating_name": {
-		"message": "CS Hodnocení"
+		"message": "Hodnocení CS"
 	},
 	"inventory_list_at": {
 		"message": "Nabídnout za $price$",
@@ -350,7 +350,7 @@
 		}
 	},
 	"inventory_badge_none": {
-		"message": "Žádný odznak vytvořen"
+		"message": "Nevytvořen žádný odznak"
 	},
 	"spoilers_reveal": {
 		"message": "Odhalit spoilery",
@@ -369,7 +369,7 @@
 		"message": "Patche"
 	},
 	"popup_calculator": {
-		"message": "Kalkulátor"
+		"message": "Kalkulačka"
 	},
 	"options": {
 		"message": "Možnosti"
@@ -393,7 +393,7 @@
 		"message": "Zanechat recenzi pro toto rozšíření"
 	},
 	"options_permissions_description": {
-		"message": "Toto rozšíření vyžaduje další oprávnění, aby správně fungovalo na stránkách SteamDB, Obchod Steam a Komunita Steam."
+		"message": "Toto rozšíření vyžaduje další oprávnění, aby správně fungovalo na stránkách SteamDB, Obchod Steam a Komunita Steam."
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Udělit oprávnění"
@@ -408,7 +408,7 @@
 		"message": "Jedná se o <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, díky všem přispěvatelům!"
 	},
 	"options_disabled_checkboxes": {
-		"message": "* Vypnutá zaškrtávátka označují vestavěné funkce."
+		"message": "* Vypnutá zaškrtávátka znamenají vestavěné funkce."
 	},
 	"options_header_website": {
 		"message": "Webové stránky SteamDB"
@@ -429,13 +429,13 @@
 		"message": "Achievementy"
 	},
 	"options_header_enhancements": {
-		"message": "Rozšíření"
+		"message": "Vylepšení"
 	},
 	"options_website_explanation": {
 		"message": "Popis"
 	},
 	"options_website_explanation1": {
-		"message": "Pokud je tato možnost zapnutá, rozšíření bude vyžadovat některá uživatelská data (na seznamu přání, sledováno, ignorováno a položky v košíku) z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Obchodu Steam</a>, která budou použita pro zvýrazňování webu."
+		"message": "Pokud je tato možnost zapnutá, rozšíření bude stahovat některá uživatelská data (seznam přání, vlastněno, sledováno, ignorováno a položky v košíku) z <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Obchodu Steam</a>, která budou použita pro zvýrazňování webu."
 	},
 	"options_website_explanation2": {
 		"message": "Aby to fungovalo, musíte být přihlášeni do Obchodu Steam."
@@ -462,10 +462,10 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Povolit skript bezplatných balíčků</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Povolit další filtrování na stránkách <a href=\"https://steamdb.info/sales/\" target=\"_blank\">slev</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčků</a>"
+		"message": "Povolit další filtrování na stránkách <a href=\"https://steamdb.info/sales/\" target=\"_blank\">slev</a> a <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">balíčků</a>"
 	},
 	"options_website_family": {
-		"message": "Zvýraznit aplikace vlastněné rodinou (vyžaduje další žádost)"
+		"message": "Zvýraznit aplikace vlastněné rodinou (je třeba webový požadavek navíc)"
 	},
 	"options_extra_data": {
 		"message": "Další data načítaná ze $domain$",
@@ -477,7 +477,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "Pokud je zvolena volba \"$options_online_stats$\" nebo \"$options_steamdb_last_update$, rozšíření provede zabezpečený požadavek na $domain$ pro získání aktuálního počtu hráčů a data poslední aktualizace hry.",
+		"message": "Pokud je povolena volba „$options_online_stats$“ nebo „$options_steamdb_last_update$“, rozšíření provede zabezpečený požadavek na $domain$ pro získání aktuálního počtu hráčů a data poslední aktualizace hry.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -494,7 +494,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "Pokud je volba \"$options_steamdb_lowest_price$\" povolena, rozšíření provede zabezpečený požadavek na $domain$ s vaší měnou (kterou považuje Steam za vaši) pro získání zaznamenané ceny specifické hry.",
+		"message": "Pokud je povolena volba „$options_steamdb_lowest_price$“, rozšíření provede zabezpečený požadavek na $domain$ s vaší měnou (kterou považuje Steam za vaši) pro získání zaznamenané ceny specifické hry.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -507,7 +507,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "Pokud je volba \"$options_achievement_groups$\" povolena, rozšíření provede zabezpečený požadavek na $domain$ za účelem seskupení achievementů na osobní stránce achievementů pomocí údajů získaných ze Steam Hunters.",
+		"message": "Pokud je povolena volba „$options_achievement_groups$“, rozšíření provede zabezpečený požadavek na $domain$ za účelem seskupení achievementů na osobní stránce achievementů pomocí údajů získaných ze Steam Hunters.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -555,7 +555,7 @@
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
-		"message": "Přidat odkaz na SteamDB pro všechny produkty na stránce vašich licencí"
+		"message": "Přidat odkaz pro každý balíček na stránce vašich licencí"
 	},
 	"options_profile_calculator": {
 		"message": "Přidat odkaz na kalkulačku v komunitních profilech"
@@ -564,7 +564,7 @@
 		"message": "Na stránce inventáře přesunout výběr hry na stranu"
 	},
 	"options_link_inventory": {
-		"message": "Přidat ke všem dárkům a kupónům v inventáři odkaz na SteamDB"
+		"message": "Přidat ke všem dárkům a kupónům v inventáři odkaz na SteamDB"
 	},
 	"options_link_inventory_gift_subid": {
 		"message": "Správně určit SubID dárků ve vašem inventáři"
@@ -599,7 +599,7 @@
 		"message": "Viz vysvětlení na GitHubu"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
-		"message": "Potlačit upozornění „tento obchod vypadá podezřele“ a „jste si jistí, že se jedná o dárek?“ v obchodních nabídkách"
+		"message": "Potlačit v obchodních nabídkách upozornění „tento obchod vypadá podezřele“ a „jste si jisti, že se jedná o dárek?“"
 	},
 	"options_enhancement_tradeoffer_better_errors": {
 		"message": "Zobrazit lepší chybové zprávy místo kryptických číselných chyb od Valve"
@@ -629,7 +629,7 @@
 		"message": "Zobrazovat hodnocení SteamDB na stránkách produktů"
 	},
 	"options_enhancement_appicon": {
-		"message": "Zobrazovat ikony produktů na stránkách obchodu a komunity",
+		"message": "Zobrazovat ikony produktů na stránkách obchodu a komunity",
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
@@ -655,7 +655,7 @@
 		"message": "Někteří vývojáři vkládají do popisu produktu megabajty obrázků, které se mohou dlouho načítat; obrázek se načte po kliknutí na ikonu"
 	},
 	"options_enhancement_award_popup_url": {
-		"message": "Podporovat parametr $award$ v odkazech na profily a sdílené soubory",
+		"message": "Podporovat parametry $award$ v profilu a odkazech na sdílené soubory",
 		"placeholders": {
 			"award": {
 				"content": "<code>award</code>"
@@ -684,10 +684,10 @@
 		"message": "Zobrazovat ikonu zámku na uzamčených achievementech"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Zobrazit historii CS hodnocení na stránce CS2 achivementů"
+		"message": "Zobrazit historii hodnocení CS na stránce achivementů CS2"
 	},
 	"boostercreator_available_at_date": {
-		"message": "Do $available_date$ nebudete moci vytvořit další balíček Booster Pack pro tuto hru.",
+		"message": "Nebudete moci vytvořit další Booster Pack pro tuto hru do $available_date$.",
 		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {

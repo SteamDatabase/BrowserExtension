@@ -155,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "自動探索佇列"
 	},
+	"explore_auto_discover_description": {
+		"message": "自動探索佇列。"
+	},
 	"explore_generating": {
 		"message": "正在產生新的探索佇列，如果 Steam 處於高負載下可能會失敗..."
 	},
@@ -395,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️授予權限"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 啟用蒸汽平台支援"
+	},
 	"options_footer1": {
 		"message": "由 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> 人員用 💙 發電。"
 	},
@@ -538,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "在遊戲主頁顯示 SteamDB 和商店頁面按鈕"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "在開發人員和發行商的名稱旁邊顯示 SteamDB 連結"
+	},
 	"options_link_subid": {
 		"message": "在每個購買選項底下顯示 SubID"
 	},
@@ -676,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "在CS2成就頁面顯示CS評級歷史"
+	},
+	"boostercreator_available_at_date": {
+		"message": "您將無法為此遊戲合成另一個擴充包 $available_date$。",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

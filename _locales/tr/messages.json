@@ -544,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Rozet ilerleme sayfalarına SteamDB ve mağaza butonu ekle"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Geliştirici ve yayıncı adlarının yanında SteamDB bağlantılarını göster"
+	},
 	"options_link_subid": {
 		"message": "Her satın alma seçeneğinin altında SubID'yi göster"
 	},
@@ -682,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2'nin başarımlarında CS derecelerini göster"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Bu oyun için $available_date$ tarihine kadar başka bir Hızlandırma Paketi oluşturamazsınız.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

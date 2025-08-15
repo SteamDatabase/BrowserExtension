@@ -398,6 +398,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Giv tilladelser"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktiver Steam China understøttelse"
+	},
 	"options_footer1": {
 		"message": "Lavet med 💙 af <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> folks."
 	},

@@ -545,7 +545,7 @@
 		"message": "Auf der Sammelkartenseite Buttons für SteamDB und die Shopseite anzeigen"
 	},
 	"options_steamdb_dev_pub_links": {
-		"message": "SteamDB Links neben den Namen der Entwickler und Publisher anzeigen"
+		"message": "SteamDB-Verlinkungen neben den Namen der Entwickler und Publisher anzeigen"
 	},
 	"options_link_subid": {
 		"message": "SubID unter jeder Kaufoption anzeigen"

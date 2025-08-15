@@ -685,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Parādīt CS reitinga vēsturi uz CS2 sasniegumu lapas"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Jūs nevarēsiet izveidot vēl vienu Booster Pack šai spēlei līdz $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

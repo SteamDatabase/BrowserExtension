@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Ajoute des liens SteamDB et des fonctionnalités au magasin et à la communauté Steam. Affiche les prix et statistiques les plus bas.",
+		"message": "Ajoute des liens SteamDB, plus de fonctionnalités sur le magasin et la communauté Steam, les prix de jeu les plus bas et des stats.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -364,6 +364,9 @@
 	},
 	"popup_calendar": {
 		"message": "Calendrier"
+	},
+	"popup_patches": {
+		"message": "Correctifs"
 	},
 	"popup_calculator": {
 		"message": "Calculateur"
