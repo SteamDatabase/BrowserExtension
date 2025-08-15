@@ -41,9 +41,12 @@
 	}
 
 	// Inject a script into the page, so we can access page Steam variables
-	const script = document.createElement( 'script' );
-	script.id = 'steamdb_boostercreator';
-	script.type = 'text/javascript';
-	script.src = GetLocalResource( 'scripts/community/boostercreator_injected.js' );
-	document.head.appendChild( script );
+	setTimeout( () =>
+	{
+		const script = document.createElement( 'script' );
+		script.id = 'steamdb_boostercreator';
+		script.type = 'text/javascript';
+		script.src = GetLocalResource( 'scripts/community/boostercreator_injected.js' );
+		document.head.appendChild( script );
+	}, 0 );
 } )() );
