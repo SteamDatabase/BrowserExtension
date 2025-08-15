@@ -157,7 +157,7 @@
 				case 11: explanation = 'This trade offer is not currently active. It may have been previously accepted or canceled.'; break;
 				case 16: explanation = 'The Steam Community servers did not get a timely reply from the economy server. Your offer may or may not have been sent.<br><br>Please check your sent trade offers.'; break;
 				case 20: explanation = 'The trade offer server is temporarily unavailable.'; break;
-				case 25: explanation = 'You cannot send this trade offer because you have exceeded your active offer limit.<br><br>You are limited to 5 outstanding trade offers to a single user, and 30 outstanding trade offers in total.'; break;
+				case 25: explanation = 'You cannot send this trade offer because you have exceeded your active offer limit.<br><br>You are limited to 5 outstanding trade offers to a single user, and 30 outstanding trade offers in total.<br><br>If you are accepting a trade offer, then your inventory for a particular game may be full.'; break;
 				case 26: explanation = 'One or more of the items in this trade offer is no longer present in the inventory from which it is being requested.<br><br>Please check all items to ensure that they still exist and are tradable.'; break;
 			}
 
