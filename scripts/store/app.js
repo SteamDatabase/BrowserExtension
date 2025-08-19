@@ -305,8 +305,8 @@ else
 
 			if( positiveVoteText && negativeVoteText )
 			{
-				const positiveVotes = Number.parseInt( positiveVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
-				const totalVotes = positiveVotes + Number.parseInt( negativeVoteText.textContent.replace( /[(.,)]/g, '' ), 10 );
+				const positiveVotes = Number.parseInt( positiveVoteText.textContent.replace( /[(.,\s)]/g, '' ), 10 );
+				const totalVotes = positiveVotes + Number.parseInt( negativeVoteText.textContent.replace( /[(.,\s)]/g, '' ), 10 );
 				const average = positiveVotes / totalVotes;
 				const score = average - ( average - 0.5 ) * ( 2 ** -Math.log10( totalVotes + 1 ) );
 
