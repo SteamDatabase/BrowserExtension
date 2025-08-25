@@ -31,8 +31,8 @@ GetOption( { 'enhancement-skip-agecheck': false }, ( items ) =>
 		dateFuture.setFullYear( dateFuture.getFullYear() + 1 );
 		const date = dateFuture.toUTCString();
 
-		document.cookie = 'wants_mature_content=1; expires=' + date + '; path=/; Secure; SameSite=Lax;';
-		document.cookie = 'mature_content=1; expires=' + date + '; path=/; Secure; SameSite=Lax;';
+		document.cookie = 'wants_mature_content=1; expires=' + date + '; path=/app/; Secure; SameSite=Lax;';
+		document.cookie = 'wants_mature_content=1; expires=' + date + '; path=/bundle/; Secure; SameSite=Lax;';
 		document.cookie = 'lastagecheckage=1-January-1900; expires=' + date + '; path=/; Secure; SameSite=Lax;';
 		document.cookie = 'birthtime=-' + ( 30 ** 6 ) + '; expires=' + date + '; path=/; Secure; SameSite=Lax;';
 
