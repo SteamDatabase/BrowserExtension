@@ -274,13 +274,20 @@ a.steamdb_rating:hover {
 }
 
 @media (max-width: 500px) {
-	html.responsive .steamdb_stats .block_content_inner {
-		margin-top: 0;
-	}
-
 	.steamdb_saleitem_claim,
 	.steamdb_cheat_queue {
 		flex-wrap: wrap;
+	}
+
+	html.responsive .responsive_apppage_details_left.block.steamdb_stats {
+		background-color: #1B2838 !important;
+		border-radius: 4px;
+		padding: 0 !important;
+
+		.block_content_inner {
+			margin: 0;
+			padding: 6px 8px;
+		}
 	}
 }
 

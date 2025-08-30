@@ -707,7 +707,7 @@ function DrawOnlineStatsWidget( items )
 		blockInner.className = 'block_content_inner';
 
 		block = document.createElement( 'div' );
-		block.className = 'block responsive_apppage_details_right steamdb_stats';
+		block.className = 'block responsive_apppage_details_left steamdb_stats';
 		block.appendChild( blockInner );
 
 		// Logo and link
