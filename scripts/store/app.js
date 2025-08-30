@@ -325,44 +325,70 @@ else
 					ratingClass = 'average';
 				}
 
-				const container = document.createElement( 'div' );
-				container.className = 'user_reviews_summary_row';
-				container.dataset.tooltipText = _t( 'app_steamdb_rating_tooltip', [ FormatNumber( positiveVotes ), FormatNumber( totalVotes ) ] );
-
-				const subtitle = document.createElement( 'div' );
-				subtitle.className = 'subtitle column';
-				subtitle.textContent = _t( 'app_steamdb_rating' );
-
-				const summary = document.createElement( 'div' );
-				summary.className = 'summary column';
-
-				const link = document.createElement( 'a' );
-				link.className = `steamdb_rating steamdb_rating_${ratingClass}`;
-				link.href = `${GetHomepage()}app/${GetCurrentAppID()}/charts/#reviews`;
-				link.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
-				summary.appendChild( link );
-
-				const responsiveText = document.createElement( 'span' );
-				responsiveText.className = 'responsive_reviewdesc_short';
-				responsiveText.textContent = _t( 'app_steamdb_rating_responsive' );
-				summary.appendChild( responsiveText );
-
-				container.appendChild( subtitle );
-				container.appendChild( summary );
-
-				let element = document.querySelector( '#userReviews' );
-				if( element )
+				const desktopReviews = document.querySelector( '#userReviews' );
+				if( desktopReviews )
 				{
+					const container = document.createElement( 'div' );
+					container.className = 'user_reviews_summary_row';
+					container.dataset.tooltipText = _t( 'app_steamdb_rating_tooltip', [ FormatNumber( positiveVotes ), FormatNumber( totalVotes ) ] );
+
+					const subtitle = document.createElement( 'div' );
+					subtitle.className = 'subtitle column';
+					subtitle.textContent = _t( 'app_steamdb_rating' );
+					container.append( subtitle );
+
+					const summary = document.createElement( 'div' );
+					summary.className = 'summary column';
+					container.append( summary );
+
+					const link = document.createElement( 'a' );
+					link.className = `steamdb_rating steamdb_rating_${ratingClass}`;
+					link.href = `${GetHomepage()}app/${GetCurrentAppID()}/charts/#reviews`;
+					link.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
+					summary.append( link );
+
 					// Need an extra div wrapper because Valve's tooltip bind code looks inside added nodes
 					const wrapper = document.createElement( 'div' );
 					wrapper.append( container );
-					element.append( wrapper );
+					desktopReviews.append( wrapper );
 				}
 
-				element = document.querySelector( '#userReviews_responsive' );
-				if( element )
+				const mobileReviews = document.querySelector( '#userReviews_responsive' );
+				if( mobileReviews )
 				{
-					element.appendChild( container.cloneNode( true ) );
+					const container = document.createElement( 'a' );
+					container.className = 'user_reviews_summary_row';
+					container.href = `${GetHomepage()}app/${GetCurrentAppID()}/charts/#reviews`;
+
+					// this element is not even visible
+					const subtitle = document.createElement( 'div' );
+					subtitle.className = 'subtitle column';
+					subtitle.textContent = _t( 'app_steamdb_rating' );
+					container.append( subtitle );
+
+					const summary = document.createElement( 'div' );
+					summary.className = 'summary column';
+					container.append( summary );
+
+					const responsiveText = document.createElement( 'span' );
+					responsiveText.className = 'responsive_reviewdesc_short';
+					summary.append( responsiveText );
+
+					const spanText = document.createElement( 'span' );
+					spanText.className = 'desc_short';
+					spanText.textContent = _t( 'app_steamdb_rating' );
+					responsiveText.append( spanText );
+
+					responsiveText.append( document.createTextNode( ' ' ) );
+
+					const span = document.createElement( 'span' );
+					span.className = `steamdb_rating steamdb_rating_${ratingClass}`;
+					span.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
+					responsiveText.append( span );
+
+					responsiveText.append( document.createTextNode( ` (${FormatNumber( totalVotes )})` ) );
+
+					mobileReviews.appendChild( container );
 				}
 			}
 		}

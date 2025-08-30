@@ -186,19 +186,19 @@ html.responsive .game_area_purchase_game a.steamdb_link {
 	unicode-bidi: plaintext;
 }
 
-a.steamdb_rating.steamdb_rating_good {
+.steamdb_rating.steamdb_rating_good {
 	color: #6c3 !important;
 }
 
-a.steamdb_rating.steamdb_rating_average {
+.steamdb_rating.steamdb_rating_average {
 	color: #fc3 !important;
 }
 
-a.steamdb_rating.steamdb_rating_poor {
+.steamdb_rating.steamdb_rating_poor {
 	color: #e60 !important;
 }
 
-a.steamdb_rating.steamdb_rating_white {
+.steamdb_rating.steamdb_rating_white {
 	color: #aaa !important;
 }
 
