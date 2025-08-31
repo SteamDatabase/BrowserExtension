@@ -328,8 +328,9 @@ else
 				const desktopReviews = document.querySelector( '#userReviews' );
 				if( desktopReviews )
 				{
-					const container = document.createElement( 'div' );
+					const container = document.createElement( 'a' );
 					container.className = 'user_reviews_summary_row';
+					container.href = `${GetHomepage()}app/${GetCurrentAppID()}/charts/#reviews`;
 					container.dataset.tooltipText = _t( 'app_steamdb_rating_tooltip', [ FormatNumber( positiveVotes ), FormatNumber( totalVotes ) ] );
 
 					const subtitle = document.createElement( 'div' );
@@ -341,11 +342,15 @@ else
 					summary.className = 'summary column';
 					container.append( summary );
 
-					const link = document.createElement( 'a' );
+					const link = document.createElement( 'span' );
 					link.className = `steamdb_rating steamdb_rating_${ratingClass}`;
-					link.href = `${GetHomepage()}app/${GetCurrentAppID()}/charts/#reviews`;
 					link.textContent = ( score * 100 ).toFixed( 2 ) + '% ';
 					summary.append( link );
+
+					const count = document.createElement( 'span' );
+					count.className = 'responsive_hidden';
+					count.textContent = ` (${FormatNumber( totalVotes )})`;
+					summary.append( count );
 
 					// Need an extra div wrapper because Valve's tooltip bind code looks inside added nodes
 					const wrapper = document.createElement( 'div' );
