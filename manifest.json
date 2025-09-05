@@ -223,6 +223,7 @@
 			],
 			"js":
 			[
+				"scripts/common.js",
 				"scripts/store/account_licenses.js"
 			],
 			"css":
