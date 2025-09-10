@@ -2,12 +2,6 @@
 
 setTimeout( () =>
 {
-	const script = document.createElement( 'script' );
-	script.id = 'steamdb_disable_tooltips';
-	script.type = 'text/javascript';
-	script.src = GetLocalResource( 'scripts/store/account_licenses_injected.js' );
-	document.documentElement.append( script );
-
 	GetOption( { 'link-accountpage': true }, ( items ) =>
 	{
 		const addLinks = items[ 'link-accountpage' ];

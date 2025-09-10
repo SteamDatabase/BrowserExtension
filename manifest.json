@@ -74,12 +74,9 @@
 				"scripts/community/inventory.js",
 				"scripts/community/agecheck_injected.js",
 				"scripts/community/filedetails_award_injected.js",
-				"scripts/community/market_injected.js",
-				"scripts/community/multibuy_injected.js",
 				"scripts/community/profile_award_injected.js",
 				"scripts/community/tradeoffer_injected.js",
 				"scripts/community/boostercreator_injected.js",
-				"scripts/store/account_licenses_injected.js",
 				"scripts/store/app_collapse_long_strings.js",
 				"scripts/store/invalidate_cache_injected.js",
 				"scripts/store/registerkey_injected.js",
@@ -228,6 +225,18 @@
 			"css":
 			[
 				"styles/account_licenses.css"
+			]
+		},
+		{
+			"run_at": "document_start",
+			"world": "MAIN",
+			"matches":
+			[
+				"https://store.steampowered.com/account/licenses*"
+			],
+			"js":
+			[
+				"scripts/store/account_licenses_injected.js"
 			]
 		},
 		{
@@ -534,24 +543,26 @@
 		},
 		{
 			"run_at": "document_end",
+			"world": "MAIN",
 			"matches":
 			[
 				"https://steamcommunity.com/market/multibuy*"
 			],
 			"js":
 			[
-				"scripts/community/multibuy.js"
+				"scripts/community/multibuy_injected.js"
 			]
 		},
 		{
 			"run_at": "document_start",
+			"world": "MAIN",
 			"matches":
 			[
 				"https://steamcommunity.com/market/*"
 			],
 			"js":
 			[
-				"scripts/community/market.js"
+				"scripts/community/market_injected.js"
 			],
 			"css":
 			[
