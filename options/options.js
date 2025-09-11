@@ -141,14 +141,14 @@
 
 		try
 		{
-			ExtensionApi.permissions.request( permissions ).catch( e =>
+			ExtensionApi.permissions.request( permissions ).catch( ex =>
 			{
-				alert( `Failed to request permissions: ${e.message}` );
+				alert( `Failed to request permissions: ${ex.message}` );
 			} );
 		}
-		catch( e )
+		catch( ex )
 		{
-			alert( `Failed to request permissions: ${e}` );
+			alert( `Failed to request permissions: ${ex}` );
 		}
 	} );
 

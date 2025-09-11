@@ -89,7 +89,6 @@ export default[
 			"no-nested-ternary": "off",
 			"no-param-reassign": "off",
 			"no-plusplus": "off",
-			"no-shadow": "off",
 			"no-tabs": "off",
 			"no-ternary": "off",
 			"no-trailing-spaces": [ "error" ],

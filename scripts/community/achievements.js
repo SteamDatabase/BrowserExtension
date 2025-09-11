@@ -785,10 +785,10 @@ function InitAchievements( items, isPersonal )
 
 			if( isCompareView )
 			{
-				const image = document.createElement( 'img' );
-				image.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare && achievement.icon_gray ? achievement.icon : achievement.icon_gray}`;
-				image.className = 'steamdb_achievement_image steamdb_achievement_image_compare';
-				element.append( image );
+				const imageCompare = document.createElement( 'img' );
+				imageCompare.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare && achievement.icon_gray ? achievement.icon : achievement.icon_gray}`;
+				imageCompare.className = 'steamdb_achievement_image steamdb_achievement_image_compare';
+				element.append( imageCompare );
 			}
 
 			return element;
@@ -1180,10 +1180,10 @@ function InitAchievements( items, isPersonal )
 			{
 				dlcCapsulesPromise.then( ( images ) =>
 				{
-					for( const [ appid, url ] of images )
+					for( const [ dlcAppId, url ] of images )
 					{
 						/** @type {NodeListOf<HTMLImageElement>} */
-						const imageTags = document.querySelectorAll( `.steamdb_achievements_game_logo[data-appid="${appid}"]` );
+						const imageTags = document.querySelectorAll( `.steamdb_achievements_game_logo[data-appid="${dlcAppId}"]` );
 
 						for( const image of imageTags )
 						{
@@ -1590,10 +1590,10 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 
 				StartViewTransition( RedrawSortedAchievements );
 			} )
-			.catch( e =>
+			.catch( ex =>
 			{
-				WriteLog( e );
-				alert( `Failed to sort achievements: ${e.message}` );
+				WriteLog( ex );
+				alert( `Failed to sort achievements: ${ex.message}` );
 			} );
 	}, { once: true } );
 }

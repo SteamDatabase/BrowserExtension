@@ -2,13 +2,12 @@
 
 'use strict';
 
-const container = document.getElementById( 'error_box' );
 const language = GetLanguage();
 const numberFormatter = new Intl.NumberFormat( language );
 
-if( container )
+if( document.getElementById( 'error_box' ) )
 {
-	AddLinksInErrorBox( container );
+	AddLinksInErrorBox( document.getElementById( 'error_box' ) );
 }
 else
 {
@@ -280,9 +279,9 @@ else
 			// Bundles
 			container = document.querySelectorAll( 'input[name="bundleid"]' );
 
-			for( const element of container )
+			for( const bundleElement of container )
 			{
-				InsertPurchaseBlockId( element.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( element.value, 10 ) );
+				InsertPurchaseBlockId( bundleElement.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( bundleElement.value, 10 ) );
 			}
 
 			// We have to inject our JS directly into the page to hook Steam's functionatily
@@ -1174,9 +1173,9 @@ function AddLinksToDevelopers()
 		rows.push( row );
 	}
 
-	for( const row of rows )
+	for( const innerRow of rows )
 	{
-		const container = row.querySelector( '.summary.column' );
+		const container = innerRow.querySelector( '.summary.column' );
 
 		if( !container )
 		{
