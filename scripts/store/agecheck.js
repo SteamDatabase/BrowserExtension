@@ -4,16 +4,17 @@
 
 if( GetCurrentAppID() > 0 )
 {
-	const elementIdsToTry =
+	const selectorsToTry =
 	[
-		'error_box',
-		'app_agegate',
-		'agegate_box',
+		'#error_box',
+		'#app_agegate',
+		'#agegate_box',
+		'.agegate_age_validation',
 	];
 
-	for( const id of elementIdsToTry )
+	for( const selector of selectorsToTry )
 	{
-		const container = document.getElementById( id );
+		const container = document.querySelector( selector );
 
 		if( container )
 		{
