@@ -9,9 +9,9 @@ if( document.getElementById( 'error_box' ) )
 {
 	AddLinksInErrorBox( document.getElementById( 'error_box' ) );
 }
-else if( document.querySelector( 'agegate_age_validation' ) )
+else if( document.querySelector( '.agegate_age_validation' ) )
 {
-	AddLinksInErrorBox( document.querySelector( 'agegate_age_validation' ) );
+	AddLinksInErrorBox( document.querySelector( '.agegate_age_validation' ) );
 }
 else
 {
