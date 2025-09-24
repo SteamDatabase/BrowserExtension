@@ -451,23 +451,19 @@ function DrawLowestPrice()
 	{
 		// We only need to know the country if currency is USD
 		// as all other currencies are uniquely mapped already
-		const script = document.evaluate( '//script[contains(text(), "EnableSearchSuggestions")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+		const applicationConfigElement = document.getElementById( 'application_config' );
 		let country = null;
 
-		if( script )
+		if( applicationConfigElement )
 		{
-			const result = script.textContent.match( /EnableSearchSuggestions\(.+?'(?<cc>[A-Z]{2})',/ );
+			const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+			country = applicationConfig.COUNTRY;
 
-			if( result )
-			{
-				country = result.groups.cc;
-
-				WriteLog( `Matched country as "${country}" from search script` );
-			}
-			else
-			{
-				WriteLog( 'Failed to find country in search script' );
-			}
+			WriteLog( `Matched country as "${country}"` );
+		}
+		else
+		{
+			WriteLog( 'Failed to find application_config element' );
 		}
 
 		// Map countries that use USD but different pricing region to their own unique currency name
