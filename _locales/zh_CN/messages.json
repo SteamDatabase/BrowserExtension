@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB 好评率："
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " SteamDB 评分",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "此游戏的 $total$ 篇用户评测中有 $positive$ 篇好评 (所有购买类型)",
 		"placeholders": {

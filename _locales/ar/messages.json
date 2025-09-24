@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "تقييم SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " تقييم STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ من $total$ مراجعات إيجابية (جميع طرق الشراء)",
 		"placeholders": {

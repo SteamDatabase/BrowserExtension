@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Đánh giá SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " ĐÁNH GIÁ STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ trên $total$ người dùng đánh giá tích cực trò chơi này (tính trên toàn bộ hình thức mua hàng)",
 		"placeholders": {

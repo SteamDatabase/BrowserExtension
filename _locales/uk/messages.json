@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Рейтинг SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " РЕЙТИНГ STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ з $total$ відгуків є позитивними (усі типи придбань)",
 		"placeholders": {

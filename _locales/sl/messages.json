@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Ocena SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " OCENA STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ od $total$ ocen je pozitivnih (vse vrste nakupov)",
 		"placeholders": {

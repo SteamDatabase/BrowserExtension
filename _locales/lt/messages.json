@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB reitingas:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB REITINGAS",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ iš $total$ atsiliepimų yra teigiami (visi pirkimo tipai)",
 		"placeholders": {

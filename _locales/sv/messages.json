@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB-betyg:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB-BETYG",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ av $total$ recensioner är positiva (alla typer av köp)",
 		"placeholders": {

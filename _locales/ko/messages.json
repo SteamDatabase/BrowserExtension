@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB 평가:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB 평가",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$total$개의 리뷰 중 $positive$개 리뷰가 긍정적 (모든 구매 유형)",
 		"placeholders": {
@@ -543,6 +539,9 @@
 	},
 	"options_button_gamecards": {
 		"message": "게임 카드 페이지에 SteamDB 및 상점 페이지 버튼 표시"
+	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Display SteamDB links next to developer and publisher names"
 	},
 	"options_link_subid": {
 		"message": "각 구매 옵션 아래에 SubID 표시"

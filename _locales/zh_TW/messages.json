@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB 評分："
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB 評分",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$total$ 則評論中的 $positive$ 則為正面評價 (所有購買類型)",
 		"placeholders": {

@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "คะแนน SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " คะแนน STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ จาก $total$ บทวิจารณ์นั้นเป็นเชิงบวก (การซื้อทุกประเภท)",
 		"placeholders": {

@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "SteamDB রেটিং:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " STEAMDB রেটিং",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$total$ রিভিউ এর $positive$ রেটিং সাক্ষাতকারিক (সকল ক্রয়ের ধরণের)",
 		"placeholders": {

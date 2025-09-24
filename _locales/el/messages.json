@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Βαθμολογία SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " ΒΑΘΜΟΛΟΓΙΑ STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ από τα $total$ σχόλια είναι θετικά (όλοι οι τύποι αγορών)",
 		"placeholders": {

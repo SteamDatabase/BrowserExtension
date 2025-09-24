@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "امتیاز SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " رتبه بندی SreamDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ از $total$ بازخوردها مثبت هستند (تمامی انواع خریدها)",
 		"placeholders": {
@@ -154,6 +150,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "اکتشاف خودکار"
+	},
+	"explore_auto_discover_description": {
+		"message": "به صورت خودکار صف را کشف کن."
 	},
 	"explore_generating": {
 		"message": "درحال ساخت صف اکتشاف جدید، این عملیات ممکن است درصورت وجود فشار بار زیاد بر روی سرور های استیم شکست بخورد…"
@@ -395,6 +394,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ اعطای دسترسی ها"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "فعال‌سازی پشتیبانی استیم چین 🇨🇳"
+	},
 	"options_footer1": {
 		"message": "ساخته شده با 💙 توسط <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> و مردم."
 	},
@@ -538,6 +540,9 @@
 	"options_button_gamecards": {
 		"message": "نمایش دکمه های SteamDB و صفحه فروشگاه در صفحات کارت های بازی ها"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "نمایش پیوندهای SteamDB در کنار نام‌های توسعه‌دهنده و ناشر"
+	},
 	"options_link_subid": {
 		"message": "نمایش SubID زیر هر یک از گزینه های خرید"
 	},
@@ -676,5 +681,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "نمایش تاریخجه امتیازات CS در صفحه دستاوردهای CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "شما تا تاریخ $available_date$ قادر به ایجاد بسته تقویتی دیگری برای این بازی نخواهید بود.",
+		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

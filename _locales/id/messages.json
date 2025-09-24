@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Rating SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " RATING STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ dari $total$ review adalah positif (semua jenis pembelian)",
 		"placeholders": {

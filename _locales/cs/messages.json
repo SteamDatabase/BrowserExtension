@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Hodnocení SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " HODNOCENÍ STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ z $total$ recenzí jsou pozitivní (všechny typy nákupů)",
 		"placeholders": {

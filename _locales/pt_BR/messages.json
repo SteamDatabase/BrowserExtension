@@ -44,10 +44,6 @@
 	"app_steamdb_rating": {
 		"message": "Avaliação do SteamDB:"
 	},
-	"app_steamdb_rating_responsive": {
-		"message": " AVALIAÇÃO DO STEAMDB",
-		"description": "Visible on the mobile version"
-	},
 	"app_steamdb_rating_tooltip": {
 		"message": "$positive$ das $total$ análises de usuários deste produto são positivas (inclui todas as formas de aquisição).",
 		"placeholders": {
