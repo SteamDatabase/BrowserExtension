@@ -44,6 +44,7 @@ export default[
 		},
 
 		rules: {
+			"jsdoc/reject-any-type": "off",
 			"jsdoc/require-description": "off",
 			"jsdoc/require-jsdoc": "off",
 			"jsdoc/require-param-description": "off",

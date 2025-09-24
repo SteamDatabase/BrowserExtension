@@ -19,10 +19,10 @@
 		"@types/firefox-webext-browser": "^120.0.3",
 		"archiver": "^7.0.1",
 		"eslint": "^9.10.0",
-		"eslint-plugin-jsdoc": "^52.0.0",
+		"eslint-plugin-jsdoc": "^60.0.0",
 		"prettier": "^3.3.2",
 		"stylelint": "^16.5.0",
-		"stylelint-config-standard": "^38.0.0",
+		"stylelint-config-standard": "^39.0.0",
 		"typescript": "^5.7.3",
 		"web-ext": "^8.0.0"
 	},

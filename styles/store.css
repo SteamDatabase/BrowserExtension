@@ -260,13 +260,6 @@ a.steamdb_rating:hover {
 }
 
 /**
- * Fix for very long game names not overflowing correctly
- */
-.apphub_AppName {
-	word-wrap: break-word;
-}
-
-/**
  * Fix date not fitting after we insert subid links
  */
 .account_table th {
