@@ -357,7 +357,7 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Omogoči skript brezplačnih paketov</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Omogočite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prodajni strani</a> in <a href=\"https://steamdb.info/bundles/\" cilju =\"_blank\">strani z zbirkami</a>"
+		"message": "Omogočite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prodajni strani</a> in <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">strani z zbirkami</a>"
 	},
 	"options_extra_data": {
 		"message": "Dodatni podatki pridobljeni iz $domain$",

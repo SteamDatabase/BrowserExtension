@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> ja 2-aasta madalaim on <b>$price_limited$%</b>",
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> ja 2-aasta madalaim on <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

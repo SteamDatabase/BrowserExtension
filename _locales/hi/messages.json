@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "$price$SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर है और 2 वर्ष का न्यूनतम मूल्य <b>$price_limited$</b> है |",
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर है और 2 वर्ष का न्यूनतम मूल्य <b>$price_limited$</b> है |",
 		"placeholders": {
 			"price": {
 				"content": "$1",

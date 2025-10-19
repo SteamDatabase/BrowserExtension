@@ -73,9 +73,6 @@
 	"app_stats_peak_today": {
 		"message": "24-ωρη απήχηση:"
 	},
-	"app_stats_alL_time_peak": {
-		"message": "Απήχηση κατά την διάρκεια:"
-	},
 	"app_stats_followers": {
 		"message": "Ακόλουθοι:"
 	},

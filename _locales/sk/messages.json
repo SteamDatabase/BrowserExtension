@@ -334,7 +334,7 @@
 		}
 	},
 	"inventory_badge_foil_level": {
-		"message": "Úroveň vášho odznaku: $level$",
+		"message": "Úroveň vášho fóliového odznaku: $level$",
 		"placeholders": {
 			"level": {
 				"content": "%level%",
@@ -594,7 +594,7 @@
 		"message": "Skryť banner „Otvoriť v Steame\""
 	},
 	"options_steamdb_rating": {
-		"message": "Zobrazovať tlačidlo na stránkach balíkov"
+		"message": "Zobraziť hodnotenie SteamDB na stránkach produktov"
 	},
 	"options_enhancement_appicon": {
 		"message": "Zobrazenie ikony produktu na stránkach obchodu a komunity",
