@@ -1,0 +1,17 @@
+- Hiển thị giá thấp nhất ở trang trò chơi (hỗ trợ tất cả các loại tiền tệ, lịch sử giá)
+- Hiển thị lượng người chơi hiện tại và đỉnh điểm ở trang trò chơi
+- Hiển thị cập nhật mới nhất ở trang trò chơi
+- Thêm liên kết dẫn tới SteamDB khắp Steam
+- Thêm liên kết dẫn tới PCGamingWiki
+- Cải thiện trang thành tựu cá nhân, gộp nhóm thành tựu theo cập nhật và DLC
+- Thêm nút bán nhanh ở kho đồ
+- Bỏ qua trang kiểm tra độ tuổi trong cửa hàng Steam
+- Tự động chấp nhận "Thỏa thuận người đăng ký" trong chợ, kho đồ và trang kích hoạt sản phẩm của Steam
+- Bỏ qua bộ lọc "Bạn đang rời khỏi Steam" dẫn tới liên kết ngoài
+- Làm nổi bật trò chơi, DLC và gói mà bạn đã sở hữu trên steamdb.info
+- Thêm vào danh sách ước, theo dõi và phớt lờ trò chơi trên steamdb.info
+- Rất nhiều tinh chỉnh và những tính năng khác
+- Tiện ích đơn giản và nhanh gọn hơn, thay thế cho Enhanced Steam và Augmented Steam
+
+Thông tin thêm: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

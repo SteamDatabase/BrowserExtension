@@ -1,0 +1,17 @@
+- 在遊戲頁面上顯示歷史低價 (支援所有的貨幣和歷史價格)
+- 在遊戲頁面上顯示目前的玩家數量和最高紀錄
+- 在遊戲頁面上顯示最新的遊戲更新
+- 在 Steam 網站上加入 SteamDB 的連結
+- 加入前往 PCGamingWiki 的連結
+- 現代化個人成就頁面並根據更新和 DLC 將成就分組
+- 在物品庫中加入快速出售按鈕
+- 跳過商店上的年齡檢查
+- 自動勾選市集、庫存與產品啟動頁面的「同意 Steam 訂戶協議」選項
+- 關閉在前往外部網站時顯示的「您正要離開 Steam 」警示
+- 在 steamdb.info 上高亮您已擁有的遊戲、追加內容和合集
+- 允許直接從 steamdb.info 上將遊戲加入願望清單、追隨和忽略
+- 許多其他的微調和功能
+- 相較於 Enhanced Steam 和 Augmented Steam 更簡單、快速的另類選擇
+
+更多資訊：https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

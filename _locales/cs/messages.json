@@ -362,7 +362,7 @@
 		"message": "Kalendář"
 	},
 	"popup_patches": {
-		"message": "Patche"
+		"message": "Záplaty"
 	},
 	"popup_calculator": {
 		"message": "Kalkulačka"
@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Odebrat filtr odkazů „Opouštíte Steam“ při přecházení na externí stránky",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Automaticky příjmat Účastnickou smlouvu na stánkách tržiště, inventáře a aktivace klíče",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skrýt v záhlaví tlačítko „Instalovat Steam“",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skrýt banner „Otevřít ve Steamu“"
@@ -684,7 +684,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nebudete moci vytvořit další Booster Pack pro tuto hru do $available_date$.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

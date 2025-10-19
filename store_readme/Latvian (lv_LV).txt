@@ -1,0 +1,17 @@
+- Parāda zemāko reģistrēto cenu spēļu lapās (atbalsta visas valūtas, pieejama cenu vēsture)
+- Parāda tajā brīdi aktīvo spēlētāju skaitu, kā arī augstāko sasniegto spēlētāju skaitu spēles lapās
+- Parāda jaunāko spēles atjauninājumu spēles lapā
+- Pievieno saites uz SteamDB visās Steam lapās
+- Pievieno saiti uz PCGamingWiki
+- Modernizē personīgo sasniegumu lapu, grupē sasniegumus pēc atjaunināšanas un DLC
+- Ātrās pārdošanas pogas inventārā
+- Izlaist vecuma pārbaudes jautājumu veikalā
+- Automātiski pieņemt abonēšanas līgumu tirgū, inventārā un atslēgu aktivizēšanas lapās
+- Noņem "Jūs pametat Steam" saišu filtru no ārējām lapām
+- Izceļ Jūsu spēles, DLCs un pakas uz steamdb.info
+- Dod iespēju pievienot spēles vēlmju sarakstam, tām piesekot vai tās atfiltrēt no skata, tieši no steamdb.info
+- Daudz citu mazāku uzlabojumu un papildinājumu
+- Vienkāršāka un ātrāka alternatīva Enhanced Steam un Augmented Steam paplašinājumiem
+
+Vairāk informācijas: https://steamdb.info/extension/
+GitHub lapa: https://github.com/SteamDatabase/BrowserExtension

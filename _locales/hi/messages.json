@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर है और 2 वर्ष का न्यूनतम मूल्य <b>$price_limited$</b> है |",
+		"message": "$price$SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर है और 2 वर्ष का न्यूनतम मूल्य <b>$price_limited$</b> है |",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -349,6 +349,21 @@
 		"message": "स्पॉइलर का खुलासा करें",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "चार्ट्स"
+	},
+	"popup_sales": {
+		"message": "बिक्री"
+	},
+	"popup_calendar": {
+		"message": "कैलेंडर"
+	},
+	"popup_patches": {
+		"message": "पैच"
+	},
+	"popup_calculator": {
+		"message": "गणक"
+	},
 	"options": {
 		"message": "वरणाधिकार"
 	},
@@ -519,6 +534,9 @@
 	"options_button_gamecards": {
 		"message": "गेम कार्ड पेज पर स्टीमडीबी और स्टोर पेज बटन प्रदर्शित करें"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "डेवलपर और प्रकाशक नामों के बगल में स्टीमडीबी लिंक दिखाएँ"
+	},
 	"options_link_subid": {
 		"message": "प्रत्येक खरीद विकल्प के अंतर्गत SubID प्रदर्शित करें"
 	},
@@ -584,7 +602,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "बाहरी साइटों से \"आप स्टीम छोड़ रहे हैं\" लिंक फ़िल्टर हटा दें",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "बाज़ार, इन्वेंट्री पर सब्सक्राइबर अनुबंध स्वीकार करें और मुख्य पृष्ठों को स्वचालित रूप से सक्रिय करें",
@@ -592,7 +610,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "हेडर में \"इंस्टॉल स्टीम\" बटन छुपाएं",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"ओपन इन द स्टीम\" बैनर छिपाएँ"
@@ -657,5 +675,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2 उपलब्धियां पृष्ठ पर CS रेटिंग इतिहास प्रदर्शित करें"
+	},
+	"boostercreator_available_at_date": {
+		"message": "आप इस गेम के लिए एक और बूस्टर पैक बनाने में सक्षम नहीं होंगे $available_date$ तक।",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

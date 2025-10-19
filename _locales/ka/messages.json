@@ -599,7 +599,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "მოაშორე \"You are leaving Steam\"-ის გვერდი სხვა საიტებზე გადასვლისას",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "დაეთანხმე პირობებს ავტომატურად მარკეტზე, ინვენტარში და გააქტიურე key-ს გვერდები ავტომატურად",
@@ -607,7 +607,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "დამალდე \"Install Steam\" -ის ღილაკი",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "დამალე \"Open in the Steam\"-ის ბანერი"

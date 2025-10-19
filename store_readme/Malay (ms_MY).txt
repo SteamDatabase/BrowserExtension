@@ -1,0 +1,17 @@
+- Papar rekod harga terendah di halaman permainan (semua matawang disokong, sejarah harga)
+- Papar jumlah pemain semasa dan puncak di halaman permainan
+- Papar kemaskini terbaru permainan di halaman permainan
+- Tambah pautan ke SteamDB merentas halaman Steam
+- Tambah pautan ke PCGamingWiki
+- Memodenkan halaman pencapaian peribadi, mengumpul pencapaian dengan kemaskini dan DLC
+- Butang jual cepat di inventori
+- Langkau halaman semakan umur di kedai
+- Terima Perjanjian Pelanggan di pasaran, inventori, dan halaman mengaktifkan kunci secara automatik
+- Buang penapisan pautan "Anda akan meninggalkan Steam" dari halaman luaran
+- Tanda permainan dimiliki, DLC dan pakej di steamdb.info
+- Benar senarai keinginan, mengikuti, dan permainan diabaikan secara terus dari steamdb.info
+- Banyak pembaikan kecil dan fungsi lain
+- Alternatif yang lebih mudah dan pantas dari Enhanced Steam dan Augmented Steam
+
+Maklumat lanjut: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

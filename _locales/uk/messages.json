@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Прибрати вікно «Ви залишаєте Steam» при переході за посиланням на зовнішній вебсайт",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Автоматично приймати Угоду підписника Steam на ринку, в інвентарі, і на сторінці активації ключів",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Сховати кнопку «Інсталювати в Steam» у заголовку",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Сховати банер «Відкрити в Steam»"
@@ -684,7 +684,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "Ви не зможете створити інший комплект для цієї гри до $available_date$.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

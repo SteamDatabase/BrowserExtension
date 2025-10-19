@@ -1,0 +1,17 @@
+- Afișează cel mai mic preț înregistrat pe paginile jocului (toate valutele acceptate, istoricul prețurilor)
+- Afişează jucătorii actual simultan şi maximul pe paginile aplicaţiei
+- Afişează ultima actualizare pe paginile aplicaţiei
+- Adăugați linkuri către SteamDB pe site-urile Steam
+- Adăugați un link către PCGamingWiki
+- Modernizează pagina de realizări personale, gruparea realizărilor prin actualizare și DLC
+- Butoane de vânzare rapidă în inventar
+- Omiteți pagina de verificare a vârstei din magazin
+- Acceptați Acordul de abonat pe piață, inventar și activați automat paginile cheie
+- Eliminați filtrul de link „Părăsiți Steam” de pe site-uri externe
+- Evidențiați jocurile deținute, DLC-urile și pachetele pe steamdb.info
+- Permite afișarea, urmărirea și ignorarea jocurilor direct din steamdb.info
+- Multe alte modificări și funcții utile
+- O alternativă mai simplă și mai rapidă la Enhanced Steam și Augmented Steam
+
+Informații suplimentare: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

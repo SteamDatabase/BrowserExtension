@@ -1,0 +1,17 @@
+- Oyunların geçmişteki en düşük fiyatını görme (tüm para birimleri desteklenir, fiyat geçmişi)
+- Oyunların anlık oyuncu sayısını ve oyunun ulaşabildiği en yüksek oyuncu sayısını görme
+- Oyunlara gelen son güncellemeleri görme
+- Steam'deki sayfalara SteamDB bağlantıları ekleme
+- PCGamingWiki için bir bağlantı ekleme
+- Kişisel başarımlar sayfanızı güncelleştirmelere ve DLC'lere göre gruplandırarak modernize edin
+- Envanterinizdeki öğeler için hızlı satış butonları
+- Mağazadaki yaş doğrulama sistemini atlama
+- Pazarda, envanterde ve ürün etkinleştirme sayfasında Abonelik Sözleşmesini otomatik olarak kabul etme
+- Harici siteler için "Steam'den ayrılıyorsunuz" uyarısını atla
+- Sahip olduğunuz oyunları, DLC'leri ve paketleri steamdb.info'da vurgulama
+- Oyunları steamdb.info üzerinden istek listesine eklemeye, takip etmeye ve yok saymaya izin verir
+- Daha birçok ufak tefek iyileştirmeler ve yenilikler
+- Enhanced Steam ve Augmented Steam'e göre daha basit ve daha hızlı alternatif
+
+Daha fazla bilgi için: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

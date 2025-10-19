@@ -1,0 +1,17 @@
+- Ipakita ang pinakamababang naitalang presyo sa mga page ng laro (lahat ng sinusuportahang currency, history ng presyo)
+- Ipakita ang kasabay na mga manlalaro at mga peak sa mga page ng laro
+- Ipakita ang pinakabagong update ng laro sa page ng laro
+- Magdagdag ng mga link sa SteamDB sa mga site ng Steam
+- Magdagdag ng link sa PCGamingWiki
+- Gawing moderno ang personal na achievements page, i-grupo ang mga achievement base sa update at DLC
+- Quick sell na mga button sa inventory
+- Laktawan ang page ng pagsusuri sa edad
+- Tanggapin ang Agreement ng Subscriber sa market, inventory, at awtomatikong i-activate ang mga pangunahing page
+- Alisin ang filter ng link na "You are leaving Steam" mula sa mga panlabas na site
+- I-highlight ang iyong mga pag-aari na laro, DLC at mga package sa steamdb.info
+- Nagbibigay-daan sa pag-wishlist, pag-follow at pag-ignore ng mga laro nang direkta mula sa steamdb.info
+- Maraming iba pang mas maliliit na pag-aayos at mga feature
+- Mas simple at mas mabilis na alternatibo sa Enhanced Steam at Augmented Steam
+
+Higit pang impormasyon: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

@@ -584,7 +584,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "להסיר את \"אתה עוזב את סטים\" פילטר בלחיצה על לינק לאתר חיצוני",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "אישרור אוטומטית של תנאי שימוש בחנות, תיק ועמודי הכנסת מפתח",
@@ -592,7 +592,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "הסתר את באנר \"פתח בסטים\""

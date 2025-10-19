@@ -1,0 +1,17 @@
+- Näita mängu lehekülgedel madalaimat registreeritud hinda (kõik toetatud valuutad, hinna ajalugu)
+- Näita samaaegsete mängijate arv ja tipud mängu lehekülgedel
+- Näita mängu viimaseid uuendusi mängu leheküljel
+- Lisa linke SteamDB'sse üle Steami saitide
+- Lisa link PCGamingWiki'le
+- Moderniseeri personaalseete saavutuste leht, grupi saavutused uuenduste ja DLC'de kohaselt
+- Kiirmüügi nupud inventari juures
+- Läbi vanuse kontrolli leht poes
+- Nõustu tellimislepinguga turu lehel, inventaris ja võtme koodide aktiveerimis lehtedel automaatselt
+- Eemalda "You are leaving Steam" lingi filter välislehtedelt
+- Tõstab esile oma omanduses olevad mängud, DLC-d ja paketid steamdb.info
+- Võimaldab otse steamdb.infost soovide esitamist, jälgimist ja mängude ignoreerimist
+- Palju muid väiksemaid parandusi ja funktsioone
+- Lihtsam ja kiirem alternatiiv Enhanced Steam ja Augmented Steam
+
+Lisateave: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

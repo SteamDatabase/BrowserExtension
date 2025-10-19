@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "關閉在前往外部網站時顯示的「您正要離開 Steam」警示",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "自動勾選市集、庫存與產品啟動頁面的「同意 Steam 訂戶協議」選項",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "隱藏頂部的「安裝 Steam」按鈕",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隱藏「在 Steam 中開啟」橫幅"
@@ -684,7 +684,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "您將無法為此遊戲合成另一個擴充包 $available_date$。",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

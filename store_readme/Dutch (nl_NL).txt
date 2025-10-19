@@ -1,0 +1,17 @@
+- Toon de laagste opgenomen prijs op spelpagina's (alle valuta ondersteund, prijsgeschiedenis)
+- Toon gelijktijdige spelers en pieken op spelpagina's
+- Toon laatste wijziging op spelpagina
+- Voeg links naar SteamDB toe over Steam sites
+- Voeg een link toe naar PCGamingWiki
+- Moderniseer persoonlijke prestatiepagina, groepeer prestaties per update en DLC
+- Knoppen voor snel verkopen vanuit de inventaris
+- Sla leeftijdsverificatie over in de store
+- Accepteer Abonneeovereenkomst op de markt, inventaris en activeer belangrijke pagina's automatisch
+- Verwijder "Je verlaat Steam" link filter voor externe websites
+- Markeer je eigen spellen, DLC's en pakketten op steamdb.info
+- Staat toe om spellen direct vanuit steamdb.info op de wenslijst te zetten, te volgen en te negeren
+- Een heleboel kleinere aanpassingen en functies
+- Simpeler en sneller alternatief voor Enhanced Steam en Augmented Steam
+
+Meer informatie: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

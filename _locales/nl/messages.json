@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Verwijder \"Je verlaat Steam\" link filter voor externe websites",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Accepteer Abonneeovereenkomst op de markt, inventaris en activeer belangrijke pagina's automatisch",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Verberg de \"Install Steam\" knop in de header",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Verberg \"Openen in Steam\" banner"
@@ -681,15 +681,5 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Geef CS-rating weer op de CS2 prestatiepagina"
-	},
-	"boostercreator_available_at_date": {
-		"message": "Je zult pas een $available_date$ spel kunnen maken met nog een Booster Pack voor dit spel.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
-		"placeholders": {
-			"available_date": {
-				"content": "$1",
-				"example": "19 Jul @ 6:44pm"
-			}
-		}
 	}
 }

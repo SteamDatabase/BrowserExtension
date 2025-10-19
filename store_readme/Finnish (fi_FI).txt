@@ -1,0 +1,17 @@
+- Näyttää alimman tilastoidun hinnan kauppasivuilla (sisältää hintahistorian ja kaikki Steamin tukemat valuutat)
+- Näyttää tämänhetkisen pelaajamäärän ja pelaajaennätyksen kauppasivuilla
+- Näyttää pelin viimeisimmän päivityksen kauppasivuilla
+- Lisää SteamDB-linkkejä ympäri Steamiä
+- Lisää linkin PCGamingWikiin
+- Nykyaikaista henkilökohtainen saavutukset sivu, ryhmä saavutukset päivityksen ja DLC:n avulla
+- Pikamyyntipainikkeet tavaraluettelossa
+- Ohittaa kaupan ikätarkistussivun
+- Hyväksy Steam-tilaussopimus kauppapaikka, tavaraluettelo ja aktivoi tuote -sivuilla automaattisesti
+- Poista "Olet poistumassa Steamista" linkkisuodatin ulkoisilta sivustoilta
+- Korostaa omistamasi pelit, lisäsisällöt ja paketit steamdb.infossa
+- Mahdollistaa toivelistalle lisäämisen, pelien seuraamisen ja ohittamisen suoraan steamdb.infosta
+- Paljon muita pienempiä parannuksia ja ominaisuuksia
+- Yksinkertaisempi ja nopeampi vaihtoehto Enhanced Steamille ja Augmented Steamille
+
+Lisätietoja: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

@@ -1,0 +1,17 @@
+- Rodyti mažiausią užfiksuotą kainą žaidimų puslapiuose (palaikomos visos valiutos, kainų istorija)
+- Rodyti tuo pačiu metu žaidžiančius žaidėjus ir pikus žaidimų puslapiuose
+- Rodyti paskutinį žaidimo atnaujinimą žaidimo puslapyje
+- Pridėti nuorodas į SteamDB per Steam svetaines
+- Pridėti nuorodą į PCGamingWiki
+- Modernizuoti asmeninių pasiekimų puslapį, grupuoti pasiekimus pagal atnaujinimus ir DLC
+- Greito pardavimo mygtukai inventoriuje
+- Praleisti amžiaus patikrinimo puslapį parduotuvėje
+- Priimti prenumeratoriaus sutikimą turguje, inventoriuje, ir automatiškai aktyvuoti raktų puslapius
+- Pašalinti nuorodų filtrą „Jūs paliekate Steam“ iš išorinių svetainių
+- Paryškinti savo turimus žaidimus, DLC ir paketus per steamdb.info
+- Leidžia sudaryti pageidavimų sąrašą, sekti ir ignoruoti žaidimus tiesiai per steamdb.info
+- Daug kitų mažesnių patobulinimų ir funkcijų
+- Paprastesnė ir greitesnė alternatyva „Enhanced Steam“ ir „Augmented Steam“ priedams
+
+Daugiau informacijos: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

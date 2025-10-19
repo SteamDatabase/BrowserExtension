@@ -1,0 +1,17 @@
+- Prikaz najnižje zabeležene cene na straneh iger (podprte vse valute, zgodovina cen)
+- Prikaz sočasnih igralcev in vrhov na straneh iger
+- Prikaz najnovejše posodobitve igre na strani igre
+- Doda hiperpovezave do SteamDB na vseh spletnih mestih Steam
+- Doda hiperpovezavo do PCGamingWiki
+- Moderniziraj osebno stran z dosežki, grupiraj dosežke po posodobitvah in DLC
+- Gumbi za hitro prodajo v inventarju
+- Preskoči stran za preverjanje starosti v trgovini
+- Sprejmite naročniško pogodbo na trgu, inventarju in samodejno aktivirajte ključne strani
+- Odstrani filter povezav »Zapuščate Steam« z zunanjih spletnih mest
+- Označite svoje lastne igre, DLC-je in pakete na steamdb.info
+- Omogoča seznam želja, spremljanje in ignoriranje iger neposredno s steamdb.info
+- Veliko drugih manjših popravkov in funkcij
+- Preprostejša in hitrejša alternativa »Enhanced Steam« in »Augmented Steam«
+
+Več informacij: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

@@ -1,0 +1,17 @@
+- A legalacsonyabb rögzített ár megjelenítése a játék oldalán (minden támogatott pénznemben, árelőzmény)
+- Egyidejű játékosok és csúcsok megjelenítése a játékoldalakon
+- A legújabb játékfrissítés megjelenítése a játék oldalán
+- A SteamDB-re mutató linkek hozzáadása a Steam oldalakhoz
+- PCGamingWiki-re mutató link hozzáadása
+- A személyes teljesítmények oldal modernizálása, teljesítmények csoportosítása frissítés és DLC alapján
+- Gyors eladási gomb a leltárban
+- Életkor ellenőrző oldal kihagyása a boltban
+- A Steam előfizetői szerződés automatikus elfogadása a Közösségi Piacon, a Raktárban és a termék aktiválása oldalakon
+- Eltűntetni az "Ezzel elhagyod a Steamet" link filtert külső oldalakról
+- Tulajdonában lévő játékok, DLC-k és csomagok kiemelése a steamdb.info-n
+- Lehetővé teszi a játékok kívánságlistázását, követését és figyelmen kívül hagyását közvetlenül a steamdb.info oldalról
+- Sok más kisebb finomítás és funkció
+- Az Enhanced Steam és Augmented Steam egyszerűbb és gyorsabb alternatívája
+
+További információ: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

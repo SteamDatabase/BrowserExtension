@@ -352,12 +352,6 @@
 		"message": "آشکار کردن اسپویلر ها",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
-	"popup_charts": {
-		"message": ""
-	},
-	"popup_sales": {
-		"message": ""
-	},
 	"popup_calendar": {
 		"message": "تقویم"
 	},
@@ -608,7 +602,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "حذف صفحه \"You are leaving Steam\" به هنگام باز کردن لینک های ناشناس",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "قبول اتوماتیک قوانین استیم در صفحات مارکت، انباری و فعالسازی کلید",
@@ -616,7 +610,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "مخفی کردن دکمه \"Install Steam\" در بالای صفحه",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "مخفی کردن بنر \"Open in the Steam\""
@@ -684,7 +678,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "شما تا تاریخ $available_date$ قادر به ایجاد بسته تقویتی دیگری برای این بازی نخواهید بود.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

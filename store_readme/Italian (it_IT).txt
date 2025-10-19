@@ -1,0 +1,17 @@
+- Mostra il prezzo più basso registrato nelle pagine di gioco (tutte le valute supportate, cronologia dei prezzi)
+- Visualizza giocatori correnti e massimi nelle pagine dei giochi
+- Mostra l'ultimo aggiornamento di gioco nella pagina di gioco
+- Aggiungi link a SteamDB nelle varie pagine di Steam
+- Aggiungi un link a PCGamingWiki
+- Modernizza la pagina dei risultati personali, risultati di gruppo aggiornando oppure tramite DLC
+- Pulsanti di vendita rapida nell'inventario
+- Salta la pagina di controllo dell'età nel negozio
+- Accetta gli Ssa sul mercato, l'inventario e attiva automaticamente le pagine chiave
+- Rimuovi il filtro link "Stai uscendo da Steam" da siti esterni
+- Evidenzia i tuoi giochi, DLC e pacchetti su steamdb.info
+- Consente la lista dei desideri, di seguire e ignorare i giochi direttamente da steamdb.info
+- Un sacco di altre piccole modifiche e caratteristiche
+- Alternativa più semplice e veloce a Enhanced Steam e Augmented Steam
+
+Ulteriori informazioni: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

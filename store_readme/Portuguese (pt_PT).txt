@@ -1,0 +1,17 @@
+- Mostra o preço mais baixo gravado nas páginas dos jogos (todas as moedas suportadas, histórico de preços)
+- Mostra os jogadores em simultâneo e picos nas páginas de jogos
+- Mostra a última atualização do jogo na página do jogo
+- Adiciona hiperligações ao SteamDB nos sites do Steam
+- Adiciona uma hiperligação à PCGamingWiki
+- Moderniza a página de proezas pessoais, agrupa proezas por atualização e DLC
+- Botões de venda rápida no inventário
+- Ignora verificação de idade na loja
+- Aceita Acordo de Subscrição no mercado, inventário e páginas de ativação de chaves automaticamente
+- Remove o filtro de ligações "Estás a sair do Steam" dos sites externos
+- Destaca os teus jogos, DLCs e pacotes no steamdb.info
+- Permite adicionar à lista de desejos, seguir e ignorar jogos diretamente do steamdb.info
+- Vários outros pequenos ajustes
+- Uma alternativa mais simples e rápida ao Enhanced Steam e Augmented Steam
+
+Mais informações: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

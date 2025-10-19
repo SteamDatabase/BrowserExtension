@@ -145,14 +145,8 @@
 			}
 		}
 	},
-	"agecheck_option_hint": {
-		"message": "SteamDB has an option to automatically skip these age check pages"
-	},
 	"explore_auto_discover": {
 		"message": "ค้นพบอัตโนมัติ"
-	},
-	"explore_auto_discover_description": {
-		"message": "Automatically discover the queue."
 	},
 	"explore_generating": {
 		"message": "กำลังสร้างคิวการค้นพบใหม่, อาจล้มเหลวได้หาก Steam กำลังทำงานหนัก..."
@@ -348,15 +342,11 @@
 	"inventory_badge_none": {
 		"message": "ไม่มีการสร้างตราสัญลักษณ์"
 	},
-	"spoilers_reveal": {
-		"message": "Reveal spoilers",
-		"description": "A button or checkbox that reveals spoilers when toggled"
+	"popup_calendar": {
+		"message": ""
 	},
-	"popup_charts": {
-		"message": "Phum789"
-	},
-	"popup_sales": {
-		"message": "Sales"
+	"popup_patches": {
+		"message": "i"
 	},
 	"options": {
 		"message": "ตัวเลือก"
@@ -593,7 +583,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "ลบตัวกรองลิงก์ \"คุณกำลังออกจาก Steam\" ออกจากไซต์ภายนอก",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "ยอมรับข้อตกลงสมาชิกในตลาด, คลัง และเปิดใช้งานหน้าหลักโดยอัตโนมัติ",
@@ -601,7 +591,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "ซ่อนปุ่ม \"ติดตั้ง Steam\" ที่ส่วนหัว",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "ซ่อนแบนเนอร์ \"เปิดใน Steam\""

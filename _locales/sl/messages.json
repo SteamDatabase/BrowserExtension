@@ -498,7 +498,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Odstrani filter povezav »Zapuščate Steam« z zunanjih spletnih mest",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Sprejmite naročniško pogodbo na trgu, inventarju in samodejno aktivirajte ključne strani",
@@ -506,7 +506,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Skrij gumb »Namesti Steam« v glavi strani",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skrij pasico »Odpri v Steamu«"

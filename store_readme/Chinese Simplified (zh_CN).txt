@@ -1,0 +1,17 @@
+- 在游戏页面显示历史最低价格（支持所有货币，价格历史）
+- 在游戏页面显示当前在线人数与历史最高在线人数
+- 在游戏页面显示游戏的最近更新时间
+- 在 Steam 网站中添加 SteamDB 的跳转链接
+- 添加 PCGamingWiki 链接
+- 更加现代化的成就页面（按更新或DLC分组）
+- 在库存中显示快速出售按钮
+- 跳过商店的年龄检查页面
+- 在市场、库存和激活密钥页面上自动接受 Steam 订户协议
+- 移除“您正在离开 Steam 前往其他网站”风险提示
+- 在 steamdb.info 高亮显示您拥有的游戏、DLC 和包
+- 可直接从 steamdb.info 将游戏添加至愿望单、关注和忽略
+- 许多其他小改进和功能
+- 比 Enhanced Steam 和 Augmented Steam 更简单、快捷的选择
+
+更多信息请访问: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

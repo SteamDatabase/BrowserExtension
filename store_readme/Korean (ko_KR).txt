@@ -1,0 +1,17 @@
+- 게임 페이지에 기록된 최저가를 표시합니다(모든 통화 지원, 가격 내역).
+- 게임 페이지에서 동시 접속 플레이어 및 최고치 표시
+- 게임 페이지에 최신 게임 업데이트 표시
+- Steam 사이트 전체에 SteamDB 링크 추가
+- PCGamingWiki 링크 추가
+- 개인 도전과제 페이지, 업데이트와 DLC 같은 그룹 도전과제 현대화
+- 인벤토리에 빠른 판매 버튼 추가
+- 상점에서 연령 확인 페이지 건너뛰기
+- 마켓, 인벤토리에서 구독자 동의 수락 및 주요 페이지 자동 활성화
+- 외부 사이트에서 “Steam 을 떠나는 중입니다” 링크 필터 제거
+- steamdb.info에서 소유한 게임, DLC 및 패키지 강조 표시
+- steamdb.info에서 직접 게임 위시리스트 추가, 팔로우 및 무시 허용
+- 기타 여러 가지 작은 조정 및 기능 추가
+- Enhanced Steam 및 Augmented Steam 에 대한 더 간단하고 빠른 대안
+
+자세한 정보: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

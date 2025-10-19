@@ -89,7 +89,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Rekod harga terendah SteamDB adalah <b>$price$</b>pada<b>-$discount$%</b>",
+		"message": "Rekod harga terendah SteamDB adalah <b>$price$</b> pada <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -599,7 +599,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Buang penapis pautan \"Anda akan meninggalkan Steam\" dari halaman luaran",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Terima Perjanjian Pelanggan di pasaran, inventori, dan halaman aktifkan kunci secara automatik",
@@ -607,7 +607,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Sembunyi butang \"Pasang Steam\" di kepala halaman",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Sembunyi sepanduk \"Buka di dalam Steam\""

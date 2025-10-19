@@ -151,6 +151,9 @@
 	"explore_auto_discover": {
 		"message": "Temuan-otomatis"
 	},
+	"explore_auto_discover_description": {
+		"message": "."
+	},
 	"explore_generating": {
 		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
 	},
@@ -593,7 +596,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Hapus filter tautan \"Kamu akan keluar dari Steam\" dari situs eksternal",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Setujui Perjanjian Pelanggan di halaman pasar, inventaris, dan aktivasi kunci secara otomatis",
@@ -601,7 +604,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Sembunyikan tombol “Instal Steam” di header",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Sembunyikan banner “Buka di Steam”"

@@ -541,7 +541,7 @@
 		"message": "게임 카드 페이지에 SteamDB 및 상점 페이지 버튼 표시"
 	},
 	"options_steamdb_dev_pub_links": {
-		"message": "Display SteamDB links next to developer and publisher names"
+		"message": "개발자 및 배급사 이름 옆에 SteamDB 링크 표시"
 	},
 	"options_link_subid": {
 		"message": "각 구매 옵션 아래에 SubID 표시"
@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "외부 사이트에서 “Steam 을 벗어납니다” 링크 필터 제거",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "장터, 보관함, 키 활성화 페이지에서 이용 약관 수락 자동 활성화",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "\"Steam 설치\" 버튼 숨기기",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"Steam 에서 열기\" 배너 숨기기"
@@ -684,7 +684,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "$available_date$까지 이 게임에 대한 다른 부스터 팩을 제작할 수 없습니다.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

@@ -1,0 +1,17 @@
+- Zobrazte najnižšiu zaznamenanú cenu na herných stránkach (všetky podporované meny, cenová história)
+- Zobrazte pocet hráčov a dosiahnuté vrcholy na stránkach hier
+- Zobraziť najnovšiu aktualizáciu hry na stránke hry
+- Pridáva odkazy na SteamDB na stránkach Steam
+- Pridáva odkaz na PCGamingWiki
+Modernizácia stránky osobných úspechov, zoskupenie úspechov podľa aktualizácie a DLC
+- Tlačidlá rýchleho predaja v inventári
+- Preskočte stránku kontroly veku v obchode
+- Automaticky prijímate predplatiteľku zmluvu na trhu, inventári a na stránke aktivácia kľúčov
+- Odstraňuje filter odkazov „Opúšťate Steam“ z externých stránok
+- Zvýraznite svoje vlastné hry, DLC a balíčky na steamdb.info
+- Umožňuje zobrazovanie zoznamu prianí, sledované a ignorované hry priamo zo steamdb.info
+- Veľa ďalších menších vylepšení a funkcií
+- Jednoduchšia a rýchlejšia alternatíva k Enhanced Steam a Augmented Steam
+
+Viac informácií: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

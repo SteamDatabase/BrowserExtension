@@ -1,0 +1,17 @@
+- Vis laveste registrerede pris på spilsider (alle valutaer understøttet, prishistorik)
+- Vis nuværende samtidige spillere og det top antal spillere på spilsider
+- Vis seneste spilopdatering på spilsiden
+- Tilføj links til SteamDB på tværs af Steam-sider
+- Tilføj et link til PCGamingWiki
+- Moderniser personlige præstationer side, gruppe præstationer efter opdatering og DLC
+- Hurtig-salgs knapper i inventar
+- Spring alderstjek siden over i butikken
+- Accepter Abonnementsaftale på markedet, inventar, og aktivere nøglesider automatisk
+- Fjern "Du forlader Steam" linkfilter fra eksterne websteder
+- Fremhæv dine ejede spil, DLC'er og pakker på steamdb.info
+- Giver mulighed for at ønske, følge og ignorere spil direkte fra steamdb.info
+- En masse andre mindre justeringer og forbedringer
+- Enklere og hurtigere alternativ til 'Enhanced Steam' og 'Augmented Steam'
+
+Flere oplysninger: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

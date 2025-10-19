@@ -1,0 +1,17 @@
+- Mostra el preu més baix enregistrat a les pàgines dels jocs (totes les monedes admeses, historial de preus)
+- Mostra jugadors simultanis i pics a les pàgines del joc
+- Mostra l'última actualització del joc a la pàgina del joc
+- Afegeix enllaços a SteamDB en tots els llocs de Steam
+- Afegeix enllaços a PCGamingWiki
+- Modernitza la teva pàgina d'assoliments, assoliments agrupats per actualització i DLC
+- Botons per vendre ràpidament a l'inventari
+- Omet la comprovació d'edat a la botiga
+- Accepta l'Acord de Subscriptor al mercat, inventari, i activa les claus de pàgines automàticament
+- Elimina el filtre de "Estàs sortint de Steam" als enllaços externs
+- Destaca els teus jocs, DLCs i paquets a steamdb.info
+- Permet afegir a la llista de desitjos, seguir i ignorar jocs directament des de steamdb.info
+- Molts altres petits retocs i funcions
+- Alternativa més senzilla i ràpida que Enhanced Steam i Augmented Steam
+
+Més informació: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

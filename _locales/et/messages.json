@@ -151,6 +151,9 @@
 	"explore_auto_discover": {
 		"message": "Automaatselt avasta"
 	},
+	"explore_auto_discover_description": {
+		"message": "Avasta järjekord automaatselt."
+	},
 	"explore_generating": {
 		"message": "Uue avastamisjärjekorra loomine, see võib ebaõnnestuda, kui Steam on suure koormuse all…"
 	},
@@ -391,6 +394,9 @@
 	"options_permissions_button": {
 		"message": "⚠️ Anna load"
 	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Luba Steam China tugi"
+	},
 	"options_footer1": {
 		"message": "Tehtud 💙 <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> rahva poolt."
 	},
@@ -534,6 +540,9 @@
 	"options_button_gamecards": {
 		"message": "Näita SteamDB ja Steam poe nuppu mängu kaardi lehel"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Kuva SteamDB lingid arendaja ja väljaandja nimede kõrval"
+	},
 	"options_link_subid": {
 		"message": "Näita SubID iga ostu all valik"
 	},
@@ -599,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Eemalda \"You are leaving Steam\" lingi filter välislehtedelt",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Nõustu tellimislepinguga turu, inventari ja võtme koodide aktiveerimis lehtedel automaatselt",
@@ -607,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Peida \"Install Steam\" nupp pealises",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Peida \"Open in Steam\" bänner"
@@ -672,5 +681,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS-i reitingute ajaloo kuvamine CS2 saavutuste lehel"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Sa ei saa selle mängu jaoks uut võimenduspaketti luua enne kuupäeva $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

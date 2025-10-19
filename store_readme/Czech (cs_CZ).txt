@@ -1,0 +1,17 @@
+- Zobrazení nejnižších zaznamenaných cen na stránce hry (všechny podporované měny, historie cen)
+– Zobrazuje aktuální a maximální počty hráčů na stránkách her
+– Zobrazuje na stránce hry datum její poslední aktualizace
+– Přidává odkazy na SteamDB na různých stránkách Steamu
+– Přidává odkaz na PCGamingWiki
+– Modernizuje osobní stránku achievmentů, seskupuje achievementy podle aktualizace a DLC
+– Tlačítka pro zrychlené prodávání v inventáři
+– Přeskakuje stránku kontroly věku v obchodě
+– Automaticky přijímá Účastnickou smlouvu na stánkách tržiště, inventáře a aktivace klíče
+– Odebrá filtr odkazů „Opouštíte Steam“ při přecházení na externí stránky
+– Zvýrazňuje vámi vlastněné hry, DLC a balíčky na steamdb.info
+- Umožňuje přidávání do seznamu přání, sledování a ignorování her přímo z steamdb.info
+- Mnoho dalších menších vylepšení a funkcí
+– Jednodušší a rychlejší alternativa k Enhanced Steam a Augmented Steam
+
+Více informací na: https://steamdb.info/extension/
+GitHub: https://github.com/SteamDatabase/BrowserExtension

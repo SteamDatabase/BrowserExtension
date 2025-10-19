@@ -498,7 +498,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "বাহ্যিক সাইট থেকে \"আপনি স্টীম ছেড়ে বেড়োচ্ছেন\" লিঙ্ক ফিল্টার সরিয়ে দেবে",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "স্বয়ংক্রিয় ভাবে গ্রাহক চুক্তি স্বীকার করা হবে মার্কেট​, দ্রব্যতালিকা ও চাবি সক্রিয়করণ-এর পৃষ্ঠাগুলিতে",
@@ -506,7 +506,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "হেডারে \"Install Steam\" বোতামটি অদৃশ্য​ থাকবে",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "ব্যানারে \"Open in Steam\" বোতামটি অদৃশ্য​ থাকবে"
