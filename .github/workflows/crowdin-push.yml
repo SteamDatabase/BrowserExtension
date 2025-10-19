@@ -28,7 +28,6 @@ jobs:
         crowdin_branch_name: master
         localization_branch_name: master
         config: 'crowdin.yml'
-        project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
         token: ${{ secrets.CROWDIN_API_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

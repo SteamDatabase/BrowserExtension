@@ -1,3 +1,4 @@
+project_id: 683254
 preserve_hierarchy: true
 files:
   - source: /_locales/en/messages.json
