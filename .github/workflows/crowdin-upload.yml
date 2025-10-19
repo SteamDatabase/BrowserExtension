@@ -22,11 +22,3 @@ jobs:
         config: 'crowdin.yml'
         project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
         token: ${{ secrets.CROWDIN_API_TOKEN }}
-
-    - name: Upload latest strings for translation on Crowdin
-      uses: crowdin/github-action@v2
-      with:
-        crowdin_branch_name: master
-        config: 'crowdin-readme.yml'
-        project_id: ${{ secrets.CROWDIN_API_PROJECT_ID }}
-        token: ${{ secrets.CROWDIN_API_TOKEN }}
