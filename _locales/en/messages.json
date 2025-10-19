@@ -626,7 +626,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Remove \"You are leaving Steam\" link filter from external sites",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Accept Subscriber Agreement on market, inventory, and activate key pages automatically",
@@ -634,7 +634,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Hide \"Install Steam\" button in header",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Hide \"Open in Steam\" banner"
@@ -703,7 +703,7 @@
 
 	"boostercreator_available_at_date": {
 		"message": "You will not be able to create another Booster Pack for this game until $available_date$.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",
