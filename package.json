@@ -16,15 +16,15 @@
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.1.1",
-		"@types/firefox-webext-browser": "^120.0.3",
+		"@types/firefox-webext-browser": "^143.0.0",
 		"archiver": "^7.0.1",
 		"eslint": "^9.10.0",
-		"eslint-plugin-jsdoc": "^60.0.0",
+		"eslint-plugin-jsdoc": "^61.0.0",
 		"prettier": "^3.3.2",
 		"stylelint": "^16.5.0",
 		"stylelint-config-standard": "^39.0.0",
 		"typescript": "^5.7.3",
-		"web-ext": "^8.0.0"
+		"web-ext": "^9.0.0"
 	},
 	"repository": {
 		"type": "git",
