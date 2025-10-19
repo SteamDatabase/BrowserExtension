@@ -11,4 +11,4 @@ files:
         zh-CN: zh_CN
         zh-TW: zh_TW
   - source: /assets/StoreReadme.txt
-    translation: /store_readme/%language% (%locale_with_underscore%).txt
+    translation: /assets/StoreReadme/%language% (%locale_with_underscore%).txt
