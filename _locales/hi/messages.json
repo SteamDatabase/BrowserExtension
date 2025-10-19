@@ -89,7 +89,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर <b>$discount$</b> है",
+		"message": "SteamDB पर सबसे कम दर्ज कीमत <b>$price$</b> पर <b>-$discount$%</b> है",
 		"placeholders": {
 			"price": {
 				"content": "$1",

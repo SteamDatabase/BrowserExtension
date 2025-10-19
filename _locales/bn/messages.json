@@ -279,7 +279,7 @@
 		"message": "নিচের অপ্শনগুলি পর্যালোচনা করে নিজের পছন্দমত সক্রিয় করুন​। ভবিষ্যতে এখানে ফিরে আসতে:"
 	},
 	"options_welcome_option1": {
-		"message": "StamDB-তে সেটিংস পৃষ্ঠা"
+		"message": "SteamDB-তে সেটিংস পৃষ্ঠা"
 	},
 	"options_welcome_option2": {
 		"message": "StamDB-তে অ্যাকাউন্ট ড্রপডাউন"
@@ -351,7 +351,7 @@
 		}
 	},
 	"options_website_highlight1": {
-		"message": "SeamDB থেকে সরাসরি Steam স্টোরে দ্রব্যগুলি ইচ্ছে-তালিকাভুক্ত​, অনুসরণ এবং উপেক্ষা করুন​"
+		"message": "SteamDB থেকে সরাসরি Steam স্টোরে দ্রব্যগুলি ইচ্ছে-তালিকাভুক্ত​, অনুসরণ এবং উপেক্ষা করুন​"
 	},
 	"options_website_highlight2": {
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">মূল্যবিহীন প্যাকেজের স্ক্রিপ্ট সক্রিয় হবে​</a>"

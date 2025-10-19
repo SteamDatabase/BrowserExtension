@@ -128,7 +128,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "Harga dilihat $seen$ kali, terakhir pada pada $date$ ($relative$)",
+		"message": "Harga dilihat $seen$ kali, terakhir pada $date$ ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {

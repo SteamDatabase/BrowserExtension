@@ -342,12 +342,6 @@
 	"inventory_badge_none": {
 		"message": "ไม่มีการสร้างตราสัญลักษณ์"
 	},
-	"popup_calendar": {
-		"message": ""
-	},
-	"popup_patches": {
-		"message": "i"
-	},
 	"options": {
 		"message": "ตัวเลือก"
 	},

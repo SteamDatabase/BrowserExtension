@@ -151,9 +151,6 @@
 	"explore_auto_discover": {
 		"message": "Temuan-otomatis"
 	},
-	"explore_auto_discover_description": {
-		"message": "."
-	},
 	"explore_generating": {
 		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
 	},
@@ -389,7 +386,7 @@
 		"message": "⚠️ Berikan izin"
 	},
 	"options_footer1": {
-		"message": "Dibuat dengan 💙 oleh <a href=“https://steamdb.info” target=“_blank”>SteamDB</a>."
+		"message": "Dibuat dengan 💙 oleh <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
 		"message": "Ini adalah <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">sumber terbuka</a>, terima kasih kepada semua kontributor!"

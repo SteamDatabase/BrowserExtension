@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "O preço mais baixo gravado no SteamDB é <b>$price$</b> e o valor mínimo dos últimos 2 anos é <b>-$price_limited$%</b>",
+		"message": "O preço mais baixo gravado no SteamDB é <b>$price$</b> e o valor mínimo dos últimos 2 anos é <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "Remover o filtro de ligações \"Estás a sair do Steam\" de sites externos",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "Aceitar Acordo de Subscrição no mercado, inventário e páginas de ativação de chaves automaticamente",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "Ocultar botão \"Instalar o Steam\" no cabeçalho",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Esconder a faixa \"Abrir no Steam\""
@@ -684,7 +684,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "Não podes criar outro Pacote de Boosters para este jogo até $available_date$.",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

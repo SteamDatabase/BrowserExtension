@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB's laveste registrerede pris er <b>$price$</b> med <b>-$price_limited$%</b>",
+		"message": "SteamDBs laveste registrerede pris er <b>$price$</b> og den laveste pris på 2 år er <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

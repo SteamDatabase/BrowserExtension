@@ -89,7 +89,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> allahindlusega <b>$discount$%</b>",
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> allahindlusega <b>-$discount$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> allahindlusega <b>$price_limited$%</b>",
+		"message": "SteamDB madalaim registreeritud hind on <b>$price$</b> ja 2-aasta madalaim on <b>$price_limited$%</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

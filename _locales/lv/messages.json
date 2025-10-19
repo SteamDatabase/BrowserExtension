@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB zemākā reģistrētā cena ir <b>$price$</b> un pēdējo 2 gadu zemākā cena ir <b>$price_limited$%</b>",
+		"message": "SteamDB zemākā reģistrētā cena ir <b>$price$</b> un pēdējo 2 gadu zemākā cena ir <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

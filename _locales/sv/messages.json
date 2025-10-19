@@ -401,7 +401,7 @@
 		"message": "Gjord med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
-		"message": "Detta tillägg är <a href=”https://github.com/SteamDatabase/BrowserExtension” target=”_blank”>open source</a>, tack till alla inblandade!"
+		"message": "Detta tillägg är <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, tack till alla inblandade!"
 	},
 	"options_disabled_checkboxes": {
 		"message": "* Ofyllda kryssrutor indikerar inbyggda funktioner."
@@ -431,7 +431,7 @@
 		"message": "Förklaring"
 	},
 	"options_website_explanation1": {
-		"message": "När denna inställning är aktiverad så kommer tillägget att begära användardata (önskelistade, ägda, följda, ignorerade produkter och produkter i varukorgen) från <a href=”https://store.steampowered.com/dynamicstore/userdata/” target=”_blank”>Steam-butiken</a> och använda dessa för att tillämpa färgmarkeringar på webbplatsen."
+		"message": "När denna inställning är aktiverad så kommer tillägget att begära användardata (önskelistade, ägda, följda, ignorerade produkter och produkter i varukorgen) från <a href=\"https://store.steampowered.com/dynamicstore/userdata/\" target=\"_blank\">Steam-butiken</a> och använda dessa för att tillämpa färgmarkeringar på webbplatsen."
 	},
 	"options_website_explanation2": {
 		"message": "Du måste vara inloggad i butiken för att detta ska fungera."

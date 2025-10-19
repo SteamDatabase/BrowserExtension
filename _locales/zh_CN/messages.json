@@ -608,7 +608,7 @@
 	},
 	"options_enhancement_no_linkfilter": {
 		"message": "移除“您正在离开 Steam”的中转页面",
-		"description:": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
+		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
 		"message": "在市场、库存和激活密钥页面上自动接受 Steam 订户协议。",
@@ -616,7 +616,7 @@
 	},
 	"options_enhancement_hide_install_button": {
 		"message": "隐藏顶部的“安装 Steam”按钮",
-		"description:": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
+		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隐藏未登录时页面顶部的“在 Steam 应用中打开”横幅"
@@ -684,7 +684,7 @@
 	},
 	"boostercreator_available_at_date": {
 		"message": "等到 $available_date$ 后，你才能为此游戏再制作一个补充包。",
-		"description": "\"Booster Pack\" should match how Steam itself name it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
 				"content": "$1",

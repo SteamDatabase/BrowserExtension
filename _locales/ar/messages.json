@@ -473,7 +473,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "عندما يتم تفعيل خيار \"$options_online_stats$أو \"$options_steamdb_last_update$\"، ستقوم الإضافة بإجراء طلب آمن إلى $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
+		"message": "عندما يتم تفعيل خيار \"$options_online_stats$\" أو \"$options_steamdb_last_update$\"، ستقوم الإضافة بإجراء طلب آمن إلى $domain$ للحصول على العدد الحالي من اللاعبين و آخر تحديث للعبة.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",

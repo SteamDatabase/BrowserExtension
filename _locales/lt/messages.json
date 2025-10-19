@@ -102,7 +102,7 @@
 		}
 	},
 	"app_lowest_price_limited": {
-		"message": "SteamDB mažiausia užfiksuota kaina yra <b>$price$</b> su <b>-$price_limited$%</b>",
+		"message": "SteamDB žemiausia užfiksuota kaina yra <b>$price$</b>, o 2 metų žemiausia kaina yra <b>$price_limited$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

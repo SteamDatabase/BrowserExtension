@@ -188,16 +188,6 @@
 	"explore_saleitem_cant_claim": {
 		"message": "Δεν υπάρχει καθημερινή ανταμοιβή για να διεκδικήσετε αυτή τη στιγμή."
 	},
-	"explore_saleitem_next_item_time": {
-		"message": "$datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
 	"explore_saleitem_claim_failed": {
 		"message": "Αποτυχία διεκδίκησης της ημερήσιας ανταμοιβής."
 	},
@@ -422,7 +412,7 @@
 		"message": "Προσφορές Συναλλαγών"
 	},
 	"options_header_achievements": {
-		"message": "ΕΠΙΤΕΥΓΜΑΤΑ"
+		"message": "Επιτεύγματα"
 	},
 	"options_header_enhancements": {
 		"message": "Βελτιώσεις"
@@ -458,7 +448,7 @@
 		"message": "<a href=\"https://steamdb.info/freepackages/\" target=\"_blank\">Ενεργοποίηση script για δωρεάν πακέτα</a>"
 	},
 	"options_website_highlight3": {
-		"message": "Ενεργοποίηση επιπλέον φίλτρα στη σελίδα πωλήσεων <a href=\"https://steamdb.info/sales/\" target=\"_blank\"></a> και <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">σελίδα πακέτων</a>"
+		"message": "Ενεργοποίηση επιπλέον φίλτρα στη σελίδα πωλήσεων <a href=\"https://steamdb.info/sales/\" target=\"_blank\">σελίδα πωλήσεων</a> και <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">σελίδα πακέτων</a>"
 	},
 	"options_website_family": {
 		"message": "Επισημάνετε εφαρμογές τις οικογένειας (απαιτείται επιπλέον αίτημα)"
