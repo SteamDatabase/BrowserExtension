@@ -48,7 +48,14 @@
 		"gecko":
 		{
 			"id": "firefox-extension@steamdb.info",
-			"strict_min_version": "128.0"
+			"strict_min_version": "128.0",
+			"data_collection_permissions":
+			{
+				"required":
+				[
+					"websiteContent"
+				]
+			}
 		},
 		"gecko_android":
 		{
