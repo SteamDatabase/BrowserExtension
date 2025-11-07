@@ -15,7 +15,7 @@
 	availableDateContainer.id = 'booster_available_date';
 	gameSelector.after( availableDateContainer );
 
-	// Add an event listener to catch the details about the choosen booster pack
+	// Add an event listener to catch the details about the chosen booster pack
 	// This data is sent by `boostercreator_injected.js` when the game selector changes
 	gameSelector.addEventListener( 'steamdb-booster-game-change', function( event )
 	{

@@ -284,7 +284,7 @@ else
 				InsertPurchaseBlockId( bundleElement.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( bundleElement.value, 10 ) );
 			}
 
-			// We have to inject our JS directly into the page to hook Steam's functionatily
+			// We have to inject our JS directly into the page to hook Steam's functionality
 			if( hasDropdowns )
 			{
 				const script = document.createElement( 'script' );
