@@ -4,6 +4,7 @@
 GetOption( {
 	'button-gamehub': true,
 	'button-pcgw': true,
+	'button-protondb': true,
 }, ( items ) =>
 {
 	const container = document.querySelector( '.apphub_OtherSiteInfo' );
@@ -78,6 +79,35 @@ GetOption( {
 			const image = document.createElement( 'img' );
 			image.className = 'ico16';
 			image.src = GetLocalResource( 'icons/pcgamingwiki.svg' );
+
+			element.appendChild( image );
+
+			container.insertBefore( link, container.firstChild );
+
+			container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
+
+			const responsiveMenu = document.querySelector( '.apphub_ResponsiveMenuCtn' );
+
+			if( responsiveMenu )
+			{
+				responsiveMenu.append( document.createTextNode( ' ' ) );
+				responsiveMenu.append( link.cloneNode( true ) );
+			}
+		}
+
+		if( items[ 'button-protondb' ] )
+		{
+			const link = document.createElement( 'a' );
+			link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
+			link.href = 'https://www.protondb.com/app/' + GetCurrentAppID() + '?utm_source=SteamDB';
+
+			const element = document.createElement( 'span' );
+			element.dataset.tooltipText = _t( 'view_on_protondb' );
+			link.appendChild( element );
+
+			const image = document.createElement( 'img' );
+			image.className = 'ico16';
+			image.src = GetLocalResource( 'icons/protondb.svg' );
 
 			element.appendChild( image );
 
