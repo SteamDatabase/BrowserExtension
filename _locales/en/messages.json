@@ -590,9 +590,6 @@
 	"options_enhancement_inventory_badge_info": {
 		"message": "Display badge level on trading cards and booster packs"
 	},
-	"options_display_market_price_others": {
-		"message": "Display item market price in other users' inventories"
-	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Support $for_item$ and $my_item$ parameters",
 		"placeholders": {

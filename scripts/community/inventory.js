@@ -145,43 +145,6 @@
 		return originalReturn;
 	};
 
-	const originalBuildHover = window.BuildHover; // TODO: Legacy, remove after Valve switches to React
-
-	/**
-	 * @param {string} name
-	 * @param {any} rgItem
-	 */
-	window.BuildHover = function SteamDB_BuildHover( name, rgItem )
-	{
-		if( !window.g_bViewingOwnProfile )
-		{
-			window.g_bIsTrading = true; // Hides sell button
-			window.g_bMarketAllowed = true; // Has to be set so Valve's code doesn't try to bind a tooltip on non existing sell button
-		}
-
-		const container = document.getElementById( name );
-		container.querySelector( 'steamdb-iteminfo-footer' )?.remove();
-
-		const originalReturn = originalBuildHover.apply( this, arguments );
-
-		try
-		{
-			const asset = {
-				appid: rgItem.appid,
-				contextid: rgItem.contextid,
-				assetid: rgItem.assetid,
-				classid: rgItem.classid,
-			};
-			RenderItemInfo( container, rgItem.description, asset );
-		}
-		catch( e )
-		{
-			console.error( '[SteamDB] RenderItemInfo error', e );
-		}
-
-		return originalReturn;
-	};
-
 	/**
 	 * @param {HTMLElement} container
 	 * @param {any} description
