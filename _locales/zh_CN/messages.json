@@ -41,6 +41,10 @@
 	"search": {
 		"message": "搜索"
 	},
+	"in_library": {
+		"message": "在库中",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB 好评率："
 	},

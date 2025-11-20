@@ -41,6 +41,10 @@
 	"search": {
 		"message": "検索"
 	},
+	"in_library": {
+		"message": "ライブラリ内",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB での評価:"
 	},

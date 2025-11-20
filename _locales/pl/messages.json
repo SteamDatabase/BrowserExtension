@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Szukaj"
 	},
+	"in_library": {
+		"message": "W Bibliotece",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Ocena SteamDB:"
 	},

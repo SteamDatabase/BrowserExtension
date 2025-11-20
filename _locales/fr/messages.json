@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Recherche"
 	},
+	"in_library": {
+		"message": "Dans la bibliothèque",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Score SteamDB :"
 	},

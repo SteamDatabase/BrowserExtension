@@ -41,6 +41,10 @@
 	"search": {
 		"message": "搜尋"
 	},
+	"in_library": {
+		"message": "於收藏庫中",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB 評分："
 	},

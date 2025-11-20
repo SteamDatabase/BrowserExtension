@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Meklēt"
 	},
+	"in_library": {
+		"message": "Bibliotēkā",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB reitings:"
 	},

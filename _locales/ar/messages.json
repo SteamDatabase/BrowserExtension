@@ -41,6 +41,10 @@
 	"search": {
 		"message": "البحث"
 	},
+	"in_library": {
+		"message": "في المكتبة",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "تقييم SteamDB:"
 	},

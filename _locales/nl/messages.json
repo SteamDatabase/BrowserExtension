@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Zoeken"
 	},
+	"in_library": {
+		"message": "In Bibliotheek",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Beoordeling:"
 	},

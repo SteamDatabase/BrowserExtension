@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Sök"
 	},
+	"in_library": {
+		"message": "I bibliotek",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB-betyg:"
 	},
@@ -398,7 +402,7 @@
 		"message": "🇨🇳 Aktivera stöd för Steam China"
 	},
 	"options_footer1": {
-		"message": "Gjord med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
+		"message": "Gjort med 💙 av <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
 	},
 	"options_footer2": {
 		"message": "Detta tillägg är <a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">open source</a>, tack till alla inblandade!"

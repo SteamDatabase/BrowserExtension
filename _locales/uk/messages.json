@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Пошук"
 	},
+	"in_library": {
+		"message": "У бібліотеці",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Рейтинг SteamDB:"
 	},

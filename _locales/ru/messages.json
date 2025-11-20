@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Поиск"
 	},
+	"in_library": {
+		"message": "В библиотеке",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Рейтинг SteamDB:"
 	},

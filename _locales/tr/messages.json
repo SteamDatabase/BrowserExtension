@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Ara"
 	},
+	"in_library": {
+		"message": "Kütüphanede",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Puanı:"
 	},

@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Αναζήτηση"
 	},
+	"in_library": {
+		"message": "Στη Βιβλιοθήκη",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Βαθμολογία SteamDB:"
 	},

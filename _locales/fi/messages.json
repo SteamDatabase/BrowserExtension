@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Haku"
 	},
+	"in_library": {
+		"message": "Kirjastossa",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB-arvostelu:"
 	},

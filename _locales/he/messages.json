@@ -151,6 +151,9 @@
 	"explore_auto_discover": {
 		"message": "גילוי אוטומטי"
 	},
+	"explore_auto_discover_description": {
+		"message": "גלה את התור באופן אוטומטי."
+	},
 	"explore_generating": {
 		"message": "צור רשימת גילוי חדשה, פעולה זו עשויה להכשל אם Steam נמצא תחת עומס כבד…"
 	},
@@ -349,6 +352,21 @@
 		"message": "חשוף ספוילרים",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "תרשימים"
+	},
+	"popup_sales": {
+		"message": "מכירות"
+	},
+	"popup_calendar": {
+		"message": "לוח שנה"
+	},
+	"popup_patches": {
+		"message": "עדכונים"
+	},
+	"popup_calculator": {
+		"message": "מחשבון"
+	},
 	"options": {
 		"message": "הגדרות"
 	},
@@ -375,6 +393,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ הענק הרשאות"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "הפעל תמיכה ב-Steam China"
 	},
 	"options_footer1": {
 		"message": "נוצר ב 💙 ע\"י הצוות של <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -519,6 +540,9 @@
 	"options_button_gamecards": {
 		"message": "הצג את כפתורי חנות סטים ו SteamDB בעמוד הקלפים"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "הצג קישורים ל-SteamDB לצד שמות המפתח והמוציא לאור"
+	},
 	"options_link_subid": {
 		"message": "הצג את מזהה החבילה תחת כל אופצית רכישה"
 	},
@@ -657,5 +681,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "הצג היסתורית דרגות CS על דף הישגים של CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "לא תוכל ליצור חבילת בוסטר נוספת עבור המשחק הזה עד ל \n$available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

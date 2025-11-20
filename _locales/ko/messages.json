@@ -22,7 +22,7 @@
 		"message": "Steam에 약간의 다운타임이 발생하고 있는 것 같습니다. "
 	},
 	"view_on_steamdb": {
-		"message": "SteamDB 에서 보기"
+		"message": "SteamDB에서 보기"
 	},
 	"view_on_steam_hunters": {
 		"message": "Steam Hunters에서 보기",
@@ -40,6 +40,10 @@
 	},
 	"search": {
 		"message": "검색"
+	},
+	"in_library": {
+		"message": "라이브러리에 있음",
+		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
 		"message": "SteamDB 평가:"
@@ -115,7 +119,7 @@
 		}
 	},
 	"app_lowest_date": {
-		"message": "$date$에 표시된 가격입니다 ($relative$)",
+		"message": "$date$에 표시된 가격 ($relative$)",
 		"placeholders": {
 			"date": {
 				"content": "$1",
@@ -128,7 +132,7 @@
 		}
 	},
 	"app_lowest_date_multiple": {
-		"message": "$seen$번 표시된 가격이며 마지막으로 $date$에 표시되었습니다 ($relative$)",
+		"message": "$seen$번 표시된 가격, 마지막으로 $date$에 표시 ($relative$)",
 		"description": "This string is only used if $seen$ is higher than one, so it can not be 0 or 1.",
 		"placeholders": {
 			"date": {
@@ -211,7 +215,7 @@
 		}
 	},
 	"badges_idle_apps": {
-		"message": "유휴 상태인 앱: $amount$",
+		"message": "카드 획득 가능한 제품: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -221,7 +225,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "이 페이지에서 유휴 상태로 유지되는 앱: $amount$",
+		"message": "이 페이지에서 카드 획득 가능한 제품: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -264,7 +268,7 @@
 		}
 	},
 	"achievements_unlocked_count": {
-		"message": "획득한 도전 과제: $count$",
+		"message": "달성한 도전 과제: $count$",
 		"placeholders": {
 			"count": {
 				"content": "$1",
@@ -422,7 +426,7 @@
 		"message": "거래 제안"
 	},
 	"options_header_achievements": {
-		"message": "도전과제"
+		"message": "도전 과제"
 	},
 	"options_header_enhancements": {
 		"message": "개선사항"
@@ -490,7 +494,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "\"$options_steamdb_lowest_price$\" 설정이 활성화되면 확장 프로그램은 특정 게임에 대해 기록된 가격을 얻기 위해 귀하의 통화(Steam 이 생각하는 통화) 를 사용하여 $domain$에 보안 요청을 수행합니다.",
+		"message": "\"$options_steamdb_lowest_price$\" 설정이 활성화되면, 확장 프로그램은 특정 게임에 대해 기록된 가격을 얻기 위해 귀하의 통화(Steam 에 설정된 통화) 를 사용하여 $domain$에 보안 요청을 수행합니다.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -629,10 +633,10 @@
 		"description": "The icon is displayed to the left of the game name"
 	},
 	"options_improve_achievements": {
-		"message": "개인 도전과제 페이지 개선하기"
+		"message": "개인 도전 과제 페이지 개선하기"
 	},
 	"options_achievements_global_unlock": {
-		"message": "글로벌 도전과제 완료 퍼센트 표시하기"
+		"message": "전체 도전 과제 달성률 표시하기"
 	},
 	"options_modernized_achievements": {
 		"message": "모던 디자인 적용하기"
@@ -642,7 +646,7 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "숨겨진 도전과제를 스포일러로 취급하기"
+		"message": "숨겨진 도전 과제를 스포일러로 취급하기"
 	},
 	"options_prevent_store_images": {
 		"message": "제품 페이지의 이미지 불러오지 않기"
@@ -662,7 +666,7 @@
 		"message": "\"이미 라이브러리에 있음\" 블록 축소 버튼 추가"
 	},
 	"options_builtin_card_drops": {
-		"message": "배지 페이지에 남은 카드 드롭 총량 표시"
+		"message": "배지 페이지에 남은 카드 개수 표시"
 	},
 	"options_builtin_queue_cheat": {
 		"message": "할인 중에 대기열을 자동으로 탐색하는 버튼 추가"

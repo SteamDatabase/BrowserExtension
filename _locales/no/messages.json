@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Søk"
 	},
+	"in_library": {
+		"message": "I biblioteket",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB-vurdering:"
 	},

@@ -342,6 +342,9 @@
 	"inventory_badge_none": {
 		"message": "ไม่มีการสร้างตราสัญลักษณ์"
 	},
+	"popup_charts": {
+		"message": "ชาร์ท"
+	},
 	"options": {
 		"message": "ตัวเลือก"
 	},

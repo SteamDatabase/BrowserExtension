@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Hledat"
 	},
+	"in_library": {
+		"message": "V knihovně",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Hodnocení SteamDB:"
 	},

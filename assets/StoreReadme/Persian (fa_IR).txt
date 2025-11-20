@@ -13,5 +13,5 @@
 - و بسیاری تغییرات کوچک و امکانات مختلف دیگر
 - جایگزین ساده‌تر و سریعتر برای Enhanced Steam و Augmented Steam
 
-اطلاعات بیشتر در: https://steamdb.info/extension
+اطلاعات بیشتر در: /https://steamdb.info/extension
 صفحه گیت‌هاب: https://github.com/SteamDatabase/BrowserExtension

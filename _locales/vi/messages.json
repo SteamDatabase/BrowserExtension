@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Tìm kiếm"
 	},
+	"in_library": {
+		"message": "Trong thư viện",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Đánh giá SteamDB:"
 	},

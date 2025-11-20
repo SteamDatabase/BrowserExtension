@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Cari"
 	},
+	"in_library": {
+		"message": "Di perpustakaan",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Rating SteamDB:"
 	},
@@ -150,6 +154,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "Temuan-otomatis"
+	},
+	"explore_auto_discover_description": {
+		"message": "Menemukan antrean secara otomatis."
 	},
 	"explore_generating": {
 		"message": "Menghasilkan antrian temuan baru, hal ini dapat gagal jika Steam berada dibawah high load…"
@@ -349,6 +356,12 @@
 		"message": "Buka spoiler",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Bagan"
+	},
+	"popup_sales": {
+		"message": "Penjualan"
+	},
 	"popup_calendar": {
 		"message": "Kalendar"
 	},
@@ -384,6 +397,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Berikan izin"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktifkan dukungan Steam China"
 	},
 	"options_footer1": {
 		"message": "Dibuat dengan 💙 oleh <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -528,6 +544,9 @@
 	"options_button_gamecards": {
 		"message": "Tampilkan SteamDB dan simpan tombol halaman di halaman kartu permainan"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Menampilkan tautan SteamDB di samping nama pengembang dan penerbit"
+	},
 	"options_link_subid": {
 		"message": "Tampilkan SubID di bawah setiap opsi pembelian"
 	},
@@ -666,5 +685,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Tampilkan riwayat penilaian CS di halaman pencapaian CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Anda tidak akan dapat membuat Booster Pack lain untuk game ini hingga $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

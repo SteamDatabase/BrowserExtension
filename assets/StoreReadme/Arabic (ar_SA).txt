@@ -14,4 +14,4 @@
 - بديل أسهل وأسرع لـ Enhanced Steam و Augmented Steam
 
 لمزيد من المعلومات: https://steamdb.info/extension/
-GitHub: https://github.com/SteamDatabase/BrowserExextension
+GitHub: https://github.com/SteamDatabase/BrowserExtension

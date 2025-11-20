@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Caută"
 	},
+	"in_library": {
+		"message": "În bibliotecă",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Evaluare SteamDB:"
 	},
