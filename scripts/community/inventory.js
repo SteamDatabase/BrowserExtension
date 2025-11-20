@@ -17,6 +17,9 @@
 	let hasQuickSellEnabled = options[ 'enhancement-inventory-quick-sell' ] && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
 	let quickSellHeight = Number.parseInt( getComputedStyle( document.body ).getPropertyValue( '--steamdb-quick-sell-height' ), 10 ) || 0;
 
+	/** @type {AbortController | null} */
+	let currentAbortController = null;
+
 	const dummySellEvent =
 	{
 		stop: () =>
@@ -186,6 +189,14 @@
 	 */
 	function RenderItemInfo( container, description, asset )
 	{
+		if( currentAbortController )
+		{
+			currentAbortController.abort();
+		}
+
+		currentAbortController = new AbortController();
+		const abortController = currentAbortController;
+
 		const footer = document.createElement( 'steamdb-iteminfo-footer' );
 		footer.hidden = true;
 
@@ -240,7 +251,7 @@
 				footer.append( element );
 				footer.hidden = false;
 
-				LoadGiftInformation( element, description.classid, asset.assetid );
+				LoadGiftInformation( element, description.classid, asset.assetid, abortController.signal );
 			}
 		}
 
@@ -259,7 +270,7 @@
 					return;
 				}
 
-				LoadQuickSellInformation( element, commodityID, description );
+				LoadQuickSellInformation( element, commodityID, description, abortController.signal );
 			} );
 		}
 
@@ -273,8 +284,9 @@
 	 * @param {HTMLElement} element
 	 * @param {string} commodityID
 	 * @param {any} description
+	 * @param {AbortSignal} signal
 	 */
-	function LoadQuickSellInformation( element, commodityID, description )
+	function LoadQuickSellInformation( element, commodityID, description, signal )
 	{
 		const histogramParams = new URLSearchParams();
 		histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
@@ -283,6 +295,7 @@
 		histogramParams.set( 'item_nameid', commodityID );
 
 		fetch( '/market/itemordershistogram?' + histogramParams.toString(), {
+			signal,
 			headers: {
 				'X-Requested-With': 'SteamDB',
 			},
@@ -463,7 +476,10 @@
 			} )
 			.catch( ( e ) =>
 			{
-				console.error( '[SteamDB] Quick sell error', e );
+				if( e.name !== 'AbortError' )
+				{
+					console.error( '[SteamDB] Quick sell error', e );
+				}
 			} );
 	}
 
@@ -471,8 +487,9 @@
 	 * @param {HTMLElement} element
 	 * @param {string} classid
 	 * @param {string} assetid
+	 * @param {AbortSignal} signal
 	 */
-	function LoadGiftInformation( element, classid, assetid )
+	function LoadGiftInformation( element, classid, assetid, signal )
 	{
 		const linkSpan = document.createElement( 'span' );
 		linkSpan.textContent = i18n.view_on_steamdb;
@@ -517,6 +534,7 @@
 
 		// Fetch gift information
 		fetch( `/gifts/${assetid}/validateunpack`, {
+			signal,
 			headers: {
 				'X-Requested-With': 'SteamDB',
 			},
@@ -539,7 +557,10 @@
 			} )
 			.catch( ( err ) =>
 			{
-				console.error( '[SteamDB] Gift info error', err );
+				if( err.name !== 'AbortError' )
+				{
+					console.error( '[SteamDB] Gift info error', err );
+				}
 			} );
 	}
 
