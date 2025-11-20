@@ -335,12 +335,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Lists the item for lowest listed sell price\n\nDisplayed price is the money you receive (without fees)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Lists the item for highest listed buy order price\n\nDisplayed price is the money you receive (without fees)"
-	},
 	"inventory_badge_level": {
 		"message": "Your badge level: $level$",
 		"placeholders": {
@@ -583,9 +577,6 @@
 	},
 	"options_link_inventory": {
 		"message": "Link each gift and coupon in your inventory to SteamDB"
-	},
-	"options_link_inventory_gift_subid": {
-		"message": "Correctly figure out gift SubID in your inventory"
 	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Do not refresh the inventory when selling an item"

@@ -2,26 +2,20 @@
 
 ( ( () =>
 {
-	const FoundState =
-	{
-		None: 0,
-		Process: 1,
-		Added: 2,
-		DisableButtons: 3,
-	};
-
-	/** @type {Record<string, string>} */
+	/** @type {Record<string, {packageid: number, owned: boolean}>} */
 	const giftCache = {}; // TODO: Store this in indexeddb
 
 	const scriptHook = document.getElementById( 'steamdb_inventory_hook' );
 	const homepage = scriptHook.dataset.homepage;
+	const logoSrc = scriptHook.dataset.logo;
+	const optionsUrl = scriptHook.dataset.optionsUrl;
 	const i18n = JSON.parse( scriptHook.dataset.i18n );
 	const options = JSON.parse( scriptHook.dataset.options );
 
 	const hasLinksEnabled = options[ 'link-inventory' ];
-	const hasPreciseSubIDsEnabled = options[ 'link-inventory-gift-subid' ];
 	const hasBadgeInfoEnabled = options[ 'enhancement-inventory-badge-info' ];
 	let hasQuickSellEnabled = options[ 'enhancement-inventory-quick-sell' ] && window.g_bViewingOwnProfile && window.g_bMarketAllowed;
+	let quickSellHeight = Number.parseInt( getComputedStyle( document.body ).getPropertyValue( '--steamdb-quick-sell-height' ), 10 ) || 0;
 
 	const dummySellEvent =
 	{
@@ -39,10 +33,13 @@
 		window.SellCurrentSelection();
 
 		/** @type {HTMLInputElement} */
-		const currencyInput = document.querySelector( '#market_sell_currency_input' );
-		currencyInput.value = ( Number.parseFloat( this.dataset.price ) / 100.0 ).toString();
+		const inputBuyer = document.querySelector( '#market_sell_buyercurrency_input' );
+		inputBuyer.value = ( Number.parseFloat( this.dataset.price ) / 100.0 ).toString();
+		inputBuyer.dispatchEvent( new Event( 'keyup', { bubbles: true } ) );
 
-		window.SellItemDialog.OnInputKeyUp( null ); // Recalculate prices
+		/** @type {HTMLInputElement} */
+		const inputSeller = document.querySelector( '#market_sell_currency_input' );
+		inputSeller.dispatchEvent( new Event( 'keyup', { bubbles: true } ) );
 
 		if( options[ 'enhancement-inventory-quick-sell-auto' ] )
 		{
@@ -88,7 +85,7 @@
 
 			window.g_ActiveInventory.selectedItem.element.classList.add( 'steamdb_confirm_' + className );
 
-			originalOnSuccess.apply( this, arguments );
+			return originalOnSuccess.apply( this, arguments );
 		};
 
 		window.CUserYou.prototype.ReloadInventory = function( )
@@ -101,162 +98,450 @@
 			}
 			else
 			{
-				originalReloadInventory.apply( this, arguments );
+				return originalReloadInventory.apply( this, arguments );
 			}
 		};
 	}
 
-	const originalBuildHover = window.BuildHover;
+	const originalRenderItemInfo = window.RenderItemInfo;
 
 	/**
-	 * @param {string} prefix
+	 * @param {string} name
+	 * @param {any} description
+	 * @param {any} asset
 	 */
-	window.BuildHover = function( prefix )
+	window.RenderItemInfo = function SteamDB_RenderItemInfo( name, description, asset )
 	{
-		document.querySelector( `#${prefix} .steamdb_quick_sell` )?.remove();
-		document.querySelector( `#${prefix} .steamdb_badge_info` )?.remove();
+		/*
+		if( !window.g_bViewingOwnProfile )
+		{
+			window.g_bIsTrading = true; // Hides sell button
+			window.g_bMarketAllowed = true; // Has to be set so Valve's code doesn't try to bind a tooltip on non existing sell button
+		}
+		*/
 
-		originalBuildHover.apply( this, arguments );
+		const container = document.getElementById( name );
+		container.querySelector( 'steamdb-iteminfo-footer' )?.remove();
+
+		const originalReturn = originalRenderItemInfo.apply( this, arguments );
+
+		if( !description )
+		{
+			return originalReturn;
+		}
+
+		try
+		{
+			RenderItemInfo( container, description, asset );
+		}
+		catch( e )
+		{
+			console.error( '[SteamDB] RenderItemInfo error', e );
+		}
+
+		return originalReturn;
 	};
 
-	const originalPopulateMarketActions = window.PopulateMarketActions;
+	const originalBuildHover = window.BuildHover; // TODO: Legacy, remove after Valve switches to React
 
 	/**
-	 * @param {HTMLElement} elActions
-	 * @param {any} item
+	 * @param {string} name
+	 * @param {any} rgItem
 	 */
-	window.PopulateMarketActions = function( elActions, item )
+	window.BuildHover = function SteamDB_BuildHover( name, rgItem )
 	{
-		const realIsTrading = window.g_bIsTrading;
-		const realIsMarketAllowed = window.g_bMarketAllowed;
-
 		if( !window.g_bViewingOwnProfile )
 		{
 			window.g_bIsTrading = true; // Hides sell button
 			window.g_bMarketAllowed = true; // Has to be set so Valve's code doesn't try to bind a tooltip on non existing sell button
 		}
 
-		originalPopulateMarketActions.apply( this, arguments );
+		const container = document.getElementById( name );
+		container.querySelector( 'steamdb-iteminfo-footer' )?.remove();
 
-		window.g_bIsTrading = realIsTrading;
-		window.g_bMarketAllowed = realIsMarketAllowed;
+		const originalReturn = originalBuildHover.apply( this, arguments );
 
-		if( hasQuickSellEnabled && item.description.marketable && !item.description.is_currency && elActions.style.display !== 'none' )
+		try
 		{
-			const buttons = document.createElement( 'span' );
-			buttons.className = 'steamdb_quick_sell';
+			const asset = {
+				appid: rgItem.appid,
+				contextid: rgItem.contextid,
+				assetid: rgItem.assetid,
+				classid: rgItem.classid,
+			};
+			RenderItemInfo( container, rgItem.description, asset );
+		}
+		catch( e )
+		{
+			console.error( '[SteamDB] RenderItemInfo error', e );
+		}
 
-			const listNowText = document.createElement( 'span' );
-			listNowText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( 0 ) );
+		return originalReturn;
+	};
 
-			const listNow = document.createElement( 'a' );
-			listNow.title = i18n.inventory_list_at_title;
-			listNow.href = 'javascript:void(0)'; // eslint-disable-line no-script-url
-			listNow.className = 'btn_small btn_darkblue_white_innerfade';
-			listNow.style.opacity = '0.5';
-			listNow.appendChild( listNowText );
+	/**
+	 * @param {HTMLElement} container
+	 * @param {any} description
+	 * @param {any} asset
+	 */
+	function RenderItemInfo( container, description, asset )
+	{
+		const footer = document.createElement( 'steamdb-iteminfo-footer' );
+		footer.hidden = true;
 
-			const sellNowText = document.createElement( 'span' );
-			sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', FormatCurrency( 0 ) );
+		if( hasBadgeInfoEnabled && window.g_bViewingOwnProfile && description.appid === 753 && description.tags )
+		{
+			let itemClass = null;
 
-			const sellNow = document.createElement( 'a' );
-			sellNow.title = i18n.inventory_sell_at_title;
-			sellNow.href = 'javascript:void(0)'; // eslint-disable-line no-script-url
-			sellNow.className = 'btn_small btn_darkblue_white_innerfade';
-			sellNow.style.opacity = '0.5';
-			sellNow.appendChild( sellNowText );
+			for( const tag of description.tags )
+			{
+				if( tag.category === 'item_class' )
+				{
+					itemClass = tag.internal_name;
+					break;
+				}
+			}
 
-			buttons.appendChild( listNow );
-			buttons.appendChild( document.createTextNode( ' ' ) );
-			buttons.appendChild( sellNow );
+			if(
+				itemClass === 'item_class_2' || // trading card
+				itemClass === 'item_class_5' // booster pack
+			)
+			{
+				const element = document.createElement( 'div' );
+				element.className = 'steamdb_badge_info';
 
-			elActions.insertAdjacentElement( 'afterend', buttons );
+				footer.append( element );
+				footer.hidden = false;
 
-			GetMarketItemNameId( item, ( commodityID ) =>
+				LoadBadgeInformation( element, description, window.UserYou.GetSteamId() );
+			}
+		}
+
+		if( hasLinksEnabled && description.appid === 753 && description.owner_actions )
+		{
+			let isGift = false;
+
+			for( const action of description.owner_actions )
+			{
+				const url = new URL( action.link );
+
+				if( url.pathname.startsWith( '/checkout/sendgift/' ) || url.pathname.startsWith( 'UnpackGift(' ) || url.pathname.startsWith( 'UnpackGiftItemReward(' ) )
+				{
+					isGift = true;
+					break;
+				}
+			}
+
+			if( isGift )
+			{
+				const element = document.createElement( 'div' );
+				element.className = 'steamdb_gift_info';
+
+				footer.append( element );
+				footer.hidden = false;
+
+				LoadGiftInformation( element, description.classid, asset.assetid );
+			}
+		}
+
+		if( hasQuickSellEnabled && description.marketable && !description.is_currency )
+		{
+			const element = document.createElement( 'div' );
+			element.className = 'steamdb_quicksell';
+
+			footer.append( element );
+			footer.hidden = false;
+
+			GetMarketItemNameId( description, ( commodityID ) =>
 			{
 				if( !commodityID )
 				{
-					buttons.remove();
-
 					return;
 				}
 
-				const histogramParams = new URLSearchParams();
-				histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
-				histogramParams.set( 'language', 'english' );
-				histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
-				histogramParams.set( 'item_nameid', commodityID );
-				histogramParams.set( 'two_factor', '0' );
+				LoadQuickSellInformation( element, commodityID, description );
+			} );
+		}
 
-				const xhrHistogram = new XMLHttpRequest();
-				xhrHistogram.onreadystatechange = () =>
+		requestAnimationFrame( () =>
+		{
+			container.append( footer );
+		} );
+	};
+
+	/**
+	 * @param {HTMLElement} element
+	 * @param {string} commodityID
+	 * @param {any} description
+	 */
+	function LoadQuickSellInformation( element, commodityID, description )
+	{
+		const histogramParams = new URLSearchParams();
+		histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
+		histogramParams.set( 'language', window.g_strLanguage );
+		histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
+		histogramParams.set( 'item_nameid', commodityID );
+
+		fetch( '/market/itemordershistogram?' + histogramParams.toString(), {
+			headers: {
+				'X-Requested-With': 'SteamDB',
+			},
+		} )
+			.then( ( response ) =>
+			{
+				if( response.status === 429 )
 				{
-					if( xhrHistogram.readyState !== 4 )
-					{
-						return;
-					}
+					// If user is currently rate limited by Steam market, just disable the buttons
+					hasQuickSellEnabled = false;
+				}
 
-					if( xhrHistogram.status !== 200 )
+				if( !response.ok )
+				{
+					return null;
+				}
+
+				return response.json();
+			} )
+			.then( ( data ) =>
+			{
+				if( !data || !data.success )
+				{
+					return;
+				}
+
+				const publisherFee = ( typeof description.market_fee !== 'undefined' && description.market_fee !== null ) ? description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
+
+				const hoverText = document.createElement( 'div' );
+				hoverText.className = 'steamdb_orders_hover_text';
+				hoverText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( 0 ) );
+
+				const orderHeaderSummaries = document.createElement( 'div' );
+
+				/**
+				 * @param {HTMLElement} button
+				 */
+				const BindSellButton = ( button ) =>
+				{
+					button.addEventListener( 'click', OnQuickSellButtonClick );
+
+					button.addEventListener( 'pointerenter', function()
 					{
-						if( xhrHistogram.status === 429 )
+						const isSellNow = button.classList.contains( 'steamdb_buy_summary' );
+						const str = isSellNow ? i18n.inventory_sell_at : i18n.inventory_list_at;
+
+						const price = Number.parseInt( button.dataset.price, 10 );
+						const priceFees = window.CalculateFeeAmount( price, publisherFee );
+						const priceAfterFees = price - priceFees.fees;
+
+						hoverText.textContent = str.replace( '%price%', FormatCurrency( price ) );
+
+						const priceAfterFeesElement = document.createElement( 'span' );
+						priceAfterFeesElement.textContent = ' → ' + FormatCurrency( priceAfterFees );
+						hoverText.append( priceAfterFeesElement );
+
+						hoverText.classList.add( 'steamdb_hover_visible' );
+					} );
+
+					button.addEventListener( 'pointerleave', function()
+					{
+						hoverText.classList.remove( 'steamdb_hover_visible' );
+					} );
+				};
+
+				if( data.lowest_sell_order && data.sell_order_summary )
+				{
+					const sellHeader = document.createElement( 'div' );
+					sellHeader.className = 'steamdb_orders_header steamdb_sell_summary';
+					sellHeader.dataset.price = data.lowest_sell_order.toString();
+					sellHeader.innerHTML = data.sell_order_summary;
+					BindSellButton( sellHeader );
+					orderHeaderSummaries.append( sellHeader );
+				}
+
+				if( data.highest_buy_order && data.buy_order_summary )
+				{
+					const buyHeader = document.createElement( 'div' );
+					buyHeader.className = 'steamdb_orders_header steamdb_buy_summary';
+					buyHeader.dataset.price = data.highest_buy_order.toString();
+					buyHeader.innerHTML = data.buy_order_summary;
+					BindSellButton( buyHeader );
+					orderHeaderSummaries.append( buyHeader );
+				}
+
+				const orderHeader = document.createElement( 'div' );
+				orderHeader.className = 'steamdb_order_header';
+				orderHeader.append( orderHeaderSummaries );
+
+				const logoImage = document.createElement( 'img' );
+				logoImage.className = 'steamdb_icon';
+				logoImage.src = logoSrc;
+
+				const logoUrl = document.createElement( 'a' );
+				logoUrl.title = i18n.steamdb_options;
+				logoUrl.href = optionsUrl;
+				logoUrl.target = '_blank';
+				logoUrl.append( logoImage );
+				orderHeader.append( logoUrl );
+
+				element.append( orderHeader );
+
+				const hoverTextContainer = document.createElement( 'div' );
+				hoverTextContainer.append( hoverText );
+				element.append( hoverTextContainer );
+
+				for( const promote of element.querySelectorAll( '.market_commodity_orders_header_promote' ) )
+				{
+					promote.className = 'steamdb_orders_header_promote';
+				}
+
+				if( data.sell_order_table )
+				{
+					element.insertAdjacentHTML( 'beforeend', data.sell_order_table );
+
+					/** @type {HTMLTableElement} */
+					const table = element.querySelector( '.market_commodity_orders_table' );
+					table.className = 'steamdb_orders_table';
+
+					const rows = table.querySelectorAll( 'tr' );
+
+					for( const row of rows )
+					{
+						const td = row.querySelector( 'td' );
+
+						if( !td )
 						{
-							// If user is currently rate limited by Steam market, just disable the buttons
-							hasQuickSellEnabled = false;
+							continue;
 						}
 
-						buttons.remove();
+						const priceText = td.textContent.trim();
+						const priceValue = window.GetPriceValueAsInt( priceText );
 
-						return;
+						if( priceValue < 1 )
+						{
+							continue;
+						}
+
+						row.classList.add( 'steamdb_order_row_clickable' );
+						row.dataset.price = priceValue.toString();
+						BindSellButton( row );
 					}
-
-					const data = xhrHistogram.response;
-
-					if( !data.success )
-					{
-						buttons.remove();
-
-						return;
-					}
-
-					const publisherFee = typeof item.description.market_fee !== 'undefined' ? item.description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
 
 					if( data.lowest_sell_order )
 					{
-						const listNowFee = window.CalculateFeeAmount( data.lowest_sell_order, publisherFee );
-						const listNowPrice = data.lowest_sell_order - listNowFee.fees;
+						const undercutPrice = data.lowest_sell_order - 1;
+						const undercutPriceFees = window.CalculateFeeAmount( undercutPrice, publisherFee );
 
-						listNow.style.removeProperty( 'opacity' );
-						listNow.dataset.price = listNowPrice.toString();
-						listNow.addEventListener( 'click', OnQuickSellButtonClick );
-						listNowText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( listNowPrice ) );
-					}
-					else
-					{
-						listNow.remove();
+						if( undercutPrice - undercutPriceFees.fees > 0 && undercutPrice > data.highest_buy_order )
+						{
+							const row = document.createElement( 'tr' );
+							row.classList.add( 'steamdb_order_row_clickable' );
+							row.style.fontStyle = 'italic';
+							row.dataset.price = undercutPrice.toString();
+
+							const priceCell = document.createElement( 'td' );
+							priceCell.textContent = FormatCurrency( undercutPrice );
+							row.append( priceCell );
+
+							const quantityCell = document.createElement( 'td' );
+							row.append( quantityCell );
+
+							BindSellButton( row );
+							rows[ 0 ].after( row );
+						}
 					}
 
-					if( data.highest_buy_order )
-					{
-						const sellNowFee = window.CalculateFeeAmount( data.highest_buy_order, publisherFee );
-						const sellNowPrice = data.highest_buy_order - sellNowFee.fees;
+					element.classList.add( 'steamdb_quicksell_visible' );
 
-						sellNow.style.removeProperty( 'opacity' );
-						sellNow.dataset.price = sellNowPrice.toString();
-						sellNow.addEventListener( 'click', OnQuickSellButtonClick );
-						sellNowText.textContent = i18n.inventory_sell_at.replace( '%price%', FormatCurrency( sellNowPrice ) );
-					}
-					else
+					const actualHeight = element.offsetHeight;
+
+					if( actualHeight > quickSellHeight )
 					{
-						sellNow.remove();
+						quickSellHeight = actualHeight;
+						document.body.style.setProperty( '--steamdb-quick-sell-height', `${actualHeight}px` );
 					}
-				};
-				xhrHistogram.open( 'GET', '/market/itemordershistogram?' + histogramParams.toString(), true );
-				xhrHistogram.setRequestHeader( 'X-Requested-With', 'SteamDB' );
-				xhrHistogram.responseType = 'json';
-				xhrHistogram.send();
+				}
+			} )
+			.catch( ( e ) =>
+			{
+				console.error( '[SteamDB] Quick sell error', e );
 			} );
+	}
+
+	/**
+	 * @param {HTMLElement} element
+	 * @param {string} classid
+	 * @param {string} assetid
+	 */
+	function LoadGiftInformation( element, classid, assetid )
+	{
+		const linkSpan = document.createElement( 'span' );
+		linkSpan.textContent = i18n.view_on_steamdb;
+
+		const link = document.createElement( 'a' );
+		link.className = 'btnv6_blue_hoverfade btn_small_thin';
+		link.href = '#';
+		link.target = '_blank';
+		link.append( linkSpan );
+
+		element.append( link );
+
+		const CreateOwnedIcon = () =>
+		{
+			const ownedSpan = document.createElement( 'span' );
+			ownedSpan.textContent = ' ' + i18n.in_library;
+
+			const ownedIcon = document.createElement( 'i' );
+			ownedIcon.className = 'ico16 thumb_upv6';
+			ownedSpan.prepend( ownedIcon );
+
+			const ownedLink = document.createElement( 'a' );
+			ownedLink.className = 'btnv6_blue_hoverfade btn_small_thin';
+			ownedLink.append( ownedSpan );
+
+			element.append( ownedLink );
+		};
+
+		if( giftCache[ classid ] )
+		{
+			link.href = `${homepage}sub/${giftCache[ classid ].packageid}/`;
+
+			if( giftCache[ classid ].owned )
+			{
+				CreateOwnedIcon();
+			}
+
+			return;
 		}
-	};
+
+		link.classList.add( 'btn_disabled' );
+
+		// Fetch gift information
+		fetch( `/gifts/${assetid}/validateunpack`, {
+			headers: {
+				'X-Requested-With': 'SteamDB',
+			},
+		} )
+			.then( ( response ) => response.json() )
+			.then( ( data ) =>
+			{
+				if( data?.packageid )
+				{
+					giftCache[ classid ] = { packageid: data.packageid, owned: data.owned || false };
+
+					link.classList.remove( 'btn_disabled' );
+					link.href = `${homepage}sub/${data.packageid}/`;
+
+					if( data.owned )
+					{
+						CreateOwnedIcon();
+					}
+				}
+			} )
+			.catch( ( err ) =>
+			{
+				console.error( '[SteamDB] Gift info error', err );
+			} );
+	}
 
 	let badgesDataLoaded = false;
 
@@ -265,13 +550,12 @@
 
 	/**
 	 * @param {HTMLElement} element
-	 * @param {any[]} rgActions
-	 * @param {any} item
+	 * @param {any} description
 	 * @param {string} steamid
 	 */
-	function AddBadgeInformation( element, rgActions, item, steamid )
+	function AddBadgeInformation( element, description, steamid )
 	{
-		if( !item.description.market_fee_app )
+		if( !description.market_fee_app )
 		{
 			return;
 		}
@@ -280,7 +564,7 @@
 		let isFoilCard = false;
 		let foundBadge = false;
 
-		for( const tag of item.description.tags )
+		for( const tag of description.tags )
 		{
 			if( tag.category === 'cardborder' )
 			{
@@ -296,11 +580,11 @@
 		 * @param {boolean} foil
 		 */
 		const CreateLink = ( foil ) =>
-			`https://steamcommunity.com/profiles/${steamid}/gamecards/${item.description.market_fee_app}${foil ? '?border=1' : ''}`;
+			`https://steamcommunity.com/profiles/${steamid}/gamecards/${description.market_fee_app}${foil ? '?border=1' : ''}`;
 
 		for( const badge of badgesData )
 		{
-			if( badge.appid !== item.description.market_fee_app )
+			if( badge.appid !== description.market_fee_app )
 			{
 				continue;
 			}
@@ -338,32 +622,20 @@
 
 			element.append( link );
 		}
-
-		// TODO: This has a race condition when it's called after badge info fetch() as it directly modifies rgActions
-		for( let i = 0; i < rgActions.length; i++ )
-		{
-			if( rgActions[ i ].link.startsWith( 'https://steamcommunity.com/my/gamecards/' ) )
-			{
-				// Remove the 'View badge progress' button
-				rgActions.splice( i, 1 );
-				break;
-			}
-		}
 	}
 
 	/**
 	 * @param {HTMLElement} element
-	 * @param {any[]} rgActions
-	 * @param {any} item
+	 * @param {any} description
 	 * @param {string} steamid
 	 */
-	function LoadBadgeInformation( element, rgActions, item, steamid )
+	function LoadBadgeInformation( element, description, steamid )
 	{
 		if( badgesDataLoaded )
 		{
 			if( badgesData.length > 0 )
 			{
-				AddBadgeInformation( element, rgActions, item, steamid );
+				AddBadgeInformation( element, description, steamid );
 			}
 
 			return;
@@ -403,292 +675,23 @@
 				{
 					badgesData = response.response.badges;
 
-					AddBadgeInformation( element, rgActions, item, steamid );
+					AddBadgeInformation( element, description, steamid );
 				}
+			} )
+			.catch( ( err ) =>
+			{
+				console.error( '[SteamDB] Badge info error', err );
 			} );
 	}
 
-	const originalPopulateActions = window.PopulateActions;
-
 	/**
-	 * @param {any} prefix
-	 * @param {HTMLElement} elActions
-	 * @param {any[]} rgActions
-	 * @param {any} item
-	 * @param {any} owner
-	 */
-	window.PopulateActions = function( prefix, elActions, rgActions, item, owner )
-	{
-		let foundState = FoundState.None;
-
-		try
-		{
-			if( hasBadgeInfoEnabled && window.g_bViewingOwnProfile && item.description.appid === 753 && item.description.tags && elActions.classList.contains( 'item_owner_actions' ) )
-			{
-				let itemClass = null;
-
-				for( const tag of item.description.tags )
-				{
-					if( tag.category === 'item_class' )
-					{
-						itemClass = tag.internal_name;
-						break;
-					}
-				}
-
-				if(
-					itemClass === 'item_class_2' || // trading card
-					itemClass === 'item_class_5' // booster pack
-				)
-				{
-					const element = document.createElement( 'div' );
-					element.className = 'steamdb_badge_info';
-					elActions.insertAdjacentElement( 'beforebegin', element );
-
-					LoadBadgeInformation( element, rgActions, item, owner.strSteamId );
-				}
-			}
-
-			// PopulateActions is called for both item.description.actions and item.description.owner_actions, we only want first one
-			if( hasLinksEnabled && item.description.appid === 753 && rgActions === item.description.actions )
-			{
-				if( item.description.type === 'Coupon' && rgActions )
-				{
-					let couponLink;
-					let pos;
-
-					for( let i = 0; i < rgActions.length; i++ )
-					{
-						const link = rgActions[ i ];
-
-						if( link.steamdb )
-						{
-							foundState = FoundState.Added;
-
-							break;
-						}
-						else if( link.link )
-						{
-							pos = link.link.indexOf( 'list_of_subs=' );
-
-							if( pos > 0 )
-							{
-								couponLink = link.link;
-
-								foundState = FoundState.Process;
-							}
-						}
-					}
-
-					if( foundState === FoundState.Process )
-					{
-						const subs = couponLink.substring( pos + 'list_of_subs='.length ).split( ',' );
-
-						for( let i = 0; i < subs.length; i++ )
-						{
-							rgActions.push( {
-								steamdb: true,
-								link: homepage + 'sub/' + subs[ i ] + '/',
-								name: i18n.view_on_steamdb, // TODO: Add subid?
-							} );
-						}
-
-						foundState = FoundState.Added;
-					}
-				}
-				else if( hasPreciseSubIDsEnabled && item.description.owner_actions && ( item.description.type === 'Gift' || item.description.type === 'Guest Pass' ) )
-				{
-					// If a gift has no actions, rgActions is undefined
-					if( !rgActions )
-					{
-						arguments[ 2 ] = item.description.actions = rgActions = [];
-					}
-
-					for( let i = 0; i < rgActions.length; i++ )
-					{
-						const link = rgActions[ i ];
-
-						if( link.steamdb )
-						{
-							foundState = FoundState.Added;
-
-							if( link.link.startsWith( '#steamdb_' ) )
-							{
-								if( giftCache[ item.description.classid ] )
-								{
-									rgActions[ i ].link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/';
-								}
-								else
-								{
-									foundState = FoundState.DisableButtons;
-								}
-							}
-
-							break;
-						}
-					}
-
-					if( foundState !== FoundState.Added )
-					{
-						foundState = FoundState.DisableButtons;
-
-						const action =
-						{
-							steamdb: true,
-							link: '#steamdb_' + item.assetid,
-							name: i18n.view_on_steamdb,
-						};
-
-						if( giftCache[ item.description.classid ] )
-						{
-							action.link = homepage + 'sub/' + giftCache[ item.description.classid ] + '/';
-						}
-						else
-						{
-							const xhr = new XMLHttpRequest();
-							xhr.onreadystatechange = () =>
-							{
-								if( xhr.readyState === 4 && xhr.status === 200 && xhr.response.packageid )
-								{
-									giftCache[ item.description.classid ] = xhr.response.packageid;
-
-									/** @type {HTMLAnchorElement} */
-									const link = elActions.querySelector( '.item_actions a[href="#steamdb_' + item.assetid + '"]' );
-
-									if( link )
-									{
-										link.classList.remove( 'btn_disabled' );
-										link.href = homepage + 'sub/' + xhr.response.packageid + '/';
-										// TODO: Add subid to the button text?
-									}
-								}
-							};
-							xhr.open( 'GET', '/gifts/' + item.assetid + '/validateunpack', true );
-							xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
-							xhr.responseType = 'json';
-							xhr.send();
-						}
-
-						rgActions.push( action );
-					}
-				}
-				else if( rgActions )
-				{
-					for( let i = 0; i < rgActions.length; i++ )
-					{
-						const link = rgActions[ i ];
-
-						if( link.steamdb )
-						{
-							foundState = FoundState.Added;
-
-							break;
-						}
-						else if( link.link?.match( /\.com\/(app|sub)\// ) )
-						{
-							foundState = FoundState.Process;
-						}
-					}
-
-					if( foundState === FoundState.Process )
-					{
-						for( let i = 0; i < rgActions.length; i++ )
-						{
-							const link = rgActions[ i ].link;
-
-							if( !link )
-							{
-								continue;
-							}
-
-							const linkMatch = link.match( /\.com\/(app|sub)\/([0-9]+)/ );
-
-							if( linkMatch )
-							{
-								rgActions.push( {
-									steamdb: true,
-									link: homepage + linkMatch[ 1 ] + '/' + linkMatch[ 2 ] + '/',
-									name: i18n.view_on_steamdb, // TODO: Add id?
-								} );
-
-								foundState = FoundState.Added;
-
-								break;
-							}
-						}
-					}
-				}
-				else if( item.description.type === 'Gift' )
-				{
-					const linkMatch = item.description.name.match( /^Unknown package ([0-9]+)$/ );
-
-					if( linkMatch )
-					{
-						item.description.actions = rgActions = [ {
-							steamdb: true,
-							link: homepage + 'sub/' + linkMatch[ 1 ] + '/',
-							name: i18n.view_on_steamdb,
-						} ];
-					}
-					else
-					{
-						item.description.actions = rgActions = [ {
-							steamdb: true,
-							link: homepage + 'search/?a=sub&q=' + encodeURIComponent( item.description.name ),
-							name: i18n.view_on_steamdb,
-						} ];
-					}
-
-					foundState = FoundState.Added;
-				}
-			}
-		}
-		catch( e )
-		{
-			// Don't break website functionality if something fails above
-			console.error( '[SteamDB]', e );
-		}
-
-		originalPopulateActions.apply( this, arguments );
-
-		// We want our links to be open in new tab
-		if( foundState === FoundState.Added )
-		{
-			/** @type {NodeListOf<HTMLAnchorElement>} */
-			const link = elActions.querySelectorAll( '.item_actions a[href^="' + homepage + '"]' );
-
-			if( link )
-			{
-				for( let i = 0; i < link.length; i++ )
-				{
-					link[ i ].target = '_blank';
-				}
-			}
-		}
-		else if( foundState === FoundState.DisableButtons )
-		{
-			/** @type {NodeListOf<HTMLAnchorElement>} */
-			const link = elActions.querySelectorAll( '.item_actions a[href^="#steamdb_"]' );
-
-			if( link )
-			{
-				for( let i = 0; i < link.length; i++ )
-				{
-					link[ i ].target = '_blank';
-					link[ i ].classList.add( 'btn_disabled' );
-				}
-			}
-		}
-	};
-
-	/**
-	 * @param {any} item
+	 * @param {any} description
 	 * @param {(commodityID: string|null) => void} callback
 	 */
-	function GetMarketItemNameId( item, callback )
+	function GetMarketItemNameId( description, callback )
 	{
-		const appid = item.description.appid;
-		const marketHashName = encodeURIComponent( window.GetMarketHashName( item.description ) );
+		const appid = description.appid;
+		const marketHashName = encodeURIComponent( window.GetMarketHashName( description ) );
 		const cacheKey = `${appid}_${marketHashName}`;
 
 		GetCachedItemId( cacheKey )
@@ -700,51 +703,60 @@
 					return;
 				}
 
-				const xhr = new XMLHttpRequest();
-				xhr.onreadystatechange = () =>
-				{
-					if( xhr.readyState !== 4 )
+				fetch( `/market/listings/${appid}/${marketHashName}`, {
+					headers: {
+						'X-Requested-With': 'SteamDB',
+					},
+				} )
+					.then( ( response ) =>
 					{
-						return;
-					}
-
-					if( xhr.status !== 200 )
-					{
-						if( xhr.status === 429 )
+						if( response.status === 429 )
 						{
 							// If user is currently rate limited by Steam market, just disable the buttons
 							hasQuickSellEnabled = false;
 						}
 
-						callback( null );
-						return;
-					}
+						if( !response.ok )
+						{
+							callback( null );
+							return null;
+						}
 
-					const data = xhr.response;
-
-					const commodityID = data.match( /Market_LoadOrderSpread\(\s?(?<id>\d+)\s?\);/ );
-
-					if( !commodityID )
+						return response.text();
+					} )
+					.then( ( data ) =>
 					{
+						if( !data )
+						{
+							return;
+						}
+
+						const commodityID = data.match( /Market_LoadOrderSpread\(\s?(?<id>\d+)\s?\);/ );
+
+						if( !commodityID )
+						{
+							callback( null );
+							return;
+						}
+
+						SetCachedItemId( cacheKey, commodityID.groups.id )
+							.then( () =>
+							{
+								callback( commodityID.groups.id );
+							} )
+							.catch( ( err ) =>
+							{
+								console.error( '[SteamDB] DB set fail', err );
+
+								callback( commodityID.groups.id );
+							} );
+					} )
+					.catch( ( err ) =>
+					{
+						console.error( '[SteamDB] Fetch error', err );
+
 						callback( null );
-						return;
-					}
-
-					SetCachedItemId( cacheKey, commodityID.groups.id )
-						.then( () =>
-						{
-							callback( commodityID.groups.id );
-						} )
-						.catch( ( err ) =>
-						{
-							console.error( '[SteamDB] DB set fail', err );
-
-							callback( commodityID.groups.id );
-						} );
-				};
-				xhr.open( 'GET', `/market/listings/${appid}/${marketHashName}`, true );
-				xhr.setRequestHeader( 'X-Requested-With', 'SteamDB' );
-				xhr.send();
+					} );
 			} )
 			.catch( ( err ) =>
 			{

@@ -4,7 +4,6 @@ if( document.getElementById( 'inventory_link_753' ) )
 {
 	GetOption( {
 		'link-inventory': true,
-		'link-inventory-gift-subid': true,
 		'enhancement-inventory-sidebar': true,
 		'enhancement-inventory-quick-sell': true,
 		'enhancement-inventory-quick-sell-auto': false,
@@ -28,9 +27,13 @@ if( document.getElementById( 'inventory_link_753' ) )
 		element.type = 'text/javascript';
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
+		element.dataset.logo = GetLocalResource( 'icons/white.svg' );
+		element.dataset.optionsUrl = GetLocalResource( 'options/options.html' ) + '#inventory';
 		element.dataset.options = JSON.stringify( items );
 		element.dataset.i18n = JSON.stringify( {
+			steamdb_options: _t( 'steamdb_options' ),
 			view_on_steamdb: _t( 'view_on_steamdb' ),
+			in_library: _t( 'in_library' ),
 			inventory_list_at: _t( 'inventory_list_at' ),
 			inventory_sell_at: _t( 'inventory_sell_at' ),
 			inventory_list_at_title: _t( 'inventory_list_at_title' ),
