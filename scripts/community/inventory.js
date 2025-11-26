@@ -324,23 +324,33 @@
 					} );
 				};
 
-				if( data.lowest_sell_order && data.sell_order_summary )
+				if( data.sell_order_summary )
 				{
 					const sellHeader = document.createElement( 'div' );
 					sellHeader.className = 'steamdb_orders_header steamdb_sell_summary';
-					sellHeader.dataset.price = data.lowest_sell_order.toString();
 					sellHeader.innerHTML = data.sell_order_summary;
-					BindSellButton( sellHeader );
+
+					if( data.lowest_sell_order )
+					{
+						sellHeader.dataset.price = data.lowest_sell_order.toString();
+						BindSellButton( sellHeader );
+					}
+
 					orderHeaderSummaries.append( sellHeader );
 				}
 
-				if( data.highest_buy_order && data.buy_order_summary )
+				if( data.buy_order_summary )
 				{
 					const buyHeader = document.createElement( 'div' );
 					buyHeader.className = 'steamdb_orders_header steamdb_buy_summary';
-					buyHeader.dataset.price = data.highest_buy_order.toString();
 					buyHeader.innerHTML = data.buy_order_summary;
-					BindSellButton( buyHeader );
+
+					if( data.highest_buy_order )
+					{
+						buyHeader.dataset.price = data.highest_buy_order.toString();
+						BindSellButton( buyHeader );
+					}
+
 					orderHeaderSummaries.append( buyHeader );
 				}
 
@@ -425,16 +435,16 @@
 							rows[ 0 ].after( row );
 						}
 					}
+				}
 
-					element.classList.add( 'steamdb_quicksell_visible' );
+				element.classList.add( 'steamdb_quicksell_visible' );
 
-					const actualHeight = element.offsetHeight;
+				const actualHeight = element.offsetHeight;
 
-					if( actualHeight > quickSellHeight )
-					{
-						quickSellHeight = actualHeight;
-						document.body.style.setProperty( '--steamdb-quick-sell-height', `${actualHeight}px` );
-					}
+				if( actualHeight > quickSellHeight )
+				{
+					quickSellHeight = actualHeight;
+					document.body.style.setProperty( '--steamdb-quick-sell-height', `${actualHeight}px` );
 				}
 			} )
 			.catch( ( e ) =>
