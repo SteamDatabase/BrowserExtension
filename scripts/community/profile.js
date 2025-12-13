@@ -1,6 +1,7 @@
 'use strict';
 
 GetOption( {
+	'profile-gamecovers': true,
 	'profile-calculator': true,
 	'enhancement-award-popup-url': true,
 }, ( items ) =>
@@ -11,6 +12,16 @@ GetOption( {
 		script.id = 'steamdb_profile_award';
 		script.type = 'text/javascript';
 		script.src = GetLocalResource( 'scripts/community/profile_award_injected.js' );
+		document.head.appendChild( script );
+	}
+
+	if( items[ 'profile-gamecovers' ] )
+	{
+		const script = document.createElement( 'script' );
+		script.id = 'steamdb_profile_gamecovers';
+		script.type = 'text/javascript';
+		script.dataset.appLogo = GetLocalResource( 'icons/applogo.svg' );
+		script.src = GetLocalResource( 'scripts/community/profile_gamecovers_injected.js' );
 		document.head.appendChild( script );
 	}
 
