@@ -35,24 +35,31 @@
 		return node[ reactFiberKey ];
 	}
 
-	/** @param {string | undefined} src */
-	function CheckValidCoverSrc( src )
+	/** @param {HTMLImageElement} image */
+	function CheckValidImg( image )
 	{
-		if( src === undefined || src === null )
+		if( image.complete && image.naturalWidth === 0 )
 		{
 			return false;
 		}
 
-		if( src === fallbackCoverImage )
+		const imageSrc = image.src;
+
+		if( imageSrc === undefined || imageSrc === null )
+		{
+			return false;
+		}
+
+		if( imageSrc === fallbackCoverImage )
 		{
 			return true;
 		}
 
 		// Empty src is equal to the current location
-		return src !== ""
-			&& src !== window.location.href
+		return imageSrc !== ""
+			&& imageSrc !== window.location.href
 			// Skip fallback cover from Steam CDN
-			&& !src.includes( 'public/ssr' );
+			&& !imageSrc.includes( 'public/ssr' );
 	}
 
 	/**
@@ -113,8 +120,7 @@
 				continue;
 			}
 
-			const coverSrc = coverImg.getAttribute( 'src' );
-			if(  CheckValidCoverSrc( coverSrc ) )
+			if(  CheckValidImg( coverImg ) )
 			{
 				continue;
 			}
@@ -135,8 +141,7 @@
 		const gameCovers = document.querySelectorAll( 'img.game_capsule' );
 		for( const cover of gameCovers )
 		{
-			const src = cover.getAttribute( 'src' );
-			if( CheckValidCoverSrc( src ) )
+			if( CheckValidImg( cover ) )
 			{
 				continue;
 			}
