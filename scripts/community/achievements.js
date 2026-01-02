@@ -472,7 +472,7 @@ function InitAchievements( items, isPersonal )
 
 				const apiIcon = unlock || !isPersonal ? achievement.icon : achievement.icon_gray;
 
-				if( icon !== apiIcon )
+				if( apiIcon && icon !== apiIcon )
 				{
 					if( badAchievementsLogged-- > 0 )
 					{
