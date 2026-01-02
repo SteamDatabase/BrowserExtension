@@ -134,6 +134,11 @@ steamdb-iteminfo-footer {
 			border: 1px solid #799905;
 			opacity: 0.3;
 			transition: opacity 0.2s;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 100%;
+			box-sizing: border-box;
 
 			> span {
 				color: #a4d7f5;
