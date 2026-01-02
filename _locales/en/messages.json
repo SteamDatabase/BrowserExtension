@@ -317,6 +317,10 @@
 		"message": "CS Rating"
 	},
 
+	"inventory_quick_sell_tip": {
+		"message": "Mouse over a price to sell",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "List at $price$",
 		"placeholders": {

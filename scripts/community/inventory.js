@@ -286,7 +286,7 @@
 
 				const hoverText = document.createElement( 'div' );
 				hoverText.className = 'steamdb_orders_hover_text';
-				hoverText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( 0 ) );
+				hoverText.textContent = i18n.inventory_quick_sell_tip;
 
 				const orderHeaderSummaries = document.createElement( 'div' );
 
