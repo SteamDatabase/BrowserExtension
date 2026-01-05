@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "CS-rangering"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Mus over en pris for å selge",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Legg ut for $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Legger ut gjenstanden for laveste oppgitte salgspris\n\nVist pris er pengene du mottar (uten gebyrer)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Legger ut gjenstanden for høyeste oppgitte kjøpsprisspris\n\nVist pris er pengene du mottar (uten gebyrer)"
 	},
 	"inventory_badge_level": {
 		"message": "Ditt merkenivå: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Koble sammen hver gave og kupong i lageret ditt til SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Finn ut av en gaves SubID i lageret ditt riktig"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ikke oppdater lageret når en gjenstand selges"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Vis merkenivå på kort og booster-pakker"
-	},
-	"options_display_market_price_others": {
-		"message": "Vis markedspris for gjenstander i andre brukeres lager"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Støtt $for_item$ og $my_item$-parametere",

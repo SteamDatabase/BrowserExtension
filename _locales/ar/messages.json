@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "تصنيف CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "الفأرة فوق سعر البيع",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "إعرض بسعر $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "عَرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (دون رسوم)"
-	},
-	"inventory_sell_at_title": {
-		"message": "عَرض العنصر بأعلى سعر شراء مطلوب\n\nالسعر المعروض هو المبلغ الذي تتلقاه (دون رسوم)"
 	},
 	"inventory_badge_level": {
 		"message": "مستوى الشارة الخاصة بك: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "ربط كل هدية وقسيمة في مخزونك ب SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "لتحديد معرف الهدية الفرعي بشكل صحيح في مخزونك"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "لا تقم بتحديث المخزون عند بيع عنصر ما"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "عرض مستوى الشارة على بطاقات التداول وحزم التعزيز"
-	},
-	"options_display_market_price_others": {
-		"message": "عرض سعر السوق للعنصر في مخزونات المستخدمين الآخرين"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "دعم المعلمات $for_item$ و $my_item$",

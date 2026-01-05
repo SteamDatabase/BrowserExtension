@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Προσθέτει συνδέσεις με το SteamDB και νέα χαρακτηριστικά στο Κατάστημα και την κοινότητα του Steam.",
+		"message": "Προσθέτει συνδέσμους SteamDB και νέα χαρακτηριστικά στο κατάστημα και την κοινότητα Steam. Δείτε χαμηλότερες τιμές και στατιστικά.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -76,6 +76,9 @@
 	},
 	"app_stats_peak_today": {
 		"message": "24-ωρη απήχηση:"
+	},
+	"app_stats_alL_time_peak": {
+		"message": "Μέγιστο όλων των εποχών:"
 	},
 	"app_stats_followers": {
 		"message": "Ακόλουθοι:"
@@ -189,6 +192,16 @@
 	"explore_saleitem_cant_claim": {
 		"message": "Δεν υπάρχει καθημερινή ανταμοιβή για να διεκδικήσετε αυτή τη στιγμή."
 	},
+	"explore_saleitem_next_item_time": {
+		"message": "Επόμενο διαθέσιμο αντικείμενο: $datetime$",
+		"placeholders": {
+			"datetime": {
+				"content": "$1",
+				"example": "01.07.2024, 20:00:00",
+				"description": "Date and time format depends on locale set in browser"
+			}
+		}
+	},
 	"explore_saleitem_claim_failed": {
 		"message": "Αποτυχία διεκδίκησης της ημερήσιας ανταμοιβής."
 	},
@@ -294,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Βαθμολογία CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Ποντίκι πάνω από μια τιμή για πώληση",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Λίστα από $price$",
 		"placeholders": {
@@ -311,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Τοποθετεί το αντικείμενο για τη χαμηλότερη τιμή πώλησης\n\nΗ τιμή που εμφανίζεται είναι τα χρήματα που λαμβάνετε (χωρίς τέλη)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Τοποθετεί το αντικείμενο για την υψηλότερη τιμή πώλησης\n\nΗ τιμή που εμφανίζεται είναι τα χρήματα που λαμβάνετε (χωρίς τέλη)"
 	},
 	"inventory_badge_level": {
 		"message": "Επίπεδο εμβλημάτων: $level$",
@@ -553,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Συνδέστε κάθε δώρο και κουπόνι στο απόθεμά σας στο SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Υπολογίστηκε σωστά το SubID δώρου στα αποθέματά σας"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Να μην ανανεωθεί το απόθεμα κατά την πώληση ενός αντικειμένου"
 	},
@@ -567,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Προβολή επιπέδου εμβλήματος επάνω σε κάρτες ανταλλαγής και ενισχυτικά πακέτα"
-	},
-	"options_display_market_price_others": {
-		"message": "Εμφάνιση τιμής αγοράς αντικειμένων στα αποθέματα άλλων χρηστών"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Υποστήριξη $for_item$ και $my_item$ παράμετροι",

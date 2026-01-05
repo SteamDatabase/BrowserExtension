@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Classificação CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Mouse sobre um preço para vender",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Colocar à venda por $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Coloca à venda pelo preço de venda mais baixo anunciado\n\nPreço mostrado é o dinheiro que recebes (sem taxas)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Coloca à venda pelo preço de compra mais alto anunciado\n\nPreço mostrado é o dinheiro que recebes (sem taxas)"
 	},
 	"inventory_badge_level": {
 		"message": "O nível da tua medalha: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Vincular cada cupão e presente no teu inventário ao SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Descobrir corretamente o SubID do presente no teu inventário"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Não atualizar o inventário ao vender um item"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Mostra o nível da medalha nas cartas e nos boosters"
-	},
-	"options_display_market_price_others": {
-		"message": "Mostrar o preço de mercado de itens no inventário dos outros utilizadores"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suportar parâmetros $for_item$ e $my_item$",

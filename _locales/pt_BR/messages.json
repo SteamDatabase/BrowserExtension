@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "CSficação"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Passe o mouse sobre um preço para vender",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Anunciar por $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Anuncia o item pelo preço de venda mais baixo listado\n\nO preço exibido é o valor que você receberá (sem tarifas)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Anuncia o item pelo preço de encomenda mais alto listado\n\nO preço exibido é o valor que você receberá (sem tarifas)"
 	},
 	"inventory_badge_level": {
 		"message": "Nível da insígnia: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Associar presentes e cupons no inventário às páginas relevantes no SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Identificar corretamente o ID do pacote (SubID) de presentes guardados no inventário"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Não atualizar o inventário ao vender um item"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Exibir o nível da insígnia nas descrições de cartas colecionáveis e pacotes bônus"
-	},
-	"options_display_market_price_others": {
-		"message": "Exibir o preço dos itens nos inventários de outros usuários"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suporte aos parâmetros $for_item$ e $my_item$",

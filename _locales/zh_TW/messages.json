@@ -325,12 +325,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "列出最低售價的商品\n顯示的價格是您收到的金額 (不含服務費)"
-	},
-	"inventory_sell_at_title": {
-		"message": "列出最高購買訂單價格的項目\n顯示的價格是您收到的金額 (不含服務費)"
-	},
 	"inventory_badge_level": {
 		"message": "您的徽章等級：$level$",
 		"placeholders": {
@@ -566,9 +560,6 @@
 	"options_link_inventory": {
 		"message": "於庫存頁面的每個禮物和優惠券顯示 SteamDB 連結"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "於庫存頁面顯示禮物 SubID"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "出售物品時不要刷新庫存頁面"
 	},
@@ -580,9 +571,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "在交換卡片和擴充包上顯示徽章等級："
-	},
-	"options_display_market_price_others": {
-		"message": "在其他人的物品庫中顯示物品市集價格"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "支援 $for_item$ 和 $my_item$ 參數",

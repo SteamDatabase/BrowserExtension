@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "დადე ნივთი ყველაზე დაბალ ფასად:\n\nგამოჩენილი ფასი არის ის ფული რომელსაც შენ მიიღებ (Steam-ის გადასახადის გამოკლებით)"
-	},
-	"inventory_sell_at_title": {
-		"message": "დადე ნივთი ყველაზე მაღალ ფასად:\n\nგამოჩენილი ფასი არის ის ფული რომელსაც შენ მიიღებ (Steam-ის გადასახადის გამოკლებით)"
-	},
 	"inventory_badge_level": {
 		"message": "თქვენი ბეჯის დონე: $level$",
 		"placeholders": {
@@ -553,9 +547,6 @@
 	"options_link_inventory": {
 		"message": "მიაბი თითოეული საჩუქარი და კუპონი შენს ინვენტარში SteamDB-ზე"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "სწორად გაიგე საჩუქრის საბ აიდი შენს ინვენტარში"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "არ გაანახლო ინვენტარი ნივტის გაყიდვის დროს"
 	},
@@ -567,9 +558,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "აჩვენეთ ხატის დონე ბარათებისა და ბარათების კომპლექტების თვისებებში"
-	},
-	"options_display_market_price_others": {
-		"message": "გამოაჩინე ნივთის ფასი მარკეტზე სხვების ინვენტარში"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "მხარდაჭერა $for_item$ და $my_item$ პარამეტრებისთვის",

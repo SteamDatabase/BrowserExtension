@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Senaraikan item untuk harga jualan yang terendah tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Senaraikan item untuk harga jualan yang tertinggi tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
-	},
 	"inventory_badge_level": {
 		"message": "Tahap Lencana anda: $level$",
 		"placeholders": {
@@ -553,9 +547,6 @@
 	"options_link_inventory": {
 		"message": "Sambung setiap hadiah dan kupon dalam inventori anda ke SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Memperbetulkan SubID hadiah dalam inventori anda"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Jangan memuatkan semula inventori semasa menjual item"
 	},
@@ -567,9 +558,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Paparkan tahap lencana pada kad dagangan dan pek penggalak"
-	},
-	"options_display_market_price_others": {
-		"message": "Papar harga pasaran item dalam inventori pengguna lain"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Sokong parameter $for_item$ dan $my_item$",

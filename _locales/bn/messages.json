@@ -41,6 +41,10 @@
 	"search": {
 		"message": "খুঁজুন"
 	},
+	"in_library": {
+		"message": "",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB রেটিং:"
 	},
@@ -263,12 +267,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "সর্বনিম্ন তালিকাভুক্ত বিক্রয় মূল্যে বস্তুটি নথিত করবে\n\n​প্রদর্শিত মূল্যটি আপনি পাবেন (মাসুল ছাড়া)"
-	},
-	"inventory_sell_at_title": {
-		"message": "সর্বনিম্ন তালিকাভুক্ত বিক্রয় মূল্যে বস্তুটি নথিত করবে\n\n​প্রদর্শিত মূল্যটি আপনি পাবেন (মাসুল ছাড়া)"
-	},
 	"options": {
 		"message": "অপশনসমূহ"
 	},
@@ -455,9 +453,6 @@
 	"options_link_inventory": {
 		"message": "আপনার দ্রব্যাদির তালিকায় প্রতিটি উপহার ও কুপন SteamDB-তে লিঙ্ক করবে"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "আপনার দ্রব্যাদির তালিকায় উপহারের SubID সঠিকভাবে বের করবে"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "কোনো দ্রব্য বিক্র​য়ের সম​য় দ্রব্যাদির তালিকা রিফ্রেশ করবে না"
 	},
@@ -466,9 +461,6 @@
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "স্বয়ংক্রিয়ভাবে দ্রুত-বিক্রয় স্বীকার করবে"
-	},
-	"options_display_market_price_others": {
-		"message": "অন্য ব্যবহারকারীদের দ্রব্যাদির তালিকায় দ্রব্যের বাজার-দর দেখাবে"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ ও $my_item$ স্থিতিমাপগুলি সমর্থিত হবে",

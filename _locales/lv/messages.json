@@ -325,12 +325,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Izveido sludinājumu vienumam ar zemāko pieejamo pārdošanas cenu\n\nNorādīta cena parāda, cik naudu tu saņem (bez papildus izmaksām)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Izveido sludinājumu vienumam ar augstāko pieejamo pirkšanas cenu\n\nNorādīta cena parāda, cik naudu tu saņem (bez papildus izmaksām)"
-	},
 	"inventory_badge_level": {
 		"message": "Tavs žetona līmeni: $level$",
 		"placeholders": {
@@ -566,9 +560,6 @@
 	"options_link_inventory": {
 		"message": "Savienot katru dāvanu un kuponu Jūsu inventārā ar SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Pareizi norādīt dāvanas SubID Jūsu inventārā"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nepārlādēt inventāra lapu kad pārdodat vienumu"
 	},
@@ -580,9 +571,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Parādīt žetona līmeni uz tirgošanās kārtīm un pastiprināšanas pakām"
-	},
-	"options_display_market_price_others": {
-		"message": "Parādīt vienuma cenu tirgū, kad apskata citu lietotāju inventāru"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Atbalstīt $for_item$ un $my_item$ parametrus",

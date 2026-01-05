@@ -325,12 +325,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Đăng bán với giá đang được đăng thấp nhất\n\nGiá hiển thị là số tiền bạn nhận được (chưa kèm phí)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Đăng bán với giá đang được đặt mua cao nhất\n\nGiá hiển thị là số tiền bạn nhận được (chưa kèm phí)"
-	},
 	"inventory_badge_level": {
 		"message": "Cấp huy hiệu: $level$",
 		"placeholders": {
@@ -566,9 +560,6 @@
 	"options_link_inventory": {
 		"message": "Đính kèm liên kết tới SteamDB khi xem quà tặng và phiếu giảm giá trong kho đồ của bạn"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Hiện chính xác SubID (mã gói) của quà tặng trong kho của bạn"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Không làm mới kho đồ khi bán một món"
 	},
@@ -580,9 +571,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Đính kèm cấp huy hiệu trong thông tin của thẻ trao đổi và gói bổ sung"
-	},
-	"options_display_market_price_others": {
-		"message": "Hiển thị giá thị trường của món hàng trong kho đồ của người khác"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Hỗ trợ thông số $for_item$ và $my_item$",

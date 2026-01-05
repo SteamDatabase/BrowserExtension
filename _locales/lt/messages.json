@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Prideda SteamDB nuorodas ir naujas funkcijas Steam pardotuvėje bei bendruomenėje. Raskite žemiausias žaidimų kainas ir statistiką.",
+		"message": "Prideda „SteamDB“ nuor. ir naujas funk. „Steam“ parduotuvėje ir bendruomenėje. Peržr. mažiausias žaid. kainas ir statist. duomenis.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -19,13 +19,13 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Atrodo, kad Steam patiria tam tikrą veiklos sutrikimą. "
+		"message": "Atrodo, kad „Steam“ patiria tam tikrų veiklos sutrikimų. "
 	},
 	"view_on_steamdb": {
 		"message": "Peržiūrėti per SteamDB"
 	},
 	"view_on_steam_hunters": {
-		"message": "Žiurėti per „Steam Hunters“",
+		"message": "Peržiūrėti svetainėje „Steam Hunters“",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
@@ -35,7 +35,7 @@
 		"message": "Asmeniniai pasiekimai"
 	},
 	"store_page": {
-		"message": "Parduotuvės tinklalapis",
+		"message": "Parduotuvės puslapis",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Paskelbia prekę už mažiausią esamą pardavimo kainą\n\nRodoma kaina yra pinigai, kuriuos gaunate (be mokesčių)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Paskelbia prekę už didžiausią esamą pirkimo užsakymo kainą\n\nRodoma kaina - tai pinigai, kuriuos gaunate (be mokesčių)"
-	},
 	"inventory_badge_level": {
 		"message": "Tavo ženklelio lygis: $level$",
 		"placeholders": {
@@ -534,9 +528,6 @@
 	"options_link_inventory": {
 		"message": "Susieti kiekvieną dovaną ir kuponą savo inventoriuje su SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Teisingai išsiaiškinkite dovanų SubID jūsų inventoriuje"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Neatnaujinti inventoriaus parduodant prekę"
 	},
@@ -548,9 +539,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Rodyti ženklelio lygį kortelėms ir papildymų pakams"
-	},
-	"options_display_market_price_others": {
-		"message": "Rodyti prekės rinkos kainą kitų naudotojų inventoriuje"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Palaikomi $for_item$ ir $my_item$ parametrai",

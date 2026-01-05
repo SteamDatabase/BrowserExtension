@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Evaluare CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Mouse peste un preț de vândut",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Listează la $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Listează articolul pentru cel mai mic preț de vânzare listat\n\nPrețul afișat este suma pe care o primești (fără comisioane)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Listează articolul pentru cel mai mare preț al ordinului de cumpărare listat\n\nPrețul afișat este suma pe care îl primești (fără comisioane)"
 	},
 	"inventory_badge_level": {
 		"message": "Nivelul insignei dvs.: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Asociază fiecare cadou și cupon din inventarul tău pe SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Găsiți corect subID-ul al cadoului în inventarul dvs"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nu reîmprospătați inventarul atunci când vindeți un articol"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Afișează nivelul de insignă pe cardurile de tranzacționare și pachetele de booster"
-	},
-	"options_display_market_price_others": {
-		"message": "Afișează prețul pieței în inventarele altor utilizatori"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Susțineți $for_item$ și $my_item$ parametri",

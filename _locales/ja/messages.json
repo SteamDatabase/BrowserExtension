@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "CSレーティング"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "販売価格にマウスオーバーします。",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "$price$ で出品",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "最も低い販売価格でアイテムを出品します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
-	},
-	"inventory_sell_at_title": {
-		"message": "最も高い買い注文の価格でアイテムを販売します。\n\n表示価格は手数料を差し引いた後の受取金額です。"
 	},
 	"inventory_badge_level": {
 		"message": "あなたのバッジレベル： $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "あなたのインベントリ内の各ギフトとクーポンを SteamDB にリンク"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "インベントリ内のギフトSubIDを正しく把握"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "アイテムの販売時にインベントリを更新しない"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "トレーディングカードとブースターパックにバッジレベルを表示する"
-	},
-	"options_display_market_price_others": {
-		"message": "他のユーザーのインベントリにアイテムのマーケット価格を表示"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ と $my_item$ パラメータをサポート",

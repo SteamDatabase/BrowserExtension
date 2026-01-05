@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Vyhľadať"
 	},
+	"in_library": {
+		"message": "",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Hodnotenie:"
 	},
@@ -151,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Auto-objavovanie"
 	},
+	"explore_auto_discover_description": {
+		"message": ""
+	},
 	"explore_generating": {
 		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
 	},
@@ -186,7 +193,7 @@
 		"message": "Momentálne nie je dostupná žiadna denná odmena."
 	},
 	"explore_saleitem_next_item_time": {
-		"message": "Ďalšia odmena dostupná: $datetime$",
+		"message": "Ďalšia odmena dostupná: $dateti$datetime$me$",
 		"placeholders": {
 			"datetime": {
 				"content": "$1",
@@ -199,7 +206,7 @@
 		"message": "Nepodarilo sa uplatniť dennú odmenu."
 	},
 	"explore_saleitem_success": {
-		"message": "Nová odmena získaná: $item$.",
+		"message": "bitúmenová odmena získaná: $item$.",
 		"placeholders": {
 			"item": {
 				"content": "$1",
@@ -317,12 +324,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Vypíše položku za najnižšiu uvedenú predajnú cenu\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Vypíše položku za najvyššiu uvedenú cenu nákupnej objednávky\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
 	},
 	"inventory_badge_level": {
 		"message": "Úroveň vášho odznaku: $level$",
@@ -534,9 +535,6 @@
 	"options_link_inventory": {
 		"message": "Prepojiť každý darček a kupón vo vašom inventári na SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Správne určiť SubID darčeka vo vašom inventári"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nerefreshovať inventár pri predaji položky"
 	},
@@ -548,9 +546,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Zobrazte úroveň odznaku na zberateľských kartách a posilňovacích balíčkoch"
-	},
-	"options_display_market_price_others": {
-		"message": "Zobraziť trhovú ceny položky v inventároch iných používateľov"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podporovať parametre $for_item$ a $my_item$",

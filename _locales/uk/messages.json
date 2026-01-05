@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Рейтинг CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Миша над ціною, щоб продати",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Виставити за $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Виставляє товар за найнижчою ринковою ціною\n\nПоказана ціна - це сума, яку ви отримаєте (без врахування комісій)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Виставляє товар за найвищою ціною із запитів на купівлю\n\nПоказана ціна - це сума, яку ви отримаєте (без врахування комісій)"
 	},
 	"inventory_badge_level": {
 		"message": "Рівень вашого значка: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Додати посилання на SteamDB для кожного дарунку та купону у вашому інвентарі"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Правильно визначати SubID дарунка у вашому інвентарі"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Не оновлювати інвентар під час продажу предмета"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Показувати рівень значка на колекційних картках та комплектах"
-	},
-	"options_display_market_price_others": {
-		"message": "Показувати ринкову ціну предмета в інвентарях інших користувачів"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Підтримка параметрів $for_item$ та $my_item$",

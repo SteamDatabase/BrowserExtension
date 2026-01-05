@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "I-list ang item para sa pinakamababang nakalistang presyo ng pagbebenta\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
-	},
-	"inventory_sell_at_title": {
-		"message": "I-list ang item para sa pinakamataas na nakalistang presyo ng buy order\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
-	},
 	"inventory_badge_level": {
 		"message": "Ang iyong badge level: $level$",
 		"placeholders": {
@@ -538,9 +532,6 @@
 	"options_link_inventory": {
 		"message": "I-link ang bawat regalo at kupon sa iyong inventory sa SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Tamang alamin ang SubID ng regalo sa iyong inventory"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Huwag i-refresh ang inventory kapag nagbebenta ng item"
 	},
@@ -552,9 +543,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Ipakita ang antas ng badge sa mga trading card at booster pack"
-	},
-	"options_display_market_price_others": {
-		"message": "Ipakita ang presyo ng item sa mga inventory ng ibang mga user"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suportahan ang $for_item$ at $my_item$ na mga parameter",

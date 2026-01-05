@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "CS 段位分"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "鼠标移动到价格上以出售",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "以市场中的最低上架价格上架物品\n\n显示的价格是您收到的实际金额（不含手续费）"
-	},
-	"inventory_sell_at_title": {
-		"message": "以市场订购单的最高出价出售物品\n\n显示的价格是您收到的实际金额（不含手续费）"
 	},
 	"inventory_badge_level": {
 		"message": "您的徽章等级：$level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "显示您库存中礼物和优惠券的 SteamDB 链接"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "在库存中显示礼物的 SubID"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "上架物品时阻止库存页面刷新"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "在集换式卡牌和补充包上显示相应徽章的等级"
-	},
-	"options_display_market_price_others": {
-		"message": "在其他用户库存中显示物品市场价格"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "支持 $for_item$ 和 $my_item$ 参数",

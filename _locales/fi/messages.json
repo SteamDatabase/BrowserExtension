@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Luokitus"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Hiiri yli hinta myydä",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Asettaa tavaran myyntiin alimpaan listattuun hintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
 	},
 	"inventory_badge_level": {
 		"message": "Kunniamerkkisi taso: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Linkitä jokainen lahja ja kuponki tavaraluettelossasi SteamDB:hen"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Selvitä lahjan SubID tavaraluettelossasi"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Älä päivitä tavaraluetteloa kun myyt tavaran"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Näytä kunniamerkin taso keräilykorteissa ja tehostepaketeissa"
-	},
-	"options_display_market_price_others": {
-		"message": "Näytä tavaroiden kauppahinta muiden käyttäjien tavaraluetteloissa"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Tue $for_item$ ja $my_item$ parametreja",

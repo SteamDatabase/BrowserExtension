@@ -321,12 +321,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "सबसे कम बिक्री मूल्य के अनुसार उत्पादों की सूची बनाएं \n\nप्रदर्शित राशि वह धन है जो आपको प्राप्त होगी (बिना किसी शुल्क के)"
-	},
-	"inventory_sell_at_title": {
-		"message": "सबसे अधिक बिक्री मूल्य के अनुसार उत्पादों की सूची बनाएं \n\nप्रदर्शित राशि वह धन है जो आपको प्राप्त होगी (बिना किसी शुल्क के)"
-	},
 	"inventory_badge_level": {
 		"message": "आपका बैज स्तर: $level$",
 		"placeholders": {
@@ -562,9 +556,6 @@
 	"options_link_inventory": {
 		"message": "अपनी सूची में प्रत्येक उपहार और कूपन को SteamDB से लिंक करें"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "अपनी सूची में उपहार SubID का सही पता लगाएं"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "कोई वस्तु बेचते समय इन्वेंट्री को ताज़ा न करें"
 	},
@@ -576,9 +567,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "बैज स्तर प्रदर्शित करें ट्रेडिंग कार्ड और बूस्टर पैक पर"
-	},
-	"options_display_market_price_others": {
-		"message": "अन्य उपयोगकर्ताओं की सूची में आइटम का बाज़ार मूल्य प्रदर्शित करें"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ और $my_item$ पैरामीटर का समर्थन करें",

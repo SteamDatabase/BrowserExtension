@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Llista l'article pel preu de venda més baix\n\nEl preu mostrat són els diners que reps (sense comissions)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Llista l'article pel preu de la comanda de compra més alt\n\nEl preu mostrat són els diners que reps (sense comissions)"
-	},
 	"inventory_badge_level": {
 		"message": "El teu nivell d'insígnia: $level$",
 		"placeholders": {
@@ -534,9 +528,6 @@
 	"options_link_inventory": {
 		"message": "Enllaça amb SteamDB cada regal i cupó al teu inventari"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Desxifrar correctament el SubID del regal al teu inventari"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "No refrescar l'inventari quan es ven un article"
 	},
@@ -548,9 +539,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Mostra el nivell d'insígnia en cromos i paquets de cromos"
-	},
-	"options_display_market_price_others": {
-		"message": "Mostrar l'inventari d'altres usuaris el preu de mercat de l'article"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suport per paràmetres $for_item$ i $my_item$",

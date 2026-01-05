@@ -41,10 +41,6 @@
 	"search": {
 		"message": "Szukaj"
 	},
-	"in_library": {
-		"message": "W Bibliotece",
-		"description": "Indicates that the user owns this product"
-	},
 	"app_steamdb_rating": {
 		"message": "Ocena SteamDB:"
 	},
@@ -307,6 +303,10 @@
 	"achievements_csrating_name": {
 		"message": "Klasyfikacja CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Mysz nad ceną sprzedaży",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Wystaw za $price$",
 		"placeholders": {
@@ -324,12 +324,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Wystawia przedmiot po najniższej podanej cenie sprzedaży\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
 	},
 	"inventory_badge_level": {
 		"message": "Poziom Twojej odznaki: $level$",
@@ -566,9 +560,6 @@
 	"options_link_inventory": {
 		"message": "Połącz każdy prezent i kupon w twoim ekwipunku z SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Prawidłowo określ SubID prezentu w ekwipunku"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nie odświeżaj ekwipunku podczas sprzedaży przedmiotu"
 	},
@@ -580,9 +571,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Wyświetlaj poziom odznaki na kartach kolekcjonerskich i pakietach kart"
-	},
-	"options_display_market_price_others": {
-		"message": "Wyświetl cenę rynkową przedmiotów w ekwipunkach innych użytkowników"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Wsparcie dla parametrów $for_item$ i $my_item$",

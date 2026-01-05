@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Popisuje stavku po najnižoj navedenoj prodajnoj cijeni\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Popisuje stavku po najvišoj navedenoj cijeni kupovne narudžbe\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
-	},
 	"inventory_badge_level": {
 		"message": "Vaša razina značke: $level$",
 		"placeholders": {
@@ -538,9 +532,6 @@
 	"options_link_inventory": {
 		"message": "Poveži svaki dar i kupon u svom inventaru sa SteamDB-om"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Ispravno odredi SubID poklona u svom inventaru"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nemoj osvježavati inventar prilikom prodaje predmeta"
 	},
@@ -552,9 +543,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Prikaz razine značke na kartici za razmjenu i booster paketima"
-	},
-	"options_display_market_price_others": {
-		"message": "Prikaži tržišnu cijenu predmeta u inventarima drugih korisnika"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podrži parametre $for_item$ i $my_item$",

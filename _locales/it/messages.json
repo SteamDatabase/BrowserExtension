@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Valutazione CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Mouse sopra un prezzo da vendere",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Elenca a $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Elenca l'articolo al prezzo di vendita più basso\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Elenca l'articolo al prezzo d'acquisto più alto\n\nIl prezzo visualizzato è quello che riceverete (senza commissioni)"
 	},
 	"inventory_badge_level": {
 		"message": "Il livello del tuo badge: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Collega ogni regalo e coupon nel tuo inventario a SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Individua correttamente il SubID regalo nel tuo inventario"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Non aggiornare l'inventario quando si vende un articolo"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Mostra il livello del badge sulle carte trading e sui pacchetti booster"
-	},
-	"options_display_market_price_others": {
-		"message": "Mostra il prezzo di mercato degli articoli negli inventari degli altri utenti"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Supporta i parametri $for_item$ e $my_item$",

@@ -321,12 +321,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Paneb toote müüki madalaima müüki pandud hinnaga\n\nMärgitud summa on see raha mis sa saad (ilma tasudeta)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Paneb toote müüki kõrgeima soovi hinnaga\n\nMärgitud hind on see raha mis sa saad (ilma tasudeta)"
-	},
 	"inventory_badge_level": {
 		"message": "Sinu märgi tase: $level$",
 		"placeholders": {
@@ -562,9 +556,6 @@
 	"options_link_inventory": {
 		"message": "Ühenda iga kink ja kupong sinu invetaris SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Korrektselt uuri välja kingituse alam-id sinu inventaris"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ära uuenda inventari kui sa müüd asja"
 	},
@@ -576,9 +567,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Märgise taseme kuvamine kauplemiskaartidel ja boosterpakkidel"
-	},
-	"options_display_market_price_others": {
-		"message": "Kuva asja poe hinda teiste kasutajate inventaris"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Toetus $for_item$ ja $my_item$ parameetritele",

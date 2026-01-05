@@ -321,12 +321,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "ثبت آیتم به کمترین قیمت فروش ثبت شده\n\n قیمت نمایش داده شده مبلغی است که شما دریافت می کنید (بدون کارمزد)"
-	},
-	"inventory_sell_at_title": {
-		"message": "ثبت آیتم به بیشترین قیمت درخواست شده\n\n قیمت نمایش داده شده مبلغ دریافتی شما (بدون کارمزد) می باشد"
-	},
 	"inventory_badge_level": {
 		"message": "سطح نشان شما: $level$",
 		"placeholders": {
@@ -556,9 +550,6 @@
 	"options_link_inventory": {
 		"message": "لینک کردن هر گیفت و کوپن در انباری خود به SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "نمایش صحیح SubID های گیفت ها در انباری خود"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "عدم رفرش کردن صفحه انباری هنگام فروش آیتم"
 	},
@@ -570,9 +561,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "نمایش سطح نشان بر روی تریدینگ کارت ها و بوستر پک ها"
-	},
-	"options_display_market_price_others": {
-		"message": "نمایش قیمت هر آیتم در صفحه اینونتوری دیگر کاربران"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "پشتیبانی از پارامتر های $for_item$ و $my_item$",

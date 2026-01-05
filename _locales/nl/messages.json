@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "CS-rating"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Muis over een prijs te verkopen",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Op de markt zetten voor: $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Vermeld dit item voor de laagst vermelde verkoopprijs\n\nWeergegeven prijs is het geld dat je krijgt (zonder vergoeding)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Vermeld het item voor de hoogst vermelde vraagprijs\n\nWeergegeven prijs is het geld dat je krijgt (zonder vergoedingen)"
 	},
 	"inventory_badge_level": {
 		"message": "Jouw badge level: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Koppel alle cadeaus en cadeaubonnen in je inventaris aan SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Correct uitvinden van geschenk sub-ID in uw inventaris"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Vernieuw de inventaris niet bij verkoop van een item"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Toon badge level op ruilkaarten en booster packs"
-	},
-	"options_display_market_price_others": {
-		"message": "Toon artikel marktprijs in inventaris van andere gebruikers"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Ondersteuning voor $for_item$ en $my_item$ parameters",

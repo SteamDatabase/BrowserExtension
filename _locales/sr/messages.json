@@ -318,12 +318,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Објави артикал за најнижу продајну цену\n\nПриказана цена је новац који добијате (без трошкова)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Објави артикал за највишу куповну цену\n\nПриказана цена је новац који добијате (без трошкова)"
-	},
 	"inventory_badge_level": {
 		"message": "Ваш ниво беџева: $level$",
 		"placeholders": {
@@ -538,9 +532,6 @@
 	"options_link_inventory": {
 		"message": "Повежи сваки поклон и купон у ваш инвентар са SteamDB-ом"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Тачно одреди SubID поклона у вашем инвентару"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Не освежавај инвентар када продајете артикл"
 	},
@@ -552,9 +543,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Приказ нивоа беџева на картици за размену и \"booster\" пакетима"
-	},
-	"options_display_market_price_others": {
-		"message": "Прикажи тржишне цене артикала инвентара других корисника"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Подржи параметре $for_item$ и $my_item$",

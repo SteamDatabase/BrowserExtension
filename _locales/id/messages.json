@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Penilaian CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Arahkan tetikus ke harga untuk membeli",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Daftarkan di $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Daftarkan item dengan harga terendah\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa pajak)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Daftarkan item dengan harga tertinggi\n\nHarga yang ditampilkan adalah uang yang Anda terima (tanpa pajak)"
 	},
 	"inventory_badge_level": {
 		"message": "Level lencana anda: $level$",
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Tautkan setiap hadiah dan kupon dalam inventaris Anda ke SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Mengetahui SubID hadiah di inventaris Anda dengan benar"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Jangan perbaharui inventaris saat menjual sebuah barang"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Tampilkan level lencana di penukaran kartu dan booster pack"
-	},
-	"options_display_market_price_others": {
-		"message": "Tampilkan harga barang di inventory pengguna lainnya"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Dukungan parameter $for_item$ dan $my_item$",

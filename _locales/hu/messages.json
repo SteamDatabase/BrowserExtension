@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Keresés"
 	},
+	"in_library": {
+		"message": "Könyvtárban",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB értékelés:"
 	},
@@ -321,12 +325,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Tárgy felajánlása eladásra a legalacsonyabb eladási áron\n\nA megjelenített ár az összeg amit meg fogsz kapni (azaz díjak nélkül)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Tárgy felajánlása eladásra a legmagasabb vételi áron\n\nA megjelenített ár az összeg amit meg fogsz kapni (azaz díjak nélkül)"
-	},
 	"inventory_badge_level": {
 		"message": "A te kitűződ szintje: $level$",
 		"placeholders": {
@@ -559,9 +557,6 @@
 	"options_link_inventory": {
 		"message": "SteamDB-re mutató hivatkozások megjelenítése az összes ajándéknál és kuponnál a raktáradban"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Raktáradban lévő ajándékokhoz tartozó SubID-k pontos meghatározása"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne frissüljön a raktár tárgyak eladásakor"
 	},
@@ -573,9 +568,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Kitűző szintjének megjelenítése játékkártyáknál és bónuszcsomagoknál"
-	},
-	"options_display_market_price_others": {
-		"message": "Tárgyak piaci árának megjelenítése más felhasználók raktáraiban"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ és $my_item$ paraméterek támogatása",

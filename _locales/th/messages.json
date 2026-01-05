@@ -41,6 +41,10 @@
 	"search": {
 		"message": "ค้นหา"
 	},
+	"in_library": {
+		"message": "",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "คะแนน SteamDB:"
 	},
@@ -315,12 +319,6 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "แสดงรายการราคาขายต่ำสุดที่ระบุไว้\n\nราคาที่แสดงคือจำนวนเงินที่คุณได้รับ (ไม่มีค่าธรรมเนียม)"
-	},
-	"inventory_sell_at_title": {
-		"message": "แสดงรายการราคาคำสั่งซื้อสูงสุดที่ระบุไว้\n\nราคาที่แสดงคือจำนวนเงินที่คุณได้รับ (ไม่มีค่าธรรมเนียม)"
-	},
 	"inventory_badge_level": {
 		"message": "ระดับตราสัญลักษณ์ของคุณ: $level$",
 		"placeholders": {
@@ -534,9 +532,6 @@
 	"options_link_inventory": {
 		"message": "เชื่อมโยงของขวัญและคูปองแต่ละรายการในคลังของคุณกับ SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "ค้นหา SubID ของของขวัญในคลังของคุณอย่างถูกต้อง"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "อย่ารีเฟรชคลังเมื่อขายสินค้า"
 	},
@@ -548,9 +543,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "แสดงระดับตราสัญลักษณ์บนการ์ดสะสมและบูสเตอร์แพ็ค"
-	},
-	"options_display_market_price_others": {
-		"message": "แสดงราคาตลาดของสินค้าในคลังของผู้ใช้รายอื่น"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "รองรับพารามิเตอร์ $for_item$ และ $my_item$",

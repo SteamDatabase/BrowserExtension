@@ -307,6 +307,10 @@
 	"achievements_csrating_name": {
 		"message": "Hodnocení CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Myš nad cenou k prodeji",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Nabídnout za $price$",
 		"placeholders": {
@@ -324,12 +328,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Nabídne předmět za nejnižší nabízenou prodejní cenu\n\nZobrazená cena je částka, kterou obdržíte (bez poplatků)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Nabídne předmět za nejvyšší nabízenou kupní cenu\n\nZobrazená cena je částka, kterou obdržíte (bez poplatků)"
 	},
 	"inventory_badge_level": {
 		"message": "Úroveň vašeho odznaku: $level$",
@@ -366,7 +364,7 @@
 		"message": "Kalendář"
 	},
 	"popup_patches": {
-		"message": "Záplaty"
+		"message": "Patche"
 	},
 	"popup_calculator": {
 		"message": "Kalkulačka"
@@ -566,9 +564,6 @@
 	"options_link_inventory": {
 		"message": "Přidat ke všem dárkům a kupónům v inventáři odkaz na SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Správně určit SubID dárků ve vašem inventáři"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Neobnovovat stránku inventáře po prodeji předmětu"
 	},
@@ -580,9 +575,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Zobrazovat úroveň odznaku na sběratelských kartách a přídavných balíčcích"
-	},
-	"options_display_market_price_others": {
-		"message": "Zobrazovat tržní cenu předmětu v inventářích jiných uživatelů"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podporovat parametry $for_item$ a $my_item$",
@@ -678,16 +670,16 @@
 		"message": "Vylepšit stránku globálních achievementů"
 	},
 	"options_builtin_achievements_link": {
-		"message": "Přidat odkaz na stránku osobních achievementů"
+		"message": "Odkaz na stránku s osobními achievementy"
 	},
 	"options_builtin_achievements_locked": {
-		"message": "Zobrazovat ikonu zámku na uzamčených achievementech"
+		"message": "Zobrazit ikonu zámku pro uzamčené achievementy"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Zobrazit historii hodnocení CS na stránce achivementů CS2"
+		"message": "Zobrazit historii CS hodnocení na stránce CS2 achivementů"
 	},
 	"boostercreator_available_at_date": {
-		"message": "Nebudete moci vytvořit další Booster Pack pro tuto hru do $available_date$.",
+		"message": "Do $available_date$ nebudete moci vytvořit další balíček Booster Pack pro tuto hru.",
 		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {
