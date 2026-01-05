@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Kuyruk keşfedildi."
 	},
-	"explore_saleitem_claim": {
-		"message": "Ödülü al"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Varsa ücretsiz günlük ödülünüzü alın."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Günlük ödül alınıyor…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Şu an alabileceğiniz günlük bir ödül yok."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Sıradaki ögenin erişilebilmesine: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Günlük ödül alınamadı."
-	},
-	"explore_saleitem_success": {
-		"message": "Yeni ödül alındı: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Kart düşürebilecek içerik: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

@@ -176,40 +176,6 @@
 	"explore_finished": {
 		"message": "הגילוי נצפה."
 	},
-	"explore_saleitem_claim": {
-		"message": "אסוף את הפרס"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "אסוף את הפרס החינמי היומי אם קיים כזה."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "אוסף את הפרס היומי…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "לא קיים פרס חינמי יומי לאסוף כרגע."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "זמינות הפריט הבא: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "כישלון באיסוף הפרס היומי."
-	},
-	"explore_saleitem_success": {
-		"message": "הפרס הבא נאסף: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "אפלקיציות להפסיק: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

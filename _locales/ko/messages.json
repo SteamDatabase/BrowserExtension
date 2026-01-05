@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "대기열 탐색이 완료되었습니다."
 	},
-	"explore_saleitem_claim": {
-		"message": "보상 받기"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "일일 무료 보상이 있는 경우 해당 보상을 받으세요."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "일일 보상 받는 중…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "지금은 일일 보상을 받을 수 없습니다."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "다음 획득 가능 시간: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "일일 보상을 받지 못했습니다."
-	},
-	"explore_saleitem_success": {
-		"message": "새로운 보상 획득: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "카드 획득 가능한 제품: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

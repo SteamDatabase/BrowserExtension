@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Liste explorée."
 	},
-	"explore_saleitem_claim": {
-		"message": "Récupérer la récompense"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Réclamez la récompense quotidienne gratuite s'il y en a une."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Réclamation de la récompense quotidienne…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Aucune récompense quotidienne à réclamer pour le moment."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Prochain article disponible : $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Impossible de réclamer la récompense quotidienne."
-	},
-	"explore_saleitem_success": {
-		"message": "Nouvelle récompense réclamée : $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Applications à collecter : $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "Note CS"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Souris sur un prix à vendre",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Lister à $price$",

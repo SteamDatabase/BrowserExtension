@@ -176,40 +176,6 @@
 	"explore_finished": {
 		"message": "कतार की खोज हो चुकी है।"
 	},
-	"explore_saleitem_claim": {
-		"message": "इनाम दावा करें"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "यदि कोई मुफ्त दैनिक इनाम है तो दावा करें।"
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "दैनिक इनाम का दावा जारी…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "इस समय दावा करने के लिए कोई दैनिक इनाम नहीं।"
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "अगला आइटम उपलब्ध: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "दैनिक इनाम का दावा करने में विफल।"
-	},
-	"explore_saleitem_success": {
-		"message": "नया इनाम दावा: $item$।",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "ड्रॉप्स वाले ऐप्स: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

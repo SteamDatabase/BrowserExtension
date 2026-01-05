@@ -176,40 +176,6 @@
 	"explore_finished": {
 		"message": "Järjekord on avastatud."
 	},
-	"explore_saleitem_claim": {
-		"message": "Lunasta auhind"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Lunasta igapäevane tasuta auhind kui see on olemas."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Auhinda lunastatakse…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Hetkel ei ole igapäevast auhinda, mida taotleda."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Järgmine asi saadaval: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Igapäevase auhinna lunastamine ebaõnnestus."
-	},
-	"explore_saleitem_success": {
-		"message": "Uus auhind lunastatud: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "$amount$ Järelejäänud saavutusi",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

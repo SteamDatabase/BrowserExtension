@@ -173,40 +173,6 @@
 	"explore_finished": {
 		"message": "Eilė buvo peržiūrėta."
 	},
-	"explore_saleitem_claim": {
-		"message": "Atsiimti apdovanojimą"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Atsiimkite kasdienį apdovanojimą, jei toks yra."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Gaunamas kasdienis apdovanojimas…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Kasdienio apdovanojimo šiuo metu nėra."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Artimiausias apdovanojimas: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nepavyko gauti kasdienio apdovanojimo."
-	},
-	"explore_saleitem_success": {
-		"message": "Gautas naujas apdovanojimas: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Programos, turinčios kortelių: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

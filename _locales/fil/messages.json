@@ -173,40 +173,6 @@
 	"explore_finished": {
 		"message": "Na-explore na ang queue."
 	},
-	"explore_saleitem_claim": {
-		"message": "Kunin ang gantimpala"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Kuhain ang libreng pang-araw-araw na reward kung mayroon man."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Kinukuha ang pang-araw-araw na reward…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Walang pang-araw-araw na reward ang makukuha sa ngayon."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Available na susunod na item: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nabigong kuhain ang pang-araw-araw na reward."
-	},
-	"explore_saleitem_success": {
-		"message": "Bagong gantimpala na nakuha: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Mga idle na app: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

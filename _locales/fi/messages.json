@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Jono on tutkittu."
 	},
-	"explore_saleitem_claim": {
-		"message": "Lunasta palkinto"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Lunasta ilmainen päivittäinen palkinto, jos sellainen on."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Lunastetaan päivittäistä palkkiota…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Tällä hetkellä ei ole päivittäistä palkkiota."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Seuraava tuote saatavilla: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Päivittäistä palkkiota ei voitu lunastaa."
-	},
-	"explore_saleitem_success": {
-		"message": "Uusi palkkio: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Sovelluksia jäljellä: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "CS Luokitus"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Hiiri yli hinta myydä",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",

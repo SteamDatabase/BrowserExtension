@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Wachtrij is verkend."
 	},
-	"explore_saleitem_claim": {
-		"message": "Claim beloning"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Claim de gratis dagelijkse beloning als die er is."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Dagelijkse beloning aan het claimen…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Geen dagelijkse beloning om te claimen op dit moment."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Volgende beloning beschikbaar: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Het claimen van de dagelijkse beloning is mislukt."
-	},
-	"explore_saleitem_success": {
-		"message": "Nieuwe beloning geclaimd: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Apps om stil te zetten: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "CS-rating"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Muis over een prijs te verkopen",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Op de markt zetten voor: $price$",

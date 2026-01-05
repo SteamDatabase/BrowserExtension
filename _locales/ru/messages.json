@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Список просмотрен."
 	},
-	"explore_saleitem_claim": {
-		"message": "Получить награду"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Получите бесплатную ежедневную награду, если она есть."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Получение ежедневной награды…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "В данный момент ежедневная награда отсутствует."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Следующий предмет будет доступен: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Не удалось получить ежедневную награду."
-	},
-	"explore_saleitem_success": {
-		"message": "Получена новая награда: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Игр с карточками: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "Рейтинг CS"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Мышь над ценой для продажи",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Выставить за $price$",

@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Čakalna vrsta je bila raziskana."
 	},
-	"explore_saleitem_claim": {
-		"message": "Prevzemite nagrado"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Pridobite brezplačno dnevno nagrado, če je na voljo."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Pridobivanje dnevne nagrade…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Trenutno ni nobene dnevne nagrade, ki bi jo lahko pridobili."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Naslednji razpoložljiv predmet: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Ni bilo mogoče prevzeti dnevne nagrade."
-	},
-	"explore_saleitem_success": {
-		"message": "Nova nagrada pridobljena: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Aplikacije v mirovanju: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

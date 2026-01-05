@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Fronta byla prozkoumána."
 	},
-	"explore_saleitem_claim": {
-		"message": "Vyzvednout odměnu"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Vyzvednout bezplatnou denní odměnu, pokud je k dispozici."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Vyzvedávání denní odměny…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Momentálně není k vyzvednutí žádná denní odměna."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Další předmět bude k dispozici $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nepodařilo se vyzvednout denní odměnu."
-	},
-	"explore_saleitem_success": {
-		"message": "Vyzvednuta nová odměna: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Hry se získatelnými kartami: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "Hodnocení CS"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Myš nad cenou k prodeji",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Nabídnout za $price$",

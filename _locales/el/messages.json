@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Η ουρά έχει εξερευνηθεί."
 	},
-	"explore_saleitem_claim": {
-		"message": "Διεκδίκηση Ανταμοιβής"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Διεκδικήστε την δωρεάν καθημερινή ανταμοιβή εάν υπάρχει."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Διεκδικώντας την ημερήσια ανταμοιβή…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Δεν υπάρχει καθημερινή ανταμοιβή για να διεκδικήσετε αυτή τη στιγμή."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Επόμενο διαθέσιμο αντικείμενο: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Αποτυχία διεκδίκησης της ημερήσιας ανταμοιβής."
-	},
-	"explore_saleitem_success": {
-		"message": "Νέα ανταμοιβή διεκδικήθηκε: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Εφαρμογές σε αδράνεια: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

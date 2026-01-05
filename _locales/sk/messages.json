@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Rada bola preskúmaná."
 	},
-	"explore_saleitem_claim": {
-		"message": "Získať odmenu"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Získaj bezplatnú dennú odmenu, ak je dostupná."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Denná odmena sa získava…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Momentálne nie je dostupná žiadna denná odmena."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Ďalšia odmena dostupná: $dateti$datetime$me$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nepodarilo sa uplatniť dennú odmenu."
-	},
-	"explore_saleitem_success": {
-		"message": "bitúmenová odmena získaná: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Aplikácie na nečinnosť: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

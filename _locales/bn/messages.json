@@ -41,10 +41,6 @@
 	"search": {
 		"message": "খুঁজুন"
 	},
-	"in_library": {
-		"message": "",
-		"description": "Indicates that the user owns this product"
-	},
 	"app_steamdb_rating": {
 		"message": "SteamDB রেটিং:"
 	},

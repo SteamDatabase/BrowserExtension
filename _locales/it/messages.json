@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "La coda è stata esplorata."
 	},
-	"explore_saleitem_claim": {
-		"message": "Riscatta la ricompensa"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Riscatta la ricompensa giornaliera gratuita se ce n'è una."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Riscatto la ricompensa giornaliera…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Nessuna ricompensa giornaliera da riscattare in questo momento."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Prossima ricompensa giornaliera: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Impossibile riscattare la ricompensa giornaliera."
-	},
-	"explore_saleitem_success": {
-		"message": "Nuova ricompensa riscattata: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "App inattive: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

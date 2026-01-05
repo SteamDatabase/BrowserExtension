@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Чергу досліджено."
 	},
-	"explore_saleitem_claim": {
-		"message": "Отримати нагороду"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Отримайте безкоштовну щоденну нагороду, якщо вона є."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Отримуємо щоденну нагороду…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Наразі, щоденна нагорода недоступна."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Наступний предмет стане доступний: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Не вдалося отримати щоденну нагороду."
-	},
-	"explore_saleitem_success": {
-		"message": "Отримано нову нагороду: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Застосунків з картками: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "Рейтинг CS"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Миша над ціною, щоб продати",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Виставити за $price$",

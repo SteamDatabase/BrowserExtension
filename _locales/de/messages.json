@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Die Entdeckungsliste wurde erkundet."
 	},
-	"explore_saleitem_claim": {
-		"message": "Belohnung einlösen"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Kostenlose tägliche Belohnung einlösen, sofern es eine gibt."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Tägliche Belohnung wird eingelöst …"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Derzeit gibt es keine tägliche Belohnung einzulösen."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Verfügbarkeit des nächsten Gegenstands: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Die tägliche Belohnung konnte nicht eingelöst werden."
-	},
-	"explore_saleitem_success": {
-		"message": "Neue Belohnung eingelöst: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Apps zum Sammeln: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

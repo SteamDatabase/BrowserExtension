@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Đã xem hết hàng chờ."
 	},
-	"explore_saleitem_claim": {
-		"message": "Nhận phần thưởng"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Nhận phần thưởng miễn phí hàng ngày (nếu có)."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Đang nhận phần thưởng hàng ngày…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Không có phần thưởng hàng ngày nào có thể nhận tại thời điểm này."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Vật phẩm tiếp theo sẵn sàng vào $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Không thể nhận phần thưởng hàng ngày."
-	},
-	"explore_saleitem_success": {
-		"message": "Đã nhận phần thưởng mới: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Cần treo $amount$ ứng dụng",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

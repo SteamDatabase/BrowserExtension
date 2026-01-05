@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Kø har blitt utforsket."
 	},
-	"explore_saleitem_claim": {
-		"message": "Krev belønning"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Krev inn den daglige belønningen hvis det er en."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Krever den daglige belønningen…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Ingen daglig belønning å kreve for øyeblikket."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Neste gjenstand tilgjengelig: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Kunne ikke kreve den daglige belønningen."
-	},
-	"explore_saleitem_success": {
-		"message": "Ny belønning krevd: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Apper å la være åpne: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -306,10 +272,6 @@
 	},
 	"achievements_csrating_name": {
 		"message": "CS-rangering"
-	},
-	"inventory_quick_sell_tip": {
-		"message": "Mus over en pris for å selge",
-		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Legg ut for $price$",

@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "A várólista fel lett fedezve."
 	},
-	"explore_saleitem_claim": {
-		"message": "Jutalom felvétele"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Az ingyenes napi jutalom begyűjtése, ha elérhető."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Napi jutalom felvétele…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Jelenleg nincs felvehető napi jutalom."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Következő tárgy elérhető ekkor: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nem sikerült felvenni a napi jutalmat."
-	},
-	"explore_saleitem_success": {
-		"message": "Jutalom felvéve: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Játékok kártyákkal: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

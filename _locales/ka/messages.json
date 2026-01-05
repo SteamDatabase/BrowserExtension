@@ -173,40 +173,6 @@
 	"explore_finished": {
 		"message": "რიგი დათვალიერებულია."
 	},
-	"explore_saleitem_claim": {
-		"message": "ჯილდოს აღება"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "აიღეთ ყოველ დღიური უფასო ჯილდო თუ არის."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "აიღეთ ყოველდღიური ჯილდო…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "ამჟამად არ არის ხელმისაწვდომი ყოველდღიური ჯილდო."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "შემდეგი ნივთი ხელმისაწვდომია: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "ყოველდღიური ჯილდოს მიღება ვერ მოხერხდა."
-	},
-	"explore_saleitem_success": {
-		"message": "მიღებული ახალი ჯილდო: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "აპების რაოდენობა სადაც შესაძლებელია დროპების დაგდება: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",

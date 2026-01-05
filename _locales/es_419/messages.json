@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "La cola ya fue explorada."
 	},
-	"explore_saleitem_claim": {
-		"message": "Reclamar recompensa"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Reclama la recompensa diaria gratuita, en caso de haberla."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Reclamando la recompensa diaria…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "No hay recompensa diaria que reclamar en este momento."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Siguiente artículo disponible: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Se produjo un error al reclamar la recompensa diaria."
-	},
-	"explore_saleitem_success": {
-		"message": "Nueva recompensa reclamada: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Juegos con tarjetas: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
