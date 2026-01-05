@@ -42,7 +42,7 @@
 		"message": "Szukaj"
 	},
 	"in_library": {
-		"message": "W Bibliotece",
+		"message": "W bibliotece",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Kolejka została przejrzana."
 	},
-	"explore_saleitem_claim": {
-		"message": "Odbierz nagrodę"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Odbierz darmową dzienną nagrodę, jeśli jest dostępna."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Odbieranie dziennej nagrody…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Brak dziennych nagród do odebrania w tym momencie."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Następny przedmiot dostępny: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nie udało się odebrać dziennej nagrody."
-	},
-	"explore_saleitem_success": {
-		"message": "Otrzymano nową nagrodę: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Aplikacje z kartami do zdobycia: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Klasyfikacja CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Najedź myszą na cenę, aby sprzedać",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Wystaw za $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Wystawia przedmiot po najniższej podanej cenie sprzedaży\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Wystawia przedmiot za najwyższą podaną cenę zlecenia kupna\n\nWyświetlana cena to kwota, którą otrzymasz (bez opłat)"
 	},
 	"inventory_badge_level": {
 		"message": "Poziom Twojej odznaki: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Połącz każdy prezent i kupon w twoim ekwipunku z SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Prawidłowo określ SubID prezentu w ekwipunku"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nie odświeżaj ekwipunku podczas sprzedaży przedmiotu"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Wyświetlaj poziom odznaki na kartach kolekcjonerskich i pakietach kart"
-	},
-	"options_display_market_price_others": {
-		"message": "Wyświetl cenę rynkową przedmiotów w ekwipunkach innych użytkowników"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Wsparcie dla parametrów $for_item$ i $my_item$",

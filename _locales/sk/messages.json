@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Vyhľadať"
 	},
+	"in_library": {
+		"message": "V knižnici",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Hodnotenie:"
 	},
@@ -151,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Auto-objavovanie"
 	},
+	"explore_auto_discover_description": {
+		"message": "Automaticky preskúmať front."
+	},
 	"explore_generating": {
 		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
 	},
@@ -172,40 +179,6 @@
 	},
 	"explore_finished": {
 		"message": "Rada bola preskúmaná."
-	},
-	"explore_saleitem_claim": {
-		"message": "Získať odmenu"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Získaj bezplatnú dennú odmenu, ak je dostupná."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Denná odmena sa získava…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Momentálne nie je dostupná žiadna denná odmena."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Ďalšia odmena dostupná: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nepodarilo sa uplatniť dennú odmenu."
-	},
-	"explore_saleitem_success": {
-		"message": "Nová odmena získaná: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikácie na nečinnosť: $amount$",
@@ -300,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Hodnotenie"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Prejdite myšou na cenu pre predaj",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Predať za $price$",
 		"placeholders": {
@@ -317,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Vypíše položku za najnižšiu uvedenú predajnú cenu\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Vypíše položku za najvyššiu uvedenú cenu nákupnej objednávky\n\nZobrazená cena je suma, ktorú dostanete (bez poplatkov)"
 	},
 	"inventory_badge_level": {
 		"message": "Úroveň vášho odznaku: $level$",
@@ -344,6 +315,25 @@
 	},
 	"inventory_badge_none": {
 		"message": "Nie je vytvorený žiadny odznak"
+	},
+	"spoilers_reveal": {
+		"message": "Zobraziť spoilery",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafy"
+	},
+	"popup_sales": {
+		"message": "Výpredaje"
+	},
+	"popup_calendar": {
+		"message": "Kalendár"
+	},
+	"popup_patches": {
+		"message": "Aktualizácie"
+	},
+	"popup_calculator": {
+		"message": "Kalkulačka"
 	},
 	"options": {
 		"message": "Možnosti"
@@ -371,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Udeľovanie povolení"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Povoliť podporu pre Steam China"
 	},
 	"options_footer1": {
 		"message": "Vytvorené s 💙 od <a href=\"https://steamdb.info\" target=\"_blank\">ľudí zo SteamDB</a>."
@@ -515,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Zobraz SteamDB a tlačidlá pre uloženie na stránke s hernými kartami"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Zobraziť odkazy SteamDB vedľa názvov vývojárov a vydavateľov"
+	},
 	"options_link_subid": {
 		"message": "Zobrazovať SubID pod každou nákupnou voľbou"
 	},
@@ -534,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Prepojiť každý darček a kupón vo vašom inventári na SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Správne určiť SubID darčeka vo vašom inventári"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nerefreshovať inventár pri predaji položky"
 	},
@@ -548,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Zobrazte úroveň odznaku na zberateľských kartách a posilňovacích balíčkoch"
-	},
-	"options_display_market_price_others": {
-		"message": "Zobraziť trhovú ceny položky v inventároch iných používateľov"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podporovať parametre $for_item$ a $my_item$",
@@ -653,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Zobrazovať históriu CS Hodnotenia na stránke CS2 achievementov"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Nebudete môcť vytvoriť ďalší Booster Pack pre túto hru až do $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

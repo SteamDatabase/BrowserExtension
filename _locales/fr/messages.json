@@ -42,7 +42,7 @@
 		"message": "Recherche"
 	},
 	"in_library": {
-		"message": "Dans la bibliothèque",
+		"message": "Dans votre bibliothèque",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Liste explorée."
 	},
-	"explore_saleitem_claim": {
-		"message": "Récupérer la récompense"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Réclamez la récompense quotidienne gratuite s'il y en a une."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Réclamation de la récompense quotidienne…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Aucune récompense quotidienne à réclamer pour le moment."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Prochain article disponible : $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Impossible de réclamer la récompense quotidienne."
-	},
-	"explore_saleitem_success": {
-		"message": "Nouvelle récompense réclamée : $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Applications à collecter : $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Note CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Survolez un prix pour vendre",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Lister à $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Liste l'article pour le prix de vente le plus bas\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Liste l'article pour le prix d'achat le plus élevé\n\nLe prix affiché est l'argent que vous recevez (sans frais)"
 	},
 	"inventory_badge_level": {
 		"message": "Votre niveau de badge : $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Lier chaque cadeau et coupon de votre inventaire à SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Retrouver le SubID d'un cadeau dans votre inventaire"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne pas actualiser l'inventaire lorsque vous vendez un objet"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Afficher le niveau de badge sur les cartes à échanger et les booster packs"
-	},
-	"options_display_market_price_others": {
-		"message": "Afficher le prix du marché des articles dans l'inventaire des autres utilisateurs"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Prendre en charge les paramètres $for_item$ et $my_item$",

@@ -1,6 +1,6 @@
 {
 	"extension_description": {
-		"message": "Prideda SteamDB nuorodas ir naujas funkcijas Steam pardotuvėje bei bendruomenėje. Raskite žemiausias žaidimų kainas ir statistiką.",
+		"message": "Prideda „SteamDB“ nuor. ir naujas funk. „Steam“ parduotuvėje ir bendruomenėje. Peržr. mažiausias žaid. kainas ir statist. duomenis.",
 		"description": "This value can be up to 132 characters."
 	},
 	"steamdb_options": {
@@ -19,13 +19,13 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Atrodo, kad Steam patiria tam tikrą veiklos sutrikimą. "
+		"message": "Atrodo, kad „Steam“ patiria tam tikrų veiklos sutrikimų. "
 	},
 	"view_on_steamdb": {
 		"message": "Peržiūrėti per SteamDB"
 	},
 	"view_on_steam_hunters": {
-		"message": "Žiurėti per „Steam Hunters“",
+		"message": "Peržiūrėti svetainėje „Steam Hunters“",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
@@ -35,11 +35,15 @@
 		"message": "Asmeniniai pasiekimai"
 	},
 	"store_page": {
-		"message": "Parduotuvės tinklalapis",
+		"message": "Parduotuvės puslapis",
 		"description": "This translation should match how Steam translates it on community hubs"
 	},
 	"search": {
 		"message": "Ieškoti"
+	},
+	"in_library": {
+		"message": "Bibliotekoje",
+		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
 		"message": "SteamDB reitingas:"
@@ -151,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Automatinė peržiūra"
 	},
+	"explore_auto_discover_description": {
+		"message": "Automatiškai atrasti eilę."
+	},
 	"explore_generating": {
 		"message": "Generuojama nauja peržiūros eilė, tai gali nepavykti, jei Steam yra labai apkrautas…"
 	},
@@ -172,40 +179,6 @@
 	},
 	"explore_finished": {
 		"message": "Eilė buvo peržiūrėta."
-	},
-	"explore_saleitem_claim": {
-		"message": "Atsiimti apdovanojimą"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Atsiimkite kasdienį apdovanojimą, jei toks yra."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Gaunamas kasdienis apdovanojimas…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Kasdienio apdovanojimo šiuo metu nėra."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Artimiausias apdovanojimas: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nepavyko gauti kasdienio apdovanojimo."
-	},
-	"explore_saleitem_success": {
-		"message": "Gautas naujas apdovanojimas: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
 	},
 	"badges_idle_apps": {
 		"message": "Programos, turinčios kortelių: $amount$",
@@ -300,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Reitingas"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Užveskite pelę ant kainos, kad parduotumėte",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Skelbti už $price$",
 		"placeholders": {
@@ -317,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Paskelbia prekę už mažiausią esamą pardavimo kainą\n\nRodoma kaina yra pinigai, kuriuos gaunate (be mokesčių)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Paskelbia prekę už didžiausią esamą pirkimo užsakymo kainą\n\nRodoma kaina - tai pinigai, kuriuos gaunate (be mokesčių)"
 	},
 	"inventory_badge_level": {
 		"message": "Tavo ženklelio lygis: $level$",
@@ -344,6 +315,25 @@
 	},
 	"inventory_badge_none": {
 		"message": "Ženklelis negamintas"
+	},
+	"spoilers_reveal": {
+		"message": "Atskleisti spoilerius",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafikai"
+	},
+	"popup_sales": {
+		"message": "Išpardavimai"
+	},
+	"popup_calendar": {
+		"message": "Kalendorius"
+	},
+	"popup_patches": {
+		"message": "Pataisymai"
+	},
+	"popup_calculator": {
+		"message": "Skaičiuotuvas"
 	},
 	"options": {
 		"message": "Nustatymai"
@@ -371,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Suteikti leidimus"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Įjungti Steam China palaiką"
 	},
 	"options_footer1": {
 		"message": "Pagaminta su 💙 pagal <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> žmones."
@@ -515,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Rodyti SteamDB ir parduotuvės puslapio mygtukus ant žaidimo kortelių puslapio"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Rodyti SteamDB nuorodas šalia kūrėjų ir leidėjų vardų"
+	},
 	"options_link_subid": {
 		"message": "Rodyti SubID po kiekvienu pirkinio pasirinkimu"
 	},
@@ -534,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Susieti kiekvieną dovaną ir kuponą savo inventoriuje su SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Teisingai išsiaiškinkite dovanų SubID jūsų inventoriuje"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Neatnaujinti inventoriaus parduodant prekę"
 	},
@@ -548,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Rodyti ženklelio lygį kortelėms ir papildymų pakams"
-	},
-	"options_display_market_price_others": {
-		"message": "Rodyti prekės rinkos kainą kitų naudotojų inventoriuje"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Palaikomi $for_item$ ir $my_item$ parametrai",
@@ -639,6 +629,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "Pridėti mygtuką, skirtą automatiškai pereiti atradimo eilę išpardavimo metu"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Nukreipti atgal į žaidimo kortelių puslapį nusipirkus likusias korteles"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Patobulinkite pasaulio pasiekimų puslapį"
 	},
@@ -650,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Rodyti CS reitingo istoriją CS2 pasiekimų puslapyje"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Negalėsite sukurti kito Booster Pack šiam žaidimui iki $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

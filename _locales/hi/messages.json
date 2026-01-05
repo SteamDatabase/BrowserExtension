@@ -41,6 +41,10 @@
 	"search": {
 		"message": "खोजें"
 	},
+	"in_library": {
+		"message": "लाइब्रेरी में",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB दर-निर्धारण:"
 	},
@@ -176,40 +180,6 @@
 	"explore_finished": {
 		"message": "कतार की खोज हो चुकी है।"
 	},
-	"explore_saleitem_claim": {
-		"message": "इनाम दावा करें"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "यदि कोई मुफ्त दैनिक इनाम है तो दावा करें।"
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "दैनिक इनाम का दावा जारी…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "इस समय दावा करने के लिए कोई दैनिक इनाम नहीं।"
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "अगला आइटम उपलब्ध: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "दैनिक इनाम का दावा करने में विफल।"
-	},
-	"explore_saleitem_success": {
-		"message": "नया इनाम दावा: $item$।",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "ड्रॉप्स वाले ऐप्स: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -303,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS रेटिंग"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "बेचने के लिए कीमत पर माउस घुमाएं",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "$price$ पर बेचें",
 		"placeholders": {
@@ -320,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "सबसे कम बिक्री मूल्य के अनुसार उत्पादों की सूची बनाएं \n\nप्रदर्शित राशि वह धन है जो आपको प्राप्त होगी (बिना किसी शुल्क के)"
-	},
-	"inventory_sell_at_title": {
-		"message": "सबसे अधिक बिक्री मूल्य के अनुसार उत्पादों की सूची बनाएं \n\nप्रदर्शित राशि वह धन है जो आपको प्राप्त होगी (बिना किसी शुल्क के)"
 	},
 	"inventory_badge_level": {
 		"message": "आपका बैज स्तर: $level$",
@@ -562,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "अपनी सूची में प्रत्येक उपहार और कूपन को SteamDB से लिंक करें"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "अपनी सूची में उपहार SubID का सही पता लगाएं"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "कोई वस्तु बेचते समय इन्वेंट्री को ताज़ा न करें"
 	},
@@ -576,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "बैज स्तर प्रदर्शित करें ट्रेडिंग कार्ड और बूस्टर पैक पर"
-	},
-	"options_display_market_price_others": {
-		"message": "अन्य उपयोगकर्ताओं की सूची में आइटम का बाज़ार मूल्य प्रदर्शित करें"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ और $my_item$ पैरामीटर का समर्थन करें",

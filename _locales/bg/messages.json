@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Опашката е разгледана."
 	},
-	"explore_saleitem_claim": {
-		"message": "Заявяване на награда"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Заявяване на дневната награда, ако има такава."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Заявява се дневната награда…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "В момента няма дневна награда за заявяване."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Наличност на следващ артикул: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Неуспешна заявка на дневната награда."
-	},
-	"explore_saleitem_success": {
-		"message": "Дневната награда е получена: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Приложения с оставащи падания: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS рейтинг"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Задръжте върху цена за продажба",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Пускане за $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Пускане на артикула за най-ниската посочена продажна цена\n\nПоказаната цена са парите, които получавате (без такси)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Продаване на артикула за най-високата заявена цена за купуване\n\nПоказаната цена са парите, които получавате (без такси)"
 	},
 	"inventory_badge_level": {
 		"message": "Ниво на значка: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Добави връзка към SteamDB за подаръци и купони за намаление в инвентара"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Разпознай правилно SubID на подаръци в инвентара"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Не обновявай инвентара, когато се продаде артикул"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Покажи ниво на значка при карти за размяна и допълнителни пакети"
-	},
-	"options_display_market_price_others": {
-		"message": "Покажи пазарните цени на артикули в инвентара на други профили"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Поддръжка на $for_item$ и $my_item$ параметри",

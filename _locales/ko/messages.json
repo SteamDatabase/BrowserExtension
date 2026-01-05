@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "대기열 탐색이 완료되었습니다."
 	},
-	"explore_saleitem_claim": {
-		"message": "보상 받기"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "일일 무료 보상이 있는 경우 해당 보상을 받으세요."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "일일 보상 받는 중…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "지금은 일일 보상을 받을 수 없습니다."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "다음 획득 가능 시간: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "일일 보상을 받지 못했습니다."
-	},
-	"explore_saleitem_success": {
-		"message": "새로운 보상 획득: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "카드 획득 가능한 제품: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS 등급"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "가격에 마우스를 올려 판매",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "$price$에 등록",
 		"placeholders": {
@@ -317,19 +287,13 @@
 		}
 	},
 	"inventory_sell_at": {
-		"message": "$price$에 팔기",
+		"message": "$price$에 판매",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "가장 낮은 판매 가격순으로 등록하기\n\n표시된 가격은 수수료 없이 받는 금액입니다"
-	},
-	"inventory_sell_at_title": {
-		"message": "가장 많은 구매 요청순으로 등록하기\n\n표시된 가격은 수수료 없이 받는 금액입니다"
 	},
 	"inventory_badge_level": {
 		"message": "배지 레벨: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "보관함에 보유한 선물과 쿠폰을 SteamDB에 연결하기"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "보관함에서 선물 SubID 올바르게 파악"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "아이템을 판매할 때 보관함 새로고침 하지 않기"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "트레이딩 카드 및 부스터 팩에 배지 레벨 표시"
-	},
-	"options_display_market_price_others": {
-		"message": "다른 사용자의 보관함에 장터 가격 표시"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ 및 $my_item$ 매개변수 지원",

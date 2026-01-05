@@ -34,6 +34,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 			steamdb_options: _t( 'steamdb_options' ),
 			view_on_steamdb: _t( 'view_on_steamdb' ),
 			in_library: _t( 'in_library' ),
+			inventory_quick_sell_tip: _t( 'inventory_quick_sell_tip' ),
 			inventory_list_at: _t( 'inventory_list_at' ),
 			inventory_sell_at: _t( 'inventory_sell_at' ),
 			inventory_list_at_title: _t( 'inventory_list_at_title' ),

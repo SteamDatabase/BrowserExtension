@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Otsi"
 	},
+	"in_library": {
+		"message": "Teegis",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Hinnang:"
 	},
@@ -176,40 +180,6 @@
 	"explore_finished": {
 		"message": "Järjekord on avastatud."
 	},
-	"explore_saleitem_claim": {
-		"message": "Lunasta auhind"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Lunasta igapäevane tasuta auhind kui see on olemas."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Auhinda lunastatakse…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Hetkel ei ole igapäevast auhinda, mida taotleda."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Järgmine asi saadaval: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Igapäevase auhinna lunastamine ebaõnnestus."
-	},
-	"explore_saleitem_success": {
-		"message": "Uus auhind lunastatud: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "$amount$ Järelejäänud saavutusi",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -303,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS hinnang"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Müümiseks vii hiir hinna kohale",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Lisa kuulutusse hinnaga $price$",
 		"placeholders": {
@@ -320,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Paneb toote müüki madalaima müüki pandud hinnaga\n\nMärgitud summa on see raha mis sa saad (ilma tasudeta)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Paneb toote müüki kõrgeima soovi hinnaga\n\nMärgitud hind on see raha mis sa saad (ilma tasudeta)"
 	},
 	"inventory_badge_level": {
 		"message": "Sinu märgi tase: $level$",
@@ -562,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Ühenda iga kink ja kupong sinu invetaris SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Korrektselt uuri välja kingituse alam-id sinu inventaris"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ära uuenda inventari kui sa müüd asja"
 	},
@@ -576,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Märgise taseme kuvamine kauplemiskaartidel ja boosterpakkidel"
-	},
-	"options_display_market_price_others": {
-		"message": "Kuva asja poe hinda teiste kasutajate inventaris"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Toetus $for_item$ ja $my_item$ parameetritele",

@@ -41,6 +41,10 @@
 	"search": {
 		"message": "جستجو"
 	},
+	"in_library": {
+		"message": "در کتابخانه",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "امتیاز SteamDB:"
 	},
@@ -176,40 +180,6 @@
 	"explore_finished": {
 		"message": "صف بررسی شده است."
 	},
-	"explore_saleitem_claim": {
-		"message": "دریافت پاداش"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "دریافت پاداش روزانه در صورت وجود."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "در حال دریافت پاداش روزانه…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "در حال حاضر پاداشی برای دریافت وجود ندارد."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "کالای بعدی در دسترس: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "خطا در دریافت پاداش روزانه."
-	},
-	"explore_saleitem_success": {
-		"message": "پاداش جدید دریافت شد: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "بازی های دارای کارت: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -303,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "امتیاز CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "موس را روی قیمت نگه دارید تا بفروشید",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "درخواست خرید در $price$",
 		"placeholders": {
@@ -320,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "ثبت آیتم به کمترین قیمت فروش ثبت شده\n\n قیمت نمایش داده شده مبلغی است که شما دریافت می کنید (بدون کارمزد)"
-	},
-	"inventory_sell_at_title": {
-		"message": "ثبت آیتم به بیشترین قیمت درخواست شده\n\n قیمت نمایش داده شده مبلغ دریافتی شما (بدون کارمزد) می باشد"
 	},
 	"inventory_badge_level": {
 		"message": "سطح نشان شما: $level$",
@@ -351,6 +319,12 @@
 	"spoilers_reveal": {
 		"message": "آشکار کردن اسپویلر ها",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "نمودارها"
+	},
+	"popup_sales": {
+		"message": "تخفیف‌ها"
 	},
 	"popup_calendar": {
 		"message": "تقویم"
@@ -556,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "لینک کردن هر گیفت و کوپن در انباری خود به SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "نمایش صحیح SubID های گیفت ها در انباری خود"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "عدم رفرش کردن صفحه انباری هنگام فروش آیتم"
 	},
@@ -570,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "نمایش سطح نشان بر روی تریدینگ کارت ها و بوستر پک ها"
-	},
-	"options_display_market_price_others": {
-		"message": "نمایش قیمت هر آیتم در صفحه اینونتوری دیگر کاربران"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "پشتیبانی از پارامتر های $for_item$ و $my_item$",

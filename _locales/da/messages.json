@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Køen er blevet udforsket."
 	},
-	"explore_saleitem_claim": {
-		"message": "Indløs belønning"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Gør krav på den gratis daglige belønning, hvis der er en."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Gør krav på den daglige belønning…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Ingen daglig belønning til at gøre krav på i øjeblikket."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Næste element til rådighed: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Kunne ikke gøre krav på den daglige belønning."
-	},
-	"explore_saleitem_success": {
-		"message": "Ny belønning hævdet: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Apps til inaktiv: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS bedømmelse"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Hold musen over en pris for at sælge",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Liste på $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Lister elementet for den laveste noterede salgspris\n\nDen viste pris er de penge du modtager (uden gebyrer)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Lister varen for højeste noteret købsordre pris\n\nViser pris er de penge, du modtager (uden gebyrer)"
 	},
 	"inventory_badge_level": {
 		"message": "Dit badge niveau: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Link hver gave og kupon i dit inventar til SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Regn gavens SubID rigtigt ud i dit inventar"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Genopfrisk ikke lageret, når du sælger en vare"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Vis badge niveau på byttekort og booster pakker"
-	},
-	"options_display_market_price_others": {
-		"message": "Vis varens markedspris i andre brugeres lagerbeholdninger"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Understøt $for_item$ og $my_item$ parametre",

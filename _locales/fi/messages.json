@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Jono on tutkittu."
 	},
-	"explore_saleitem_claim": {
-		"message": "Lunasta palkinto"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Lunasta ilmainen päivittäinen palkinto, jos sellainen on."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Lunastetaan päivittäistä palkkiota…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Tällä hetkellä ei ole päivittäistä palkkiota."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Seuraava tuote saatavilla: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Päivittäistä palkkiota ei voitu lunastaa."
-	},
-	"explore_saleitem_success": {
-		"message": "Uusi palkkio: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Sovelluksia jäljellä: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Luokitus"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Vie hiiri hinnan päälle myydäksesi",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Asettaa tavaran myyntiin alimpaan listattuun hintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Listaa tavaran korkeimpaan listattuun ostotilaushintaan\n\nNäytetty hinta on summa, jonka saat (ilman kuluja)"
 	},
 	"inventory_badge_level": {
 		"message": "Kunniamerkkisi taso: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Linkitä jokainen lahja ja kuponki tavaraluettelossasi SteamDB:hen"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Selvitä lahjan SubID tavaraluettelossasi"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Älä päivitä tavaraluetteloa kun myyt tavaran"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Näytä kunniamerkin taso keräilykorteissa ja tehostepaketeissa"
-	},
-	"options_display_market_price_others": {
-		"message": "Näytä tavaroiden kauppahinta muiden käyttäjien tavaraluetteloissa"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Tue $for_item$ ja $my_item$ parametreja",

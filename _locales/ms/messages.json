@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Cari"
 	},
+	"in_library": {
+		"message": "Dalam Perpustakaan",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Penilaian SteamDB:"
 	},
@@ -151,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Auto Teroka"
 	},
+	"explore_auto_discover_description": {
+		"message": "Terokai giliran secara automatik."
+	},
 	"explore_generating": {
 		"message": "Menjana Senarai Auto Teroka yang baru, ini mungkin gagal jika Steam dalam keadaan beban yang tinggi…"
 	},
@@ -172,40 +179,6 @@
 	},
 	"explore_finished": {
 		"message": "Senarai telah diteroka."
-	},
-	"explore_saleitem_claim": {
-		"message": "Tuntut Ganjaran"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Tuntut ganjaran harian sekiranya ada."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Sedang menuntut ganjaran harian…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Tiada ganjaran harian untuk dituntut pada masa ini."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Item seterusnya disediakan pada masa: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Gagal menuntut ganjaran harian."
-	},
-	"explore_saleitem_success": {
-		"message": "Ganjaran baharu dituntut: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikasi untuk dibiarkan: $amount$",
@@ -300,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Penilaian CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Arahkan tetikus ke harga untuk menjual",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Senarai pada $price$",
 		"placeholders": {
@@ -317,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Senaraikan item untuk harga jualan yang terendah tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Senaraikan item untuk harga jualan yang tertinggi tersenarai\n\nHarga terpapar adalah wang yang anda terima (tanpa upah)"
 	},
 	"inventory_badge_level": {
 		"message": "Tahap Lencana anda: $level$",
@@ -390,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Beri kebenaran"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktifkan sokongan Steam China"
 	},
 	"options_footer1": {
 		"message": "Dicipta dengan 💙 oleh warga <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -534,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Papar butang SteamDB dan butang halaman kedai di halaman kad permainan"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Paparkan pautan SteamDB di sebelah nama pembangun dan penerbit"
+	},
 	"options_link_subid": {
 		"message": "Papar SubID di bawah setiap pilihan pembelian"
 	},
@@ -553,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Sambung setiap hadiah dan kupon dalam inventori anda ke SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Memperbetulkan SubID hadiah dalam inventori anda"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Jangan memuatkan semula inventori semasa menjual item"
 	},
@@ -567,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Paparkan tahap lencana pada kad dagangan dan pek penggalak"
-	},
-	"options_display_market_price_others": {
-		"message": "Papar harga pasaran item dalam inventori pengguna lain"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Sokong parameter $for_item$ dan $my_item$",
@@ -672,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Paparkan sejarah penilaian CS pada halaman pencapaian CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Anda tidak akan dapat mencipta Booster Pack lain untuk permainan ini sehingga $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

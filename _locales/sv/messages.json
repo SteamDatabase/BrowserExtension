@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Kön har utforskats."
 	},
-	"explore_saleitem_claim": {
-		"message": "Hämta gratis belöning"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Hämta den dagliga gratisbelöningen om det finns en."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Hämta den dagliga belöningen…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Ingen daglig belöning att hämta just nu."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Nästa artikel tillgänglig: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Misslyckades med att hämta den dagliga belöningen."
-	},
-	"explore_saleitem_success": {
-		"message": "Ny belöning tagits: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Appar att idle:a: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS-betyg"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "För musen över ett pris för att sälja",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Lägg upp för försäljning för $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Lägg upp för försäljning för det lägsta efterfrågade försäljningspris\n\nVisat pris är de pengar du får (utan avgifter)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Lägg upp för försäljning för det högsta efterfrågade försäljningspris\n\nVisat pris är de pengar du får (utan avgifter)"
 	},
 	"inventory_badge_level": {
 		"message": "Din märkesnivå: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Länka varje gåva och kupong i ditt förråd till SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Lista ut SubID för gåva i ditt förråd"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ladda inte om förrådet när ett föremål säljs"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Visa märkesnivå på kort och booster paket"
-	},
-	"options_display_market_price_others": {
-		"message": "Visa föremålets marknadspris i andra användares förråd"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Lägg till stöd för parametrarna $for_item$ och $my_item$",

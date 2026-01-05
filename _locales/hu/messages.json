@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Keresés"
 	},
+	"in_library": {
+		"message": "Könyvtárban",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB értékelés:"
 	},
@@ -176,40 +180,6 @@
 	"explore_finished": {
 		"message": "A várólista fel lett fedezve."
 	},
-	"explore_saleitem_claim": {
-		"message": "Jutalom felvétele"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Az ingyenes napi jutalom begyűjtése, ha elérhető."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Napi jutalom felvétele…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Jelenleg nincs felvehető napi jutalom."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Következő tárgy elérhető ekkor: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nem sikerült felvenni a napi jutalmat."
-	},
-	"explore_saleitem_success": {
-		"message": "Jutalom felvéve: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Játékok kártyákkal: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -303,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS-besorolás"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Vidd az egeret az ár fölé az eladáshoz",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Meghirdetés $price$ áron",
 		"placeholders": {
@@ -320,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Tárgy felajánlása eladásra a legalacsonyabb eladási áron\n\nA megjelenített ár az összeg amit meg fogsz kapni (azaz díjak nélkül)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Tárgy felajánlása eladásra a legmagasabb vételi áron\n\nA megjelenített ár az összeg amit meg fogsz kapni (azaz díjak nélkül)"
 	},
 	"inventory_badge_level": {
 		"message": "A te kitűződ szintje: $level$",
@@ -540,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "SteamDB és áruház oldal gombok megjelenítése a játékkártyák oldalán"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "SteamDB linkek megjelenítése a fejlesztő és kiadó nevek mellett"
+	},
 	"options_link_subid": {
 		"message": "SubID megjelenítése minden vásárlási opció alatt"
 	},
@@ -559,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "SteamDB-re mutató hivatkozások megjelenítése az összes ajándéknál és kuponnál a raktáradban"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Raktáradban lévő ajándékokhoz tartozó SubID-k pontos meghatározása"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Ne frissüljön a raktár tárgyak eladásakor"
 	},
@@ -573,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Kitűző szintjének megjelenítése játékkártyáknál és bónuszcsomagoknál"
-	},
-	"options_display_market_price_others": {
-		"message": "Tárgyak piaci árának megjelenítése más felhasználók raktáraiban"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ és $my_item$ paraméterek támogatása",
@@ -678,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS-besorolás megjelenítése a CS2 teljesítmények oldalán"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Nem tudsz újabb bónuszcsomagot készíteni ehhez a játékhoz eddig: $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

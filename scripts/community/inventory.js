@@ -233,7 +233,7 @@
 					return;
 				}
 
-				LoadQuickSellInformation( element, commodityID, description, abortController.signal );
+				LoadQuickSellInformation( element, commodityID, abortController.signal );
 			} );
 		}
 
@@ -246,10 +246,9 @@
 	/**
 	 * @param {HTMLElement} element
 	 * @param {string} commodityID
-	 * @param {any} description
 	 * @param {AbortSignal} signal
 	 */
-	function LoadQuickSellInformation( element, commodityID, description, signal )
+	function LoadQuickSellInformation( element, commodityID, signal )
 	{
 		const histogramParams = new URLSearchParams();
 		histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
@@ -285,11 +284,9 @@
 					return;
 				}
 
-				const publisherFee = ( typeof description.market_fee !== 'undefined' && description.market_fee !== null ) ? description.market_fee : window.g_rgWalletInfo.wallet_publisher_fee_percent_default;
-
 				const hoverText = document.createElement( 'div' );
 				hoverText.className = 'steamdb_orders_hover_text';
-				hoverText.textContent = i18n.inventory_list_at.replace( '%price%', FormatCurrency( 0 ) );
+				hoverText.textContent = i18n.inventory_quick_sell_tip;
 
 				const orderHeaderSummaries = document.createElement( 'div' );
 
@@ -306,8 +303,7 @@
 						const str = isSellNow ? i18n.inventory_sell_at : i18n.inventory_list_at;
 
 						const price = Number.parseInt( button.dataset.price, 10 );
-						const priceFees = window.CalculateFeeAmount( price, publisherFee );
-						const priceAfterFees = price - priceFees.fees;
+						const priceAfterFees = window.GetItemPriceFromTotal( price, window.g_rgWalletInfo );
 
 						hoverText.textContent = str.replace( '%price%', FormatCurrency( price ) );
 
@@ -414,10 +410,11 @@
 
 					if( data.lowest_sell_order )
 					{
-						const undercutPrice = data.lowest_sell_order - 1;
-						const undercutPriceFees = window.CalculateFeeAmount( undercutPrice, publisherFee );
+						const nFloor = Number.parseInt( window.g_rgWalletInfo.wallet_market_minimum ?? 1, 10 );
+						const nIncrement = Number.parseInt( window.g_rgWalletInfo.wallet_currency_increment ?? 1, 10 );
+						const undercutPrice = data.lowest_sell_order - nIncrement;
 
-						if( undercutPrice - undercutPriceFees.fees > 0 && undercutPrice > data.highest_buy_order )
+						if( undercutPrice >= ( 3 * nFloor ) && undercutPrice > data.highest_buy_order )
 						{
 							const row = document.createElement( 'tr' );
 							row.classList.add( 'steamdb_order_row_clickable' );

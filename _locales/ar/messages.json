@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "تم استكشاف قائمة الانتظار."
 	},
-	"explore_saleitem_claim": {
-		"message": "استلام الجائزة"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "احصل على المكافأة اليومية المجانية إذا كان هناك مكافأة."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "تحصيل المكافأة اليومية…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "لا يوجد مكافأة يومية للحصول عليها في هذه اللحظة."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "العنصر التالي متاح: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "فشل في الحصول على المكافأة اليومية."
-	},
-	"explore_saleitem_success": {
-		"message": "تم استلام مكافأة جديدة: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "تطبيقات في حالة خمول: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "تصنيف CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "حرك الماوس فوق السعر للبيع",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "إعرض بسعر $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "عَرض العنصر بأقل سعر بيع معروض\n\nالسعر المعروض هو المبلغ الذي تستلمه (دون رسوم)"
-	},
-	"inventory_sell_at_title": {
-		"message": "عَرض العنصر بأعلى سعر شراء مطلوب\n\nالسعر المعروض هو المبلغ الذي تتلقاه (دون رسوم)"
 	},
 	"inventory_badge_level": {
 		"message": "مستوى الشارة الخاصة بك: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "ربط كل هدية وقسيمة في مخزونك ب SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "لتحديد معرف الهدية الفرعي بشكل صحيح في مخزونك"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "لا تقم بتحديث المخزون عند بيع عنصر ما"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "عرض مستوى الشارة على بطاقات التداول وحزم التعزيز"
-	},
-	"options_display_market_price_others": {
-		"message": "عرض سعر السوق للعنصر في مخزونات المستخدمين الآخرين"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "دعم المعلمات $for_item$ و $my_item$",

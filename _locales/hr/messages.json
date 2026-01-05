@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Pretraga"
 	},
+	"in_library": {
+		"message": "U biblioteci",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Ocjena:"
 	},
@@ -151,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Automatsko otkrivanje"
 	},
+	"explore_auto_discover_description": {
+		"message": "Automatski istraži red."
+	},
 	"explore_generating": {
 		"message": "Generiranje novog reda otkrivanja, ovo može ne uspjeti ako je Steam pod velikim opterećenjem…"
 	},
@@ -172,40 +179,6 @@
 	},
 	"explore_finished": {
 		"message": "Red je pretražen."
-	},
-	"explore_saleitem_claim": {
-		"message": "Preuzmi nagradu"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Zatražite besplatnu dnevnu nagradu ako je dostupna."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Preuzimanje dnevne nagrade…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Trenutno nema dostupnih dnevnih nagrada."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Sljedeća stavka dostupna: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Traženje dnevne nagrade nije uspjelo."
-	},
-	"explore_saleitem_success": {
-		"message": "Zauzeta nova nagrada: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
 	},
 	"badges_idle_apps": {
 		"message": "Aplikacije za mirovanje: $amount$",
@@ -300,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Ocjena"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Pređi mišem preko cijene za prodaju",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Popis po cijeni od $price$",
 		"placeholders": {
@@ -317,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Popisuje stavku po najnižoj navedenoj prodajnoj cijeni\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Popisuje stavku po najvišoj navedenoj cijeni kupovne narudžbe\n\nPrikazana cijena je novac koji dobivate (bez naknada)"
 	},
 	"inventory_badge_level": {
 		"message": "Vaša razina značke: $level$",
@@ -348,6 +319,21 @@
 	"spoilers_reveal": {
 		"message": "Prikaži spojlere",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafikoni"
+	},
+	"popup_sales": {
+		"message": "Rasprodaje"
+	},
+	"popup_calendar": {
+		"message": "Kalendar"
+	},
+	"popup_patches": {
+		"message": "Ažuriranja"
+	},
+	"popup_calculator": {
+		"message": "Kalkulator"
 	},
 	"options": {
 		"message": "Opcije"
@@ -375,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Dodijeli dozvole"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Omogući podršku za Steam China"
 	},
 	"options_footer1": {
 		"message": "Izrađeno s 💙 od strane <a href='https://steamdb.info' target='_blank'>SteamDB</a> tima."
@@ -519,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Prikažite gumbe SteamDB i stranice trgovine na stranici kartica igara"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Prikaži SteamDB poveznice pored imena programera i izdavača"
+	},
 	"options_link_subid": {
 		"message": "Prikažite SubID ispod svake opcije kupnje"
 	},
@@ -538,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Poveži svaki dar i kupon u svom inventaru sa SteamDB-om"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Ispravno odredi SubID poklona u svom inventaru"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Nemoj osvježavati inventar prilikom prodaje predmeta"
 	},
@@ -552,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Prikaz razine značke na kartici za razmjenu i booster paketima"
-	},
-	"options_display_market_price_others": {
-		"message": "Prikaži tržišnu cijenu predmeta u inventarima drugih korisnika"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podrži parametre $for_item$ i $my_item$",
@@ -657,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Prikaži povijest CS ocjena na CS2 stranici postignuća"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Nećete moći napraviti još jedan Booster Pack za ovu igru do $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

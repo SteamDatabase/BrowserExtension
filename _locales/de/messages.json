@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Die Entdeckungsliste wurde erkundet."
 	},
-	"explore_saleitem_claim": {
-		"message": "Belohnung einlösen"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Kostenlose tägliche Belohnung einlösen, sofern es eine gibt."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Tägliche Belohnung wird eingelöst …"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Derzeit gibt es keine tägliche Belohnung einzulösen."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Verfügbarkeit des nächsten Gegenstands: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Die tägliche Belohnung konnte nicht eingelöst werden."
-	},
-	"explore_saleitem_success": {
-		"message": "Neue Belohnung eingelöst: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Apps zum Sammeln: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS-Wertung"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Maus über einen Preis bewegen, um zu verkaufen",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Für $price$ einstellen",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Stellt den Gegenstand zum niedrigsten aufgeführten Verkaufspreis ein\n\nDer angezeigte Preis ist das Geld, das du erhältst (ohne Gebühren)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Stellt den Gegenstand zum höchsten angegebenen Kaufauftragspreis ein\n\nDer angezeigte Preis ist das Geld, das du erhältst (ohne Gebühren)"
 	},
 	"inventory_badge_level": {
 		"message": "Level vom Abzeichen: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Jedes Geschenk und jeden Gutschein in deinem Inventar mit SteamDB verknüpfen"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Korrekte Geschenk-SubID im Inventar ermitteln"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Inventar beim Verkauf eines Gegenstands nicht aktualisieren"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Level vom Abzeichen bei Sammelkarten und Booster-Packs anzeigen"
-	},
-	"options_display_market_price_others": {
-		"message": "Marktpreis vom Gegenstand im Inventar anderer Nutzer anzeigen"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Parameter $for_item$ und $my_item$ unterstützen",

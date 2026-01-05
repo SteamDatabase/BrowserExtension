@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "Список просмотрен."
 	},
-	"explore_saleitem_claim": {
-		"message": "Получить награду"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Получите бесплатную ежедневную награду, если она есть."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Получение ежедневной награды…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "В данный момент ежедневная награда отсутствует."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Следующий предмет будет доступен: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Не удалось получить ежедневную награду."
-	},
-	"explore_saleitem_success": {
-		"message": "Получена новая награда: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Игр с карточками: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Рейтинг CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Наведите курсор на цену для продажи",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Выставить за $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Выставляет товар на продажу по самой низкой цене\n\nОтображаемая цена — это деньги, которые вы получаете (без комиссии)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Выставляет товар по самой высокой цене из запросов на покупку\n\nОтображаемая цена — это деньги, которые вы получаете (без комиссии)"
 	},
 	"inventory_badge_level": {
 		"message": "Уровень вашего значка: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Добавить ссылку на SteamDB под каждым подарком и купоном в вашем инвентаре"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Правильно определять SubID подарка в инвентаре"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Не обновлять инвентарь при продаже предмета"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Отображать уровень значка в свойствах карточек и их наборов"
-	},
-	"options_display_market_price_others": {
-		"message": "Отображать рыночную цену товара в инвентаре других пользователей"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Поддерживать параметры $for_item$ и $my_item$",

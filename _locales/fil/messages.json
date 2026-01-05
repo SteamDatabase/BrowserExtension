@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Maghanap"
 	},
+	"in_library": {
+		"message": "Sa Library",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Rating sa SteamDB:"
 	},
@@ -151,6 +155,9 @@
 	"explore_auto_discover": {
 		"message": "Awtomatikong pagdiskubre"
 	},
+	"explore_auto_discover_description": {
+		"message": "Awtomatikong i-discover ang queue."
+	},
 	"explore_generating": {
 		"message": "Bumubuo ng bagong pagdiskubre na queue, maaari itong hindi magtagumpay kung marami ang nag-access sa Steam sa parehong oras…"
 	},
@@ -172,40 +179,6 @@
 	},
 	"explore_finished": {
 		"message": "Na-explore na ang queue."
-	},
-	"explore_saleitem_claim": {
-		"message": "Kunin ang gantimpala"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Kuhain ang libreng pang-araw-araw na reward kung mayroon man."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Kinukuha ang pang-araw-araw na reward…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Walang pang-araw-araw na reward ang makukuha sa ngayon."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Available na susunod na item: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Nabigong kuhain ang pang-araw-araw na reward."
-	},
-	"explore_saleitem_success": {
-		"message": "Bagong gantimpala na nakuha: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
 	},
 	"badges_idle_apps": {
 		"message": "Mga idle na app: $amount$",
@@ -300,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Rating"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "I-hover ang mouse sa presyo para magbenta",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "I-list ito ng $price$",
 		"placeholders": {
@@ -317,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "I-list ang item para sa pinakamababang nakalistang presyo ng pagbebenta\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
-	},
-	"inventory_sell_at_title": {
-		"message": "I-list ang item para sa pinakamataas na nakalistang presyo ng buy order\n\nAng ipinapakitang presyo ay ang perang matatanggap mo (nang walang anumang bayad)"
 	},
 	"inventory_badge_level": {
 		"message": "Ang iyong badge level: $level$",
@@ -348,6 +319,21 @@
 	"spoilers_reveal": {
 		"message": "Ipakita ang mga spoiler",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Charts"
+	},
+	"popup_sales": {
+		"message": "Sales"
+	},
+	"popup_calendar": {
+		"message": "Calendar"
+	},
+	"popup_patches": {
+		"message": "Mga Patch"
+	},
+	"popup_calculator": {
+		"message": "Calculator"
 	},
 	"options": {
 		"message": "Mga Option"
@@ -375,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Magbigay ng mga permiso"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 I-enable ang suporta sa Steam China"
 	},
 	"options_footer1": {
 		"message": "Ginawa gamit ang buong pagmamahal 💙 ng mga tao sa <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -519,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Ipakita ang SteamDB at mga button ng page sa mga game card"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Ipakita ang mga link ng SteamDB sa tabi ng mga pangalan ng developer at publisher"
+	},
 	"options_link_subid": {
 		"message": "Ipakita ang SubID sa ilalim ng bawat opsyon sa pagbili"
 	},
@@ -538,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "I-link ang bawat regalo at kupon sa iyong inventory sa SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Tamang alamin ang SubID ng regalo sa iyong inventory"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Huwag i-refresh ang inventory kapag nagbebenta ng item"
 	},
@@ -552,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Ipakita ang antas ng badge sa mga trading card at booster pack"
-	},
-	"options_display_market_price_others": {
-		"message": "Ipakita ang presyo ng item sa mga inventory ng ibang mga user"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suportahan ang $for_item$ at $my_item$ na mga parameter",
@@ -657,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Ipakita ang CS rating history sa CS2 achievements page"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Hindi ka makakagawa ng isa pang Booster Pack para sa larong ito hanggang $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

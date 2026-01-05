@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Išči"
 	},
+	"in_library": {
+		"message": "V knjižnici",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Ocena SteamDB:"
 	},
@@ -145,8 +149,14 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB ima možnost, da te strani za preverjanje starosti samodejno preskoči"
+	},
 	"explore_auto_discover": {
 		"message": "Samodejno odkrij"
+	},
+	"explore_auto_discover_description": {
+		"message": "Samodejno odkrij čakalno vrsto."
 	},
 	"explore_generating": {
 		"message": "Ustvarjanje nove čakalne vrste za odkrivanje, to lahko spodleti, če je Steam pod visoko obremenitvijo…"
@@ -163,6 +173,9 @@
 				"example": "12"
 			}
 		}
+	},
+	"explore_failed_to_clear_too_many": {
+		"message": "Prevečkrat ni uspelo izbrisati čakalne vrste. Poskusite znova kasneje."
 	},
 	"explore_finished": {
 		"message": "Čakalna vrsta je bila raziskana."
@@ -245,6 +258,25 @@
 		"message": "Skupine z dosežki so na voljo pri Steam Hunters prek SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
+	"achievements_csrating_season": {
+		"message": "Sezona $season$",
+		"placeholders": {
+			"season": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"achievements_csrating_date": {
+		"message": "Datum"
+	},
+	"achievements_csrating_name": {
+		"message": "Ocena CS"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "Premaknite miško nad ceno, da prodate",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Objavi pri $price$",
 		"placeholders": {
@@ -263,11 +295,45 @@
 			}
 		}
 	},
-	"inventory_list_at_title": {
-		"message": "Navede artikel po najnižji navedeni prodajni ceni\n\nPrikazana cena je denar, ki ga prejmete (brez provizije)"
+	"inventory_badge_level": {
+		"message": "Vaša stopnja značke: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "5"
+			}
+		}
 	},
-	"inventory_sell_at_title": {
-		"message": "Navede artikel za najvišjo navedeno ceno nakupa\n\nPrikazana cena je denar, ki ga prejmete (brez provizije)"
+	"inventory_badge_foil_level": {
+		"message": "Vaša stopnja folijske značke: $level$",
+		"placeholders": {
+			"level": {
+				"content": "%level%",
+				"example": "1"
+			}
+		}
+	},
+	"inventory_badge_none": {
+		"message": "Ni bila izdelana nobena značka"
+	},
+	"spoilers_reveal": {
+		"message": "Razkrijte spoilerje",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafikoni"
+	},
+	"popup_sales": {
+		"message": "Prodaje"
+	},
+	"popup_calendar": {
+		"message": "Koledar"
+	},
+	"popup_patches": {
+		"message": "Popravki"
+	},
+	"popup_calculator": {
+		"message": "Kalkulator"
 	},
 	"options": {
 		"message": "Možnosti"
@@ -295,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Odobri dovoljenja"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Omogoči podporo za Steam China"
 	},
 	"options_footer1": {
 		"message": "Ustvarjeno z 💙 od <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> osebja."
@@ -358,6 +427,9 @@
 	},
 	"options_website_highlight3": {
 		"message": "Omogočite dodatno filtriranje na <a href=\"https://steamdb.info/sales/\" target=\"_blank\">prodajni strani</a> in <a href=\"https://steamdb.info/bundles/\" target=\"_blank\">strani z zbirkami</a>"
+	},
+	"options_website_family": {
+		"message": "Poudarite aplikacije v lasti družine (zahteva dodatno zahtevo)"
 	},
 	"options_extra_data": {
 		"message": "Dodatni podatki pridobljeni iz $domain$",
@@ -436,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Prikaži gumbe SteamDB ter strani trgovine na strani z igralnimi kartami"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Prikaži povezave SteamDB poleg imen razvijalcev in založnikov"
+	},
 	"options_link_subid": {
 		"message": "Prikaži SubID pod vsako možnostjo nakupa"
 	},
@@ -455,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Vsako darilo in kupon v svojem inventarju povežite s SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Pravilna določitev SubID darila v svojem inventarju"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Pri prodaji artikla ne osvežujte inventarja"
 	},
@@ -467,8 +539,8 @@
 	"options_enhancement_inventory_quick_sell_auto": {
 		"message": "Samodejno sprejmi hitro prodajo"
 	},
-	"options_display_market_price_others": {
-		"message": "Prikaži tržno ceno predmeta v inventarjih drugih uporabnikov"
+	"options_enhancement_inventory_badge_info": {
+		"message": "Prikaz stopenj značke na zbirateljskih karticah in booster pack-ih"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Podpora za parametre $for_item$ in $my_item$",
@@ -557,6 +629,9 @@
 	"options_builtin_queue_cheat": {
 		"message": "Dodajte gumb za samodejno odkrivanje čakalne vrste med razprodajo"
 	},
+	"options_builtin_multibuy_redirect": {
+		"message": "Po nakupu preostalih kartic se vrni na stran z zbirateljskimi karticami"
+	},
 	"options_builtin_achievements_global": {
 		"message": "Izboljšaj stran z globalnimi dosežki"
 	},
@@ -565,5 +640,18 @@
 	},
 	"options_builtin_achievements_locked": {
 		"message": "Pokaži zaklenjeno ikono za zaklenjene dosežke"
+	},
+	"options_builtin_achievements_csrating": {
+		"message": "Prikaži zgodovino ocen CS na strani dosežkov CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Do dneva $available_date$ ne boste mogli ustvariti drugega Booster Packa za to igro.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

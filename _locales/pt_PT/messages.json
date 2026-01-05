@@ -180,40 +180,6 @@
 	"explore_finished": {
 		"message": "A fila foi explorada."
 	},
-	"explore_saleitem_claim": {
-		"message": "Reclamar recompensa"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Reclamar a recompensa diária gratuita se houver uma."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "A reclamar a recompensa diária…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Nenhuma recompensa diária para reclamar no momento."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Próximo item disponível: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Falha ao reclamar a recompensa diária."
-	},
-	"explore_saleitem_success": {
-		"message": "Nova recompensa reclamada: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 	"badges_idle_apps": {
 		"message": "Jogos com cartas: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Classificação CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Mouse sobre um preço para vender",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Colocar à venda por $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Coloca à venda pelo preço de venda mais baixo anunciado\n\nPreço mostrado é o dinheiro que recebes (sem taxas)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Coloca à venda pelo preço de compra mais alto anunciado\n\nPreço mostrado é o dinheiro que recebes (sem taxas)"
 	},
 	"inventory_badge_level": {
 		"message": "O nível da tua medalha: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Vincular cada cupão e presente no teu inventário ao SteamDB"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Descobrir corretamente o SubID do presente no teu inventário"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Não atualizar o inventário ao vender um item"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Mostra o nível da medalha nas cartas e nos boosters"
-	},
-	"options_display_market_price_others": {
-		"message": "Mostrar o preço de mercado de itens no inventário dos outros utilizadores"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "Suportar parâmetros $for_item$ e $my_item$",

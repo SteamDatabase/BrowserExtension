@@ -93,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB verilerine göre en düşük fiyatı <b>%$discount$</b> indirimle <b>$price$</b>",
+		"message": "SteamDB verilerine göre en düşük fiyatı <b>-$discount$%</b> indirimle <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",
@@ -179,40 +179,6 @@
 	},
 	"explore_finished": {
 		"message": "Kuyruk keşfedildi."
-	},
-	"explore_saleitem_claim": {
-		"message": "Ödülü al"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Varsa ücretsiz günlük ödülünüzü alın."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Günlük ödül alınıyor…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "Şu an alabileceğiniz günlük bir ödül yok."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Sıradaki ögenin erişilebilmesine: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Günlük ödül alınamadı."
-	},
-	"explore_saleitem_success": {
-		"message": "Yeni ödül alındı: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
 	},
 	"badges_idle_apps": {
 		"message": "Kart düşürebilecek içerik: $amount$",
@@ -307,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Derecesi"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Fareyi satış fiyatının üzerine getirin",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Satışa koy: $price$",
 		"placeholders": {
@@ -324,12 +294,6 @@
 				"example": "1,99€"
 			}
 		}
-	},
-	"inventory_list_at_title": {
-		"message": "Listelenen en düşük satış fiyatı ile ögeyi satışa koyar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
-	},
-	"inventory_sell_at_title": {
-		"message": "Listelenen en yüksek sipariş fiyatına ögeyi satar\n\nGösterilen fiyat alacağınız miktardır (ücretler hariç)"
 	},
 	"inventory_badge_level": {
 		"message": "Rozet seviyesi: $level$",
@@ -566,9 +530,6 @@
 	"options_link_inventory": {
 		"message": "Envanterdeki her bir hediyeye ve kupona SteamDB bağlantısı ekle"
 	},
-	"options_link_inventory_gift_subid": {
-		"message": "Envanterdeki hediyenin SubID'sini doğru bir şekilde belirle"
-	},
 	"options_enhancement_inventory_no_sell_reload": {
 		"message": "Bir ögeyi satarken envanteri yenileme"
 	},
@@ -580,9 +541,6 @@
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Koleksiyon kartlarında ve hızlandırma paketlerinde rozet seviyesini göster"
-	},
-	"options_display_market_price_others": {
-		"message": "Diğer kullanıcıların envanterlerindeki ögelerin market fiyatını göster"
 	},
 	"options_enhancement_tradeoffer_url_items": {
 		"message": "$for_item$ ve $my_item$ parametrelerini destekler",

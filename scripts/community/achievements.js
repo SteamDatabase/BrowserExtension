@@ -394,6 +394,38 @@ function InitAchievements( items, isPersonal )
 
 		let badAchievementsLogged = 10;
 
+		let firstLockedDomId = -1;
+		if( isPersonal )
+		{
+			const container = oldAchievementRows[ 0 ]?.parentElement;
+			if( container )
+			{
+				const children = Array.from( container.children );
+
+				// Look for  <br><br><br>
+				for( let i = 0; i < children.length - 2; i++ )
+				{
+					if( children[ i ].tagName === 'BR' &&
+						children[ i + 1 ].tagName === 'BR' &&
+						children[ i + 2 ].tagName === 'BR' )
+					{
+						let achieveRowCount = 0;
+
+						for( let j = 0; j < i; j++ )
+						{
+							if( children[ j ].classList?.contains( 'achieveRow' ) )
+							{
+								achieveRowCount++;
+							}
+						}
+
+						firstLockedDomId = achieveRowCount;
+						break;
+					}
+				}
+			}
+		}
+
 		// Match all achievements on the page to API data
 		for( let domId = 0; domId < oldAchievementRows.length; domId++ )
 		{
@@ -436,6 +468,11 @@ function InitAchievements( items, isPersonal )
 						.querySelector( '.achieveUnlockTime' )
 						?.textContent.trim();
 				}
+
+				if( !unlock && firstLockedDomId !== -1 && domId < firstLockedDomId )
+				{
+					unlock = '—';
+				}
 			}
 			else if( element.classList.contains( 'unlocked' ) )
 			{
@@ -472,7 +509,7 @@ function InitAchievements( items, isPersonal )
 
 				const apiIcon = unlock || !isPersonal ? achievement.icon : achievement.icon_gray;
 
-				if( icon !== apiIcon )
+				if( apiIcon && icon !== apiIcon )
 				{
 					if( badAchievementsLogged-- > 0 )
 					{
