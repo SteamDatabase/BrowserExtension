@@ -186,40 +186,6 @@
 	"explore_finished": {
 		"message": "Queue has been explored."
 	},
-	"explore_saleitem_claim": {
-		"message": "Claim reward"
-	},
-	"explore_saleitem_claim_description": {
-		"message": "Claim the free daily reward if there is one."
-	},
-	"explore_saleitem_trying_to_claim": {
-		"message": "Claiming the daily reward…"
-	},
-	"explore_saleitem_cant_claim": {
-		"message": "No daily reward to claim at this moment."
-	},
-	"explore_saleitem_next_item_time": {
-		"message": "Next item available: $datetime$",
-		"placeholders": {
-			"datetime": {
-				"content": "$1",
-				"example": "01.07.2024, 20:00:00",
-				"description": "Date and time format depends on locale set in browser"
-			}
-		}
-	},
-	"explore_saleitem_claim_failed": {
-		"message": "Failed to claim the daily reward."
-	},
-	"explore_saleitem_success": {
-		"message": "New reward claimed: $item$.",
-		"placeholders": {
-			"item": {
-				"content": "$1",
-				"example": "Unicorn Sticker"
-			}
-		}
-	},
 
 	"badges_idle_apps": {
 		"message": "Apps to idle: $amount$",

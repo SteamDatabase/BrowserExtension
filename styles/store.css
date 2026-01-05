@@ -238,7 +238,6 @@ a.steamdb_rating:hover {
 	margin: 0;
 }
 
-.steamdb_saleitem_claim,
 .steamdb_cheat_queue {
 	display: flex;
 	align-items: center;
@@ -250,7 +249,6 @@ a.steamdb_rating:hover {
 	border-bottom: 0;
 }
 
-.steamdb_saleitem_claim .btn_medium,
 .steamdb_cheat_queue .btn_medium {
 	margin: 0;
 }
@@ -267,7 +265,6 @@ a.steamdb_rating:hover {
 }
 
 @media (max-width: 500px) {
-	.steamdb_saleitem_claim,
 	.steamdb_cheat_queue {
 		flex-wrap: wrap;
 	}

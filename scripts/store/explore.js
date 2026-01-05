@@ -29,14 +29,7 @@ if( !accessToken || !applicationConfig )
 let exploreButton;
 /** @type {HTMLElement} */
 let exploreStatus;
-/** @type {HTMLElement} */
-let itemButton;
-/** @type {HTMLElement} */
-let itemStatus;
-/** @type {HTMLImageElement} */
-let itemImage;
 
-CreateSaleItemContainer();
 CreateExploreContainer();
 
 function CreateExploreContainer()
@@ -79,50 +72,6 @@ function CreateExploreContainer()
 			GenerateQueue();
 		} );
 	}, false );
-}
-
-function CreateSaleItemContainer()
-{
-	const buttonContainer = document.createElement( 'div' );
-	buttonContainer.className = 'steamdb_saleitem_claim discovery_queue_customize_ctn';
-
-	itemButton = document.createElement( 'div' );
-	itemButton.className = 'btnv6_blue_hoverfade btn_medium btn_disabled';
-	const span = document.createElement( 'span' );
-	span.textContent = _t( 'explore_saleitem_claim' );
-	itemButton.append( span );
-	buttonContainer.append( itemButton );
-
-	itemStatus = document.createElement( 'div' );
-	itemStatus.className = 'steamdb_cheat_queue_text';
-	itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
-	buttonContainer.append( itemStatus );
-
-	itemImage = document.createElement( 'img' );
-	itemImage.src = GetLocalResource( 'icons/white.svg' );
-	itemImage.width = 32;
-	itemImage.height = 32;
-	itemImage.style.opacity = '0';
-	buttonContainer.append( itemImage );
-
-	const container = document.querySelector( '.discovery_queue_customize_ctn' );
-	container.parentNode.insertBefore( buttonContainer, container );
-
-	itemButton.addEventListener( 'click', ( ) =>
-	{
-		if( itemButton.classList.contains( 'btn_disabled' ) )
-		{
-			return;
-		}
-
-		StartViewTransition( () =>
-		{
-			itemButton.classList.add( 'btn_disabled' );
-			ClaimSaleItem();
-		} );
-	}, false );
-
-	CheckClaimSaleItem();
 }
 
 function GenerateQueue( generateFails = 0 )
@@ -255,152 +204,6 @@ function GenerateQueue( generateFails = 0 )
 			{
 				GenerateQueue( generateFails );
 			}, RandomInt( 5000, 10000 * generateFails ) );
-		} );
-}
-
-/**
- * @param {Record<string, any>} response
- */
-function HandleSaleItemResponse( response )
-{
-	if( response.next_claim_time )
-	{
-		const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
-			dateStyle: 'medium',
-			timeStyle: 'short',
-		} );
-		const nextClaimTime = dateFormatter.format( response.next_claim_time * 1000 );
-
-		itemStatus.textContent += ' ' + _t( 'explore_saleitem_next_item_time', [ nextClaimTime.toLocaleString() ] );
-
-		const timer = ( response.next_claim_time * 1000 ) - Date.now();
-
-		setTimeout( () =>
-		{
-			itemStatus.textContent = _t( 'explore_saleitem_claim_description' );
-			itemButton.classList.remove( 'btn_disabled' );
-		}, timer );
-	}
-
-	if( response.reward_item?.community_item_data )
-	{
-		const item = response.reward_item.community_item_data;
-		const file = item.item_image_small || item.item_image_large;
-		itemImage.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/items/${response.reward_item.appid}/${file}`;
-		itemImage.title = item.item_title;
-		itemImage.style.opacity = '1';
-	}
-}
-
-function CheckClaimSaleItem( fails = 0 )
-{
-	const params = new URLSearchParams();
-	params.set( 'origin', location.origin );
-	params.set( 'access_token', accessToken );
-	params.set( 'language', applicationConfig.LANGUAGE );
-
-	fetch( `${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/CanClaimItem/v1/?${params.toString()}` )
-		.then( ( response ) =>
-		{
-			if( !response.ok )
-			{
-				throw new Error( `HTTP ${response.status}` );
-			}
-
-			return response.json();
-		} )
-		.then( ( data ) =>
-		{
-			const response = data.response;
-
-			StartViewTransition( () =>
-			{
-				if( response.can_claim )
-				{
-					itemStatus.textContent = _t( 'explore_saleitem_claim_description' );
-					itemButton.classList.remove( 'btn_disabled' );
-					return;
-				}
-
-				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
-
-				HandleSaleItemResponse( response );
-			} );
-		} )
-		.catch( ( error ) =>
-		{
-			WriteLog( 'Failed to find out if a sale item can be claimed', error );
-
-			if( ++fails >= 5 )
-			{
-				itemStatus.textContent = _t( 'explore_saleitem_cant_claim' );
-				return;
-			}
-
-			setTimeout( () =>
-			{
-				CheckClaimSaleItem( fails );
-			}, RandomInt( 5000, 10000 ) );
-		} );
-}
-
-function ClaimSaleItem( fails = 0 )
-{
-	itemStatus.textContent = _t( 'explore_saleitem_trying_to_claim' );
-
-	const params = new URLSearchParams();
-	params.set( 'origin', location.origin );
-	params.set( 'access_token', accessToken );
-	params.set( 'language', applicationConfig.LANGUAGE );
-
-	fetch(
-		`${applicationConfig.WEBAPI_BASE_URL}ISaleItemRewardsService/ClaimItem/v1/?${params.toString()}`,
-		{
-			method: 'POST',
-		},
-	)
-		.then( ( response ) =>
-		{
-			if( !response.ok )
-			{
-				throw new Error( `HTTP ${response.status}` );
-			}
-
-			return response.json();
-		} )
-		.then( ( data ) =>
-		{
-			const response = data.response;
-
-			if( !response || !response.communityitemid )
-			{
-				fails = 10; // If there is no item to claim the response is just empty
-				throw new Error( 'Unexpected response' );
-			}
-
-			StartViewTransition( () =>
-			{
-				const itemTitle = response.reward_item?.community_item_data?.item_title;
-				itemStatus.textContent = _t( 'explore_saleitem_success', [ itemTitle || `ID #${response.communityitemid}` ] );
-
-				HandleSaleItemResponse( response );
-			} );
-		} )
-		.catch( ( error ) =>
-		{
-			WriteLog( 'Failed to get a sale item', error );
-
-			if( ++fails >= 5 )
-			{
-				itemButton.classList.remove( 'btn_disabled' );
-				itemStatus.textContent = _t( 'explore_saleitem_claim_failed' );
-				return;
-			}
-
-			setTimeout( () =>
-			{
-				ClaimSaleItem( fails );
-			}, RandomInt( 5000, 10000 ) );
 		} );
 }
 
