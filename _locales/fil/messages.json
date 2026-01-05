@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Maghanap"
 	},
+	"in_library": {
+		"message": "Sa Library",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Rating sa SteamDB:"
 	},
@@ -150,6 +154,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "Awtomatikong pagdiskubre"
+	},
+	"explore_auto_discover_description": {
+		"message": "Awtomatikong i-discover ang queue."
 	},
 	"explore_generating": {
 		"message": "Bumubuo ng bagong pagdiskubre na queue, maaari itong hindi magtagumpay kung marami ang nag-access sa Steam sa parehong oras…"
@@ -266,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Rating"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "I-hover ang mouse sa presyo para magbenta",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "I-list ito ng $price$",
 		"placeholders": {
@@ -309,6 +320,21 @@
 		"message": "Ipakita ang mga spoiler",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Charts"
+	},
+	"popup_sales": {
+		"message": "Sales"
+	},
+	"popup_calendar": {
+		"message": "Calendar"
+	},
+	"popup_patches": {
+		"message": "Mga Patch"
+	},
+	"popup_calculator": {
+		"message": "Calculator"
+	},
 	"options": {
 		"message": "Mga Option"
 	},
@@ -335,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Magbigay ng mga permiso"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 I-enable ang suporta sa Steam China"
 	},
 	"options_footer1": {
 		"message": "Ginawa gamit ang buong pagmamahal 💙 ng mga tao sa <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -479,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Ipakita ang SteamDB at mga button ng page sa mga game card"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Ipakita ang mga link ng SteamDB sa tabi ng mga pangalan ng developer at publisher"
+	},
 	"options_link_subid": {
 		"message": "Ipakita ang SubID sa ilalim ng bawat opsyon sa pagbili"
 	},
@@ -611,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Ipakita ang CS rating history sa CS2 achievements page"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Hindi ka makakagawa ng isa pang Booster Pack para sa larong ito hanggang $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

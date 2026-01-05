@@ -42,7 +42,7 @@
 		"message": "Buscar"
 	},
 	"in_library": {
-		"message": "En biblioteca",
+		"message": "En la biblioteca",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {

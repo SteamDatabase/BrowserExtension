@@ -42,7 +42,7 @@
 		"message": "Cari"
 	},
 	"in_library": {
-		"message": "Di perpustakaan",
+		"message": "Di Perpustakaan",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -274,7 +274,7 @@
 		"message": "Penilaian CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Arahkan tetikus ke harga untuk membeli",
+		"message": "Arahkan tetikus ke harga untuk menjual",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {

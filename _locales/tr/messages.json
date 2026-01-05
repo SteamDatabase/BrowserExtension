@@ -93,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "SteamDB verilerine göre en düşük fiyatı <b>%$discount$</b> indirimle <b>$price$</b>",
+		"message": "SteamDB verilerine göre en düşük fiyatı <b>-$discount$%</b> indirimle <b>$price$</b>",
 		"placeholders": {
 			"price": {
 				"content": "$1",

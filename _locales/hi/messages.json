@@ -41,6 +41,10 @@
 	"search": {
 		"message": "खोजें"
 	},
+	"in_library": {
+		"message": "लाइब्रेरी में",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB दर-निर्धारण:"
 	},
@@ -268,6 +272,10 @@
 	},
 	"achievements_csrating_name": {
 		"message": "CS रेटिंग"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "बेचने के लिए कीमत पर माउस घुमाएं",
+		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "$price$ पर बेचें",

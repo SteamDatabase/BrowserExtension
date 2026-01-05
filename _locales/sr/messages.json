@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Претрага"
 	},
+	"in_library": {
+		"message": "У библиотеци",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB Оцена:"
 	},
@@ -150,6 +154,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "Аутоматски-откривач"
+	},
+	"explore_auto_discover_description": {
+		"message": "Аутоматски откривај ред."
 	},
 	"explore_generating": {
 		"message": "Генерисанје новог реда за откривање, ово може да пропадне ако су Steam сервери под великим притиском…"
@@ -266,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Рејтинг"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Пређи мишем преко цене за продају",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Објави за $price$",
 		"placeholders": {
@@ -309,6 +320,21 @@
 		"message": "Прикажи спојлере",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
+	"popup_charts": {
+		"message": "Графикони"
+	},
+	"popup_sales": {
+		"message": "Снижења"
+	},
+	"popup_calendar": {
+		"message": "Календар"
+	},
+	"popup_patches": {
+		"message": "Закрпе"
+	},
+	"popup_calculator": {
+		"message": "Калкулатор"
+	},
 	"options": {
 		"message": "Опције"
 	},
@@ -335,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Додели дозволе"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Омогући подршку за Steam China"
 	},
 	"options_footer1": {
 		"message": "Направљено са 💙 од <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> тима."
@@ -479,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Прикажи SteamDB и дугмад странице продавнице на страници картица игара"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Прикажи SteamDB линкове поред имена програмера и издавача"
+	},
 	"options_link_subid": {
 		"message": "Прикажи SubID испод сваке опције за куповину"
 	},
@@ -611,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Прикажи историју CS рејтинга на страници CS2 достигнућа"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Нећете моћи да направите још један Booster Pack за ову игру до $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

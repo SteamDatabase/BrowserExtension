@@ -42,7 +42,7 @@
 		"message": "Recherche"
 	},
 	"in_library": {
-		"message": "Dans la bibliothèque",
+		"message": "Dans votre bibliothèque",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -272,6 +272,10 @@
 	},
 	"achievements_csrating_name": {
 		"message": "Note CS"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "Survolez un prix pour vendre",
+		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Lister à $price$",

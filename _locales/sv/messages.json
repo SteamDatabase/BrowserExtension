@@ -273,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS-betyg"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "För musen över ett pris för att sälja",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Lägg upp för försäljning för $price$",
 		"placeholders": {

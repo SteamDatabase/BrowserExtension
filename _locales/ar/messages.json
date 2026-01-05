@@ -273,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "تصنيف CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "حرك الماوس فوق السعر للبيع",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "إعرض بسعر $price$",
 		"placeholders": {

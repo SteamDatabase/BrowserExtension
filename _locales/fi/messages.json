@@ -273,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Luokitus"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Vie hiiri hinnan päälle myydäksesi",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Aseta myyntiin hintaan $price$",
 		"placeholders": {

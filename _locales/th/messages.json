@@ -42,7 +42,7 @@
 		"message": "ค้นหา"
 	},
 	"in_library": {
-		"message": "",
+		"message": "อยู่ในคลัง",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -149,8 +149,14 @@
 			}
 		}
 	},
+	"agecheck_option_hint": {
+		"message": "SteamDB มีตัวเลือกในการข้ามหน้าตรวจสอบอายุโดยอัตโนมัติ"
+	},
 	"explore_auto_discover": {
 		"message": "ค้นพบอัตโนมัติ"
+	},
+	"explore_auto_discover_description": {
+		"message": "ค้นพบคิวโดยอัตโนมัติ"
 	},
 	"explore_generating": {
 		"message": "กำลังสร้างคิวการค้นพบใหม่, อาจล้มเหลวได้หาก Steam กำลังทำงานหนัก..."
@@ -267,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS เรตติ้ง"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "เลื่อนเมาส์ไปที่ราคาเพื่อขาย",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "ตั้งราคาที่ $price$",
 		"placeholders": {
@@ -306,8 +316,24 @@
 	"inventory_badge_none": {
 		"message": "ไม่มีการสร้างตราสัญลักษณ์"
 	},
+	"spoilers_reveal": {
+		"message": "เปิดเผยสปอยเลอร์",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
 	"popup_charts": {
 		"message": "ชาร์ท"
+	},
+	"popup_sales": {
+		"message": "โปรโมชั่น"
+	},
+	"popup_calendar": {
+		"message": "ปฏิทิน"
+	},
+	"popup_patches": {
+		"message": "แพ็ตช์"
+	},
+	"popup_calculator": {
+		"message": "เครื่องคำนวณ"
 	},
 	"options": {
 		"message": "ตัวเลือก"
@@ -335,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ให้สิทธิ์"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 เปิดใช้งานการสนับสนุน Steam China"
 	},
 	"options_footer1": {
 		"message": "สร้างด้วย 💙 โดย <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>"
@@ -479,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "แสดงปุ่ม SteamDB และหน้าร้านค้าบนหน้าการ์ดเกม"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "แสดงลิงก์ SteamDB ข้างชื่อผู้พัฒนาและผู้จัดพิมพ์"
+	},
 	"options_link_subid": {
 		"message": "แสดง SubID ใต้ตัวเลือกการซื้อแต่ละรายการ"
 	},
@@ -611,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "แสดงประวัติ CS เรตติ้ง บนหน้าความสำเร็จของ CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "คุณจะไม่สามารถสร้าง Booster Pack อีกสำหรับเกมนี้จนถึง $available_date$",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

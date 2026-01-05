@@ -42,7 +42,7 @@
 		"message": "Αναζήτηση"
 	},
 	"in_library": {
-		"message": "Στη Βιβλιοθήκη",
+		"message": "Στη Συλλογή",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {

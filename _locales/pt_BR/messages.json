@@ -93,7 +93,7 @@
 		}
 	},
 	"app_lowest_price_discount": {
-		"message": "Menor preço registrado no SteamDB: <b>$price$</b> (com <b>$discount$%</b> de desconto)",
+		"message": "Menor preço registrado no SteamDB: <b>$price$</b> (com <b>-$discount$%</b> de desconto)",
 		"placeholders": {
 			"price": {
 				"content": "$1",

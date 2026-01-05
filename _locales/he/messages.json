@@ -41,6 +41,10 @@
 	"search": {
 		"message": "חיפוש"
 	},
+	"in_library": {
+		"message": "בספרייה",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "דירוג SteamDB:"
 	},
@@ -268,6 +272,10 @@
 	},
 	"achievements_csrating_name": {
 		"message": "דרגות CS"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "העבר את העכבר על המחיר כדי למכור",
+		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "פרסם במחיר $price$",

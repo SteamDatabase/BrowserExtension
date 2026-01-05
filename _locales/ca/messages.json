@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Cerca"
 	},
+	"in_library": {
+		"message": "A la biblioteca",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Valoració de SteamDB:"
 	},
@@ -150,6 +154,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "Autodescobreix"
+	},
+	"explore_auto_discover_description": {
+		"message": "Descobreix automàticament la cua."
 	},
 	"explore_generating": {
 		"message": "Generant una nova cua de descobriment, això pot fallar si Steam té una càrrega elevada…"
@@ -266,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Classificació CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Passa el ratolí per sobre d'un preu per vendre",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Llistar a $price$",
 		"placeholders": {
@@ -305,6 +316,25 @@
 	"inventory_badge_none": {
 		"message": "Cap insígnia elaborada"
 	},
+	"spoilers_reveal": {
+		"message": "Revelar espòilers",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Gràfics"
+	},
+	"popup_sales": {
+		"message": "Ofertes"
+	},
+	"popup_calendar": {
+		"message": "Calendari"
+	},
+	"popup_patches": {
+		"message": "Actualitzacions"
+	},
+	"popup_calculator": {
+		"message": "Calculadora"
+	},
 	"options": {
 		"message": "Opcions"
 	},
@@ -331,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Donar permisos"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Activa el suport per a Steam China"
 	},
 	"options_footer1": {
 		"message": "Fet amb 💙 per la gent de <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -475,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Mostra els botons de SteamDB i la botiga a la pàgina de cartes del joc"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Mostra els enllaços de SteamDB al costat dels noms dels desenvolupadors i editors"
+	},
 	"options_link_subid": {
 		"message": "Mostra el SubID sota cada opció de compra"
 	},
@@ -607,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Mostra l'historial de puntuacions de CS a la pàgina d'assoliments de CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "No podràs crear un altre Booster Pack per a aquest joc fins a $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

@@ -42,7 +42,7 @@
 		"message": "Zoeken"
 	},
 	"in_library": {
-		"message": "In Bibliotheek",
+		"message": "In bibliotheek",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -272,6 +272,10 @@
 	},
 	"achievements_csrating_name": {
 		"message": "CS-rating"
+	},
+	"inventory_quick_sell_tip": {
+		"message": "Beweeg de muis over een prijs om te verkopen",
+		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
 		"message": "Op de markt zetten voor: $price$",

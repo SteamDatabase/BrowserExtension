@@ -273,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS 評級"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "將滑鼠移至價格以出售",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "以 $price$ 上架",
 		"placeholders": {

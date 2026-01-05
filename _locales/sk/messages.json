@@ -42,7 +42,7 @@
 		"message": "Vyhľadať"
 	},
 	"in_library": {
-		"message": "",
+		"message": "V knižnici",
 		"description": "Indicates that the user owns this product"
 	},
 	"app_steamdb_rating": {
@@ -156,7 +156,7 @@
 		"message": "Auto-objavovanie"
 	},
 	"explore_auto_discover_description": {
-		"message": ""
+		"message": "Automaticky preskúmať front."
 	},
 	"explore_generating": {
 		"message": "Generovanie novej objavovacej fronty, môže zlyhať, ak je Steam pod vysokým zaťažením…"
@@ -273,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "CS Hodnotenie"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Prejdite myšou na cenu pre predaj",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Predať za $price$",
 		"placeholders": {
@@ -312,6 +316,25 @@
 	"inventory_badge_none": {
 		"message": "Nie je vytvorený žiadny odznak"
 	},
+	"spoilers_reveal": {
+		"message": "Zobraziť spoilery",
+		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "Grafy"
+	},
+	"popup_sales": {
+		"message": "Výpredaje"
+	},
+	"popup_calendar": {
+		"message": "Kalendár"
+	},
+	"popup_patches": {
+		"message": "Aktualizácie"
+	},
+	"popup_calculator": {
+		"message": "Kalkulačka"
+	},
 	"options": {
 		"message": "Možnosti"
 	},
@@ -338,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Udeľovanie povolení"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Povoliť podporu pre Steam China"
 	},
 	"options_footer1": {
 		"message": "Vytvorené s 💙 od <a href=\"https://steamdb.info\" target=\"_blank\">ľudí zo SteamDB</a>."
@@ -482,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Zobraz SteamDB a tlačidlá pre uloženie na stránke s hernými kartami"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Zobraziť odkazy SteamDB vedľa názvov vývojárov a vydavateľov"
+	},
 	"options_link_subid": {
 		"message": "Zobrazovať SubID pod každou nákupnou voľbou"
 	},
@@ -614,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Zobrazovať históriu CS Hodnotenia na stránke CS2 achievementov"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Nebudete môcť vytvoriť ďalší Booster Pack pre túto hru až do $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

@@ -41,6 +41,10 @@
 	"search": {
 		"message": "ძებნა"
 	},
+	"in_library": {
+		"message": "ბიბლიოთეკაში",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "SteamDB შეფასება:"
 	},
@@ -150,6 +154,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "ავტომატური აღმოჩენა"
+	},
+	"explore_auto_discover_description": {
+		"message": "ავტომატურად გამოაჩინე რიგი."
 	},
 	"explore_generating": {
 		"message": "იქმნება ახალი აღმოჩენის რიგი, ეს შეიძლება არ მოხდეს თუ Steam დიდი დატვირთვის ქვეშაა…"
@@ -266,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "რეიტინგი CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "გასაყიდად მიიტანეთ მაუსი ფასზე",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "დადე მარკეტზე $price$-ად",
 		"placeholders": {
@@ -350,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ მიანიჭე უფლებები"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 ჩართე Steam China მხარდაჭერა"
 	},
 	"options_footer1": {
 		"message": "გაკეთებული💙-ით <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB-ს</a> ხალხისგან."
@@ -494,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "გამოაჩინოს SteamDB-ს და მაღაზიის გვერდის ღილაკები თამაშის კარტების გვერდეზე"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "გამოაჩინე SteamDB-ს ლინკები დეველოპერისა და გამომცემელის სახელების გვერდით"
+	},
 	"options_link_subid": {
 		"message": "გამოაჩინოს საბ აიდი ყველა ყიდვის არჩევანზე"
 	},
@@ -626,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2 მიღწევების გვერდზე CS შეფასების ისტორიის ჩვენება"
+	},
+	"boostercreator_available_at_date": {
+		"message": "ვერ შეძლებთ აღარ შექმნათ Booster Pack ამ თამაშისთვის $available_date$-მდე.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }

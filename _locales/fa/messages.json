@@ -41,6 +41,10 @@
 	"search": {
 		"message": "جستجو"
 	},
+	"in_library": {
+		"message": "در کتابخانه",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "امتیاز SteamDB:"
 	},
@@ -269,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "امتیاز CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "موس را روی قیمت نگه دارید تا بفروشید",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "درخواست خرید در $price$",
 		"placeholders": {
@@ -311,6 +319,12 @@
 	"spoilers_reveal": {
 		"message": "آشکار کردن اسپویلر ها",
 		"description": "A button or checkbox that reveals spoilers when toggled"
+	},
+	"popup_charts": {
+		"message": "نمودارها"
+	},
+	"popup_sales": {
+		"message": "تخفیف‌ها"
 	},
 	"popup_calendar": {
 		"message": "تقویم"

@@ -41,6 +41,10 @@
 	"search": {
 		"message": "Cari"
 	},
+	"in_library": {
+		"message": "Dalam Perpustakaan",
+		"description": "Indicates that the user owns this product"
+	},
 	"app_steamdb_rating": {
 		"message": "Penilaian SteamDB:"
 	},
@@ -150,6 +154,9 @@
 	},
 	"explore_auto_discover": {
 		"message": "Auto Teroka"
+	},
+	"explore_auto_discover_description": {
+		"message": "Terokai giliran secara automatik."
 	},
 	"explore_generating": {
 		"message": "Menjana Senarai Auto Teroka yang baru, ini mungkin gagal jika Steam dalam keadaan beban yang tinggi…"
@@ -266,6 +273,10 @@
 	"achievements_csrating_name": {
 		"message": "Penilaian CS"
 	},
+	"inventory_quick_sell_tip": {
+		"message": "Arahkan tetikus ke harga untuk menjual",
+		"description": "This is shown before \"List at %price%\", keep it short"
+	},
 	"inventory_list_at": {
 		"message": "Senarai pada $price$",
 		"placeholders": {
@@ -350,6 +361,9 @@
 	},
 	"options_permissions_button": {
 		"message": "⚠️ Beri kebenaran"
+	},
+	"options_permissions_steamchina_button": {
+		"message": "🇨🇳 Aktifkan sokongan Steam China"
 	},
 	"options_footer1": {
 		"message": "Dicipta dengan 💙 oleh warga <a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a>."
@@ -494,6 +508,9 @@
 	"options_button_gamecards": {
 		"message": "Papar butang SteamDB dan butang halaman kedai di halaman kad permainan"
 	},
+	"options_steamdb_dev_pub_links": {
+		"message": "Paparkan pautan SteamDB di sebelah nama pembangun dan penerbit"
+	},
 	"options_link_subid": {
 		"message": "Papar SubID di bawah setiap pilihan pembelian"
 	},
@@ -626,5 +643,15 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Paparkan sejarah penilaian CS pada halaman pencapaian CS2"
+	},
+	"boostercreator_available_at_date": {
+		"message": "Anda tidak akan dapat mencipta Booster Pack lain untuk permainan ini sehingga $available_date$.",
+		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
+		"placeholders": {
+			"available_date": {
+				"content": "$1",
+				"example": "19 Jul @ 6:44pm"
+			}
+		}
 	}
 }
