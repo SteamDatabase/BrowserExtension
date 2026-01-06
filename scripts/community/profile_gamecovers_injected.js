@@ -2,14 +2,16 @@
 
 ( () =>
 {
-	const profilePagesRegex = /^https:\/\/steamcommunity\.com\/(id|profiles)\/[^/]+(\/games(\/[^/]+)?)?\/?$/;
+	const profilePagesRegex = /^https:\/\/steamcommunity\.com\/(id|profiles)\/[^/]+(\/games(\/[^/]+)?|\/home)?\/?$/;
 	if( !profilePagesRegex.test( window.location.href ) )
 	{
 		return;
 	}
 
 	// Check if "games" part
-	const isGamesPage = window.location.href.match( profilePagesRegex )[ 2 ] !== undefined;
+	const profilePath = window.location.href.match( profilePagesRegex )[ 2 ];
+	const isGamesOrHome = profilePath !== undefined
+		&& ( profilePath.includes( 'games' ) || profilePath.includes( 'home' ) );
 
 	/** @type {HTMLScriptElement} */
 	const currentScript = document.querySelector( '#steamdb_profile_gamecovers' );
@@ -73,25 +75,39 @@
 	}
 
 	/**
+	 * @param {HTMLImageElement} img
+	 */
+	function SetFallbackCoverImage( img )
+	{
+		img.src = fallbackCoverImage;
+		img.style.objectFit = 'cover';
+	}
+
+	/**
 	 * @param {number} appId
 	 * @param {HTMLImageElement} img
 	 */
 	function StoreCoverImage( appId, img )
 	{
-		img.src = fallbackCoverImage;
+		SetFallbackCoverImage( img );
+
+		img.addEventListener( 'load', () =>
+		{
+			img.style.objectFit = '';
+		}, { once: true } );
 
 		// Handle load error
 		img.addEventListener( 'error', () =>
 		{
 			// Rollback
-			img.src = fallbackCoverImage;
+			SetFallbackCoverImage( img );
 			appsImageStore.delete( appId );
 		}, { once: true } );
 
 		appsImageStore.set( appId, img );
 	}
 
-	function ParseGamePictureCovers()
+	function ParseProfileGameCovers()
 	{
 		const gamePictures = document.querySelectorAll( 'picture' );
 		for( const picture of gamePictures )
@@ -135,7 +151,7 @@
 		}
 	}
 
-	function ParseGameCoverCapsules()
+	function ParseProfileCovers()
 	{
 		/** @type {NodeListOf<HTMLImageElement>} */
 		const gameCovers = document.querySelectorAll( 'img.game_capsule' );
@@ -156,6 +172,26 @@
 				}
 
 				StoreCoverImage( appId, cover );
+			}
+		}
+	}
+
+	function ParseProfileActivityCovers()
+	{
+		/** @type {NodeListOf<HTMLImageElement>} */
+		const logos = document.querySelectorAll( '.blotter_gamepurchase_logo > img[src=""]' );
+		for( const logo of logos )
+		{
+			const parent = logo.parentElement;
+			if( parent instanceof HTMLAnchorElement )
+			{
+				const appId = GetAppIDFromUrl( parent.href );
+				if( appsImageStore.has( appId ) )
+				{
+					continue;
+				}
+
+				StoreCoverImage( appId, logo );
 			}
 		}
 	}
@@ -221,13 +257,14 @@
 
 	function InvokeParseCovers()
 	{
-		if( isGamesPage )
+		if( isGamesOrHome )
 		{
-			ParseGamePictureCovers();
+			ParseProfileGameCovers();
+			ParseProfileActivityCovers();
 		}
 		else
 		{
-			ParseGameCoverCapsules();
+			ParseProfileCovers();
 		}
 
 		LoadGameCovers();
@@ -238,5 +275,5 @@
 	setInterval( () =>
 	{
 		InvokeParseCovers();
-	}, 10_000 );
+	}, 5_000 );
 } )();
