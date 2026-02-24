@@ -274,7 +274,7 @@
 		"message": "CS-rangering"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Hold musen over en pris for å selge",
+		"message": "Hold musepekeren over en pris for å selge",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {

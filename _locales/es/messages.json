@@ -274,7 +274,7 @@
 		"message": "Calificación de CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Pasa el cursor encima de un precio para venderlo",
+		"message": "Pon el cursor sobre el precio para venderlo",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {

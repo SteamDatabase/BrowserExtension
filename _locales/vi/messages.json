@@ -274,7 +274,7 @@
 		"message": "Hệ số CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Di chuột qua giá để bán",
+		"message": "Nhấn một giá để đặt lệnh bán",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {

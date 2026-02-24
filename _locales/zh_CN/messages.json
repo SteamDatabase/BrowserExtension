@@ -645,7 +645,7 @@
 		"message": "在 CS2 成就页面显示 CS 段位历史"
 	},
 	"boostercreator_available_at_date": {
-		"message": "等到 $available_date$ 后，你才能为此游戏再制作一个补充包。",
+		"message": "$available_date$ 以后，你才能为此游戏制作更多补充包。",
 		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
 		"placeholders": {
 			"available_date": {

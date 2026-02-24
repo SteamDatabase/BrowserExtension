@@ -32,7 +32,7 @@
 		"message": "Zobrazit na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Osobní úspěchy"
+		"message": "Osobní achievementy"
 	},
 	"store_page": {
 		"message": "Obchod",
@@ -600,7 +600,7 @@
 		"message": "Modernizovaný vzhled"
 	},
 	"options_achievement_groups": {
-		"message": "Seskupit achievementy pomocí dat ze Steam Hunters",
+		"message": "Seskupit achievementy s daty ze Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
@@ -642,7 +642,7 @@
 		"message": "Zobrazit ikonu zámku pro uzamčené achievementy"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Zobrazit historii CS hodnocení na stránce CS2 achivementů"
+		"message": "Zobrazit historii CS hodnocení na stránce CS2 achievementů"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Do $available_date$ nebudete moci vytvořit další balíček Booster Pack pro tuto hru.",
