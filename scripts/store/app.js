@@ -440,11 +440,88 @@ function DrawLowestPrice()
 	/** @type {string | null} */
 	let currency = currencyElement ? currencyElement.content : null;
 
+	if( window.location.hostname === 'store.steamchina.com' )
+	{
+		currency = 'CNY-XC';
+	}
+
 	if( !currency )
 	{
-		currency = 'USD';
+		const ECurrencyCode =
+		[
+			null,
+			'USD',
+			'GBP',
+			'EUR',
+			'CHF',
+			'RUB',
+			'PLN',
+			'BRL',
+			'JPY',
+			'NOK',
+			'IDR',
+			'MYR',
+			'PHP',
+			'SGD',
+			'THB',
+			'VND',
+			'KRW',
+			'TRY',
+			'UAH',
+			'MXN',
+			'CAD',
+			'AUD',
+			'NZD',
+			'CNY',
+			'INR',
+			'CLP',
+			'PEN',
+			'COP',
+			'ZAR',
+			'HKD',
+			'TWD',
+			'SAR',
+			'AED',
+			'SEK',
+			'ARS',
+			'ILS',
+			'BYN',
+			'KZT',
+			'KWD',
+			'QAR',
+			'CRC',
+			'UYU',
+			'BGN',
+			'HRK',
+			'CZK',
+			'DKK',
+			'HUF',
+			'RON',
+		];
 
-		WriteLog( 'Missing priceCurrency, forced to USD' );
+		const applicationConfigElement = document.getElementById( 'application_config' );
+
+		// If the page has no priceCurrency defined, try to determine user currency from the account cart
+		// This happens if the game cannot be bought (removed from store, coming soon, demos) or can only be bought via bundles
+		if( applicationConfigElement?.dataset?.store_user_config )
+		{
+			const storeUserConfig = JSON.parse( applicationConfigElement.dataset.store_user_config );
+			const currencyCode = storeUserConfig?.accountcart?.cart?.subtotal?.currency_code // logged in
+				|| storeUserConfig?.shoppingcart?.lineitems?.[ 0 ]?.package_item?.costwhenadded?.currencycode; // logged out, has item in cart
+			currency = ECurrencyCode[ currencyCode ] || null;
+
+			if( currency )
+			{
+				WriteLog( `Found currency code ${currencyCode} in store_user_config` );
+			}
+		}
+
+		// If we still don't have a currency, do not request the price
+		if( !currency )
+		{
+			WriteLog( 'Failed to determine currency, no priceCurrency and no store_user_config' );
+			return;
+		}
 	}
 
 	if( currency === 'USD' )
@@ -524,10 +601,6 @@ function DrawLowestPrice()
 				currency = 'USD-MENA';
 				break;
 		}
-	}
-	else if( currency === 'CNY' && window.location.hostname === 'store.steamchina.com' )
-	{
-		currency = 'CNY-XC';
 	}
 
 	WriteLog( `Currency is "${currency}"` );
