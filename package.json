@@ -18,7 +18,7 @@
 		"@types/chrome": "^0.1.1",
 		"@types/firefox-webext-browser": "^143.0.0",
 		"archiver": "^7.0.1",
-		"eslint": "^9.10.0",
+		"eslint": "^10.0.0",
 		"eslint-plugin-jsdoc": "^62.3.0",
 		"prettier": "^3.3.2",
 		"stylelint": "^17.0.0",
