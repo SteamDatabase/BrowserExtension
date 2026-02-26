@@ -67,6 +67,7 @@
 				"icons/steamhunters.svg",
 				"icons/image.svg",
 				"icons/achievements_completed.svg",
+				"icons/applogo.svg",
 
 				"styles/appicon.css",
 				"styles/inventory-sidebar.css",
@@ -75,6 +76,7 @@
 				"scripts/community/agecheck_injected.js",
 				"scripts/community/filedetails_award_injected.js",
 				"scripts/community/profile_award_injected.js",
+				"scripts/community/profile_gamecovers_injected.js",
 				"scripts/community/tradeoffer_injected.js",
 				"scripts/community/boostercreator_injected.js",
 				"scripts/store/app_collapse_long_strings.js",

@@ -644,6 +644,9 @@
 	"options_builtin_achievements_csrating": {
 		"message": "Verlauf der CS-Wertung bei den CS2-Errungenschaften anzeigen"
 	},
+	"options_profile_gamecovers": {
+		"message": "Spielcover mit Regionsbeschränkung anzeigen"
+	},
 	"boostercreator_available_at_date": {
 		"message": "Du wirst bis zum $available_date$ kein weiteres Booster-Pack für dieses Spiel herstellen können.",
 		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",

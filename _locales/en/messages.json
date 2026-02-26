@@ -662,7 +662,9 @@
 	"options_builtin_achievements_csrating": {
 		"message": "Display CS rating history on CS2 achievements page"
 	},
-
+	"options_profile_gamecovers": {
+		"message": "Display game covers with country restriction"
+	},
 	"boostercreator_available_at_date": {
 		"message": "You will not be able to create another Booster Pack for this game until $available_date$.",
 		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
