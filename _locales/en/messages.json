@@ -33,6 +33,9 @@
 	"view_on_pcgamingwiki": {
 		"message": "View on PCGamingWiki"
 	},
+	"view_on_protondb": {
+		"message": "View on ProtonDB"
+	},
 	"view_your_achievements": {
 		"message": "Personal achievements"
 	},
@@ -516,6 +519,9 @@
 	},
 	"options_button_pcgw": {
 		"message": "Display PCGamingWiki button on product pages"
+	},
+	"options_button_protondb": {
+		"message": "Display ProtonDB button on product pages"
 	},
 	"options_button_sub": {
 		"message": "Display a button on package pages"
