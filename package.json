@@ -24,7 +24,7 @@
 		"stylelint": "^17.0.0",
 		"stylelint-config-standard": "^40.0.0",
 		"typescript": "^5.7.3",
-		"web-ext": "^9.0.0"
+		"web-ext": "^10.0.0"
 	},
 	"repository": {
 		"type": "git",
