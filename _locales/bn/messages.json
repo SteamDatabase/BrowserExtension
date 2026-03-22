@@ -19,7 +19,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": "Steam​ বর্তমানে কিছু অনুপস্থিতি অনুভব করছে। "
+		"message": ""
 	},
 	"view_on_steamdb": {
 		"message": "SteamDB তে দেখুন"

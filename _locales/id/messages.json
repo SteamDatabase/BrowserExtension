@@ -150,10 +150,10 @@
 		}
 	},
 	"agecheck_option_hint": {
-		"message": "SteamDB mempunyai pengaturan untuk secara otomatis melewati halaman pengecekan umur"
+		"message": "SteamDB memiliki opsi untuk melewati halaman verifikasi usia ini secara otomatis"
 	},
 	"explore_auto_discover": {
-		"message": "Temuan-otomatis"
+		"message": "Temukan-otomatis"
 	},
 	"explore_auto_discover_description": {
 		"message": "Menemukan antrean secara otomatis."
@@ -178,7 +178,7 @@
 		"message": "Gagal untuk menghapus antrian berulang kali. Coba lagi nanti."
 	},
 	"explore_finished": {
-		"message": "Antrian telah dijelajahi."
+		"message": "Antrean telah dijelajahi."
 	},
 	"badges_idle_apps": {
 		"message": "Aplikasi diam: $amount$",
@@ -191,7 +191,7 @@
 		}
 	},
 	"badges_idle_apps_on_this_page": {
-		"message": "Aplikasi yang menganggur di halaman ini: $amount$",
+		"message": "Aplikasi yang bisa di-idle di halaman ini: $amount$",
 		"description": "Shown on your badges page, can also be translated as apps with drops or games with cards",
 		"placeholders": {
 			"amount": {
@@ -201,7 +201,7 @@
 		}
 	},
 	"badges_idle_drops": {
-		"message": "Drop yang tersisa: $amount$",
+		"message": "Sisa drop: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -211,7 +211,7 @@
 		}
 	},
 	"badges_idle_drops_on_this_page": {
-		"message": "Drop yang tersisa di halaman ini: $amount$",
+		"message": "Sisa drop di halaman ini: $amount$",
 		"description": "Shown on your badges page, can also be translated as cards remaining",
 		"placeholders": {
 			"amount": {
@@ -224,7 +224,7 @@
 		"message": "Pencapaian tersembunyi: "
 	},
 	"achievement_global_unlock": {
-		"message": "$percent$ pemain mempunyai pencapaian ini",
+		"message": "$percent$ pemain memiliki pencapaian ini",
 		"description": "Do not add percent symbol, it will be formatted automatically",
 		"placeholders": {
 			"percent": {
@@ -255,7 +255,7 @@
 		"message": "Urutkan berdasarkan waktu"
 	},
 	"achievements_groups_by_steamhunters": {
-		"message": "Kelompok pencapaian disediakan oleh Steam Hunters melalui SteamDB.",
+		"message": "Grup pencapaian disediakan oleh Steam Hunters melalui SteamDB.",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"achievements_csrating_season": {
@@ -274,11 +274,11 @@
 		"message": "Penilaian CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Arahkan tetikus ke harga untuk menjual",
+		"message": "Arahkan kursor ke harga untuk menjual",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
-		"message": "Daftarkan di $price$",
+		"message": "Daftar pada $price$",
 		"placeholders": {
 			"price": {
 				"content": "%price%",
@@ -375,7 +375,7 @@
 		"message": "* Kotak centang yang dinonaktifkan menunjukkan fitur bawaan."
 	},
 	"options_header_website": {
-		"message": "Situs web SteamDB"
+		"message": "Situs Web SteamDB"
 	},
 	"options_header_extra_data": {
 		"message": "Data tambahan"
@@ -537,7 +537,7 @@
 		"message": "Tambah tombol jual cepat"
 	},
 	"options_enhancement_inventory_quick_sell_auto": {
-		"message": "Otomatis menerima jual cepat"
+		"message": "Terima penjualan cepat secara otomatis"
 	},
 	"options_enhancement_inventory_badge_info": {
 		"message": "Tampilkan level lencana di penukaran kartu dan booster pack"
@@ -627,7 +627,7 @@
 		"message": "Menampilkan jumlah total kartu yang tersisa pada halaman lencana"
 	},
 	"options_builtin_queue_cheat": {
-		"message": "Tambah tombol untuk menjelajahi daftar temuanmu secara otomatis saat promo"
+		"message": "Tambahkan tombol untuk menemukan antrean secara otomatis selama diskon berlangsung"
 	},
 	"options_builtin_multibuy_redirect": {
 		"message": "Arahkan kembali ke halaman kartu permainan setelah membeli kartu-kartu yang tersisa"

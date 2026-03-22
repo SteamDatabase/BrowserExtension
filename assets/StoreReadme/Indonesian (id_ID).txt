@@ -1,4 +1,4 @@
-- Tampilkan harga terendah yang tercatat di halaman game (semua mata uang yang didukung, riwayat harga)
+- Tampilkan harga terendah yang tercatat di halaman game (mendukung semua mata uang, riwayat harga)
 - Tampilkan pemain dan puncak secara bersamaan di halaman game
 - Menampilkan pembaruan game terbaru di halaman game
 - Tambahkan tautan ke SteamDB di seluruh situs Steam
