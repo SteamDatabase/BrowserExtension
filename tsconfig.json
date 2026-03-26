@@ -9,7 +9,6 @@
 		"strict": true,
 		"noImplicitAny": true,
 		"strictNullChecks": false,
-		"moduleResolution": "node",
 		"moduleDetection": "force",
 		"esModuleInterop": true,
 		"skipLibCheck": true,
