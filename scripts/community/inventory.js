@@ -437,13 +437,14 @@
 
 					if( description.commodity )
 					{
-						const appid = asset.appid;
-						const contextid = asset.contextid;
-						const marketHashName = encodeURIComponent( window.GetMarketHashName( description ) );
+						const params = new URLSearchParams();
+						params.set( 'appid', asset.appid );
+						params.set( 'contextid', asset.contextid );
+						params.set( 'items[]', window.GetMarketHashName( description ) );
 
 						const multiSellBtn = document.createElement( 'a' );
 						multiSellBtn.className = 'steamdb_multi_sell';
-						multiSellBtn.href = `https://steamcommunity.com/market/multisell?appid=${appid}&contextid=${contextid}&items%5B%5D=${marketHashName}`;
+						multiSellBtn.href = `https://steamcommunity.com/market/multisell?${params.toString()}`;
 						multiSellBtn.textContent = i18n.inventory_sell_multiple;
 						element.append( multiSellBtn );
 					}
