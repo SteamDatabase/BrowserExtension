@@ -39,6 +39,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 			inventory_sell_at: _t( 'inventory_sell_at' ),
 			inventory_list_at_title: _t( 'inventory_list_at_title' ),
 			inventory_sell_at_title: _t( 'inventory_sell_at_title' ),
+			inventory_sell_multiple: _t( 'inventory_sell_multiple' ),
 			inventory_badge_level: _t( 'inventory_badge_level' ),
 			inventory_badge_foil_level: _t( 'inventory_badge_foil_level' ),
 			inventory_badge_none: _t( 'inventory_badge_none' ),

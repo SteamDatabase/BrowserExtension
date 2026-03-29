@@ -233,7 +233,7 @@
 					return;
 				}
 
-				LoadQuickSellInformation( element, commodityID, abortController.signal );
+				LoadQuickSellInformation( element, commodityID, description, asset,abortController.signal );
 			} );
 		}
 
@@ -246,9 +246,11 @@
 	/**
 	 * @param {HTMLElement} element
 	 * @param {string} commodityID
+	 * @param {any} description
+	 * @param {any} asset
 	 * @param {AbortSignal} signal
 	 */
-	function LoadQuickSellInformation( element, commodityID, signal )
+	function LoadQuickSellInformation( element, commodityID, description, asset, signal )
 	{
 		const histogramParams = new URLSearchParams();
 		histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
@@ -431,6 +433,19 @@
 							BindSellButton( row );
 							rows[ 0 ].after( row );
 						}
+					}
+
+					if( description.commodity )
+					{
+						const appid = asset.appid;
+						const contextid = asset.contextid;
+						const marketHashName = encodeURIComponent( window.GetMarketHashName( description ) );
+
+						const multiSellBtn = document.createElement( 'a' );
+						multiSellBtn.className = 'steamdb_multi_sell';
+						multiSellBtn.href = `https://steamcommunity.com/market/multisell?appid=${appid}&contextid=${contextid}&items%5B%5D=${marketHashName}`;
+						multiSellBtn.textContent = i18n.inventory_sell_multiple;
+						element.append( multiSellBtn );
 					}
 				}
 
