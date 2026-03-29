@@ -169,6 +169,32 @@ steamdb-iteminfo-footer {
 				padding: 0 4px;
 			}
 		}
+
+		.steamdb_multi_sell {
+			height: 24px;
+			padding-left: 12px;
+			padding-right: 12px;
+			margin-top: 12px;
+			border-radius: 2px;
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: 0;
+			min-width: 100%;
+			box-sizing: border-box;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			background: #3d4450;
+			color: white;
+			transition-property: opacity, background, color, box-shadow;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-out;
+
+			&:hover {
+				background: #67707b;
+			}
+		}
 	}
 
 	.steamdb_badge_info + .steamdb_quicksell {

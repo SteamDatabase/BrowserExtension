@@ -305,6 +305,9 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Sell multiple items"
+	},
 	"inventory_badge_level": {
 		"message": "Your badge level: $level$",
 		"placeholders": {
