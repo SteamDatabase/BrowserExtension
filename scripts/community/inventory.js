@@ -237,10 +237,29 @@
 			} );
 		}
 
-		requestAnimationFrame( () =>
+		if( container.lastChild )
 		{
 			container.append( footer );
-		} );
+		}
+		else
+		{
+			const observer = new MutationObserver( ( mutations ) =>
+			{
+				for( const mutation of mutations )
+				{
+					if( mutation.type === 'childList' && container.lastChild  )
+					{
+						container.append( footer );
+						observer.disconnect();
+						break;
+					}
+				}
+			} );
+
+			observer.observe( container, {
+				childList: true
+			} );
+		}
 	};
 
 	/**
