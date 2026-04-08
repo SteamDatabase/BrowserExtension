@@ -644,6 +644,9 @@
 	"options_builtin_achievements_csrating": {
 		"message": "Показувати історію рейтингу CS на сторінці досягнень CS2"
 	},
+	"options_profile_gamecovers": {
+		"message": "Показувати обкладинки ігор з регіональним обмеженням"
+	},
 	"boostercreator_available_at_date": {
 		"message": "Ви не зможете створити інший комплект для цієї гри до $available_date$.",
 		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
