@@ -44,7 +44,7 @@ else
 			/** @type {HTMLAnchorElement} */
 			const button = document.querySelector( '.game_area_already_owned_btn:first-of-type a' );
 
-			if( button && button.pathname === "/about/" )
+			if( button && button.pathname === '/about/' )
 			{
 				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
@@ -447,8 +447,7 @@ function DrawLowestPrice()
 
 	if( !currency )
 	{
-		const ECurrencyCode =
-		[
+		const ECurrencyCode = [
 			null,
 			'USD',
 			'GBP',
@@ -506,8 +505,8 @@ function DrawLowestPrice()
 		if( applicationConfigElement?.dataset?.store_user_config )
 		{
 			const storeUserConfig = JSON.parse( applicationConfigElement.dataset.store_user_config );
-			const currencyCode = storeUserConfig?.accountcart?.cart?.subtotal?.currency_code // logged in
-				|| storeUserConfig?.shoppingcart?.lineitems?.[ 0 ]?.package_item?.costwhenadded?.currencycode; // logged out, has item in cart
+			const currencyCode = storeUserConfig?.accountcart?.cart?.subtotal?.currency_code || // logged in
+				storeUserConfig?.shoppingcart?.lineitems?.[ 0 ]?.package_item?.costwhenadded?.currencycode; // logged out, has item in cart
 			currency = ECurrencyCode[ currencyCode ] || null;
 
 			if( currency )
@@ -669,7 +668,7 @@ function DrawLowestPrice()
 			.replaceAll( '&', '&amp;' )
 			.replaceAll( '<', '&lt;' )
 			.replaceAll( '"', '&quot;' )
-			.replaceAll( "'", '&apos;' );
+			.replaceAll( '\'', '&apos;' );
 
 		const safePrice = escapeHtml( response.data.p );
 
@@ -713,7 +712,7 @@ async function FetchSteamApiCurrentPlayers()
 	if( !applicationConfigElement )
 	{
 		WriteLog( 'Failed to get application_config' );
-		return;
+		return -1;
 	}
 
 	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
@@ -722,7 +721,7 @@ async function FetchSteamApiCurrentPlayers()
 	if( !webApiBaseUrl )
 	{
 		WriteLog( 'Failed to get WEBAPI_BASE_URL' );
-		return;
+		return -1;
 	}
 
 	const params = new URLSearchParams();
@@ -747,7 +746,7 @@ async function FetchSteamApiCurrentPlayers()
 
 	if( data && data.response && data.response.player_count > 0 )
 	{
-		return data.response.player_count;
+		return Number.parseInt( data.response.player_count, 10 );
 	}
 
 	return 0;
@@ -1102,7 +1101,6 @@ function FormatRelativeDate( date )
 
 	return [ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
 }
-
 
 /**
  * @param {Element} element

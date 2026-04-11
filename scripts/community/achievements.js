@@ -45,7 +45,6 @@
  * @property {HTMLElement|null} [earnedDetailsElement]
  */
 
-
 /**
  * @param {boolean} isPersonal
  */
@@ -308,7 +307,7 @@ function InitAchievements( items, isPersonal )
 			gameAchievementsFetch.then( ( gameAchievements ) =>
 			{
 				ProcessGameAchievements( gameAchievements, response.data, dlcCapsulesPromise );
-			} ).catch( e => console.error( '[SteamDB]', e ) );
+			} ).catch( ( e ) => console.error( '[SteamDB]', e ) );
 		} );
 	}
 	else
@@ -316,7 +315,7 @@ function InitAchievements( items, isPersonal )
 		gameAchievementsFetch.then( ( gameAchievements ) =>
 		{
 			ProcessGameAchievements( gameAchievements, [] );
-		} ).catch( e => console.error( '[SteamDB]', e ) );
+		} ).catch( ( e ) => console.error( '[SteamDB]', e ) );
 	}
 
 	/**
@@ -623,7 +622,7 @@ function InitAchievements( items, isPersonal )
 				progressText = progressText.replace( /^\(/, '' ).replace( /\)$/, '' );
 
 				// trying to get progress based on text, as right player doesn't have a bar
-				const [ current, total ] = progressText.split( '/' ).map( val => val.replace( /,/g, '' ).trim() );
+				const [ current, total ] = progressText.split( '/' ).map( ( val ) => val.replace( /,/g, '' ).trim() );
 				progressWidth = Math.ceil( Number.parseInt( current, 10 ) / Number.parseInt( total, 10 ) * 100 ) + '%';
 			}
 
@@ -698,7 +697,7 @@ function InitAchievements( items, isPersonal )
 			if(
 				achievement.hidden &&
 				( ( !player.unlock && !isCompareView ) ||
-				( !player.unlockCompare && isCompareView ) )
+					( !player.unlockCompare && isCompareView ) )
 			)
 			{
 				const hiddenAch = document.createElement( 'i' );
@@ -861,7 +860,7 @@ function InitAchievements( items, isPersonal )
 					for( const group of achievementGroups )
 					{
 						/** @type {NodeListOf<HTMLElement>} */
-						const achievementElements =  group.querySelectorAll( '.steamdb_achievement' );
+						const achievementElements = group.querySelectorAll( '.steamdb_achievement' );
 
 						for( const achievement of achievementElements )
 						{
@@ -879,7 +878,7 @@ function InitAchievements( items, isPersonal )
 					let count = 0;
 
 					/** @type {NodeListOf<HTMLElement>} */
-					const achievementElements =  group.querySelectorAll( '.steamdb_achievement' );
+					const achievementElements = group.querySelectorAll( '.steamdb_achievement' );
 
 					for( const achievement of achievementElements )
 					{
@@ -1227,7 +1226,7 @@ function InitAchievements( items, isPersonal )
 							image.src = url;
 						}
 					}
-				} ).catch( e => console.error( '[SteamDB]', e ) );
+				} ).catch( ( e ) => console.error( '[SteamDB]', e ) );
 			}
 
 			// As we are completely redrawing the achievement list, sorting added by
@@ -1287,8 +1286,7 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 		return Promise.resolve( images );
 	}
 
-	const request =
-	{
+	const request = {
 		ids: dlcAppIds,
 		context:
 		{
@@ -1317,8 +1315,7 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 	// by Access-Control-Allow-Headers in preflight response.
 	params.set( 'x_requested_with', 'SteamDB' );
 
-	const assetsToTry =
-	[
+	const assetsToTry = [
 		'small_capsule',
 		'main_capsule',
 		'header',
@@ -1344,7 +1341,7 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 			if( item.assets[ assetKey ] )
 			{
 				// eslint-disable-next-line no-template-curly-in-string
-				const name = item.assets.asset_url_format.replace( "${FILENAME}", item.assets[ assetKey ] );
+				const name = item.assets.asset_url_format.replace( '${FILENAME}', item.assets[ assetKey ] );
 				const url = `${applicationConfig.STORE_ITEM_BASE_URL}${name}`;
 				images.set( item.appid, url );
 
@@ -1384,8 +1381,7 @@ function ParseApplicationConfig()
 
 	// Application config does not exist if user is logged out, so we have to reconstruct the data
 	/** @type {ApplicationConfig} */
-	const applicationConfig =
-	{
+	const applicationConfig = {
 		WEBAPI_BASE_URL: window.location.hostname === 'my.steamchina.com' ? 'https://api.steamchina.com/' : 'https://api.steampowered.com/',
 	};
 
@@ -1489,8 +1485,8 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 				'X-Requested-With': 'SteamDB',
 			},
 		} )
-			.then( response => response.text() )
-			.then( text =>
+			.then( ( response ) => response.text() )
+			.then( ( text ) =>
 			{
 				const parser = new DOMParser();
 				const htmlDocument = parser.parseFromString( text, 'text/html' );
@@ -1550,10 +1546,10 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 						throw new Error( 'Mismatching achievement icon' );
 					}
 
-					const unlock = isCompareView
-						? otherAchievement.querySelector( '.achieveUnlockTime' )
-							?.childNodes[ 0 ].textContent.trim()
-						: otherAchievement.querySelector( '.achieveUnlockTime' )
+					const unlock = isCompareView ?
+						otherAchievement.querySelector( '.achieveUnlockTime' )
+							?.childNodes[ 0 ].textContent.trim() :
+						otherAchievement.querySelector( '.achieveUnlockTime' )
 							?.textContent.trim();
 
 					if( !unlock )
@@ -1627,7 +1623,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 
 				StartViewTransition( RedrawSortedAchievements );
 			} )
-			.catch( ex =>
+			.catch( ( ex ) =>
 			{
 				WriteLog( ex );
 				alert( `Failed to sort achievements: ${ex.message}` );

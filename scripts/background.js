@@ -128,8 +128,7 @@ async function FetchSteamUserData( callback )
 		}
 
 		// Only keep the data we actually need
-		userDataCache =
-		{
+		userDataCache = {
 			rgOwnedPackages: response.rgOwnedPackages || [],
 			rgOwnedApps: response.rgOwnedApps || [],
 
@@ -154,8 +153,7 @@ async function FetchSteamUserData( callback )
 		const data = await GetLocalOption( { 'userdata.stored': false } );
 
 		/** @type {{error: string, data?: any}} */
-		const response =
-		{
+		const response = {
 			error: error instanceof Error ? error.message : String( error ),
 		};
 
@@ -198,7 +196,7 @@ async function FetchSteamUserFamilyData( callback )
 	/** @type {{data: Record<string, any>}|{error: string, data?: Record<string, any>}} */
 	let callbackResponse = null;
 	let semaphoreResolve = null;
-	userFamilySemaphore = new Promise( resolve =>
+	userFamilySemaphore = new Promise( ( resolve ) =>
 	{
 		semaphoreResolve = resolve;
 	} );
@@ -267,14 +265,12 @@ async function FetchSteamUserFamilyData( callback )
 			owned: []
 		} );
 
-		userFamilyDataCache =
-		{
+		userFamilyDataCache = {
 			rgFamilySharedApps: reduced.shared,
 			rgOwnedApps: reduced.owned,
 		};
 
-		callbackResponse =
-		{
+		callbackResponse = {
 			data: userFamilyDataCache
 		};
 
@@ -287,8 +283,7 @@ async function FetchSteamUserFamilyData( callback )
 	}
 	catch( error )
 	{
-		callbackResponse =
-		{
+		callbackResponse = {
 			error: error instanceof Error ? error.message : String( error ),
 		};
 
@@ -541,9 +536,9 @@ function StoreAddFreeLicense( request, callback )
 			case 9: message = 'This product is already available in your Steam library.'; break;
 			case 24: message = 'You do not own the required app.'; break;
 			case 53: message = 'You got rate limited, try again later.'; break;
-			default: message = resultCode === null
-				? `There was a problem adding this product to your account. ${response?.error ?? ''}`
-				: `There was a problem adding this product to your account. PurchaseResultDetail=${resultCode}`;
+			default: message = resultCode === null ?
+				`There was a problem adding this product to your account. ${response?.error ?? ''}` :
+				`There was a problem adding this product to your account. PurchaseResultDetail=${resultCode}`;
 		}
 
 		callback( {
@@ -743,9 +738,9 @@ function GetStoreSessionID( callback )
 			{
 				callback( {
 					success: false,
-					error: response.includes( 'login' )
-						? 'Failed to fetch sessionid. It does not look like you are logged in to the Steam store.'
-						: 'Failed to fetch sessionid. Try reloading the page.',
+					error: response.includes( 'login' ) ?
+						'Failed to fetch sessionid. It does not look like you are logged in to the Steam store.' :
+						'Failed to fetch sessionid. Try reloading the page.',
 				} );
 			}
 		} )

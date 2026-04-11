@@ -24,7 +24,6 @@
 		displayBoosterAvailableDate( customEvent.detail?.available_at_time );
 	} );
 
-
 	/**
 	 * @param {string | undefined} availableDate
 	 */

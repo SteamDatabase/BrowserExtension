@@ -2,8 +2,7 @@
 
 'use strict';
 
-const tierColors =
-[
+const tierColors = [
 	'#b0c3d9',
 	'#8cc6ff',
 	'#6a7dff',
@@ -50,9 +49,9 @@ const InitChart = ( container, initialData ) =>
 
 		const tooltipWidth = tooltip.clientWidth;
 		const shiftTooltip = event.pageX + tooltipWidth - document.body.clientWidth;
-		tooltip.style.left = shiftTooltip > 0
-			? event.pageX - shiftTooltip + 'px'
-			: event.pageX + 'px';
+		tooltip.style.left = shiftTooltip > 0 ?
+			event.pageX - shiftTooltip + 'px' :
+			event.pageX + 'px';
 		tooltip.style.top = event.pageY + 30 + 'px';
 	} );
 
@@ -112,7 +111,6 @@ const DrawChart = ( initialData, hoveredIndex, canvas, tooltip, maxLength ) =>
 	const paddedHeight = height * 0.95;
 	const halfHeight = height / 2;
 	const gap = width / ( data.length - 1 );
-
 
 	/** @type {{season: string, x: number}[]} */
 	const seasonChanges = [];
@@ -341,9 +339,9 @@ const CreateCSRatingTable = ( container, rows ) =>
 			delta.textContent = ( row.delta > 0 ? '+' : '' ) + row.delta;
 		}
 
-		delta.className = row.delta > 0
-			? 'steamdb_achievements_csrating_positive'
-			: 'steamdb_achievements_csrating_negative';
+		delta.className = row.delta > 0 ?
+			'steamdb_achievements_csrating_positive' :
+			'steamdb_achievements_csrating_negative';
 
 		if( row.delta < -199 || row.delta > 199 )
 		{
@@ -366,7 +364,7 @@ const FetchCSRating = async( profileUrl ) =>
 	const dom = parser.parseFromString( json.html, 'text/html' );
 
 	const rows = [ ...dom.querySelectorAll( 'tr' ) ]
-		.filter( tr => tr.querySelector( 'td' )?.textContent.startsWith( 'premier' ) );
+		.filter( ( tr ) => tr.querySelector( 'td' )?.textContent.startsWith( 'premier' ) );
 
 	const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
 		dateStyle: 'medium',

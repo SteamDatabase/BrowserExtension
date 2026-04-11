@@ -4,8 +4,7 @@
 
 if( GetCurrentAppID() > 0 )
 {
-	const selectorsToTry =
-	[
+	const selectorsToTry = [
 		'#error_box',
 		'#app_agegate',
 		'#agegate_box',

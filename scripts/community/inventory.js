@@ -20,8 +20,7 @@
 	/** @type {AbortController | null} */
 	let currentAbortController = null;
 
-	const dummySellEvent =
-	{
+	const dummySellEvent = {
 		stop: () =>
 		{
 			// empty
@@ -98,11 +97,11 @@
 				nextRefreshCausedBySell = false;
 
 				window.g_ActiveInventory.selectedItem.element.classList.add( 'steamdb_sold' );
+
+				return undefined;
 			}
-			else
-			{
-				return originalReloadInventory.apply( this, arguments );
-			}
+
+			return originalReloadInventory.apply( this, arguments );
 		};
 	}
 
@@ -233,7 +232,7 @@
 					return;
 				}
 
-				LoadQuickSellInformation( element, commodityID, description, asset,abortController.signal );
+				LoadQuickSellInformation( element, commodityID, description, asset, abortController.signal );
 			} );
 		}
 
@@ -247,7 +246,7 @@
 			{
 				for( const mutation of mutations )
 				{
-					if( mutation.type === 'childList' && container.lastChild  )
+					if( mutation.type === 'childList' && container.lastChild )
 					{
 						container.append( footer );
 						observer.disconnect();
