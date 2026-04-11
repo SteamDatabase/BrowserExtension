@@ -281,7 +281,14 @@ else
 
 			for( const bundleElement of container )
 			{
-				InsertPurchaseBlockId( bundleElement.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( bundleElement.value, 10 ) );
+				const purchaseGame = bundleElement.closest( '.game_area_purchase_game' );
+
+				if( !purchaseGame )
+				{
+					continue;
+				}
+
+				InsertPurchaseBlockId( purchaseGame.querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( bundleElement.value, 10 ) );
 			}
 
 			// We have to inject our JS directly into the page to hook Steam's functionality

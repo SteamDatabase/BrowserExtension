@@ -822,7 +822,7 @@ function InitAchievements( items, isPersonal )
 			if( isCompareView )
 			{
 				const imageCompare = document.createElement( 'img' );
-				imageCompare.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare && achievement.icon_gray ? achievement.icon : achievement.icon_gray}`;
+				imageCompare.src = `${applicationConfig.MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${player.unlockCompare || !achievement.icon_gray ? achievement.icon : achievement.icon_gray}`;
 				imageCompare.className = 'steamdb_achievement_image steamdb_achievement_image_compare';
 				element.append( imageCompare );
 			}
@@ -1627,6 +1627,7 @@ function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, Cre
 			{
 				WriteLog( ex );
 				alert( `Failed to sort achievements: ${ex.message}` );
+				sortButton.removeAttribute( 'disabled' );
 			} );
 	}, { once: true } );
 }

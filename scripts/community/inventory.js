@@ -568,17 +568,16 @@
 			} );
 	}
 
-	let badgesDataLoaded = false;
-
-	/** @type {any[]} */
-	let badgesData = [];
+	/** @type {Promise<any[]> | null} */
+	let badgesDataPromise = null;
 
 	/**
 	 * @param {HTMLElement} element
 	 * @param {any} description
 	 * @param {string} steamid
+	 * @param {any[]} badges
 	 */
-	function AddBadgeInformation( element, description, steamid )
+	function AddBadgeInformation( element, description, steamid, badges )
 	{
 		if( !description.market_fee_app )
 		{
@@ -607,7 +606,7 @@
 		const CreateLink = ( foil ) =>
 			`https://steamcommunity.com/profiles/${steamid}/gamecards/${description.market_fee_app}${foil ? '?border=1' : ''}`;
 
-		for( const badge of badgesData )
+		for( const badge of badges )
 		{
 			if( badge.appid !== description.market_fee_app )
 			{
@@ -656,57 +655,47 @@
 	 */
 	function LoadBadgeInformation( element, description, steamid )
 	{
-		if( badgesDataLoaded )
+		if( !badgesDataPromise )
 		{
-			if( badgesData.length > 0 )
+			const applicationConfigElement = document.getElementById( 'application_config' );
+
+			if( !applicationConfigElement )
 			{
-				AddBadgeInformation( element, description, steamid );
+				return;
 			}
 
-			return;
-		}
+			const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
+			const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
 
-		// TODO: This has a race condition if user switches to another item before the fetch request completes
-		// but the only problem they will get is no badge info will be displayed.
-		badgesDataLoaded = true;
-
-		const applicationConfigElement = document.getElementById( 'application_config' );
-
-		if( !applicationConfigElement )
-		{
-			return;
-		}
-
-		const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
-		const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
-
-		if( !accessToken )
-		{
-			return;
-		}
-
-		const params = new URLSearchParams();
-		params.set( 'origin', location.origin );
-		params.set( 'format', 'json' );
-		params.set( 'access_token', accessToken );
-		params.set( 'steamid', steamid );
-		params.set( 'x_requested_with', 'SteamDB' );
-
-		fetch( `${applicationConfig.WEBAPI_BASE_URL}IPlayerService/GetBadges/v1/?${params.toString()}` )
-			.then( ( response ) => response.json() )
-			.then( ( response ) =>
+			if( !accessToken )
 			{
-				if( response.response?.badges )
+				return;
+			}
+
+			const params = new URLSearchParams();
+			params.set( 'origin', location.origin );
+			params.set( 'format', 'json' );
+			params.set( 'access_token', accessToken );
+			params.set( 'steamid', steamid );
+			params.set( 'x_requested_with', 'SteamDB' );
+
+			badgesDataPromise = fetch( `${applicationConfig.WEBAPI_BASE_URL}IPlayerService/GetBadges/v1/?${params.toString()}` )
+				.then( ( response ) => response.json() )
+				.then( ( /** @type {any} */ response ) => /** @type {any[]} */ ( response.response?.badges ?? [] ) )
+				.catch( ( /** @type {any} */ err ) =>
 				{
-					badgesData = response.response.badges;
+					console.error( '[SteamDB] Badge info error', err );
+					return /** @type {any[]} */ ( [] );
+				} );
+		}
 
-					AddBadgeInformation( element, description, steamid );
-				}
-			} )
-			.catch( ( err ) =>
+		badgesDataPromise.then( ( badges ) =>
+		{
+			if( badges.length > 0 )
 			{
-				console.error( '[SteamDB] Badge info error', err );
-			} );
+				AddBadgeInformation( element, description, steamid, badges );
+			}
+		} );
 	}
 
 	/**

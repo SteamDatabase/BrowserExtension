@@ -37,8 +37,14 @@ GetOption( {
 	else
 	{
 		// Fallback to url if we can't
-		steamID = location.pathname.match( /^\/(?:id|profiles)\/([^\s/]+)\/?/ )[ 1 ];
+		const pathMatch = location.pathname.match( /^\/(?:id|profiles)\/([^\s/]+)\/?/ );
 
+		if( !pathMatch )
+		{
+			return;
+		}
+
+		steamID = pathMatch[ 1 ];
 		isCommunityID = /^\/profiles/.test( location.pathname );
 	}
 

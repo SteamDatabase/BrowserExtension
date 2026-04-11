@@ -15,9 +15,8 @@ GetOption( {
 		{
 			/** @type {HTMLAnchorElement} */
 			const sectionTab = document.querySelector( '.apphub_sectionTab' );
-
-			const match = sectionTab.href.match( /\/([0-9]+)\/?/ );
-			CurrentAppID = CurrentAppID ? Number.parseInt( match[ 1 ], 10 ) : -1;
+			const match = sectionTab?.href.match( /\/([0-9]+)\/?/ );
+			CurrentAppID = match ? Number.parseInt( match[ 1 ], 10 ) : -1;
 		}
 
 		if( GetCurrentAppID() < 1 )

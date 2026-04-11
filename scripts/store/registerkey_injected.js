@@ -42,13 +42,13 @@
 		const fragment = document.createElement( 'div' );
 		fragment.className = 'steamdb_registerkey_lineitem';
 
-		const image = document.createElement( 'img' );
-		image.src = script.dataset.icon;
-
 		for( const item of line_items )
 		{
 			const lineitem = document.createElement( 'div' );
 			lineitem.className = 'registerkey_lineitem';
+
+			const image = document.createElement( 'img' );
+			image.src = script.dataset.icon;
 			lineitem.append( image );
 
 			let link = document.createElement( 'a' );

@@ -23,8 +23,20 @@
 
 		/** @type {HTMLAnchorElement} */
 		const link = cartForm.parentNode.querySelector( '.steamdb_link' );
+
+		if( !link )
+		{
+			return;
+		}
+
 		link.hidden = false;
 		link.href = `${homepage}sub/${subId}/`;
-		link.querySelector( '.steamdb_link_id' ).textContent = subId.toString();
+
+		const linkId = link.querySelector( '.steamdb_link_id' );
+
+		if( linkId )
+		{
+			linkId.textContent = subId.toString();
+		}
 	};
 } )() );
