@@ -51,7 +51,6 @@ else
 				button.textContent = _t( 'open_desktop_app' );
 				installSteamBtn.insertAdjacentElement( 'afterend', button );
 			}
-
 		}
 
 		if( items[ 'enhancement-no-linkfilter' ] )
