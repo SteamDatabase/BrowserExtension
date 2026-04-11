@@ -49,3 +49,19 @@
 .steamdb_trade_error_explained:hover {
 	text-decoration: underline;
 }
+
+.steamdb_open_desktop_app {
+	display: inline-block;
+	padding: 0 9px;
+	margin-left: 4px;
+	background-color: #5c7e10;
+	color: #e5e4dc;
+
+	&:hover {
+		background-color: #6c9018;
+		color: #fff;
+		transition-property: background;
+		transition-duration: 250ms;
+		cursor: pointer;
+	}
+}

@@ -601,6 +601,9 @@
 		"message": "Hide \"Install Steam\" button in header",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Add a \"Open in Desktop App\" button in header"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Hide \"Open in Steam\" banner"
 	},
@@ -665,7 +668,9 @@
 	"options_builtin_achievements_csrating": {
 		"message": "Display CS rating history on CS2 achievements page"
 	},
-
+	"open_desktop_app": {
+		"message": "Open in Desktop App"
+	},
 	"boostercreator_available_at_date": {
 		"message": "You will not be able to create another Booster Pack for this game until $available_date$.",
 		"description": "\"Booster Pack\" should match how Steam itself names it at: https://steamcommunity.com/tradingcards/boostercreator/",
