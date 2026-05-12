@@ -27,6 +27,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 		element.type = 'text/javascript';
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
+		element.dataset.language = GetLanguage();
 		element.dataset.logo = GetLocalResource( 'icons/white.svg' );
 		element.dataset.optionsUrl = GetLocalResource( 'options/options.html' ) + '#inventory';
 		element.dataset.options = JSON.stringify( items );

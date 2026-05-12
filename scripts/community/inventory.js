@@ -9,6 +9,7 @@
 	const homepage = scriptHook.dataset.homepage;
 	const logoSrc = scriptHook.dataset.logo;
 	const optionsUrl = scriptHook.dataset.optionsUrl;
+	const language = scriptHook.dataset.language;
 	const i18n = JSON.parse( scriptHook.dataset.i18n );
 	const options = JSON.parse( scriptHook.dataset.options );
 
@@ -56,7 +57,7 @@
 	};
 
 	const currencyCode = window.GetCurrencyCode( window.g_rgWalletInfo.wallet_currency );
-	const numberFormatter = new Intl.NumberFormat( window.g_strLanguage );
+	const numberFormatter = new Intl.NumberFormat( language );
 
 	/**
 	 * @param {number} valueInCents
