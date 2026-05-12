@@ -56,12 +56,26 @@
 	};
 
 	const currencyCode = window.GetCurrencyCode( window.g_rgWalletInfo.wallet_currency );
+	const numberFormatter = new Intl.NumberFormat( window.g_strLanguage );
 
 	/**
 	 * @param {number} valueInCents
 	 */
 	const FormatCurrency = ( valueInCents ) =>
 		window.v_currencyformat( valueInCents, currencyCode, window.g_rgWalletInfo.wallet_country );
+
+	/**
+	 * @param {HTMLElement} target
+	 * @param {string} template
+	 * @param {string} count
+	 * @param {string} price
+	 */
+	const RenderPromotedSummary = ( target, template, count, price ) =>
+	{
+		target.innerHTML = template
+			.replace( '%count%', `<span class="steamdb_orders_header_promote">${count}</span>` )
+			.replace( '%price%', `<span class="steamdb_orders_header_promote">${price}</span>` );
+	};
 
 	if( options[ 'enhancement-inventory-no-sell-reload' ] )
 	{
@@ -225,15 +239,7 @@
 			footer.append( element );
 			footer.hidden = false;
 
-			GetMarketItemNameId( description, ( commodityID ) =>
-			{
-				if( !commodityID )
-				{
-					return;
-				}
-
-				LoadQuickSellInformation( element, commodityID, description, asset, abortController.signal );
-			} );
+			LoadQuickSellInformation( element, description, asset, abortController.signal );
 		}
 
 		if( container.lastChild )
@@ -263,23 +269,23 @@
 
 	/**
 	 * @param {HTMLElement} element
-	 * @param {string} commodityID
 	 * @param {any} description
 	 * @param {any} asset
 	 * @param {AbortSignal} signal
 	 */
-	function LoadQuickSellInformation( element, commodityID, description, asset, signal )
+	function LoadQuickSellInformation( element, description, asset, signal )
 	{
-		const histogramParams = new URLSearchParams();
-		histogramParams.set( 'country', window.g_rgWalletInfo.wallet_country );
-		histogramParams.set( 'language', window.g_strLanguage );
-		histogramParams.set( 'currency', window.g_rgWalletInfo.wallet_currency );
-		histogramParams.set( 'item_nameid', commodityID );
+		const bucketId = /* description.market_bucket_group_id || */ description.market_hash_name || description.market_name || description.name;
 
-		fetch( '/market/itemordershistogram?' + histogramParams.toString(), {
+		const params = new URLSearchParams();
+		params.set( 'q', 'Load' );
+		params.set( 'qp', JSON.stringify( [ description.appid, bucketId ] ) );
+
+		fetch( '/market/orderbook?' + params.toString(), {
 			signal,
 			headers: {
 				'X-Requested-With': 'SteamDB',
+				'X-Valve-Request-Type': 'queryAction',
 			},
 		} )
 			.then( ( response ) =>
@@ -297,12 +303,14 @@
 
 				return response.json();
 			} )
-			.then( ( data ) =>
+			.then( ( response ) =>
 			{
-				if( !data || !data.success )
+				if( !response || !response.success || !response.data )
 				{
 					return;
 				}
+
+				const data = response.data;
 
 				const hoverText = document.createElement( 'div' );
 				hoverText.className = 'steamdb_orders_hover_text';
@@ -340,32 +348,36 @@
 					} );
 				};
 
-				if( data.sell_order_summary )
+				if( data.cSellOrders > 0 && data.amtMinSellOrder )
 				{
 					const sellHeader = document.createElement( 'div' );
 					sellHeader.className = 'steamdb_orders_header steamdb_sell_summary';
-					sellHeader.innerHTML = data.sell_order_summary;
+					RenderPromotedSummary(
+						sellHeader,
+						i18n.inventory_orders_for_sale,
+						numberFormatter.format( data.cSellOrders ),
+						FormatCurrency( data.amtMinSellOrder )
+					);
 
-					if( data.lowest_sell_order )
-					{
-						sellHeader.dataset.price = data.lowest_sell_order.toString();
-						BindSellButton( sellHeader );
-					}
+					sellHeader.dataset.price = data.amtMinSellOrder.toString();
+					BindSellButton( sellHeader );
 
 					orderHeaderSummaries.append( sellHeader );
 				}
 
-				if( data.buy_order_summary )
+				if( data.cBuyOrders > 0 && data.amtMaxBuyOrder )
 				{
 					const buyHeader = document.createElement( 'div' );
 					buyHeader.className = 'steamdb_orders_header steamdb_buy_summary';
-					buyHeader.innerHTML = data.buy_order_summary;
+					RenderPromotedSummary(
+						buyHeader,
+						i18n.inventory_orders_to_buy,
+						numberFormatter.format( data.cBuyOrders ),
+						FormatCurrency( data.amtMaxBuyOrder )
+					);
 
-					if( data.highest_buy_order )
-					{
-						buyHeader.dataset.price = data.highest_buy_order.toString();
-						BindSellButton( buyHeader );
-					}
+					buyHeader.dataset.price = data.amtMaxBuyOrder.toString();
+					BindSellButton( buyHeader );
 
 					orderHeaderSummaries.append( buyHeader );
 				}
@@ -391,81 +403,108 @@
 				hoverTextContainer.append( hoverText );
 				element.append( hoverTextContainer );
 
-				for( const promote of element.querySelectorAll( '.market_commodity_orders_header_promote' ) )
-				{
-					promote.className = 'steamdb_orders_header_promote';
-				}
+				const sellOrders = data.rgCompactSellOrders || [];
+				/** @type {HTMLTableRowElement | null} */
+				let firstSellRow = null;
 
-				if( data.sell_order_table )
+				if( sellOrders.length >= 2 )
 				{
-					element.insertAdjacentHTML( 'beforeend', data.sell_order_table );
-
-					/** @type {HTMLTableElement} */
-					const table = element.querySelector( '.market_commodity_orders_table' );
+					const table = document.createElement( 'table' );
 					table.className = 'steamdb_orders_table';
 
-					const rows = table.querySelectorAll( 'tr' );
+					const totalRows = sellOrders.length / 2;
+					const hasOverflow = totalRows > 6;
+					const visibleRows = hasOverflow ? 5 : totalRows;
+					let sumOfVisible = 0;
 
-					for( const row of rows )
+					for( let i = 0; i < visibleRows; ++i )
 					{
-						const td = row.querySelector( 'td' );
+						const price = sellOrders[ i * 2 ];
+						const quantity = sellOrders[ i * 2 + 1 ];
+						sumOfVisible += quantity;
 
-						if( !td )
-						{
-							continue;
-						}
-
-						const priceText = td.textContent.trim();
-						const priceValue = window.GetPriceValueAsInt( priceText );
-
-						if( priceValue < 1 )
-						{
-							continue;
-						}
-
+						const row = document.createElement( 'tr' );
 						row.classList.add( 'steamdb_order_row_clickable' );
-						row.dataset.price = priceValue.toString();
+						row.dataset.price = price.toString();
+
+						const priceCell = document.createElement( 'td' );
+						priceCell.textContent = FormatCurrency( price );
+						row.append( priceCell );
+
+						const quantityCell = document.createElement( 'td' );
+						quantityCell.textContent = numberFormatter.format( quantity );
+						row.append( quantityCell );
+
 						BindSellButton( row );
-					}
+						table.append( row );
 
-					if( data.lowest_sell_order )
-					{
-						const nFloor = Number.parseInt( window.g_rgWalletInfo.wallet_market_minimum ?? 1, 10 );
-						const nIncrement = Number.parseInt( window.g_rgWalletInfo.wallet_currency_increment ?? 1, 10 );
-						const undercutPrice = data.lowest_sell_order - nIncrement;
-
-						if( undercutPrice >= ( 3 * nFloor ) && undercutPrice > data.highest_buy_order )
+						if( i === 0 )
 						{
-							const row = document.createElement( 'tr' );
-							row.classList.add( 'steamdb_order_row_clickable' );
-							row.style.fontStyle = 'italic';
-							row.dataset.price = undercutPrice.toString();
-
-							const priceCell = document.createElement( 'td' );
-							priceCell.textContent = FormatCurrency( undercutPrice );
-							row.append( priceCell );
-
-							const quantityCell = document.createElement( 'td' );
-							row.append( quantityCell );
-
-							BindSellButton( row );
-							rows[ 0 ].after( row );
+							firstSellRow = row;
 						}
 					}
 
-					if( description.commodity )
+					if( hasOverflow )
 					{
-						const params = new URLSearchParams();
-						params.set( 'appid', asset.appid );
-						params.set( 'contextid', asset.contextid );
-						params.set( 'items[]', window.GetMarketHashName( description ) );
+						const cutoffPrice = sellOrders[ visibleRows * 2 ];
+						const aggregateQty = ( data.cSellOrders || 0 ) - sumOfVisible;
 
-						const multiSellBtn = document.createElement( 'a' );
-						multiSellBtn.className = 'steamdb_multi_sell';
-						multiSellBtn.href = `https://steamcommunity.com/market/multisell?${params.toString()}`;
-						multiSellBtn.textContent = i18n.inventory_sell_multiple;
-						element.append( multiSellBtn );
+						const row = document.createElement( 'tr' );
+						row.classList.add( 'steamdb_order_row_clickable' );
+						row.dataset.price = cutoffPrice.toString();
+
+						const priceCell = document.createElement( 'td' );
+						priceCell.textContent = i18n.inventory_orders_or_more.replace( '%price%', FormatCurrency( cutoffPrice ) );
+						row.append( priceCell );
+
+						const quantityCell = document.createElement( 'td' );
+						quantityCell.textContent = numberFormatter.format( aggregateQty );
+						row.append( quantityCell );
+
+						BindSellButton( row );
+						table.append( row );
 					}
+
+					element.append( table );
+				}
+
+				if( firstSellRow && data.amtMinSellOrder )
+				{
+					const nFloor = Number.parseInt( window.g_rgWalletInfo.wallet_market_minimum ?? 1, 10 );
+					const nIncrement = Number.parseInt( window.g_rgWalletInfo.wallet_currency_increment ?? 1, 10 );
+					const undercutPrice = data.amtMinSellOrder - nIncrement;
+
+					if( undercutPrice >= ( 3 * nFloor ) && undercutPrice > ( data.amtMaxBuyOrder || 0 ) )
+					{
+						const row = document.createElement( 'tr' );
+						row.classList.add( 'steamdb_order_row_clickable' );
+						row.style.fontStyle = 'italic';
+						row.dataset.price = undercutPrice.toString();
+
+						const priceCell = document.createElement( 'td' );
+						priceCell.textContent = FormatCurrency( undercutPrice );
+						row.append( priceCell );
+
+						const quantityCell = document.createElement( 'td' );
+						row.append( quantityCell );
+
+						BindSellButton( row );
+						firstSellRow.before( row );
+					}
+				}
+
+				if( description.commodity )
+				{
+					const multiSellParams = new URLSearchParams();
+					multiSellParams.set( 'appid', asset.appid );
+					multiSellParams.set( 'contextid', asset.contextid );
+					multiSellParams.set( 'items[]', window.GetMarketHashName( description ) );
+
+					const multiSellBtn = document.createElement( 'a' );
+					multiSellBtn.className = 'steamdb_multi_sell';
+					multiSellBtn.href = `https://steamcommunity.com/market/multisell?${multiSellParams.toString()}`;
+					multiSellBtn.textContent = i18n.inventory_sell_multiple;
+					element.append( multiSellBtn );
 				}
 
 				element.classList.add( 'steamdb_quicksell_visible' );
@@ -695,150 +734,6 @@
 			{
 				AddBadgeInformation( element, description, steamid, badges );
 			}
-		} );
-	}
-
-	/**
-	 * @param {any} description
-	 * @param {(commodityID: string|null) => void} callback
-	 */
-	function GetMarketItemNameId( description, callback )
-	{
-		const appid = description.appid;
-		const marketHashName = encodeURIComponent( window.GetMarketHashName( description ) );
-		const cacheKey = `${appid}_${marketHashName}`;
-
-		GetCachedItemId( cacheKey )
-			.then( ( value ) =>
-			{
-				if( value )
-				{
-					callback( value );
-					return;
-				}
-
-				fetch( `/market/listings/${appid}/${marketHashName}`, {
-					headers: {
-						'X-Requested-With': 'SteamDB',
-					},
-				} )
-					.then( ( response ) =>
-					{
-						if( response.status === 429 )
-						{
-							// If user is currently rate limited by Steam market, just disable the buttons
-							hasQuickSellEnabled = false;
-						}
-
-						if( !response.ok )
-						{
-							callback( null );
-							return null;
-						}
-
-						return response.text();
-					} )
-					.then( ( data ) =>
-					{
-						if( !data )
-						{
-							return;
-						}
-
-						const commodityID = data.match( /Market_LoadOrderSpread\(\s?(?<id>\d+)\s?\);/ );
-
-						if( !commodityID )
-						{
-							callback( null );
-							return;
-						}
-
-						SetCachedItemId( cacheKey, commodityID.groups.id )
-							.then( () =>
-							{
-								callback( commodityID.groups.id );
-							} )
-							.catch( ( err ) =>
-							{
-								console.error( '[SteamDB] DB set fail', err );
-
-								callback( commodityID.groups.id );
-							} );
-					} )
-					.catch( ( err ) =>
-					{
-						console.error( '[SteamDB] Fetch error', err );
-
-						callback( null );
-					} );
-			} )
-			.catch( ( err ) =>
-			{
-				console.error( '[SteamDB] DB get fail', err );
-
-				callback( null );
-			} );
-	}
-
-	/**
-	 * IndexedDB. Ref: https://github.com/jakearchibald/idb-keyval
-	 */
-	const itemDatabase = CreateItemStore( 'steamdb_extension', 'itemid_name_cache' );
-
-	/**
-	 * Promisifies an IndexedDB request
-	 * @param {IDBRequest<T>|IDBTransaction} request - The IndexedDB request to promisify
-	 * @returns {Promise<T>} A promise that resolves with the request result
-	 * @template T
-	 */
-	function PromisifyDbRequest( request )
-	{
-		return new Promise( ( resolve, reject ) =>
-		{
-			// @ts-ignore
-			request.oncomplete = request.onsuccess = () => resolve( request.result );
-			// @ts-ignore
-			request.onabort = request.onerror = () => reject( request.error );
-		} );
-	}
-
-	/**
-	 * Creates an IndexedDB store with the specified name
-	 * @param {string} dbName - The name of the database
-	 * @param {string} storeName - The name of the object store
-	 * @returns {function(IDBTransactionMode, function(IDBObjectStore): T|PromiseLike<T>): Promise<T>} A function that executes callbacks against the store
-	 * @template T
-	 */
-	function CreateItemStore( dbName, storeName )
-	{
-		const request = indexedDB.open( dbName );
-		request.onupgradeneeded = () => request.result.createObjectStore( storeName );
-		const dbp = PromisifyDbRequest( request );
-		return ( txMode, callback ) => dbp.then( ( db ) => callback( db.transaction( storeName, txMode ).objectStore( storeName ) ) );
-	}
-
-	/**
-	 * Get a value by its key.
-	 * @param {IDBValidKey} key - The key to look up
-	 * @returns {Promise<string|undefined>} A promise that resolves with the stored value or undefined if not found
-	 */
-	function GetCachedItemId( key )
-	{
-		return itemDatabase( 'readonly', ( store ) => PromisifyDbRequest( store.get( key ) ) );
-	}
-
-	/**
-	 * Set a value with a key.
-	 * @param {IDBValidKey} key - The key to store the value under
-	 * @param {string} value - The value to store
-	 * @returns {Promise<void>} A promise that resolves when the transaction completes
-	 */
-	function SetCachedItemId( key, value )
-	{
-		return itemDatabase( 'readwrite', ( store ) =>
-		{
-			store.put( value, key );
-			return PromisifyDbRequest( store.transaction );
 		} );
 	}
 } )() );
