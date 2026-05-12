@@ -554,22 +554,6 @@
 			]
 		},
 		{
-			"run_at": "document_start",
-			"world": "MAIN",
-			"matches":
-			[
-				"https://steamcommunity.com/market/*"
-			],
-			"js":
-			[
-				"scripts/community/market_injected.js"
-			],
-			"css":
-			[
-				"styles/market.css"
-			]
-		},
-		{
 			"run_at": "document_end",
 			"matches":
 			[
