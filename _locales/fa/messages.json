@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "فروش چند آیتم"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ برای فروش، با شروع از $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ درخواست خرید با قیمت $price$ یا کمتر",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ یا بیشتر",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "سطح نشان شما: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "مخفی کردن دکمه \"Install Steam\" در بالای صفحه",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "افزودن دکمه‌ی \"باز کردن در برنامه دسکتاپ\" در سربرگ"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "مخفی کردن بنر \"Open in the Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "نمایش تاریخجه امتیازات CS در صفحه دستاوردهای CS2"
+	},
+	"open_desktop_app": {
+		"message": "باز کردن در برنامه دسکتاپ"
 	},
 	"boostercreator_available_at_date": {
 		"message": "شما تا تاریخ $available_date$ قادر به ایجاد بسته تقویتی دیگری برای این بازی نخواهید بود.",

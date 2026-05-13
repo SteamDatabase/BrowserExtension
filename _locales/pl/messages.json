@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Sprzedaj wiele przedmiotów"
+	},
+	"inventory_orders_for_sale": {
+		"message": "Ceny $count$ przedmiotów zaczynają się od $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ zleceń zakupu po $price$ lub mniej",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ lub więcej",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Poziom Twojej odznaki: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Ukryj przycisk \"Zainstaluj Steam\" w nagłówku",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Dodaj przycisk \"Otwórz w aplikacji komputerowej\" w nagłówku"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ukryj baner \"Otwórz w Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Wyświetl historię klasyfikacji CS na stronie osiągnięć CS2"
+	},
+	"open_desktop_app": {
+		"message": "Otwórz w aplikacji komputerowej"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nie będziesz w stanie utworzyć kolejnego Pakietu Boostera dla tej gry dopóki $available_date$.",

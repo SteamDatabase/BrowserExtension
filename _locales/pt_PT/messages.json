@@ -274,7 +274,7 @@
 		"message": "Classificação CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Mouse sobre um preço para vender",
+		"message": "Passa o mouse sobre um preço para vender",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
@@ -292,6 +292,44 @@
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_multiple": {
+		"message": "Vende vários itens"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ à venda, a partir de $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ pedidos para comprar por $price$ ou menos",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ ou mais",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
 			}
 		}
 	},
@@ -509,7 +547,7 @@
 		"message": "Mostrar botões do SteamDB e da loja na página de cartas do jogo"
 	},
 	"options_steamdb_dev_pub_links": {
-		"message": "Exibir ligações do SteamDB ao lado dos programadores e publicadoras"
+		"message": "Exibir ligações do SteamDB ao lado dos nomes dos programadores e editores"
 	},
 	"options_link_subid": {
 		"message": "Mostrar SubID sob cada opção de compra"
@@ -580,6 +618,9 @@
 		"message": "Ocultar botão \"Instalar o Steam\" no cabeçalho",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Adicionar um botão \"Abrir na aplicação de ambiente de trabalho\" no cabeçalho"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Esconder a faixa \"Abrir no Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Mostrar o histórico de classificação CS na página de proezas do CS2"
+	},
+	"open_desktop_app": {
+		"message": "Abrir na aplicação de ambiente de trabalho"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Não podes criar outro Pacote de Boosters para este jogo até $available_date$.",

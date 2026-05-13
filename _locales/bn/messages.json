@@ -19,7 +19,7 @@
 		}
 	},
 	"steamstatus_downtime": {
-		"message": ""
+		"message": "Steam​ বর্তমানে কিছু অনুপস্থিতি অনুভব করছে। "
 	},
 	"view_on_steamdb": {
 		"message": "SteamDB তে দেখুন"
@@ -292,6 +292,44 @@
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_multiple": {
+		"message": "একাধিক আইটেম বিক্রি করুন"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ বিক্রির জন্য, $price$ থেকে শুরু",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$price$ বা তার কমে কেনার জন্য $count$ অনুরোধ",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ বা তার বেশি",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
 			}
 		}
 	},
@@ -580,6 +618,9 @@
 		"message": "হেডারে \"Install Steam\" বোতামটি অদৃশ্য​ থাকবে",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "হেডারে একটি \"ডেস্কটপ অ্যাপে খুলুন\" বোতাম যোগ করুন"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "ব্যানারে \"Open in Steam\" বোতামটি অদৃশ্য​ থাকবে"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2 কৃতিত্বের পৃষ্ঠায় CS Rating-এর ইতিহাস প্রদর্শন করবে"
+	},
+	"open_desktop_app": {
+		"message": "ডেস্কটপ অ্যাপে খুলুন"
 	},
 	"boostercreator_available_at_date": {
 		"message": "আপনি $available_date$ পর্যন্ত এই গেমের জন্য আরেকটি Booster Pack তৈরি করতে পারবেন না।",

@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Birden fazla öğe sat"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$price$ fiyatından başlayan $count$ ilan var",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$price$ ya da daha düşük fiyata $count$ satın alma talimatı var",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ veya daha fazla",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Rozet seviyesi: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Başlıktaki \"Steam'i Yükle\" butonunu gizle",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Üst bilgiye “Masaüstü Uygulamasında Aç” butonu ekle"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"Steam'de Aç\" yazısını gizle"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2'nin başarımlarında CS derecelerini göster"
+	},
+	"open_desktop_app": {
+		"message": "Masaüstü Uygulamasında Aç"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Bu oyun için $available_date$ tarihine kadar başka bir Hızlandırma Paketi oluşturamazsınız.",

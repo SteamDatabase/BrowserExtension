@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Πώληση πολλαπλών αντικειμένων"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ προς πώληση από $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ αιτήματα αγοράς για $price$ ή λιγότερο",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ ή περισσότερο",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Επίπεδο εμβλημάτων: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Απόκρυψη κουμπιού \"Εγκατάσταση Steam\" στην κεφαλίδα",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Προσθήκη κουμπιού «Άνοιγμα στην εφαρμογή υπολογιστή» στην κεφαλίδα"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Απόκρυψη του banner \"Άνοιγμα στο Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Εμφάνιση του ιστορικού αξιολόγησης CS στη σελίδα επιτευγμάτων CS2"
+	},
+	"open_desktop_app": {
+		"message": "Άνοιγμα στην εφαρμογή υπολογιστή"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Δεν θα είστε σε θέση να δημιουργήσετε ένα άλλο Booster Pack για αυτό το παιχνίδι μέχρι $available_date$.",

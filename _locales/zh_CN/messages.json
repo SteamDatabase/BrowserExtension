@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "出售多个物品"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ 个出售中，起价 $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ 份以 $price$ 或更低价格购买的请求",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ 或更高",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "您的徽章等级：$level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "隐藏顶部的“安装 Steam”按钮",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "在顶部添加“在桌面应用中打开”按钮"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隐藏未登录时页面顶部的“在 Steam 应用中打开”横幅"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "在 CS2 成就页面显示 CS 段位历史"
+	},
+	"open_desktop_app": {
+		"message": "在桌面应用中打开"
 	},
 	"boostercreator_available_at_date": {
 		"message": "$available_date$ 以后，你才能为此游戏制作更多补充包。",

@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Meerdere voorwerpen verkopen"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ te koop vanaf $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ verzoeken om te kopen voor $price$ of minder",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ of meer",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Jouw badge level: $level$",
 		"placeholders": {
@@ -515,7 +553,7 @@
 		"message": "Toon sub-ID onder elke aankoopoptie"
 	},
 	"options_link_subid_widget": {
-		"message": "Sub-ID in gebedde widgets weergeven",
+		"message": "Sub-ID in ingebedde widgets weergeven",
 		"description": "Reference: https://partner.steamgames.com/doc/marketing/widget"
 	},
 	"options_link_accountpage": {
@@ -580,6 +618,9 @@
 		"message": "Verberg de \"Install Steam\" knop in de header",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "\"Openen in Desktop-App\" knop toevoegen in de header"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Verberg \"Openen in Steam\" banner"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Geef CS-rating weer op de CS2 prestatiepagina"
+	},
+	"open_desktop_app": {
+		"message": "Openen in Desktop-App"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Je zult pas een $available_date$ spel kunnen maken met nog een Booster Pack voor dit spel.",

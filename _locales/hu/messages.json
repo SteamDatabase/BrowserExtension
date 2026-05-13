@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Több tárgy eladása"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ eladó, $price$ kezdőárral",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ venne, $price$-ért vagy olcsóbban",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ vagy több",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "A te kitűződ szintje: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "„Steam telepítése” gomb elrejtése a fejlécről",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "\"Megnyitás az asztali alkalmazásban\" gomb hozzáadása a fejléchez"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "„Megnyitás a Steamben” figyelmeztetés elrejtése"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS-besorolás megjelenítése a CS2 teljesítmények oldalán"
+	},
+	"open_desktop_app": {
+		"message": "Megnyitás az asztali alkalmazásban"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nem tudsz újabb bónuszcsomagot készíteni ehhez a játékhoz eddig: $available_date$.",

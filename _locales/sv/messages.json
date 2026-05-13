@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Sälj flera föremål"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ till salu från $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ efterfrågade att köpa för $price$ eller mindre",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ eller mer",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Din märkesnivå: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Dölj ”Installera Steam”-knappen",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Lägg till en \"Öppna i skrivbordsappen\"-knapp i rubriken"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Dölj banderollen för \"Öppna i Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Visa CS rating historik på CS2 achievements sidan"
+	},
+	"open_desktop_app": {
+		"message": "Öppna i skrivbordsappen"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Du kommer inte att kunna skapa ett nytt Booster Pack för detta spel förrän $available_date$.",

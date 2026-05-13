@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Müü mitut eset"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ müügil alates $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ ostusoovi hinnaga $price$ või vähem",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ või rohkem",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Sinu märgi tase: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Peida \"Install Steam\" nupp pealises",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Lisa päisesse nupp \"Ava töölauarakenduses\""
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Peida \"Open in Steam\" bänner"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS-i reitingute ajaloo kuvamine CS2 saavutuste lehel"
+	},
+	"open_desktop_app": {
+		"message": "Ava töölauarakenduses"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Sa ei saa selle mängu jaoks uut võimenduspaketti luua enne kuupäeva $available_date$.",

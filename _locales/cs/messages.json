@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Prodat více předmětů"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ na prodej s cenou od $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ žádostí o nákup za $price$ nebo méně",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ nebo více",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Úroveň vašeho odznaku: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Skrýt v záhlaví tlačítko „Instalovat Steam“",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Přidat tlačítko \"Otevřít v počítačové aplikaci\" v záhlaví"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skrýt banner „Otevřít ve Steamu“"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Zobrazit historii CS hodnocení na stránce CS2 achievementů"
+	},
+	"open_desktop_app": {
+		"message": "Otevřít v počítačové aplikaci"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Do $available_date$ nebudete moci vytvořit další balíček Booster Pack pro tuto hru.",

@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Mehrere Gegenstände verkaufen"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ stehen ab $price$ zum Verkauf",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ Kaufaufträge für $price$ oder weniger",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ oder mehr",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Level vom Abzeichen: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "„Steam installieren“-Button in der Kopfzeile verbergen",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "„In Desktop-App öffnen“-Button in der Kopfzeile anzeigen"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "„In Steam öffnen“-Banner verbergen"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Verlauf der CS-Wertung bei den CS2-Errungenschaften anzeigen"
+	},
+	"open_desktop_app": {
+		"message": "In Desktop-App öffnen"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Du wirst bis zum $available_date$ kein weiteres Booster-Pack für dieses Spiel herstellen können.",

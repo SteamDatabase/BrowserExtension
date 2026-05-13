@@ -69,10 +69,10 @@
 		"description": "Visible on the mobile version"
 	},
 	"app_stats_online": {
-		"message": "在線統計"
+		"message": "線上統計"
 	},
 	"app_stats_online_now": {
-		"message": "在線玩家數："
+		"message": "線上玩家數："
 	},
 	"app_stats_peak_today": {
 		"message": "24小時內最高峰："
@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "出售多個物品"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ 件販售 $price$ 起",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ 個以 $price$ 或更低價格購買的請求",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ 或更高",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "您的徽章等級：$level$",
 		"placeholders": {
@@ -441,7 +479,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "當啟用「$options_online_stats$」或「$options_steamdb_last_update$」選項時，擴充套件會向 $domain$ 傳送請求以取得在線玩家數和最近的更新日誌。",
+		"message": "當啟用「$options_online_stats$」或「$options_steamdb_last_update$」選項時，擴充套件會向 $domain$ 傳送請求以取得線上玩家數和最近的更新日誌。",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -580,6 +618,9 @@
 		"message": "隱藏頂部的「安裝 Steam」按鈕",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "在標題列加入「在桌面應用程式中開啟」按鈕"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隱藏「在 Steam 中開啟」橫幅"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "在CS2成就頁面顯示CS評級歷史"
+	},
+	"open_desktop_app": {
+		"message": "在桌面應用程式中開啟"
 	},
 	"boostercreator_available_at_date": {
 		"message": "您將無法為此遊戲合成另一個擴充包 $available_date$。",

@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Myy useita esineitä"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ myynnissä alkaen $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ ostotarjousta hintaan $price$ tai alle",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ tai yli",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Kunniamerkkisi taso: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Piilota \"Asenna Steam\" -painike ylätunnisteesta",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Lisää otsikkoon \"Avaa työpöytäsovelluksessa\"-painike"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Piilota \"Avaa Steamissa\" banneri"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Näytä CS-luokituksen historia CS2-saavutusten sivulla"
+	},
+	"open_desktop_app": {
+		"message": "Avaa työpöytäsovelluksessa"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Et voi luoda toista Booster Pack tätä peliä ennen kuin $available_date$.",

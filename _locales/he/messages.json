@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "מכור פריטים מרובים"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ למכירה החל מ-$price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ בקשות לקנייה במחיר $price$ או פחות",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ או יותר",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "רמת התג שלך: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "הסתר את כפתור \"התקן את סטים\" בראש האתר",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "הוסף כפתור \"פתח באפליקציית שולחן העבודה\" בכותרת"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "הסתר את באנר \"פתח בסטים\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "הצג היסתורית דרגות CS על דף הישגים של CS2"
+	},
+	"open_desktop_app": {
+		"message": "פתח באפליקציית שולחן העבודה"
 	},
 	"boostercreator_available_at_date": {
 		"message": "לא תוכל ליצור חבילת בוסטר נוספת עבור המשחק הזה עד ל \n$available_date$.",

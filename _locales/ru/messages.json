@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Продать несколько предметов"
+	},
+	"inventory_orders_for_sale": {
+		"message": "Заявок на продажу: $count$ Начальная цена: $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "Заявок на покупку по цене $price$ и ниже: $count$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ и более",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Уровень вашего значка: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Скрыть кнопку «Установить Steam» в заголовке",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Добавить в заголовок кнопку \"Открыть в приложении для компьютера\""
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Скрыть баннер «Открыть в Steam»"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Отображать историю рейтинга CS на странице достижений CS2"
+	},
+	"open_desktop_app": {
+		"message": "Открыть в приложении для компьютера"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Вы не сможете создать дополнительный набор карточек этой игры до $available_date$.",

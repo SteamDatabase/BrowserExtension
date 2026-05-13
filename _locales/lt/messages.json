@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Parduoti daugybę daiktų"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ parduodama nuo $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ pirkimo užklausų už $price$ ar mažiau",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ ar daugiau",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Tavo ženklelio lygis: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Paslėpti \"Įdiegti Steam\" mygtuką antraštėje",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Pridėti \"Atidaryti darbalaukio programėlėje\" mygtuką antraštėje"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Paslėpti \"Atidaryti per Steam\" užrašą"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Rodyti CS reitingo istoriją CS2 pasiekimų puslapyje"
+	},
+	"open_desktop_app": {
+		"message": "Atidaryti darbalaukio programėlėje"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Negalėsite sukurti kito Booster Pack šiam žaidimui iki $available_date$.",

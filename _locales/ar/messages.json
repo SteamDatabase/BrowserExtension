@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "بيع عدة عناصر"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ معروضة للبيع بدءًا من $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ طلبات شراء بسعر $price$ أو أقل",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ أو أكثر",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "مستوى الشارة الخاصة بك: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "إخفاء زر \"تثبيت الشاشة\" في رأس الصفحة",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "أضف زر \"افتح في تطبيق سطح المكتب\" في الترويسة"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "إخفاء شعار ”فتح في Steam“"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "عرض سجل تصنيف CS على صفحة إنجازات CS2"
+	},
+	"open_desktop_app": {
+		"message": "افتح في تطبيق سطح المكتب"
 	},
 	"boostercreator_available_at_date": {
 		"message": "لن تتمكن من إنشاء حزمة معززة أخرى لهذه اللعبة حتى $available_date$.",

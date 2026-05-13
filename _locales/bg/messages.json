@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Продаване на няколко артикула"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ за продан, започващи от $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ заявки за купуване при $price$ или по-малко",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ или повече",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Ниво на значка: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Скрий бутона „Инсталирайте Steam“ в горната лента",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Добавяне на бутон „Отваряне в настолното приложение“ в заглавната част"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Скрий банера „Отвори в Steam“"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Покажи история на CS рейтинга на страницата с постижения на CS2"
+	},
+	"open_desktop_app": {
+		"message": "Отваряне в настолното приложение"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Няма да можете да създадете нов допълнителен пакет за тази игра до $available_date$.",

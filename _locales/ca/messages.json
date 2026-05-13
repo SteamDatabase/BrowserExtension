@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Ven diversos objectes"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ a la venda a partir de $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ peticions de compra a $price$ o menys",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ o més",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "El teu nivell d'insígnia: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Amaga el botó d'\"Instal·lar Steam\" a la capçalera",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Afegeix un botó \"Obre a l'aplicació d'escriptori\" a la capçalera"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Amaga el banner d'\"Obrir a Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Mostra l'historial de puntuacions de CS a la pàgina d'assoliments de CS2"
+	},
+	"open_desktop_app": {
+		"message": "Obre a l'aplicació d'escriptori"
 	},
 	"boostercreator_available_at_date": {
 		"message": "No podràs crear un altre Booster Pack per a aquest joc fins a $available_date$.",

@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Sælg flere genstande"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ til salg fra $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ anmodninger om at købe til $price$ eller mindre",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ eller mere",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Dit badge niveau: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Skjul knappen \"Installer Steam\" i headeren",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Tilføj en \"Åbn i skrivebordsappen\"-knap i headeren"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skjul \"Åbn i Steam\" banneret"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Vis CS-vurderingshistorik på CS2 bedriftssiden"
+	},
+	"open_desktop_app": {
+		"message": "Åbn i skrivebordsappen"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Du vil ikke være i stand til at oprette en anden Booster Pack for dette spil, før $available_date$.",

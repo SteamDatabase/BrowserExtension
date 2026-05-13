@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Vender múltiples artículos"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ a la venta a partir de $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ pedidos de compra a $price$ o menos",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ o más",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Tu nivel de insignia: $level$",
 		"placeholders": {
@@ -317,7 +355,7 @@
 		"message": "Ninguna insignia fabricada"
 	},
 	"spoilers_reveal": {
-		"message": "Revelar spoilers",
+		"message": "Revelar espóilers",
 		"description": "A button or checkbox that reveals spoilers when toggled"
 	},
 	"popup_charts": {
@@ -580,6 +618,9 @@
 		"message": "Ocultar botón «Instalar Steam» en el encabezado",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Añadir botón «Abrir en el cliente de Steam» al encabezado"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar el aviso «Abrir en Steam»"
 	},
@@ -604,13 +645,13 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
-		"message": "Colocar los logros ocultos detrás de un elemento spoiler"
+		"message": "Colocar los logros ocultos detrás de un elemento espóiler"
 	},
 	"options_prevent_store_images": {
 		"message": "Impedir que las imágenes se carguen en las páginas de productos"
 	},
 	"options_prevent_store_images_description": {
-		"message": "Algunos desarrolladores ponen megabytes de imágenes en las descripciones de los productos, lo que puede tardar un tiempo en cargar. Haz clic en una imagen para cargarla"
+		"message": "Algunos desarrolladores publican imágenes de gran tamaño en las descripciones de los productos, lo que puede tardar un poco en cargarse; para verlas, haz clic en una imagen."
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "Admitir parámetros de premio «$award$» en enlaces de perfiles y capturas, artwork o vídeos compartidos",
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Mostrar el historial de «Calificación de CS» en la página de logros de CS2"
+	},
+	"open_desktop_app": {
+		"message": "Abrir en el cliente de Steam"
 	},
 	"boostercreator_available_at_date": {
 		"message": "No podrás crear otro pack de refuerzo para este juego hasta el $available_date$.",

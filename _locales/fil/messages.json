@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Magbenta ng maraming item"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ ipinagbibili simula sa $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ kahilingan na bumili sa $price$ o mas mababa",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ o higit pa",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Ang iyong badge level: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Itago ang button na \"Install Steam\" sa header",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Magdagdag ng pindutang \"Buksan sa Desktop App\" sa header"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Itago ang banner na \"Open in the Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Ipakita ang CS rating history sa CS2 achievements page"
+	},
+	"open_desktop_app": {
+		"message": "Buksan sa Desktop App"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Hindi ka makakagawa ng isa pang Booster Pack para sa larong ito hanggang $available_date$.",

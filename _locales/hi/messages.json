@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "एकाधिक आइटम बेचें"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ बिक्री के लिए, $price$ से शुरू",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$price$ या उससे कम पर खरीदने के लिए $count$ अनुरोध",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ या उससे अधिक",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "आपका बैज स्तर: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "हेडर में \"इंस्टॉल स्टीम\" बटन छुपाएं",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "हेडर में \"डेस्कटॉप ऐप में खोलें\" बटन जोड़ें"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"ओपन इन द स्टीम\" बैनर छिपाएँ"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2 उपलब्धियां पृष्ठ पर CS रेटिंग इतिहास प्रदर्शित करें"
+	},
+	"open_desktop_app": {
+		"message": "डेस्कटॉप ऐप में खोलें"
 	},
 	"boostercreator_available_at_date": {
 		"message": "आप इस गेम के लिए एक और बूस्टर पैक बनाने में सक्षम नहीं होंगे $available_date$ तक।",

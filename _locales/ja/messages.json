@@ -274,7 +274,7 @@
 		"message": "CSレーティング"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "販売価格にマウスオーバーします。",
+		"message": "価格にマウスオーバーして販売",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
@@ -292,6 +292,44 @@
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_multiple": {
+		"message": "複数アイテムを販売"
+	},
+	"inventory_orders_for_sale": {
+		"message": "開始価格$price$から$count$個出品中",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$price$以下での購入希望$count$件",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$以上",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
 			}
 		}
 	},
@@ -333,7 +371,7 @@
 		"message": "パッチ"
 	},
 	"popup_calculator": {
-		"message": "カルキュレーター"
+		"message": "計算ツール"
 	},
 	"options": {
 		"message": "オプション"
@@ -342,7 +380,7 @@
 		"message": "👋 SteamDB 拡張機能をインストールしていただきありがとうございます！"
 	},
 	"options_welcome_description": {
-		"message": "以下のオプションを確認し、好みのオプションに切り替えます。今後ここに戻るには:"
+		"message": "以下のオプションを確認し、お好みに合わせて設定してください。今後ここに戻るには："
 	},
 	"options_welcome_option1": {
 		"message": "SteamDB の設定ページ"
@@ -366,7 +404,7 @@
 		"message": "🇨🇳 Steam China サポートを有効にする"
 	},
 	"options_footer1": {
-		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> のみんなと💙を持って作られました。"
+		"message": "<a href=\"https://steamdb.info\" target=\"_blank\">SteamDB</a> のみんなと💙を込めて作られました。"
 	},
 	"options_footer2": {
 		"message": "<a href=\"https://github.com/SteamDatabase/BrowserExtension\" target=\"_blank\">オープンソース</a>であり、すべてのコントリビューターに感謝しています！"
@@ -441,7 +479,7 @@
 		}
 	},
 	"options_extra_data_players": {
-		"message": "「$options_online_stats$」または「$options_steamdb_last_update$」がONの時、拡張機能はセキュア リクエストで $domain$ から同時接続プレイヤー数とゲームの最終更新日を取得します。",
+		"message": "「$options_online_stats$」または「$options_steamdb_last_update$」がONの時、拡張機能はセキュアリクエストで $domain$ から同時接続プレイヤー数とゲームの最終更新日を取得します。",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -458,7 +496,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "$options_steamdb_lowest_price$が有効な場合、拡張機能は$domain$から Steam で設定された通貨での最低記録価格を取得します。",
+		"message": "「$options_steamdb_lowest_price$」が有効な場合、拡張機能はあなたの通貨（Steamが認識している通貨）でセキュアリクエストを $domain$ に送信し、特定のゲームの記録された価格を取得します。",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -471,7 +509,7 @@
 		}
 	},
 	"options_extra_data_achievement_groups": {
-		"message": "「$options_achievement_groups$」が有効な場合、拡張機能はセキュアリクエストを介して $domain$ から Steam Hunters によって提供されているデータを取得し、マイ実績ページにある実績をグループ化します。",
+		"message": "「$options_achievement_groups$」が有効な場合、拡張機能はセキュアリクエストで $domain$ から Steam Hunters によって提供されているデータを取得し、マイ実績ページにある実績をグループ化します。",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it",
 		"placeholders": {
 			"domain": {
@@ -509,7 +547,7 @@
 		"message": "ゲームカードのページに SteamDB とストアページボタンを表示"
 	},
 	"options_steamdb_dev_pub_links": {
-		"message": "開発者とパブリッシャー名の隣にSteamDBリンクを表示する"
+		"message": "開発者とパブリッシャー名の隣にSteamDBリンクを表示"
 	},
 	"options_link_subid": {
 		"message": "各購入オプションにSubIDを表示"
@@ -580,6 +618,9 @@
 		"message": "ヘッダーの「Steam をインストール」ボタンを隠す",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "ヘッダーに「デスクトップアプリで開く」ボタンを追加"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "「Steam で開く」バナーを隠す"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2実績ページにCSレーティングの履歴を表示する"
+	},
+	"open_desktop_app": {
+		"message": "デスクトップアプリで開く"
 	},
 	"boostercreator_available_at_date": {
 		"message": "$available_date$ までこのゲーム用のブースターパックを作成することはできません。",

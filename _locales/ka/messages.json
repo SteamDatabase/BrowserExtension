@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "გაყიდე რამდენიმე ნივთი"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ იყიდება, ფასი იწყება $price$-დან",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ ყიდვის მოთხოვნა $price$-ზე ან ნაკლებზე",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ ან მეტი",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "თქვენი ბეჯის დონე: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "დამალდე \"Install Steam\" -ის ღილაკი",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "დაამატე \"გახსენი დესკტოპის აპლიკაციაში\" ღილაკი სათაურში"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "დამალე \"Open in the Steam\"-ის ბანერი"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2 მიღწევების გვერდზე CS შეფასების ისტორიის ჩვენება"
+	},
+	"open_desktop_app": {
+		"message": "გახსენი დესკტოპის აპლიკაციაში"
 	},
 	"boostercreator_available_at_date": {
 		"message": "ვერ შეძლებთ აღარ შექმნათ Booster Pack ამ თამაშისთვის $available_date$-მდე.",

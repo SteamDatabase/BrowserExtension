@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Prodaj više predmeta"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ na prodaju počevši od $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ zahtjeva za kupnju po cijeni $price$ ili manje",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ ili više",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Vaša razina značke: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Sakrij gumb 'Instaliraj Steam' u zaglavlju",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Dodaj \"Otvori u Desktop aplikaciji\" gumb u zaglavlju"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Sakrij banner 'Otvori u Steamu'"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Prikaži povijest CS ocjena na CS2 stranici postignuća"
+	},
+	"open_desktop_app": {
+		"message": "Otvori u Desktop aplikaciji"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nećete moći napraviti još jedan Booster Pack za ovu igru do $available_date$.",

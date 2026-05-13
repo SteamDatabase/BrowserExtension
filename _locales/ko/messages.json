@@ -29,7 +29,7 @@
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"view_on_pcgamingwiki": {
-		"message": "PCGamingWiki 에서 보기"
+		"message": "PCGamingWiki에서 보기"
 	},
 	"view_your_achievements": {
 		"message": "개인 도전 과제"
@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "다중 아이템 판매"
+	},
+	"inventory_orders_for_sale": {
+		"message": "판매 등록 아이템 $count$개 - 최저 가격: $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$price$ 이하 구매 주문 $count$개",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ 이상",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "배지 레벨: $level$",
 		"placeholders": {
@@ -342,7 +380,7 @@
 		"message": "👋 SteamDB 확장 프로그램을 설치해주셔서 감사합니다!"
 	},
 	"options_welcome_description": {
-		"message": "아래의 설정을 확인하고 적용하고 싶은 항목을 선택하세요. 다시 설정창으로 돌아오려면 아래의 위치에서 확인할 수 있습니다."
+		"message": "아래의 설정을 확인하고 적용하고 싶은 항목을 선택하세요. 다시 이곳으로 돌아오려면:"
 	},
 	"options_welcome_option1": {
 		"message": "SteamDB 설정 페이지"
@@ -458,7 +496,7 @@
 		}
 	},
 	"options_extra_data_prices": {
-		"message": "\"$options_steamdb_lowest_price$\" 설정이 활성화되면, 확장 프로그램은 특정 게임에 대해 기록된 가격을 얻기 위해 귀하의 통화(Steam 에 설정된 통화) 를 사용하여 $domain$에 보안 요청을 수행합니다.",
+		"message": "\"$options_steamdb_lowest_price$\" 설정이 활성화되면, 확장 프로그램은 특정 게임에 대해 기록된 가격을 얻기 위해 귀하의 통화(Steam에 설정된 통화) 를 사용하여 $domain$에 보안 요청을 수행합니다.",
 		"placeholders": {
 			"domain": {
 				"content": "steamdb.info",
@@ -554,7 +592,7 @@
 		}
 	},
 	"options_github_explanation": {
-		"message": "GitHub 에서 설명 확인하기"
+		"message": "GitHub에서 설명 확인하기"
 	},
 	"options_enhancement_tradeoffer_no_gift_confirm": {
 		"message": "거래 제안 알림 \"이 거래가 의심스러워 보입니다\" 및 \"선물이 확실합니까?\" 차단"
@@ -566,10 +604,10 @@
 		"message": "나이 확인 페이지 건너뛰기"
 	},
 	"options_enhancement_skip_agecheck_description": {
-		"message": "나이와 생일 쿠키를 설정하고 항상 건너뛰기"
+		"message": "나이와 생일 쿠키를 설정하고 항상 건너뜁니다"
 	},
 	"options_enhancement_no_linkfilter": {
-		"message": "외부 사이트에서 “Steam 을 벗어납니다” 링크 필터 제거",
+		"message": "외부 사이트에서 “Steam을 벗어납니다” 링크 필터 제거",
 		"description": "\"You are leaving Steam\" should match what the button on Steam itself says: https://steamcommunity.com/linkfilter/?url=https://steamdb.info"
 	},
 	"options_enhancement_market_ssa": {
@@ -580,8 +618,11 @@
 		"message": "\"Steam 설치\" 버튼 숨기기",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "헤더에 \"데스크톱 앱에서 열기\" 버튼 추가"
+	},
 	"options_enhancement_hide_mobile_app_button": {
-		"message": "\"Steam 에서 열기\" 배너 숨기기"
+		"message": "\"Steam에서 열기\" 배너 숨기기"
 	},
 	"options_steamdb_rating": {
 		"message": "제품 페이지에 SteamDB 평가 표시"
@@ -610,7 +651,7 @@
 		"message": "제품 페이지의 이미지 불러오지 않기"
 	},
 	"options_prevent_store_images_description": {
-		"message": "일부 개발사는 제품 설명란에 큰 이미지를 넣어 로딩이 길어질 수 있습니다. 클릭하여 이미지를 로딩하세요."
+		"message": "일부 개발사는 제품 설명란에 용량이 큰 이미지를 넣어 로딩이 길어질 수 있습니다. 이미지를 클릭하여 로드하도록 합니다"
 	},
 	"options_enhancement_award_popup_url": {
 		"message": "프로필 및 공유 파일 링크에서 $award$ 매개변수 지원",
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "CS2 도전 과제 페이지에 CS 등급 기록 표시"
+	},
+	"open_desktop_app": {
+		"message": "데스크톱 앱에서 열기"
 	},
 	"boostercreator_available_at_date": {
 		"message": "$available_date$까지 이 게임에 대한 다른 부스터 팩을 제작할 수 없습니다.",

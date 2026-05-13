@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Vinde mai multe articole"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ de vânzare începând de la $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ solicitări de cumpărare la $price$ sau mai puțin",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ sau mai mult",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Nivelul insignei dvs.: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Ascunde butonul \"Instalează Steam\" în antet",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Adaugă un buton „Deschide în aplicația Desktop” în antet"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ascunde banner-ul \"Deschide în aplicație Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Afişează istoricul de evaluare în CS pe pagina de realizări CS2"
+	},
+	"open_desktop_app": {
+		"message": "Deschide în aplicația Desktop"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nu veți putea crea un alt Pachet de rapel pentru acest joc până când nu veți putea $available_date$.",

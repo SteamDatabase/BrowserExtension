@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "ขายไอเทมหลายชิ้น"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ รายการขาย เริ่มต้นที่ $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ คำสั่งซื้อ ที่ $price$ หรือต่ำกว่า",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ หรือสูงกว่า",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "ระดับตราสัญลักษณ์ของคุณ: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "ซ่อนปุ่ม \"ติดตั้ง Steam\" ที่ส่วนหัว",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "เพิ่มปุ่ม \"เปิดในแอปเดสก์ท็อป\" ในส่วนหัว"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "ซ่อนแบนเนอร์ \"เปิดใน Steam\""
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "แสดงประวัติ CS เรตติ้ง บนหน้าความสำเร็จของ CS2"
+	},
+	"open_desktop_app": {
+		"message": "เปิดในแอปเดสก์ท็อป"
 	},
 	"boostercreator_available_at_date": {
 		"message": "คุณจะไม่สามารถสร้าง Booster Pack อีกสำหรับเกมนี้จนถึง $available_date$",

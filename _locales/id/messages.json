@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Jual beberapa item"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ dijual dimulai dari $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ ingin membeli dengan harga $price$ atau kurang",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ atau lebih",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Level lencana anda: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Sembunyikan tombol “Instal Steam” di header",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Tambahkan tombol \"Buka di Aplikasi Desktop\" di header"
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Sembunyikan banner “Buka di Steam”"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Tampilkan riwayat penilaian CS di halaman pencapaian CS2"
+	},
+	"open_desktop_app": {
+		"message": "Buka di Aplikasi Desktop"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Anda tidak akan dapat membuat Booster Pack lain untuk game ini hingga $available_date$.",

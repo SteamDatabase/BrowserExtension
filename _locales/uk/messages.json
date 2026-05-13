@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Продати кілька предметів"
+	},
+	"inventory_orders_for_sale": {
+		"message": "Пропозицій продажу за $price$ чи більше: $count$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "Замовлень на купівлю за $price$ чи менше: $count$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ чи більше",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Рівень вашого значка: $level$",
 		"placeholders": {
@@ -580,6 +618,9 @@
 		"message": "Сховати кнопку «Інсталювати в Steam» у заголовку",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Додати зверху кнопку \"Відкрити в програмі\""
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Сховати банер «Відкрити в Steam»"
 	},
@@ -643,6 +684,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Показувати історію рейтингу CS на сторінці досягнень CS2"
+	},
+	"open_desktop_app": {
+		"message": "Відкрити в програмі"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Ви не зможете створити інший комплект для цієї гри до $available_date$.",
