@@ -24,6 +24,10 @@
 		{
 			msg = _t( token, [ _t( 'options_achievement_groups' ) ] );
 		}
+		else if( token === 'options_enhancement_open_desktop_app_button' )
+		{
+			msg = _t( token, [ _t( 'open_desktop_app' ) ] );
+		}
 		else
 		{
 			msg = _t( token );
