@@ -671,14 +671,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Some developers put megabytes of images in product descriptions which can take a while to load, click on an image to load"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Support $award$ parameters on profile and shared file links",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Add a button to collapse the \"already in your library\" block"
 	},
