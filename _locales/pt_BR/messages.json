@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Adicionar o botão \"Abrir no cliente Steam\" ao cabeçalho"
+		"message": "Adicionar o botão \"$open_desktop_app$\" ao cabeçalho",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar o banner \"Abrir no aplicativo\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Alguns desenvolvedores incluem imagens desnecessariamente grandes nas descrições dos produtos, o que pode atrasar o carregamento de páginas. Clique no ícone de foto para carregá-las."
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Suporte ao parâmetro $award$ em links de perfis e conteúdo criado pela comunidade",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Adicionar um botão para contrair a seção \"[Produto] já está na sua Biblioteca Steam\""

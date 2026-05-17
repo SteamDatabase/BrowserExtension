@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Thêm nút \"Mở trong ứng dụng\" ở đầu trang"
+		"message": "Thêm nút \"$open_desktop_app$\" ở đầu trang",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ẩn biểu ngữ \"Mở trong phần mềm Steam\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh nếu vẫn cần tải"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang nội dung được chia sẻ",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Thêm nút thu gọn biểu ngữ \"đã ở trong thư viện\""

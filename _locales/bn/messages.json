@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "হেডারে একটি \"ডেস্কটপ অ্যাপে খুলুন\" বোতাম যোগ করুন"
+		"message": "হেডারে একটি \"$open_desktop_app$\" বোতাম যোগ করুন",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "ব্যানারে \"Open in Steam\" বোতামটি অদৃশ্য​ থাকবে"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "কিছু ডেভেলপার দ্রব্যের বিবরণে অনেক মেগাবাইট-এর ছবি দেয়, যা লোড হতে একটু সময় নিতে পারে, একটি ছবিতে ক্লিক করুন লোড করার জন্যে"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "প্রফাইলে এবং শেয়ার করা ফাইলের লিঙ্কে $award$ স্থিতিমাপগুলি সমর্থিত হবে",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "\"ইতিমধ্যে আপনার লাইব্রেরিতে আছে\" ব্লকটি বন্ধ করার জন্যে একটি বোতাম দেখাবে"

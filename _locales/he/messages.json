@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "הוסף כפתור \"פתח באפליקציית שולחן העבודה\" בכותרת"
+		"message": "הוסף כפתור \"$open_desktop_app$\" בכותרת",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "הסתר את באנר \"פתח בסטים\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "ישנם מפתחים אשר שמים תמונות גדולות בתיאור המוצר שיכול לקחת זמן לטעון, לחץ על התמונה לטעון"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "תמיכה ב$award$ קישור על פרופיל ותוכן משותף קהילתית",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "הוסף כפתור להפלת בלוק \"כבר בספרייה שלך\""

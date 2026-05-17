@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Dodaj przycisk \"Otwórz w aplikacji komputerowej\" w nagłówku"
+		"message": "Dodaj przycisk \"$open_desktop_app$\" w nagłówku",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ukryj baner \"Otwórz w Steam\""
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Niektórzy deweloperzy umieszczają megabajty obrazów w opisach produktów, których ładowanie może zająć trochę czasu. Kliknij obraz, aby go załadować"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Wsparcie parametru $award$ na linkach do profilów i udostępnionych plików",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Dodaj przycisk, aby zwinąć blok \"już w twojej bibliotece\""
 	},
@@ -686,7 +684,7 @@
 		"message": "Wyświetl historię klasyfikacji CS na stronie osiągnięć CS2"
 	},
 	"open_desktop_app": {
-		"message": "Otwórz w aplikacji komputerowej"
+		"message": "Otwórz w aplikacji"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nie będziesz w stanie utworzyć kolejnego Pakietu Boostera dla tej gry dopóki $available_date$.",

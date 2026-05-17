@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Lägg till en \"Öppna i skrivbordsappen\"-knapp i rubriken"
+		"message": "Lägg till en \"$open_desktop_app$\"-knapp i rubriken",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Dölj banderollen för \"Öppna i Steam\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Vissa utvecklare lägger in megabyte bilder i produktbeskrivningar som kan ta en stund att ladda, klicka på en bild för att ladda"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Stöd för $award$-parametern på profillänkar, delade workshoplänkar och skärmdumplänkar",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Lägg till en knapp som minimerar \"finns redan i ditt bibliotek\" fältet"

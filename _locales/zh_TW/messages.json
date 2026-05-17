@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "在標題列加入「在桌面應用程式中開啟」按鈕"
+		"message": "在標題列加入「$open_desktop_app$」按鈕",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隱藏「在 Steam 中開啟」橫幅"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "有些開發人員會在產品敘述內放上大容量圖片導致讀取時間變長，點擊以讀取圖片"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "支援個人資料和共享文件連結上的 $award$ 參數",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "添加按鈕以摺疊「已在收藏庫中」的區塊"

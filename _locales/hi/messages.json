@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "हेडर में \"डेस्कटॉप ऐप में खोलें\" बटन जोड़ें"
+		"message": "हेडर में \"$open_desktop_app$\" बटन जोड़ें",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"ओपन इन द स्टीम\" बैनर छिपाएँ"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "कुछ डेवलपर्स उत्पाद विवरण में मेगाबाइट छवियां डालते हैं जिन्हें लोड होने में कुछ समय लग सकता है, लोड करने के लिए छवि पर क्लिक करें"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "प्रोफ़ाइल और साझा फ़ाइल लिंक पर $award$ पैरामीटर का समर्थन करें",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "\"पहले से ही आपकी लाइब्रेरी में\" ब्लॉक को संक्षिप्त करने के लिए एक बटन जोड़ें"

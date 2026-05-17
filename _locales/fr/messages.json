@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Ajouter un bouton \"Ouvrir dans l'application Desktop\" dans l'en-tête"
+		"message": "Ajouter un bouton \"$open_desktop_app$\" dans l'en-tête",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Cacher la bannière \"Ouvrir dans l'application Steam\""
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Certains développeurs utilisent des images de plusieurs mégas dans leurs descriptions de produit ce qui peut ralentir le chargement, cliquez sur ces images pour les charger"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Prise en charge des paramètres $award$ sur le profil et les liens de fichiers partagés",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Ajouter un bouton pour réduire le bloc \"déjà dans votre bibliothèque\""
 	},
@@ -686,7 +684,7 @@
 		"message": "Afficher l'historique de note CS sur la page des succès de CS2"
 	},
 	"open_desktop_app": {
-		"message": "Ouvrir dans l'application Desktop"
+		"message": "Ouvrir dans l'app Desktop"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Vous ne serez pas en mesure de créer un autre Pack de Booster pour ce jeu avant $available_date$.",

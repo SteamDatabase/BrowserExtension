@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Magdagdag ng pindutang \"Buksan sa Desktop App\" sa header"
+		"message": "Magdagdag ng pindutang \"$open_desktop_app$\" sa header",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Itago ang banner na \"Open in the Steam\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Mayroong mga developer na naglalagay ng mga megabyte sa mga larawan sa deskripsyon ng produkto na maaaring resulta ng matagal na pag-load, mag-click sa isang larawan upang ma-load"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Suportahan ang mga parameter ng $award$ sa mga link ng profile at mga nai-share na mga link ng file",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Magdagdag ng button para i-collapse ang \"already in your library\" block"

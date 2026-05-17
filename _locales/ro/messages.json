@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Adaugă un buton „Deschide în aplicația Desktop” în antet"
+		"message": "Adaugă un buton „$open_desktop_app$” în antet",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ascunde banner-ul \"Deschide în aplicație Steam\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Unii dezvoltatori pun megabytes de imagini în descrierile jocului, ceea ce poate dura o vreme să se încarce, apasă pe o imagine pentru a încărca"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Susține parametrii $award$ pentru profilul și link-urile fișierului partajat",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Adaugă un buton pentru a restrânge blocul \"deja în bibliotecă ta\""

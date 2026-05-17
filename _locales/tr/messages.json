@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Üst bilgiye “Masaüstü Uygulamasında Aç” butonu ekle"
+		"message": "Üst bilgiye “$open_desktop_app$” butonu ekle",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"Steam'de Aç\" yazısını gizle"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Bazı geliştiriciler içerik açıklamalarına yüklenmesi uzun sürebilen megabaytlarca resim koyar. Resimleri yüklemek için tıklamanız yeterlidir"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Profilinizdeki ve topluluk içeriklerinizdeki $award$ parametrelerini destekler",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "\"Zaten kütüphanenizde\" kutucuğunu daraltmak için bir buton ekle"

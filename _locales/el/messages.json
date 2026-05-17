@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Προσθήκη κουμπιού «Άνοιγμα στην εφαρμογή υπολογιστή» στην κεφαλίδα"
+		"message": "Προσθήκη κουμπιού «$open_desktop_app$» στην κεφαλίδα",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Απόκρυψη του banner \"Άνοιγμα στο Steam\""
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Ορισμένοι προγραμματιστές βάζουν megabytes εικόνων στις περιγραφές προϊόντων που μπορούν να πάρουν λίγο χρόνο για να φορτώσουν, κάντε κλικ σε μια εικόνα για να φορτώσει"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Υποστήριξη $award$ παραμέτρων στο προφίλ και τους συνδέσμους κοινόχρηστων αρχείων",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Προσθήκη κουμπιού για τη διεύρυνση της επιλογής \"ήδη στη βιβλιοθήκη σου\""
 	},
@@ -686,7 +684,7 @@
 		"message": "Εμφάνιση του ιστορικού αξιολόγησης CS στη σελίδα επιτευγμάτων CS2"
 	},
 	"open_desktop_app": {
-		"message": "Άνοιγμα στην εφαρμογή υπολογιστή"
+		"message": "Άνοιγμα στην εφαρμογή"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Δεν θα είστε σε θέση να δημιουργήσετε ένα άλλο Booster Pack για αυτό το παιχνίδι μέχρι $available_date$.",

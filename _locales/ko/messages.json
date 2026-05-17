@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "헤더에 \"데스크톱 앱에서 열기\" 버튼 추가"
+		"message": "헤더에 \"$open_desktop_app$\" 버튼 추가",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "\"Steam에서 열기\" 배너 숨기기"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "일부 개발사는 제품 설명란에 용량이 큰 이미지를 넣어 로딩이 길어질 수 있습니다. 이미지를 클릭하여 로드하도록 합니다"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "프로필 및 공유 파일 링크에서 $award$ 매개변수 지원",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "\"이미 라이브러리에 있음\" 블록 축소 버튼 추가"

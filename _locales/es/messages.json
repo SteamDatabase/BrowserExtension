@@ -541,7 +541,7 @@
 		"message": "Mostrar un botón en las páginas de paquetes"
 	},
 	"options_button_gamehub": {
-		"message": "Mostrar un botón en los puntos de encuentro"
+		"message": "Mostrar un botón en los centros de la comunidad"
 	},
 	"options_button_gamecards": {
 		"message": "Mostrar botones de SteamDB y de la página de tienda en la página de cromo del juego"
@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Añadir botón «Abrir en el cliente de Steam» al encabezado"
+		"message": "Añadir botón «$open_desktop_app$» al encabezado",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ocultar el aviso «Abrir en Steam»"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Algunos desarrolladores publican imágenes de gran tamaño en las descripciones de los productos, lo que puede tardar un poco en cargarse; para verlas, haz clic en una imagen."
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Admitir parámetros de premio «$award$» en enlaces de perfiles y capturas, artwork o vídeos compartidos",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Añadir un botón para ocultar el recuadro «Ya en tu biblioteca»"

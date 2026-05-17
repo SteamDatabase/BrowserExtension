@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "ヘッダーに「デスクトップアプリで開く」ボタンを追加"
+		"message": "ヘッダーに「$open_desktop_app$」ボタンを追加",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "「Steam で開く」バナーを隠す"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "製品概要欄に読み込みに時間がかかる数メガバイトの画像を入れる開発者もいます。画像をクリックして読み込めるようになります。"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "プロファイルと共有ファイルのリンクで $award$ パラメータをサポート",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "「ライブラリにすでに存在します」バナーを折りたたむボタンを追加する"

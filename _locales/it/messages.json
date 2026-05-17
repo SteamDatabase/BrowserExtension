@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Aggiungi un pulsante \"Apri nell'app Desktop\" nell'intestazione"
+		"message": "Aggiungi un pulsante \"$open_desktop_app$\" nell'intestazione",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Nascondi il banner \"Apri in Steam\""
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Alcuni sviluppatori inseriscono immagini di grandi dimensioni nella descrizione dei prodotti che possono richiedere del tempo per caricarle, clicca su un'immagine per caricarla"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Supporta i parametri $award$ sul profilo e sui collegamenti di file condivisi",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Aggiungi un pulsante per comprimere il blocco \"già nella tua libreria\""

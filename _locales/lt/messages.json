@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Pridėti \"Atidaryti darbalaukio programėlėje\" mygtuką antraštėje"
+		"message": "Pridėti \"$open_desktop_app$\" mygtuką antraštėje",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Paslėpti \"Atidaryti per Steam\" užrašą"
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Kai kurie žaidimų kūrėjai deda megabaitinius paveikslėlius į produktų aprašymus, kurių įkėlimas gali užtrukti, spustelėkite ant paveikslėlio, kad jis būtų įkeltas"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Palaikyti $award$ parametrus profilio ir bendrųjų failų nuorodose",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Uždėti mygtuką kad griūtų \"jau tavo bibliotekoje\" blokas"
 	},
@@ -686,7 +684,7 @@
 		"message": "Rodyti CS reitingo istoriją CS2 pasiekimų puslapyje"
 	},
 	"open_desktop_app": {
-		"message": "Atidaryti darbalaukio programėlėje"
+		"message": "Atidaryti programėlėje"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Negalėsite sukurti kito Booster Pack šiam žaidimui iki $available_date$.",

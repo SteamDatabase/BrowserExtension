@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "在顶部添加“在桌面应用中打开”按钮"
+		"message": "在顶部添加“$open_desktop_app$”按钮",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "隐藏未登录时页面顶部的“在 Steam 应用中打开”横幅"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "一些开发者可能会在产品介绍中加入较大的图像，从而使得页面加载变慢，点击这些图片来使其加载"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "支持个人资料和共享文件链接上的 $award$ 参数",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "在商店页面的“您的 Steam 库中已有”模块添加折叠按钮"

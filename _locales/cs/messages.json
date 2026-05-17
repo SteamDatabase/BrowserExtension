@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Přidat tlačítko \"Otevřít v počítačové aplikaci\" v záhlaví"
+		"message": "Přidat tlačítko \"$open_desktop_app$\" v záhlaví",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skrýt banner „Otevřít ve Steamu“"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Někteří vývojáři vkládají do popisu produktu megabajty obrázků, které se mohou dlouho načítat; obrázek se načte po kliknutí na ikonu"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Podporovat parametry $award$ v profilu a odkazech na sdílené soubory",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Přidat tlačítko pro sbalení bloku „máte již ve své knihovně“"

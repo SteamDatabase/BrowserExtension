@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Tambahkan tombol \"Buka di Aplikasi Desktop\" di header"
+		"message": "Tambahkan tombol \"$open_desktop_app$\" di header",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Sembunyikan banner “Buka di Steam”"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Beberapa pengembang memasukkan gambar berukuran besar dalam deskripsi produk yang dapat melambatkan waktu muat, klik pada gambar untuk memuatnya"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Mendukung parameter $award$ pada profil dan tautan file bersama",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Tambahkan tombol untuk menciutkan blok \"sudah ada di perpustakaan\""

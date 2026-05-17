@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Pridať tlačidlo \"Otvoriť v Počítačovej Aplikácii\" v hlavičke"
+		"message": "Pridať tlačidlo \"$open_desktop_app$\" v hlavičke",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skryť banner „Otvoriť v Steame\""
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Niektorí vývojári dávajú megabajty obrázkov do popisov produktov, ktoré sa môžu dlho načítavať, kliknite pre načítanie"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Podporovať parametre $award$ na profilových a zdieľaných odkazoch súborov",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Pridať tlačidlo na zatvorenie bloku „už vo vašej knižnici“"
 	},
@@ -686,7 +684,7 @@
 		"message": "Zobrazovať históriu CS Hodnotenia na stránke CS2 achievementov"
 	},
 	"open_desktop_app": {
-		"message": "Otvoriť v Počítačovej Aplikácii"
+		"message": "Otvoriť v aplikácii"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Nebudete môcť vytvoriť ďalší Booster Pack pre túto hru až do $available_date$.",

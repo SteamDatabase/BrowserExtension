@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Добавяне на бутон „Отваряне в настолното приложение“ в заглавната част"
+		"message": "Добавяне на бутон „$open_desktop_app$“ в заглавната част",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Скрий банера „Отвори в Steam“"
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Някои разработчици слагат в описанията на продуктите по-тежки изображения, които може да се зареждат по-бавно. Щракнете върху дадено изображение, за да се зареди"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Поддръжка на $award$ параметри на връзки към профили и споделени файлове",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Добави бутон за свиване на блока „вече е в библиотеката Ви“"
 	},
@@ -686,7 +684,7 @@
 		"message": "Покажи история на CS рейтинга на страницата с постижения на CS2"
 	},
 	"open_desktop_app": {
-		"message": "Отваряне в настолното приложение"
+		"message": "Отваряне в приложението"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Няма да можете да създадете нов допълнителен пакет за тази игра до $available_date$.",

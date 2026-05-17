@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "\"Openen in Desktop-App\" knop toevoegen in de header"
+		"message": "\"$open_desktop_app$\" knop toevoegen in de header",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Verberg \"Openen in Steam\" banner"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Sommige ontwikkelaars plaatsen megabytes aan afbeeldingen in productomschrijvingen het kan een tijdje duren om te laden, klik op een afbeelding om te laden"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "$award$ Parameters steunen op profiel en gedeelde bestand links",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Voeg een knop toe om het blok \"al in je bibliotheek\" in te klappen"

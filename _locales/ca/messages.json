@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Afegeix un botó \"Obre a l'aplicació d'escriptori\" a la capçalera"
+		"message": "Afegeix un botó \"$open_desktop_app$\" a la capçalera",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Amaga el banner d'\"Obrir a Steam\""
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Alguns desenvolupadors posen megabytes d'imatges a les descripcions del producte que poden trigar una estona a carregar-se, feu clic a una imatge per carregar-la"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Admet paràmetres de $award$ al perfil i als enllaços de fitxers compartits",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Afegeix un botó per replegar el bloc de \"ja a la teva biblioteca\""
 	},
@@ -686,7 +684,7 @@
 		"message": "Mostra l'historial de puntuacions de CS a la pàgina d'assoliments de CS2"
 	},
 	"open_desktop_app": {
-		"message": "Obre a l'aplicació d'escriptori"
+		"message": "Obre a l'app d'escriptori"
 	},
 	"boostercreator_available_at_date": {
 		"message": "No podràs crear un altre Booster Pack per a aquest joc fins a $available_date$.",

@@ -274,7 +274,7 @@
 		"message": "Classificação CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Passa o mouse sobre um preço para vender",
+		"message": "Passa o rato sob um preço para vender",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
@@ -296,7 +296,7 @@
 		}
 	},
 	"inventory_sell_multiple": {
-		"message": "Vende vários itens"
+		"message": "Vender vários itens"
 	},
 	"inventory_orders_for_sale": {
 		"message": "$count$ à venda, a partir de $price$",
@@ -312,7 +312,7 @@
 		}
 	},
 	"inventory_orders_to_buy": {
-		"message": "$count$ pedidos para comprar por $price$ ou menos",
+		"message": "$count$ solicitações para aquisição por $price$ ou menos",
 		"placeholders": {
 			"count": {
 				"content": "%count%",
@@ -547,7 +547,7 @@
 		"message": "Mostrar botões do SteamDB e da loja na página de cartas do jogo"
 	},
 	"options_steamdb_dev_pub_links": {
-		"message": "Exibir ligações do SteamDB ao lado dos nomes dos programadores e editores"
+		"message": "Exibir ligações SteamDB ao lado dos nomes de programadores e publicadoras"
 	},
 	"options_link_subid": {
 		"message": "Mostrar SubID sob cada opção de compra"
@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Adicionar um botão \"Abrir na aplicação de ambiente de trabalho\" no cabeçalho"
+		"message": "Adicionar um botão \"$open_desktop_app$\" no cabeçalho",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Esconder a faixa \"Abrir no Steam\""
@@ -653,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Alguns programadores colocam megabytes de imagens nas descrições dos produtos o que pode demorar algum tempo a carregar, clica na imagem para a carregar"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Suportar parâmetros $award$ no perfil e hiperligações de ficheiros partilhados",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Adicionar um botão para recolher o bloco \"já está na tua biblioteca\""
 	},
@@ -686,7 +684,7 @@
 		"message": "Mostrar o histórico de classificação CS na página de proezas do CS2"
 	},
 	"open_desktop_app": {
-		"message": "Abrir na aplicação de ambiente de trabalho"
+		"message": "Abrir na aplicação Steam"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Não podes criar outro Pacote de Boosters para este jogo até $available_date$.",

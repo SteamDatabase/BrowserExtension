@@ -619,7 +619,13 @@
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
 	"options_enhancement_open_desktop_app_button": {
-		"message": "Dodaj \"Otvori u Desktop aplikaciji\" gumb u zaglavlju"
+		"message": "Dodaj \"$open_desktop_app$\" gumb u zaglavlju",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
 	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Sakrij banner 'Otvori u Steamu'"
@@ -652,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Neki developeri stavljaju megabajte slika u opise proizvoda, što može potrajati dok se učitaju. Kliknite na sliku za učitavanje"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Podržavajte $award$ parametre na profilima i poveznicama za dijeljenje datoteka",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Dodati dugme za sažimanje bloka \"već u vašoj biblioteci\""
