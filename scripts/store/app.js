@@ -14,6 +14,7 @@ else
 	GetOption( {
 		'button-app': true,
 		'button-pcgw': true,
+		'button-protondb': true,
 		'link-subid': true,
 		'online-stats': true,
 		'steamdb-lowest-price': true,
@@ -179,6 +180,64 @@ else
 				const span = document.createElement( 'span' );
 				span.className = 'social_account';
 				span.textContent = _t( 'view_on_pcgamingwiki' );
+				link.append( span );
+
+				lastLinkBar.insertAdjacentElement( 'afterend', link );
+			}
+		}
+
+		if( items[ 'button-protondb' ] )
+		{
+			let container = document.querySelector( '.apphub_OtherSiteInfo' );
+
+			if( !container )
+			{
+				// Steam China has no community hub
+				const headerStandardTop = document.querySelector( '.apphub_HeaderStandardTop' );
+
+				if( headerStandardTop )
+				{
+					container = document.createElement( 'div' );
+					container.className = 'apphub_OtherSiteInfo';
+					headerStandardTop.prepend( container );
+				}
+			}
+
+			if( container )
+			{
+				const link = document.createElement( 'a' );
+				link.className = 'btnv6_blue_hoverfade btn_medium btn_steamdb';
+				link.href = 'https://www.protondb.com/app/' + GetCurrentAppID() + '?utm_source=SteamDB';
+
+				const element = document.createElement( 'span' );
+				element.dataset.tooltipText = _t( 'view_on_protondb' );
+				link.appendChild( element );
+
+				const image = document.createElement( 'img' );
+				image.className = 'ico16';
+				image.src = GetLocalResource( 'icons/protondb.svg' );
+
+				element.appendChild( image );
+
+				container.insertBefore( link, container.firstChild );
+				container.insertBefore( document.createTextNode( ' ' ), link.nextSibling );
+			}
+
+			const lastLinkBar = document.querySelector( '#appDetailsUnderlinedLinks .linkbar:last-child' );
+
+			if( lastLinkBar )
+			{
+				const link = document.createElement( 'a' );
+				link.className = 'linkbar linkbar_steamdb';
+				link.href = 'https://www.protondb.com/app/' + GetCurrentAppID() + '?utm_source=SteamDB';
+
+				const image = document.createElement( 'img' );
+				image.src = GetLocalResource( 'icons/protondb.svg' );
+				link.append( image );
+
+				const span = document.createElement( 'span' );
+				span.className = 'social_account';
+				span.textContent = _t( 'view_on_protondb' );
 				link.append( span );
 
 				lastLinkBar.insertAdjacentElement( 'afterend', link );
