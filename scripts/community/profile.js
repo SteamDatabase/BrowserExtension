@@ -1,9 +1,20 @@
 'use strict';
 
 GetOption( {
+	'profile-gamecovers': true,
 	'profile-calculator': true,
 }, ( items ) =>
 {
+	if( items[ 'profile-gamecovers' ] )
+	{
+		const script = document.createElement( 'script' );
+		script.id = 'steamdb_profile_gamecovers';
+		script.type = 'text/javascript';
+		script.dataset.appLogo = GetLocalResource( 'icons/applogo.svg' );
+		script.src = GetLocalResource( 'scripts/community/profile_gamecovers_injected.js' );
+		document.head.appendChild( script );
+	}
+
 	if( !items[ 'profile-calculator' ] )
 	{
 		return;

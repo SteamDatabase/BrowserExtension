@@ -683,6 +683,9 @@
 	"options_builtin_achievements_csrating": {
 		"message": "Verlauf der CS-Wertung bei den CS2-Errungenschaften anzeigen"
 	},
+	"options_profile_gamecovers": {
+		"message": "Spielcover mit Regionsbeschränkung anzeigen"
+	},
 	"open_desktop_app": {
 		"message": "In Desktop-App öffnen"
 	},

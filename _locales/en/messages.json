@@ -701,6 +701,9 @@
 	"options_builtin_achievements_csrating": {
 		"message": "Display CS rating history on CS2 achievements page"
 	},
+	"options_profile_gamecovers": {
+		"message": "Display game covers with country restriction"
+	},
 	"open_desktop_app": {
 		"message": "Open in Desktop App"
 	},
