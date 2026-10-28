@@ -5,61 +5,82 @@ html {
 	scrollbar-gutter: stable;
 }
 
-.achieveRow .compareImg {
-	position: relative;
-	font-size: 0; /* fix incorrect extra padding */
+.steamdb_achievements_container {
+	--steamdb-panel: #171d25;
+	--steamdb-divider: #262d38;
+	--steamdb-muted: #8b929a;
+
+	margin: 24px 0 40px;
+	font-size: 14px;
 }
 
-.achieveRow:not(.unlocked) .compareImg::before {
-	content: "";
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath fill='%2366C0F4' fill-rule='evenodd' d='M27 26v-2h-1.75l-1.5 2H27zm0 1a3.002 3.002 0 0 1-3.009 3H9.01A3.008 3.008 0 0 1 6 27h21zM6 26v-2h3.25l-1.5 2H6zm2.75 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zm3 0l1.5-2h2l-1.5 2h-2zM27 23v-5.99c0-1.66-1.34-3.005-3-3.01v-3.5a7.5 7.5 0 1 0-15 0V14c-1.658.005-3 1.34-3 3.01V23h21zm-15-9v-3.5C12 8.01 14.015 6 16.5 6c2.48 0 4.5 2.015 4.5 4.5V14h-9z'/%3E%3C/svg%3E%0A");
-	background-size: 24px 24px;
-	width: 24px;
-	height: 24px;
-	display: block;
+/* Toolbar: toggle on the left, tools + search on the right */
+.steamdb_achievements_toolbar {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+}
+
+.steamdb_achievements_toolbar .steamdb_toggle {
+	margin-right: auto;
+}
+
+.steamdb_toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+}
+
+.steamdb_toggle > input {
 	position: absolute;
-	left: 5px;
-	top: 22px;
+	opacity: 0;
+	pointer-events: none;
 }
 
-#topSummaryAchievements .compareVal {
-	margin-top: 10px;
+.steamdb_toggle_track {
+	position: relative;
+	width: 38px;
+	height: 24px;
+	border-radius: 12px;
+	background: #3d4450;
+	flex-shrink: 0;
+	transition: background-color 0.15s;
 }
 
-.steamdb_global_achievements_page {
-	padding: 0 !important;
+.steamdb_toggle_track::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	transition: transform 0.15s;
 }
 
-.steamdb_global_achievements_page #compareAvatar {
-	display: none;
+.steamdb_toggle > input:checked + .steamdb_toggle_track {
+	background: #1a9fff;
 }
 
-.steamdb_global_achievements_page #headerContent {
-	margin-left: 0;
+.steamdb_toggle > input:checked + .steamdb_toggle_track::after {
+	transform: translateX(14px);
 }
 
-.steamdb_achievement_spoiler {
-	filter: brightness(3) blur(6px);
-}
-
-.steamdb_achievement_image.steamdb_achievement_spoiler {
-	filter: grayscale(1) blur(6px);
-}
-
-.steamdb_achievement:hover .steamdb_achievement_spoiler {
-	filter: unset;
+.steamdb_toggle > input:focus-visible + .steamdb_toggle_track {
+	outline: 2px solid #9ba3ad;
+	outline-offset: 2px;
 }
 
 .steamdb_stats_extra_tabs {
-	float: right;
 	display: flex;
 	align-items: center;
 	gap: 12px;
-}
-
-.steamdb_stats_extra_tabs_mobile {
-	float: unset;
-	margin-bottom: 20px;
 }
 
 .steamdb_stats_extra_tabs > a {
@@ -71,12 +92,59 @@ html {
 	height: 22px;
 }
 
-.steamdb_achievements_group {
-	margin-bottom: 40px;
+.steamdb_achievements_select {
+	background: #101419;
+	color: #fff;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	font: inherit;
+	padding: 8px 10px;
+	cursor: pointer;
+	max-width: 220px;
 }
 
-.steamdb_achievements_group > summary {
-	display: flex;
+.steamdb_achievements_select:focus {
+	border-color: #417b9c;
+	outline: none;
+}
+
+.steamdb_achievement_search {
+	width: 230px;
+	max-width: 100%;
+}
+
+.steamdb_achievement_search > input {
+	background: #101419;
+	color: #fff;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	width: 100%;
+	font: inherit;
+	box-sizing: border-box;
+	padding: 9px 36px 9px 10px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23dcdedf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
+	background-size: 14px;
+	background-position: right 12px center;
+	background-repeat: no-repeat;
+}
+
+.steamdb_achievement_search > input::placeholder {
+	font-style: italic;
+	color: #8b929a;
+}
+
+.steamdb_achievement_search > input:focus {
+	border-color: #417b9c;
+	outline: none;
+}
+
+.steamdb_achievement_search > input::-webkit-search-cancel-button {
+	display: none;
+}
+
+/* Per-game block */
+.steamdb_achievements_group {
+	margin-bottom: 32px;
 }
 
 .steamdb_achievements_title {
@@ -84,7 +152,7 @@ html {
 	align-items: center;
 	gap: 15px;
 	color: #fff;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 	overflow-wrap: anywhere;
 }
 
@@ -141,69 +209,59 @@ html {
 
 .steamdb_stats_extra_tabs .steamdb_fold_button,
 .steamdb_stats_extra_tabs .steamdb_done_button {
-	margin-left: 30px;
-}
-
-.steamdb_stats_extra_tabs_mobile .steamdb_fold_button,
-.steamdb_stats_extra_tabs_mobile .steamdb_done_button {
-	margin-left: auto;
-}
-
-.steamdb_stats_extra_tabs .steamdb_done_button + .steamdb_fold_button {
 	margin-left: 0;
+}
+
+/* Dark panel holding the lists, like Steam's own page */
+.steamdb_achievements_panel {
+	background: var(--steamdb-panel);
+	padding: 16px;
+	border-radius: 2px;
 }
 
 .steamdb_achievements_list {
 	font-weight: 700;
-	color: #83868a;
+	color: var(--steamdb-muted);
 }
 
-.steamdb_achievements_list + .steamdb_achievements_list {
-	margin-top: 10px;
+/* Only add the gap when the section before it is actually visible */
+.steamdb_achievements_list:not([hidden]) ~ .steamdb_achievements_list:not([hidden]) {
+	margin-top: 16px;
 }
 
 .steamdb_achievements_list > summary {
 	cursor: pointer;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
+	font-size: 13px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
 }
 
 .steamdb_achievements_list > summary:hover {
 	color: #fff;
 }
 
-.steamdb_achievements_sort_button {
-	float: right;
-}
-
 .steamdb_achievement {
 	display: flex;
 	align-items: center;
-	gap: 8px;
-	padding: 4px;
-	padding-right: 8px;
-	margin-bottom: 8px;
-	background-color: #23262e;
+	gap: 12px;
+	padding: 10px 4px;
+	border-bottom: 1px solid var(--steamdb-divider);
 	position: relative;
+}
+
+.steamdb_achievement:last-child {
+	border-bottom: 0;
 }
 
 .steamdb_achievement[hidden] {
 	display: none;
 }
 
-.steamdb_achievement_global_progress_overlay {
-	background: linear-gradient(
-		to right,
-		#23262e 40px,
-		#31343e 40px,
-		#31343e var(--steamdb-progress),
-		#23262e var(--steamdb-progress)
-	);
-}
-
 .steamdb_achievement_image {
 	width: 58px;
 	height: 58px;
-	z-index: 1;
+	flex-shrink: 0;
 }
 
 .steamdb_achievement_image_glow {
@@ -213,82 +271,83 @@ html {
 }
 
 .steamdb_achievement h3 {
-	font-size: 16px;
-	font-weight: 500;
-	color: #dcdedf;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
 	overflow-wrap: anywhere;
-	z-index: 1;
 }
 
 .steamdb_achievement h5 {
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 400;
-	color: #b8bcbf;
+	color: #dcdedf;
 	overflow-wrap: anywhere;
-	z-index: 1;
+	margin-top: 4px;
 }
 
-.steamdb_achievement h6 {
-	font-size: 12px;
-	font-weight: 400;
-	color: #8b929a;
+.steamdb_achievement_spoiler {
+	filter: brightness(3) blur(6px);
 }
 
-.steamdb_hide_earned_achievements .steamdb_earned_achievement {
-	display: none;
+.steamdb_achievement_image.steamdb_achievement_spoiler {
+	filter: grayscale(1) blur(6px);
 }
 
-.steamdb_achievement_checkmark {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 20px;
-	padding: 6px;
-	flex-shrink: 0;
+.steamdb_achievement:hover .steamdb_achievement_spoiler {
+	filter: unset;
 }
 
-.steamdb_achievement_checkmark > svg {
-	width: 20px;
-	fill: #fff;
-}
-
+/* Right-hand side: unlock date (personal page) and global percentage */
 .steamdb_achievement_status {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
 	margin-left: auto;
 	text-align: right;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 400;
-	color: #8b929a;
+	color: var(--steamdb-muted);
 }
 
 .steamdb_achievement_status_row {
 	display: flex;
 	align-items: center;
 	justify-content: end;
-	gap: 8px;
-}
-
-.steamdb_achievement_status_avatar {
-	height: 24px;
-}
-
-.steamdb_achievement_status_locked .steamdb_achievement_status_avatar {
-	opacity: 0.2;
-}
-
-.steamdb_achievement_status_row_compare {
-	color: #ffcc6a;
 }
 
 .steamdb_achievement_unlock_global {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 	margin-left: auto;
-	text-align: right;
-	font-size: 14px;
+	padding: 0 12px 0 16px;
+	min-width: 90px;
+	justify-content: flex-end;
+	font-size: 24px;
 	font-weight: 700;
-	color: #fff;
-	z-index: 1;
+	color: #9ba3ad;
+	white-space: nowrap;
+}
+
+.steamdb_achievement_unlock_global.steamdb_achievement_unlock_global_rare {
+	color: #ffd539;
+}
+
+.steamdb_achievement_status ~ .steamdb_achievement_unlock_global {
+	margin-left: 0;
+}
+
+.steamdb_achievement_unlock_global::before {
+	content: "";
+	width: 22px;
+	height: 22px;
+	background: currentcolor;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'/%3E%3Cpath d='M2 12h20'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.steamdb_hide_global_stats .steamdb_achievement_unlock_global {
+	display: none;
+}
+
+.steamdb_hide_earned_achievements .steamdb_earned_achievement {
+	display: none;
 }
 
 .steamdb_achievement_progress {
@@ -298,29 +357,12 @@ html {
 	font-size: 12px;
 	font-weight: 400;
 	color: #b8bcbf;
-	text-align: right;
+	text-align: left;
 	white-space: nowrap;
 }
 
 .steamdb_achievement_progress_info {
 	width: 100%;
-}
-
-.steamdb_achievement_progress_compare {
-	color: #ffcc6a;
-}
-
-.steamdb_achievements_name_container .steamdb_achievement_progress_compare {
-	margin-top: 10px;
-}
-
-.steamdb_achievements_title .steamdb_achievement_progress {
-	text-align: left;
-}
-
-.steamdb_achievement_progress_avatar {
-	height: 26px;
-	align-self: center;
 }
 
 .steamdb_achievement_progressbar {
@@ -332,13 +374,6 @@ html {
 	overflow: hidden;
 }
 
-.achieveBar.steamdb_achievement_progressbar {
-	width: 100%;
-	padding: 0;
-	border: 0;
-}
-
-.achieveBar.steamdb_achievement_progressbar .achieveBarProgress,
 .steamdb_achievement_progressbar_inner {
 	height: 100%;
 	border-top-right-radius: 10px;
@@ -347,19 +382,12 @@ html {
 	width: 0%;
 }
 
-.steamdb_achievement_progressbar.steamdb_achievement_progress_compare
-	.achieveBarProgress,
-.steamdb_achievement_progress_compare .steamdb_achievement_progressbar_inner {
-	background: #ffcc6a;
-}
-
 .steamdb_achievement_groups_disclaimer {
 	display: flex;
 	gap: 8px;
 	align-items: center;
 	justify-content: center;
-	margin-left: 16px;
-	margin-top: 100px;
+	margin-top: 40px;
 }
 
 .steamdb_achievement_groups_disclaimer > img {
@@ -380,35 +408,16 @@ html {
 	text-decoration: underline;
 }
 
-.steamdb_achievement_search {
-	margin-bottom: 16px;
-}
-
-.steamdb_achievement_search > input {
-	background: #1b2838;
-	color: #fff;
-	border: 1px solid #000;
-	border-radius: 6px;
-	width: 100%;
-	font: inherit;
-	box-sizing: border-box;
-	padding: 7px 10px 7px 36px;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
-	background-size: 16px;
-	background-position: 10px center;
-	background-repeat: no-repeat;
-}
-
-.steamdb_achievement_search > input:focus {
-	border-color: #417b9c;
-	outline: none;
-}
-
-.steamdb_achievement_search > input::-webkit-search-cancel-button {
-	opacity: 1;
-}
-
 @media (max-width: 600px) {
+	.steamdb_achievements_toolbar .steamdb_toggle {
+		flex-basis: 100%;
+	}
+
+	.steamdb_achievement_search {
+		width: 100%;
+		flex-basis: 100%;
+	}
+
 	.steamdb_achievements_title {
 		flex-flow: row wrap;
 	}
@@ -423,7 +432,8 @@ html {
 		width: 100%;
 	}
 
-	.steamdb_achievement_image_compare {
-		display: none;
+	.steamdb_achievement_unlock_global {
+		font-size: 18px;
+		min-width: 0;
 	}
 }
