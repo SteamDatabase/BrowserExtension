@@ -173,6 +173,16 @@ html {
 
 .steamdb_achievements_sort_button {
 	float: right;
+	background: #3d4450;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	padding: 4px 10px;
+}
+
+.steamdb_achievements_sort_button:hover {
+	background: #4a5261;
 }
 
 .steamdb_achievement {
@@ -210,6 +220,12 @@ html {
 	box-shadow:
 		0 0 2px 1px rgb(255 184 78 / 60%),
 		0 0 16px 1px rgb(255 184 78 / 40%);
+}
+
+.steamdb_achievement h3,
+.steamdb_achievement h5,
+.steamdb_achievement h6 {
+	margin: 0;
 }
 
 .steamdb_achievement h3 {
