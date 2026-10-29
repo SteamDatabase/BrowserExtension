@@ -383,7 +383,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/stats*",
-				"https://steamcommunity.com/profiles/*/stats*"
+				"https://steamcommunity.com/profiles/*/stats*",
+				"https://steamcommunity.com/id/*/achievements/*",
+				"https://steamcommunity.com/profiles/*/achievements/*"
 			],
 			"js":
 			[
@@ -414,7 +416,8 @@
 		{
 			"matches":
 			[
-				"https://steamcommunity.com/stats/*/achievements*"
+				"https://steamcommunity.com/stats/*/achievements*",
+				"https://steamcommunity.com/achievements/*"
 			],
 			"js":
 			[

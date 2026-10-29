@@ -57,7 +57,7 @@ function DoAchievements( isPersonal )
 		'achievements-global-unlock': true,
 	}, ( items ) =>
 	{
-		InitAchievements( items, isPersonal );
+		InitAchievements( items, isPersonal ).catch( ( e ) => console.error( '[SteamDB]', e ) );
 	} );
 }
 
@@ -65,7 +65,7 @@ function DoAchievements( isPersonal )
  * @param {{ [key: string]: any }} items
  * @param {boolean} isPersonal
  */
-function InitAchievements( items, isPersonal )
+async function InitAchievements( items, isPersonal )
 {
 	if( !items[ 'improve-achievements' ] )
 	{
@@ -74,51 +74,37 @@ function InitAchievements( items, isPersonal )
 
 	const spoilerAchievements = !!items[ 'spoiler-achievements' ];
 	const showGlobalUnlock = !!items[ 'achievements-global-unlock' ];
-	const oldContainer = document.getElementById( 'personalAchieve' );
+	const appidMatch = location.pathname.match( /\/achievements\/(?<id>[0-9]+)/ );
 
-	if( isPersonal && !oldContainer )
-	{
-		return;
-	}
-
-	/** @type {HTMLElement} */
-	const gameLogoElement = document.querySelector( '.profile_small_header_additional .gameLogo' );
-
-	if( !gameLogoElement )
-	{
-		WriteLog( 'Failed to find game logo' );
-		return;
-	}
-
-	gameLogoElement.style.viewTransitionName = 'steamdb-gamelogo';
-
-	const appIdElement = gameLogoElement.querySelector( 'a' );
-	let appid = 0;
-
-	if( appIdElement )
-	{
-		const appidMatch = appIdElement.href.match( /\/app\/(?<id>[0-9]+)/ );
-
-		if( appidMatch )
-		{
-			appid = Number.parseInt( appidMatch.groups.id, 10 );
-		}
-	}
-	else
-	{
-		/** @type {HTMLImageElement} */
-		const gameLogoImage = gameLogoElement.querySelector( 'img' );
-		const appidMatch = gameLogoImage.src.match( /\/apps\/(?<id>[0-9]+)/ );
-
-		if( appidMatch )
-		{
-			appid = Number.parseInt( appidMatch.groups.id, 10 );
-		}
-	}
-
-	if( appid === 0 )
+	if( !appidMatch )
 	{
 		WriteLog( 'Failed to find appid' );
+		return;
+	}
+
+	const appid = Number.parseInt( appidMatch.groups.id, 10 );
+
+	// Steam's page is a React app with a virtualized list, so wait for it to boot before we touch the DOM
+	let nativeList = await WaitForNativeList();
+
+	if( !nativeList )
+	{
+		WriteLog( 'Failed to find native achievements list' );
+		return;
+	}
+
+	const pageData = await LoadPageData( appid );
+
+	if( !pageData )
+	{
+		WriteLog( 'Failed to load page data' );
+		return;
+	}
+
+	// Steam groups achievements into sets by itself, and its own filters keep working then
+	if( pageData.hasNativeSets )
+	{
+		WriteLog( 'Steam already groups this game into sets' );
 		return;
 	}
 
@@ -187,60 +173,16 @@ function InitAchievements( items, isPersonal )
 
 	extraTabs.append( CreateFoldButton( true ) );
 
-	function AppendExtraTabs( firstTime = false )
-	{
-		if( window.innerWidth < 600 )
-		{
-			if( extraTabs.classList.contains( 'steamdb_stats_extra_tabs_mobile' ) )
-			{
-				return;
-			}
-			extraTabs.classList.add( 'steamdb_stats_extra_tabs_mobile' );
-			document
-				.querySelector( '#subtabs' )
-				.insertAdjacentElement( 'afterend', extraTabs );
-		}
-		else if( firstTime || extraTabs.classList.contains( 'steamdb_stats_extra_tabs_mobile' ) )
-		{
-			extraTabs.classList.remove( 'steamdb_stats_extra_tabs_mobile' );
-			document.querySelector( '#tabs' ).append( extraTabs );
-		}
-	}
-
-	AppendExtraTabs( true );
-	window.addEventListener( 'resize', () => AppendExtraTabs( false ) );
-
-	let isCompareView = false;
+	// shortcut: compare view is not supported on the new page, the code paths that use these are dead
+	const isCompareView = false;
 
 	/** @type {string|null} */
-	let leftAvatarUrl = null;
+	const leftAvatarUrl = null;
 
 	/** @type {string|null} */
-	let rightAvatarUrl = null;
+	const rightAvatarUrl = null;
 
-	if( isPersonal )
-	{
-		if( oldContainer.classList.contains( 'compare_view' ) )
-		{
-			isCompareView = true;
-			leftAvatarUrl = /** @type {HTMLImageElement} */ ( document.querySelector( '.topAvatarsLeft img' ) ).src;
-			rightAvatarUrl = /** @type {HTMLImageElement} */ ( document.querySelector( '.topAvatarsRight img' ) ).src;
-		}
-	}
-	else
-	{
-		// Some games like TF2 and CS:S have achievement groups, so skip if it's filtered
-		/** @type {HTMLSelectElement} */
-		const groupSelector = document.querySelector( '#headerContent select[name="group"]' );
-
-		if( groupSelector && groupSelector.value !== 'all' )
-		{
-			return;
-		}
-	}
-
-	const applicationConfig = ParseApplicationConfig();
-
+	const applicationConfig = pageData.config;
 	if( !applicationConfig.LANGUAGE )
 	{
 		WriteLog( 'Failed to find language' );
@@ -331,7 +273,7 @@ function InitAchievements( items, isPersonal )
 		}
 
 		achievementUpdates.unshift( {
-			name: document.title.match( /^.+? :: (?<name>.+) :: / )?.groups.name || 'Base Game',
+			name: document.title.match( /^Steam Community :: (?<name>.+?) :: / )?.groups.name || 'Base Game',
 			achievementApiNames: [],
 		} );
 
@@ -354,9 +296,6 @@ function InitAchievements( items, isPersonal )
 
 		/** @type {NodeListOf<HTMLElement>} */
 		const oldAchievementRows = document.querySelectorAll( '.achieveRow' );
-
-		/** @type {Map<number, ApiGameAchievement>} */
-		const achievements = new Map( response.response.achievements.map( ( /** @type {ApiGameAchievement} */ value, /** @type {number} */ index ) => [ index, value ] ) );
 
 		/**
 		 * @param {number} id
@@ -391,168 +330,30 @@ function InitAchievements( items, isPersonal )
 			}
 		};
 
-		let badAchievementsLogged = 10;
+		const dateFormatter = new Intl.DateTimeFormat( GetLanguage(), {
+			dateStyle: 'medium',
+			timeStyle: 'short',
+		} );
 
-		let firstLockedDomId = -1;
-		if( isPersonal )
+		for( const [ id, achievement ] of response.response.achievements.entries() )
 		{
-			const container = oldAchievementRows[ 0 ]?.parentElement;
-			if( container )
+			const user = pageData.userAchievements[ pageData.internalKeys.get( achievement.internal_name ) ];
+			const unlockTimestamp = user?.unlocked ? ( user.unlock_time || 0 ) * 1000 : 0;
+			let unlock = null;
+
+			if( user?.unlocked )
 			{
-				const children = Array.from( container.children );
-
-				// Look for  <br><br><br>
-				for( let i = 0; i < children.length - 2; i++ )
-				{
-					if( children[ i ].tagName === 'BR' &&
-						children[ i + 1 ].tagName === 'BR' &&
-						children[ i + 2 ].tagName === 'BR' )
-					{
-						let achieveRowCount = 0;
-
-						for( let j = 0; j < i; j++ )
-						{
-							if( children[ j ].classList?.contains( 'achieveRow' ) )
-							{
-								achieveRowCount++;
-							}
-						}
-
-						firstLockedDomId = achieveRowCount;
-						break;
-					}
-				}
-			}
-		}
-
-		// Match all achievements on the page to API data
-		for( let domId = 0; domId < oldAchievementRows.length; domId++ )
-		{
-			const element = oldAchievementRows[ domId ];
-
-			/** @type {HTMLImageElement} */
-			const image = element.querySelector( '.achieveImgHolder > img' );
-
-			if( !image )
-			{
-				// hidden achievements remaining element
-				continue;
+				// The text is not displayed for non-personal pages
+				unlock = isPersonal && unlockTimestamp ? dateFormatter.format( unlockTimestamp ) : '—';
 			}
 
-			const iconSlash = image.src.lastIndexOf( '/' );
-			const icon = iconSlash > 0 ? image.src.substring( iconSlash + 1 ) : null;
-
-			const name = element.querySelector( '.achieveTxt > h3' ).textContent;
-			const progress = element.querySelector( '.achievementProgressBar' );
-			let progressText = null;
-			let progressWidth = null;
-			let progressTextCompare = null;
-			let unlock;
-			let unlockCompare;
-
-			if( isPersonal )
-			{
-				if( isCompareView )
-				{
-					unlock = element
-						.querySelector( '.achieveUnlockTime' )
-						?.childNodes[ 0 ].textContent.trim();
-					unlockCompare = element
-						.querySelector( '.achieveUnlockTime .compareVal' )
-						?.textContent.trim();
-				}
-				else
-				{
-					unlock = element
-						.querySelector( '.achieveUnlockTime' )
-						?.textContent.trim();
-				}
-
-				if( !unlock && firstLockedDomId !== -1 && domId < firstLockedDomId )
-				{
-					unlock = '—';
-				}
-			}
-			else if( element.classList.contains( 'unlocked' ) )
-			{
-				unlock = 'true'; // slightly odd type conformation, but the text won't be displayed for non-personal pages
-			}
-
-			if( progress )
-			{
-				if( isCompareView )
-				{
-					progressText = progress
-						.querySelector( '.progressText' )
-						?.childNodes[ 0 ].textContent.trim();
-					progressTextCompare = progress
-						.querySelector( '.progressText .compareVal' )
-						?.textContent.trim();
-				}
-				else
-				{
-					progressText = progress.querySelector( '.progressText' ).textContent.trim();
-				}
-
-				progressWidth = /** @type {HTMLElement} */ ( progress.querySelector( '.progress' ) ).style.width;
-			}
-
-			let foundAchievement = false;
-
-			for( const [ id, achievement ] of achievements.entries() )
-			{
-				if( name !== achievement.localized_name )
-				{
-					continue;
-				}
-
-				const apiIcon = unlock || !isPersonal ? achievement.icon : achievement.icon_gray;
-
-				if( apiIcon && icon !== apiIcon )
-				{
-					if( badAchievementsLogged-- > 0 )
-					{
-						WriteLog( 'Mismatching icon', icon, achievement );
-					}
-
-					continue;
-				}
-
-				AddAchievementData( id, domId, achievement, {
-					unlock,
-					unlockCompare,
-					progressText,
-					progressTextCompare,
-					progressWidth,
-				} );
-
-				foundAchievement = true;
-
-				if( id < 100 )
-				{
-					element.style.viewTransitionName = `steamdb-achievement-${id}`;
-				}
-
-				achievements.delete( id );
-
-				break;
-			}
-
-			if( !foundAchievement && badAchievementsLogged-- > 0 )
-			{
-				WriteLog( 'Failed to find achievement', name, icon );
-			}
-		}
-
-		// Add hidden achievements
-		for( const [ id, achievement ] of achievements.entries() )
-		{
 			AddAchievementData( id, null, achievement, {
-				unlock: null,
+				unlock,
 				unlockCompare: null,
 				progressText: null,
 				progressTextCompare: null,
 				progressWidth: null,
+				unlockTimestamp,
 			} );
 		}
 
@@ -986,7 +787,7 @@ function InitAchievements( items, isPersonal )
 
 				const summaryGameLogoImg = document.createElement( 'img' );
 				summaryGameLogoImg.className = 'steamdb_achievements_game_logo';
-				summaryGameLogoImg.src = gameLogoElement.querySelector( 'img' ).src;
+				summaryGameLogoImg.src = pageData.capsuleUrl;
 				summaryGameLogo.append( summaryGameLogoImg );
 
 				if( updateId === 0 )
@@ -1176,21 +977,16 @@ function InitAchievements( items, isPersonal )
 
 		const ReplaceAchievements = () =>
 		{
-			if( isPersonal )
-			{
-				oldContainer.insertAdjacentElement( 'beforebegin', newContainer );
-				oldContainer.hidden = true;
-			}
-			else
-			{
-				for( const el of oldAchievementRows )
-				{
-					el.hidden = true;
-				}
+			// React can re-render the page after boot, which leaves the element we found earlier detached
+			nativeList = FindNativeList() || nativeList;
 
-				oldAchievementRows[ 0 ].insertAdjacentElement( 'beforebegin', newContainer );
+			newContainer.prepend( extraTabs );
+			nativeList.insertAdjacentElement( 'beforebegin', newContainer );
+			nativeList.style.setProperty( 'display', 'none', 'important' );
 
-				const container = document.getElementById( 'mainContents' );
+			if( !isPersonal )
+			{
+				const container = document.getElementById( 'mainContents' ) || newContainer;
 				container.classList.add( 'steamdb_global_achievements_page' );
 
 				if( IsSessionStorageSet( 'steamdb_ach_hide_earned' ) )
@@ -1199,18 +995,34 @@ function InitAchievements( items, isPersonal )
 				}
 			}
 
-			gameLogoElement.hidden = true;
+			// Steam's own filter bar only controls its (now hidden) list: hide the topmost element that does not hold the list
+			/** @type {Element|null} */
+			let bar = document.querySelector( '[role="switch"]' );
 
-			document.querySelectorAll( '#topSummaryAchievements .achieveBar' ).forEach( ( el, i ) =>
+			while( bar && bar.parentElement && !bar.parentElement.contains( nativeList ) )
 			{
-				el.classList.add( 'steamdb_achievement_progressbar' );
+				bar = bar.parentElement;
+			}
 
-				// Second progress bar at the top belongs to the second player
-				if( i === 1 )
+			/** @type {HTMLElement|null} */ ( bar )?.style.setProperty( 'display', 'none', 'important' );
+
+			// React may re-render and drop our container, put it back
+			new MutationObserver( () =>
+			{
+				if( newContainer.isConnected )
 				{
-					el.classList.add( 'steamdb_achievement_progress_compare' );
+					return;
 				}
-			} );
+
+				const list = FindNativeList();
+
+				if( list )
+				{
+					nativeList = list;
+					list.insertAdjacentElement( 'beforebegin', newContainer );
+					list.style.setProperty( 'display', 'none', 'important' );
+				}
+			} ).observe( document.body, { childList: true, subtree: true } );
 
 			if( dlcCapsulesPromise )
 			{
@@ -1238,7 +1050,7 @@ function InitAchievements( items, isPersonal )
 
 		if( sortButton )
 		{
-			HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView );
+			HookSortButton( sortButton, achievementUpdates, CreateAchievementRow );
 		}
 	}
 }
@@ -1358,72 +1170,145 @@ async function FetchDlcCapsules( applicationConfig, appid, achievementUpdates )
 }
 
 /**
- * @typedef {{WEBAPI_BASE_URL: string, WEBAPI_ACCESS_TOKEN?: string, MEDIA_CDN_COMMUNITY_URL?: string, STORE_ICON_BASE_URL?: string, LANGUAGE?: string, STORE_ITEM_BASE_URL?: string, COUNTRY?: string, EREALM?: string}} ApplicationConfig
+ * @typedef {{WEBAPI_BASE_URL: string, WEBAPI_ACCESS_TOKEN?: string, MEDIA_CDN_COMMUNITY_URL?: string, LANGUAGE?: string, STORE_ITEM_BASE_URL?: string, COUNTRY?: string, EREALM?: string}} ApplicationConfig
  */
 
-function ParseApplicationConfig()
+/**
+ * @returns {HTMLElement|null}
+ */
+function FindNativeList()
 {
-	const applicationConfigElement = document.getElementById( 'application_config' );
+	/** @type {HTMLElement|null} */
+	let list = document.querySelector( '[data-tableindex]' )?.parentElement;
 
-	if( applicationConfigElement )
+	// The virtualized list wrapper: plain (non-hashed) "Panel" class + position: relative
+	while( list && !( list.classList.contains( 'Panel' ) && list.style.position === 'relative' ) )
 	{
-		/** @type {ApplicationConfig} */
-		const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
-		const accessToken = JSON.parse( applicationConfigElement.dataset.loyalty_webapi_token );
-
-		if( accessToken )
-		{
-			applicationConfig.WEBAPI_ACCESS_TOKEN = accessToken;
-		}
-
-		return applicationConfig;
+		list = list.parentElement;
 	}
 
-	// Application config does not exist if user is logged out, so we have to reconstruct the data
+	return list;
+}
+
+/**
+ * Resolves when Steam's own script is done with the server rendered page, so that
+ * our DOM changes are not wiped (or cause a hydration error) by React booting.
+ * @returns {Promise<HTMLElement|null>}
+ */
+function WaitForNativeList()
+{
+	return new Promise( ( resolve ) =>
+	{
+		const start = Date.now();
+
+		const check = () =>
+		{
+			const list = FindNativeList();
+
+			// Steam removes the server rendered data element after it has booted
+			if( list && ( !document.getElementById( 'valve-ssr-data' ) || Date.now() - start > 5000 ) )
+			{
+				// shortcut: fixed settle delay so React finished hydrating, there is no signal for it
+				setTimeout( () => resolve( list ), 1500 );
+			}
+			else if( Date.now() - start > 15000 )
+			{
+				resolve( null );
+			}
+			else
+			{
+				setTimeout( check, 100 );
+			}
+		};
+
+		check();
+	} );
+}
+
+/**
+ * @typedef {object} PageData
+ * @property {ApplicationConfig} config
+ * @property {boolean} hasNativeSets
+ * @property {string} capsuleUrl
+ * @property {Map<string, number>} internalKeys - achievement api name to Steam's internal key
+ * @property {Record<number, {unlocked: boolean, unlock_time?: number}>} userAchievements
+ */
+
+/**
+ * The page's own script removes the server rendered data after boot, so request the page again to read it.
+ * @param {number} appid
+ * @returns {Promise<PageData|null>}
+ */
+async function LoadPageData( appid )
+{
+	const response = await fetch( location.href, { headers: { Accept: 'text/html' } } );
+	const doc = new DOMParser().parseFromString( await response.text(), 'text/html' );
+	const dataElement = doc.getElementById( 'valve-ssr-data' );
+
+	if( !dataElement )
+	{
+		return null;
+	}
+
+	const ssr = JSON.parse( dataElement.textContent );
+	const queries = JSON.parse( ssr.renderContext.queryData ).queries;
+
+	const find = ( /** @type {string} */ kind ) => queries.find( ( /** @type {any} */ q ) =>
+		q.queryKey[ 0 ] === 'achievements' && q.queryKey[ 1 ] === appid && q.queryKey[ 2 ] === kind
+	)?.state?.data;
+
+	const schema = find( 'schema_v2' );
+
+	if( !schema || !schema.groups )
+	{
+		return null;
+	}
+
 	/** @type {ApplicationConfig} */
-	const applicationConfig = {
-		WEBAPI_BASE_URL: window.location.hostname === 'my.steamchina.com' ? 'https://api.steamchina.com/' : 'https://api.steampowered.com/',
+	const config = { ...ssr.Config };
+
+	try
+	{
+		const token = JSON.parse( ssr.loaderData[ 0 ] ).strWebAPIToken;
+
+		if( token )
+		{
+			config.WEBAPI_ACCESS_TOKEN = token;
+		}
+	}
+	catch
+	{
+		// Not logged in, there is no token
+	}
+
+	/** @type {Map<string, number>} */
+	const internalKeys = new Map();
+
+	for( const group of schema.groups )
+	{
+		for( const achievement of group.achievements )
+		{
+			internalKeys.set( achievement.api_name, achievement.internal_key );
+		}
+	}
+
+	// Newer apps have hashed asset paths, the store item data has the real one
+	const assets = queries.find( ( /** @type {any} */ q ) => q.queryKey[ 0 ] === 'StoreItem' && q.queryKey[ 2 ] === 'include_assets_without_overrides' )?.state?.data;
+	let capsuleUrl = `${config.STORE_ITEM_BASE_URL}steam/apps/${appid}/header.jpg`;
+
+	if( assets?.header && assets.asset_url_format )
+	{
+		// eslint-disable-next-line no-template-curly-in-string
+		capsuleUrl = config.STORE_ITEM_BASE_URL + assets.asset_url_format.replace( '${FILENAME}', assets.header );
+	}
+
+	return {
+		config,
+		capsuleUrl,
+		hasNativeSets: schema.groups.some( ( /** @type {any} */ g ) => g.id !== 0 && g.achievements.length > 0 ),
+		internalKeys,
+		userAchievements: find( 'user_achievements' )?.achievements || {},
 	};
-
-	/** @type {NodeListOf<HTMLScriptElement>} */
-	const scriptTags = document.querySelectorAll( 'script[src]' );
-
-	for( const script of scriptTags )
-	{
-		const scriptLanguage = new URL( script.src ).searchParams.get( 'l' );
-
-		if( scriptLanguage )
-		{
-			applicationConfig.LANGUAGE = scriptLanguage;
-			break;
-		}
-	}
-
-	// Game logo cdn
-	const gameLogoUrl = /** @type {HTMLImageElement} */ ( document.querySelector( '.profile_small_header_additional .gameLogo img' ) ).src;
-	const gameLogoUrlAppsIndex = gameLogoUrl.lastIndexOf( '/apps/' );
-
-	if( gameLogoUrlAppsIndex > 0 )
-	{
-		applicationConfig.STORE_ICON_BASE_URL = gameLogoUrl.substring( 0, gameLogoUrlAppsIndex + '/apps/'.length );
-	}
-
-	// Media cdn
-	/** @type {NodeListOf<HTMLImageElement>} */
-	const imageTags = document.querySelectorAll( '.achieveImgHolder > img' );
-
-	for( const image of imageTags )
-	{
-		const index = image.src.lastIndexOf( '/images/apps/' );
-
-		if( index > 0 )
-		{
-			applicationConfig.MEDIA_CDN_COMMUNITY_URL = image.src.substring( 0, index + 1 );
-			break;
-		}
-	}
-
-	return applicationConfig;
 }
 
 const relativeDateFormatter = new Intl.RelativeTimeFormat( GetLanguage(), { numeric: 'auto' } );
@@ -1463,172 +1348,43 @@ function FormatRelativeTime( ms )
 /**
  * @param {HTMLButtonElement} sortButton
  * @param {AchievementGroup[]} achievementUpdates
- * @param {NodeListOf<HTMLElement>} oldAchievementRows
  * @param {(data: AchievementData) => HTMLDivElement} CreateAchievementRow
- * @param {boolean} isCompareView
  */
-function HookSortButton( sortButton, achievementUpdates, oldAchievementRows, CreateAchievementRow, isCompareView )
+function HookSortButton( sortButton, achievementUpdates, CreateAchievementRow )
 {
 	sortButton.addEventListener( 'click', ( /** @type {MouseEvent} */ e ) =>
 	{
 		e.preventDefault();
 
-		sortButton.setAttribute( 'disabled', 'true' );
+		// Redraw earned achievements blocks with new sorting
+		StartViewTransition( () =>
+		{
+			sortButton.remove();
 
-		// Request the same page in finnish because it has an easier date format to parse
-		const url = new URL( window.location.href );
-		url.searchParams.set( 'l', 'finnish' );
-
-		fetch( url, {
-			headers: {
-				Accept: 'text/html',
-				'X-Requested-With': 'SteamDB',
-			},
-		} )
-			.then( ( response ) => response.text() )
-			.then( ( text ) =>
+			for( const update of achievementUpdates )
 			{
-				const parser = new DOMParser();
-				const htmlDocument = parser.parseFromString( text, 'text/html' );
-				const otherAchievementRows = htmlDocument.querySelectorAll( '#personalAchieve .achieveRow' );
-
-				if( otherAchievementRows.length !== oldAchievementRows.length )
+				if( !update.earnedDetailsElement )
 				{
-					throw new Error( 'Mismatching amount of achievements' );
+					continue;
 				}
 
-				const currentYear = new Date().getFullYear();
-
-				/** @type {Record<number, AchievementData>} */
-				const achievementDataMap = [];
-
-				for( const update of achievementUpdates )
+				while( update.earnedDetailsElement.lastElementChild.tagName !== 'SUMMARY' )
 				{
-					for( const achievement of update.achievementData )
-					{
-						if( achievement.domId === null )
-						{
-							continue;
-						}
-
-						achievementDataMap[ achievement.domId ] = achievement;
-					}
+					update.earnedDetailsElement.lastElementChild.remove();
 				}
 
-				/** @type {AchievementData[][]} */
-				const unlockedAchievementsPerUpdate = [];
+				const unlocked = update.achievementData
+					.filter( ( a ) => a.player.unlock )
+					.sort( ( a, b ) => a.player.unlockTimestamp === b.player.unlockTimestamp ?
+						a.id - b.id :
+						b.player.unlockTimestamp - a.player.unlockTimestamp );
 
-				for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
+				for( const achievement of unlocked )
 				{
-					unlockedAchievementsPerUpdate[ updateId ] = [];
+					update.earnedDetailsElement.append( CreateAchievementRow( achievement ) );
 				}
-
-				// Assume the achievements are in the same order
-				for( let id = 0; id < otherAchievementRows.length; id++ )
-				{
-					const otherAchievement = otherAchievementRows[ id ];
-					const oldAchievement = oldAchievementRows[ id ];
-
-					/** @type {HTMLImageElement} */
-					const otherImage = otherAchievement.querySelector( '.achieveImgHolder > img' );
-
-					/** @type {HTMLImageElement} */
-					const oldImage = oldAchievement.querySelector( '.achieveImgHolder > img' );
-
-					if( !otherImage || !oldImage )
-					{
-						continue;
-					}
-
-					// Verify that we are seeing the same achievements by their image at least
-					if( otherImage.src !== oldImage.src )
-					{
-						throw new Error( 'Mismatching achievement icon' );
-					}
-
-					const unlock = isCompareView ?
-						otherAchievement.querySelector( '.achieveUnlockTime' )
-							?.childNodes[ 0 ].textContent.trim() :
-						otherAchievement.querySelector( '.achieveUnlockTime' )
-							?.textContent.trim();
-
-					if( !unlock )
-					{
-						continue;
-					}
-
-					const parsedTime = unlock.match( /Avattu (?<day>[0-9]+)\.(?<month>[0-9]+)\.(?<year>[0-9]+)? klo (?<hour>[0-9]+)\.(?<minute>[0-9]+)/ );
-
-					if( !parsedTime )
-					{
-						throw new Error( 'Failed to parse unlock time' );
-					}
-
-					const c = parsedTime.groups;
-					const date = new Date(
-						c.year ? Number.parseInt( c.year, 10 ) : currentYear,
-						Number.parseInt( c.month, 10 ) - 1,
-						Number.parseInt( c.day, 10 ),
-						Number.parseInt( c.hour, 10 ),
-						Number.parseInt( c.minute, 10 ),
-						0,
-						0
-					);
-
-					const achievement = achievementDataMap[ id ];
-					achievement.player.unlockTimestamp = date.getTime();
-					unlockedAchievementsPerUpdate[ achievement.update ].push( achievement );
-				}
-
-				// Redraw earned achievements block with new sorting
-				const RedrawSortedAchievements = () =>
-				{
-					sortButton.remove();
-
-					for( let updateId = 0; updateId < achievementUpdates.length; updateId++ )
-					{
-						const update = achievementUpdates[ updateId ];
-						const unlockedAchievements = unlockedAchievementsPerUpdate[ updateId ];
-
-						if( !update.earnedDetailsElement )
-						{
-							continue;
-						}
-
-						while( update.earnedDetailsElement.lastElementChild.tagName !== 'SUMMARY' )
-						{
-							update.earnedDetailsElement.lastElementChild.remove();
-						}
-
-						unlockedAchievements.sort( ( a, b ) =>
-						{
-							const aTime = a.player.unlockTimestamp;
-							const bTime = b.player.unlockTimestamp;
-
-							if( aTime === bTime )
-							{
-								return a.id - b.id;
-							}
-
-							return bTime > aTime ? 1 : -1;
-						} );
-
-						for( const achievement of unlockedAchievements )
-						{
-							const element = CreateAchievementRow( achievement );
-							update.earnedDetailsElement.append( element );
-						}
-					}
-				};
-
-				StartViewTransition( RedrawSortedAchievements );
-			} )
-			.catch( ( ex ) =>
-			{
-				WriteLog( ex );
-				alert( `Failed to sort achievements: ${ex.message}` );
-				sortButton.removeAttribute( 'disabled' );
-			} );
+			}
+		} );
 	}, { once: true } );
 }
 
