@@ -28,10 +28,12 @@
 .steamdb_achievements_csrating th {
 	background-color: #0197cf;
 	padding-left: 10px;
+	text-align: left;
 }
 
 .steamdb_achievements_csrating .steamdb_achievements_csrating_season {
 	background-color: #417a9b;
+	text-align: center;
 }
 
 .steamdb_achievements_csrating td {
